@@ -1,0 +1,12 @@
+case_id,mode,final_decision_support,ground_truth_overlap,avg_step_expected_update_overlap
+case_CVE-2023-38896,iterative,accept,0.475,0.2223
+case_CVE-2023-38896,iterative,accept,0.475,0.2223
+case_CVE-2023-27494,iterative,accept,0.68,0.1436
+case_CVE-2023-27494,iterative,accept,0.68,0.1436
+case_CVE-2023-0626,iterative,accept,0.3947,0.2413
+case_CVE-2023-0626,iterative,accept,0.3947,0.2413
+case_CVE-2024-22190,iterative,accept,0.931,0.2963
+case_CVE-2024-22190,iterative,accept,0.931,0.2963
+case_CVE-2022-21797,iterative,accept,0.7037,0.0971
+case_CVE-2022-21797,iterative,accept,0.7037,0.0971
+case_CVE-2023-26303,iterative,accept,0.3962,
