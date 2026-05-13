@@ -1,12 +1,11 @@
-# DeepCTI Suggested Experiment Package
+# DeepCTI: An Agentic Framework for Cyber Threat Intelligence Mitigation
 
-This package implements the experiment redesign suggested in the advisor discussion:
+This repository contains the code, dataset, prompts, evaluation scripts, and aggregated results for the paper:
 
-1. **Cosine similarity with clearly named embedding models.**
-2. **Thresholded Match F1** only after converting continuous similarity into match/non-match using thresholds.
-3. **Top-K + Top-P retrieval sufficiency** to justify stopping.
-4. **Iteration distribution** to show how many state transitions each case requires.
-5. **Model-agnostic robustness** across multiple local LLMs.
+**DeepCTI: An Agentic LLM Framework for Cyber Threat Intelligence Mitigation**
+
+DeepCTI is an agentic cyber threat intelligence mitigation-analysis framework. It uses iterative evidence retrieval, memory, reasoning, verification, and report synthesis to generate evidence-grounded mitigation recommendations for SOC analysts.
+
 
 ## Embedding models used
 
@@ -39,7 +38,6 @@ F1 is computed only after thresholding cosine similarity into binary match / non
 ## Install
 
 ```powershell
-cd "D:\Experiment\deepcti\deepcti\deepcti_experiment_code"
 .\Run.cmd
 ```
 
