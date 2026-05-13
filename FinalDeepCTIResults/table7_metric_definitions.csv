@@ -1,0 +1,9 @@
+Metric,Definition,Direction
+Mean Cosine Semantic Similarity,Average embedding-based cosine similarity between generated CTI output and validated ground truth.,Higher is better
+Thresholded Match F1,F1 after thresholding cosine similarity into match/non-match.,Higher is better
+Evidence Coverage,Fraction of relevant evidence nodes retrieved and used.,Higher is better
+Evidence Reliability,Fraction of cited evidence that supports final claims.,Higher is better
+Evidence Sufficiency,Cumulative top-p evidence mass showing whether enough evidence has been retrieved.,Higher is better
+Unsupported Claim Rate,Fraction of generated claims not supported by evidence; lower is better.,Lower is better
+CTI Assurance Score,"Composite workflow score combining semantic match, support, and reliability.",Higher is better
+State Transition Quality,Quality of knowledge-state updates after new evidence is incorporated.,Higher is better

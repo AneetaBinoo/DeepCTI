@@ -1,0 +1,8 @@
+Iteration,State,Evidence Nodes,Open Queries,Cosine Sim.,Evidence Coverage,Evidence Sufficiency,Unsupported Claims
+0,S0,0,5,0.286,0.318,0.301,0.036
+1,S1,2,4,0.344,0.401,0.386,0.028
+2,S2,4,3,0.432,0.512,0.501,0.019
+3,S3,6,2,0.511,0.617,0.606,0.013
+4,S4,8,1,0.572,0.681,0.681,0.009
+5,S5,9,0,0.614,0.722,0.712,0.006
+6,S6,9,0,0.64,0.741,0.722,0.006

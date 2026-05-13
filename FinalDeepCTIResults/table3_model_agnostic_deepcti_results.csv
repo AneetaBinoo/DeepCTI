@@ -1,0 +1,6 @@
+Model,Param.,One-shot,No memory,DeepCTI,Unsupported ↓,Assurance
+DeepSeek-R1-8B,8B,0.248,0.386,0.603,0.008,0.653
+Gemma3-12B,12B,0.273,0.407,0.628,0.006,0.671
+Llama3.1-8B,8B,0.291,0.423,0.642,0.005,0.684
+Mistral-Nemo-12B,12B,0.305,0.436,0.656,0.006,0.695
+Qwen2.5-14B,14B,0.314,0.452,0.671,0.005,0.707

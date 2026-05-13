@@ -1,0 +1,15 @@
+Scorer / Retriever,Case,r@10,MAP,Cosine Sim.,Match F1
+DeepCTI Semantic Scorer (Ours),Snort,39.74,30.92,0.659,0.635
+DeepCTI Semantic Scorer (Ours),YARA,38.52,29.86,0.637,0.612
+all-MiniLM-L6-v2,Snort,30.18,21.33,0.612,0.582
+all-MiniLM-L6-v2,YARA,29.64,20.87,0.596,0.561
+all-mpnet-base-v2,Snort,32.91,23.05,0.637,0.611
+all-mpnet-base-v2,YARA,31.7,22.34,0.621,0.592
+e5-base-v2,Snort,34.02,24.19,0.652,0.625
+e5-base-v2,YARA,33.18,23.55,0.631,0.604
+Qwen-Embedding,Snort,35.46,25.27,0.659,0.641
+Qwen-Embedding,YARA,34.71,24.83,0.644,0.621
+BM25,Snort,27.43,18.52,,
+BM25,YARA,26.88,18.11,,
+TF-IDF + Cosine,Snort,25.74,17.06,,
+TF-IDF + Cosine,YARA,25.11,16.78,,

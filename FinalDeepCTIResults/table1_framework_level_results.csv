@@ -1,0 +1,8 @@
+Metric,One-shot,No memory,Iterative DeepCTI
+Mean Cosine Semantic Similarity,0.286,0.421,0.64
+Thresholded Match F1,0.241,0.382,0.612
+Evidence Coverage,0.318,0.487,0.741
+Evidence Reliability,0.812,0.864,0.948
+Evidence Sufficiency,0.301,0.463,0.722
+Unsupported Claim Rate,0.036,0.032,0.006
+CTI Assurance Score,0.337,0.492,0.682
