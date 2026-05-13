@@ -1,0 +1,29 @@
+{
+  "data_path": "C:\\Users\\aneet\\Box\\Projects\\LocalIntel\\data\\evaluation\\LocalIntel_Eval_Dataset_1.xlsx",
+  "outputs_dir": "C:\\Users\\aneet\\Box\\Projects\\LocalIntel\\outputs_ollama_phi3.5_latest",
+  "modes": [
+    "iterative"
+  ],
+  "run_metadata": {
+    "llm_mode": "ollama",
+    "ollama_model": "phi3.5:latest",
+    "openai_model": "gpt-4o-mini",
+    "retrieval_k_baseline": 10,
+    "retrieval_k_step": 12,
+    "inner_loop_max_iters": 1
+  },
+  "num_cases": 11,
+  "case_ids": [
+    "case_CVE-2023-38896",
+    "case_CVE-2023-38896",
+    "case_CVE-2023-27494",
+    "case_CVE-2023-27494",
+    "case_CVE-2023-0626",
+    "case_CVE-2023-0626",
+    "case_CVE-2024-22190",
+    "case_CVE-2024-22190",
+    "case_CVE-2022-21797",
+    "case_CVE-2022-21797",
+    "case_CVE-2023-26303"
+  ]
+}
