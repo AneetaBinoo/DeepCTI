@@ -2,14 +2,12 @@
 
 This repository contains the code, dataset, prompts, evaluation scripts, and aggregated results for the paper:
 
-**DeepCTI: An Agentic LLM Framework for Cyber Threat Intelligence Mitigation**
+**DeepCTI: An Agentic Framework for Cyber Threat Intelligence Mitigation**
 
 DeepCTI is an agentic cyber threat intelligence mitigation-analysis framework. It uses iterative evidence retrieval, memory, reasoning, verification, and report synthesis to generate evidence-grounded mitigation recommendations for SOC analysts.
 
 
 ## Embedding models used
-
-The evaluator uses the same family of sentence embedding models discussed in the meeting:
 
 - `sentence-transformers/all-MiniLM-L6-v2`
 - `sentence-transformers/all-mpnet-base-v2`
