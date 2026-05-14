@@ -389,12 +389,6 @@ Check `runs/<run_name>/errors.jsonl` and `runs/<run_name>/run_log.txt`. The expe
 ---
 
 
-## License
-
-License information is not included in the uploaded archive. Add the selected license before public release, for example MIT, Apache-2.0, BSD-3-Clause, or a custom research-artifact license.
-
----
-
 ## Contact
 
 For questions about the paper artifact, open an issue in the repository or contact the corresponding author listed in the publication.
