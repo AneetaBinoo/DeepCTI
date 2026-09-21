@@ -1,0 +1,18 @@
+experiment_id: deepcti_expanded_models_100_2026
+condition: contextual_architecture_100_case_expanded_models
+seed: 20260819
+models:
+  - qwen3:8b
+  - gemma3:12b
+  - phi4:14b
+modes:
+  - adaptive_memory
+max_steps: 3
+retrieval_k: 8
+temperature: 0.0
+max_output_tokens: 1024
+ollama_url: http://127.0.0.1:11434
+dataset:
+  kind: contextual_jsonl
+  path: data/derived/deepcti_kev_contextual_synthetic_100_v1.jsonl
+output_dir: runs

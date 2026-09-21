@@ -1,0 +1,7 @@
+model,records,model_calls,repair_attempts,recovered_by_repair,safe_fallbacks,no_model_call_abstentions,errors
+Llama 3.1 8B,100,54,4,0,54,50,0
+Mistral,100,64,14,0,64,50,0
+Qwen 2.5 7B,100,60,10,4,56,50,0
+Qwen 3 8B,100,54,4,1,53,50,0
+Gemma 3 12B,100,57,7,0,57,50,0
+Phi-4 14B,100,64,14,1,63,50,0
