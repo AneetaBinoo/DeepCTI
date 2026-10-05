@@ -98,6 +98,15 @@ def build_jobs(exp: str, split: str, model: str, limit: int | None, dataset: str
             for s in (["DC", "DC_noverify", "S3"] if llm else ["S1p"]):
                 jobs.append(Job(Spec(exp, c["case_id"], s, model, arm="tracker", decoy=True, **kw), c))
         return jobs
+    if exp == "X6C":  # DEVIATIONS D25: same-code clean control for H18 (X6 cases/systems, no decoy planted)
+        from deepcti.env.host import HostEnv
+        def has_decoy_c(c: dict) -> bool:
+            env = HostEnv(c, data.fixture(c["host_id"]), data.cve_meta().get(c["cve"], {}), data.preconditions(), {})
+            return env.apply_decoys() is not None
+        for c in [c for c in cases if has_decoy_c(c)]:
+            for s in (["DC", "DC_noverify", "S3"] if llm else []):
+                jobs.append(Job(Spec(exp, c["case_id"], s, model, arm="tracker", **kw), c))
+        return jobs
     if exp == "X7":  # prereg-v4 H17: DC with dev+calib-estimated scanner trust (DCt), withheld arm
         for c in cases:
             for s in (["DCt"] if llm else []):
@@ -211,7 +220,7 @@ def main() -> None:
             require_prereg("prereg-v2")
         if args.dataset == "d7":
             require_prereg("prereg-v3")
-        if args.exp in ("X2C", "X6", "X7") or args.model == "glm45_air":
+        if args.exp in ("X2C", "X6", "X6C", "X7") or args.model == "glm45_air":
             require_prereg("prereg-v4")
     jobs = build_jobs(args.exp, args.split, args.model, args.limit, args.dataset, args.spec)
     models = load_models()

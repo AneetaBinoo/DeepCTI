@@ -261,24 +261,25 @@ def fig_security():
     eps = {e["episode_id"]: e for e in data.read_jsonl(ROOT / "data" / "d3" / "test.jsonl")}
     df["attacker"] = df["attack"].map(lambda a: eps.get(a, {}).get("attacker"))
     df["config"] = df["system"] + "+" + df["policy"] + np.where(df["prompt_defense"], "+def", "")
-    configs = [("S3+P0", "ReAct, no gating"), ("S3+P1", "ReAct, argument gating"),
-               ("S3+P1+def", "ReAct, arg. gating + prompt defence"), ("S3+P3", "ReAct, evidence gating (P3)"),
-               ("DC+P3", "DeepCTI, evidence gating (P3)")]
+    configs = [("S3+P0", "ReAct, P0 (none)"), ("S3+P1", "ReAct, P1 (args)"),
+               ("S3+P1+def", "ReAct, P1 + defence"), ("S3+P3", "ReAct, P3 (evidence)"),
+               ("DC+P3", "DeepCTI, P3")]
     ben = df[df["attacker"] == "none"]
     att = df[df["attacker"].isin(["u_static", "u_adaptive"])]
-    fig, ax = plt.subplots(figsize=(SINGLE, 1.55))
+    fig, ax = plt.subplots(figsize=(SINGLE, 1.75))
     w = 0.38
     for j, (sub, lab, col) in enumerate([(ben, "benign episodes", C["S3"]), (att, "injected text", "#b3471c")]):
         vals = [sub[sub["config"] == c]["udar"].mean() * 100 for c, _ in configs]
         pos = np.arange(len(configs)) + (j - 0.5) * w
         ax.barh(pos, vals, height=w, color=col, edgecolor=SURF, linewidth=0.8, zorder=2, label=lab)
         for p, v in zip(pos, vals):
-            ax.text(v + 0.15, p, f"{v:.1f}%", va="center", fontsize=5.5, color=INK2)
+            ax.text(v + 0.12, p, f"{v:.1f}%", va="center", fontsize=6, color=INK2)
     ax.set_yticks(range(len(configs)), [c[1] for c in configs])
+    ax.set_xlim(0, 7.6)
     ax.invert_yaxis()
     ax.set_xlabel("Episodes with an unauthorized disruptive action (%)")
     grid(ax)
-    ax.legend(frameon=False, fontsize=5.6, loc="lower right", handlelength=1)
+    ax.legend(frameon=False, fontsize=6.4, loc="lower right", handlelength=1)
     save(fig, "fig_security")
 
 
@@ -311,24 +312,36 @@ def fig_acquisition():
 # ----------------------------------------------------------------------------- F8 notes (E11)
 def fig_notes():
     t = pd.read_csv(ROOT / "results" / "v3" / "e11_d7b" / "metrics_system.csv").set_index("system")
-    rows = [("DeepCTI (unvalidated note)", t.loc["DC", "faithfulness"], t.loc["DC", "consistency"], C["DC"]),
-            ("v2.1 validated (pre-registered)", t.loc["DCv21", "faithfulness"], t.loc["DCv21", "consistency"],
-             C["DCv21"]),
-            ("v2.1b validated (post hoc)", t.loc["DCv21b", "faithfulness"], t.loc["DCv21b", "consistency"],
-             C["S1p"])]
-    fig, axes = plt.subplots(1, 2, figsize=(SINGLE, 1.2), sharey=True)
+    rows = [("DeepCTI", t.loc["DC", "faithfulness"], t.loc["DC", "consistency"], C["DC"]),
+            ("v2.1 (pre-registered)", t.loc["DCv21", "faithfulness"], t.loc["DCv21", "consistency"], C["DCv21"]),
+            ("v2.1b (post hoc)", t.loc["DCv21b", "faithfulness"], t.loc["DCv21b", "consistency"], C["S1p"])]
+    groups = [("H15 sample", 3)]
+    h16 = ROOT / "results" / "v4" / "h16" / "metrics_system.csv"
+    if h16.exists():  # prereg-v4 H16 fresh sample; pipeline label DCv21 = DCv21b
+        u = pd.read_csv(h16).set_index("system")
+        rows += [("DeepCTI", u.loc["DC", "faithfulness"], u.loc["DC", "consistency"], C["DC"]),
+                 ("v2.1b (H16)", u.loc["DCv21", "faithfulness"], u.loc["DCv21", "consistency"], C["S1p"])]
+        groups.append(("fresh sample (H16)", 2))
+    ypos, starts, y = [], [], 0.9
+    for _, n in groups:
+        starts.append(y)
+        ypos += [y + k for k in range(n)]
+        y += n + 0.9
+    fig, axes = plt.subplots(1, 2, figsize=(SINGLE, 0.5 + 0.27 * len(rows) + 0.25 * len(groups)), sharey=True)
     for ax, k, title in [(axes[0], 1, "Claim faithfulness"), (axes[1], 2, "Note states the decision")]:
         vals = [r[k] for r in rows]
-        ax.barh(range(3), vals, color=[r[3] for r in rows], height=0.6, edgecolor=SURF, zorder=2)
-        for i, v in enumerate(vals):
-            if v is not None:
-                ax.text(v + 0.01, i, f"{v:.1%}", va="center", fontsize=5.6, color=INK2)
-        ax.set_xlim(0, 1.18)
+        ax.barh(ypos, vals, color=[r[3] for r in rows], height=0.62, edgecolor=SURF, zorder=2)
+        for yy, v in zip(ypos, vals):
+            ax.text(v + 0.01, yy, f"{v:.1%}", va="center", fontsize=6, color=INK2)
+        ax.set_xlim(0, 1.22)
         ax.set_xticks([0, 0.5, 1.0], ["0%", "50%", "100%"])
-        ax.set_title(title, loc="left", fontsize=6.8)
+        ax.set_title(title, loc="left", fontsize=7)
         grid(ax)
-    axes[0].set_yticks(range(3), [r[0] for r in rows])
-    axes[0].invert_yaxis()
+    axes[0].set_yticks(ypos, [r[0] for r in rows])
+    axes[0].set_ylim(max(ypos) + 0.5, 0.0)
+    for (name, _), st in zip(groups, starts):
+        axes[0].text(-0.03, st - 0.72, name, transform=axes[0].get_yaxis_transform(), ha="right", va="center",
+                     fontsize=6.2, color=INK, weight="bold")
     save(fig, "fig_notes")
 
 

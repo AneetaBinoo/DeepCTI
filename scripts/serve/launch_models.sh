@@ -26,6 +26,7 @@ tmux has-session -t "$SESSION" 2>/dev/null || tmux new-session -d -s "$SESSION" 
 for spec in "${SPECS[@]}"; do
   IFS='|' read -r name hf gpus port util extra <<< "$spec"
   if [[ -n "${2:-}" && "$2" != "$name" ]]; then continue; fi
+  [[ -n "${GPUS:-}" ]] && gpus="$GPUS"  # optional override, e.g. GPUS=0,1
   tp=$(awk -F',' '{print NF}' <<< "$gpus")
   cmd="CUDA_VISIBLE_DEVICES=$gpus VLLM_USE_FLASHINFER_SAMPLER=0 $VLLM_PY -m vllm.entrypoints.openai.api_server \
 --model $hf --served-model-name $name --port $port --host 0.0.0.0 --max-model-len 32768 --tensor-parallel-size $tp \
