@@ -69,9 +69,11 @@ def run_episode(spec: Spec, case: dict, llm: LLM | None, *, attack: dict | None 
     policy = spec.policy or DEFAULT_POLICY.get(system, "P3")
     data.set_dataset(spec.dataset)
     profiles = source_profiles()
-    if spec.dataset == "d7":  # v3 trust classes estimated per ecosystem on D7 dev
+    if spec.dataset == "d7":  # v3 trust classes and VOI priors estimated per ecosystem on D7 dev
         v3 = _yaml(ROOT / "config" / "source_profiles_v3.yaml").get("by_ecosystem", {})
         profiles = v3.get(case.get("ecosystem", ""), profiles)
+        pv3 = _yaml(ROOT / "config" / "priors_v3.yaml").get("by_ecosystem", {})
+        priors = pv3.get(case.get("ecosystem", ""), priors)
     if system == "DC_k1":
         profiles = {k: dict(v, trust="T") for k, v in profiles.items()}
         for name in ("cmdb", "scanner:trivy", "scanner:grype", "scanner:osv"):
@@ -124,7 +126,7 @@ def run_episode(spec: Spec, case: dict, llm: LLM | None, *, attack: dict | None 
                                    budget=spec.budget, seed=spec.seed, trust_profiles=profiles,
                                    q_service=float((priors or {}).get("q_service", 0.4)),
                                    explain=system in ("DC", "DCv21"), k_decide=2 if system == "DC_q2" else 1,
-                                   service_aware=acq_v21)
+                                   service_aware=acq_v21, validated_synthesis=acq_v21)
             outcome = Controller(med, llm, cfg, priors).run()
         else:
             raise ValueError(f"unknown system {system}")

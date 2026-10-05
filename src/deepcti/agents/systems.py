@@ -237,6 +237,7 @@ class ControllerConfig:
     explain: bool = True
     k_decide: int = 1  # independent trusted groups required for every atom the decision depends on
     service_aware: bool = False  # v2.1: a running service must be checked before a fixed/not-in-range decision
+    validated_synthesis: bool = False  # v2.1: note validated against raw evidence, one repair, deterministic fallback
 
 
 def _model_atoms(atoms: set) -> frozenset:
@@ -490,6 +491,40 @@ class Controller:
                 return False
         return True
 
+    def _explain_validated(self, decision, summary) -> str:
+        """v2.1 validated synthesis: raw supporting outputs in the prompt, deterministic validation, one repair,
+        deterministic fallback; the outcome is recorded in self.trace."""
+        ids = sorted({e for v in summary["state"].values() for e in v["evidence_ids"]})
+        if self.med.program and self.med.program.provenance.startswith("vex_lookup:"):
+            ids.append(self.med.program.provenance.split(":", 1)[1])
+        used = [c for c in self.env.calls if c.call_id in set(ids)]
+        calls = {c.call_id: c.output for c in self.env.calls}
+        evidence = "\n".join(f"[{c.call_id}] {c.tool} {json.dumps(c.args)}\n{c.output[:1200]}" for c in used)
+        prompt = (f"Write a 3-sentence analyst note for {self.case['cve']} on {self.env.asset()}. The decision is "
+                  f"FIXED (do not change it): {decision.status} {decision.justification or ''}. Use ONLY the tool "
+                  f"outputs below; cite the id of every output you use, like [c003], including the tracker/VEX "
+                  f"record for any fixed-version or range statement. Copy version numbers exactly.\n\n{evidence}")
+        res = self.llm.chat([{"role": "user", "content": prompt}], max_tokens=250)
+        self.usage.add(res.usage)
+        note = res.content.strip()
+        errors = validate_note(note, decision.status, calls)
+        record = {"validated_synthesis": {"attempt1_errors": errors, "repaired": False, "fallback": False}}
+        if errors:
+            res2 = self.llm.chat([{"role": "user", "content": prompt},
+                                  {"role": "assistant", "content": note},
+                                  {"role": "user", "content": "Fix these problems and return only the corrected "
+                                                              "note:\n- " + "\n- ".join(errors)}], max_tokens=250)
+            self.usage.add(res2.usage)
+            note2 = res2.content.strip()
+            errors2 = validate_note(note2, decision.status, calls)
+            record["validated_synthesis"]["attempt2_errors"] = errors2
+            if not errors2:
+                note, record["validated_synthesis"]["repaired"] = note2, True
+            else:
+                note, record["validated_synthesis"]["fallback"] = _fallback_note(decision, used), True
+        self.trace.append(record)
+        return note
+
     def _llm_choose(self, cands) -> voi.Test | None:
         menu = "\n".join(f"{i}: {tool} {json.dumps(args)}" for i, (tool, args, _) in enumerate(cands))
         state = json.dumps({k: v["val"] for k, v in self.med.summary()["state"].items()})
@@ -540,6 +575,8 @@ class Controller:
         self.run_tool("pkg_query", {"name": case["src_package"]})
 
     def _explain(self, decision, summary) -> str:
+        if self.cfg.validated_synthesis:
+            return self._explain_validated(decision, summary)
         facts = {k: {"val": v["val"], "groups+": v["pos_groups"], "groups-": v["neg_groups"],
                      "evidence": v["evidence_ids"]} for k, v in summary["state"].items()}
         prompt = (f"Write a 3-sentence analyst note for {self.case['cve']} on {self.env.asset()}. Decision (fixed, "
@@ -548,6 +585,44 @@ class Controller:
         res = self.llm.chat([{"role": "user", "content": prompt}], max_tokens=200)
         self.usage.add(res.usage)
         return res.content.strip()
+
+
+STATUS_WORDS = {"affected": r"\baffected\b", "not_affected": r"\bnot[ _]affected\b", "fixed": r"\bfixed\b",
+                "under_investigation": r"\bunder[ _]investigation\b"}
+
+
+def validate_note(note: str, decision_status: str, calls: dict[str, str]) -> list[str]:
+    """Deterministic checks for an analyst note (paper §III-D): citations exist, the stated status matches the
+    controller decision, and every version-like token appears in some cited tool output."""
+    import re as _re
+    errors = []
+    cited = _re.findall(r"\[(c\d{3}|h\d{3})\]", note)
+    if not cited:
+        errors.append("no evidence ids cited; cite tool call ids like [c003]")
+    missing = sorted({c for c in cited if c not in calls})
+    if missing:
+        errors.append(f"cited ids do not exist: {missing}")
+    text = note.lower()
+    if not _re.search(STATUS_WORDS[decision_status], text.replace("not affected", "not_affected")
+                      if decision_status != "affected" else text):
+        errors.append(f"the note must state the decided status '{decision_status}'")
+    if decision_status == "affected" and _re.search(STATUS_WORDS["not_affected"], text):
+        errors.append("the note asserts 'not affected' but the decision is 'affected'")
+    evidence = " ".join(calls[c] for c in set(cited) if c in calls)
+    for tok in set(_re.findall(r"(?<![\w.])\d+:?\d*[.~+:-][\w.~+:-]*\d(?![\w.])", note)):
+        if tok not in evidence and not _re.fullmatch(r"\d{4}-\d+(-\d+)?", tok):  # ignore dates / CVE suffixes
+            if f"CVE-{tok}" in note or tok in note.split("CVE-")[-1][:12]:
+                continue
+            errors.append(f"version-like token '{tok}' does not appear in the cited evidence")
+    return errors
+
+
+def _fallback_note(decision, calls_used: list) -> str:
+    parts = [f"Status: {decision.status}" + (f" ({decision.justification})" if decision.justification else "") + "."]
+    for c in calls_used[:4]:
+        first = c.output.strip().splitlines()[0][:160] if c.output.strip() else ""
+        parts.append(f"[{c.call_id}] {c.tool}: {first}")
+    return " ".join(parts)
 
 
 def _config_model():

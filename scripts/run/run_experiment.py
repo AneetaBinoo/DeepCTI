@@ -51,7 +51,7 @@ def stratified_subset(cases: list[dict], n: int, seed: int = 20261005) -> list[d
     return sorted(out, key=lambda c: c["case_id"])
 
 
-V3_LLM = ["S2", "S3", "DC", "DCv21"]
+V3_LLM = ["S2", "S3", "DC", "DCv21", "DC_noverify"]
 V3_FREE = ["S0_trivy", "S0_grype", "S0_osv", "S1", "S1p"]
 V3_ARMS = ("tracker", "withheld", "blind")
 NEW_MODELS = {"granite41_30b", "nemotron_super_49b", "glm45_air", "mistral_medium_128b"}
@@ -79,6 +79,14 @@ def build_jobs(exp: str, split: str, model: str, limit: int | None, dataset: str
                 for b in BUDGETS:
                     for s in (E3_SYSTEMS + ["S3"] if llm else ["S1p"]):
                         jobs.append(Job(Spec(exp, c["case_id"], s, model, arm=arm, budget=b, **kw), c))
+        return jobs
+    if exp == "X5":  # v3 independent drift test on D7 (episodes from scripts/data/build_drift_v3.py)
+        episodes = data.read_jsonl(ROOT / "data" / f"drift_{dataset}" / f"{split}.jsonl")
+        all_cases = {c["case_id"]: c for c in data.load_cases(split)}
+        for ep in episodes[: limit or None]:
+            c = all_cases[ep["case_id"]]
+            for s in (["DC", "DCv21", "S3", "S2"] if llm else ["S1p", "S1"]):
+                jobs.append(Job(Spec(exp, c["case_id"], s, model, drift=ep["episode_id"], **kw), c, None, ep["drift"]))
         return jobs
     if exp == "X4":  # v3 drift study on D2 (D1 test drift episodes) with the v3 spec and DC v2.1
         episodes = data.read_jsonl(ROOT / "data" / "d2" / f"{split}.jsonl")
