@@ -351,6 +351,10 @@ class Controller:
             tests = [c[2] for c in cands]
             if self.cfg.acquisition in ("voi", "entropy"):
                 chosen = voi.select_test(belief, tests, "ec2" if self.cfg.acquisition == "voi" else "entropy")
+                if chosen is None and dec.status != UNDER_INVESTIGATION:
+                    # decision resolved but quorum pending (k_decide > 1): the noiseless model sees no VOI in
+                    # corroboration, so take the cheapest remaining trusted source (DEVIATIONS D11)
+                    chosen = min(tests, key=lambda t: t.cost)
                 if chosen is None:
                     break
             elif self.cfg.acquisition == "checklist":
