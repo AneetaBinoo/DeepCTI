@@ -1,0 +1,16 @@
+judge,kind,n,flagged,rate
+gemma_4_31b,control,80,0,0.0
+gemma_4_31b,flipped_polarity,40,39,0.975
+gemma_4_31b,invented_id,40,40,1.0
+gemma_4_31b,wrong_status,40,38,0.95
+gemma_4_31b,wrong_version,40,40,1.0
+granite_41_30b,control,80,0,0.0
+granite_41_30b,flipped_polarity,40,38,0.95
+granite_41_30b,invented_id,40,28,0.7
+granite_41_30b,wrong_status,40,36,0.9
+granite_41_30b,wrong_version,40,39,0.975
+nemotron_super_49b,control,80,0,0.0
+nemotron_super_49b,flipped_polarity,40,36,0.9
+nemotron_super_49b,invented_id,39,36,0.9230769230769231
+nemotron_super_49b,wrong_status,40,36,0.9
+nemotron_super_49b,wrong_version,40,39,0.975

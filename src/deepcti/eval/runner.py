@@ -29,7 +29,7 @@ from . import data
 ROOT = Path(__file__).resolve().parents[3]
 
 LLM_SYSTEMS = {"S2", "S3", "S4", "S5", "DC", "DC_checklist", "DC_llmchoose", "DC_noverify", "DC_k1",
-               "DC_nofresh", "DC_entropy", "DC_random", "DC_q2", "DCv21", "S3I"}
+               "DC_nofresh", "DC_entropy", "DC_random", "DC_q2", "DCv21", "DCv21b", "S3I"}
 DEFAULT_POLICY = {"S0_trivy": "P0", "S0_grype": "P0", "S0_osv": "P0", "S1": "P1", "S1p": "P3", "S2": "P1",
                   "S3": "P1", "S4": "P1", "S5": "P1", "S3I": "P1"}
 
@@ -89,7 +89,7 @@ def run_episode(spec: Spec, case: dict, llm: LLM | None, *, attack: dict | None 
         return {"key": spec.key(), **asdict(spec), "case_id": case["case_id"], "error": traceback.format_exc(limit=4)}
     env.spec_version = spec.spec
     med = Mediator(env, PolicyDecisionPoint(policy), use_freshness=system != "DC_nofresh",
-                   instance_aware=system == "DCv21")
+                   instance_aware=system in ("DCv21", "DCv21b"))
     world_pre_drift = env.world_atoms()
     env.history = []
     if drift and any(float(e["at"]) <= 0 for e in drift):
@@ -116,7 +116,7 @@ def run_episode(spec: Spec, case: dict, llm: LLM | None, *, attack: dict | None 
             outcome = run_react(med, llm, ReactConfig(variant=variant, budget=spec.budget,
                                                       prompt_defense=spec.prompt_defense))
         elif system.startswith("DC"):
-            if system == "DCv21":
+            if system in ("DCv21", "DCv21b"):
                 acq_v21 = True
             else:
                 acq_v21 = False
@@ -125,8 +125,9 @@ def run_episode(spec: Spec, case: dict, llm: LLM | None, *, attack: dict | None 
             cfg = ControllerConfig(use_llm=True, acquisition=acq, verified=system != "DC_noverify",
                                    budget=spec.budget, seed=spec.seed, trust_profiles=profiles,
                                    q_service=float((priors or {}).get("q_service", 0.4)),
-                                   explain=system in ("DC", "DCv21"), k_decide=2 if system == "DC_q2" else 1,
-                                   service_aware=acq_v21, validated_synthesis=acq_v21)
+                                   explain=system in ("DC", "DCv21", "DCv21b"), k_decide=2 if system == "DC_q2" else 1,
+                                   service_aware=acq_v21, validated_synthesis=acq_v21,
+                                   synthesis_prompt="v2" if system == "DCv21b" else "v1")
             outcome = Controller(med, llm, cfg, priors).run()
         else:
             raise ValueError(f"unknown system {system}")

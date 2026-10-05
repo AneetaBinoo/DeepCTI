@@ -73,6 +73,14 @@ def build_jobs(exp: str, split: str, model: str, limit: int | None, dataset: str
                 for s in (V3_LLM if llm else V3_FREE):
                     jobs.append(Job(Spec(exp, c["case_id"], s, model, arm=arm, **kw), c))
         return jobs
+    if exp == "X2B":  # post-hoc (DEVIATIONS D23): DCv21b on the H15-sampled (case, model, arm) triples
+        import csv
+        rows = list(csv.DictReader((ROOT / "results" / "v3" / "e11_d7" / "sample.csv").open()))
+        by = {c["case_id"]: c for c in cases}
+        for r in rows:
+            if r["system"] == "DCv21" and r["model"] == model and r["case_id"] in by:
+                jobs.append(Job(Spec(exp, r["case_id"], "DCv21b", model, arm=r["arm"], **kw), by[r["case_id"]]))
+        return jobs
     if exp == "X2V":  # post-hoc sensitivity (DEVIATIONS D21): vendor cases, DC family, verifier fixes
         for c in cases:
             if c.get("ecosystem") != "vendor":

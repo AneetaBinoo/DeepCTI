@@ -1,0 +1,4 @@
+judge,n_injected,recall,n_controls,false_alarm,would_pass_e11_rule
+gemma_4_31b,160,0.98125,80,0.0,True
+granite_41_30b,160,0.88125,80,0.0,True
+nemotron_super_49b,159,0.9245283018867925,80,0.0,True

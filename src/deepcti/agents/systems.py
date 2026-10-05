@@ -238,6 +238,7 @@ class ControllerConfig:
     k_decide: int = 1  # independent trusted groups required for every atom the decision depends on
     service_aware: bool = False  # v2.1: a running service must be checked before a fixed/not-in-range decision
     validated_synthesis: bool = False  # v2.1: note validated against raw evidence, one repair, deterministic fallback
+    synthesis_prompt: str = "v1"  # "v2" = post-hoc DCv21b (DEVIATIONS D23): neutral wording + status-conflict check
 
 
 def _model_atoms(atoms: set) -> frozenset:
@@ -506,14 +507,17 @@ class Controller:
         used = [c for c in self.env.calls if c.call_id in set(ids)]
         calls = {c.call_id: c.output for c in self.env.calls}
         evidence = "\n".join(f"[{c.call_id}] {c.tool} {json.dumps(c.args)}\n{c.output[:1200]}" for c in used)
-        prompt = (f"Write a 3-sentence analyst note for {self.case['cve']} on {self.env.asset()}. The decision is "
-                  f"FIXED (do not change it): {decision.status} {decision.justification or ''}. Use ONLY the tool "
+        lead = ("The decision is FIXED (do not change it)" if self.cfg.synthesis_prompt == "v1" else
+                "The controller's decision is final and must be stated as given")
+        prompt = (f"Write a 3-sentence analyst note for {self.case['cve']} on {self.env.asset()}. {lead}: "
+                  f"status = {decision.status} {decision.justification or ''}. Use ONLY the tool "
                   f"outputs below; cite the id of every output you use, like [c003], including the tracker/VEX "
                   f"record for any fixed-version or range statement. Copy version numbers exactly.\n\n{evidence}")
         res = self.llm.chat([{"role": "user", "content": prompt}], max_tokens=250)
         self.usage.add(res.usage)
         note = res.content.strip()
-        errors = validate_note(note, decision.status, calls)
+        strict = self.cfg.synthesis_prompt == "v2"
+        errors = validate_note(note, decision.status, calls, strict=strict)
         record = {"validated_synthesis": {"attempt1_errors": errors, "repaired": False, "fallback": False}}
         if errors:
             res2 = self.llm.chat([{"role": "user", "content": prompt},
@@ -522,7 +526,7 @@ class Controller:
                                                               "note:\n- " + "\n- ".join(errors)}], max_tokens=250)
             self.usage.add(res2.usage)
             note2 = res2.content.strip()
-            errors2 = validate_note(note2, decision.status, calls)
+            errors2 = validate_note(note2, decision.status, calls, strict=strict)
             record["validated_synthesis"]["attempt2_errors"] = errors2
             if not errors2:
                 note, record["validated_synthesis"]["repaired"] = note2, True
@@ -597,7 +601,7 @@ STATUS_WORDS = {"affected": r"\baffected\b", "not_affected": r"\bnot[ _]affected
                 "under_investigation": r"\bunder[ _]investigation\b"}
 
 
-def validate_note(note: str, decision_status: str, calls: dict[str, str]) -> list[str]:
+def validate_note(note: str, decision_status: str, calls: dict[str, str], strict: bool = False) -> list[str]:
     """Deterministic checks for an analyst note (paper §III-D): citations exist, the stated status matches the
     controller decision, and every version-like token appears in some cited tool output."""
     import re as _re
@@ -614,6 +618,13 @@ def validate_note(note: str, decision_status: str, calls: dict[str, str]) -> lis
         errors.append(f"the note must state the decided status '{decision_status}'")
     if decision_status == "affected" and _re.search(STATUS_WORDS["not_affected"], text):
         errors.append("the note asserts 'not affected' but the decision is 'affected'")
+    if strict:  # DCv21b: the note must not assert a different status (e.g. "FIXED" for under_investigation)
+        for other, pat in STATUS_WORDS.items():
+            if other == decision_status or (other == "affected" and decision_status == "not_affected"):
+                continue
+            if _re.search(r"\b" + other.replace("_", "[ _]").upper() + r"\b", note) or _re.search(
+                    r"(status|host|component|system)\s+(is|=|:)\s*" + pat.replace("\\b", ""), text):
+                errors.append(f"the note asserts status '{other}' but the decision is '{decision_status}'")
     evidence = " ".join(calls[c] for c in set(cited) if c in calls)
     for tok in set(_re.findall(r"(?<![\w.])\d+:?\d*[.~+:-][\w.~+:-]*\d(?![\w.])", note)):
         if tok not in evidence and not _re.fullmatch(r"\d{4}-\d+(-\d+)?", tok):  # ignore dates / CVE suffixes
