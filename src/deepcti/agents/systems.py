@@ -192,7 +192,7 @@ class ControllerConfig:
     acquisition: str = "voi"  # voi | entropy | checklist | random | llm
     verified: bool = True  # False: accept LLM proposals without the verifier (ablation)
     remediate: bool = True
-    budget: float = 40.0
+    budget: float = 60.0
     seed: int = 0
     trust_profiles: dict = field(default_factory=dict)
     q_service: float = 0.4
@@ -220,6 +220,10 @@ class Controller:
 
     # ------------------------------------------------------------------ execution with extraction
     def run_tool(self, tool: str, args: dict):
+        spent = sum(c.cost for c in self.env.calls)
+        if spent + float(self.env.costs.get(tool, 1)) > self.cfg.budget:
+            self.trace.append({"skipped_over_budget": tool, "args": args})
+            return None
         r = self.med.execute(tool, args)
         self.done[self._key(tool, args)] = self.env.clock
         entry = r.to_dict()
@@ -284,7 +288,8 @@ class Controller:
                 voi.reveal_with_availability(reveal, self.cfg.q_service), deterministic=False)
         if prog and prog.precondition and prog.trusted:
             pre = prog.precondition
-            add("config_get", {"service": pre.get("service"), "key": pre.get("key")}, _config_model())
+            add("config_get", {"service": pre.get("service") or case["src_package"], "key": pre.get("key")},
+                _config_model())
         profiles = self.cfg.trust_profiles
         cm = profiles.get("cmdb", {})
         if cm.get("trust") == "T":
@@ -320,7 +325,8 @@ class Controller:
             texts = {}
             for src in ("nvd", "kev"):
                 r = self.run_tool("advisory_fetch", {"cve": case["cve"], "source": src})
-                texts[src] = r.output
+                if r is not None:
+                    texts[src] = r.output
             program, u, raw = llm_compile(self.llm, texts, case)
             self.usage.add(u)
             self.med.set_program(program)
@@ -350,6 +356,8 @@ class Controller:
             tool, args, test = next(c for c in cands if c[2] is chosen)
             scores = {t.name: round(voi.ec2_score(belief, t), 6) for t in tests}
             r = self.run_tool(tool, args)
+            if r is None:
+                break
             y = self.call_atoms(r.call_id)
             consistent = belief.update(test, y)
             region, mass = belief.max_region()
@@ -399,6 +407,8 @@ class Controller:
     def remediate(self) -> None:
         case = self.case
         r = self.run_tool("request_approval", {"change": f"remediate {case['cve']} on {self.env.asset()}"})
+        if r is None:
+            return
         s = r.structured or {}
         if not (s.get("approved") and s.get("maintenance_window_open") and s.get("rollback_available")):
             return
@@ -413,18 +423,20 @@ class Controller:
         if fixed in (None, "", "0"):
             pre = self.med.program.precondition if self.med.program else None
             if pre:
-                self.run_tool("disable_feature", {"service": pre.get("service"), "key": pre.get("key")})
+                self.run_tool("disable_feature", {"service": pre.get("service") or case["src_package"],
+                                                  "key": pre.get("key")})
             return
         # pre-action re-verification: fresh package evidence immediately before the disruptive call
-        self.run_tool("pkg_query", {"name": case["src_package"]})
+        if self.run_tool("pkg_query", {"name": case["src_package"]}) is None:
+            return
         if self.med.decision().status != AFFECTED:
             self.trace.append({"remediation_aborted": self.med.decision().to_dict()})
             return
         r = self.run_tool("apply_patch", {"pkg": case["src_package"], "version": fixed})
-        if r.status != "ok":
+        if r is None or r.status != "ok":
             return
         st = self.run_tool("service_status", {"name": case["src_package"]})
-        for unit in (st.structured or {}).get("units", []):
+        for unit in ((st.structured if st else None) or {}).get("units", []):
             self.run_tool("restart_service", {"name": unit})
         self.run_tool("pkg_query", {"name": case["src_package"]})
 
@@ -458,7 +470,8 @@ def gather_all(med: Mediator) -> list:
     results.append(med.execute("service_status", {"name": case["src_package"]}))
     if med.program and med.program.precondition:
         pre = med.program.precondition
-        results.append(med.execute("config_get", {"service": pre.get("service"), "key": pre.get("key")}))
+        results.append(med.execute("config_get", {"service": pre.get("service") or case["src_package"],
+                                                   "key": pre.get("key")}))
     results.append(med.execute("cmdb_lookup", {"asset": env.asset()}))
     for s in ("trivy", "grype", "osv"):
         results.append(med.execute("run_scanner", {"tool": s}))
@@ -483,7 +496,7 @@ def run_direct(med: Mediator, llm: LLM) -> Outcome:
 @dataclass
 class ReactConfig:
     variant: str = "react"  # react | scratchpad | reflect
-    budget: float = 40.0
+    budget: float = 60.0
     max_turns: int = 20
     prompt_defense: bool = False
 

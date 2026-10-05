@@ -50,10 +50,19 @@ def main() -> None:
                     continue
                 lab = label_of(x)
                 if lab:
-                    pool[lab].append({"cve": cve, "src_package": src, "release": rel,
-                                      "fixed_version": x.get("fixed_version"), "tracker_status": x["status"],
-                                      "urgency": x.get("urgency"), "description": e["description"].strip(),
-                                      "description_source": "debian-tracker", "label": lab})
+                    pool[lab].append(
+                        {
+                            "cve": cve,
+                            "src_package": src,
+                            "release": rel,
+                            "fixed_version": x.get("fixed_version"),
+                            "tracker_status": x["status"],
+                            "urgency": x.get("urgency"),
+                            "description": e["description"].strip(),
+                            "description_source": "debian-tracker",
+                            "label": lab,
+                        }
+                    )
     rng = random.Random(SEED)
     rows, seen = [], set()
     for lab, n in TARGET.items():
@@ -72,7 +81,9 @@ def main() -> None:
         p = MIRRORS / "nvd" / SNAP_DATE / "cves" / f"{r['cve']}.json"
         if p.exists():
             v = json.loads(p.read_text()).get("vulnerabilities") or []
-            d = next((x["value"] for x in (v[0]["cve"]["descriptions"] if v else []) if x["lang"] == "en"), "")
+            d = next(
+                (x["value"] for x in (v[0]["cve"]["descriptions"] if v else []) if x["lang"] == "en"), ""
+            )
             if d:
                 r["nvd_description"] = d
                 r["description_source"] = "debian-tracker+nvd"
@@ -102,8 +113,10 @@ def main() -> None:
         write_jsonl(out / f"{s}.jsonl", part)
         lab = {k: sum(1 for r in part if r["label"] == k) for k in TARGET}
         print(f"d6 {s}: tuples={len(part)} cves={len({r['cve'] for r in part})} labels={lab}")
-    print(f"d6 total tuples={len(rows)}; D1 CVEs moved out of test={moved}; "
-          f"D1 CVEs in D6={len(d1_cves & set(by_cve))}")
+    print(
+        f"d6 total tuples={len(rows)}; D1 CVEs moved out of test={moved}; "
+        f"D1 CVEs in D6={len(d1_cves & set(by_cve))}"
+    )
 
 
 if __name__ == "__main__":

@@ -145,8 +145,9 @@ def lint_policy(text: str, k_required: Mapping[str, int]) -> list[str]:
             reachable = set(DISRUPTIVE)
         elif scope["op"] == "==":
             reachable = {scope["entity"]["id"]} & set(DISRUPTIVE)
-        else:
-            reachable = {e["id"] for e in scope.get("entities", [])} & set(DISRUPTIVE)
+        else:  # "in" with a list (entities) or a single entity (entity)
+            ents = list(scope.get("entities", []) or []) + ([scope["entity"]] if "entity" in scope else [])
+            reachable = {e["id"] for e in ents} & set(DISRUPTIVE)
         if not reachable:
             continue
         whens = [c["body"] for c in pol.get("conditions", []) if c["kind"] == "when"]

@@ -128,9 +128,6 @@ def test_untrusted_or_unbound_sources_rejected():
     assert not verify(Proposal("fixed_version", "openssh", OLD, f"openssh ({OLD})"), r, CASE).accepted
 
 
-@pytest.mark.xfail(strict=True, reason="BUG (T5): host.py:405-410 + verifier.py:268: when the changelog file does "
-                   "not exist, an Attack carrier 'file:<changelog path>' BECOMES the first line of a trusted fs "
-                   "output, and the header-line grammar accepts the forged version as a trusted fs-group fact")
 def test_t5_carrier_cannot_forge_fs_header(make_env):
     env, med = make_env(attack={"carriers": {
         "file:usr/share/doc/openssh-sftp-server/changelog.Debian":

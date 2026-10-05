@@ -28,7 +28,7 @@ LIC = {
     "endorsed or certified by the NVD.'",
     "osv": "OSV.dev data, CC-BY 4.0 / per-source licenses (Debian DSA/DLA records)",
     "snapshot_debian": "snapshot.debian.org machine-readable API responses (metadata only)",
-    "debian_debs": "Debian binary packages (DFSG-free); only default config files are extracted into fixtures",
+    "debian_debs": "Debian binary packages (DFSG-free); only default config files go into fixtures",
 }
 
 ARCHIVE_SUITES = {
@@ -36,7 +36,11 @@ ARCHIVE_SUITES = {
     "bookworm": ["bookworm", "bookworm-updates"],
     "trixie": ["trixie", "trixie-updates"],
 }
-SECURITY_SUITES = {"bullseye": "bullseye-security", "bookworm": "bookworm-security", "trixie": "trixie-security"}
+SECURITY_SUITES = {
+    "bullseye": "bullseye-security",
+    "bookworm": "bookworm-security",
+    "trixie": "trixie-security",
+}
 
 
 def mirror_global() -> None:
@@ -49,29 +53,52 @@ def mirror_global() -> None:
     m = Manifest("debian_tracker", LIC["debian_tracker"])
     url = "https://security-tracker.debian.org/tracker/data/json"
     p, new = fetch_cached(url, m.dir / "raw" / "tracker.json", timeout=600)
-    m.add(url, p, now_iso() if new else None, format="JSON {src_package: {CVE: {description, releases: "
-          "{release: {status, fixed_version, urgency, repositories}}}}}")
+    m.add(
+        url,
+        p,
+        now_iso() if new else None,
+        format="JSON {src_package: {CVE: {description, releases: "
+        "{release: {status, fixed_version, urgency, repositories}}}}}",
+    )
     m.save()
 
     m = Manifest("epss", LIC["epss"])
     url = "https://epss.empiricalsecurity.com/epss_scores-current.csv.gz"
     p, new = fetch_cached(url, m.dir / "raw" / "epss_scores-current.csv.gz")
-    m.add(url, p, now_iso() if new else None, note="redirects to epss_scores-<date>.csv.gz; first line is "
-          "#model_version,score_date comment")
+    m.add(
+        url,
+        p,
+        now_iso() if new else None,
+        note="redirects to epss_scores-<date>.csv.gz; first line is #model_version,score_date comment",
+    )
     m.save()
 
     m = Manifest("debian_archive", LIC["debian_archive"])
     jobs = []
     for rel, suites in ARCHIVE_SUITES.items():
         for s in suites:
-            jobs.append((f"https://deb.debian.org/debian/dists/{s}/main/binary-amd64/Packages.xz",
-                         m.dir / "raw" / s / "main_binary-amd64_Packages.xz"))
-            jobs.append((f"https://deb.debian.org/debian/dists/{s}/InRelease", m.dir / "raw" / s / "InRelease"))
+            jobs.append(
+                (
+                    f"https://deb.debian.org/debian/dists/{s}/main/binary-amd64/Packages.xz",
+                    m.dir / "raw" / s / "main_binary-amd64_Packages.xz",
+                )
+            )
+            jobs.append(
+                (f"https://deb.debian.org/debian/dists/{s}/InRelease", m.dir / "raw" / s / "InRelease")
+            )
         s = SECURITY_SUITES[rel]
-        jobs.append((f"https://security.debian.org/debian-security/dists/{s}/main/binary-amd64/Packages.xz",
-                     m.dir / "raw" / s / "main_binary-amd64_Packages.xz"))
-        jobs.append((f"https://security.debian.org/debian-security/dists/{s}/InRelease",
-                     m.dir / "raw" / s / "InRelease"))
+        jobs.append(
+            (
+                f"https://security.debian.org/debian-security/dists/{s}/main/binary-amd64/Packages.xz",
+                m.dir / "raw" / s / "main_binary-amd64_Packages.xz",
+            )
+        )
+        jobs.append(
+            (
+                f"https://security.debian.org/debian-security/dists/{s}/InRelease",
+                m.dir / "raw" / s / "InRelease",
+            )
+        )
     with ThreadPoolExecutor(8) as ex:
         res = list(ex.map(lambda j: (j[0], *fetch_cached(j[0], j[1])), jobs))
     for url, p, new in res:
@@ -148,8 +175,12 @@ def mirror_changelogs(spec: list[dict]) -> None:
         got = []
         for ver in row["versions"]:
             url = changelog_url(row["src"], ver)
-            p, new = fetch_cached(url, m.dir / "raw" / row["src"] / f"{ver.replace(':', '%3a')}_changelog",
-                                  min_interval=0.25, throttle_key="meta")
+            p, new = fetch_cached(
+                url,
+                m.dir / "raw" / row["src"] / f"{ver.replace(':', '%3a')}_changelog",
+                min_interval=0.25,
+                throttle_key="meta",
+            )
             got.append((url, p, new))
             if not p.read_bytes().startswith(b'{"_status"'):
                 break

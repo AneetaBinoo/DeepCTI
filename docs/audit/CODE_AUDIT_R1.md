@@ -68,12 +68,12 @@ Every xfail is `strict=True`. I re-ran each one with `--runxfail` and confirmed 
 - **Fix:** Use `min(Version(...) for b in binaries)`.
 - **Test:** `test_apply_patch_mixed_binary_versions`.
 
-### B6 [MEDIUM, wrong observation]: an unparseable scanner report reads as "no finding"
+### B6 [LOW-MEDIUM, latent, wrong observation]: an unparseable scanner report reads as "no finding"
 - **Where:** `src/deepcti/env/host.py:536-539` (with `Fixture.load:181-182` storing `None`)
 - **Defect:** `name in self.fx.scans` holds for a report that failed to parse, `scanner_findings(name, None)` returns `[]`, and the status is `"ok"`. The parser then emits `in_affected_range = F` (`parsers.py:143-144`), and S0 returns `not_affected/vulnerable_code_not_present` (`systems.py:84`).
 - **Fix:** `if self.fx.scans.get(name) is None: return "error", ...`.
 - **Test:** `test_corrupt_scanner_report_is_error`.
-- **Action:** Check `data/d1/hosts/*/scans/*.json` for parse failures before the run.
+- **Exposure:** Latent. Every `data/d1/hosts/*/scans/*.json` parses today, but any truncated or corrupt report would silently produce a negative in_range.
 
 ### B7 [MEDIUM, physics]: drift `remove` leaves `usr/share/doc/<bin>/changelog.Debian`
 - **Where:** `src/deepcti/env/host.py:293-299`
@@ -120,9 +120,9 @@ Every xfail is `strict=True`. I re-ran each one with `--runxfail` and confirmed 
 ## Design concerns (not bugs per se; decide before the run)
 
 1. **P3 makes `disable_feature` unreachable by construction.** `vuln_config_enabled` is bound only to the `fs` source class (`parsers.py:22-29`), so kpos ≤ 1 < k_world = 2 (`pdp.py:43,65`). Every requires-config mitigation without a fixed version is denied under P3. Test: `test_p3_disable_feature_is_unreachable_by_construction`.
-2. **S1p (use_llm=False, P3) can never patch.** Only the pkgdb group supports present/in_range; scanners share the `pkgdb` group and cmdb is U unless profiles say otherwise. `config/source_profiles.yaml` does not exist, so `tool_source` defaults cmdb and scanners to U. Test: `test_controller_p3_cannot_patch_without_second_group`. Make sure the paper describes this as intended.
-3. **Withheld arm: DC always returns under_investigation for present components.** The LLM-compiled program is untrusted, so in_range/fix are hints. The VOI candidates reveal only `present`, so the loop ends with `missing:in_affected_range` unless a scanner is profiled T. If this is intended (abstention), the `llm_compile` calls are wasted tokens.
-4. **`affected` is issued with `fix_applied = N`** (`decision.py:265-283`). This is consistent with the docstring ("N on a consulted atom *that blocks every later row*"), but not with a literal reading of the plan's "N on a consulted atom → UI missing". It is reachable when in_range comes only from a trusted scanner (DC_k1). Pin down which reading the paper states.
+2. **S1p (use_llm=False, P3) can never patch.** Only the pkgdb group supports present/in_range. `config/source_profiles.yaml` (which appeared during this audit) marks scanner:grype as T, but scanners share the `pkgdb` group, and cmdb is U. Test: `test_controller_p3_cannot_patch_without_second_group`. Make sure the paper describes this as intended.
+3. **Withheld arm: decisions rest entirely on the trusted grype scanner.** The LLM-compiled program is untrusted, so in_range/fix are hints. With grype = T in `source_profiles.yaml`, a grype finding gives `affected` with fix_applied = N (see item 4). A grype non-finding gives in_range = F, hence `not_affected/vulnerable_code_not_present`, even on hosts whose true label is `fixed` (a status mismatch on every fixed host where grype gets run in that arm). Without a trusted scanner the result is always `missing:in_affected_range`. In both cases the `llm_compile` output never influences the decision.
+4. **`affected` is issued with `fix_applied = N`** (`decision.py:265-283`). This is consistent with the docstring ("N on a consulted atom *that blocks every later row*"), but not with a literal reading of the plan's "N on a consulted atom → UI missing". It is reachable whenever in_range comes only from a trusted scanner: grype is T in the current profiles, the withheld arm, and DC_k1. Pin down which reading the paper states.
 5. **The `apply_patch` gate does not include `¬fix_applied` or the config atom** (`pdp.py:42`). P2/P3 can permit a patch on a host whose decision is `not_affected/requires_configuration` or `fixed` (the latter only via cross-group B-free combinations). This is fine if the gate is meant as "authorized", not "warranted"; the paper should say so.
 6. **Evidence is never re-parsed when the program changes** (`mediator.py:82`). A `config_get` made before `vex_lookup` is lost permanently. The Controller is unaffected (it always calls vex first). ReAct systems that call config first get no CONFIG atom for PDP gating. Test: `test_config_get_before_vex_lookup_loses_observation`.
 7. **Stale evidence cannot be refreshed by the Controller.** `self.done` (`systems.py:269`) removes a tool+args pair forever, so once `present` (window 40) goes stale the controller cannot re-query it. With budget ≤ 40 this does not bite; with any larger budget or drift episode it ends in UI.

@@ -25,7 +25,7 @@ LLM_FREE = ["S0_trivy", "S0_grype", "S0_osv", "S1", "S1p"]
 E2_LLM = ["S2", "S3", "S4", "S5", "DC"]
 E3_SYSTEMS = ["DC", "DC_entropy", "DC_checklist", "DC_llmchoose", "DC_random"]
 ABLATIONS = ["DC_noverify", "DC_k1", "DC_nofresh"]
-BUDGETS = [5.0, 10.0, 20.0, 40.0]
+BUDGETS = [5.0, 10.0, 20.0, 40.0, 60.0]
 
 
 def require_prereg() -> None:

@@ -193,7 +193,7 @@ def optimal_expected_cost(
 ) -> tuple[float, dict]:
     """Minimum expected cost to identify the decision region with deterministic tests (exact DP)."""
     det = [t for t in tests if t.deterministic]
-    hs = sorted(prior, key=lambda h: (h.present, h.status, h.config))
+    hs = sorted((h for h in prior if prior[h] > 0), key=lambda h: (h.present, h.status, h.config))
     weights = {h: prior[h] for h in hs}
 
     def outcome(t: Test, h: Hypothesis) -> Outcome:

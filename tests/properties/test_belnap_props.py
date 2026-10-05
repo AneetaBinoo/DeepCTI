@@ -181,9 +181,6 @@ def test_evidence_ids_tie_order_dependent_but_unreachable():
 import pytest  # noqa: E402
 
 
-@pytest.mark.xfail(strict=True, reason="BUG: belnap.py:137 keys latest-per-source by source NAME only; an untrusted "
-                   "observation that re-uses a trusted source's name (parsers.py:150/202 do exactly this when "
-                   "downgrading) shadows the trusted observation and changes val -> untrusted is not hints-only")
 def test_untrusted_same_name_cannot_shadow_trusted():
     trusted_fs = Source("fs", "T", "fs")
     downgraded_fs = Source("fs", "U", "fs")  # what parsers.py builds for an untrusted program

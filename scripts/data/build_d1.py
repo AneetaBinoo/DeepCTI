@@ -81,58 +81,186 @@ BINARIES = {
 }
 # decoys: a different source package whose name / vendor overlaps the advisory
 DECOYS = {
-    "openssl": ["python3-openssl"], "gnutls28": ["libcurl3-gnutls"], "nss": ["libnss-mdns"],
-    "openssh": ["ssh-askpass"], "sudo": ["opendoas"], "policykit-1": ["polkit-kde-agent-1"],
-    "xz-utils": ["pixz"], "zlib": ["pigz"], "bzip2": ["lbzip2"], "libarchive": ["libarchive-zip-perl"],
-    "apache2": ["libapr1", "libapr1t64"], "nginx": ["python3-certbot-nginx"], "bind9": ["ldnsutils"],
-    "exim4": ["sa-exim"], "postfix": ["postfix-policyd-spf-python"], "samba": ["cifs-utils"],
-    "python3.11": ["python3-pip"], "python3.13": ["python3-pip"], "perl": ["liberror-perl"],
-    "ruby3.1": ["ruby-rack"], "ruby3.3": ["ruby-rack"], "php8.2": ["php-common"], "php8.4": ["php-common"],
-    "curl": ["python3-pycurl"], "libxml2": ["libxml-libxml-perl"], "expat": ["libxml-parser-perl"],
-    "glibc": ["musl"], "sqlite3": ["libdbd-sqlite3-perl"], "libssh": ["libssh2-1", "libssh2-1t64"],
-    "tiff": ["python3-tifffile"], "libwebp": ["webp-pixbuf-loader"], "git": ["git-lfs"],
+    "openssl": ["python3-openssl"],
+    "gnutls28": ["libcurl3-gnutls"],
+    "nss": ["libnss-mdns"],
+    "openssh": ["ssh-askpass"],
+    "sudo": ["opendoas"],
+    "policykit-1": ["polkit-kde-agent-1"],
+    "xz-utils": ["pixz"],
+    "zlib": ["pigz"],
+    "bzip2": ["lbzip2"],
+    "libarchive": ["libarchive-zip-perl"],
+    "apache2": ["libapr1", "libapr1t64"],
+    "nginx": ["python3-certbot-nginx"],
+    "bind9": ["ldnsutils"],
+    "exim4": ["sa-exim"],
+    "postfix": ["postfix-policyd-spf-python"],
+    "samba": ["cifs-utils"],
+    "python3.11": ["python3-pip"],
+    "python3.13": ["python3-pip"],
+    "perl": ["liberror-perl"],
+    "ruby3.1": ["ruby-rack"],
+    "ruby3.3": ["ruby-rack"],
+    "php8.2": ["php-common"],
+    "php8.4": ["php-common"],
+    "curl": ["python3-pycurl"],
+    "libxml2": ["libxml-libxml-perl"],
+    "expat": ["libxml-parser-perl"],
+    "glibc": ["musl"],
+    "sqlite3": ["libdbd-sqlite3-perl"],
+    "libssh": ["libssh2-1", "libssh2-1t64"],
+    "tiff": ["python3-tifffile"],
+    "libwebp": ["webp-pixbuf-loader"],
+    "git": ["git-lfs"],
 }
 # NVD CPE products per Debian source package (for nvd_ranges)
 CPE_PRODUCTS = {
-    "openssl": {"openssl"}, "gnutls28": {"gnutls"}, "nss": {"nss", "network_security_services"},
-    "openssh": {"openssh"}, "sudo": {"sudo"}, "policykit-1": {"polkit"}, "xz-utils": {"xz", "xz-utils"},
-    "zlib": {"zlib"}, "bzip2": {"bzip2"}, "libarchive": {"libarchive"}, "apache2": {"http_server"},
-    "nginx": {"nginx"}, "bind9": {"bind"}, "exim4": {"exim"}, "postfix": {"postfix"}, "samba": {"samba"},
-    "python3.11": {"python", "cpython"}, "python3.13": {"python", "cpython"}, "perl": {"perl"},
-    "ruby3.1": {"ruby"}, "ruby3.3": {"ruby"}, "php8.2": {"php"}, "php8.4": {"php"}, "curl": {"curl", "libcurl"},
-    "libxml2": {"libxml2"}, "expat": {"libexpat", "expat"}, "glibc": {"glibc"}, "sqlite3": {"sqlite"},
-    "libssh": {"libssh"}, "tiff": {"libtiff"}, "libwebp": {"libwebp"}, "git": {"git"},
+    "openssl": {"openssl"},
+    "gnutls28": {"gnutls"},
+    "nss": {"nss", "network_security_services"},
+    "openssh": {"openssh"},
+    "sudo": {"sudo"},
+    "policykit-1": {"polkit"},
+    "xz-utils": {"xz", "xz-utils"},
+    "zlib": {"zlib"},
+    "bzip2": {"bzip2"},
+    "libarchive": {"libarchive"},
+    "apache2": {"http_server"},
+    "nginx": {"nginx"},
+    "bind9": {"bind"},
+    "exim4": {"exim"},
+    "postfix": {"postfix"},
+    "samba": {"samba"},
+    "python3.11": {"python", "cpython"},
+    "python3.13": {"python", "cpython"},
+    "perl": {"perl"},
+    "ruby3.1": {"ruby"},
+    "ruby3.3": {"ruby"},
+    "php8.2": {"php"},
+    "php8.4": {"php"},
+    "curl": {"curl", "libcurl"},
+    "libxml2": {"libxml2"},
+    "expat": {"libexpat", "expat"},
+    "glibc": {"glibc"},
+    "sqlite3": {"sqlite"},
+    "libssh": {"libssh"},
+    "tiff": {"libtiff"},
+    "libwebp": {"libwebp"},
+    "git": {"git"},
 }
 # daemon binaries -> service record (unit, process command line, config files) ; deb dirs for configs
 SERVICES = {
-    "openssh-server": ("ssh", "ssh.service", "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups",
-                       ["etc/ssh/sshd_config"]),
-    "apache2": ("apache2", "apache2.service", "/usr/sbin/apache2 -k start",
-                ["etc/apache2/apache2.conf", "etc/apache2/ports.conf"]),
-    "nginx": ("nginx", "nginx.service", "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;",
-              ["etc/nginx/nginx.conf"]),
-    "bind9": ("named", "named.service", "/usr/sbin/named -f -u bind",
-              ["etc/bind/named.conf", "etc/bind/named.conf.options"]),
-    "exim4-daemon-light": ("exim4", "exim4.service", "/usr/sbin/exim4 -bd -q30m",
-                           ["etc/exim4/update-exim4.conf.conf"]),
+    "openssh-server": (
+        "ssh",
+        "ssh.service",
+        "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups",
+        ["etc/ssh/sshd_config"],
+    ),
+    "apache2": (
+        "apache2",
+        "apache2.service",
+        "/usr/sbin/apache2 -k start",
+        ["etc/apache2/apache2.conf", "etc/apache2/ports.conf"],
+    ),
+    "nginx": (
+        "nginx",
+        "nginx.service",
+        "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;",
+        ["etc/nginx/nginx.conf"],
+    ),
+    "bind9": (
+        "named",
+        "named.service",
+        "/usr/sbin/named -f -u bind",
+        ["etc/bind/named.conf", "etc/bind/named.conf.options"],
+    ),
+    "exim4-daemon-light": (
+        "exim4",
+        "exim4.service",
+        "/usr/sbin/exim4 -bd -q30m",
+        ["etc/exim4/update-exim4.conf.conf"],
+    ),
     "postfix": ("postfix", "postfix.service", "/usr/lib/postfix/sbin/master -w", ["etc/postfix/main.cf"]),
-    "samba": ("smbd", "smbd.service", "/usr/sbin/smbd --foreground --no-process-group",
-              ["etc/samba/smb.conf"]),
+    "samba": (
+        "smbd",
+        "smbd.service",
+        "/usr/sbin/smbd --foreground --no-process-group",
+        ["etc/samba/smb.conf"],
+    ),
     "polkitd": ("polkit", "polkit.service", "/usr/lib/polkit-1/polkitd --no-debug", []),
 }
-FAMILY_SHORT = {"crypto_tls": "tls", "ssh": "ssh", "privesc": "adm", "compression": "arc", "web_server": "web",
-                "dns": "dns", "mail": "mx", "file_sharing": "fs", "interpreter": "app", "library": "app"}
-STATUS_FIELDS = ["Package", "Status", "Priority", "Section", "Installed-Size", "Maintainer", "Architecture",
-                 "Multi-Arch", "Source", "Version", "Replaces", "Provides", "Depends", "Pre-Depends",
-                 "Recommends", "Suggests", "Breaks", "Conflicts", "Description", "Homepage"]
-APACHE_DEFAULT_MODS = ["access_compat", "alias", "auth_basic", "authn_core", "authn_file", "authz_core",
-                       "authz_host", "authz_user", "autoindex", "deflate", "dir", "env", "filter", "mime",
-                       "mpm_event", "negotiation", "reqtimeout", "setenvif", "status"]
-APACHE_DEFAULT_CONFS = ["charset", "localized-error-pages", "other-vhosts-access-log", "security",
-                        "serve-cgi-bin"]
-EXPECTED = {"V1": ("not_affected", "component_not_present"), "V2": ("affected", None), "V3": ("fixed", None),
-            "V4": ("fixed", None), "V5": ("not_affected", "requires_configuration"),
-            "V6": ("not_affected", "component_not_present")}
+FAMILY_SHORT = {
+    "crypto_tls": "tls",
+    "ssh": "ssh",
+    "privesc": "adm",
+    "compression": "arc",
+    "web_server": "web",
+    "dns": "dns",
+    "mail": "mx",
+    "file_sharing": "fs",
+    "interpreter": "app",
+    "library": "app",
+}
+STATUS_FIELDS = [
+    "Package",
+    "Status",
+    "Priority",
+    "Section",
+    "Installed-Size",
+    "Maintainer",
+    "Architecture",
+    "Multi-Arch",
+    "Source",
+    "Version",
+    "Replaces",
+    "Provides",
+    "Depends",
+    "Pre-Depends",
+    "Recommends",
+    "Suggests",
+    "Breaks",
+    "Conflicts",
+    "Description",
+    "Homepage",
+]
+RELATION_FIELDS = {"Replaces", "Provides", "Depends", "Pre-Depends", "Recommends", "Suggests", "Breaks", "Conflicts"}
+APACHE_DEFAULT_MODS = [
+    "access_compat",
+    "alias",
+    "auth_basic",
+    "authn_core",
+    "authn_file",
+    "authz_core",
+    "authz_host",
+    "authz_user",
+    "autoindex",
+    "deflate",
+    "dir",
+    "env",
+    "filter",
+    "mime",
+    "mpm_event",
+    "negotiation",
+    "reqtimeout",
+    "setenvif",
+    "status",
+]
+APACHE_DEFAULT_CONFS = [
+    "charset",
+    "localized-error-pages",
+    "other-vhosts-access-log",
+    "security",
+    "serve-cgi-bin",
+]
+EXPECTED = {
+    "V1": ("not_affected", "component_not_present"),
+    "V2": ("affected", None),
+    "V3": ("fixed", None),
+    "V4": ("fixed", None),
+    "V5": ("not_affected", "requires_configuration"),
+    "V6": ("not_affected", "component_not_present"),
+}
 
 
 # ----------------------------------------------------------------------------------------------- loading
@@ -174,8 +302,12 @@ def nvd_ranges(nvd: dict | None, src: str) -> list[dict]:
                 if not m.get("vulnerable") or parts[2] != "a" or parts[4] not in prods:
                     continue
                 r = {"cpe": m["criteria"]}
-                for k in ("versionStartIncluding", "versionStartExcluding", "versionEndIncluding",
-                          "versionEndExcluding"):
+                for k in (
+                    "versionStartIncluding",
+                    "versionStartExcluding",
+                    "versionEndIncluding",
+                    "versionEndExcluding",
+                ):
                     if m.get(k):
                         r[k] = m[k]
                 out.append(r)
@@ -230,21 +362,33 @@ def base_sources(release: str) -> set[str]:
 def pick_binaries(src: str, release: str, pk: dict) -> list[str]:
     names = [b for b in BINARIES.get(src, []) if b in pk and src_of(pk[b])[0] == src]
     if not names:
-        names = sorted(b for b, p in pk.items() if src_of(p)[0] == src
-                       and not re.search(r"-(dev|doc|dbg|dbgsym|tests?)$", b))[:2]
+        names = sorted(
+            b
+            for b, p in pk.items()
+            if src_of(p)[0] == src and not re.search(r"-(dev|doc|dbg|dbgsym|tests?)$", b)
+        )[:2]
     return names
 
 
 def vulnerable_version(src: str, release: str, fixed: str) -> str | None:
     base = re.sub(INREL[release], "", fixed)
-    cands = [v for v in snapshot_versions(src)
-             if "bpo" not in v and Version(v) < Version(fixed)
-             and (re.search(INREL[release], v) or v == base)]
+    cands = [
+        v
+        for v in snapshot_versions(src)
+        if "bpo" not in v and Version(v) < Version(fixed) and (re.search(INREL[release], v) or v == base)
+    ]
     return max(cands, key=Version) if cands else None
 
 
-def plan_cve(sel: dict, tr_entry: dict, pks: dict, base_src: dict, preconds: dict, rng: random.Random,
-             ranges: list[dict]) -> tuple[list[dict], list[dict]]:
+def plan_cve(
+    sel: dict,
+    tr_entry: dict,
+    pks: dict,
+    base_src: dict,
+    preconds: dict,
+    rng: random.Random,
+    ranges: list[dict],
+) -> tuple[list[dict], list[dict]]:
     """Return (variant plans, skipped notes). A plan: release, variant, version (src version or None)."""
     src, cve = sel["src_package"], sel["cve"]
     plans, notes = [], []
@@ -258,20 +402,33 @@ def plan_cve(sel: dict, tr_entry: dict, pks: dict, base_src: dict, preconds: dic
         repo_max = max(x["repositories"].values(), key=Version)
         fv = x.get("fixed_version")
         if x["status"] == "open":
-            plans.append({"release": rel, "variant": "V2", "version": repo_max, "version_source": "tracker-repo"})
+            plans.append(
+                {"release": rel, "variant": "V2", "version": repo_max, "version_source": "tracker-repo"}
+            )
             v2_releases.append(rel)
         elif x["status"] == "resolved" and fv and fv != "0":
             if re.search(INREL[rel], fv):
                 vv = vulnerable_version(src, rel, fv)
                 if vv:
-                    plans.append({"release": rel, "variant": "V2", "version": vv, "version_source": "snapshot"})
+                    plans.append(
+                        {"release": rel, "variant": "V2", "version": vv, "version_source": "snapshot"}
+                    )
                     v2_releases.append(rel)
                 else:
-                    notes.append({"cve": cve, "release": rel, "why": "no in-release vulnerable snapshot version"})
+                    notes.append(
+                        {"cve": cve, "release": rel, "why": "no in-release vulnerable snapshot version"}
+                    )
             if Version(repo_max) >= Version(fv):
                 inside = in_nvd_range(norm_upstream(repo_max), ranges)
-                plans.append({"release": rel, "variant": "V4" if inside else "V3", "version": repo_max,
-                              "version_source": "tracker-repo", "nvd_upstream_in_range": inside})
+                plans.append(
+                    {
+                        "release": rel,
+                        "variant": "V4" if inside else "V3",
+                        "version": repo_max,
+                        "version_source": "tracker-repo",
+                        "nvd_upstream_in_range": inside,
+                    }
+                )
         else:
             notes.append({"cve": cve, "release": rel, "why": f"status {x['status']} fixed {fv}"})
     if has_pre and v2_releases:
@@ -282,21 +439,34 @@ def plan_cve(sel: dict, tr_entry: dict, pks: dict, base_src: dict, preconds: dic
     if absent_rel:
         r1 = rng.choice(absent_rel)
         plans.append({"release": r1, "variant": "V1", "version": None, "version_source": None})
-        dec_rel = [r for r in absent_rel if any(d in pks[r] and src_of(pks[r][d])[0] != src
-                                                for d in DECOYS.get(src, []))]
+        dec_rel = [
+            r
+            for r in absent_rel
+            if any(d in pks[r] and src_of(pks[r][d])[0] != src for d in DECOYS.get(src, []))
+        ]
         if dec_rel:
             others = [r for r in dec_rel if r != r1] or dec_rel
             r6 = rng.choice(others)
             d = next(d for d in DECOYS[src] if d in pks[r6])
-            plans.append({"release": r6, "variant": "V6", "version": None, "decoy": d,
-                          "version_source": "archive-current"})
+            plans.append(
+                {
+                    "release": r6,
+                    "variant": "V6",
+                    "version": None,
+                    "decoy": d,
+                    "version_source": "archive-current",
+                }
+            )
     else:
         notes.append({"cve": cve, "why": "src present in both base images: no V1/V6"})
     return plans, notes
 
 
 # ------------------------------------------------------------------------------------------ host building
-def status_stanza(p: dict, version: str, src: str, src_version: str) -> str:
+def status_stanza(p: dict, version: str, src: str, src_version: str, keep_relations: bool = False) -> str:
+    """dpkg status stanza. Relationship fields (Depends, Breaks, ...) are only kept for base-image stanzas:
+    for injected packages they would reference archive-current versions / packages not in the fixture."""
+    fields = STATUS_FIELDS if keep_relations else [f for f in STATUS_FIELDS if f not in RELATION_FIELDS]
     d = dict(p)
     d["Status"] = "install ok installed"
     d.setdefault("Priority", "optional")
@@ -306,15 +476,22 @@ def status_stanza(p: dict, version: str, src: str, src_version: str) -> str:
     else:
         d.pop("Source", None)
     lines = []
-    for k in STATUS_FIELDS:
+    for k in fields:
         if k in d and str(d[k]).strip():
             val = str(d[k]).rstrip("\n")
             lines.append(f"{k}: {val}" if not val.startswith("\n") else f"{k}:{val}")
     return "\n".join(lines)
 
 
-def write_status(rootfs: Path, release: str, pk: dict, src: str | None, src_version: str | None,
-                 extra_bins: list[str], decoy: str | None) -> None:
+def write_status(
+    rootfs: Path,
+    release: str,
+    pk: dict,
+    src: str | None,
+    src_version: str | None,
+    extra_bins: list[str],
+    decoy: str | None,
+) -> None:
     from debian.deb822 import Deb822
 
     stanzas = {}
@@ -382,10 +559,12 @@ def install_configs(rootfs: Path, release: str, bins: list[str]) -> None:
         copy_tree(dx / "exim4-config" / "etc", etc)
         (etc / "exim4" / "update-exim4.conf.conf").write_text(
             "# /etc/exim4/update-exim4.conf.conf\n#\n# This is a Debian specific file\n\n"
-            "dc_eximconfig_configtype='internet'\ndc_other_hostnames=''\ndc_local_interfaces='127.0.0.1 ; ::1'\n"
+            "dc_eximconfig_configtype='internet'\ndc_other_hostnames=''\n"
+            "dc_local_interfaces='127.0.0.1 ; ::1'\n"
             "dc_readhost=''\ndc_relay_domains=''\ndc_minimaldns='false'\ndc_relay_nets=''\ndc_smarthost=''\n"
             "CFILEMODE='644'\ndc_use_split_config='true'\ndc_hide_mailname=''\ndc_mailname_in_oh='true'\n"
-            "dc_localdelivery='mail_spool'\n")
+            "dc_localdelivery='mail_spool'\n"
+        )
     if "bind9" in bins:
         copy_tree(dx / "bind9" / "etc", etc)
     if "sudo" in bins:
@@ -414,46 +593,70 @@ def apply_precondition(rootfs: Path, cve: str, enabled: bool) -> None:
     """Write the curated configuration (vulnerable feature enabled / disabled) into the fixture."""
     etc = rootfs / "etc"
     if cve == "CVE-2024-6387":
-        _sub_line(etc / "ssh/sshd_config", "#LoginGraceTime 2m",
-                  "LoginGraceTime 120" if enabled else "LoginGraceTime 0")
+        _sub_line(
+            etc / "ssh/sshd_config",
+            "#LoginGraceTime 2m",
+            "LoginGraceTime 120" if enabled else "LoginGraceTime 0",
+        )
     elif cve == "CVE-2021-41617":
         if enabled:
-            _sub_line(etc / "ssh/sshd_config", "#AuthorizedKeysCommand none",
-                      "AuthorizedKeysCommand /usr/local/bin/get-keys %u")
-            _sub_line(etc / "ssh/sshd_config", "#AuthorizedKeysCommandUser nobody", "AuthorizedKeysCommandUser nobody")
+            _sub_line(
+                etc / "ssh/sshd_config",
+                "#AuthorizedKeysCommand none",
+                "AuthorizedKeysCommand /usr/local/bin/get-keys %u",
+            )
+            _sub_line(
+                etc / "ssh/sshd_config",
+                "#AuthorizedKeysCommandUser nobody",
+                "AuthorizedKeysCommandUser nobody",
+            )
     elif cve == "CVE-2025-26465":
-        _sub_line(etc / "ssh/ssh_config", "Host *\n", f"Host *\n    VerifyHostKeyDNS {'yes' if enabled else 'no'}\n")
+        _sub_line(
+            etc / "ssh/ssh_config", "Host *\n", f"Host *\n    VerifyHostKeyDNS {'yes' if enabled else 'no'}\n"
+        )
     elif cve == "CVE-2023-4091":
         with open(etc / "samba/smb.conf", "a") as f:
-            f.write("\n[projects]\n   comment = Project data (Windows ACLs)\n   path = /srv/samba/projects\n"
-                    "   read only = no\n   vfs objects = acl_xattr\n"
-                    f"   acl_xattr:ignore system acls = {'yes' if enabled else 'no'}\n")
+            f.write(
+                "\n[projects]\n   comment = Project data (Windows ACLs)\n   path = /srv/samba/projects\n"
+                "   read only = no\n   vfs objects = acl_xattr\n"
+                f"   acl_xattr:ignore system acls = {'yes' if enabled else 'no'}\n"
+            )
     elif cve == "CVE-2021-23017":
         if enabled:
             _sub_line(etc / "nginx/nginx.conf", "http {\n", "http {\n\tresolver 127.0.0.53;\n")
     elif cve == "CVE-2021-44142":
         objs = "catia fruit streams_xattr" if enabled else "catia streams_xattr"
         with open(etc / "samba/smb.conf", "a") as f:
-            f.write(f"\n[shared]\n   comment = Team share (macOS clients)\n   path = /srv/samba/shared\n"
-                    f"   read only = no\n   vfs objects = {objs}\n")
+            f.write(
+                f"\n[shared]\n   comment = Team share (macOS clients)\n   path = /srv/samba/shared\n"
+                f"   read only = no\n   vfs objects = {objs}\n"
+            )
     elif cve in ("CVE-2023-25690", "CVE-2021-44224"):
         if enabled:
             for ext in ("load", "conf"):
                 symlink(f"../mods-available/proxy.{ext}", etc / f"apache2/mods-enabled/proxy.{ext}")
             symlink("../mods-available/proxy_http.load", etc / "apache2/mods-enabled/proxy_http.load")
             if cve == "CVE-2021-44224":
-                _sub_line(etc / "apache2/mods-available/proxy.conf", "\n#ProxyRequests On\n", "\nProxyRequests On\n")
+                _sub_line(
+                    etc / "apache2/mods-available/proxy.conf", "\n#ProxyRequests On\n", "\nProxyRequests On\n"
+                )
             else:
                 symlink("../mods-available/rewrite.load", etc / "apache2/mods-enabled/rewrite.load")
-                _sub_line(etc / "apache2/sites-available/000-default.conf", "</VirtualHost>",
-                          "\tRewriteEngine on\n\tRewriteRule \"^/app/(.*)\" \"http://127.0.0.1:8080/app?$1\" [P]\n"
-                          "</VirtualHost>")
+                _sub_line(
+                    etc / "apache2/sites-available/000-default.conf",
+                    "</VirtualHost>",
+                    '\tRewriteEngine on\n\tRewriteRule "^/app/(.*)" "http://127.0.0.1:8080/app?$1" [P]\n'
+                    "</VirtualHost>",
+                )
     elif cve in ("CVE-2023-42115", "CVE-2023-42116"):
         ext = cve == "CVE-2023-42115"
         name, drv, pub = ("ext_auth", "external", "EXTERNAL") if ext else ("spa_server", "spa", "NTLM")
         body = [f"{name}:", f"  driver = {drv}", f"  public_name = {pub}"]
-        body += (["  server_param2 = ${tls_in_peerdn}", "  server_condition = true"] if ext else
-                 ["  server_password = ${lookup{$auth1}lsearch{CONFDIR/passwd}{$value}fail}"])
+        body += (
+            ["  server_param2 = ${tls_in_peerdn}", "  server_condition = true"]
+            if ext
+            else ["  server_password = ${lookup{$auth1}lsearch{CONFDIR/passwd}{$value}fail}"]
+        )
         if not enabled:
             body = ["# " + b for b in body]
         p = etc / f"exim4/conf.d/auth/50_local_{'external' if ext else 'spa'}"
@@ -461,14 +664,21 @@ def apply_precondition(rootfs: Path, cve: str, enabled: bool) -> None:
     elif cve == "CVE-2023-42117":
         line = "hosts_proxy = 10.0.0.0/8"
         (etc / "exim4/conf.d/main/05_local_proxy").write_text(
-            "# Accept PROXY protocol from the load balancer subnet\n" + (line if enabled else "# " + line) + "\n")
+            "# Accept PROXY protocol from the load balancer subnet\n"
+            + (line if enabled else "# " + line)
+            + "\n"
+        )
     elif cve in ("CVE-2023-2911", "CVE-2025-40777"):
         to = "0" if enabled else "off"
-        _insert_before_close(etc / "bind/named.conf.options",
-                             f"\n\tstale-answer-enable yes;\n\tstale-answer-client-timeout {to};\n")
+        _insert_before_close(
+            etc / "bind/named.conf.options",
+            f"\n\tstale-answer-enable yes;\n\tstale-answer-client-timeout {to};\n",
+        )
     elif cve == "CVE-2019-18634":
         (etc / "sudoers.d").mkdir(parents=True, exist_ok=True)
-        (etc / "sudoers.d/pwfeedback").write_text("Defaults pwfeedback\n" if enabled else "Defaults !pwfeedback\n")
+        (etc / "sudoers.d/pwfeedback").write_text(
+            "Defaults pwfeedback\n" if enabled else "Defaults !pwfeedback\n"
+        )
     else:
         raise KeyError(f"no fixture writer for precondition {cve}")
 
@@ -505,15 +715,18 @@ def changelog_text(src: str, version: str, release: str, maintainer: str) -> tup
     blocks = changelog_blocks(src)
     blk = next((b for b in blocks if str(b.version) == version), None)
     if blk is not None:
-        bullets = [ln.rstrip() for ln in blk.changes() if ln.startswith("  * ")][:3]
+        lines = [ln.rstrip() for ln in blk.changes() if ln.strip() and not ln.startswith("  [")]
+        first = next((i for i, ln in enumerate(lines) if ln.startswith("  * ")), 0)
+        bullets = [ln for ln in lines[first:] if ln.startswith("  ")][:3]
         bullets = [b if len(b) <= 160 else b[:157] + "..." for b in bullets] or ["  * Security update."]
         head = f"{src} ({version}) {blk.distributions}; urgency={blk.urgency}"
         return f"{head}\n\n" + "\n".join(bullets) + f"\n\n -- {blk.author}  {blk.date}\n", False
     dist = f"{release}-security" if re.search(INREL[release], version) else release
     older = [b for b in blocks if Version(str(b.version)) < Version(version)]
-    date = max(older, key=lambda b: Version(str(b.version))).date if older else "Mon, 05 Jan 2026 00:00:00 +0000"
-    text = (f"{src} ({version}) {dist}; urgency=medium\n\n  * Security update.\n\n"
-            f" -- {maintainer}  {date}\n")
+    date = (
+        max(older, key=lambda b: Version(str(b.version))).date if older else "Mon, 05 Jan 2026 00:00:00 +0000"
+    )
+    text = f"{src} ({version}) {dist}; urgency=medium\n\n  * Security update.\n\n -- {maintainer}  {date}\n"
     return text, True
 
 
@@ -580,8 +793,12 @@ def build_case(job: dict) -> dict:
             cfgs = list(cfgs)
             if pre and pre.get("service") == name and pre["file"] not in cfgs:
                 cfgs.append(pre["file"])
-            services[name] = {"unit": unit, "active": True, "package": b,
-                              "config_files": [c for c in cfgs if (rootfs / c).exists() or (rootfs / c).is_symlink()]}
+            services[name] = {
+                "unit": unit,
+                "active": True,
+                "package": b,
+                "config_files": [c for c in cfgs if (rootfs / c).exists() or (rootfs / c).is_symlink()],
+            }
             pid += rng.randrange(5, 60)
             procs.append({"pid": pid, "user": "root", "cmd": cmd, "unit": unit})
     stale = rng.random() < 0.2
@@ -605,25 +822,70 @@ def build_case(job: dict) -> dict:
     if month == 9 and last_sync[:10] > "2026-10-04":
         last_sync = "2026-10-04T03:00:00Z"
     has_ticket = rng.random() < 0.5
-    ticket = ({"id": f"CHG-2026{rng.randrange(10000, 99999)}", "approved": rng.random() < 0.75,
-               "window_open": rng.random() < 0.5} if has_ticket else None)
-    host = {"host_id": host_id, "hostname": hostname, "release": rel,
-            "services": services, "processes": procs,
-            "cmdb": {"asset": hostname, "os": f"Debian {RELEASE_NUM[rel]}", "software": sw,
-                     "last_sync": last_sync, "notes": rng.choice(["imported from asset inventory",
-                                                                  "owner: platform team", "prod tier 2",
-                                                                  "managed by config management"])},
-            "cmdb_stale": stale, "change": {"ticket": ticket}, "rollback_available": rng.random() < 0.5}
+    ticket = (
+        {
+            "id": f"CHG-2026{rng.randrange(10000, 99999)}",
+            "approved": rng.random() < 0.75,
+            "window_open": rng.random() < 0.5,
+        }
+        if has_ticket
+        else None
+    )
+    host = {
+        "host_id": host_id,
+        "hostname": hostname,
+        "release": rel,
+        "services": services,
+        "processes": procs,
+        "cmdb": {
+            "asset": hostname,
+            "os": f"Debian {RELEASE_NUM[rel]}",
+            "software": sw,
+            "last_sync": last_sync,
+            "notes": rng.choice(
+                [
+                    "imported from asset inventory",
+                    "owner: platform team",
+                    "prod tier 2",
+                    "managed by config management",
+                ]
+            ),
+        },
+        "cmdb_stale": stale,
+        "change": {"ticket": ticket},
+        "rollback_available": rng.random() < 0.5,
+    }
     (hdir / "host.json").write_text(json.dumps(host, indent=1))
-    row = {"case_id": case_id, "cve": cve, "src_package": src, "binary_packages": inst_bins or bins
-           or pick_binaries(src, rel, pk), "distro": "debian", "release": rel, "variant": var,
-           "host_id": host_id, "family": sel["family"], "split": sel["split"],
-           "temporal_holdout": sel["temporal_holdout"], "kev": sel["kev"], "base_image": ctx["images"][rel],
-           "installed_version": installed, "label": label, "atoms": atoms, "label_provenance": PROVENANCE}
-    meta = {"host_id": host_id, "case_id": case_id, "cmdb_stale": stale, "cmdb_version": cmdb_ver,
-            "true_installed_version": installed, "version_source": plan.get("version_source"),
-            "decoy": plan.get("decoy"), "changelog_synthesized": synth,
-            "nvd_upstream_in_range": plan.get("nvd_upstream_in_range")}
+    row = {
+        "case_id": case_id,
+        "cve": cve,
+        "src_package": src,
+        "binary_packages": inst_bins or bins or pick_binaries(src, rel, pk),
+        "distro": "debian",
+        "release": rel,
+        "variant": var,
+        "host_id": host_id,
+        "family": sel["family"],
+        "split": sel["split"],
+        "temporal_holdout": sel["temporal_holdout"],
+        "kev": sel["kev"],
+        "base_image": ctx["images"][rel],
+        "installed_version": installed,
+        "label": label,
+        "atoms": atoms,
+        "label_provenance": PROVENANCE,
+    }
+    meta = {
+        "host_id": host_id,
+        "case_id": case_id,
+        "cmdb_stale": stale,
+        "cmdb_version": cmdb_ver,
+        "true_installed_version": installed,
+        "version_source": plan.get("version_source"),
+        "decoy": plan.get("decoy"),
+        "changelog_synthesized": synth,
+        "nvd_upstream_in_range": plan.get("nvd_upstream_in_range"),
+    }
     return {"row": row, "meta": meta}
 
 
@@ -641,11 +903,22 @@ def main() -> None:
     base_src = {r: base_sources(r) for r in RELEASES}
     from debian.deb822 import Deb822
 
-    base_pk = {r: {dict(p)["Package"]: dict(p)["Version"] for p in Deb822.iter_paragraphs(
-        base_status_text(r).splitlines())} for r in RELEASES}
+    base_pk = {
+        r: {
+            dict(p)["Package"]: dict(p)["Version"]
+            for p in Deb822.iter_paragraphs(base_status_text(r).splitlines())
+        }
+        for r in RELEASES
+    }
     images = {r: load_json(DATA / "base_images" / r / "IMAGE.json")["reference"] for r in RELEASES}
-    ctx = {"tracker": tracker, "preconds": preconds, "pks": pks, "images": images, "base_pk": base_pk,
-           "pk_bins": lambda src, rel: pick_binaries(src, rel, pks[rel])}
+    ctx = {
+        "tracker": tracker,
+        "preconds": preconds,
+        "pks": pks,
+        "images": images,
+        "base_pk": base_pk,
+        "pk_bins": lambda src, rel: pick_binaries(src, rel, pks[rel]),
+    }
 
     jobs, metas, notes = [], [], []
     for s in selected:
@@ -679,18 +952,38 @@ def main() -> None:
         for r in RELEASES:
             x = tracker[s["src_package"]][s["cve"]]["releases"].get(r)
             if x:
-                deb[r] = {"status": x["status"], "fixed_version": x.get("fixed_version"),
-                          "urgency": x.get("urgency")}
-        metas.append({
-            "cve": s["cve"], "src_package": s["src_package"], "family": s["family"],
-            "published": (nvd or {}).get("published", "")[:10] or s.get("published"), "kev": s["kev"],
-            "epss": s.get("epss"), "description": desc, "debian": deb, "nvd_ranges": ranges,
-            "osv_ids": osv_ids,
-            "config_precondition": None if not pre else {
-                "file": pre["file"], "key": pre["key"], "vulnerable_when": pre["vulnerable_when"],
-                "safe_value": pre["safe_setting"], "source": pre["advisory_url"], "service": pre.get("service"),
-                "predicate": pre["predicate"]},
-            "split": s["split"], "temporal_holdout": s["temporal_holdout"]})
+                deb[r] = {
+                    "status": x["status"],
+                    "fixed_version": x.get("fixed_version"),
+                    "urgency": x.get("urgency"),
+                }
+        metas.append(
+            {
+                "cve": s["cve"],
+                "src_package": s["src_package"],
+                "family": s["family"],
+                "published": (nvd or {}).get("published", "")[:10] or s.get("published"),
+                "kev": s["kev"],
+                "epss": s.get("epss"),
+                "description": desc,
+                "debian": deb,
+                "nvd_ranges": ranges,
+                "osv_ids": osv_ids,
+                "config_precondition": None
+                if not pre
+                else {
+                    "file": pre["file"],
+                    "key": pre["key"],
+                    "vulnerable_when": pre["vulnerable_when"],
+                    "safe_value": pre["safe_setting"],
+                    "source": pre["advisory_url"],
+                    "service": pre.get("service"),
+                    "predicate": pre["predicate"],
+                },
+                "split": s["split"],
+                "temporal_holdout": s["temporal_holdout"],
+            }
+        )
 
     HOSTS.mkdir(parents=True, exist_ok=True)
     with ThreadPoolExecutor(24) as ex:
@@ -701,9 +994,14 @@ def main() -> None:
     # drop hosts of failed cases
     for r in results:
         if r.get("failure"):
-            hid, _ = host_ids(r["case_id"], next(j["sel"]["family"] for j in jobs
-                                                  if f"D1-{j['sel']['cve']}-{j['plan']['release']}-"
-                                                  f"{j['plan']['variant']}" == r["case_id"]))
+            hid, _ = host_ids(
+                r["case_id"],
+                next(
+                    j["sel"]["family"]
+                    for j in jobs
+                    if f"D1-{j['sel']['cve']}-{j['plan']['release']}-{j['plan']['variant']}" == r["case_id"]
+                ),
+            )
             shutil.rmtree(HOSTS / hid, ignore_errors=True)
     built_cves = {r["cve"] for r in rows}
     metas = [m for m in metas if m["cve"] in built_cves]
@@ -714,8 +1012,10 @@ def main() -> None:
     for split in ("dev", "calib"):
         write_jsonl(D1 / "cases" / f"{split}.jsonl", [r for r in rows if r["split"] == split])
     test = [r for r in rows if r["split"] == "test"]
-    write_jsonl(D1 / "cases" / "test.jsonl",
-                [{k: v for k, v in r.items() if k not in ("label", "atoms")} for r in test])
+    write_jsonl(
+        D1 / "cases" / "test.jsonl",
+        [{k: v for k, v in r.items() if k not in ("label", "atoms")} for r in test],
+    )
     sealed = DATA / "sealed" / "test_labels.jsonl"
     write_jsonl(sealed, [{"case_id": r["case_id"], "label": r["label"], "atoms": r["atoms"]} for r in test])
     (DATA / "sealed" / "SHA256").write_text(f"{sha256_file(sealed)}  data/sealed/test_labels.jsonl\n")
@@ -724,8 +1024,10 @@ def main() -> None:
     for d in HOSTS.iterdir():
         if d.name not in keep:
             shutil.rmtree(d)
-    print(f"cases={len(rows)} cves={len(built_cves)} failures={sum(1 for r in results if r.get('failure'))} "
-          f"notes={len(notes)}")
+    print(
+        f"cases={len(rows)} cves={len(built_cves)} failures={sum(1 for r in results if r.get('failure'))} "
+        f"notes={len(notes)}"
+    )
 
 
 if __name__ == "__main__":

@@ -28,9 +28,14 @@ from common import DATA, ROOT, now_iso  # noqa: E402
 
 BIN = ROOT / "tools" / "bin"
 CACHE = ROOT / "tools" / "cache"
-ENV = dict(os.environ, GRYPE_DB_AUTO_UPDATE="false", GRYPE_DB_CACHE_DIR=str(CACHE / "grype"),
-           GRYPE_CHECK_FOR_APP_UPDATE="false", OSV_SCANNER_LOCAL_DB_CACHE_DIRECTORY=str(CACHE / "osv"),
-           TRIVY_NO_PROGRESS="true")
+ENV = dict(
+    os.environ,
+    GRYPE_DB_AUTO_UPDATE="false",
+    GRYPE_DB_CACHE_DIR=str(CACHE / "grype"),
+    GRYPE_CHECK_FOR_APP_UPDATE="false",
+    OSV_SCANNER_LOCAL_DB_CACHE_DIRECTORY=str(CACHE / "osv"),
+    TRIVY_NO_PROGRESS="true",
+)
 
 
 def run(cmd: list[str], out: Path, timeout: int = 600) -> dict:
@@ -45,12 +50,22 @@ def docker_archive(rootfs: Path, dest: Path) -> None:
         with tarfile.open(layer, "w") as tf:
             tf.add(rootfs, arcname=".")
         digest = hashlib.sha256(layer.read_bytes()).hexdigest()
-        (Path(td) / "config.json").write_text(json.dumps({
-            "architecture": "amd64", "os": "linux", "config": {},
-            "rootfs": {"type": "layers", "diff_ids": [f"sha256:{digest}"]},
-            "history": [{"created_by": "DeepCTI rootfs fixture"}]}))
-        (Path(td) / "manifest.json").write_text(json.dumps(
-            [{"Config": "config.json", "RepoTags": ["deepcti/fixture:latest"], "Layers": ["layer.tar"]}]))
+        (Path(td) / "config.json").write_text(
+            json.dumps(
+                {
+                    "architecture": "amd64",
+                    "os": "linux",
+                    "config": {},
+                    "rootfs": {"type": "layers", "diff_ids": [f"sha256:{digest}"]},
+                    "history": [{"created_by": "DeepCTI rootfs fixture"}],
+                }
+            )
+        )
+        (Path(td) / "manifest.json").write_text(
+            json.dumps(
+                [{"Config": "config.json", "RepoTags": ["deepcti/fixture:latest"], "Layers": ["layer.tar"]}]
+            )
+        )
         with tarfile.open(dest, "w") as tf:
             for n in ("manifest.json", "config.json", "layer.tar"):
                 tf.add(Path(td) / n, arcname=n)
@@ -62,9 +77,25 @@ def scan_host(hdir: Path, force: bool) -> dict:
     res = {}
     t = sdir / "trivy.json"
     if force or not t.exists() or t.stat().st_size == 0:
-        res["trivy"] = run([str(BIN / "trivy"), "rootfs", "--quiet", "--format", "json", "--skip-db-update",
-                            "--offline-scan", "--scanners", "vuln", "--cache-dir", str(CACHE / "trivy"),
-                            "--output", str(t), str(rootfs)], t)
+        res["trivy"] = run(
+            [
+                str(BIN / "trivy"),
+                "rootfs",
+                "--quiet",
+                "--format",
+                "json",
+                "--skip-db-update",
+                "--offline-scan",
+                "--scanners",
+                "vuln",
+                "--cache-dir",
+                str(CACHE / "trivy"),
+                "--output",
+                str(t),
+                str(rootfs),
+            ],
+            t,
+        )
     g = sdir / "grype.json"
     if force or not g.exists() or g.stat().st_size == 0:
         res["grype"] = run([str(BIN / "grype"), f"dir:{rootfs}", "-q", "-o", "json", "--file", str(g)], g)
@@ -74,8 +105,23 @@ def scan_host(hdir: Path, force: bool) -> dict:
         tmp.mkdir(parents=True, exist_ok=True)
         arch = tmp / f"{hdir.name}.tar"
         docker_archive(rootfs, arch)
-        res["osv"] = run([str(BIN / "osv-scanner"), "scan", "image", "--archive", str(arch), "--format", "json",
-                          "--offline-vulnerabilities", "--verbosity", "error", "--output-file", str(o)], o)
+        res["osv"] = run(
+            [
+                str(BIN / "osv-scanner"),
+                "scan",
+                "image",
+                "--archive",
+                str(arch),
+                "--format",
+                "json",
+                "--offline-vulnerabilities",
+                "--verbosity",
+                "error",
+                "--output-file",
+                str(o),
+            ],
+            o,
+        )
         arch.unlink(missing_ok=True)
     return {"host_id": hdir.name, **res}
 
@@ -84,15 +130,18 @@ def tool_versions() -> dict:
     def out(cmd):
         return subprocess.run(cmd, env=ENV, capture_output=True, text=True).stdout.strip()
 
-    meta = {"trivy": out([str(BIN / "trivy"), "--version", "--cache-dir", str(CACHE / "trivy")]),
-            "grype": out([str(BIN / "grype"), "version"]),
-            "grype_db": out([str(BIN / "grype"), "db", "status"]),
-            "osv-scanner": out([str(BIN / "osv-scanner"), "--version"])}
+    meta = {
+        "trivy": out([str(BIN / "trivy"), "--version", "--cache-dir", str(CACHE / "trivy")]),
+        "grype": out([str(BIN / "grype"), "version"]),
+        "grype_db": out([str(BIN / "grype"), "db", "status"]),
+        "osv-scanner": out([str(BIN / "osv-scanner"), "--version"]),
+    }
     osv_db = {}
     for z in sorted((CACHE / "osv" / "osv-scalibr").glob("*/all.zip")):
-        osv_db[z.parent.name] = {"bytes": z.stat().st_size,
-                                 "mtime": __import__("datetime").datetime.fromtimestamp(z.stat().st_mtime)
-                                 .isoformat()}
+        osv_db[z.parent.name] = {
+            "bytes": z.stat().st_size,
+            "mtime": __import__("datetime").datetime.fromtimestamp(z.stat().st_mtime).isoformat(),
+        }
     meta["osv_db"] = osv_db
     return meta
 
@@ -106,8 +155,13 @@ def main() -> None:
     with ThreadPoolExecutor(a.workers) as ex:
         results = list(ex.map(lambda h: scan_host(h, a.force), hosts))
     fails = [r for r in results if any(not v["ok"] for k, v in r.items() if isinstance(v, dict))]
-    summary = {"finished_at": now_iso(), "n_hosts": len(hosts), "n_failed_hosts": len(fails),
-               "tools": tool_versions(), "failures": fails}
+    summary = {
+        "finished_at": now_iso(),
+        "n_hosts": len(hosts),
+        "n_failed_hosts": len(fails),
+        "tools": tool_versions(),
+        "failures": fails,
+    }
     (DATA / "d1" / "scanner_runs.json").write_text(json.dumps(summary, indent=1))
     print(f"scanned {len(hosts)} hosts, {len(fails)} with failures")
 

@@ -72,9 +72,6 @@ def test_optimal_le_greedy(arg, costs):
         assert opt <= greedy + 1e-9, (scorer, opt, greedy)
 
 
-@pytest.mark.xfail(strict=True, reason="BUG: voi.py:196-207 optimal_expected_cost keeps zero-weight hypotheses "
-                   "(regions computed over them) while Belief drops them, so the 'optimal' DP can cost MORE than "
-                   "the greedy policy (regret < 0)")
 def test_optimal_le_greedy_with_zero_prior_mass():
     req = False
     hs = voi.hypothesis_space(req)

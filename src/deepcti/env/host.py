@@ -294,6 +294,7 @@ class HostEnv:
         elif kind == "remove":
             for name in self.src_binaries(event["src"]):
                 self.packages[name]["Status"] = "deinstall ok config-files"
+                self.files.pop(f"usr/share/doc/{name}/changelog.Debian", None)
             for svc in self.services.values():
                 if self.packages.get(svc.get("package", ""), {}).get("Status") != "install ok installed":
                     svc["active"] = False
@@ -409,6 +410,8 @@ class HostEnv:
         if not self.args_ok("file_read", {"path": path}):
             return "invalid", f"path not allow-listed: {path}", None
         carrier = self.attack.carriers.get(f"file:{path}")
+        if carrier and path not in self.files and path.endswith("/changelog.Debian"):
+            carrier = None  # untrusted text may only be appended to existing changelogs, never become a header
         if path in self.files or carrier:
             text = self.files.get(path, "")
             forged = self._forged("fs")
@@ -429,7 +432,7 @@ class HostEnv:
         for svc_key, svc in self.services.items():
             if service in (svc_key, svc.get("unit"), svc.get("unit", "").removesuffix(".service")):
                 patterns += svc.get("config_files", [])
-        if self.pre and service == self.pre.get("service"):
+        if self.pre and service in (self.pre.get("service"), self.case["src_package"], None):
             patterns.append(self.pre["file"])
             patterns.append(self.pre["file"].rstrip("/") + "/*")
         return sorted({p for pat in patterns for p in self.files if fnmatch.fnmatch(p, pat)})
@@ -544,7 +547,7 @@ class HostEnv:
         name = str(args["tool"])
         if name not in SCANNERS:
             return "invalid", f"unknown scanner {name}", None
-        if name not in self.fx.scans:
+        if name not in self.fx.scans or self.fx.scans[name] is None:
             return "error", f"{name}: scan report unavailable for this host", None
         forged = self._forged(f"scanner:{name}")
         findings = forged["findings"] if forged else scanner_findings(name, self.fx.scans[name], self.case["cve"])
@@ -584,13 +587,17 @@ class HostEnv:
         binaries = self.src_binaries(src)
         if not binaries:
             return "error", f"E: Package '{name}' is not installed", None
+        if src != self.case["src_package"]:
+            self.actions.append({"t": self.clock, "action": "apply_patch", "pkg": name, "changed": False})
+            return "ok", f"{name}: no pending security update in this scenario; nothing changed.", {"changed": False}
         target = self.fixed_version()
-        current = self.packages[binaries[0]]["Version"]
+        current = min((self.packages[b]["Version"] for b in binaries), key=Version)
         if target is None or Version(current) >= Version(target):
             self.actions.append({"t": self.clock, "action": "apply_patch", "pkg": name, "changed": False})
             return "ok", f"{src} is already the newest version ({current}).", {"changed": False}
         for b in binaries:
-            self.packages[b]["Version"] = target
+            if Version(self.packages[b]["Version"]) < Version(target):
+                self.packages[b]["Version"] = target
         self._changelog_refresh(src)
         self.actions.append({"t": self.clock, "action": "apply_patch", "pkg": name, "changed": True,
                              "from": current, "to": target})

@@ -191,3 +191,48 @@ The two envs have different `openai` major versions (venv 3.x, falcon 2.x). This
   - a scaled integer (e.g. basis points, `risk_bp <= 500`).
 - Belnap values should be sent as a string or enum attribute.
 - An evaluation error makes that policy not apply, which here produced Deny. The DeepCTI gate should treat error diagnostics as fail-closed explicitly.
+
+## Data sources
+
+Verified 2026-10-05 04:50–05:40 UTC by the data pipeline (`scripts/data/`). Everything was mirrored once into
+`data/mirrors/<source>/2026-10-05/`, with `MANIFEST.json` (url, retrieved_at, sha256, bytes, license) kept
+outside `raw/`. Large raw files are in git-ignored `raw/` subdirectories.
+
+| Source | URL / format verified | Notes |
+|---|---|---|
+| CISA KEV | `https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json` (JSON, `vulnerabilities[]`) | catalogVersion 2026.10.04, 1734 entries |
+| Debian security tracker | `https://security-tracker.debian.org/tracker/data/json` (81.5 MB JSON `{src: {CVE: {description, scope, releases: {rel: {status, repositories, fixed_version, urgency}}}}}`) | sha256 bd5eff15…c7e3. **bullseye is no longer present** (only bookworm/trixie/forky/sid), so D1 uses bookworm + trixie. |
+| EPSS | `https://epss.empiricalsecurity.com/epss_scores-current.csv.gz`, which 302-redirects to `epss_scores-2026-10-04.csv.gz`. The old `epss.cyentia.com` host redirects to the same place. First line is the comment `#model_version:v2026.06.15,score_date:2026-10-04T12:00:21Z`. | CSV columns `cve,epss,percentile` |
+| NVD CVE API 2.0 | `https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=<CVE>`, no key, ≥6.5 s between requests; one cached JSON per selected CVE | `vulnerabilities[0].cve.{published,descriptions,metrics,configurations}` |
+| OSV | `GET https://api.osv.dev/v1/vulns/<id>` (HEAD returns 405). Both `CVE-…` and `DEBIAN-CVE-…` records are mirrored. | `DEBIAN-CVE-*` records carry `Debian:12`/`Debian:13` ECOSYSTEM ranges |
+| snapshot.debian.org | `https://snapshot.debian.org/mr/package/<src>/` (JSON `result[].version`), ≤2 req/s | Used for real older (vulnerable) source versions |
+| Debian archive | `https://deb.debian.org/debian/dists/{bookworm,trixie}{,-updates}/main/binary-amd64/Packages.xz` and `https://security.debian.org/debian-security/dists/{rel}-security/main/binary-amd64/Packages.xz`, plus the InRelease files | Real binary stanzas (Maintainer, Section, Installed-Size, …) and current versions. bullseye indices are also mirrored. |
+| Debian .debs | the current openssh-server/-client, nginx(-common), samba(-common), apache2, exim4-config, bind9, sudo and postfix packages from the pool | Default configuration files for the fixtures (`dpkg-deb -x`) |
+| Debian changelogs | `https://metadata.ftp-master.debian.org/changelogs/main/<p>/<src>/<src>_<ver-without-epoch>_changelog` | Only versions currently in the archive are present; security-only versions often 404, in which case the next candidate is tried |
+| Docker Hub | anonymous token `https://auth.docker.io/token?service=registry.docker.io&scope=repository:library/debian:pull`; `GET https://registry-1.docker.io/v2/library/debian/manifests/<rel>-slim` (OCI index), then the linux/amd64 manifest, then the single layer blob (sha256-verified) | see digests below |
+
+Base images (linux/amd64; only `etc/`, `var/lib/dpkg/` and `usr/lib/os-release` were extracted):
+
+* `debian:bullseye-slim@sha256:e5b6442dd2e9684cf5e87d8338b5968f3b348636fc0be6d7850a381e3731a2bd`, amd64 manifest `sha256:70509c95d1857a3704c0a5d92ee2e0adac95f612a9386889d70760bfd7c1ebba`. Fetched but not used, because the tracker has no bullseye data.
+* `debian:bookworm-slim@sha256:3783cc01769c7b2b1b83a5c5ad96c815348e28ed7da68e2e3687004faa906251`, amd64 manifest `sha256:f3034a6ec3c1205360777c4aae76234998866ad18806ae62b63a3f84ccad782b`
+* `debian:trixie-slim@sha256:a99cfc517144bc59b1978475ec53b46ecabec7e43635402ee5b77cc54cd1b20a`, amd64 manifest `sha256:7792b1f7702a86946cd518db72b6a407302c3e9bc1635634368b878189e8221c`
+
+Scanners: pinned GitHub release binaries in `tools/bin/` (git-ignored). Each sha256 matched the vendor checksum file.
+
+| Tool | Asset | sha256 |
+|---|---|---|
+| Trivy 0.75.0 | `trivy_0.75.0_Linux-64bit.tar.gz` | c6e65abddb348e25f10549df887045629cf28cc72453cd1c63acb717316b3f3f |
+| Grype 0.120.0 | `grype_0.120.0_linux_amd64.tar.gz` | a5a1218dce63acdac152a6b3b5bb366e7267e36f4069848cf455543b3fa5700e |
+| OSV-Scanner 2.6.0 (osv-scalibr 0.5.2) | `osv-scanner_linux_amd64` | ca69b3d3cd08f889a49dc0a383122f71cc528b83803671df5fd874d97485b108 |
+
+Vulnerability databases were downloaded once on 2026-10-05, and all scans ran offline:
+
+* Trivy DB v2 from `mirror.gcr.io/aquasec/trivy-db:2`, UpdatedAt 2026-10-05T01:10:31Z, downloaded at 04:50:45Z.
+* Grype DB schema v6.1.10, built 2026-10-04T08:11:47Z (`vulnerability-db_v6.1.10_2026-10-04T01:12:18Z`).
+* OSV-Scanner offline DB `osv-scalibr/Debian/all.zip` (74 MB), fetched 2026-10-05 05:10Z.
+
+CLI notes for the scanners:
+
+* Trivy: `trivy rootfs --skip-db-update --offline-scan --scanners vuln --format json`.
+* Grype: `grype dir:<rootfs> -o json` with `GRYPE_DB_AUTO_UPDATE=false`.
+* OSV-Scanner v2: `scan source -L dpkg-status:<path>` parses the status file, but it cannot tell which Debian release the file belongs to. It loaded the *Ubuntu* DB and reported nothing. Each rootfs is therefore packed into a single-layer docker-archive tarball and scanned with `osv-scanner scan image --archive <tar> --offline-vulnerabilities`. This detects `Debian:12/13` correctly.

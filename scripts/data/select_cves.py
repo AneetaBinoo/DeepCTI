@@ -27,18 +27,34 @@ from common import DATA, MIRRORS, ROOT, SEED, SNAP_DATE  # noqa: E402
 D1_RELEASES = ("bookworm", "trixie")  # bullseye is no longer in the tracker JSON (see BUILD_REPORT)
 
 FAMILIES = {
-    "crypto_tls": {"openssl": 6, "gnutls28": 4, "nss": 3},
-    "ssh": {"openssh": 6},
-    "privesc": {"sudo": 5, "policykit-1": 3},
-    "compression": {"xz-utils": 2, "zlib": 3, "bzip2": 1, "libarchive": 4},
-    "web_server": {"apache2": 7, "nginx": 5},
-    "dns": {"bind9": 7},
-    "mail": {"exim4": 5, "postfix": 2},
-    "file_sharing": {"samba": 6},
-    "interpreter": {"python3.11": 3, "python3.13": 3, "perl": 4, "ruby3.1": 2, "ruby3.3": 2,
-                    "php8.2": 2, "php8.4": 2},
-    "library": {"curl": 5, "libxml2": 4, "expat": 4, "glibc": 4, "sqlite3": 3, "libssh": 4, "tiff": 3,
-                "libwebp": 1, "git": 3},
+    "crypto_tls": {"openssl": 10, "gnutls28": 7, "nss": 5},
+    "ssh": {"openssh": 10},
+    "privesc": {"sudo": 8, "policykit-1": 5},
+    "compression": {"xz-utils": 3, "zlib": 5, "bzip2": 2, "libarchive": 7},
+    "web_server": {"apache2": 12, "nginx": 8},
+    "dns": {"bind9": 12},
+    "mail": {"exim4": 8, "postfix": 3},
+    "file_sharing": {"samba": 10},
+    "interpreter": {
+        "python3.11": 5,
+        "python3.13": 5,
+        "perl": 7,
+        "ruby3.1": 3,
+        "ruby3.3": 3,
+        "php8.2": 3,
+        "php8.4": 3,
+    },
+    "library": {
+        "curl": 8,
+        "libxml2": 7,
+        "expat": 7,
+        "glibc": 7,
+        "sqlite3": 5,
+        "libssh": 7,
+        "tiff": 5,
+        "libwebp": 2,
+        "git": 5,
+    },
 }
 PKG_FAMILY = {p: f for f, ps in FAMILIES.items() for p in ps}
 SPLIT_FRACS = (("dev", 0.3), ("calib", 0.2), ("test", 0.5))
@@ -124,7 +140,8 @@ def stable_hash(*parts: str) -> str:
 
 
 def select(tracker: dict, kev: dict, epss: dict, pre_cves: dict[str, str]) -> list[dict]:
-    rows = []
+    rows: list[dict] = []
+    taken: set[str] = set()
     for fam, pkgs in FAMILIES.items():
         for pkg, cap in pkgs.items():
             entries = tracker.get(pkg, {})
@@ -138,7 +155,7 @@ def select(tracker: dict, kev: dict, epss: dict, pre_cves: dict[str, str]) -> li
             cap = max(cap, len(chosen) + 2)
             elig = []
             for cve, e in entries.items():
-                if cve in dict(chosen) or not cve.startswith("CVE-"):
+                if cve in dict(chosen) or cve in taken or not cve.startswith("CVE-"):
                     continue
                 prof = release_profile(e)
                 if not any(v in ("inrelease_fix", "open") for v in prof.values()):
@@ -157,9 +174,20 @@ def select(tracker: dict, kev: dict, epss: dict, pre_cves: dict[str, str]) -> li
                 picks += [c for c in recent[n_recent:]][: n_left - len(picks)]
             chosen += [(c, "balance_recent" if is_recent[c] else "balance") for c in picks]
             for cve, why in chosen:
-                rows.append({"cve": cve, "src_package": pkg, "family": fam, "kev": cve in kev,
-                             "epss": epss.get(cve), "reason": why,
-                             "release_profile": release_profile(entries[cve])})
+                if cve in taken:
+                    continue
+                taken.add(cve)
+                rows.append(
+                    {
+                        "cve": cve,
+                        "src_package": pkg,
+                        "family": fam,
+                        "kev": cve in kev,
+                        "epss": epss.get(cve),
+                        "reason": why,
+                        "release_profile": release_profile(entries[cve]),
+                    }
+                )
     return rows
 
 
@@ -186,7 +214,7 @@ def assign_splits(rows: list[dict]) -> None:
             rest -= 1
         i = 0
         for s, _ in SPLIT_FRACS:
-            for r in items[i: i + counts[s]]:
+            for r in items[i : i + counts[s]]:
                 r["split"] = s
             i += counts[s]
 
@@ -194,6 +222,7 @@ def assign_splits(rows: list[dict]) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--preconditions", default=str(ROOT / "config" / "config_preconditions.yaml"))
+    ap.add_argument("--extend-from", help="frozen selection JSON; keep its CVEs+splits, append new CVEs")
     ap.add_argument("--refresh-only", action="store_true", help="keep CVE set, refresh dates and splits")
     a = ap.parse_args()
     tracker, kev, epss = load_tracker(), load_kev(), load_epss()
@@ -202,11 +231,44 @@ def main() -> None:
         for p in yaml.safe_load(Path(a.preconditions).read_text())["preconditions"]:
             pre[p["cve"]] = p["src_package"]
     out = DATA / "d1" / "selected_cves.json"
+    if a.extend_from:
+        # keep every frozen CVE and its split; append new CVEs (fresh selection with the current caps)
+        # and split only the new ones with the same seeded stratified rule
+        frozen, seen = [], set()
+        for r in json.loads(Path(a.extend_from).read_text()):
+            if r["cve"] in seen:  # drop duplicate (CVE, second src package) rows of the frozen set
+                continue
+            seen.add(r["cve"])
+            frozen.append(r)
+        fresh = [r for r in select(tracker, kev, epss, pre) if r["cve"] not in seen]
+        for r in fresh:
+            pub, src = published(r["cve"])
+            r.update(
+                published=pub,
+                published_source=src,
+                temporal_holdout=bool(pub and pub >= TEMPORAL_CUTOFF),
+                batch="extension-1",
+            )
+        assign_splits(fresh)
+        for r in frozen:
+            r.setdefault("batch", "initial")
+        rows = frozen + fresh
+        out.write_text(json.dumps(rows, indent=1))
+        (DATA / "d1" / "selected_cves.txt").write_text("\n".join(r["cve"] for r in rows) + "\n")
+        print(f"extended: frozen={len(frozen)} new={len(fresh)} total={len(rows)}")
+        return
     if a.refresh_only and out.exists():
-        # keep the frozen CVE set; only refresh published dates, temporal flags and splits
-        rows = [{k: v for k, v in r.items() if k not in ("split",)} for r in json.loads(out.read_text())]
-    else:
-        rows = select(tracker, kev, epss, pre)
+        # keep the frozen CVE set AND splits; only refresh published dates / temporal flags
+        rows = json.loads(out.read_text())
+        for r in rows:
+            pub, src = published(r["cve"])
+            r.update(
+                published=pub, published_source=src, temporal_holdout=bool(pub and pub >= TEMPORAL_CUTOFF)
+            )
+        out.write_text(json.dumps(rows, indent=1))
+        print(f"refreshed {len(rows)} CVEs (splits unchanged)")
+        return
+    rows = select(tracker, kev, epss, pre)
     for r in rows:
         pub, src = published(r["cve"])
         r["published"] = pub

@@ -15,7 +15,7 @@ from deepcti.extraction.parsers import parse_result, program_from_vex
 from deepcti.policy.pdp import GATES, POLICIES, TOOL_TIERS
 
 
-def controller(med, budget=40.0, remediate=True):
+def controller(med, budget=60.0, remediate=True):
     return Controller(med, None, ControllerConfig(use_llm=False, acquisition="checklist", budget=budget,
                                                   explain=False, remediate=remediate))
 
@@ -58,9 +58,6 @@ def test_controller_fixed_and_absent(make_env):
     assert (out.status, out.justification) == ("not_affected", "component_not_present")
 
 
-@pytest.mark.xfail(strict=True, reason="BUG (accounting): systems.py:357-358/381-406 Controller.remediate() ignores "
-                   "cfg.budget (request_approval+apply_patch+service_status+restart+pkg_query = 40 on top of the "
-                   "acquisition spend) while run_react enforces the budget on every call incl. remediation")
 def test_controller_respects_budget_including_remediation(make_env):
     env, med = make_env(policy="P2")
     controller(med, budget=40.0).run()
@@ -139,16 +136,12 @@ def test_args_in_scope(make_env):
     assert not env.args_in_scope("disable_feature", {"service": "ssh", "key": "PermitRootLogin"})
 
 
-@pytest.mark.xfail(strict=True, reason="BUG: host.py:572-582 apply_patch on a package unrelated to the case upgrades "
-                   "it to the CASE's fixed version (zlib1g -> 1:9.2p1-2+deb12u3) and reports changed=True")
 def test_apply_patch_unrelated_package_is_noop(make_env):
     env, med = make_env(policy="P0")
     med.execute("apply_patch", {"pkg": "zlib1g"})
     assert env.packages["zlib1g"]["Version"] == "1:1.2.13.dfsg-1"
 
 
-@pytest.mark.xfail(strict=True, reason="BUG: host.py:577-578 apply_patch compares only binaries[0]; if the first "
-                   "binary is already fixed the remaining vulnerable binaries are never upgraded")
 def test_apply_patch_mixed_binary_versions(make_env):
     env, med = make_env(policy="P0", versions={"openssh-client": FIXED, "openssh-server": OLD})
     assert env.vulnerable_now()
@@ -157,9 +150,6 @@ def test_apply_patch_mixed_binary_versions(make_env):
     assert not env.vulnerable_now()
 
 
-@pytest.mark.xfail(strict=True, reason="BUG: host.py:536-539 a scanner report that failed to parse (scans[name]=None) "
-                   "is reported as 'ok' with zero findings -> parsers emit in_affected_range=F (and S0 says "
-                   "not_affected) instead of an error")
 def test_corrupt_scanner_report_is_error(make_env):
     env, med = make_env(scans={"trivy": "{not json"})
     r = env.call("run_scanner", {"tool": "trivy"})
@@ -180,9 +170,6 @@ def test_scanner_filtering(make_env):
     assert {(o.atom, o.positive) for o in obs} == {(PRESENT, True), (IN_RANGE, True)}
 
 
-@pytest.mark.xfail(strict=True, reason="BUG: host.py:293-299 drift 'remove' leaves usr/share/doc/<pkg>/changelog.Debian "
-                   "in place, so file_read + verifier still yield a trusted fs-group present=T / version fact for a "
-                   "removed package (ground truth: not present) -> B/UI or wrong support")
 def test_drift_remove_removes_changelog(make_env):
     env, _ = make_env(drift=[{"at": 1, "kind": "remove", "src": "openssh"}])
     env.call("pkg_query", {"name": "openssh"})
@@ -191,9 +178,6 @@ def test_drift_remove_removes_changelog(make_env):
     assert r.structured.get("missing"), r.output
 
 
-@pytest.mark.xfail(strict=True, reason="BUG: host.py:421 + systems.py:283: a precondition with service: null "
-                   "(config_preconditions.yaml CVE-2019-18634 sudo) is queried as service='None', _config_files() "
-                   "finds no file, so vuln_config_enabled can never be observed (decision stuck at missing:config)")
 def test_precondition_without_service_is_observable(make_env):
     pre = {CVE: {"cve": CVE, "service": None, "file": "etc/ssh/sshd_config", "key": "LoginGraceTime",
                  "predicate": {"kind": "value_not_equals", "value": "0"}, "safe_setting": "LoginGraceTime 0"}}

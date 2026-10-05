@@ -34,15 +34,19 @@ def nvd_text(cve: str) -> str:
     if not v:
         return ""
     c = v[0]["cve"]
-    out = [f"{c['id']} (NVD, status: {c.get('vulnStatus', '?')}, published {c.get('published', '')[:10]}, "
-           f"last modified {c.get('lastModified', '')[:10]})"]
+    out = [
+        f"{c['id']} (NVD, status: {c.get('vulnStatus', '?')}, published {c.get('published', '')[:10]}, "
+        f"last modified {c.get('lastModified', '')[:10]})"
+    ]
     desc = next((d["value"] for d in c.get("descriptions", []) if d["lang"] == "en"), "")
     out.append("Description: " + desc)
     for key in ("cvssMetricV40", "cvssMetricV31", "cvssMetricV30"):
         for m in c.get("metrics", {}).get(key, [])[:1]:
             d = m["cvssData"]
-            out.append(f"CVSS {d.get('version')}: {d.get('baseScore')} {d.get('baseSeverity', '')} "
-                       f"({d.get('vectorString')}) source={m.get('source')}")
+            out.append(
+                f"CVSS {d.get('version')}: {d.get('baseScore')} {d.get('baseSeverity', '')} "
+                f"({d.get('vectorString')}) source={m.get('source')}"
+            )
     cwes = sorted({d["value"] for w in c.get("weaknesses", []) for d in w.get("description", [])})
     if cwes:
         out.append("Weaknesses: " + ", ".join(cwes))
@@ -50,11 +54,24 @@ def nvd_text(cve: str) -> str:
     for conf in c.get("configurations", []):
         for node in conf.get("nodes", []):
             for m in node.get("cpeMatch", []):
-                b = [f"{k}={m[k]}" for k in ("versionStartIncluding", "versionStartExcluding",
-                                             "versionEndIncluding", "versionEndExcluding") if m.get(k)]
+                b = [
+                    f"{k}={m[k]}"
+                    for k in (
+                        "versionStartIncluding",
+                        "versionStartExcluding",
+                        "versionEndIncluding",
+                        "versionEndExcluding",
+                    )
+                    if m.get(k)
+                ]
                 prio = (0 if m["criteria"].split(":")[2] == "a" else 1) + (0 if m.get("vulnerable") else 2)
-                lines.append((prio, f"  - {'vulnerable' if m.get('vulnerable') else 'not vulnerable'}: "
-                              f"{m['criteria']}" + (f" ({', '.join(b)})" if b else "")))
+                lines.append(
+                    (
+                        prio,
+                        f"  - {'vulnerable' if m.get('vulnerable') else 'not vulnerable'}: "
+                        f"{m['criteria']}" + (f" ({', '.join(b)})" if b else ""),
+                    )
+                )
     lines = [t for _, t in sorted(set(lines), key=lambda x: x[0])]
     if len(lines) > 25:
         lines = lines[:25] + [f"  ... ({len(lines) - 25} more CPE entries, mostly vendor appliances/OS)"]
@@ -84,8 +101,10 @@ def _affected_lines(rec: dict) -> list[str]:
         vs = a.get("versions") or []
         if vs and pkg:
             shown = vs[:12]
-            lines.append(f"  - {name} affected versions: {', '.join(shown)}"
-                         + (f" (+{len(vs) - 12} more)" if len(vs) > 12 else ""))
+            lines.append(
+                f"  - {name} affected versions: {', '.join(shown)}"
+                + (f" (+{len(vs) - 12} more)" if len(vs) > 12 else "")
+            )
     return lines
 
 
@@ -95,8 +114,10 @@ def osv_text(cve: str) -> str:
         rec = load(MIRRORS / "osv" / SNAP_DATE / "vulns" / f"{rid}.json")
         if not rec:
             continue
-        out.append(f"{rec['id']} (OSV, published {rec.get('published', '')[:10]}, "
-                   f"modified {rec.get('modified', '')[:10]})")
+        out.append(
+            f"{rec['id']} (OSV, published {rec.get('published', '')[:10]}, "
+            f"modified {rec.get('modified', '')[:10]})"
+        )
         if rec.get("summary"):
             out.append("Summary: " + rec["summary"])
         if rec.get("details"):
@@ -115,15 +136,30 @@ def kev_text(cve: str, kev: dict) -> str:
     k = kev.get(cve)
     if not k:
         return ""
-    keys = ["cveID", "vendorProject", "product", "vulnerabilityName", "dateAdded", "shortDescription",
-            "requiredAction", "dueDate", "knownRansomwareCampaignUse", "notes", "cwes"]
-    return clip("CISA Known Exploited Vulnerabilities catalog entry\n"
-                + "\n".join(f"{x}: {k.get(x)}" for x in keys if k.get(x) not in (None, "", [])))
+    keys = [
+        "cveID",
+        "vendorProject",
+        "product",
+        "vulnerabilityName",
+        "dateAdded",
+        "shortDescription",
+        "requiredAction",
+        "dueDate",
+        "knownRansomwareCampaignUse",
+        "notes",
+        "cwes",
+    ]
+    return clip(
+        "CISA Known Exploited Vulnerabilities catalog entry\n"
+        + "\n".join(f"{x}: {k.get(x)}" for x in keys if k.get(x) not in (None, "", []))
+    )
 
 
 def debian_text(cve: str, src: str, entry: dict) -> str:
-    out = [f"Debian security tracker: {cve} in source package '{src}'",
-           "Description: " + (entry.get("description") or "(none)")]
+    out = [
+        f"Debian security tracker: {cve} in source package '{src}'",
+        "Description: " + (entry.get("description") or "(none)"),
+    ]
     if entry.get("scope"):
         out.append(f"Scope: {entry['scope']}")
     for rel in ("bookworm", "trixie", "forky", "sid"):
@@ -151,8 +187,12 @@ def main() -> None:
     outdir.mkdir(parents=True, exist_ok=True)
     for s in sel:
         cve = s["cve"]
-        doc = {"nvd": nvd_text(cve), "osv": osv_text(cve), "kev": kev_text(cve, kev),
-               "debian": debian_text(cve, s["src_package"], tracker[s["src_package"]][cve])}
+        doc = {
+            "nvd": nvd_text(cve),
+            "osv": osv_text(cve),
+            "kev": kev_text(cve, kev),
+            "debian": debian_text(cve, s["src_package"], tracker[s["src_package"]][cve]),
+        }
         (outdir / f"{cve}.json").write_text(json.dumps(doc, indent=1))
     print(f"advisories: {len(sel)}")
 

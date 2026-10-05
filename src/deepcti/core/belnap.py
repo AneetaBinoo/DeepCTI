@@ -132,10 +132,10 @@ class AtomState:
         }
 
 
-def _latest_per_source(observations: Iterable[Observation]) -> dict[tuple[str, str], Observation]:
-    latest: dict[tuple[str, str], Observation] = {}
+def _latest_per_source(observations: Iterable[Observation]) -> dict[tuple[str, str, str], Observation]:
+    latest: dict[tuple[str, str, str], Observation] = {}
     for obs in observations:
-        key = (obs.atom, obs.source.name)
+        key = (obs.atom, obs.source.name, obs.source.trust)
         cur = latest.get(key)
         # latest by collection time; ties broken by content hash then polarity (total order)
         if cur is None or (obs.t, obs.h, obs.positive) > (cur.t, cur.h, cur.positive):
@@ -158,7 +158,7 @@ def compute_state(
     stale: dict[str, int] = {}
     ev: dict[str, set[str]] = {}
     atoms: set[str] = set()
-    for (atom, _), obs in latest.items():
+    for (atom, _, _), obs in latest.items():
         atoms.add(atom)
         if obs.source.trust != TRUSTED:
             h = hints.setdefault(atom, [0, 0])

@@ -64,8 +64,12 @@ def config_lines(path: Path) -> list[tuple[str, str]]:
         if not s or s.startswith(("#", ";")):
             continue
         first = s.split(None, 1)
-        if "=" in s and (len(first) == 1 or first[1].startswith("=") or "=" in first[0]
-                         or re.match(r"^[A-Za-z][\w:. -]*\s=\s", s)):
+        if "=" in s and (
+            len(first) == 1
+            or first[1].startswith("=")
+            or "=" in first[0]
+            or re.match(r"^[A-Za-z][\w:. -]*\s=\s", s)
+        ):
             k, v = s.split("=", 1)
             out.append((k.strip(), v.strip()))
         else:
@@ -95,8 +99,9 @@ def eval_predicate(rootfs: Path, pre: dict) -> bool:
     raise ValueError(f"unknown predicate kind {kind}")
 
 
-def compute_atoms(installed: str | None, tracker_rel: dict | None, req_config: bool,
-                  config_enabled: bool) -> dict:
+def compute_atoms(
+    installed: str | None, tracker_rel: dict | None, req_config: bool, config_enabled: bool
+) -> dict:
     present = installed is not None
     status = (tracker_rel or {}).get("status")
     fixed = (tracker_rel or {}).get("fixed_version")
@@ -110,8 +115,13 @@ def compute_atoms(installed: str | None, tracker_rel: dict | None, req_config: b
             fix_applied = Version(installed) >= Version(fixed)
         elif status in ("open", "undetermined"):
             in_range = True
-    return {"present": present, "in_affected_range": in_range, "fix_applied": fix_applied,
-            "vuln_config_enabled": bool(config_enabled), "req_config": bool(req_config)}
+    return {
+        "present": present,
+        "in_affected_range": in_range,
+        "fix_applied": fix_applied,
+        "vuln_config_enabled": bool(config_enabled),
+        "req_config": bool(req_config),
+    }
 
 
 def label_from_atoms(a: dict) -> dict:
@@ -126,8 +136,9 @@ def label_from_atoms(a: dict) -> dict:
     return {"status": "affected", "justification": None}
 
 
-def label_host(rootfs: Path, cve: str, src_package: str, tracker_rel: dict | None,
-               preconds: dict[str, dict]) -> tuple[str | None, list[str], dict, dict]:
+def label_host(
+    rootfs: Path, cve: str, src_package: str, tracker_rel: dict | None, preconds: dict[str, dict]
+) -> tuple[str | None, list[str], dict, dict]:
     status = parse_status(rootfs)
     installed, bins = installed_src_version(status, src_package)
     pre = preconds.get(cve)
@@ -156,8 +167,9 @@ def main() -> None:
         for c in read_jsonl(DATA / "d1" / "cases" / f"{split}.jsonl"):
             m = meta[c["cve"]]
             trel = tracker_snapshot[m["src_package"]][c["cve"]]["releases"].get(c["release"])
-            _, _, atoms, label = label_host(DATA / "d1" / "hosts" / c["host_id"] / "rootfs", c["cve"],
-                                            c["src_package"], trel, pre)
+            _, _, atoms, label = label_host(
+                DATA / "d1" / "hosts" / c["host_id"] / "rootfs", c["cve"], c["src_package"], trel, pre
+            )
             ref = c if split != "test" else sealed[c["case_id"]]
             n += 1
             if ref["label"] != label or ref["atoms"] != atoms:

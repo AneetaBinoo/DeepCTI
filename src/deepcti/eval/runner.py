@@ -42,7 +42,7 @@ class Spec:
     model: str  # "none" for LLM-free systems
     arm: str = "tracker"  # tracker | withheld
     policy: str = ""
-    budget: float = 40.0
+    budget: float = 60.0
     temperature: float = 0.0
     seed: int = 0
     attack: str = ""
@@ -69,9 +69,12 @@ def run_episode(spec: Spec, case: dict, llm: LLM | None, *, attack: dict | None 
         for name in ("cmdb", "scanner:trivy", "scanner:grype", "scanner:osv"):
             profiles.setdefault(name, {"trust": "T", "fp": 0.05, "fn": 0.05})
         policy = spec.policy or "P2"
-    env = HostEnv(case, data.fixture(case["host_id"]), data.cve_meta().get(case["cve"], {}),
-                  data.preconditions(), data.advisories(case["cve"]), tracker_available=spec.arm != "withheld",
-                  attack=Attack(**attack) if attack else None, drift=drift, profiles=profiles)
+    try:
+        env = HostEnv(case, data.fixture(case["host_id"]), data.cve_meta().get(case["cve"], {}),
+                      data.preconditions(), data.advisories(case["cve"]), tracker_available=spec.arm != "withheld",
+                      attack=Attack(**attack) if attack else None, drift=drift, profiles=profiles)
+    except Exception:
+        return {"key": spec.key(), **asdict(spec), "case_id": case["case_id"], "error": traceback.format_exc(limit=4)}
     med = Mediator(env, PolicyDecisionPoint(policy), use_freshness=system != "DC_nofresh")
     world_at_start = env.world_atoms()
     t0 = time.monotonic()

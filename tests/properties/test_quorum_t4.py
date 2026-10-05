@@ -177,9 +177,6 @@ def test_linter_accepts_handwritten_conjunctive_fragment():
     assert lint_policy(text, k_of(P3)) == []
 
 
-@pytest.mark.xfail(strict=True, reason="BUG: pdp.py:145-148 action scope `in Action::\"x\"` (and the single-element "
-                   "list form, which Cedar's JSON collapses to {'op':'in','entity':...}) is read via "
-                   "scope['entities'] only, so the reachable set is empty and an ungated disruptive permit lints clean")
 @pytest.mark.parametrize("text", [
     'permit(principal, action in Action::"apply_patch", resource);',
     'permit(principal, action in [Action::"apply_patch"], resource);',
