@@ -22,9 +22,16 @@ from deepcti.eval import data  # noqa: E402
 
 
 def main() -> None:
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--splits", default="dev")
+    ap.add_argument("--suffix", default="")  # e.g. "b" -> config/source_profiles_v3b.yaml (priors untouched)
+    args = ap.parse_args()
     data.set_dataset("d7")
-    cases = data.load_cases("dev")
-    labels = data.load_labels("dev")
+    cases, labels = [], {}
+    for sp in args.splits.split(","):
+        cases += data.load_cases(sp)
+        labels.update(data.load_labels(sp))
     counts: dict[str, dict] = defaultdict(lambda: defaultdict(lambda: {"fp": [0, 0], "fn": [0, 0]}))
     pri: dict[str, dict] = defaultdict(lambda: {"present": [0, 0], "vuln": 0, "fixed": 0, "notaff": 0,
                                                 "cfg": [0, 0], "svc": [0, 0]})
@@ -85,10 +92,11 @@ def main() -> None:
             "q_service": round((p["svc"][0] + 1) / (p["svc"][1] + 2), 4),
         }
     rule = f"trusted iff Wilson95 upper bounds of FP and FN <= {THRESHOLD} with n >= {MIN_N} each (per ecosystem)"
-    (ROOT / "config" / "source_profiles_v3.yaml").write_text(
-        yaml.safe_dump({"estimated_on": "d7 dev", "rule": rule, "by_ecosystem": by_eco}, sort_keys=False))
-    (ROOT / "config" / "priors_v3.yaml").write_text(
-        yaml.safe_dump({"estimated_on": "d7 dev", "by_ecosystem": priors}, sort_keys=False))
+    (ROOT / "config" / f"source_profiles_v3{args.suffix}.yaml").write_text(
+        yaml.safe_dump({"estimated_on": f"d7 {args.splits}", "rule": rule, "by_ecosystem": by_eco}, sort_keys=False))
+    if not args.suffix:
+        (ROOT / "config" / "priors_v3.yaml").write_text(
+            yaml.safe_dump({"estimated_on": "d7 dev", "by_ecosystem": priors}, sort_keys=False))
     for eco, srcs in by_eco.items():
         print(eco, {k: (v["trust"], v["fp"], v["fn"]) for k, v in srcs.items()})
     print(yaml.safe_dump(priors, sort_keys=False))

@@ -81,6 +81,28 @@ def build_jobs(exp: str, split: str, model: str, limit: int | None, dataset: str
             if r["system"] == "DCv21" and r["model"] == model and r["case_id"] in by:
                 jobs.append(Job(Spec(exp, r["case_id"], "DCv21b", model, arm=r["arm"], **kw), by[r["case_id"]]))
         return jobs
+    if exp == "X2C":  # prereg-v4 H16: DCv21b on a fresh sample (scripts/data/sample_h16.py) disjoint from H15
+        import csv
+        rows = list(csv.DictReader((ROOT / "data" / "d7" / "h16_sample.csv").open()))
+        by = {c["case_id"]: c for c in cases}
+        for r in rows:
+            if r["model"] == model and r["case_id"] in by:
+                jobs.append(Job(Spec(exp, r["case_id"], "DCv21b", model, arm=r["arm"], **kw), by[r["case_id"]]))
+        return jobs
+    if exp == "X6":  # prereg-v4 H18: decoy version strings in documentation / CMDB notes, tracker arm
+        from deepcti.env.host import HostEnv
+        def has_decoy(c: dict) -> bool:  # only cases where a decoy can be planted (HostEnv.apply_decoys)
+            env = HostEnv(c, data.fixture(c["host_id"]), data.cve_meta().get(c["cve"], {}), data.preconditions(), {})
+            return env.apply_decoys() is not None
+        for c in [c for c in cases if has_decoy(c)]:
+            for s in (["DC", "DC_noverify", "S3"] if llm else ["S1p"]):
+                jobs.append(Job(Spec(exp, c["case_id"], s, model, arm="tracker", decoy=True, **kw), c))
+        return jobs
+    if exp == "X7":  # prereg-v4 H17: DC with dev+calib-estimated scanner trust (DCt), withheld arm
+        for c in cases:
+            for s in (["DCt"] if llm else []):
+                jobs.append(Job(Spec(exp, c["case_id"], s, model, arm="withheld", **kw), c))
+        return jobs
     if exp == "X2V":  # post-hoc sensitivity (DEVIATIONS D21): vendor cases, DC family, verifier fixes
         for c in cases:
             if c.get("ecosystem") != "vendor":
@@ -189,6 +211,8 @@ def main() -> None:
             require_prereg("prereg-v2")
         if args.dataset == "d7":
             require_prereg("prereg-v3")
+        if args.exp in ("X2C", "X6", "X7") or args.model == "glm45_air":
+            require_prereg("prereg-v4")
     jobs = build_jobs(args.exp, args.split, args.model, args.limit, args.dataset, args.spec)
     models = load_models()
     conc = args.concurrency or (int(models[args.model].get("concurrency", 16)) if args.model != "none" else 32)

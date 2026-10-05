@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parents[3]
 # generator -> family (D7 panel adds granite41_30b); a judge is never applied to its own family's episodes
 GENERATOR_FAMILY_D7 = {"gemma4_31b": "gemma", "granite41_30b": "granite", "granite41_8b": "granite",
                        "llama31_8b": "llama", "mistral_small_24b": "mistral", "qwen3_14b": "qwen",
-                       "qwen3_4b": "qwen"}
+                       "qwen3_4b": "qwen", "mistral_medium_128b": "mistral"}
 
 
 def eligible_d7(judge: str, generator: str) -> bool:

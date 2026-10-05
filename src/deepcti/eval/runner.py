@@ -29,7 +29,7 @@ from . import data
 ROOT = Path(__file__).resolve().parents[3]
 
 LLM_SYSTEMS = {"S2", "S3", "S4", "S5", "DC", "DC_checklist", "DC_llmchoose", "DC_noverify", "DC_k1",
-               "DC_nofresh", "DC_entropy", "DC_random", "DC_q2", "DCv21", "DCv21b", "S3I"}
+               "DC_nofresh", "DC_entropy", "DC_random", "DC_q2", "DCv21", "DCv21b", "S3I", "DCt"}
 DEFAULT_POLICY = {"S0_trivy": "P0", "S0_grype": "P0", "S0_osv": "P0", "S1": "P1", "S1p": "P3", "S2": "P1",
                   "S3": "P1", "S4": "P1", "S5": "P1", "S3I": "P1"}
 
@@ -50,12 +50,15 @@ class Spec:
     prompt_defense: bool = False
     dataset: str = "d1"  # v3: d1 | d7
     spec: str = "v2"  # v3: shared prompt/catalog version
+    decoy: bool = False  # v4: X6 misleading-documentation decoys
 
     def key(self) -> str:
         parts = [self.case_id, self.system, self.model, self.arm, self.policy or DEFAULT_POLICY.get(self.system, "P3"),
                  self.budget, self.temperature, self.seed, self.attack, self.drift, int(self.prompt_defense)]
         if self.dataset != "d1" or self.spec != "v2":  # v2 keys unchanged
             parts += [self.dataset, self.spec]
+        if self.decoy:
+            parts.append("decoy")
         return "|".join(str(x) for x in parts)
 
 
@@ -70,7 +73,8 @@ def run_episode(spec: Spec, case: dict, llm: LLM | None, *, attack: dict | None 
     data.set_dataset(spec.dataset)
     profiles = source_profiles()
     if spec.dataset == "d7":  # v3 trust classes and VOI priors estimated per ecosystem on D7 dev
-        v3 = _yaml(ROOT / "config" / "source_profiles_v3.yaml").get("by_ecosystem", {})
+        prof_file = "source_profiles_v3b.yaml" if system == "DCt" else "source_profiles_v3.yaml"
+        v3 = _yaml(ROOT / "config" / prof_file).get("by_ecosystem", {})
         profiles = v3.get(case.get("ecosystem", ""), profiles)
         pv3 = _yaml(ROOT / "config" / "priors_v3.yaml").get("by_ecosystem", {})
         priors = pv3.get(case.get("ecosystem", ""), priors)
@@ -88,6 +92,7 @@ def run_episode(spec: Spec, case: dict, llm: LLM | None, *, attack: dict | None 
     except Exception:
         return {"key": spec.key(), **asdict(spec), "case_id": case["case_id"], "error": traceback.format_exc(limit=4)}
     env.spec_version = spec.spec
+    decoy_info = env.apply_decoys() if spec.decoy else None
     med = Mediator(env, PolicyDecisionPoint(policy), use_freshness=system != "DC_nofresh",
                    instance_aware=system in ("DCv21", "DCv21b"))
     world_pre_drift = env.world_atoms()
@@ -180,6 +185,7 @@ def run_episode(spec: Spec, case: dict, llm: LLM | None, *, attack: dict | None 
         "t_decision": t_decision,
         "world_at_start": world_at_start,
         "world_pre_drift": world_pre_drift,
+        "decoy": decoy_info,
         "history": [h.to_dict() for h in env.history],
         "extra": extra,
         "trace": (outcome.trace if outcome else [])[-40:],

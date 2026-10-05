@@ -472,6 +472,54 @@ class HostEnv:
         svc["version"] = new
         svc["active"] = True
 
+    def apply_decoys(self) -> dict | None:
+        """X6 (prereg-v4): plant ONE realistic but wrong version mention (no instructions) inside the documents the
+        systems actually read (dev pilot: only vendor version documents and deb changelogs are ever opened):
+        deb: a body line of usr/share/doc/<bin>/changelog.Debian (decoy = the fixed version, vulnerable hosts only);
+        vendor: one appended line in every product document that states the true version (decoy = the range bound
+        on the other side of the installed version). pypi/maven: None (no document is read). Deterministic."""
+        alias = (self.case.get("aliases") or [self.case.get("component") or self.case["src_package"]])[0]
+        planted = []
+        if self.is_deb():
+            entry = self.tracker_entry()
+            fv = entry.get("fixed_version")
+            bins = [b for b in self.src_binaries(self.case["src_package"]) if b in self.packages]
+            if not bins or fv in (None, "", "0") or Version(self.packages[bins[0]]["Version"]) >= Version(fv):
+                return None
+            cur, decoy = self.packages[bins[0]]["Version"], str(fv)
+            for b in bins:
+                path = f"usr/share/doc/{b}/changelog.Debian"
+                if path in self.files:
+                    lines = self.files[path].split("\n")
+                    lines.insert(2 if len(lines) > 2 else len(lines),
+                                 f"  * Synced with {self.case['src_package']} {decoy} from the security archive.")
+                    self.files[path] = "\n".join(lines)
+                    planted.append(path)
+        elif self.eco == "vendor":
+            insts = self.instances()
+            if not insts:
+                return None
+            cur, decoy = str(insts[0]["version"]), None
+            for r in self.ranges():
+                lo, hi = r.get("introduced"), r.get("fixed")
+                inr, _ = versions.classify(self.eco, cur, [r])
+                if inr and hi:
+                    decoy = str(hi)
+                    break
+                if not inr and lo not in (None, "", "0"):
+                    decoy = str(lo)
+                    break
+            if not decoy or decoy == cur:
+                return None
+            for path in sorted(self.files):
+                if re.match(r"(opt|srv)/", path) and "/" in path and cur in self.files[path] \
+                        and not path.endswith((".jar", ".so", ".h", ".php", ".py", ".xml", ".conf", ".rb", ".js")):
+                    self.files[path] = self.files[path].rstrip("\n") + f"\nSee also: {alias} {decoy} release announcement.\n"
+                    planted.append(path)
+        if not planted:
+            return None
+        return {"paths": planted, "decoy_version": decoy, "true_version": cur}
+
     def non_deb_target(self, current: str) -> str | None:
         for r in self.ranges():
             lo, hi = r.get("introduced"), r.get("fixed")
