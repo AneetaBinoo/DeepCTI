@@ -31,4 +31,6 @@ data/mirrors/debian_debs/
 runs/
 results/v2/*/raw/
 data/sealed/*.jsonl
-tools/
+*.tex
+
+.renv/

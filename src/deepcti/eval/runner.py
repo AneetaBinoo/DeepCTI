@@ -29,9 +29,9 @@ from . import data
 ROOT = Path(__file__).resolve().parents[3]
 
 LLM_SYSTEMS = {"S2", "S3", "S4", "S5", "DC", "DC_checklist", "DC_llmchoose", "DC_noverify", "DC_k1",
-               "DC_nofresh", "DC_entropy", "DC_random", "DC_q2", "DCv21"}
+               "DC_nofresh", "DC_entropy", "DC_random", "DC_q2", "DCv21", "S3I"}
 DEFAULT_POLICY = {"S0_trivy": "P0", "S0_grype": "P0", "S0_osv": "P0", "S1": "P1", "S1p": "P3", "S2": "P1",
-                  "S3": "P1", "S4": "P1", "S5": "P1"}
+                  "S3": "P1", "S4": "P1", "S5": "P1", "S3I": "P1"}
 
 
 @dataclass(frozen=True)
