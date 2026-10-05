@@ -30,11 +30,41 @@
    "sha256": "481e013846ef66cc419a62f1a58a9bcd3d0471fffbf7063d0443fe933e68de15",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2016-2568"
   },
+  "cves/CVE-2016-4437.json": {
+   "bytes": 6495,
+   "retrieved_at": "2026-10-05T15:38:30Z",
+   "sha256": "367b6f7871ce73b8c6b3e95b6865032b0fe3c7dbb019691b79728aab737709e9",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2016-4437"
+  },
+  "cves/CVE-2017-12617.json": {
+   "bytes": 43970,
+   "retrieved_at": "2026-10-05T15:41:13Z",
+   "sha256": "df2d4478840425306588975db8bc7efc92d21653ddc088b012f59ba1aff51491",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2017-12617"
+  },
+  "cves/CVE-2017-5638.json": {
+   "bytes": 19028,
+   "retrieved_at": "2026-10-05T15:39:09Z",
+   "sha256": "b1cafdbdb6e75325a94a260950812b39de224d99ba3c708c40a05bd7ff839bd7",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2017-5638"
+  },
   "cves/CVE-2017-7494.json": {
    "bytes": 9095,
    "retrieved_at": "2026-10-05T05:03:56Z",
    "sha256": "43268684e970ec5d3274d74c428ab915cfe6d081e562115a8a3c2437ceedc7a1",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2017-7494"
+  },
+  "cves/CVE-2018-1000861.json": {
+   "bytes": 5295,
+   "retrieved_at": "2026-10-05T15:42:24Z",
+   "sha256": "a4517ac1509c67e19407a42cb27e9ab8c8035b24b412f00d450bd0283ef320c2",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2018-1000861"
+  },
+  "cves/CVE-2018-11776.json": {
+   "bytes": 12380,
+   "retrieved_at": "2026-10-05T15:38:43Z",
+   "sha256": "cc61b6e8383375df75fe7b44cceb710c2c0373700b6d2b1236b9af658716b501",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2018-11776"
   },
   "cves/CVE-2018-6789.json": {
    "bytes": 8288,
@@ -72,6 +102,36 @@
    "sha256": "88ed130c4ff2fe587fa201a072e1f69f002bb5187578346b54fd3ea1e190902b",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2020-1472"
   },
+  "cves/CVE-2020-1747.json": {
+   "bytes": 7819,
+   "retrieved_at": "2026-10-05T15:35:47Z",
+   "sha256": "fa30d7d007c77e6065cf9853a5e75ff193bd9fc8c7d4d7fc555837f90a7456e6",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2020-1747"
+  },
+  "cves/CVE-2020-1938.json": {
+   "bytes": 32582,
+   "retrieved_at": "2026-10-05T15:41:06Z",
+   "sha256": "7112d10b9c837336dc77bf9a288b60f145d35887adf3142c137338ec0351c12e",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2020-1938"
+  },
+  "cves/CVE-2020-36518.json": {
+   "bytes": 18662,
+   "retrieved_at": "2026-10-05T15:39:54Z",
+   "sha256": "e8ef1984cc3e8a7202635b2081ca9bd318233aa68d1cddd9cafd9781f46fc9f3",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2020-36518"
+  },
+  "cves/CVE-2020-9484.json": {
+   "bytes": 29553,
+   "retrieved_at": "2026-10-05T15:41:26Z",
+   "sha256": "7aa2140ece29ec30c9bb1a1627279afb2eda35197b0aafdea8b4aa41c0431c9d",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2020-9484"
+  },
+  "cves/CVE-2021-22205.json": {
+   "bytes": 6352,
+   "retrieved_at": "2026-10-05T15:43:29Z",
+   "sha256": "71af98a167d12434671ec0f684cc30e38f13978eac261d2437a57e7b93eaaf83",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-22205"
+  },
   "cves/CVE-2021-23017.json": {
    "bytes": 11312,
    "retrieved_at": "2026-10-05T05:02:12Z",
@@ -90,6 +150,12 @@
    "sha256": "52c5f00cab8601aafcf94fbfbe328ef4946adb2cebf08980cd36c3b1a15e92fe",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-3560"
   },
+  "cves/CVE-2021-39144.json": {
+   "bytes": 14256,
+   "retrieved_at": "2026-10-05T15:39:28Z",
+   "sha256": "b834df9795760643f87ae60e5666f9a634e00779f4871fc782e65b8974df8dd0",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-39144"
+  },
   "cves/CVE-2021-4034.json": {
    "bytes": 17138,
    "retrieved_at": "2026-10-05T04:58:00Z",
@@ -101,6 +167,12 @@
    "retrieved_at": "2026-10-05T04:59:37Z",
    "sha256": "c1257306c642ceb1b4e99c157878d72722d2a56d3996a65a25395c0108384ef5",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-40438"
+  },
+  "cves/CVE-2021-4104.json": {
+   "bytes": 18259,
+   "retrieved_at": "2026-10-05T15:38:37Z",
+   "sha256": "96cfbb1092b4c30d5fe6c80577bf17d04e0a1771a0c5e474fa150c516c4dc849",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-4104"
   },
   "cves/CVE-2021-41617.json": {
    "bytes": 11766,
@@ -120,6 +192,12 @@
    "sha256": "8b60588b3e9ae9b9e621aa4262d0657e9437b4cfcc5df1a5014c7b1675ecb41e",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-42013"
   },
+  "cves/CVE-2021-42392.json": {
+   "bytes": 5801,
+   "retrieved_at": "2026-10-05T15:38:23Z",
+   "sha256": "5256929e1e66a107bdd01a5d59ee63ecade42634f81c630aa8becb66fdef6a67",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-42392"
+  },
   "cves/CVE-2021-44142.json": {
    "bytes": 12057,
    "retrieved_at": "2026-10-05T05:04:09Z",
@@ -132,11 +210,83 @@
    "sha256": "fbce6162facdcb77086c2161bb6bcc74deab86b3910df10947c51ab8b3bab1d6",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-44224"
   },
+  "cves/CVE-2021-44228.json": {
+   "bytes": 87139,
+   "retrieved_at": "2026-10-05T15:37:51Z",
+   "sha256": "061413f6084162a09287f8bca5b9a1a06df8a61cef90d4daae504aa64dcd71d1",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-44228"
+  },
+  "cves/CVE-2021-44832.json": {
+   "bytes": 19957,
+   "retrieved_at": "2026-10-05T15:38:10Z",
+   "sha256": "e27d3edaab2d8efc6ff8f573cfa5fcb0755dbd5eb126fbdc4db9d8d93a9ce342",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-44832"
+  },
+  "cves/CVE-2021-45046.json": {
+   "bytes": 26544,
+   "retrieved_at": "2026-10-05T15:37:57Z",
+   "sha256": "e855dafeae82f234bab6301f82699dad6b62b1aa7bc9a0b4ba62ff6bf2f544c3",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-45046"
+  },
+  "cves/CVE-2021-45105.json": {
+   "bytes": 43920,
+   "retrieved_at": "2026-10-05T15:38:04Z",
+   "sha256": "f4f6472d101fbe1ee1c3a9e7867383366f516e184b3a8fc3c304d0b08e22abaf",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2021-45105"
+  },
+  "cves/CVE-2022-1471.json": {
+   "bytes": 6051,
+   "retrieved_at": "2026-10-05T15:39:41Z",
+   "sha256": "bcafc067a8cb583aa78aa0c7e2a8371c03c8dd0cca75620b96280007fb3f3e0a",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2022-1471"
+  },
+  "cves/CVE-2022-22947.json": {
+   "bytes": 8393,
+   "retrieved_at": "2026-10-05T15:38:49Z",
+   "sha256": "e1546a30cbb84a59673b6a304255c4dc67a78cfbaa814b9af6773042e8e59a0c",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2022-22947"
+  },
+  "cves/CVE-2022-22963.json": {
+   "bytes": 13751,
+   "retrieved_at": "2026-10-05T15:39:22Z",
+   "sha256": "38c93eed51e31bcdadf92d71d9562341db68d74058d82b6bde9b0c4fd7c273bb",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2022-22963"
+  },
+  "cves/CVE-2022-22965.json": {
+   "bytes": 23347,
+   "retrieved_at": "2026-10-05T15:38:17Z",
+   "sha256": "eaf11e57d6160cbf1e8b1aca017484e9b8f33326e22f00d1a0db57a2a53b7881",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2022-22965"
+  },
+  "cves/CVE-2022-41741.json": {
+   "bytes": 8365,
+   "retrieved_at": "2026-10-05T15:34:10Z",
+   "sha256": "969724854cbce66d09938a2ae308504042391a5283878741c0d15224d1668ad1",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2022-41741"
+  },
+  "cves/CVE-2022-42889.json": {
+   "bytes": 8848,
+   "retrieved_at": "2026-10-05T15:39:35Z",
+   "sha256": "70023e0d3c74ad57d10b350849c096e3ece01519cb99386dc05935e0d60dd3fe",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2022-42889"
+  },
+  "cves/CVE-2023-0051.json": {
+   "bytes": 3510,
+   "retrieved_at": "2026-10-05T15:46:18Z",
+   "sha256": "ef53554ff5d4a499136f8c204e7a250971efb6d60c38dace1699d819f30cda87",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-0051"
+  },
   "cves/CVE-2023-24329.json": {
    "bytes": 13863,
    "retrieved_at": "2026-10-05T05:04:42Z",
    "sha256": "6f945aa5a925bcb68204ffcda20c9e15c65011df2390fc75e21c892900b88490",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-24329"
+  },
+  "cves/CVE-2023-24998.json": {
+   "bytes": 4537,
+   "retrieved_at": "2026-10-05T15:39:48Z",
+   "sha256": "96ac1c3e6ca2da6f3ea9594295c514592d42c31a444d0c7bae8c871504824790",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-24998"
   },
   "cves/CVE-2023-25652.json": {
    "bytes": 9941,
@@ -156,11 +306,23 @@
    "sha256": "557fd2dff6e9251c3b5e264fa4844bb6ba3e6712029fb6c8af5def8d7006c4ff",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-2911"
   },
+  "cves/CVE-2023-30861.json": {
+   "bytes": 5682,
+   "retrieved_at": "2026-10-05T15:36:00Z",
+   "sha256": "ca2384401d9e441cd3ad8e4c1622b6ddb9750b63c5fdb1234d305e6e0140025e",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-30861"
+  },
   "cves/CVE-2023-31484.json": {
    "bytes": 5957,
    "retrieved_at": "2026-10-05T05:05:15Z",
    "sha256": "1cd2f0a4bbd5857e67c7250bf93f4d607893553b519d80b09f8ccdaf9a243523",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-31484"
+  },
+  "cves/CVE-2023-38408.json": {
+   "bytes": 9131,
+   "retrieved_at": "2026-10-05T15:33:44Z",
+   "sha256": "bea191721c2888dff867bfcbded438c986cd694fdae29f816aa15b4ed2a558c7",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-38408"
   },
   "cves/CVE-2023-4091.json": {
    "bytes": 12197,
@@ -192,6 +354,12 @@
    "sha256": "482bc96768f71bec6ea3884f25f2a0367c7e68f547ebf5d2f30a4a4a41ad5879",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-42117"
   },
+  "cves/CVE-2023-43770.json": {
+   "bytes": 5462,
+   "retrieved_at": "2026-10-05T15:43:03Z",
+   "sha256": "20f05d96b5871db3ccf9fd618dea25e066373c930c6841a15c063690e58c3e8b",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-43770"
+  },
   "cves/CVE-2023-44487.json": {
    "bytes": 127692,
    "retrieved_at": "2026-10-05T05:00:30Z",
@@ -203,6 +371,12 @@
    "retrieved_at": "2026-10-05T04:58:58Z",
    "sha256": "dcea999e124c36b31fb5f376cb51b0b2267d8514db0f85a545fdcb708008a2c4",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-45853"
+  },
+  "cves/CVE-2023-46604.json": {
+   "bytes": 8957,
+   "retrieved_at": "2026-10-05T15:39:15Z",
+   "sha256": "4bc911f364d94e12446cebd589a8b45b73f5b16e0b58286238c31e91f60d5e11",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-46604"
   },
   "cves/CVE-2023-47038.json": {
    "bytes": 8150,
@@ -216,11 +390,29 @@
    "sha256": "95a1d0c2d8c66cce5305ff97fe9ecbcf135c3f140d162635325129fafdb05ed6",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-4863"
   },
+  "cves/CVE-2023-48795.json": {
+   "bytes": 62182,
+   "retrieved_at": "2026-10-05T15:34:18Z",
+   "sha256": "278a779b84d317056132dbbbf5abdac3fd7c18f82733ff279615188141d49d07",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-48795"
+  },
   "cves/CVE-2023-4911.json": {
    "bytes": 29406,
    "retrieved_at": "2026-10-05T05:07:12Z",
    "sha256": "510cdbcc892eff2df1740f56a8fc5054c9b657008bb1afad3b6808662a2ea39b",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-4911"
+  },
+  "cves/CVE-2023-50447.json": {
+   "bytes": 4422,
+   "retrieved_at": "2026-10-05T15:36:13Z",
+   "sha256": "6d1e9d0609313362b3c3a125dd0989572c3b6db5c88ddfb18728305b904259b0",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-50447"
+  },
+  "cves/CVE-2023-50782.json": {
+   "bytes": 6332,
+   "retrieved_at": "2026-10-05T15:35:34Z",
+   "sha256": "ae49ef22de69fec89fbf36a5b49b90f3df58602587fe9bf990ffc95bd0dc196c",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-50782"
   },
   "cves/CVE-2023-51764.json": {
    "bytes": 8984,
@@ -228,11 +420,83 @@
    "sha256": "8be6fa37ecbddbe544998c62a30a4f79289f746e7cc53d7b24081e92f3c50cda",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-51764"
   },
+  "cves/CVE-2023-52425.json": {
+   "bytes": 4821,
+   "retrieved_at": "2026-10-05T15:46:12Z",
+   "sha256": "50cb8eddb754c957dd8dde15fa27ac7fd20d83363ea994c608b746af5dd4ed63",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-52425"
+  },
+  "cves/CVE-2023-6129.json": {
+   "bytes": 9581,
+   "retrieved_at": "2026-10-05T15:45:46Z",
+   "sha256": "eda957a382d9d888f0023690d7af8e9bf796c7b8c1436fee5cb23327663939f3",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-6129"
+  },
+  "cves/CVE-2023-6378.json": {
+   "bytes": 3458,
+   "retrieved_at": "2026-10-05T15:39:02Z",
+   "sha256": "00b4a56c7393d8591b72036b33ec13656b0f42e87fef3de06195bcddddc8f733",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-6378"
+  },
+  "cves/CVE-2023-7028.json": {
+   "bytes": 7448,
+   "retrieved_at": "2026-10-05T15:43:22Z",
+   "sha256": "bd5fd0886eca6d7b8b87809cde565149bb34288cd76aeab7c87735edb39c9711",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-7028"
+  },
+  "cves/CVE-2023-7104.json": {
+   "bytes": 7642,
+   "retrieved_at": "2026-10-05T15:45:59Z",
+   "sha256": "f1e7f309aa73ed54639320acb6ea1777b2d6031ff707c414e7bf47bb38a8d536",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2023-7104"
+  },
   "cves/CVE-2024-0743.json": {
    "bytes": 4739,
    "retrieved_at": "2026-10-05T04:56:49Z",
    "sha256": "9493641b5d2a9346d7d2edb9b139550fedda1cda4d339a20725f313cc5086509",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-0743"
+  },
+  "cves/CVE-2024-1135.json": {
+   "bytes": 3646,
+   "retrieved_at": "2026-10-05T15:35:28Z",
+   "sha256": "4a9b4be4e12e02cf5f4310f72c6d790f04a29dc5c0fc76c34f9e1e7cf569e864",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-1135"
+  },
+  "cves/CVE-2024-1597.json": {
+   "bytes": 8203,
+   "retrieved_at": "2026-10-05T15:38:56Z",
+   "sha256": "6474ed337c168ff8bcb30a184db5a2d78ec66e79a7d5acc3c3f212ead3226266",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-1597"
+  },
+  "cves/CVE-2024-2004.json": {
+   "bytes": 11871,
+   "retrieved_at": "2026-10-05T15:45:39Z",
+   "sha256": "74fa2b34fee2189262ee158f2efc4877a923e652acb9e8bc36011d074a9da5a7",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-2004"
+  },
+  "cves/CVE-2024-22195.json": {
+   "bytes": 5381,
+   "retrieved_at": "2026-10-05T15:35:22Z",
+   "sha256": "6b1026878fb7eb142259b030bc94e7a1215b1609c76c4a9c27e126ce1fe72738",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-22195"
+  },
+  "cves/CVE-2024-23334.json": {
+   "bytes": 5852,
+   "retrieved_at": "2026-10-05T15:34:36Z",
+   "sha256": "f9f50b291bdf2cbad6f772b8b8bd6d5f0ea47a4a16b215a26cb7d9fe9ded4818",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-23334"
+  },
+  "cves/CVE-2024-23897.json": {
+   "bytes": 7737,
+   "retrieved_at": "2026-10-05T15:42:18Z",
+   "sha256": "3e896851c31cb8cc2d3aaad6ea47950924930391990f18d2827510c5739bdcc9",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-23897"
+  },
+  "cves/CVE-2024-24762.json": {
+   "bytes": 7599,
+   "retrieved_at": "2026-10-05T15:36:20Z",
+   "sha256": "5fe571b3c6986581d6729fff21260545f7ba038b14f968d92131fafd09698869",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-24762"
   },
   "cves/CVE-2024-27280.json": {
    "bytes": 3996,
@@ -246,11 +510,59 @@
    "sha256": "9b2ffdca66ef41b01d89af4e96e4a017f86e6db34c48394dd91ef46a2e526d44",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-2756"
   },
+  "cves/CVE-2024-31228.json": {
+   "bytes": 4558,
+   "retrieved_at": "2026-10-05T15:46:31Z",
+   "sha256": "e3fdb15955b3b1c223d6fe0f9afdd9ccfc67618c9862e2c78eebf3192d91588c",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-31228"
+  },
+  "cves/CVE-2024-33599.json": {
+   "bytes": 7550,
+   "retrieved_at": "2026-10-05T15:45:52Z",
+   "sha256": "43ea2b661fedb82b7d02fee6528ba0ac33f1c64d4b3f3f9d0b7d60cae803c85d",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-33599"
+  },
+  "cves/CVE-2024-34069.json": {
+   "bytes": 5702,
+   "retrieved_at": "2026-10-05T15:34:29Z",
+   "sha256": "328173f76cf71ac1fd2d8cf1546ea03c75fbea6718e2715db108055accadf10f",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-34069"
+  },
+  "cves/CVE-2024-35195.json": {
+   "bytes": 4193,
+   "retrieved_at": "2026-10-05T15:35:15Z",
+   "sha256": "cab3b44019b9169d65940398692f2631fce75c8988d00c4699bec6e3194b5b61",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-35195"
+  },
+  "cves/CVE-2024-3651.json": {
+   "bytes": 4895,
+   "retrieved_at": "2026-10-05T15:36:07Z",
+   "sha256": "6c5a2229c47137a8518cf92a59bcc10105b43721fb71fca180a56d720b0f0efc",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-3651"
+  },
+  "cves/CVE-2024-37383.json": {
+   "bytes": 5063,
+   "retrieved_at": "2026-10-05T15:42:56Z",
+   "sha256": "0a0c6b3e87596f8f190b986d0ce7996117a7662cdc6bef498d95eb2969d82502",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-37383"
+  },
+  "cves/CVE-2024-37891.json": {
+   "bytes": 7970,
+   "retrieved_at": "2026-10-05T15:35:08Z",
+   "sha256": "6548b82d4d1b9148c6ab4983c14a013829ca907e5f88610b67e82a4e360defc4",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-37891"
+  },
   "cves/CVE-2024-38475.json": {
    "bytes": 8283,
    "retrieved_at": "2026-10-05T04:59:57Z",
    "sha256": "4df2f7c49a6507d55bc12f8141400a8e7e2cd4585faf8857bdbf0158dd67b9a4",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-38475"
+  },
+  "cves/CVE-2024-45231.json": {
+   "bytes": 4205,
+   "retrieved_at": "2026-10-05T15:35:02Z",
+   "sha256": "7bd0d09ee5337458d8f7f60eed22ae97370de4526a3e3e2afec2dffee36cd4fa",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-45231"
   },
   "cves/CVE-2024-4577.json": {
    "bytes": 12147,
@@ -258,17 +570,47 @@
    "sha256": "72fe31439d9ebbd7ff91d9594e875b51ffeebb4e53abc64a3508e8e79618e5b9",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-4577"
   },
+  "cves/CVE-2024-49768.json": {
+   "bytes": 4685,
+   "retrieved_at": "2026-10-05T15:34:43Z",
+   "sha256": "6a4bc03cb64c241f589eabb965f4eb20f4b40db9a6a9e884df4cba1a5038d3c6",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-49768"
+  },
+  "cves/CVE-2024-52804.json": {
+   "bytes": 3488,
+   "retrieved_at": "2026-10-05T15:35:54Z",
+   "sha256": "4de56dc5fb6d9a21d2e11f121bf9c701d517fee42777150e86308b0dfb711e81",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-52804"
+  },
+  "cves/CVE-2024-56171.json": {
+   "bytes": 7262,
+   "retrieved_at": "2026-10-05T15:46:05Z",
+   "sha256": "3a6410f33619b7ae9482b2c783030edc3f47af7999da82175f9498fe7390e71a",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-56171"
+  },
   "cves/CVE-2024-56406.json": {
    "bytes": 4730,
    "retrieved_at": "2026-10-05T05:24:13Z",
    "sha256": "b044cb3e7a0ed85734949d7996d8395d5f4060d5008695571a4b47f79b633ff1",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-56406"
   },
+  "cves/CVE-2024-6345.json": {
+   "bytes": 3413,
+   "retrieved_at": "2026-10-05T15:35:41Z",
+   "sha256": "4331bfd070521a54b4a2c53417e2a4cffcd618ffe5f6080ca4a26e74fec54cbe",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-6345"
+  },
   "cves/CVE-2024-6387.json": {
    "bytes": 44228,
    "retrieved_at": "2026-10-05T04:58:39Z",
    "sha256": "e3d5007d6256db4deaf7e721dbfa8218a4a5ead5289129b6e3fc3c954487adcb",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-6387"
+  },
+  "cves/CVE-2024-7347.json": {
+   "bytes": 6436,
+   "retrieved_at": "2026-10-05T15:34:04Z",
+   "sha256": "37c4cb77088d26797e5e75b6fa9c43555bdad493c7ddf37cf2da9b878ba24eb9",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2024-7347"
   },
   "cves/CVE-2025-10230.json": {
    "bytes": 4582,
@@ -317,6 +659,18 @@
    "retrieved_at": "2026-10-05T04:56:10Z",
    "sha256": "ad3e833844625e9efc92b5b2e3e3bc5127d588e25d36baa5bf098e2ab53dca3f",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2025-15467"
+  },
+  "cves/CVE-2025-23419.json": {
+   "bytes": 6510,
+   "retrieved_at": "2026-10-05T15:34:23Z",
+   "sha256": "76d6e23361528dba2540d63e5d04aa32fc1e572c3c037012443b1d7de8305eba",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2025-23419"
+  },
+  "cves/CVE-2025-24813.json": {
+   "bytes": 15370,
+   "retrieved_at": "2026-10-05T15:41:19Z",
+   "sha256": "ad4c996217cd2c60e1f7919c9dea917949195001f76ac4101840a6714268d43c",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2025-24813"
   },
   "cves/CVE-2025-26465.json": {
    "bytes": 12804,
@@ -371,6 +725,24 @@
    "retrieved_at": "2026-10-05T05:08:36Z",
    "sha256": "a045c8dc4f562bebacaf2cb604030d525e13db98d5bd060ff4fa4b8f7c9ad7ed",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2025-48385"
+  },
+  "cves/CVE-2025-49113.json": {
+   "bytes": 5453,
+   "retrieved_at": "2026-10-05T15:42:50Z",
+   "sha256": "b7f09d95943a75ef0038f385ca46b9bbb2b193f7d78ec0377317a07a5dd35b31",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2025-49113"
+  },
+  "cves/CVE-2025-49630.json": {
+   "bytes": 2980,
+   "retrieved_at": "2026-10-05T15:33:57Z",
+   "sha256": "d235f2650157d1768ff617ac2112396355f10e2ff82e4e43753c5acb7c686473",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2025-49630"
+  },
+  "cves/CVE-2025-49812.json": {
+   "bytes": 3224,
+   "retrieved_at": "2026-10-05T15:33:50Z",
+   "sha256": "9479be969a4d5776b7e7a589e99d3c76160f5fce0d2753c2185fad3f7d8cc092",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2025-49812"
   },
   "cves/CVE-2025-58098.json": {
    "bytes": 2739,
@@ -438,6 +810,12 @@
    "sha256": "9111786518e66f4a30a81d3e65181bac7f7717c0164630038ffea55c4313b13e",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2025-8677"
   },
+  "cves/CVE-2025-8714.json": {
+   "bytes": 3011,
+   "retrieved_at": "2026-10-05T15:46:24Z",
+   "sha256": "33b71664f5a9e7e39e190510f5a7d17ba1fb198b5119430263193eedbe131280",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2025-8714"
+  },
   "cves/CVE-2025-9232.json": {
    "bytes": 10856,
    "retrieved_at": "2026-10-05T04:56:16Z",
@@ -474,6 +852,24 @@
    "sha256": "558462413a37fd68a9e1561c4ef7d151f29e3348ba2e877ee5528257b9106291",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-0992"
   },
+  "cves/CVE-2026-10051.json": {
+   "bytes": 4045,
+   "retrieved_at": "2026-10-05T15:40:53Z",
+   "sha256": "85a9b4c35dd8599d0babfd52d73242d7d1d7c08849731c6a7c0d110b125e10c5",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-10051"
+  },
+  "cves/CVE-2026-10723.json": {
+   "bytes": 2454,
+   "retrieved_at": "2026-10-05T15:45:00Z",
+   "sha256": "799b6a60fce5a3be111232c1f9acf1ca8dbe6d565ff85924130e851fc09f2468",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-10723"
+  },
+  "cves/CVE-2026-10733.json": {
+   "bytes": 3546,
+   "retrieved_at": "2026-10-05T15:43:42Z",
+   "sha256": "454fdd514dc8f612c728da2a77355e63b5e050c57dcc2b91cfac3ea6daaa43e8",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-10733"
+  },
   "cves/CVE-2026-11822.json": {
    "bytes": 5134,
    "retrieved_at": "2026-10-05T05:07:38Z",
@@ -503,6 +899,18 @@
    "retrieved_at": "2026-10-05T05:27:02Z",
    "sha256": "8182588187d5f3241e918f6875633c31e22a6b37badb7518b19a534e3fdb857b",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-12912"
+  },
+  "cves/CVE-2026-12969.json": {
+   "bytes": 4169,
+   "retrieved_at": "2026-10-05T15:44:14Z",
+   "sha256": "b60216cf0e1310a822f2589fb7956898d568b741c1fb819f3bf62ac6d8a91bd2",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-12969"
+  },
+  "cves/CVE-2026-13221.json": {
+   "bytes": 3767,
+   "retrieved_at": "2026-10-05T15:44:01Z",
+   "sha256": "ce6ef37e8324a4cec4535a0ad503d8257786de8374206b026294166372bd9f45",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-13221"
   },
   "cves/CVE-2026-14164.json": {
    "bytes": 24318,
@@ -540,11 +948,29 @@
    "sha256": "8b9b61ac5bbcf4e58d21b5466fb0b3eab7579e903126d8c22e5e7f674c45cf66",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-17084"
   },
+  "cves/CVE-2026-18924.json": {
+   "bytes": 7263,
+   "retrieved_at": "2026-10-05T15:43:48Z",
+   "sha256": "790f06944b1050484a9b8fa45db529516ad05a419bee4bd264b8478384dbe4e0",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-18924"
+  },
+  "cves/CVE-2026-2340.json": {
+   "bytes": 17020,
+   "retrieved_at": "2026-10-05T15:45:06Z",
+   "sha256": "823db1934fea8f2372631bd9f8783f091e5f69768c3fec51808c5471d9188762",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-2340"
+  },
   "cves/CVE-2026-23918.json": {
    "bytes": 5790,
    "retrieved_at": "2026-10-05T05:00:17Z",
    "sha256": "930a714be985d14fb66d55d0e0e77c4a44e9de733e58a03b159b38046e29be25",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-23918"
+  },
+  "cves/CVE-2026-24072.json": {
+   "bytes": 2290,
+   "retrieved_at": "2026-10-05T15:45:19Z",
+   "sha256": "4e87e264dce55b6be75c8b3dfa07648bf13241d9533f8e9ff599388149e90cf3",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-24072"
   },
   "cves/CVE-2026-24515.json": {
    "bytes": 2845,
@@ -600,6 +1026,12 @@
    "sha256": "bf1786aa231473e7b33db8d7df6a3237e910aa584a943666f5f1fbadb0361a67",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-28780"
   },
+  "cves/CVE-2026-29167.json": {
+   "bytes": 2769,
+   "retrieved_at": "2026-10-05T15:42:04Z",
+   "sha256": "76671318447cdc861c22f931da696de6420729ef9128b9f9c933620e2d73671b",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-29167"
+  },
   "cves/CVE-2026-3012.json": {
    "bytes": 28937,
    "retrieved_at": "2026-10-05T05:23:08Z",
@@ -624,6 +1056,12 @@
    "sha256": "deefbeb9e8c8db95e652912a79bb6e5746bbd691b9e9eee1050e3e849041a3da",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-3276"
   },
+  "cves/CVE-2026-32792.json": {
+   "bytes": 5574,
+   "retrieved_at": "2026-10-05T15:44:08Z",
+   "sha256": "fb331094c039876bcdccdf2f5b35d3ea59e0ec69fa4229350a8fd73cad74beeb",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-32792"
+  },
   "cves/CVE-2026-33845.json": {
    "bytes": 43837,
    "retrieved_at": "2026-10-05T05:20:19Z",
@@ -635,6 +1073,12 @@
    "retrieved_at": "2026-10-05T04:56:29Z",
    "sha256": "be5a3010becd7b4ec8de9b0cb51c73b9db5a4dc353ca35aa3461777bf1a69502",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-33846"
+  },
+  "cves/CVE-2026-34059.json": {
+   "bytes": 2239,
+   "retrieved_at": "2026-10-05T15:41:58Z",
+   "sha256": "6fbca459e4c6e9aa0d96681afc41110daa4364562dc2bc97388b078e34d1dd37",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-34059"
   },
   "cves/CVE-2026-34180.json": {
    "bytes": 7330,
@@ -665,6 +1109,12 @@
    "retrieved_at": "2026-10-05T04:56:55Z",
    "sha256": "38bb01799edd7e7624e5f1484f1c6d401c84336be62b6e623d6c457366e654fe",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-3497"
+  },
+  "cves/CVE-2026-34993.json": {
+   "bytes": 50199,
+   "retrieved_at": "2026-10-05T15:36:27Z",
+   "sha256": "de9653ab19c054aff2c608c6efb6c1535845f9e2a60a7454b5c953aaeeb5aee5",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-34993"
   },
   "cves/CVE-2026-35385.json": {
    "bytes": 20616,
@@ -714,6 +1164,12 @@
    "sha256": "c6c43243cd989d76ad5a9898ccb7b37e1c2c481ed96c4ebbf3861d02e1f03623",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-3833"
   },
+  "cves/CVE-2026-40110.json": {
+   "bytes": 9669,
+   "retrieved_at": "2026-10-05T15:37:31Z",
+   "sha256": "946365dc54a7c8cd1f4601ff0c5962c8e1e9ee4f2175763054b33972af239cbf",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-40110"
+  },
   "cves/CVE-2026-4046.json": {
    "bytes": 4230,
    "retrieved_at": "2026-10-05T05:07:31Z",
@@ -737,6 +1193,18 @@
    "retrieved_at": "2026-10-05T05:05:34Z",
    "sha256": "29cee40712ac5a0ccbae304834ebf3f9bd3f02dada6b23b8fdd5b6006947cb81",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-41316"
+  },
+  "cves/CVE-2026-41417.json": {
+   "bytes": 3028,
+   "retrieved_at": "2026-10-05T15:40:20Z",
+   "sha256": "d85ae486fa59c8eb5d828118b68776a65e7ef01f07f8a37f2a4073b3e969d8b6",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-41417"
+  },
+  "cves/CVE-2026-41848.json": {
+   "bytes": 4174,
+   "retrieved_at": "2026-10-05T15:40:59Z",
+   "sha256": "cd0d29fceb00968e2d8e9dd81c69029dcaac136e12b3de9c434e593f4767ced5",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-41848"
   },
   "cves/CVE-2026-42009.json": {
    "bytes": 52634,
@@ -762,6 +1230,12 @@
    "sha256": "3d22927a94cc625dca05812f65067f1e9e7c8c2584e5dffe6adf01ba1e4ce9f7",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-42055"
   },
+  "cves/CVE-2026-42198.json": {
+   "bytes": 11302,
+   "retrieved_at": "2026-10-05T15:40:40Z",
+   "sha256": "56f537b7bafb1de825a1590388e5ad4fbc69a5f5a122cd74ddd09137400424d1",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-42198"
+  },
   "cves/CVE-2026-42245.json": {
    "bytes": 5631,
    "retrieved_at": "2026-10-05T05:24:26Z",
@@ -786,17 +1260,35 @@
    "sha256": "3535360930154a12ab492ad23f73cd171385a0bd97f6a10f7c03789511cb082f",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-42258"
   },
+  "cves/CVE-2026-42308.json": {
+   "bytes": 4040,
+   "retrieved_at": "2026-10-05T15:36:52Z",
+   "sha256": "cb8ca638138779df77b761f13946b93ee0a4f8cc2d669422768f76b27717cab7",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-42308"
+  },
   "cves/CVE-2026-42497.json": {
    "bytes": 4272,
    "retrieved_at": "2026-10-05T05:24:07Z",
    "sha256": "84c32c0cdfd92fe7aaec6d94233a3374ae33ddeb1b9ac335bd04b15245f87d29",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-42497"
   },
+  "cves/CVE-2026-42533.json": {
+   "bytes": 7941,
+   "retrieved_at": "2026-10-05T15:45:26Z",
+   "sha256": "74a8da4a735271f523e58d43d48defe1603a75dc89300106eebd15e284eff872",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-42533"
+  },
   "cves/CVE-2026-42536.json": {
    "bytes": 10661,
    "retrieved_at": "2026-10-05T05:21:44Z",
    "sha256": "d245ecd7958f99417923282063a73e101b10d34f67adc95ae6a8713124209f60",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-42536"
+  },
+  "cves/CVE-2026-42561.json": {
+   "bytes": 15670,
+   "retrieved_at": "2026-10-05T15:37:25Z",
+   "sha256": "4678ad6411b1fa7492ff97e8daf04e83dc90b719f6a5b3b4d13222c4e7de60c0",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-42561"
   },
   "cves/CVE-2026-42766.json": {
    "bytes": 6362,
@@ -815,6 +1307,18 @@
    "retrieved_at": "2026-10-05T05:22:10Z",
    "sha256": "3c4a0f236743aee5b2d1dc2abab7ad67646d10ad7cb0e3e387201ca0665de98f",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-42946"
+  },
+  "cves/CVE-2026-43515.json": {
+   "bytes": 3748,
+   "retrieved_at": "2026-10-05T15:40:01Z",
+   "sha256": "2e95e06ad1d336d808459bdbd5f889bca533a01b1b9d84e8cc486de4fc4b03b9",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-43515"
+  },
+  "cves/CVE-2026-43617.json": {
+   "bytes": 4699,
+   "retrieved_at": "2026-10-05T15:44:21Z",
+   "sha256": "b8ef1be1023fa708b1981777338f076043dc78beb7fd3e14950f423a4bad1f33",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-43617"
   },
   "cves/CVE-2026-43964.json": {
    "bytes": 9255,
@@ -840,6 +1344,12 @@
    "sha256": "98c28d313705c1c27ed31cf084e9d5bbb0111613f8e1be22368e938583d77870",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-4426"
   },
+  "cves/CVE-2026-44431.json": {
+   "bytes": 3851,
+   "retrieved_at": "2026-10-05T15:37:05Z",
+   "sha256": "26fa8c8429b3a8ce02dd2415afd2884c1236312173cca78d6f08748624f07340",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-44431"
+  },
   "cves/CVE-2026-4480.json": {
    "bytes": 21890,
    "retrieved_at": "2026-10-05T05:04:16Z",
@@ -858,11 +1368,23 @@
    "sha256": "b6aa76b36991c6405dc355466704da5711d5132d1cc1ec08fc86a0d64b2b8db4",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-45186"
   },
+  "cves/CVE-2026-45409.json": {
+   "bytes": 6255,
+   "retrieved_at": "2026-10-05T15:37:19Z",
+   "sha256": "34fe11091be901a2ac7dc1277aa209a4eb139cd49078f985d901933cb9ede396",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-45409"
+  },
   "cves/CVE-2026-45447.json": {
    "bytes": 28469,
    "retrieved_at": "2026-10-05T04:55:57Z",
    "sha256": "1a7b2fc09d8af558ba0d9ee007a717cf6215441dedc594a877c6e46db9a84a96",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-45447"
+  },
+  "cves/CVE-2026-46483.json": {
+   "bytes": 3030,
+   "retrieved_at": "2026-10-05T15:44:34Z",
+   "sha256": "e9b05b378496808b0f640d91420f30fb5ff1fc9c09311dca6e2fc8bed497d0ee",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-46483"
   },
   "cves/CVE-2026-47240.json": {
    "bytes": 3582,
@@ -875,6 +1397,24 @@
    "retrieved_at": "2026-10-05T05:26:56Z",
    "sha256": "2fcf52cce2415ca37c80c0dd1e504c178d5f381648f071a0c8772a67dbd6dc1b",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-4775"
+  },
+  "cves/CVE-2026-48043.json": {
+   "bytes": 43487,
+   "retrieved_at": "2026-10-05T15:40:27Z",
+   "sha256": "48d22505a5686cb15fded5d1223248cc058b3eab4caa8b69f999a8dfc5b17cbb",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-48043"
+  },
+  "cves/CVE-2026-48522.json": {
+   "bytes": 3164,
+   "retrieved_at": "2026-10-05T15:36:46Z",
+   "sha256": "1c81b3e65e8d7451696134405f4597dd891490d010c1a4684a153a82fa9f51cd",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-48522"
+  },
+  "cves/CVE-2026-48710.json": {
+   "bytes": 37939,
+   "retrieved_at": "2026-10-05T15:34:49Z",
+   "sha256": "9102336f014d71d4106e5d4f30efc3d0e84f6aae2acb012e26499d7ab80b6c50",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-48710"
   },
   "cves/CVE-2026-48959.json": {
    "bytes": 3359,
@@ -894,11 +1434,29 @@
    "sha256": "764d5682193b9b893276fe3b54b7b1f54c88a6a86aa5e174e861868eadd518ce",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-4897"
   },
+  "cves/CVE-2026-49268.json": {
+   "bytes": 4403,
+   "retrieved_at": "2026-10-05T15:40:33Z",
+   "sha256": "8f8e7999381d0a16593f7c11681e47558198859264a4a4402850dad3cc86f9e9",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-49268"
+  },
+  "cves/CVE-2026-49854.json": {
+   "bytes": 2348,
+   "retrieved_at": "2026-10-05T15:36:59Z",
+   "sha256": "a823aa794d78c0527a1756ee666c7d3b08e2cc25ee4a8169c511d29e3915f04b",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-49854"
+  },
   "cves/CVE-2026-49975.json": {
    "bytes": 18213,
    "retrieved_at": "2026-10-05T05:02:12Z",
    "sha256": "59959c22bf3c5479f9b33ba0977962e4ade21ff1391d2c26ee2f2c55d08ccfd5",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-49975"
+  },
+  "cves/CVE-2026-50012.json": {
+   "bytes": 3296,
+   "retrieved_at": "2026-10-05T15:44:40Z",
+   "sha256": "afd63ee60a50396fae6382c60873c16f3d4d14113efd3d190f6a405d9d31b1e5",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-50012"
   },
   "cves/CVE-2026-50219.json": {
    "bytes": 2806,
@@ -936,11 +1494,59 @@
    "sha256": "005ed11df51b4aac22f079267db0e02025e418884bc3c2afd1e06bcc5776cefd",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-5260"
   },
+  "cves/CVE-2026-53435.json": {
+   "bytes": 8683,
+   "retrieved_at": "2026-10-05T15:42:30Z",
+   "sha256": "ca968c969d23772fa30d84fd8db023a1e247395adb59e960eb73246c9521c668",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-53435"
+  },
+  "cves/CVE-2026-54282.json": {
+   "bytes": 2891,
+   "retrieved_at": "2026-10-05T15:37:12Z",
+   "sha256": "b6019e1309617feff37ce8d2794a51834c26f34531bc249f69663139f9097c1a",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-54282"
+  },
+  "cves/CVE-2026-54512.json": {
+   "bytes": 4365,
+   "retrieved_at": "2026-10-05T15:40:14Z",
+   "sha256": "891bab371752cc55d3aacfcba31051a77b4e139b5d08fc4d58d12a3e76d00c59",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-54512"
+  },
+  "cves/CVE-2026-55203.json": {
+   "bytes": 4612,
+   "retrieved_at": "2026-10-05T15:44:47Z",
+   "sha256": "b6a5cad32b85f804d424b0892c92c8f931c515b9b11b9272f2fd681a90bd0d9e",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-55203"
+  },
+  "cves/CVE-2026-55276.json": {
+   "bytes": 3331,
+   "retrieved_at": "2026-10-05T15:41:32Z",
+   "sha256": "3f039ebaa6d6e152e229a780dd5edcd702fa9fa66d83b6a101594b8876320235",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-55276"
+  },
   "cves/CVE-2026-5545.json": {
    "bytes": 11475,
    "retrieved_at": "2026-10-05T05:25:05Z",
    "sha256": "68c0ebe6d32024c60174f4265ce4df3ab3c573892515523110862cc2bda59eb7",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-5545"
+  },
+  "cves/CVE-2026-55956.json": {
+   "bytes": 3444,
+   "retrieved_at": "2026-10-05T15:41:39Z",
+   "sha256": "01be51cc9e3b33e38272881024d62640e2c003add819abd0ecdc7b0118e71653",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-55956"
+  },
+  "cves/CVE-2026-56153.json": {
+   "bytes": 2234,
+   "retrieved_at": "2026-10-05T15:42:11Z",
+   "sha256": "811eab149754db1531dfa6d619983cfdf83936970897904519d313e1074ac4a3",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-56153"
+  },
+  "cves/CVE-2026-56407.json": {
+   "bytes": 1925,
+   "retrieved_at": "2026-10-05T15:43:55Z",
+   "sha256": "153d4fff0a20a184af632bcc318546032f377e7d6f1e606b2906e80d384570bc",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-56407"
   },
   "cves/CVE-2026-56412.json": {
    "bytes": 2529,
@@ -984,6 +1590,12 @@
    "sha256": "9bec925bee58bb8ad38d248b7fc4c139a73a862f8c1e8404c7d9009bb57da042",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-59843"
   },
+  "cves/CVE-2026-59846.json": {
+   "bytes": 5240,
+   "retrieved_at": "2026-10-05T15:44:27Z",
+   "sha256": "20b4ebd87c29b0922e1b6a1e531548f2c81b049c7a497f2868b28d41bc0f04b3",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-59846"
+  },
   "cves/CVE-2026-59847.json": {
    "bytes": 6069,
    "retrieved_at": "2026-10-05T05:07:57Z",
@@ -996,11 +1608,23 @@
    "sha256": "e434eaea288bdb4414b0c47477175a7f8d4c17fb8d66bf4d3aabbecdb755bafe",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-59849"
   },
+  "cves/CVE-2026-59890.json": {
+   "bytes": 2834,
+   "retrieved_at": "2026-10-05T15:37:44Z",
+   "sha256": "88fe26e8574f51c9142b1adeeb61448c23d96a95d98f0f0f1d7cd828879b96fe",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-59890"
+  },
   "cves/CVE-2026-59996.json": {
    "bytes": 2614,
    "retrieved_at": "2026-10-05T05:20:52Z",
    "sha256": "d1bacccaffe6959a665ce42c75122594728388c2eac91729c149b1671f664a41",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-59996"
+  },
+  "cves/CVE-2026-59998.json": {
+   "bytes": 2621,
+   "retrieved_at": "2026-10-05T15:45:13Z",
+   "sha256": "996beca1d60a79c0d0c294ddf46f7befe737d7e001105175163785d3f7ea3dcb",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-59998"
   },
   "cves/CVE-2026-60000.json": {
    "bytes": 2663,
@@ -1026,6 +1650,12 @@
    "sha256": "900a5800c26d4167bbf6fb4f86850bdac9fcbeb358def8bcccd34df8c665502c",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-6253"
   },
+  "cves/CVE-2026-62643.json": {
+   "bytes": 3416,
+   "retrieved_at": "2026-10-05T15:43:09Z",
+   "sha256": "da55b749cf223471729922d9ae00aef4fd5fb98877c6634b2ef002e88a51a7dd",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-62643"
+  },
   "cves/CVE-2026-63076.json": {
    "bytes": 5570,
    "retrieved_at": "2026-10-05T05:01:21Z",
@@ -1037,6 +1667,18 @@
    "retrieved_at": "2026-10-05T05:24:59Z",
    "sha256": "d17104f79c49ead7658dfbb70f6882321b256559c796af1a795fd898135726cc",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-6429"
+  },
+  "cves/CVE-2026-64849.json": {
+   "bytes": 3857,
+   "retrieved_at": "2026-10-05T15:34:55Z",
+   "sha256": "c524c228b75e0e3fef2da9323532d1c5346f0dc3ce3a4e2e7c77b5aa8dcf4136",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-64849"
+  },
+  "cves/CVE-2026-65183.json": {
+   "bytes": 3282,
+   "retrieved_at": "2026-10-05T15:41:45Z",
+   "sha256": "31b9d0934c1c8faccb47096d94a07967441e8788b43f99c1728dd23d95ec8d42",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-65183"
   },
   "cves/CVE-2026-6653.json": {
    "bytes": 3835,
@@ -1074,6 +1716,30 @@
    "sha256": "4689053503e25573c6eae17d2a98f89403170e56255f4bb4ee5ccbecd216a62a",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-6791"
   },
+  "cves/CVE-2026-68763.json": {
+   "bytes": 3421,
+   "retrieved_at": "2026-10-05T15:41:51Z",
+   "sha256": "2430ecab5831ad32512b9afb927a43decc5489be2beb13bc476ce0294dc4af55",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-68763"
+  },
+  "cves/CVE-2026-6907.json": {
+   "bytes": 5118,
+   "retrieved_at": "2026-10-05T15:36:39Z",
+   "sha256": "2f6703d67102d9ca4fdf9e2ecdf3246540a01e29e2c9d1b8ff605f8e9027f168",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-6907"
+  },
+  "cves/CVE-2026-69249.json": {
+   "bytes": 4224,
+   "retrieved_at": "2026-10-05T15:37:38Z",
+   "sha256": "7d094516c45d47ae6c01b19cf39adb49503647af0f3b930919b2fd96b26b208d",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-69249"
+  },
+  "cves/CVE-2026-70430.json": {
+   "bytes": 2507,
+   "retrieved_at": "2026-10-05T15:42:37Z",
+   "sha256": "7c7f18e3d9f0ab1e5847b9f7db8b69d1566955a520155c220af9fecbe7d8acbd",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-70430"
+  },
   "cves/CVE-2026-7168.json": {
    "bytes": 10570,
    "retrieved_at": "2026-10-05T05:06:13Z",
@@ -1103,6 +1769,12 @@
    "retrieved_at": "2026-10-05T05:24:39Z",
    "sha256": "b175a8ec08337f60a5dc3d5767c0582c5898527c1b1512bf4e5b3bcf29cf32e2",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-7262"
+  },
+  "cves/CVE-2026-75007.json": {
+   "bytes": 3289,
+   "retrieved_at": "2026-10-05T15:43:16Z",
+   "sha256": "2721809778de4f9b765315fe8dad9787442c0b84fe217c098207fb484a851877",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-75007"
   },
   "cves/CVE-2026-7568.json": {
    "bytes": 10112,
@@ -1140,11 +1812,29 @@
    "sha256": "c541b6edf9da1a3f83ec171166a31c177c54a998f048e52722d4ff130b0a6c0d",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-82474"
   },
+  "cves/CVE-2026-8280.json": {
+   "bytes": 3663,
+   "retrieved_at": "2026-10-05T15:43:35Z",
+   "sha256": "add5181542cc78d4a369f96e8e4775c1ef9aac4313fd18d2bb140a68cf4daab8",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-8280"
+  },
   "cves/CVE-2026-8376.json": {
    "bytes": 4321,
    "retrieved_at": "2026-10-05T05:24:00Z",
    "sha256": "0374054370137e20642019c1bee7183ec22b6c6159c216ea44fa4d060c18f206",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-8376"
+  },
+  "cves/CVE-2026-8404.json": {
+   "bytes": 5918,
+   "retrieved_at": "2026-10-05T15:36:33Z",
+   "sha256": "fe911e95a0872d3afe54b4055ba7bfa3875de3cf542d1b2bf39649eb34bff2cf",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-8404"
+  },
+  "cves/CVE-2026-84645.json": {
+   "bytes": 2564,
+   "retrieved_at": "2026-10-05T15:42:43Z",
+   "sha256": "a0c2054b532266f0c597678e7ddd36243961a811839824885a76775a40a70fec",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-84645"
   },
   "cves/CVE-2026-85091.json": {
    "bytes": 3821,
@@ -1170,21 +1860,45 @@
    "sha256": "4259bc070f57f86c1735483347f6257316810a4e2dec456dfeb62337c7a57c43",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-8674"
   },
+  "cves/CVE-2026-8763.json": {
+   "bytes": 5984,
+   "retrieved_at": "2026-10-05T15:40:47Z",
+   "sha256": "3c23d8e88eee71a5dbe2c58ac7dcb516b1ed7d8c168a8537cbd3be61eb0c8595",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-8763"
+  },
+  "cves/CVE-2026-90698.json": {
+   "bytes": 4862,
+   "retrieved_at": "2026-10-05T15:44:53Z",
+   "sha256": "11eb542f084b6518fcd3b8ed9d35812a8efa6596857dd58dd89363465b469b01",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-90698"
+  },
   "cves/CVE-2026-9256.json": {
    "bytes": 18523,
    "retrieved_at": "2026-10-05T05:22:03Z",
    "sha256": "b5ca490a4d1bedfc3646101b62f92e7fd901478467212f3a0957c60470e9e8f7",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-9256"
   },
+  "cves/CVE-2026-94054.json": {
+   "bytes": 2340,
+   "retrieved_at": "2026-10-05T15:45:32Z",
+   "sha256": "75363b9185791c307ff4c755debb31022cfd1db88606da711ca8eee6cc5da5c3",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-94054"
+  },
   "cves/CVE-2026-96512.json": {
    "bytes": 3903,
    "retrieved_at": "2026-10-05T05:01:53Z",
    "sha256": "9db99a728ed758349c362c543c0a0c1d33f6e203db1f023ceac5b8f8ac1357eb",
    "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-96512"
+  },
+  "cves/CVE-2026-9828.json": {
+   "bytes": 3538,
+   "retrieved_at": "2026-10-05T15:40:07Z",
+   "sha256": "e9a0dd63d7ed25505a1f0fa2751b296fbf306fb621009200ab2dc1c0dc7f098f",
+   "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2026-9828"
   }
  },
  "license": "NVD data (U.S. Government work, public domain); 'This product uses the NVD API but is not endorsed or certified by the NVD.'",
- "n_files": 197,
+ "n_files": 316,
  "snapshot_date": "2026-10-05",
  "source": "nvd"
 }
