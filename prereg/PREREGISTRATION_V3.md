@@ -38,3 +38,23 @@ X5 (drift): all models of X2. S3I: Qwen3-14B and Mistral-Small-24B on X2 tracker
 LTT (H12) uses X2 DC records on calib and test (calib X2 runs for every X2 model).
 
 ## 5. Hashes (filled at tag time)
+
+Code commit at freeze: `5f0483bc6e55dcdf1f348194d07a6b3a5042fb13`
+
+| file | SHA-256 |
+|---|---|
+| `data/sealed/d7_test_labels.jsonl` | `21857ab4dde6fe9a9afde19f23570f96935bc282ed4d0e10b429030685336c21` |
+| `data/d7/cases/test.jsonl` | `86c4ca9ce6e9df92298bbae31adfb52009a64e5ac461945c57c0d53ba58766ba` |
+| `data/d7/cases/dev.jsonl` | `c8a78a2c57932c27f29e73474f3248ae9bff55aebcfbc722010593ddbcf501a6` |
+| `data/d7/cases/calib.jsonl` | `20a589ea07f256448e833d2cfedc5f415b1b0d07227e7b67fabdd38d3532a354` |
+| `data/d7/cve_meta.jsonl` | `7a62eee676e6ec18043aa220e9a5d5817d8d8cbf2e645bf072e05b6ca5d14a21` |
+| `config/source_profiles_v3.yaml` | `b0119e990f6e69a2f505b1291f06c7abe0b662bdbb61e435a9ffc471d4655e37` |
+| `config/priors_v3.yaml` | `39d8b6f8e08f92f02f58afa6c7467d1fed4af76be9e63863b6c00e2fee8cf993` |
+| `config/config_preconditions_v3.yaml` | `43291f45d03620bf60aba86563c8fbe4152b317936924858461245fab5d238d4` |
+| `config/models.yaml` | `9c0f0f023b484a1e3a2a9694c216bc364edec9f17652828f542a40434267845b` |
+| `prompts/core_spec_v3.md` | `0fb37664bce4f09ede77c73ff59efe2a12ab8b3d850c98fd7544b1d80e357b3a` |
+| `scripts/paper/analyze_v3.py` | `a69d9a273570ad81c6d2ab265c4e141396c5c9266863c45f37ba7b41eb7264ec` |
+| `scripts/data/build_drift_v3.py` | `0a2fe2b8387808d1866cf8082f3785b9fdea80c2e4563405647d5a7f39e8287e` |
+| `src/deepcti/core/versions.py` | `db695e81231e47d1386512246dfe30c3706a27e061c59308773701dfbf630d6c` |
+| `src/deepcti/extraction/verifier.py` | `b3627f9bfaed80b29a69426d2040d9cb5ceb05d4d697baa61e561d1bc52fe24e` |
+| `data/d7/hosts (tree)` | `95781a5d7d627c9bd948f69270e79c86e9b4c8e30ab89c8290c9c6d313153603` (518578 files) |
