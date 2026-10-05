@@ -73,6 +73,11 @@ def build_jobs(exp: str, split: str, model: str, limit: int | None, dataset: str
                 for s in (V3_LLM if llm else V3_FREE):
                     jobs.append(Job(Spec(exp, c["case_id"], s, model, arm=arm, **kw), c))
         return jobs
+    if exp == "X2I":  # v3 third-party ReAct baseline (Inspect AI) on D7, tracker + withheld arms
+        for c in cases:
+            for arm in ("tracker", "withheld"):
+                jobs.append(Job(Spec(exp, c["case_id"], "S3I", model, arm=arm, **kw), c))
+        return jobs
     if exp == "X3":  # v3 acquisition on D7 where scanners are noisy (withheld) or absent (blind)
         for c in stratified_subset(cases, limit or 200):
             for arm in ("withheld", "blind"):
@@ -178,7 +183,11 @@ def main() -> None:
     manifest(out_dir / f"{args.model}.manifest.json", {"exp": args.exp, "split": args.split, "model": args.model,
                                                        "n_jobs": len(jobs), "limit": args.limit,
                                                        "argv": sys.argv})
-    stats = run_jobs(jobs, out, model_name=args.model, concurrency=conc)
+    if args.exp == "X2I":
+        from deepcti.inspect_harness.s3i import run_jobs_s3i
+        stats = run_jobs_s3i(jobs, out, model_name=args.model, concurrency=conc)
+    else:
+        stats = run_jobs(jobs, out, model_name=args.model, concurrency=conc)
     print(json.dumps(stats, indent=1))
 
 

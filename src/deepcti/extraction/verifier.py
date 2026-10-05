@@ -70,7 +70,11 @@ def verify(proposal: Proposal, result: ToolResult, case: dict) -> Verdict:
             return Verdict(proposal, False, "fs version facts only from changelog headers or vendor version files")
     if cls == "proc":
         lines = [ln for ln in result.output.splitlines() if span in ln]
-        if not any("started from package" in ln or "server banner:" in ln for ln in lines):
+        if case.get("ecosystem", "deb-debian").startswith("deb"):
+            # an upstream banner cannot establish a distribution revision (backport trap): package-level line only
+            if not any("started from package" in ln for ln in lines):
+                return Verdict(proposal, False, "distribution packages: version only from the package-level process start line")
+        elif not any("started from package" in ln or "server banner:" in ln for ln in lines):
             return Verdict(proposal, False, "span not in a process start or banner line")
     names = {case["src_package"], *case.get("binary_packages", []), *case.get("aliases", [])}
     if case.get("component"):
@@ -83,6 +87,16 @@ def verify(proposal: Proposal, result: ToolResult, case: dict) -> Verdict:
         return Verdict(proposal, False, "version value not inside span")
     if value not in {m.group(1) for m in VERSION_RE.finditer(span)}:
         return Verdict(proposal, False, "value is not a complete version token in span")
+    # proximity (v3): the value must be the FIRST version token after an occurrence of the component name, within
+    # 40 characters — rejects e.g. interpreter versions in "Flask/2.0.1 Python/3.10" or "gunicorn Python/3.10"
+    bound = False
+    for n in named:
+        for m in re.finditer(rf"(?<![\w.+-]){re.escape(n)}(?![\w.+-])", span, re.I):
+            nxt = VERSION_RE.search(span, m.end())
+            if nxt and nxt.start() - m.end() <= 40 and nxt.group(1) == value:
+                bound = True
+    if not bound:
+        return Verdict(proposal, False, "version is not the first version token after the component name")
     try:
         Version(value)
     except ValueError:

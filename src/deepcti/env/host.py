@@ -366,6 +366,7 @@ class HostEnv:
         self.eco = case.get("ecosystem", "deb-debian")
         self.lang = copy.deepcopy(fixture.lang)
         self.apps = copy.deepcopy(fixture.host.get("apps", []))
+        self.binaries = list(fixture.binaries)
         for svc in self.services.values():
             if svc.get("loaded_version") is None and svc.get("component"):
                 svc["loaded_version"] = svc.get("version")
@@ -420,6 +421,28 @@ class HostEnv:
                 out.append(str(svc["loaded_version"]))
         return out
 
+    def set_instance_version(self, inst: dict, new: str) -> None:
+        """Change a non-deb instance's version AND the evidence that shows it (paths, version files)."""
+        old = str(inst["version"])
+        if old == new:
+            return
+        inst["version"] = new
+        base = str(inst.get("path", "")).split("!/")[0]
+        if self.eco == "vendor":  # rewrite version strings in the product's text files
+            for p in [p for p in self.files if base and p.startswith(base.rstrip("/") + "/")]:
+                if old in self.files[p]:  # whole version tokens only (9.0.1 must not hit 9.0.10)
+                    self.files[p] = re.sub(rf"(?<![\w.]){re.escape(old)}(?![\w]|\.\d)", new, self.files[p])
+        elif self.eco == "pypi":  # rename the dist-info directory (and its files) to the new version
+            for p in [p for p in self.files if base and p.startswith(base)]:
+                self.files[p.replace(f"-{old}.dist-info", f"-{new}.dist-info")] = self.files.pop(p)
+            inst["path"] = base.replace(f"-{old}.dist-info", f"-{new}.dist-info")
+        elif self.eco == "maven":  # the jar file name carries the version
+            jar = base
+            if jar.endswith(f"-{old}.jar") and "!/" not in str(inst.get("path", "")):
+                new_jar = jar[: -len(f"-{old}.jar")] + f"-{new}.jar"
+                self.binaries = [new_jar if b == jar else b for b in self.binaries]
+                inst["path"] = new_jar
+
     def non_deb_target(self, current: str) -> str | None:
         for r in self.ranges():
             lo, hi = r.get("introduced"), r.get("fixed")
@@ -449,7 +472,7 @@ class HostEnv:
         if not self.is_deb() and kind in ("upgrade", "downgrade", "restart", "remove"):
             if kind in ("upgrade", "downgrade"):  # on-disk instances change; running processes keep their version
                 for inst in self.instances():
-                    inst["version"] = event["version"]
+                    self.set_instance_version(inst, str(event["version"]))
             elif kind == "restart":
                 insts = self.instances()
                 for key, svc in self.services.items():
@@ -696,9 +719,12 @@ class HostEnv:
                 f"     Loaded: loaded (/lib/systemd/system/{unit}; enabled; preset: enabled)",
                 f"     Active: {active}",
             ]
-            if loaded and svc.get("banner"):  # v3 vendor/language services print their own banner
-                lines += [f"   Main PID: {pid} ({key})",
-                          f"{self.asset()} {key}[{pid}]: server banner: {svc['banner']}"]
+            if loaded and svc.get("banner"):  # v3 services also print their own banner
+                lines += [f"   Main PID: {pid} ({key})"]
+                if svc.get("package"):  # distribution package: the package-level start line comes first
+                    lines.append(f"{self.asset()} {key}[{pid}]: started from package {svc.get('package')} "
+                                 f"(binary build {loaded})")
+                lines.append(f"{self.asset()} {key}[{pid}]: server banner: {svc['banner']}")
             elif loaded:
                 lines += [
                     f"   Main PID: {pid} ({key})",
@@ -798,7 +824,7 @@ class HostEnv:
             return "invalid", f"path not allow-listed: {path}", None
         prefix = path + "/"
         entries = set()
-        for p in list(self.files) + list(self.fx.binaries):
+        for p in list(self.files) + list(self.binaries):
             if p.startswith(prefix):
                 rest = p[len(prefix):]
                 entries.add(rest.split("/", 1)[0] + ("/" if "/" in rest else ""))
@@ -864,7 +890,7 @@ class HostEnv:
                 target = self.non_deb_target(inst["version"])
                 if target:
                     changed.append((inst.get("path"), inst["version"], target))
-                    inst["version"] = target
+                    self.set_instance_version(inst, target)
             self.actions.append({"t": self.clock, "action": "apply_patch", "pkg": name, "changed": bool(changed),
                                  "detail": changed})
             if not changed:

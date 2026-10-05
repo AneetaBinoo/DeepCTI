@@ -6,6 +6,7 @@ Maven uses Maven ComparableVersion semantics, vendor products use a lenient semv
 
 from __future__ import annotations
 
+import re
 from functools import lru_cache
 
 from debian.debian_support import Version as DebVersion
@@ -23,6 +24,7 @@ def parse(ecosystem: str, version: str):
         return PypiVersion(v)
     if ecosystem == "maven":
         return MavenVersion(v)
+    v = re.sub(r"[-+.](ee|ce|oss|enterprise|community)$", "", v, flags=re.I)  # vendor edition suffix, not a pre-release
     try:
         return SemverVersion(v)
     except Exception:  # noqa: BLE001 - vendor strings such as "9.0.40.0" or "2.426.3"

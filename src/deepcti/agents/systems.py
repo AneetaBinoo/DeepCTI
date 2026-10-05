@@ -413,7 +413,8 @@ class Controller:
             self.trace.append({"compiled_program": raw})
         req = bool(self.med.program and self.med.program.precondition and self.med.program.trusted)
         belief = voi.Belief(self.make_prior(req), req)
-        order = ["pkg_query", "file_read", "service_status", "config_get", "cmdb_lookup", "run_scanner"]
+        order = ["pkg_query", "lang_pkg_query", "list_dir", "file_read", "service_status", "config_get", "cmdb_lookup",
+                 "run_scanner"]
         while True:
             self.discover()
             dec = self.med.decision()
@@ -432,6 +433,10 @@ class Controller:
             tests = [c[2] for c in cands]
             if self.cfg.acquisition in ("voi", "entropy"):
                 chosen = voi.select_test(belief, tests, "ec2" if self.cfg.acquisition == "voi" else "entropy")
+                if chosen is None and dec.status == UNDER_INVESTIGATION and self.med.instance_aware and tests:
+                    # v2.1: the noiseless VOI model can consider a case settled from running-process evidence alone,
+                    # while the instance-aware state still lacks on-disk evidence: take the cheapest remaining source
+                    chosen = min(tests, key=lambda t: t.cost)
                 if chosen is None and dec.status != UNDER_INVESTIGATION:
                     # decision resolved but quorum pending (k_decide > 1): the noiseless model sees no VOI in
                     # corroboration, so take the cheapest remaining trusted source (DEVIATIONS D11)
@@ -439,7 +444,8 @@ class Controller:
                 if chosen is None:
                     break
             elif self.cfg.acquisition == "checklist":
-                chosen = sorted(tests, key=lambda t: next(i for i, o in enumerate(order) if t.name.startswith(o)))[0]
+                chosen = sorted(tests, key=lambda t: next((i for i, o in enumerate(order) if t.name.startswith(o)),
+                                                          len(order)))[0]
             elif self.cfg.acquisition == "random":
                 chosen = self.rng.choice(tests)
             else:  # llm chooses among the same candidates
