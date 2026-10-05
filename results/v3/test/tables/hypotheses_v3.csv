@@ -1,0 +1,7 @@
+,test,estimate,ci95,p,n,n_cves,p_holm,loss_diff,loss_upper95,loss_non_inferior,min_frac,criterion_met,note
+0,H9 withheld DC−S3 loss,-0.9659075224292615,"[-1.118342601455248, -0.817796735256172]",9.999000099990002e-05,414.0,70.0,0.0004999500049995,,,,,,
+1,H10 vendor/tracker DC−S1′ loss (LLM extraction value),-0.1989795918367347,"[-0.2602040816326531, -0.1330049261083744]",0.0007999200079992001,84.0,14.0,0.0015998400159984002,,,,,,
+2,H11 accepted-fact error DC−DC_noverify,-0.027981594047251663,"[-0.040713055428413164, -0.015649796312438416]",9.999000099990002e-05,151.0,38.0,0.0004999500049995,,,,,,
+3,H14 withheld DC−DC_checklist cost-to-decision (max budget),-0.35,"[-0.506917356454889, -0.20765027322404372]",0.0014998500149985001,400.0,60.0,0.0015998400159984002,0.0,0.0,True,,,
+4,H13 D7 upgrade_no_restart DCv21−DC loss,-4.53,"[-6.244081632653061, -2.971979216435738]",9.999000099990002e-05,280.0,26.0,0.0004999500049995,,,,,,
+5,H12 LTT blind α=0.05: min frac of splits with risk ≤ α (≥ 0.9) and mean coverage gain,0.3951051970450193,,0.0,,,0.0,,,,0.97,True,criterion test (not a p-value); p encodes pass(0)/fail(1) for the Holm table

@@ -1,0 +1,17 @@
+system,attempt,error_type,n
+DCv21,attempt1,cited_id_missing,2
+DCv21,attempt1,no_citation,9
+DCv21,attempt1,status_contradicts_decision,1
+DCv21,attempt1,status_not_stated,169
+DCv21,attempt1,version_not_in_cited_evidence,62
+DCv21,attempt2,no_citation,5
+DCv21,attempt2,status_not_stated,3
+DCv21,attempt2,version_not_in_cited_evidence,37
+DCv21b,attempt1,cited_id_missing,2
+DCv21b,attempt1,no_citation,10
+DCv21b,attempt1,status_conflict_other_status,1
+DCv21b,attempt1,version_not_in_cited_evidence,57
+DCv21b,attempt2,cited_id_missing,1
+DCv21b,attempt2,no_citation,2
+DCv21b,attempt2,status_conflict_other_status,1
+DCv21b,attempt2,version_not_in_cited_evidence,39

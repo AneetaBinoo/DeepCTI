@@ -1,0 +1,25 @@
+arm,system,verifier,n,acc,coverage,loss,cost,DER
+blind,DC,fixed (D21),588,0.2976,0.2976,0.3512,6.6548,0.0
+blind,DC,pre-registered,588,0.2976,0.2976,0.3512,6.6548,0.0
+blind,DC_noverify,fixed (D21),588,0.2976,0.2976,0.3512,6.6548,0.0
+blind,DC_noverify,pre-registered,588,0.2976,0.2976,0.3512,6.6548,0.0
+blind,DCv21,fixed (D21),588,0.2976,0.2976,0.3512,6.6548,0.0
+blind,DCv21,pre-registered,588,0.2976,0.2976,0.3512,6.6548,0.0
+blind,S1p,fixed (D21),84,0.2976,0.2976,0.3512,2.7024,0.0
+blind,S1p,pre-registered,84,0.2976,0.2976,0.3512,2.7024,0.0
+tracker,DC,fixed (D21),588,0.7704,0.7704,0.1148,4.7126,0.0
+tracker,DC,pre-registered,588,0.7058,0.716,0.1522,4.6412,0.0
+tracker,DC_noverify,fixed (D21),588,0.8282,0.8537,0.0864,4.6633,0.0
+tracker,DC_noverify,pre-registered,588,0.8282,0.8537,0.0864,4.6684,0.0
+tracker,DCv21,fixed (D21),588,0.7075,0.7075,0.1463,5.1259,0.0
+tracker,DCv21,pre-registered,588,0.6854,0.7007,0.165,5.0901,0.0
+tracker,S1p,fixed (D21),84,0.2976,0.2976,0.3512,2.869,0.0
+tracker,S1p,pre-registered,84,0.2976,0.2976,0.3512,2.869,0.0
+withheld,DC,fixed (D21),588,0.2976,0.2976,0.3512,6.6548,0.0
+withheld,DC,pre-registered,588,0.2976,0.2976,0.3512,6.6548,0.0
+withheld,DC_noverify,fixed (D21),588,0.2976,0.2976,0.3512,6.6548,0.0
+withheld,DC_noverify,pre-registered,588,0.2976,0.2976,0.3512,6.6548,0.0
+withheld,DCv21,fixed (D21),588,0.2976,0.2976,0.3512,6.6548,0.0
+withheld,DCv21,pre-registered,588,0.2976,0.2976,0.3512,6.6548,0.0
+withheld,S1p,fixed (D21),84,0.2976,0.2976,0.3512,2.7024,0.0
+withheld,S1p,pre-registered,84,0.2976,0.2976,0.3512,2.7024,0.0

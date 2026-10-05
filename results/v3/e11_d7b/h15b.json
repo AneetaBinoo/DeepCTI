@@ -1,0 +1,62 @@
+{
+ "DCv21b_vs_DC": {
+  "diff": 0.03632931497514835,
+  "lo": 0.011086753866646384,
+  "hi": 0.06236096421007194,
+  "p_signflip": 0.009099090090990901,
+  "faithfulness_DCv21b": 0.7365056818181818,
+  "faithfulness_DC": 0.7001763668430336,
+  "n_claims_DCv21b": 2112,
+  "n_claims_DC": 1890,
+  "n_cves": 65,
+  "n_pairs": 504,
+  "n_pairs_per_arm": {
+   "tracker": 168,
+   "withheld": 168,
+   "blind": 168
+  },
+  "noninferior_at_margin": true
+ },
+ "DCv21b_vs_DCv21": {
+  "diff": 0.05408674836190386,
+  "lo": 0.02761838605975588,
+  "hi": 0.0803730794653317,
+  "p_signflip": 0.00029997000299970003,
+  "faithfulness_DCv21b": 0.7365056818181818,
+  "faithfulness_DCv21": 0.6824189334562778,
+  "n_claims_DCv21b": 2112,
+  "n_claims_DCv21": 2169,
+  "n_cves": 65,
+  "n_pairs": 504,
+  "n_pairs_per_arm": {
+   "tracker": 168,
+   "withheld": 168,
+   "blind": 168
+  },
+  "noninferior_at_margin": true
+ },
+ "DCv21_vs_DC": {
+  "diff": -0.017757433386755506,
+  "lo": -0.0468820038870616,
+  "hi": 0.009845801580532809,
+  "p_signflip": 0.2268773122687731,
+  "faithfulness_DCv21": 0.6824189334562778,
+  "faithfulness_DC": 0.7001763668430336,
+  "n_claims_DCv21": 2169,
+  "n_claims_DC": 1890,
+  "n_cves": 65,
+  "n_pairs": 504,
+  "n_pairs_per_arm": {
+   "tracker": 168,
+   "withheld": 168,
+   "blind": 168
+  },
+  "noninferior_at_margin": false
+ },
+ "h15_reproduced": true,
+ "label": "POST HOC (DEVIATIONS D23); not a pre-registered test",
+ "margin": -0.02,
+ "claims_without_eligible_validated_judge": 0,
+ "share_fallback_DCv21b": 0.057539682539682536,
+ "n_triples_all_three_systems": 504
+}
