@@ -96,3 +96,28 @@ study (E8) in this run; paraphrase filtering by LLM judge (E1); single distribut
 R/lme4 unavailable.
 
 ## 8. Hashes (filled at tag time by scripts/run/freeze_prereg.py)
+
+Code commit at freeze (parent of the tag commit): `3638f22dc7c7cd41911b783f40c2101025f72151`
+
+| file | SHA-256 |
+|---|---|
+| `data/sealed/test_labels.jsonl` | `2f6043bb0f08362fdfe12d1bde09d121fdccb86deceb74c205ad39abb31ca2be` |
+| `data/d1/cases/test.jsonl` | `b7079039cadd06e248f6030c5f6ae9f24c6aec26f1ac7b2280a9c0ed1b4256c0` |
+| `data/d1/cases/dev.jsonl` | `f13e76a08d8723f882d7ee9228f07689ab31f4111821476cc348771f9c073a32` |
+| `data/d1/cases/calib.jsonl` | `a61f1d09be56adcd94c74afe3ecb5ef7d7e69018035e9fd55de8e414997fee67` |
+| `data/d1/cve_meta.jsonl` | `c9b15289043a6265b7415e7c8f64b1bcb1cefbd2b92dab1b80c987b57719ac42` |
+| `data/d1/hosts (tree)` | `2bf56da02b394385a835e94240b4077e6db62cb07c9c02577d49f6ca7be4c110 (503643 files)` |
+| `prompts/core_spec.md` | `6ad2019d1a3b13b6bfaf78a7d8a03e3201dd2d744cfeedc9231fb016bf7977e3` |
+| `config/source_profiles.yaml` | `0dd9ea1385d85978cef32be2f3e4f3f8c06591fb07b426672fa0305bb6821e6a` |
+| `config/priors.yaml` | `3fef16dd3433bf7e7ee97efe6b1639f19bbdf702dfeb3af6d331991f58563fe2` |
+| `config/config_preconditions.yaml` | `16105dd3cecc603470fa878ce5c085fd7d21e8f4c40eccb4a8453f74d1c42383` |
+| `config/models.yaml` | `fc80038b3955967f23225a5e03ad5eb88fb24bcc8f9407c930a70c9378f2d4c4` |
+| `scripts/paper/analyze.py` | `0f4191c88bba4af8229f2b1fa0f2fd982235f6b2e72d139e0ab5e15dd3b07d87` |
+| `scripts/data/build_d2_d3.py` | `e79d9fcfb2e1b93deb9949937a4e30e851ff32e744a56a16ed166c5b281861a2` |
+| `policies/P0.cedar` | `7841afa306beb6f4a8aead24af90ffb4bff1f9ba357caae64f50a2dad0af16e5` |
+| `policies/P1.cedar` | `a4c340cbf5b2f61057b4e68b53f5ff10d7bb7cd2aa69fd2358bfde193aa1384e` |
+| `policies/P2.cedar` | `b29e203a27a45046aa64fe83eaf45fb026e0e3b3f8aa936023ed929078b6c774` |
+| `policies/P3.cedar` | `98885a358f5ffe68020dcebb42b1bf35417d300302ec99f5be4d5774614e324f` |
+| `policies/P3k3.cedar` | `511cca998cf7b16199b0accb0aefee4376e0d798fbaaba445752ff585948991a` |
+
+Policy linter (T4 positive-threshold fragment): {"P0": "18 violations (expected for P0/P1)", "P1": "18 violations (expected for P0/P1)", "P2": "ok", "P3": "ok", "P3k3": "ok"}
