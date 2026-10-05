@@ -236,3 +236,33 @@ CLI notes for the scanners:
 * Trivy: `trivy rootfs --skip-db-update --offline-scan --scanners vuln --format json`.
 * Grype: `grype dir:<rootfs> -o json` with `GRYPE_DB_AUTO_UPDATE=false`.
 * OSV-Scanner v2: `scan source -L dpkg-status:<path>` parses the status file, but it cannot tell which Debian release the file belongs to. It loaded the *Ubuntu* DB and reported nothing. Each rootfs is therefore packed into a single-layer docker-archive tarball and scanned with `osv-scanner scan image --archive <tar> --offline-vulnerabilities`. This detects `Debian:12/13` correctly.
+
+## VEX-Bench
+
+Added 2026-10-05 for experiment E7 (transfer to VEX-Bench). The protocol below comes from the repository code, which I read directly. I did not fetch or read the arXiv paper (2609.08040).
+
+* **Source:** `https://github.com/steven1518/vex-bench`, branch `main`, commit `80cddeac3132826bfd47227ad59b2e6618a681bd` (committed 2026-09-25 00:19 -0400). The repo is cloned to `data/external/vex-bench`. The GitHub API reports a repo size of 648 KB, and the clone is 1.8 MB including `.git`.
+* **License:** MIT. This comes from the GitHub API (`license.spdx_id = MIT`) and from `LICENSE` ("Copyright (c) 2026 Jiahao Shi", sha256 `1124f4d0…ba300`).
+* **Case file:** `benchmark/tasks/vex_bench.jsonl` (sha256 `06c58010defd28a3165598072b36fd56e986bc4c39c91f3c0095dc82b2800ddf`) holds 75 JSON lines. Each line has the keys `task_id`, `repo_url`, `commit_sha`, `cve_id`, `ground_truth` (`exploitable` | `not_exploitable`), `ground_truth_category` and `metadata` = {`language` (go | java | python), `pr_url`}.
+  * Languages: go 30, java 25, python 20.
+  * Binary labels: exploitable 22, not_exploitable 53.
+  * Ground-truth categories: code_not_reachable 38, vulnerable 22, requires_configuration 7, code_not_present 6, requires_environment 2.
+* **Label space** (`src/evaluate/prompts.py`, `src/evaluate/result_parser.py`):
+  * There are 12 categories, applied in strict precedence order: false_positive, code_not_present, code_not_reachable, requires_configuration, requires_dependency, requires_environment, compiler_protected, runtime_protected, perimeter_protected, mitigating_control_protected, uncertain, vulnerable.
+  * `to_binary` maps `vulnerable` to exploitable and every other valid category to not_exploitable.
+  * The agent must output `{"category": ..., "reasoning": ...}`. Answers that cannot be parsed count as failures.
+* **Metrics** (`src/evaluate/metrics.py::compute_metrics`):
+  * Status metric: binary P/R/F1 with `exploitable` as the positive class. A missing prediction gets the label `failed`, so it is wrong for accuracy and a false negative for a positive case.
+  * Justification metric: multiclass macro-F1 over the ground-truth categories present (sklearn, `zero_division=0`).
+  * Both are computed per run and then reported as mean and `statistics.stdev` across runs.
+  * E7 imports and calls this function unchanged, using a separate venv `data/external/vex-bench/.venv-eval` with scikit-learn.
+* **Their run protocol** (`src/evaluate/run.py`, `agents/*`):
+  * Agents are the Codex, Claude Code and OpenCode CLIs, run in Docker with network access because they look up the CVE online.
+  * The prompt contains only the CVE id and the source tree.
+  * Settings: `--repeats` (independent runs), a 600 s timeout, and no temperature or seed set in the repo.
+* **Target repositories:** 69 unique (repo, commit) checkouts drawn from 35 repos.
+  * I summed blob sizes from the GitHub git/trees API (`?recursive=1`, no tree truncated) without downloading anything. The full working-tree set is **7.09 GB, above the 5 GB budget, so the full download was NOT done.**
+  * Instead I downloaded the checkouts of at most 200 MB each: 56 checkouts covering 62 tasks, 3.53 GB by tree sum and 4.3 GB on disk. They are in `data/external/vex-bench/benchmark/repos`, fetched with VEX-Bench's own `download_src_with_commit`.
+  * The 13 excluded tasks (go 8, java 4, python 1; vulnerable 7, code_not_present 2, requires_configuration 2, code_not_reachable 2) are listed in `results/v2/e7/excluded_tasks.jsonl`. They come from kubernetes ×4, cilium ×3, hadoop ×4, minikube and llama_index@c7d061e.
+  * Per-checkout sizes are in `results/v2/e7/checkout_sizes_github_tree_api.json`.
+* **Advisories:** OSV records (the CVE plus its GHSA/GO/PYSEC aliases) and GitHub Advisory DB entries for all 67 CVEs were fetched on 2026-10-05 into `data/external/vex-bench-advisories/`. E7 agents get a digest of these with all URLs removed, so the per-repo fix PR (`metadata.pr_url`) cannot leak.
