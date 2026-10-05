@@ -1,0 +1,116 @@
+{
+ "files": {
+  "raw/bookworm-security/InRelease": {
+   "bytes": 34770,
+   "retrieved_at": "2026-10-05T04:52:43Z",
+   "sha256": "240423453d6f173aa8f97d853dcf93ca172ccfea88acd2fd7205f140b7c54824",
+   "url": "https://security.debian.org/debian-security/dists/bookworm-security/InRelease"
+  },
+  "raw/bookworm-security/main_binary-amd64_Packages.xz": {
+   "bytes": 348540,
+   "retrieved_at": "2026-10-05T04:52:43Z",
+   "sha256": "95fa338166f21678aadcc1848fd2d583696a290b040d1982f6782a2f57765b46",
+   "url": "https://security.debian.org/debian-security/dists/bookworm-security/main/binary-amd64/Packages.xz"
+  },
+  "raw/bookworm-updates/InRelease": {
+   "bytes": 55403,
+   "retrieved_at": "2026-10-05T04:52:43Z",
+   "sha256": "ec912e264a5c1a4eca1958a91a6f882c93b38d734871929fcde7ff033039c1d6",
+   "url": "https://deb.debian.org/debian/dists/bookworm-updates/InRelease"
+  },
+  "raw/bookworm-updates/main_binary-amd64_Packages.xz": {
+   "bytes": 6924,
+   "retrieved_at": "2026-10-05T04:52:43Z",
+   "sha256": "87e7e94047fb7fb6f4ceecc7022d4bee55b66031cc2a7666d3196f3e0aabb846",
+   "url": "https://deb.debian.org/debian/dists/bookworm-updates/main/binary-amd64/Packages.xz"
+  },
+  "raw/bookworm/InRelease": {
+   "bytes": 151075,
+   "retrieved_at": "2026-10-05T04:52:43Z",
+   "sha256": "77737fa4b34f2693e982cc9ee35736816c35a7778fc2d326cc1bbf5b301fe1aa",
+   "url": "https://deb.debian.org/debian/dists/bookworm/InRelease"
+  },
+  "raw/bookworm/main_binary-amd64_Packages.xz": {
+   "bytes": 8790396,
+   "retrieved_at": "2026-10-05T04:52:43Z",
+   "sha256": "9e0b5aabb2465b3d2e7a7fe27f9913846277833f7a2826e7767acccff5b588c5",
+   "url": "https://deb.debian.org/debian/dists/bookworm/main/binary-amd64/Packages.xz"
+  },
+  "raw/bullseye-security/InRelease": {
+   "bytes": 27111,
+   "retrieved_at": "2026-10-05T04:52:43Z",
+   "sha256": "405ed3dd62cd1fb797b1f5340ccef3f14b32352e564ba65b4d68c29933660ff4",
+   "url": "https://security.debian.org/debian-security/dists/bullseye-security/InRelease"
+  },
+  "raw/bullseye-security/main_binary-amd64_Packages.xz": {
+   "bytes": 474876,
+   "retrieved_at": "2026-10-05T04:52:43Z",
+   "sha256": "f8863ad9e81b60ff7056c01764e15c3c6ec9e144ab6874304d0e4349af1a5fb1",
+   "url": "https://security.debian.org/debian-security/dists/bullseye-security/main/binary-amd64/Packages.xz"
+  },
+  "raw/bullseye-updates/InRelease": {
+   "bytes": 44029,
+   "retrieved_at": "2026-10-05T04:52:43Z",
+   "sha256": "e7c2ada1e773d679722b9ca1be52c8286213593273c6abaa718f608b9502a089",
+   "url": "https://deb.debian.org/debian/dists/bullseye-updates/InRelease"
+  },
+  "raw/bullseye-updates/main_binary-amd64_Packages.xz": {
+   "bytes": 18832,
+   "retrieved_at": "2026-10-05T04:52:43Z",
+   "sha256": "eebb6103cc6f76baa2fee74e7dd915be4c888033bf438756df0774890bdf9806",
+   "url": "https://deb.debian.org/debian/dists/bullseye-updates/main/binary-amd64/Packages.xz"
+  },
+  "raw/bullseye/InRelease": {
+   "bytes": 75123,
+   "retrieved_at": "2026-10-05T04:52:43Z",
+   "sha256": "7917d4598768bfc4a25776eb0f6bf2f7d1f13301c2dc1e16467ef170dd752d40",
+   "url": "https://deb.debian.org/debian/dists/bullseye/InRelease"
+  },
+  "raw/bullseye/main_binary-amd64_Packages.xz": {
+   "bytes": 8065948,
+   "retrieved_at": "2026-10-05T04:52:43Z",
+   "sha256": "1c3405444297ead864711c18e64bce4810db63b48340a2f9d81182d9f235ad71",
+   "url": "https://deb.debian.org/debian/dists/bullseye/main/binary-amd64/Packages.xz"
+  },
+  "raw/trixie-security/InRelease": {
+   "bytes": 43409,
+   "retrieved_at": "2026-10-05T04:52:43Z",
+   "sha256": "403e29d6f113397cba686f8bed6160c2e275ece00a9f19bf938808482e2a9efb",
+   "url": "https://security.debian.org/debian-security/dists/trixie-security/InRelease"
+  },
+  "raw/trixie-security/main_binary-amd64_Packages.xz": {
+   "bytes": 264140,
+   "retrieved_at": "2026-10-05T04:52:43Z",
+   "sha256": "337637336fc2e195dd5ee1809f069a841425fe06f333dc3c7724aea1b4ab986e",
+   "url": "https://security.debian.org/debian-security/dists/trixie-security/main/binary-amd64/Packages.xz"
+  },
+  "raw/trixie-updates/InRelease": {
+   "bytes": 47340,
+   "retrieved_at": "2026-10-05T04:52:43Z",
+   "sha256": "d219d1e71e64d0318d80334ffd272542c9646ea38c2c225fc4af44cc4e9a8631",
+   "url": "https://deb.debian.org/debian/dists/trixie-updates/InRelease"
+  },
+  "raw/trixie-updates/main_binary-amd64_Packages.xz": {
+   "bytes": 4412,
+   "retrieved_at": "2026-10-05T04:52:43Z",
+   "sha256": "10012cb384dc2613586d7b3d391d92a5637c9faa36017239739f2a6109a0d45f",
+   "url": "https://deb.debian.org/debian/dists/trixie-updates/main/binary-amd64/Packages.xz"
+  },
+  "raw/trixie/InRelease": {
+   "bytes": 140421,
+   "retrieved_at": "2026-10-05T04:52:43Z",
+   "sha256": "0584fba32e13e0ab8285fb16c27adea1ec03a73669c18702821094fd6ca86675",
+   "url": "https://deb.debian.org/debian/dists/trixie/InRelease"
+  },
+  "raw/trixie/main_binary-amd64_Packages.xz": {
+   "bytes": 9678380,
+   "retrieved_at": "2026-10-05T04:52:43Z",
+   "sha256": "7778d3e3f303b7ddb8ce0fe7c8d57473a076c6bf2e8f241f75421d2396352498",
+   "url": "https://deb.debian.org/debian/dists/trixie/main/binary-amd64/Packages.xz"
+  }
+ },
+ "license": "Debian archive indices (deb.debian.org); package metadata under Debian archive terms",
+ "n_files": 18,
+ "snapshot_date": "2026-10-05",
+ "source": "debian_archive"
+}

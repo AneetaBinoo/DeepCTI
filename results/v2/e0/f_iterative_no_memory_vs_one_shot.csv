@@ -1,0 +1,2 @@
+pairs,share_ran_3_steps,share_last_step_same_evidence_set,share_last_step_empty_state,quality_inm,quality_eeo,mean_abs_quality_diff,share_identical_quality,share_identical_applicability_correct,corr_quality,tokens_ratio_inm_over_eeo
+300,0.99,0.99,1,0.8028888888888889,0.8046666666666668,0.08911111111111111,0.4633333333333333,0.86,0.6673076933465858,2.644959250054821

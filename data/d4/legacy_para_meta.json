@@ -1,0 +1,28 @@
+{
+  "dataset": "legacy-para",
+  "filter_status": "AUTOMATICALLY FILTERED by LLM judge (gemma_4_31b); NOT human-verified (deviation from plan: human filtering not possible in this run)",
+  "source": "data/derived/deepcti_kev_contextual_synthetic_100_v1.jsonl",
+  "generators": [
+    "qwen3_14b",
+    "mistral_small_24b"
+  ],
+  "judge": "gemma_4_31b",
+  "paraphrases_per_generator": 5,
+  "generator_temperature": 0.7,
+  "seed": 20261005,
+  "distinct_sentences": 157,
+  "distinct_templates": 12,
+  "paraphrases_generated": 1570,
+  "paraphrases_kept": 1451,
+  "kept_by_generator": {
+    "qwen3_14b": 727,
+    "mistral_small_24b": 724
+  },
+  "judge_rejected": 112,
+  "judge_unparsed": 0,
+  "duplicates": 7,
+  "gold_atoms": "v0 regex extract_observations() on the ORIGINAL sentence (with original field)",
+  "distance": "1 - Jaccard(lower-cased alphanumeric token sets)",
+  "llm_calls": 1848,
+  "llm_errors": 0
+}

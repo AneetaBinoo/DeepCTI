@@ -1,0 +1,15 @@
+{
+ "files": {
+  "raw/tracker.json": {
+   "bytes": 81530722,
+   "format": "JSON {src_package: {CVE: {description, releases: {release: {status, fixed_version, urgency, repositories}}}}}",
+   "retrieved_at": "2026-10-05T04:52:41Z",
+   "sha256": "bd5eff15db12716b1a9569fcb895ccc88128328cb78630f8291ee51540d6c7e3",
+   "url": "https://security-tracker.debian.org/tracker/data/json"
+  }
+ },
+ "license": "Debian security tracker data (security-tracker.debian.org), freely redistributable",
+ "n_files": 1,
+ "snapshot_date": "2026-10-05",
+ "source": "debian_tracker"
+}

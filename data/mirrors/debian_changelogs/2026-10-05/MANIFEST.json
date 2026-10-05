@@ -1,0 +1,674 @@
+{
+ "files": {
+  "raw/apache2/2.4.68-1~deb12u1_changelog": {
+   "bytes": 210275,
+   "retrieved_at": "2026-10-05T05:06:17Z",
+   "sha256": "c7501c28ccc111720d6f20fa7015948e80450aef14662070f23b5b7ac79a8f21",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/a/apache2/apache2_2.4.68-1~deb12u1_changelog"
+  },
+  "raw/apache2/2.4.68-1~deb13u1_changelog": {
+   "bytes": 213525,
+   "retrieved_at": "2026-10-05T05:06:17Z",
+   "sha256": "3b10bdb7ae118e48c85580522e829dbd8a25e49173a263226b25d6817dceb03b",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/a/apache2/apache2_2.4.68-1~deb13u1_changelog"
+  },
+  "raw/apr/1.7.2-3+deb12u1_changelog": {
+   "bytes": 25828,
+   "retrieved_at": "2026-10-05T05:06:18Z",
+   "sha256": "6df23881b4e06a106c5ed58360f43daf8dc2909dbae073574e40a22312fb01ad",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/a/apr/apr_1.7.2-3+deb12u1_changelog"
+  },
+  "raw/apr/1.7.5-1_changelog": {
+   "bytes": 26216,
+   "retrieved_at": "2026-10-05T05:06:18Z",
+   "sha256": "20f71f1eb506199681dbe7cd115c7f9efe5162f19ec2b4fc3e4746084b26351a",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/a/apr/apr_1.7.5-1_changelog"
+  },
+  "raw/bind9/1%3a9.18.49-1~deb12u1_changelog": {
+   "bytes": 121822,
+   "retrieved_at": "2026-10-05T05:06:18Z",
+   "sha256": "0dfa2abbb2714466941dd53384c3cd2a6739406dbfcf30156773e97cfe79d605",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/b/bind9/bind9_9.18.49-1~deb12u1_changelog"
+  },
+  "raw/bind9/1%3a9.20.26-1~deb13u1_changelog": {
+   "bytes": 129177,
+   "retrieved_at": "2026-10-05T05:06:18Z",
+   "sha256": "171efc2454b81d579fd386823b887ef805883e9b057a059713a46de1112bf029",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/b/bind9/bind9_9.20.26-1~deb13u1_changelog"
+  },
+  "raw/bzip2/1.0.8-5_changelog": {
+   "bytes": 31452,
+   "retrieved_at": "2026-10-05T05:06:18Z",
+   "sha256": "8c86bc9a6caf4ffa3035a19f5b812319bba681e5099b309bfedb9726b04ecbe3",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/b/bzip2/bzip2_1.0.8-5_changelog"
+  },
+  "raw/bzip2/1.0.8-6_changelog": {
+   "bytes": 31963,
+   "retrieved_at": "2026-10-05T05:06:19Z",
+   "sha256": "2c5be9d72b6b6f9cac3885b8b78d2e0277ccbb58caf428434530c8b0a153bebf",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/b/bzip2/bzip2_1.0.8-6_changelog"
+  },
+  "raw/cifs-utils/2%3a7.0-2_changelog": {
+   "bytes": 11666,
+   "retrieved_at": "2026-10-05T05:06:19Z",
+   "sha256": "0757f75722d853bacdd555df3311f5355c854ec752ba44fd6422ceb6ffc0c566",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/c/cifs-utils/cifs-utils_7.0-2_changelog"
+  },
+  "raw/cifs-utils/2%3a7.4-1_changelog": {
+   "bytes": 13600,
+   "retrieved_at": "2026-10-05T05:06:19Z",
+   "sha256": "08062dec36629648da6910f2c28ea23b1e9194fc79bc20b0975157ef3093d0fc",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/c/cifs-utils/cifs-utils_7.4-1_changelog"
+  },
+  "raw/curl/7.88.1-10+deb12u15_changelog": {
+   "bytes": 106294,
+   "retrieved_at": "2026-10-05T05:06:20Z",
+   "sha256": "dc1fe2936f3b619b2f9b65352e601d7de856f27b99570c49e8f2b708055ab814",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/c/curl/curl_7.88.1-10+deb12u15_changelog"
+  },
+  "raw/curl/8.14.1-2+deb13u5_changelog": {
+   "bytes": 124327,
+   "retrieved_at": "2026-10-05T05:06:20Z",
+   "sha256": "b50960e326cfe7692c913d8346709d8a409a4e72cdd2298ca1a27129efa39dd3",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/c/curl/curl_8.14.1-2+deb13u5_changelog"
+  },
+  "raw/exim4/4.96-15+deb12u10_changelog": {
+   "bytes": 317727,
+   "retrieved_at": "2026-10-05T05:06:20Z",
+   "sha256": "dbacaed43b51aa18bc5bd05e04795da0717a5efb0e501c63b3091eb6c49577c5",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/e/exim4/exim4_4.96-15+deb12u10_changelog"
+  },
+  "raw/exim4/4.98.2-1+deb13u4_changelog": {
+   "bytes": 330694,
+   "retrieved_at": "2026-10-05T05:06:20Z",
+   "sha256": "60632b433e40eb4081049283a2ec36d4a0ca5abfa7127f86c829aa0e0e4c5a4c",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/e/exim4/exim4_4.98.2-1+deb13u4_changelog"
+  },
+  "raw/expat/2.5.0-1+deb12u2_changelog": {
+   "bytes": 30769,
+   "retrieved_at": "2026-10-05T05:06:20Z",
+   "sha256": "577d55b71107ca16f5e0a97634d5c44cd4176d14901516163769e5e54b59a8a5",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/e/expat/expat_2.5.0-1+deb12u2_changelog"
+  },
+  "raw/expat/2.8.3-1~deb13u1_changelog": {
+   "bytes": 37458,
+   "retrieved_at": "2026-10-05T05:06:20Z",
+   "sha256": "de95418c8e17f40400f32e4e65f2f6b3e085cd2a4ac4f82683d8777876cd02bb",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/e/expat/expat_2.8.3-1~deb13u1_changelog"
+  },
+  "raw/git-lfs/3.3.0-1+deb12u1_changelog": {
+   "bytes": 8264,
+   "retrieved_at": "2026-10-05T05:06:21Z",
+   "sha256": "3d136e5f6799dc03f089a00093ee6efe0eda1731de5b3eed6ede9c2c6c27f8ab",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/g/git-lfs/git-lfs_3.3.0-1+deb12u1_changelog"
+  },
+  "raw/git-lfs/3.6.1-1+deb13u1_changelog": {
+   "bytes": 9047,
+   "retrieved_at": "2026-10-05T05:06:21Z",
+   "sha256": "c75c7699957f198c53c908831e3911a63abd17952c3e4eed3a19705b18eacec8",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/g/git-lfs/git-lfs_3.6.1-1+deb13u1_changelog"
+  },
+  "raw/git/1%3a2.39.5-0+deb12u3_changelog": {
+   "bytes": 167885,
+   "retrieved_at": "2026-10-05T05:06:21Z",
+   "sha256": "a7af1f540adc175a1ad0053cae8414003644f5a43fce90f8432d8c34eb6e7e33",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/g/git/git_2.39.5-0+deb12u3_changelog"
+  },
+  "raw/git/1%3a2.47.3-0+deb13u1_changelog": {
+   "bytes": 171249,
+   "retrieved_at": "2026-10-05T05:06:21Z",
+   "sha256": "b5ed8c240a05ceccd9b3363b3c48dd17c60c1aae62cddcb660d708e36b5a6ea6",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/g/git/git_2.47.3-0+deb13u1_changelog"
+  },
+  "raw/glibc/2.36-9+deb12u14_changelog": {
+   "bytes": 888133,
+   "retrieved_at": "2026-10-05T05:06:23Z",
+   "sha256": "b348c285c90bde9fc84195aa4ae5a3f2a48787af5a7217242c144d17af00dd12",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/g/glibc/glibc_2.36-9+deb12u14_changelog"
+  },
+  "raw/glibc/2.41-12+deb13u4_changelog": {
+   "bytes": 931311,
+   "retrieved_at": "2026-10-05T05:06:23Z",
+   "sha256": "ac07975f01219511170e7db01af8949f9acafa8f89569559b4732ed5eba00e67",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/g/glibc/glibc_2.41-12+deb13u4_changelog"
+  },
+  "raw/gnutls28/3.7.9-2+deb12u7_changelog": {
+   "bytes": 159753,
+   "retrieved_at": "2026-10-05T05:06:23Z",
+   "sha256": "00594410aed73115da418400e047a62e52eef7ab020101421b01eed67dc0db48",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/g/gnutls28/gnutls28_3.7.9-2+deb12u7_changelog"
+  },
+  "raw/gnutls28/3.8.9-3+deb13u4_changelog": {
+   "bytes": 165537,
+   "retrieved_at": "2026-10-05T05:06:23Z",
+   "sha256": "eafacf993c546a6f78eaab2e98312c72f3be1985acd898629ba03eec259e2bf4",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/g/gnutls28/gnutls28_3.8.9-3+deb13u4_changelog"
+  },
+  "raw/lbzip2/2.5-2.3_changelog": {
+   "bytes": 12754,
+   "retrieved_at": "2026-10-05T05:06:23Z",
+   "sha256": "b41ed4b340b2ba85ed4c50ac5ba909fe04d22ead3a9c68e014ef43e6e332ae13",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/l/lbzip2/lbzip2_2.5-2.3_changelog"
+  },
+  "raw/lbzip2/2.5-4_changelog": {
+   "bytes": 13407,
+   "retrieved_at": "2026-10-05T05:06:23Z",
+   "sha256": "02069be5cef672d408d09dd0f2d03259d37e6ed047d519ea76d9ebf9f8ce2d0d",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/l/lbzip2/lbzip2_2.5-4_changelog"
+  },
+  "raw/ldns/1.8.3-1_changelog": {
+   "bytes": 20294,
+   "retrieved_at": "2026-10-05T05:06:24Z",
+   "sha256": "4086557364f65f8261bdf64b30cc0685ceba5672af2443de6dd5c1439c337b50",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/l/ldns/ldns_1.8.3-1_changelog"
+  },
+  "raw/ldns/1.8.4-2_changelog": {
+   "bytes": 21613,
+   "retrieved_at": "2026-10-05T05:06:24Z",
+   "sha256": "e30743339c9be94cf96bb8e14ab36f4879ac2d1bca81f761687896f3ce52d8bc",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/l/ldns/ldns_1.8.4-2_changelog"
+  },
+  "raw/libarchive-zip-perl/1.68-1_changelog": {
+   "bytes": 17192,
+   "retrieved_at": "2026-10-05T05:06:29Z",
+   "sha256": "e3fcddbd8b305d3b14adb47b88bd8be0a856d0607ebbad65c79cddfbe9f793ff",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/liba/libarchive-zip-perl/libarchive-zip-perl_1.68-1_changelog"
+  },
+  "raw/libarchive/3.6.2-1+deb12u4_changelog": {
+   "bytes": 39857,
+   "retrieved_at": "2026-10-05T05:06:24Z",
+   "sha256": "ebed68b44f71d108d5cc41660d00e71dc7656ade890b73b6601d619577a9e77b",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/liba/libarchive/libarchive_3.6.2-1+deb12u4_changelog"
+  },
+  "raw/libarchive/3.7.4-4+deb13u1_changelog": {
+   "bytes": 42865,
+   "retrieved_at": "2026-10-05T05:06:24Z",
+   "sha256": "e44dda9a31cc830b8ff0d624af18f3685ab83fbdb6e28f9e55cdddd9b248ee39",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/liba/libarchive/libarchive_3.7.4-4+deb13u1_changelog"
+  },
+  "raw/libdbd-sqlite3-perl/1.72-1_changelog": {
+   "bytes": 29100,
+   "retrieved_at": "2026-10-05T05:06:29Z",
+   "sha256": "449f5fe78937afcc5b72a4fc4c704fb418b1194a13c2e63519a027790347fa88",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/libd/libdbd-sqlite3-perl/libdbd-sqlite3-perl_1.72-1_changelog"
+  },
+  "raw/libdbd-sqlite3-perl/1.76-1_changelog": {
+   "bytes": 29827,
+   "retrieved_at": "2026-10-05T05:06:29Z",
+   "sha256": "4b1111b51e71b9e33defb00edd626496f3ff81998af5f3a11cb5c0934f68d903",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/libd/libdbd-sqlite3-perl/libdbd-sqlite3-perl_1.76-1_changelog"
+  },
+  "raw/liberror-perl/0.17029-2_changelog": {
+   "bytes": 7797,
+   "retrieved_at": "2026-10-05T05:06:29Z",
+   "sha256": "4d6e11da8c8993105651e13c9fd7b38fbdbcbd7b50321adefde169ca3ca927b1",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/libe/liberror-perl/liberror-perl_0.17029-2_changelog"
+  },
+  "raw/liberror-perl/0.17030-1_changelog": {
+   "bytes": 8097,
+   "retrieved_at": "2026-10-05T05:06:29Z",
+   "sha256": "740beefe07908e936c6559c152d00b8a28d3f08235de1625659a0b6f64833bfd",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/libe/liberror-perl/liberror-perl_0.17030-1_changelog"
+  },
+  "raw/libssh/0.10.6-0+deb12u2_changelog": {
+   "bytes": 29852,
+   "retrieved_at": "2026-10-05T05:06:29Z",
+   "sha256": "c13c7435f624e1dea764c5060fbf568ee8442d765b3954676e7d7178fc99b138",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/libs/libssh/libssh_0.10.6-0+deb12u2_changelog"
+  },
+  "raw/libssh/0.11.5-0+deb13u1_changelog": {
+   "bytes": 33536,
+   "retrieved_at": "2026-10-05T05:06:29Z",
+   "sha256": "ee9f9c45592e03fe4af4205f6a43ff8cd81971544cef1613d1f8401012cfb42b",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/libs/libssh/libssh_0.11.5-0+deb13u1_changelog"
+  },
+  "raw/libssh2/1.10.0-3_changelog": {
+   "bytes": 13730,
+   "retrieved_at": "2026-10-05T05:06:29Z",
+   "sha256": "11b1b49e56c68ef9b564c0a0a94ab3b47fcd8eea74546625f5c38066c5c20b48",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/libs/libssh2/libssh2_1.10.0-3_changelog"
+  },
+  "raw/libssh2/1.11.1-1+deb13u2_changelog": {
+   "bytes": 16909,
+   "retrieved_at": "2026-10-05T05:06:29Z",
+   "sha256": "5ab66f3733b427e371799927cfbc1f2f0fc2ac1a9004f8c947685236e57177d1",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/libs/libssh2/libssh2_1.11.1-1+deb13u2_changelog"
+  },
+  "raw/libwebp/1.2.4-0.2+deb12u1_changelog": {
+   "bytes": 10281,
+   "retrieved_at": "2026-10-05T05:06:29Z",
+   "sha256": "458701d4268b21e21a4b80afa3a8ec91316141947de9e298da217897d0ddc197",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/libw/libwebp/libwebp_1.2.4-0.2+deb12u1_changelog"
+  },
+  "raw/libwebp/1.5.0-0.1_changelog": {
+   "bytes": 14714,
+   "retrieved_at": "2026-10-05T05:06:29Z",
+   "sha256": "c826b9d3551f5719a569c01abe38dbd6b1635a116d5de8618d9c0e210ad2e7da",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/libw/libwebp/libwebp_1.5.0-0.1_changelog"
+  },
+  "raw/libxml-libxml-perl/2.0207+dfsg+really+2.0134-1+deb12u1_changelog": {
+   "bytes": 30701,
+   "retrieved_at": "2026-10-05T05:06:29Z",
+   "sha256": "bd126fc65a8ab1dd762e4408111e23461b678920e891a1b9241484274e963189",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/libx/libxml-libxml-perl/libxml-libxml-perl_2.0207+dfsg+really+2.0134-1+deb12u1_changelog"
+  },
+  "raw/libxml-libxml-perl/2.0207+dfsg+really+2.0134-5+deb13u1_changelog": {
+   "bytes": 32691,
+   "retrieved_at": "2026-10-05T05:06:29Z",
+   "sha256": "53c250850fce23d0d3209c1529dcd6f1670f0d1092ce985b1b959d4a10b13a0f",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/libx/libxml-libxml-perl/libxml-libxml-perl_2.0207+dfsg+really+2.0134-5+deb13u1_changelog"
+  },
+  "raw/libxml-parser-perl/2.46-4+deb12u1_changelog": {
+   "bytes": 17684,
+   "retrieved_at": "2026-10-05T05:06:29Z",
+   "sha256": "4a07200681f5feacc3a8ad4a68e9895c387e3bbb2e644baa9e0c3153e5bd5d34",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/libx/libxml-parser-perl/libxml-parser-perl_2.46-4+deb12u1_changelog"
+  },
+  "raw/libxml-parser-perl/2.47-2~deb13u1_changelog": {
+   "bytes": 18342,
+   "retrieved_at": "2026-10-05T05:06:29Z",
+   "sha256": "9559fa19f3002c527c992dca6ae1c627a34d5255e7d116eea59aeb465f6db14c",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/libx/libxml-parser-perl/libxml-parser-perl_2.47-2~deb13u1_changelog"
+  },
+  "raw/libxml2/2.12.7+dfsg+really2.9.14-2.1+deb13u3_changelog": {
+   "bytes": 89910,
+   "retrieved_at": "2026-10-05T05:06:29Z",
+   "sha256": "e1ec491d8fdf46c779ed6d9029c53d3c3a1eede86aa2294e392cbbc0ce831d55",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/libx/libxml2/libxml2_2.12.7+dfsg+really2.9.14-2.1+deb13u3_changelog"
+  },
+  "raw/libxml2/2.9.14+dfsg-1.3~deb12u6_changelog": {
+   "bytes": 87835,
+   "retrieved_at": "2026-10-05T05:06:29Z",
+   "sha256": "32fd047e4e088168a57990655fab00e0298ddc75dd45b17994fe90ae819b4f65",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/libx/libxml2/libxml2_2.9.14+dfsg-1.3~deb12u6_changelog"
+  },
+  "raw/musl/1.2.3-1_changelog": {
+   "bytes": 13285,
+   "retrieved_at": "2026-10-05T05:06:29Z",
+   "sha256": "237a159b20ae08504fa9578afccdd04255e7a00d2fb3f58f179760f43fdec3ac",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/m/musl/musl_1.2.3-1_changelog"
+  },
+  "raw/musl/1.2.5-3.1~deb13u1_changelog": {
+   "bytes": 15457,
+   "retrieved_at": "2026-10-05T05:06:29Z",
+   "sha256": "ef08fc159a96d9f8eb189db09cc69aea063cea29420d26c5215c3dd9b565759f",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/m/musl/musl_1.2.5-3.1~deb13u1_changelog"
+  },
+  "raw/nginx/1.22.1-9+deb12u9_changelog": {
+   "bytes": 107146,
+   "retrieved_at": "2026-10-05T05:06:30Z",
+   "sha256": "3241798c780c3d243cd6a517ebe3f11261f0dd59f96cb50256c891f07fca499a",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/n/nginx/nginx_1.22.1-9+deb12u9_changelog"
+  },
+  "raw/nginx/1.26.3-3+deb13u7_changelog": {
+   "bytes": 111615,
+   "retrieved_at": "2026-10-05T05:06:30Z",
+   "sha256": "ac75d0a52b7cc80bff5e58f36522aa4d1bc40e56a6cc897be10806ead77ce518",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/n/nginx/nginx_1.26.3-3+deb13u7_changelog"
+  },
+  "raw/nss-mdns/0.15.1-3_changelog": {
+   "bytes": 20597,
+   "retrieved_at": "2026-10-05T05:06:31Z",
+   "sha256": "942bb2d2cce3d13d16c9ead969f2ce8bbd9d03bdd5615996e850ce7c7fb5d260",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/n/nss-mdns/nss-mdns_0.15.1-3_changelog"
+  },
+  "raw/nss-mdns/0.15.1-4_changelog": {
+   "bytes": 20832,
+   "retrieved_at": "2026-10-05T05:06:31Z",
+   "sha256": "d1fb448da65df142ed7f4c6e093c2228c4e8baa7f0ffb93f6cf1fb2c708a56e2",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/n/nss-mdns/nss-mdns_0.15.1-4_changelog"
+  },
+  "raw/nss/2%3a3.110-1+deb13u4_changelog": {
+   "bytes": 59236,
+   "retrieved_at": "2026-10-05T05:06:30Z",
+   "sha256": "1a5023b01860335e0e473e366ea495a6b9ea3c2d528191711c50558402b0865e",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/n/nss/nss_3.110-1+deb13u4_changelog"
+  },
+  "raw/nss/2%3a3.87.1-1+deb12u2_changelog": {
+   "bytes": 53974,
+   "retrieved_at": "2026-10-05T05:06:30Z",
+   "sha256": "c35b057e650aab1a6da5cfd9427424dcd1272eb5e5c9da1486ad75a40caa2653",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/n/nss/nss_3.87.1-1+deb12u2_changelog"
+  },
+  "raw/opendoas/6.8.2-1_changelog": {
+   "bytes": 933,
+   "retrieved_at": "2026-10-05T05:06:31Z",
+   "sha256": "eaf2d822c99316f01009ec34df5e2056dcf29f8d798e8f00f6fe47228f0ba03a",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/o/opendoas/opendoas_6.8.2-1_changelog"
+  },
+  "raw/openssh/1%3a10.0p1-7+deb13u4_changelog": {
+   "bytes": 389506,
+   "retrieved_at": "2026-10-05T05:06:33Z",
+   "sha256": "f83a56ead03ad1759e33ba23d93519e7f879329122028ff9c5c60ce8adcf7fe3",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/o/openssh/openssh_10.0p1-7+deb13u4_changelog"
+  },
+  "raw/openssh/1%3a9.2p1-2+deb12u10_changelog": {
+   "bytes": 348118,
+   "retrieved_at": "2026-10-05T05:06:31Z",
+   "sha256": "14d649ac1f9eea23c297f008ab44460a33a6837edff049df24db5e17d6b5b987",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/o/openssh/openssh_9.2p1-2+deb12u10_changelog"
+  },
+  "raw/openssl/3.0.20-1~deb12u2_changelog": {
+   "bytes": 106160,
+   "retrieved_at": "2026-10-05T05:06:33Z",
+   "sha256": "01cd15891be6d14edb06ad3de99481b4c77507ac4c902515aeb1c74dac5ca462",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/o/openssl/openssl_3.0.20-1~deb12u2_changelog"
+  },
+  "raw/openssl/3.5.7-1~deb13u2_changelog": {
+   "bytes": 113028,
+   "retrieved_at": "2026-10-05T05:06:33Z",
+   "sha256": "afff567f3dd0f988530b548570dbfade438e6d300c9608eebd45f2150ab52cd7",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/o/openssl/openssl_3.5.7-1~deb13u2_changelog"
+  },
+  "raw/perl/5.36.0-7+deb12u3_changelog": {
+   "bytes": 220146,
+   "retrieved_at": "2026-10-05T05:06:33Z",
+   "sha256": "b860d1a1c3c5ff52ba37d7f9337ad7cc191fae2519f17913ac6df7b99db33bd4",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/perl/perl_5.36.0-7+deb12u3_changelog"
+  },
+  "raw/perl/5.40.1-6+deb13u1_changelog": {
+   "bytes": 228650,
+   "retrieved_at": "2026-10-05T05:06:33Z",
+   "sha256": "dd7b688987b3c640bb7e318c999e08fa1be69f132e9a9476c9708ad0024cc29c",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/perl/perl_5.40.1-6+deb13u1_changelog"
+  },
+  "raw/php-defaults/93_changelog": {
+   "bytes": 19674,
+   "retrieved_at": "2026-10-05T05:06:33Z",
+   "sha256": "38693e454714c595f1a3e7cd9957b23d7f525a14c4ca0bd0aa5fcaa3d83bead2",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/php-defaults/php-defaults_93_changelog"
+  },
+  "raw/php-defaults/96_changelog": {
+   "bytes": 21068,
+   "retrieved_at": "2026-10-05T05:06:33Z",
+   "sha256": "b43c76fc7cdd6860e205f5a0117224d20c83537c32501f8477cb64cf47992172",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/php-defaults/php-defaults_96_changelog"
+  },
+  "raw/php8.2/8.2.32-1~deb12u1_changelog": {
+   "bytes": 40524,
+   "retrieved_at": "2026-10-05T05:06:34Z",
+   "sha256": "37c85e5c7725e4b61cd32303c42338a6f7ff5e6924d913f8a74a1313dfae1562",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/php8.2/php8.2_8.2.32-1~deb12u1_changelog"
+  },
+  "raw/php8.4/8.4.24-1~deb13u1_changelog": {
+   "bytes": 47180,
+   "retrieved_at": "2026-10-05T05:06:34Z",
+   "sha256": "4339d7d4269cea413d76307682b4eed53e7d246e05c838ba552d91e0b887975d",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/php8.4/php8.4_8.4.24-1~deb13u1_changelog"
+  },
+  "raw/pigz/2.6-1_changelog": {
+   "bytes": 3683,
+   "retrieved_at": "2026-10-05T05:06:34Z",
+   "sha256": "4849d43025ac95b349685cd507050dc0d3ba07f4d1913dd805588ef47c623689",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/pigz/pigz_2.6-1_changelog"
+  },
+  "raw/pigz/2.8-1_changelog": {
+   "bytes": 3815,
+   "retrieved_at": "2026-10-05T05:06:35Z",
+   "sha256": "42eb29cf0196f459aeb34fc544eb985d893b5762b12614b172acd95d79521ebf",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/pigz/pigz_2.8-1_changelog"
+  },
+  "raw/pixz/1.0.7-2_changelog": {
+   "bytes": 2742,
+   "retrieved_at": "2026-10-05T05:06:35Z",
+   "sha256": "ee9ac95cd5adeaa0c9a76045a9a60fd8ac9c0ec4e6d853653c4e567c0b68ab79",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/pixz/pixz_1.0.7-2_changelog"
+  },
+  "raw/pixz/1.0.7-4_changelog": {
+   "bytes": 3341,
+   "retrieved_at": "2026-10-05T05:06:35Z",
+   "sha256": "dd1191021044879fb635dee9eba4d1c30ccb2f8b2ff5571ec864c2dad9f9132d",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/pixz/pixz_1.0.7-4_changelog"
+  },
+  "raw/policykit-1/122-3_changelog": {
+   "bytes": 76110,
+   "retrieved_at": "2026-10-05T05:06:35Z",
+   "sha256": "e9b5ecf1f0417c9d6ed41572adf07161024ae928c6713694cc728e126f878a30",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/policykit-1/policykit-1_122-3_changelog"
+  },
+  "raw/policykit-1/126-2_changelog": {
+   "bytes": 82835,
+   "retrieved_at": "2026-10-05T05:06:35Z",
+   "sha256": "4c96d177abbe41dcc92d0564a9a71020ee5a55edf14cc16073c1480c5e1c5bdf",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/policykit-1/policykit-1_126-2_changelog"
+  },
+  "raw/polkit-kde-agent-1/4%3a5.27.5-2_changelog": {
+   "bytes": 21214,
+   "retrieved_at": "2026-10-05T05:06:35Z",
+   "sha256": "7eff041abb466213be214710c5e848a6af819a459b81ba0b84df27e1436bff87",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/polkit-kde-agent-1/polkit-kde-agent-1_5.27.5-2_changelog"
+  },
+  "raw/polkit-kde-agent-1/4%3a6.3.6-1_changelog": {
+   "bytes": 25892,
+   "retrieved_at": "2026-10-05T05:06:36Z",
+   "sha256": "6da62934b9c76ab4212fcbc5d4aaebc2100aa4276fba67b9f80ef14e0aa6240d",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/polkit-kde-agent-1/polkit-kde-agent-1_6.3.6-1_changelog"
+  },
+  "raw/postfix/3.10.13-0+deb13u1_changelog": {
+   "bytes": 220531,
+   "retrieved_at": "2026-10-05T05:06:37Z",
+   "sha256": "bec404a938e836b44cf23e14772a782ad7e5cf6ae61d1033cd4548eb25714d75",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/postfix/postfix_3.10.13-0+deb13u1_changelog"
+  },
+  "raw/postfix/3.7.11-0+deb12u1_changelog": {
+   "bytes": 183261,
+   "retrieved_at": "2026-10-05T05:06:37Z",
+   "sha256": "79363b47b0dac453b3c53bc2ef5efff3145691678acc5e0b311bdf27df9a4c56",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/postfix/postfix_3.7.11-0+deb12u1_changelog"
+  },
+  "raw/pycurl/7.45.2-3_changelog": {
+   "bytes": 24998,
+   "retrieved_at": "2026-10-05T05:06:37Z",
+   "sha256": "f42f5390b41cd8cc71ae475bfe79b4c9d1f6140c675d9b40263641266c5a80a1",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/pycurl/pycurl_7.45.2-3_changelog"
+  },
+  "raw/pycurl/7.45.6-1_changelog": {
+   "bytes": 27171,
+   "retrieved_at": "2026-10-05T05:06:37Z",
+   "sha256": "f00388ffd9ee3d4f519290ca5760fc1e95c4e2e98161846e6dde36bb4af9d106",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/pycurl/pycurl_7.45.6-1_changelog"
+  },
+  "raw/pyopenssl/23.0.0-1_changelog": {
+   "bytes": 24454,
+   "retrieved_at": "2026-10-05T05:06:37Z",
+   "sha256": "978b5b53d606abc02df9bca54c891ead823773e13a90b6f458728a88cb02cd3f",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/pyopenssl/pyopenssl_23.0.0-1_changelog"
+  },
+  "raw/pyopenssl/25.0.0-1+deb13u1_changelog": {
+   "bytes": 27446,
+   "retrieved_at": "2026-10-05T05:06:38Z",
+   "sha256": "d0c6249af9b7cf84ad067d58b45914fe16678adb3a268734f41166e60ab2603f",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/pyopenssl/pyopenssl_25.0.0-1+deb13u1_changelog"
+  },
+  "raw/python-certbot-nginx/2.1.0-2_changelog": {
+   "bytes": 9065,
+   "retrieved_at": "2026-10-05T05:06:38Z",
+   "sha256": "fdad8138b3d3d54df5fafd9b1e28a25e75373a6beb949ef0c855c3977534aeeb",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/python-certbot-nginx/python-certbot-nginx_2.1.0-2_changelog"
+  },
+  "raw/python-certbot-nginx/4.0.0-2_changelog": {
+   "bytes": 9779,
+   "retrieved_at": "2026-10-05T05:06:38Z",
+   "sha256": "6ced0c4fcdae3e5ab9b0bc0898ad8d3c4e2d0c5859702e4b0c07bd689b64de74",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/python-certbot-nginx/python-certbot-nginx_4.0.0-2_changelog"
+  },
+  "raw/python-pip/23.0.1+dfsg-1_changelog": {
+   "bytes": 36205,
+   "retrieved_at": "2026-10-05T05:06:38Z",
+   "sha256": "7a15052089353df9d2893ef2f062ea7f1abb37d7a75908cdc7c955091bf90b64",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/python-pip/python-pip_23.0.1+dfsg-1_changelog"
+  },
+  "raw/python-pip/25.1.1+dfsg-1_changelog": {
+   "bytes": 39525,
+   "retrieved_at": "2026-10-05T05:06:38Z",
+   "sha256": "ae38378e3f167307f1a93b9f0bcf4e416015bb12a1872137701f253e7584eaaf",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/python-pip/python-pip_25.1.1+dfsg-1_changelog"
+  },
+  "raw/python3.11/3.11.2-6+deb12u8_changelog": {
+   "bytes": 189779,
+   "retrieved_at": "2026-10-05T05:06:39Z",
+   "sha256": "fed7ffadcb61bda088ffa013fb0700e4bc654090f8ed17e23bf28be542b8dae3",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/python3.11/python3.11_3.11.2-6+deb12u8_changelog"
+  },
+  "raw/python3.13/3.13.5-2+deb13u5_changelog": {
+   "bytes": 204433,
+   "retrieved_at": "2026-10-05T05:06:39Z",
+   "sha256": "a37500bb0b80575b34811d4b26dc2fd11dcb62519520a72a16315d1eefa83d03",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/p/python3.13/python3.13_3.13.5-2+deb13u5_changelog"
+  },
+  "raw/ruby-rack/2.2.22-0+deb12u1_changelog": {
+   "bytes": 17164,
+   "retrieved_at": "2026-10-05T05:06:39Z",
+   "sha256": "d32c61998ade72975f8ad60f714ead488b8df9912f339389f870eb8f56c8b9f1",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/r/ruby-rack/ruby-rack_2.2.22-0+deb12u1_changelog"
+  },
+  "raw/ruby-rack/3.1.20-0+deb13u1_changelog": {
+   "bytes": 18007,
+   "retrieved_at": "2026-10-05T05:06:40Z",
+   "sha256": "d676d387445cdc5cf4633ad69b9a1d53a307da3b176ab69006802791361a032e",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/r/ruby-rack/ruby-rack_3.1.20-0+deb13u1_changelog"
+  },
+  "raw/ruby3.1/3.1.2-7+deb12u1_changelog": {
+   "bytes": 46712,
+   "retrieved_at": "2026-10-05T05:06:40Z",
+   "sha256": "68b62556f388a43e036ede8cc0cbfc33eea5ee7f118a904f171b5fe5b9972626",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/r/ruby3.1/ruby3.1_3.1.2-7+deb12u1_changelog"
+  },
+  "raw/ruby3.3/3.3.8-2_changelog": {
+   "bytes": 54785,
+   "retrieved_at": "2026-10-05T05:06:40Z",
+   "sha256": "776ceb5211cdd9d3f62d39cff4e866e39310709b260a371dc9bf91206e4e2667",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/r/ruby3.3/ruby3.3_3.3.8-2_changelog"
+  },
+  "raw/sa-exim/4.2.1-20_changelog": {
+   "bytes": 19349,
+   "retrieved_at": "2026-10-05T05:06:40Z",
+   "sha256": "776d5ea4f8ac205d89f12bf17871b8275a87ca95738f0204f68e86301672af78",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/s/sa-exim/sa-exim_4.2.1-20_changelog"
+  },
+  "raw/sa-exim/4.2.1-22_changelog": {
+   "bytes": 20060,
+   "retrieved_at": "2026-10-05T05:06:40Z",
+   "sha256": "917238df822d424e41fc030c826b5ad43bd4cd97eedf72fbae28d874fb1d8d37",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/s/sa-exim/sa-exim_4.2.1-22_changelog"
+  },
+  "raw/samba/2%3a4.17.12+dfsg-0+deb12u4_changelog": {
+   "bytes": 401988,
+   "retrieved_at": "2026-10-05T05:06:41Z",
+   "sha256": "4731db4e2e6d47036e77b4cf6ec09abd1ce9d9669c54875328948c56f52cb91e",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/s/samba/samba_4.17.12+dfsg-0+deb12u4_changelog"
+  },
+  "raw/samba/2%3a4.22.11+dfsg-0+deb13u1_changelog": {
+   "bytes": 458201,
+   "retrieved_at": "2026-10-05T05:06:41Z",
+   "sha256": "8785066b3da271257ed5fe1e0dab519120c30de146485fd96d5e974ec3e24c14",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/s/samba/samba_4.22.11+dfsg-0+deb13u1_changelog"
+  },
+  "raw/spf-engine/3.0.4-2_changelog": {
+   "bytes": 21222,
+   "retrieved_at": "2026-10-05T05:06:41Z",
+   "sha256": "2f89975dd8ab1af5a3bb655a4afc1a380fb3f6b150a1b83d28767bc2c9e0ccdb",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/s/spf-engine/spf-engine_3.0.4-2_changelog"
+  },
+  "raw/spf-engine/3.1.0-2_changelog": {
+   "bytes": 21967,
+   "retrieved_at": "2026-10-05T05:06:41Z",
+   "sha256": "3385a5654c68584e7a8f70a4ed9bda0fad7925e60aa34dfedbaf4138d542e877",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/s/spf-engine/spf-engine_3.1.0-2_changelog"
+  },
+  "raw/sqlite3/3.40.1-2+deb12u2_changelog": {
+   "bytes": 59377,
+   "retrieved_at": "2026-10-05T05:06:42Z",
+   "sha256": "df5664fb7cba0f6a9c758e455272a558fe6256c4d90c61867ad59f55d3e3c0b1",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/s/sqlite3/sqlite3_3.40.1-2+deb12u2_changelog"
+  },
+  "raw/sqlite3/3.46.1-7+deb13u2_changelog": {
+   "bytes": 63916,
+   "retrieved_at": "2026-10-05T05:06:42Z",
+   "sha256": "15ad226842e1b5ec576b1ee7d75ce0800926200fb6aaf78f99b4d1f031255da6",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/s/sqlite3/sqlite3_3.46.1-7+deb13u2_changelog"
+  },
+  "raw/ssh-askpass/1%3a1.2.4.1-16_changelog": {
+   "bytes": 6124,
+   "retrieved_at": "2026-10-05T05:06:46Z",
+   "sha256": "1da8e9acbbbdcbeff7b9d03064874c92675d2b4156e9e0e0c6e4c1b2669fe768",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/s/ssh-askpass/ssh-askpass_1.2.4.1-16_changelog"
+  },
+  "raw/sudo/1.9.13p3-1+deb12u4_changelog": {
+   "bytes": 60142,
+   "retrieved_at": "2026-10-05T05:06:46Z",
+   "sha256": "0bfe649ccc6880ed50e2daf5b5e66088680aa28daee896646510b6f949c1bcdd",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/s/sudo/sudo_1.9.13p3-1+deb12u4_changelog"
+  },
+  "raw/sudo/1.9.16p2-3+deb13u2_changelog": {
+   "bytes": 64682,
+   "retrieved_at": "2026-10-05T05:06:46Z",
+   "sha256": "5dbca8c433e6cd6e987b2791d1d89bff7fa07d20e5f49928b8d46227f00abca9",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/s/sudo/sudo_1.9.16p2-3+deb13u2_changelog"
+  },
+  "raw/tiff/4.5.0-6+deb12u4_changelog": {
+   "bytes": 63518,
+   "retrieved_at": "2026-10-05T05:06:46Z",
+   "sha256": "a3b36cebfd696bacae8cd582fcd722159a7bbdbff1fdf08d74e836a9d1a05479",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/t/tiff/tiff_4.5.0-6+deb12u4_changelog"
+  },
+  "raw/tiff/4.7.0-3+deb13u3_changelog": {
+   "bytes": 66411,
+   "retrieved_at": "2026-10-05T05:06:46Z",
+   "sha256": "d2717cf852e85d4385f00c41783fe86f9ee8bb900cb820aad812df5a5d30ec81",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/t/tiff/tiff_4.7.0-3+deb13u3_changelog"
+  },
+  "raw/tifffile/20230203-1_changelog": {
+   "bytes": 12074,
+   "retrieved_at": "2026-10-05T05:06:46Z",
+   "sha256": "0fbaada05b70f2090d76fb19bf643298ac42a49f9e38afc0797989767db1a3d2",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/t/tifffile/tifffile_20230203-1_changelog"
+  },
+  "raw/tifffile/20250330-1_changelog": {
+   "bytes": 17409,
+   "retrieved_at": "2026-10-05T05:06:46Z",
+   "sha256": "7ce7e4023367c2469a2b1d392b4909195548fa395accca3b82a450728c113bb0",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/t/tifffile/tifffile_20250330-1_changelog"
+  },
+  "raw/webp-pixbuf-loader/0.2.1-1_changelog": {
+   "bytes": 1959,
+   "retrieved_at": "2026-10-05T05:06:46Z",
+   "sha256": "e96925ace1e81d62444b0d635219f6703f9685ed95c3ea11ad637a14a4d66881",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/w/webp-pixbuf-loader/webp-pixbuf-loader_0.2.1-1_changelog"
+  },
+  "raw/webp-pixbuf-loader/0.2.7-1_changelog": {
+   "bytes": 2497,
+   "retrieved_at": "2026-10-05T05:06:46Z",
+   "sha256": "e463d7d310224ba233f082e4a81a163acd1a27c4f12e753b2e50b55ffde135e1",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/w/webp-pixbuf-loader/webp-pixbuf-loader_0.2.7-1_changelog"
+  },
+  "raw/xz-utils/5.4.1-1+deb12u1_changelog": {
+   "bytes": 36997,
+   "retrieved_at": "2026-10-05T05:06:46Z",
+   "sha256": "bc15a31bdc0c4043643919391da5b826d121e02f9f7080d4a04644a83c5f712e",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/x/xz-utils/xz-utils_5.4.1-1+deb12u1_changelog"
+  },
+  "raw/xz-utils/5.8.1-1+deb13u1_changelog": {
+   "bytes": 40193,
+   "retrieved_at": "2026-10-05T05:06:46Z",
+   "sha256": "eb06b653524891dc8d79a358c26184c1412847bf8f649acc4abbf881efdf5057",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/x/xz-utils/xz-utils_5.8.1-1+deb13u1_changelog"
+  },
+  "raw/zlib/1%3a1.2.13.dfsg-1_changelog": {
+   "bytes": 34835,
+   "retrieved_at": "2026-10-05T05:06:46Z",
+   "sha256": "d335ec649c9561151e80059cb953531fdb9b678ebb5db957c65ff9105d1bce19",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/z/zlib/zlib_1.2.13.dfsg-1_changelog"
+  },
+  "raw/zlib/1%3a1.3.dfsg+really1.3.1-1_changelog": {
+   "bytes": 36414,
+   "retrieved_at": "2026-10-05T05:06:46Z",
+   "sha256": "ccde6a6194eb9b622b82fb1931552c1520923da1d46624ad60b0ad16133d1b8f",
+   "url": "https://metadata.ftp-master.debian.org/changelogs/main/z/zlib/zlib_1.3.dfsg+really1.3.1-1_changelog"
+  }
+ },
+ "license": "Debian package changelogs (metadata.ftp-master.debian.org), DFSG",
+ "n_files": 111,
+ "snapshot_date": "2026-10-05",
+ "source": "debian_changelogs"
+}

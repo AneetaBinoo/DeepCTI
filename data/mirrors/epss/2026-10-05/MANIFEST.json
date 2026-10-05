@@ -1,0 +1,15 @@
+{
+ "files": {
+  "raw/epss_scores-current.csv.gz": {
+   "bytes": 2688763,
+   "note": "redirects to epss_scores-<date>.csv.gz; first line is #model_version,score_date comment",
+   "retrieved_at": "2026-10-05T04:52:41Z",
+   "sha256": "aa00e855fa265ddd70f3d9d303806b03e753da829a75f29d3b4551ba26bcb88f",
+   "url": "https://epss.empiricalsecurity.com/epss_scores-current.csv.gz"
+  }
+ },
+ "license": "FIRST EPSS scores (empiricalsecurity.com), free to use with attribution to FIRST.org EPSS SIG",
+ "n_files": 1,
+ "snapshot_date": "2026-10-05",
+ "source": "epss"
+}

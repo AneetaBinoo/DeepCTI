@@ -89,7 +89,9 @@ resamples); GEE logistic with exchangeable CVE clusters (R/lme4 unavailable on t
 fallback to statsmodels GEE); Holm over the primary family H1–H4; BH for secondary analyses (exploratory).
 
 ## 7. Known limitations fixed in advance
-No Docker (rootfs fixtures, tools simulated over real files); no human label audit (κ) and no practitioner
+Test case IDs and the `variant` field (construction stratum V1–V6) are visible in `data/d1/cases/test.jsonl` by
+design of the data contract and are label-correlated; they are never shown to any system (prompts contain only
+the random host name, release, CVE and source package) and were not used for any tuning. No Docker (rootfs fixtures, tools simulated over real files); no human label audit (κ) and no practitioner
 study (E8) in this run; paraphrase filtering by LLM judge (E1); single distribution family (Debian);
 R/lme4 unavailable.
 

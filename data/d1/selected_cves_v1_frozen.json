@@ -1,0 +1,1731 @@
+[
+ {
+  "cve": "CVE-2014-0160",
+  "src_package": "openssl",
+  "family": "crypto_tls",
+  "kev": true,
+  "epss": 0.99999,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2014-04-07",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-45447",
+  "src_package": "openssl",
+  "family": "crypto_tls",
+  "kev": false,
+  "epss": 0.04002,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-06-09",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-63076",
+  "src_package": "openssl",
+  "family": "crypto_tls",
+  "kev": false,
+  "epss": 0.01602,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-08-25",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2025-15467",
+  "src_package": "openssl",
+  "family": "crypto_tls",
+  "kev": false,
+  "epss": 0.52446,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-01-27",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2026-28388",
+  "src_package": "openssl",
+  "family": "crypto_tls",
+  "kev": false,
+  "epss": 0.02501,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-04-07",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-42009",
+  "src_package": "gnutls28",
+  "family": "crypto_tls",
+  "kev": false,
+  "epss": 0.01129,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-05-18",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2026-33846",
+  "src_package": "gnutls28",
+  "family": "crypto_tls",
+  "kev": false,
+  "epss": 0.01123,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-05-04",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2026-5260",
+  "src_package": "gnutls28",
+  "family": "crypto_tls",
+  "kev": false,
+  "epss": 0.00945,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-05-26",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-16389",
+  "src_package": "nss",
+  "family": "crypto_tls",
+  "kev": false,
+  "epss": 0.00565,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-07-21",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-2781",
+  "src_package": "nss",
+  "family": "crypto_tls",
+  "kev": false,
+  "epss": 0.00559,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-02-24",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2024-6387",
+  "src_package": "openssh",
+  "family": "ssh",
+  "kev": false,
+  "epss": 0.99506,
+  "reason": "config_precondition",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2024-07-01",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2021-41617",
+  "src_package": "openssh",
+  "family": "ssh",
+  "kev": false,
+  "epss": 0.02545,
+  "reason": "config_precondition",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2021-09-26",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-60000",
+  "src_package": "openssh",
+  "family": "ssh",
+  "kev": false,
+  "epss": 0.00618,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "open"
+  },
+  "published": "2026-07-08",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-60002",
+  "src_package": "openssh",
+  "family": "ssh",
+  "kev": false,
+  "epss": 0.003,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "open"
+  },
+  "published": "2026-07-08",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2026-3497",
+  "src_package": "openssh",
+  "family": "ssh",
+  "kev": false,
+  "epss": 0.0125,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-03-12",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2021-3156",
+  "src_package": "sudo",
+  "family": "privesc",
+  "kev": true,
+  "epss": 0.99962,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2021-01-26",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2025-32463",
+  "src_package": "sudo",
+  "family": "privesc",
+  "kev": true,
+  "epss": 0.55498,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "not_affected",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2025-06-30",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2019-18634",
+  "src_package": "sudo",
+  "family": "privesc",
+  "kev": false,
+  "epss": 0.19276,
+  "reason": "config_precondition",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2020-01-29",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-96512",
+  "src_package": "sudo",
+  "family": "privesc",
+  "kev": false,
+  "epss": 0.00132,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "open"
+  },
+  "published": "2026-09-23",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-35535",
+  "src_package": "sudo",
+  "family": "privesc",
+  "kev": false,
+  "epss": 0.00179,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-04-03",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2021-3560",
+  "src_package": "policykit-1",
+  "family": "privesc",
+  "kev": true,
+  "epss": 0.23708,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2022-02-16",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2021-4034",
+  "src_package": "policykit-1",
+  "family": "privesc",
+  "kev": true,
+  "epss": 0.94345,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2022-01-28",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2026-4897",
+  "src_package": "policykit-1",
+  "family": "privesc",
+  "kev": false,
+  "epss": 0.00151,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "open"
+  },
+  "published": "2026-03-26",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2016-2568",
+  "src_package": "policykit-1",
+  "family": "privesc",
+  "kev": false,
+  "epss": 0.00366,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2017-02-13",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-34743",
+  "src_package": "xz-utils",
+  "family": "compression",
+  "kev": false,
+  "epss": 0.00573,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-04-02",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2026-85091",
+  "src_package": "zlib",
+  "family": "compression",
+  "kev": false,
+  "epss": 0.00592,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "open"
+  },
+  "published": "2026-09-03",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-27171",
+  "src_package": "zlib",
+  "family": "compression",
+  "kev": false,
+  "epss": 0.00187,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "open"
+  },
+  "published": "2026-02-18",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-42250",
+  "src_package": "bzip2",
+  "family": "compression",
+  "kev": false,
+  "epss": 0.00182,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "open"
+  },
+  "published": "2026-05-28",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-5121",
+  "src_package": "libarchive",
+  "family": "compression",
+  "kev": false,
+  "epss": 0.0143,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-03-30",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2026-4424",
+  "src_package": "libarchive",
+  "family": "compression",
+  "kev": false,
+  "epss": 0.01073,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-03-19",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2026-4111",
+  "src_package": "libarchive",
+  "family": "compression",
+  "kev": false,
+  "epss": 0.00693,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-03-13",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2019-0211",
+  "src_package": "apache2",
+  "family": "web_server",
+  "kev": true,
+  "epss": 0.65005,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2019-04-08",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2021-40438",
+  "src_package": "apache2",
+  "family": "web_server",
+  "kev": true,
+  "epss": 0.99999,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2021-09-16",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2021-41773",
+  "src_package": "apache2",
+  "family": "web_server",
+  "kev": true,
+  "epss": 0.99992,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2021-10-05",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2021-42013",
+  "src_package": "apache2",
+  "family": "web_server",
+  "kev": true,
+  "epss": 0.99964,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2021-10-07",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2024-38475",
+  "src_package": "apache2",
+  "family": "web_server",
+  "kev": true,
+  "epss": 0.99957,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2024-07-01",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2023-25690",
+  "src_package": "apache2",
+  "family": "web_server",
+  "kev": false,
+  "epss": 0.84508,
+  "reason": "config_precondition",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2023-03-07",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2021-44224",
+  "src_package": "apache2",
+  "family": "web_server",
+  "kev": false,
+  "epss": 0.82295,
+  "reason": "config_precondition",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2021-12-20",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-23918",
+  "src_package": "apache2",
+  "family": "web_server",
+  "kev": false,
+  "epss": 0.49727,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-05-04",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2026-49975",
+  "src_package": "apache2",
+  "family": "web_server",
+  "kev": false,
+  "epss": 0.04169,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-06-08",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2023-44487",
+  "src_package": "nginx",
+  "family": "web_server",
+  "kev": true,
+  "epss": 0.99999,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2023-10-10",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2021-23017",
+  "src_package": "nginx",
+  "family": "web_server",
+  "kev": false,
+  "epss": 0.53461,
+  "reason": "config_precondition",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2021-06-01",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-42055",
+  "src_package": "nginx",
+  "family": "web_server",
+  "kev": false,
+  "epss": 0.06537,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-06-17",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-27654",
+  "src_package": "nginx",
+  "family": "web_server",
+  "kev": false,
+  "epss": 0.25066,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-03-24",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2023-2911",
+  "src_package": "bind9",
+  "family": "dns",
+  "kev": false,
+  "epss": 0.02451,
+  "reason": "config_precondition",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2023-06-21",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2025-40777",
+  "src_package": "bind9",
+  "family": "dns",
+  "kev": false,
+  "epss": 0.0092,
+  "reason": "config_precondition",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2025-07-16",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2026-3039",
+  "src_package": "bind9",
+  "family": "dns",
+  "kev": false,
+  "epss": 0.02286,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-05-20",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2026-5946",
+  "src_package": "bind9",
+  "family": "dns",
+  "kev": false,
+  "epss": 0.01696,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-05-20",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2025-8677",
+  "src_package": "bind9",
+  "family": "dns",
+  "kev": false,
+  "epss": 0.10737,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2025-10-22",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2010-4344",
+  "src_package": "exim4",
+  "family": "mail",
+  "kev": true,
+  "epss": 0.71706,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2010-12-14",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2010-4345",
+  "src_package": "exim4",
+  "family": "mail",
+  "kev": true,
+  "epss": 0.17965,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2010-12-14",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2018-6789",
+  "src_package": "exim4",
+  "family": "mail",
+  "kev": true,
+  "epss": 0.82137,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2018-02-08",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2019-10149",
+  "src_package": "exim4",
+  "family": "mail",
+  "kev": true,
+  "epss": 0.99961,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2019-06-05",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2019-16928",
+  "src_package": "exim4",
+  "family": "mail",
+  "kev": true,
+  "epss": 0.41638,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2019-09-27",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2023-42115",
+  "src_package": "exim4",
+  "family": "mail",
+  "kev": false,
+  "epss": 0.12088,
+  "reason": "config_precondition",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2024-05-03",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2023-42116",
+  "src_package": "exim4",
+  "family": "mail",
+  "kev": false,
+  "epss": 0.03756,
+  "reason": "config_precondition",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2024-05-03",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2023-42117",
+  "src_package": "exim4",
+  "family": "mail",
+  "kev": false,
+  "epss": 0.0679,
+  "reason": "config_precondition",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2024-05-03",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2026-45185",
+  "src_package": "exim4",
+  "family": "mail",
+  "kev": false,
+  "epss": 0.00944,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-05-12",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2026-40687",
+  "src_package": "exim4",
+  "family": "mail",
+  "kev": false,
+  "epss": 0.00672,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-04-30",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-43964",
+  "src_package": "postfix",
+  "family": "mail",
+  "kev": false,
+  "epss": 0.00884,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-05-04",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2023-51764",
+  "src_package": "postfix",
+  "family": "mail",
+  "kev": false,
+  "epss": 0.02635,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2023-12-24",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2017-7494",
+  "src_package": "samba",
+  "family": "file_sharing",
+  "kev": true,
+  "epss": 0.99448,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2017-05-30",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2020-1472",
+  "src_package": "samba",
+  "family": "file_sharing",
+  "kev": true,
+  "epss": 0.99389,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2020-08-17",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2021-44142",
+  "src_package": "samba",
+  "family": "file_sharing",
+  "kev": false,
+  "epss": 0.73408,
+  "reason": "config_precondition",
+  "release_profile": {
+   "bookworm": "fixed_before_release",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2022-02-21",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2026-4480",
+  "src_package": "samba",
+  "family": "file_sharing",
+  "kev": false,
+  "epss": 0.1393,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-05-26",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2025-10230",
+  "src_package": "samba",
+  "family": "file_sharing",
+  "kev": false,
+  "epss": 0.39653,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2025-11-07",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-7210",
+  "src_package": "python3.11",
+  "family": "interpreter",
+  "kev": false,
+  "epss": 0.01351,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "open"
+  },
+  "published": "2026-05-11",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-11940",
+  "src_package": "python3.11",
+  "family": "interpreter",
+  "kev": false,
+  "epss": 0.0075,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "open"
+  },
+  "published": "2026-06-23",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2023-24329",
+  "src_package": "python3.11",
+  "family": "interpreter",
+  "kev": false,
+  "epss": 0.20459,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix"
+  },
+  "published": "2023-02-17",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-7774",
+  "src_package": "python3.13",
+  "family": "interpreter",
+  "kev": false,
+  "epss": 0.00781,
+  "reason": "balance_recent",
+  "release_profile": {
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-06-04",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-11940",
+  "src_package": "python3.13",
+  "family": "interpreter",
+  "kev": false,
+  "epss": 0.0075,
+  "reason": "balance_recent",
+  "release_profile": {
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-06-23",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2025-13836",
+  "src_package": "python3.13",
+  "family": "interpreter",
+  "kev": false,
+  "epss": 0.01631,
+  "reason": "balance",
+  "release_profile": {
+   "trixie": "inrelease_fix"
+  },
+  "published": "2025-12-01",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-48959",
+  "src_package": "perl",
+  "family": "interpreter",
+  "kev": false,
+  "epss": 0.00609,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-05-27",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2026-48962",
+  "src_package": "perl",
+  "family": "interpreter",
+  "kev": false,
+  "epss": 0.00495,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-05-27",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2023-31484",
+  "src_package": "perl",
+  "family": "interpreter",
+  "kev": false,
+  "epss": 0.01548,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2023-04-29",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-42258",
+  "src_package": "ruby3.1",
+  "family": "interpreter",
+  "kev": false,
+  "epss": 0.01253,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "open"
+  },
+  "published": "2026-05-09",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2024-27280",
+  "src_package": "ruby3.1",
+  "family": "interpreter",
+  "kev": false,
+  "epss": 0.02364,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix"
+  },
+  "published": "2024-05-14",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2026-42258",
+  "src_package": "ruby3.3",
+  "family": "interpreter",
+  "kev": false,
+  "epss": 0.01253,
+  "reason": "balance_recent",
+  "release_profile": {
+   "trixie": "open"
+  },
+  "published": "2026-05-09",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-41316",
+  "src_package": "ruby3.3",
+  "family": "interpreter",
+  "kev": false,
+  "epss": 0.01306,
+  "reason": "balance",
+  "release_profile": {
+   "trixie": "open"
+  },
+  "published": "2026-04-24",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2024-4577",
+  "src_package": "php8.2",
+  "family": "interpreter",
+  "kev": true,
+  "epss": 0.99987,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "not_affected"
+  },
+  "published": "2024-06-09",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2026-7258",
+  "src_package": "php8.2",
+  "family": "interpreter",
+  "kev": false,
+  "epss": 0.00405,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "inrelease_fix"
+  },
+  "published": "2026-05-10",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2024-2756",
+  "src_package": "php8.2",
+  "family": "interpreter",
+  "kev": false,
+  "epss": 0.38115,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix"
+  },
+  "published": "2024-04-29",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2026-7258",
+  "src_package": "php8.4",
+  "family": "interpreter",
+  "kev": false,
+  "epss": 0.00405,
+  "reason": "balance_recent",
+  "release_profile": {
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-05-10",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2026-6722",
+  "src_package": "php8.4",
+  "family": "interpreter",
+  "kev": false,
+  "epss": 0.01295,
+  "reason": "balance",
+  "release_profile": {
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-05-10",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-5773",
+  "src_package": "curl",
+  "family": "library",
+  "kev": false,
+  "epss": 0.00657,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-05-13",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-7168",
+  "src_package": "curl",
+  "family": "library",
+  "kev": false,
+  "epss": 0.00591,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-05-13",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2025-14819",
+  "src_package": "curl",
+  "family": "library",
+  "kev": false,
+  "epss": 0.00756,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-01-08",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2025-14524",
+  "src_package": "curl",
+  "family": "library",
+  "kev": false,
+  "epss": 0.0068,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-01-08",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-6653",
+  "src_package": "libxml2",
+  "family": "library",
+  "kev": false,
+  "epss": 0.00355,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "open"
+  },
+  "published": "2026-06-22",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2026-86143",
+  "src_package": "libxml2",
+  "family": "library",
+  "kev": false,
+  "epss": 0.00194,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "open"
+  },
+  "published": "2026-09-05",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-0990",
+  "src_package": "libxml2",
+  "family": "library",
+  "kev": false,
+  "epss": 0.00969,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-01-15",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-45186",
+  "src_package": "expat",
+  "family": "library",
+  "kev": false,
+  "epss": 0.00479,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-05-10",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-72522",
+  "src_package": "expat",
+  "family": "library",
+  "kev": false,
+  "epss": 0.00191,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-08-10",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2025-59375",
+  "src_package": "expat",
+  "family": "library",
+  "kev": false,
+  "epss": 0.01315,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2025-09-15",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2023-4911",
+  "src_package": "glibc",
+  "family": "library",
+  "kev": true,
+  "epss": 0.63769,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2023-10-03",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2026-80489",
+  "src_package": "glibc",
+  "family": "library",
+  "kev": false,
+  "epss": 0.00412,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "open"
+  },
+  "published": "2026-09-15",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2026-77117",
+  "src_package": "glibc",
+  "family": "library",
+  "kev": false,
+  "epss": 0.00412,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "open"
+  },
+  "published": "2026-09-15",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2026-4046",
+  "src_package": "glibc",
+  "family": "library",
+  "kev": false,
+  "epss": 0.00662,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-03-30",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-11822",
+  "src_package": "sqlite3",
+  "family": "library",
+  "kev": false,
+  "epss": 0.00294,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-06-09",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2025-7709",
+  "src_package": "sqlite3",
+  "family": "library",
+  "kev": false,
+  "epss": 0.00353,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2025-09-08",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2026-59849",
+  "src_package": "libssh",
+  "family": "library",
+  "kev": false,
+  "epss": 0.00438,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-07-21",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2026-59847",
+  "src_package": "libssh",
+  "family": "library",
+  "kev": false,
+  "epss": 0.00332,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2026-07-21",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2025-8277",
+  "src_package": "libssh",
+  "family": "library",
+  "kev": false,
+  "epss": 0.00411,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2025-09-09",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2026-52491",
+  "src_package": "tiff",
+  "family": "library",
+  "kev": false,
+  "epss": 0.00192,
+  "reason": "balance_recent",
+  "release_profile": {
+   "bookworm": "open",
+   "trixie": "open"
+  },
+  "published": "2026-08-25",
+  "published_source": "nvd",
+  "temporal_holdout": true,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2025-9900",
+  "src_package": "tiff",
+  "family": "library",
+  "kev": false,
+  "epss": 0.0097,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2025-09-23",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "dev"
+ },
+ {
+  "cve": "CVE-2023-4863",
+  "src_package": "libwebp",
+  "family": "library",
+  "kev": true,
+  "epss": 0.99979,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "fixed_before_release"
+  },
+  "published": "2023-09-12",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2025-48384",
+  "src_package": "git",
+  "family": "library",
+  "kev": true,
+  "epss": 0.042,
+  "reason": "kev",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2025-07-08",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ },
+ {
+  "cve": "CVE-2025-48385",
+  "src_package": "git",
+  "family": "library",
+  "kev": false,
+  "epss": 0.0102,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2025-07-08",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "calib"
+ },
+ {
+  "cve": "CVE-2025-46835",
+  "src_package": "git",
+  "family": "library",
+  "kev": false,
+  "epss": 0.0057,
+  "reason": "balance",
+  "release_profile": {
+   "bookworm": "inrelease_fix",
+   "trixie": "inrelease_fix"
+  },
+  "published": "2025-07-10",
+  "published_source": "nvd",
+  "temporal_holdout": false,
+  "split": "test"
+ }
+]

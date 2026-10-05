@@ -1,8 +1,8 @@
 estimated_on: dev
-p_present: 0.609
+p_present: 0.6064
 status:
-  vuln: 0.5
-  fixed: 0.4898
-  notaff: 0.0102
-p_config_enabled: 0.8
-q_service: 0.4433
+  vuln: 0.5287
+  fixed: 0.4655
+  notaff: 0.0057
+p_config_enabled: 0.7778
+q_service: 0.4046

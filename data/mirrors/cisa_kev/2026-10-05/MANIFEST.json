@@ -1,0 +1,14 @@
+{
+ "files": {
+  "known_exploited_vulnerabilities.json": {
+   "bytes": 1767828,
+   "retrieved_at": "2026-10-05T04:52:41Z",
+   "sha256": "f51fed1c9213e7b797104fcd6dbeb1b0dc0c7073a80467b9d4b1fc25e7dd786b",
+   "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+  }
+ },
+ "license": "CISA KEV catalog, U.S. Government work (public domain / CC0 per cisa.gov)",
+ "n_files": 1,
+ "snapshot_date": "2026-10-05",
+ "source": "cisa_kev"
+}

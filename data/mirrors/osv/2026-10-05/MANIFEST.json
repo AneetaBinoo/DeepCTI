@@ -1,0 +1,4874 @@
+{
+ "files": {
+  "vulns/CVE-2005-1119.json": {
+   "bytes": 329,
+   "retrieved_at": "2026-10-05T05:19:39Z",
+   "sha256": "247c8d4f6bfe22b974c6c867ee987b19a2555687a0c9cc523667e6091ae093ab",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2005-1119"
+  },
+  "vulns/CVE-2010-4344.json": {
+   "bytes": 4327,
+   "retrieved_at": "2026-10-05T04:55:55Z",
+   "sha256": "8ad04a818c9179a08baa96cd879d763246481f95db28d4cb3ac18e1d8a9b30fb",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2010-4344"
+  },
+  "vulns/CVE-2010-4345.json": {
+   "bytes": 3678,
+   "retrieved_at": "2026-10-05T04:55:55Z",
+   "sha256": "9b73d155a5c6485dab48e6fc4a1c7e178a00480f9f9bb459bf86443510d54686",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2010-4345"
+  },
+  "vulns/CVE-2014-0160.json": {
+   "bytes": 19772,
+   "retrieved_at": "2026-10-05T04:55:50Z",
+   "sha256": "714b6694aebcaa62d5f1a5bad55d08a2b8c28746f518650e84f77e118ccd8ab6",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2014-0160"
+  },
+  "vulns/CVE-2016-2568.json": {
+   "bytes": 1081,
+   "retrieved_at": "2026-10-05T04:55:53Z",
+   "sha256": "0cb041e32788d278dd0797b6f92f98067d17a8d476fd1baebbb49d913a346c4b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2016-2568"
+  },
+  "vulns/CVE-2017-7494.json": {
+   "bytes": 3558,
+   "retrieved_at": "2026-10-05T04:55:56Z",
+   "sha256": "3f63e13ede0d063eedff24b8cf67ff41dba223aa267db37f4d4f2cd0fcc3f936",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2017-7494"
+  },
+  "vulns/CVE-2018-6789.json": {
+   "bytes": 5393,
+   "retrieved_at": "2026-10-05T04:55:55Z",
+   "sha256": "7877fb3036e657b16f34ce7189a6233f36bd44325021920580c46564e7a324c8",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2018-6789"
+  },
+  "vulns/CVE-2019-0211.json": {
+   "bytes": 17789,
+   "retrieved_at": "2026-10-05T04:55:53Z",
+   "sha256": "776e06af2e0b4d929acb704536e0e532eb3bf8e228e2d91da003734f847aae7e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2019-0211"
+  },
+  "vulns/CVE-2019-10149.json": {
+   "bytes": 3684,
+   "retrieved_at": "2026-10-05T04:55:55Z",
+   "sha256": "b332de2e94b1d7dafe79113ee63eaa097ad9f17a486b29c1b3193be0790427cf",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2019-10149"
+  },
+  "vulns/CVE-2019-16928.json": {
+   "bytes": 3433,
+   "retrieved_at": "2026-10-05T04:55:55Z",
+   "sha256": "5fc8f9ff0008cf5bdb116e2827836d8bc8daa1b952a7b17ce372cbd4ad8fbb5a",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2019-16928"
+  },
+  "vulns/CVE-2019-18634.json": {
+   "bytes": 7007,
+   "retrieved_at": "2026-10-05T04:58:39Z",
+   "sha256": "51ffb232dcce30ce0511a9c7c50e7f6c99c77cf873a9032cbb2a1023f2ac1fc1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2019-18634"
+  },
+  "vulns/CVE-2020-1472.json": {
+   "bytes": 9281,
+   "retrieved_at": "2026-10-05T04:55:56Z",
+   "sha256": "22e6715a315b8c7d3b81dbda999cf9a5a765986cb1c14f59a1532a1623477aad",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2020-1472"
+  },
+  "vulns/CVE-2021-23017.json": {
+   "bytes": 13537,
+   "retrieved_at": "2026-10-05T04:58:39Z",
+   "sha256": "18582205443b1ad5ac49ae5ecedc788b6ba846c5ea82307473ec8b512948add1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2021-23017"
+  },
+  "vulns/CVE-2021-3156.json": {
+   "bytes": 13150,
+   "retrieved_at": "2026-10-05T04:55:52Z",
+   "sha256": "75321573a25abf08320c9ac4635d4c8606bda26734fd26f120361db59f0618f1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2021-3156"
+  },
+  "vulns/CVE-2021-3560.json": {
+   "bytes": 3146,
+   "retrieved_at": "2026-10-05T04:55:52Z",
+   "sha256": "402b8c40c50ec8f1dba997362f5d38c255d21897d71e3bf304187ea3641a3f6b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2021-3560"
+  },
+  "vulns/CVE-2021-4034.json": {
+   "bytes": 14503,
+   "retrieved_at": "2026-10-05T04:55:52Z",
+   "sha256": "c933e6abe6708a26a1c505ef2edcca08e0c68d46af38393ddd9eb7f076332263",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2021-4034"
+  },
+  "vulns/CVE-2021-40438.json": {
+   "bytes": 16153,
+   "retrieved_at": "2026-10-05T04:55:53Z",
+   "sha256": "6798c6bd46f8eccbf6e920cbedf4264d7b7e9da645220769d0e8b69d26d46fb7",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2021-40438"
+  },
+  "vulns/CVE-2021-41617.json": {
+   "bytes": 6198,
+   "retrieved_at": "2026-10-05T04:58:39Z",
+   "sha256": "d0b90d5922aff9ebae7f9d9c17c1c734a03bad692a9981801faea25203412c38",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2021-41617"
+  },
+  "vulns/CVE-2021-41773.json": {
+   "bytes": 5513,
+   "retrieved_at": "2026-10-05T04:55:54Z",
+   "sha256": "1c7058dcbce5d5c072f70f6679e446c5cc161b7b6d667cd5a68e5ef51b5c7893",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2021-41773"
+  },
+  "vulns/CVE-2021-42013.json": {
+   "bytes": 5868,
+   "retrieved_at": "2026-10-05T04:55:54Z",
+   "sha256": "b0ebe01ad7fc4db734766bb2adeadf4c6706a698d9cc3c11d7e1fd88fe562ae2",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2021-42013"
+  },
+  "vulns/CVE-2021-44142.json": {
+   "bytes": 11825,
+   "retrieved_at": "2026-10-05T04:58:40Z",
+   "sha256": "669e207f306fd42ce48bcfd3918b5f1f758aec4cdd0d42b449674cc8936ab232",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2021-44142"
+  },
+  "vulns/CVE-2021-44224.json": {
+   "bytes": 8521,
+   "retrieved_at": "2026-10-05T04:58:39Z",
+   "sha256": "6a005cd266f75c34ab4d20948c0160124df6ea1634f1a1780ea21b18c626604d",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2021-44224"
+  },
+  "vulns/CVE-2023-24329.json": {
+   "bytes": 8489,
+   "retrieved_at": "2026-10-05T04:55:57Z",
+   "sha256": "5b95d1ae0301bfe6efb523d8326025d9c0fb47cc75864ec0029e3d0ab12e6025",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2023-24329"
+  },
+  "vulns/CVE-2023-25652.json": {
+   "bytes": 10685,
+   "retrieved_at": "2026-10-05T05:19:40Z",
+   "sha256": "0f88527c52e1d3750ab782ad08d210e3088ac50719d17ce77d72c8ac6e779c8c",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2023-25652"
+  },
+  "vulns/CVE-2023-25690.json": {
+   "bytes": 2870,
+   "retrieved_at": "2026-10-05T04:58:39Z",
+   "sha256": "c45940318bdb43fa0acd5f80d0425ceecb49c036ae3a9c6edd86d4af46e940da",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2023-25690"
+  },
+  "vulns/CVE-2023-2911.json": {
+   "bytes": 3789,
+   "retrieved_at": "2026-10-05T04:58:40Z",
+   "sha256": "65abf74a1fed1f92226a8c94867d119ae9e695ead6df61599d02bcc2e576291b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2023-2911"
+  },
+  "vulns/CVE-2023-31484.json": {
+   "bytes": 5659,
+   "retrieved_at": "2026-10-05T05:01:21Z",
+   "sha256": "a34cbc9b9155e10cc8f0c4f2d76cb8546efb46ddcac0b41af073a54d15b1ff0d",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2023-31484"
+  },
+  "vulns/CVE-2023-4091.json": {
+   "bytes": 6444,
+   "retrieved_at": "2026-10-05T05:18:37Z",
+   "sha256": "09d1575b407a3c2f7257a43c406070305862efad64f87ce267abaabb5fcf622c",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2023-4091"
+  },
+  "vulns/CVE-2023-41105.json": {
+   "bytes": 2133,
+   "retrieved_at": "2026-10-05T05:19:39Z",
+   "sha256": "ddbe0db8f1af0469f8ef48a95d4a8d5e4290cad70e9d46c3b6d773fb7b98fade",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2023-41105"
+  },
+  "vulns/CVE-2023-42115.json": {
+   "bytes": 3936,
+   "retrieved_at": "2026-10-05T04:58:40Z",
+   "sha256": "58efc6e0dc37c22aef759764106ae1ad7e692731c5f1dfae361e7f29f4ba7062",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2023-42115"
+  },
+  "vulns/CVE-2023-42116.json": {
+   "bytes": 4060,
+   "retrieved_at": "2026-10-05T04:58:40Z",
+   "sha256": "0b90a132ba412dee3908e91f6e79f92b558d0ce2e18bfbe88745d82fb005f640",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2023-42116"
+  },
+  "vulns/CVE-2023-42117.json": {
+   "bytes": 4121,
+   "retrieved_at": "2026-10-05T04:58:40Z",
+   "sha256": "4cd9179db9612d6b279b3e0d565751b4460bd9541d85aa02c32b56843f195e54",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2023-42117"
+  },
+  "vulns/CVE-2023-44487.json": {
+   "bytes": 93492,
+   "retrieved_at": "2026-10-05T04:55:54Z",
+   "sha256": "f95e7949e2aa85a3e2e4ec0782ad97784b65c2fe299e60dcc177301204abe563",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2023-44487"
+  },
+  "vulns/CVE-2023-45853.json": {
+   "bytes": 5549,
+   "retrieved_at": "2026-10-05T04:55:53Z",
+   "sha256": "954ac4320e7dec926386f51be984e8f4daebfdb899d369088f2c3d72d8cece54",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2023-45853"
+  },
+  "vulns/CVE-2023-47038.json": {
+   "bytes": 6834,
+   "retrieved_at": "2026-10-05T05:18:37Z",
+   "sha256": "6c79165b0fa27c515b4e0173ab7b8120f5a9c01cad08849dba34f445a6d71d2c",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2023-47038"
+  },
+  "vulns/CVE-2023-4863.json": {
+   "bytes": 13365,
+   "retrieved_at": "2026-10-05T04:56:00Z",
+   "sha256": "1e7c3a5173cc49c2a26b97d0532243460846287e346de92f0d080b5f93553f5d",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2023-4863"
+  },
+  "vulns/CVE-2023-4911.json": {
+   "bytes": 5312,
+   "retrieved_at": "2026-10-05T04:55:59Z",
+   "sha256": "6ccba5a710797a916a726fd826b2db99b2cd663c044eef9400d9224482d5f692",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2023-4911"
+  },
+  "vulns/CVE-2023-51764.json": {
+   "bytes": 3524,
+   "retrieved_at": "2026-10-05T04:55:56Z",
+   "sha256": "fd818c2dec67da36237be4d41f5db575ed95a01aa73ef511a7a8a105c8d9bbc5",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2023-51764"
+  },
+  "vulns/CVE-2024-0743.json": {
+   "bytes": 1588,
+   "retrieved_at": "2026-10-05T04:55:51Z",
+   "sha256": "40416093d8a5e4fda76e2ace894585f035c5570a3ef148be2fa58963a2d9dc51",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2024-0743"
+  },
+  "vulns/CVE-2024-27280.json": {
+   "bytes": 1039,
+   "retrieved_at": "2026-10-05T04:55:57Z",
+   "sha256": "13702af4179509abf95f6daa98e9082299e7684acf65d601f4b1fb0079678850",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2024-27280"
+  },
+  "vulns/CVE-2024-2756.json": {
+   "bytes": 2603,
+   "retrieved_at": "2026-10-05T04:55:58Z",
+   "sha256": "e215f2ace77f56c87041cf8fd587a750cb65dbe1b8ea200e042211fd965bc72b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2024-2756"
+  },
+  "vulns/CVE-2024-38475.json": {
+   "bytes": 10449,
+   "retrieved_at": "2026-10-05T04:55:54Z",
+   "sha256": "002f32ffec42890764e24b4fe61a5eb2a31f7a42a8415efbf3138c638ff1d360",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2024-38475"
+  },
+  "vulns/CVE-2024-39929.json": {
+   "bytes": 3765,
+   "retrieved_at": "2026-10-05T04:55:55Z",
+   "sha256": "7d448384abc2f80aafda4a5bd27c06d42efba1b715b0eebb73809c5a373e9050",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2024-39929"
+  },
+  "vulns/CVE-2024-4577.json": {
+   "bytes": 4381,
+   "retrieved_at": "2026-10-05T04:55:58Z",
+   "sha256": "3c0ec023b3c719589506cc3aac79ded7493aa097c8de760fa62ab45692f6c710",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2024-4577"
+  },
+  "vulns/CVE-2024-56406.json": {
+   "bytes": 4312,
+   "retrieved_at": "2026-10-05T05:19:40Z",
+   "sha256": "4c1f95b4846290dc6726e8e69d31054e3cfcfa65f0af8ae8e9bbc61fa13d7562",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2024-56406"
+  },
+  "vulns/CVE-2024-6387.json": {
+   "bytes": 12603,
+   "retrieved_at": "2026-10-05T04:58:39Z",
+   "sha256": "1542a057c33542099ac70ed4f38628934ecc4e94287e7ef1355e5fa33bb97883",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2024-6387"
+  },
+  "vulns/CVE-2025-0167.json": {
+   "bytes": 4308,
+   "retrieved_at": "2026-10-05T05:00:00Z",
+   "sha256": "1682e0a8092461d548b9aa1a4c76d65452940a1e203ba867f3eaf094094413c6",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-0167"
+  },
+  "vulns/CVE-2025-0306.json": {
+   "bytes": 677,
+   "retrieved_at": "2026-10-05T05:00:00Z",
+   "sha256": "a2a49e3093d0219d00fcb248e6bc846c7930c2c50e4f277a5f07f1ad330c617b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-0306"
+  },
+  "vulns/CVE-2025-0395.json": {
+   "bytes": 3518,
+   "retrieved_at": "2026-10-05T05:00:00Z",
+   "sha256": "1c9a1d3ed54249fc198663002a16d826044aed0c8f870f7961b91f1209aa4b8f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-0395"
+  },
+  "vulns/CVE-2025-0725.json": {
+   "bytes": 5965,
+   "retrieved_at": "2026-10-05T05:00:01Z",
+   "sha256": "ad1ebd8eb53354666ffe260450733096b0a2952a916889304c3cb3e4a043950a",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-0725"
+  },
+  "vulns/CVE-2025-0938.json": {
+   "bytes": 6575,
+   "retrieved_at": "2026-10-05T05:00:01Z",
+   "sha256": "2d1d5aebf6e1d4ef283bc698bb3fee45d977089cceed24d4abc097934ab27546",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-0938"
+  },
+  "vulns/CVE-2025-10148.json": {
+   "bytes": 2854,
+   "retrieved_at": "2026-10-05T05:00:01Z",
+   "sha256": "f4e6c5d635b11ce8b8063e62ad4df012a328c98ad07b6e1a08346c93f1c71bef",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-10148"
+  },
+  "vulns/CVE-2025-10230.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T04:55:56Z",
+   "sha256": "ffb7ea38d66bf709ad19b7458cad871795b0e58d3643b76517eaffdd3db91286",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-10230"
+  },
+  "vulns/CVE-2025-10966.json": {
+   "bytes": 5252,
+   "retrieved_at": "2026-10-05T05:00:01Z",
+   "sha256": "a03b023e475a3c267ed5ef1d9481ef7250a82c8ba0f144076bda8d25d60d6ed8",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-10966"
+  },
+  "vulns/CVE-2025-11187.json": {
+   "bytes": 7319,
+   "retrieved_at": "2026-10-05T05:00:01Z",
+   "sha256": "bea586dc270fb266add941904cf98292e57d247fcdc3899b7602c113b79ed8e9",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-11187"
+  },
+  "vulns/CVE-2025-11468.json": {
+   "bytes": 6363,
+   "retrieved_at": "2026-10-05T05:00:01Z",
+   "sha256": "c39ecd8d155a1cca817e3f23977eb89cf7c46deed3b43a62470a7d624002e28b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-11468"
+  },
+  "vulns/CVE-2025-11563.json": {
+   "bytes": 2323,
+   "retrieved_at": "2026-10-05T05:00:01Z",
+   "sha256": "db0f63e426f645db446b872176e8f676ea13a71dc422dc756b4e0827f2a3a859",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-11563"
+  },
+  "vulns/CVE-2025-12084.json": {
+   "bytes": 6860,
+   "retrieved_at": "2026-10-05T05:00:01Z",
+   "sha256": "d0aea5227e338504b3d95013d1ca58b1537c53d04dd4df21005ea1e505f50f40",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-12084"
+  },
+  "vulns/CVE-2025-1217.json": {
+   "bytes": 2566,
+   "retrieved_at": "2026-10-05T05:00:01Z",
+   "sha256": "b86737e54b0c0e9cbca69b6959640146e3eecb6ce8fa6619eff3440acecfca50",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-1217"
+  },
+  "vulns/CVE-2025-1218.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:02Z",
+   "sha256": "4d17046135e7e50273ea4a6a2b6cc82f3749e9c24d884a48332e51b1affa08e3",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-1218"
+  },
+  "vulns/CVE-2025-1219.json": {
+   "bytes": 2619,
+   "retrieved_at": "2026-10-05T05:00:02Z",
+   "sha256": "b63aedd74600483d51d9d3fe6fdc601e4ed3a30dbe640916338cdc9108dd9718",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-1219"
+  },
+  "vulns/CVE-2025-1220.json": {
+   "bytes": 2553,
+   "retrieved_at": "2026-10-05T05:00:02Z",
+   "sha256": "40b8fe52321f51afa3d843edeef8dfe7db03a644fcb8eaa80e53db18dd96808e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-1220"
+  },
+  "vulns/CVE-2025-12781.json": {
+   "bytes": 5748,
+   "retrieved_at": "2026-10-05T05:00:02Z",
+   "sha256": "a603425dfdd3c0f68bc738096576eb995230fd68afb1bbf33b072c851d80e58e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-12781"
+  },
+  "vulns/CVE-2025-13034.json": {
+   "bytes": 2525,
+   "retrieved_at": "2026-10-05T05:00:02Z",
+   "sha256": "201ea6a5fbfb52367363e2abc06cb2fe18c83b5ed5b28781a334dcf56aa96393",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-13034"
+  },
+  "vulns/CVE-2025-13462.json": {
+   "bytes": 5874,
+   "retrieved_at": "2026-10-05T05:00:02Z",
+   "sha256": "95455eb59e2a527bc14112f5b2cffe1b7e4c8d91949be0f6cd9cac58c8132830",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-13462"
+  },
+  "vulns/CVE-2025-13836.json": {
+   "bytes": 6641,
+   "retrieved_at": "2026-10-05T04:55:57Z",
+   "sha256": "fafd1d343fd604c3dcf48a11c2c1c69a3435d2f16da3a29617377b442d902f5f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-13836"
+  },
+  "vulns/CVE-2025-13837.json": {
+   "bytes": 5794,
+   "retrieved_at": "2026-10-05T05:00:02Z",
+   "sha256": "b58cd245cb30c6f18f58dc990007919d0ca6cc179c958da870a867c660850916",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-13837"
+  },
+  "vulns/CVE-2025-13878.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T04:55:55Z",
+   "sha256": "2a92943acd386a1d8c3d0f5711c78269dae04b7a3dc7b931fd0726663a3a25cb",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-13878"
+  },
+  "vulns/CVE-2025-14017.json": {
+   "bytes": 5616,
+   "retrieved_at": "2026-10-05T05:00:02Z",
+   "sha256": "3906fe7e495ff331151499dd01aaf15baa8cc2e74eee9ed96b7b4a5411c0ca71",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-14017"
+  },
+  "vulns/CVE-2025-14177.json": {
+   "bytes": 2855,
+   "retrieved_at": "2026-10-05T05:00:02Z",
+   "sha256": "e0da2bf5101e7abecd9be8a0642ead7583453a0a057eb143bde508c49ef5a2d8",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-14177"
+  },
+  "vulns/CVE-2025-14178.json": {
+   "bytes": 2755,
+   "retrieved_at": "2026-10-05T05:00:02Z",
+   "sha256": "5a6d5f09c71d1ff0ed1f42bbf4e934cf09eb8be448ba443fd6b021ac9257eb8b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-14178"
+  },
+  "vulns/CVE-2025-14179.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:03Z",
+   "sha256": "af86a6ad7155152a26bfa2eda8c29720238bfa291572ac6497290b99fb47232b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-14179"
+  },
+  "vulns/CVE-2025-14180.json": {
+   "bytes": 2669,
+   "retrieved_at": "2026-10-05T04:55:58Z",
+   "sha256": "82ab1162199e7fcf35658b84749a6645c10b66a7fa93ad086c9f145adb97de25",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-14180"
+  },
+  "vulns/CVE-2025-14181.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:03Z",
+   "sha256": "8691ec3550943331506afc28852810c031f602f14ac8ff8bd3b2e808991fad16",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-14181"
+  },
+  "vulns/CVE-2025-14524.json": {
+   "bytes": 4739,
+   "retrieved_at": "2026-10-05T04:55:58Z",
+   "sha256": "1577081f7cca945f42f6b270c027bb1b03f9c913c0464268f743a3f0e0e0aa98",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-14524"
+  },
+  "vulns/CVE-2025-14819.json": {
+   "bytes": 3060,
+   "retrieved_at": "2026-10-05T04:55:58Z",
+   "sha256": "fcd384f2af6b596969ac345699668c96039fceb4aaaf97a1bb9ed69505d99793",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-14819"
+  },
+  "vulns/CVE-2025-14831.json": {
+   "bytes": 1327,
+   "retrieved_at": "2026-10-05T04:55:51Z",
+   "sha256": "2e8d35207db55ae1a8aabd505d08fb702bfa0b9682319404d4baf2c42903aac7",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-14831"
+  },
+  "vulns/CVE-2025-15079.json": {
+   "bytes": 3907,
+   "retrieved_at": "2026-10-05T05:00:03Z",
+   "sha256": "c3d43beadac329fa9a2800ed24ad822264c0294808e00bf4189b381c08c9660e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-15079"
+  },
+  "vulns/CVE-2025-15224.json": {
+   "bytes": 3818,
+   "retrieved_at": "2026-10-05T05:00:03Z",
+   "sha256": "355e34ff586dd61eb59e43a9919f03e3b150c45dc65598ed38026495acaa7d4e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-15224"
+  },
+  "vulns/CVE-2025-15281.json": {
+   "bytes": 18443,
+   "retrieved_at": "2026-10-05T04:55:59Z",
+   "sha256": "23c678d6c8fb573e055fbe6b46783ca51c61413fea5fb056c73a81b4492a0174",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-15281"
+  },
+  "vulns/CVE-2025-15282.json": {
+   "bytes": 6273,
+   "retrieved_at": "2026-10-05T05:00:03Z",
+   "sha256": "e6c18ab689f66826e019eace262e9a00c563c3c31442bdd3ff416bb48b33283e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-15282"
+  },
+  "vulns/CVE-2025-15366.json": {
+   "bytes": 5237,
+   "retrieved_at": "2026-10-05T05:00:03Z",
+   "sha256": "ab03779c0da312fcb965f288194f101262088c9c7696b9af844d77be25a123cd",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-15366"
+  },
+  "vulns/CVE-2025-15367.json": {
+   "bytes": 3903,
+   "retrieved_at": "2026-10-05T05:00:03Z",
+   "sha256": "0c817661dca3a1256f0e38935bb2ad6cb3beaf767065780030b5323553d2b2fc",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-15367"
+  },
+  "vulns/CVE-2025-15467.json": {
+   "bytes": 12599,
+   "retrieved_at": "2026-10-05T04:55:51Z",
+   "sha256": "871e35c31f73215051201ac86efdca47f8490c095a4efcdcfa1d85cb63ac7c4c",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-15467"
+  },
+  "vulns/CVE-2025-15468.json": {
+   "bytes": 7445,
+   "retrieved_at": "2026-10-05T05:00:03Z",
+   "sha256": "92c8a07c0cef70e5db1a47e5295c47c966f6e967070a966bf68a427154c01732",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-15468"
+  },
+  "vulns/CVE-2025-15469.json": {
+   "bytes": 18237,
+   "retrieved_at": "2026-10-05T05:00:03Z",
+   "sha256": "dbfa957f819002086e4911b93c5ae015c823242ffc561123e783146595ac4f8f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-15469"
+  },
+  "vulns/CVE-2025-15649.json": {
+   "bytes": 3269,
+   "retrieved_at": "2026-10-05T04:55:57Z",
+   "sha256": "e43b30e6c65ad21ce719a4cf2b18c8c3b16e99d905ff34812a51c7c9c6c083d0",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-15649"
+  },
+  "vulns/CVE-2025-1632.json": {
+   "bytes": 2656,
+   "retrieved_at": "2026-10-05T05:00:03Z",
+   "sha256": "e74020143df14a6a768578bdd6155b4dabf271d490aeda291bd5d361239f2cea",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-1632"
+  },
+  "vulns/CVE-2025-1734.json": {
+   "bytes": 2555,
+   "retrieved_at": "2026-10-05T05:00:03Z",
+   "sha256": "8b6d375fb6bba72ec713fb58b4b54d4f948844b4d5139da114bf262ce2524eac",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-1734"
+  },
+  "vulns/CVE-2025-1735.json": {
+   "bytes": 2440,
+   "retrieved_at": "2026-10-05T05:00:04Z",
+   "sha256": "e696f8f15a3bcfd99adcb158a7e5a148d176a63e13a9a10e4f5079e881f1152c",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-1735"
+  },
+  "vulns/CVE-2025-1736.json": {
+   "bytes": 2534,
+   "retrieved_at": "2026-10-05T05:00:04Z",
+   "sha256": "280e2986ca3df8ccff2a9ece8c6b566a598c3ae32a3de5f02e10040e1f80d524",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-1736"
+  },
+  "vulns/CVE-2025-1795.json": {
+   "bytes": 5552,
+   "retrieved_at": "2026-10-05T05:00:04Z",
+   "sha256": "8b5ce15940f5f7679513cf9a1ff31b67f61eee365ca00e8a367153b87a18f093",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-1795"
+  },
+  "vulns/CVE-2025-1861.json": {
+   "bytes": 2660,
+   "retrieved_at": "2026-10-05T05:00:04Z",
+   "sha256": "7244670145cd6fd3a0fc68520044ade89cbdf162d725f507c309be22c62ebf2a",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-1861"
+  },
+  "vulns/CVE-2025-23048.json": {
+   "bytes": 2579,
+   "retrieved_at": "2026-10-05T05:00:04Z",
+   "sha256": "26aec56b0111da7e56ae6bda4cd64cb695661dacc5a0c0f46a49c68bc3b5aea3",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-23048"
+  },
+  "vulns/CVE-2025-23419.json": {
+   "bytes": 4393,
+   "retrieved_at": "2026-10-05T05:00:04Z",
+   "sha256": "d5799219353cc73ce1fffc88b86e04f66ec0d3bf66deb282be44230df1d1e13c",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-23419"
+  },
+  "vulns/CVE-2025-24294.json": {
+   "bytes": 1000,
+   "retrieved_at": "2026-10-05T04:55:57Z",
+   "sha256": "59c011634fae6da1e8b3ddcdf74a26e3071a7297d687fb3a53f734c5948d3826",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-24294"
+  },
+  "vulns/CVE-2025-24928.json": {
+   "bytes": 5416,
+   "retrieved_at": "2026-10-05T05:00:04Z",
+   "sha256": "0143892d2ce3fe6fcd2d8dd44c0b7f07aa0c345401ead72e94e3ceeaa4ac3225",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-24928"
+  },
+  "vulns/CVE-2025-25186.json": {
+   "bytes": 3241,
+   "retrieved_at": "2026-10-05T05:00:04Z",
+   "sha256": "b01f27d22e370e85644cd83769034b0202c812333e40fc3e2c3e31b542f16fdb",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-25186"
+  },
+  "vulns/CVE-2025-25724.json": {
+   "bytes": 2121,
+   "retrieved_at": "2026-10-05T05:00:04Z",
+   "sha256": "cd1ce10ac0f1c7fab7867a4fe14400de01982ff59301fe273d33448eab5a3c41",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-25724"
+  },
+  "vulns/CVE-2025-26465.json": {
+   "bytes": 5213,
+   "retrieved_at": "2026-10-05T05:00:04Z",
+   "sha256": "cff4ed18939c13a1b30251e9c285d408ad707aa852887fd34af3f21f65c17eb0",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-26465"
+  },
+  "vulns/CVE-2025-27113.json": {
+   "bytes": 5707,
+   "retrieved_at": "2026-10-05T05:00:05Z",
+   "sha256": "06f8452c124a621151308dd38f59ee3ed3972541f2a2fe0260ecec50578d7dd2",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-27113"
+  },
+  "vulns/CVE-2025-27219.json": {
+   "bytes": 2708,
+   "retrieved_at": "2026-10-05T05:00:05Z",
+   "sha256": "4e0be3a74862a029d7b30f045244870d606cc155760d81db5ac2dfe0c7ad94e8",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-27219"
+  },
+  "vulns/CVE-2025-27220.json": {
+   "bytes": 2483,
+   "retrieved_at": "2026-10-05T05:00:05Z",
+   "sha256": "62f3b8b679a81af700932f9bf505142eee96be2ec62a629e7f4cbbb6f251f2a3",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-27220"
+  },
+  "vulns/CVE-2025-27221.json": {
+   "bytes": 2882,
+   "retrieved_at": "2026-10-05T05:00:05Z",
+   "sha256": "a8725398092cf3f91bcaefe6c7a46b8f6715ef9798dbe809132c6df4f61be3e4",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-27221"
+  },
+  "vulns/CVE-2025-27587.json": {
+   "bytes": 2263,
+   "retrieved_at": "2026-10-05T05:00:05Z",
+   "sha256": "ffecbedc1ef86dbf0abb3cd572a10d693550b1d32001bffa359b19dc8b13cd78",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-27587"
+  },
+  "vulns/CVE-2025-27613.json": {
+   "bytes": 2220,
+   "retrieved_at": "2026-10-05T05:00:05Z",
+   "sha256": "b75f637a158eea41ab61a76106409af00647cb0cc91c126c8b25f917222e5d5a",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-27613"
+  },
+  "vulns/CVE-2025-27614.json": {
+   "bytes": 2397,
+   "retrieved_at": "2026-10-05T05:00:05Z",
+   "sha256": "b84cda803b98f01b66f2df0a78e44ce44d48308917a1199d80f081a4863933f9",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-27614"
+  },
+  "vulns/CVE-2025-29088.json": {
+   "bytes": 1966,
+   "retrieved_at": "2026-10-05T05:00:05Z",
+   "sha256": "4b099fde61ce02257aca1a95a9576809fb644fde5c92866e7d1b9c7f3005911a",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-29088"
+  },
+  "vulns/CVE-2025-30232.json": {
+   "bytes": 1861,
+   "retrieved_at": "2026-10-05T05:00:05Z",
+   "sha256": "37168d550a419ba54643b222900d6268224c1b5ec098f58e1c13a1df4c6893c0",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-30232"
+  },
+  "vulns/CVE-2025-32414.json": {
+   "bytes": 5234,
+   "retrieved_at": "2026-10-05T05:00:05Z",
+   "sha256": "d9d0d226693527bbe1899b45480876fef39332098984c1c0476332697cbaf7f9",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-32414"
+  },
+  "vulns/CVE-2025-32415.json": {
+   "bytes": 5244,
+   "retrieved_at": "2026-10-05T05:00:06Z",
+   "sha256": "dca821008982c252c7d8b8ae99b3c57c04eccc2b0c917cbe4fb1e6ee5943da74",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-32415"
+  },
+  "vulns/CVE-2025-32462.json": {
+   "bytes": 5052,
+   "retrieved_at": "2026-10-05T04:55:52Z",
+   "sha256": "0108269058f847684edc2daf84536f684e35a0636ac7a9b0ffe089112ecf2049",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-32462"
+  },
+  "vulns/CVE-2025-32463.json": {
+   "bytes": 3862,
+   "retrieved_at": "2026-10-05T04:55:52Z",
+   "sha256": "d7ece95791309b4c32911b74a36bd6539e6d8248309c0bdeda16759120715498",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-32463"
+  },
+  "vulns/CVE-2025-32728.json": {
+   "bytes": 5163,
+   "retrieved_at": "2026-10-05T05:00:06Z",
+   "sha256": "5521f589b1910c700600a779c21d11f6d1293b1c143a27b22c8e314a3ff01bc6",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-32728"
+  },
+  "vulns/CVE-2025-32988.json": {
+   "bytes": 12913,
+   "retrieved_at": "2026-10-05T05:00:06Z",
+   "sha256": "820cc732f2a1accd6a5f4a8ef408914761d24371077d13c0b04e42db0f5c3d00",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-32988"
+  },
+  "vulns/CVE-2025-32989.json": {
+   "bytes": 2214,
+   "retrieved_at": "2026-10-05T05:00:06Z",
+   "sha256": "b74258430d327379477d1b44afd31f6934a77bd698b2d8628d14ea62f29eef13",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-32989"
+  },
+  "vulns/CVE-2025-32990.json": {
+   "bytes": 2317,
+   "retrieved_at": "2026-10-05T05:00:06Z",
+   "sha256": "c61b336d31848cae5fb28da0deac059a3612e742613850fbd46ae7f37950854f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-32990"
+  },
+  "vulns/CVE-2025-40777.json": {
+   "bytes": 878,
+   "retrieved_at": "2026-10-05T04:58:40Z",
+   "sha256": "76e116dd5fd869ea872e1ac9759a56409896791c473dcce4d915fd8dcfcb471f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-40777"
+  },
+  "vulns/CVE-2025-40778.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:06Z",
+   "sha256": "a81ef7a60d6428dde9f6eeb2119dde52fd6d04fe1f5c21806c2d31561d398026",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-40778"
+  },
+  "vulns/CVE-2025-40780.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:06Z",
+   "sha256": "b940b322a4fe92b66cfd0f576185be164ca797da1f39bd1b26865418dadc402c",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-40780"
+  },
+  "vulns/CVE-2025-40909.json": {
+   "bytes": 9289,
+   "retrieved_at": "2026-10-05T05:00:06Z",
+   "sha256": "5ff167c5feeb73db70598f5efa2f84b73c61356d52b7b47bbd3631458a9a8d77",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-40909"
+  },
+  "vulns/CVE-2025-43857.json": {
+   "bytes": 3489,
+   "retrieved_at": "2026-10-05T05:00:06Z",
+   "sha256": "50b13ac499b0c51600d5e72a4397c257311d204429800b1afd33fcf48a303708",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-43857"
+  },
+  "vulns/CVE-2025-4516.json": {
+   "bytes": 63973,
+   "retrieved_at": "2026-10-05T05:00:07Z",
+   "sha256": "2d1825a72edcf61e715b97bf94a33be7b4de25a52aa8ca3cf8d79d8583eb99b1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-4516"
+  },
+  "vulns/CVE-2025-46835.json": {
+   "bytes": 1884,
+   "retrieved_at": "2026-10-05T04:56:00Z",
+   "sha256": "ec92ee9b1c1bacb14892eaf80fbf2ce9648d80203f62c0028170a6d962e372c1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-46835"
+  },
+  "vulns/CVE-2025-4802.json": {
+   "bytes": 3418,
+   "retrieved_at": "2026-10-05T05:00:07Z",
+   "sha256": "8810765d25191cd982a8505e80ad086bcdff1cdbb7de9cd2742f4d7c713a581e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-4802"
+  },
+  "vulns/CVE-2025-48384.json": {
+   "bytes": 9874,
+   "retrieved_at": "2026-10-05T04:56:00Z",
+   "sha256": "abdf744189cb070c0c968a595d9dda7b42996f00a8668667b1db7dfeef660fb2",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-48384"
+  },
+  "vulns/CVE-2025-48385.json": {
+   "bytes": 9518,
+   "retrieved_at": "2026-10-05T04:56:00Z",
+   "sha256": "44bcb5aab7e5a1307219d26ed710772fcc0e359a0913a4ba490803834cd2e32c",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-48385"
+  },
+  "vulns/CVE-2025-4877.json": {
+   "bytes": 1267,
+   "retrieved_at": "2026-10-05T05:00:07Z",
+   "sha256": "e47c8f25bd57bf3a51e8ca1caa08629ac44896f0c08932111752bcae15776378",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-4877"
+  },
+  "vulns/CVE-2025-4878.json": {
+   "bytes": 1043,
+   "retrieved_at": "2026-10-05T05:00:07Z",
+   "sha256": "38e7f5a159282fdb3562096628292738d0fc47073511dbbba702b2083ce78ab6",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-4878"
+  },
+  "vulns/CVE-2025-49630.json": {
+   "bytes": 2321,
+   "retrieved_at": "2026-10-05T05:00:07Z",
+   "sha256": "5c42b34e65e0c72850c48a2cbbd5a9fb208f8f46485b2aa335fa1909e546ad14",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-49630"
+  },
+  "vulns/CVE-2025-49794.json": {
+   "bytes": 7347,
+   "retrieved_at": "2026-10-05T05:00:07Z",
+   "sha256": "b447887082a1ca71c22bda969df6f8009a3c34c3ccf54fd31d01faf4b1ad5d75",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-49794"
+  },
+  "vulns/CVE-2025-49796.json": {
+   "bytes": 7375,
+   "retrieved_at": "2026-10-05T05:00:07Z",
+   "sha256": "fa41e9547232a24f5015b68ea45fc2b93d881d51ee4d69271002f4a09cfd7799",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-49796"
+  },
+  "vulns/CVE-2025-49812.json": {
+   "bytes": 2397,
+   "retrieved_at": "2026-10-05T05:00:07Z",
+   "sha256": "251fcafb47bf2299bccca4da1f7a22ee18293e8b115c8b442a279e44f3adb8fe",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-49812"
+  },
+  "vulns/CVE-2025-53020.json": {
+   "bytes": 2077,
+   "retrieved_at": "2026-10-05T05:00:07Z",
+   "sha256": "e2d97413e16e67417da03609a36753ab148c90f2f2926d584d6ce1dd7364432b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-53020"
+  },
+  "vulns/CVE-2025-5318.json": {
+   "bytes": 4560,
+   "retrieved_at": "2026-10-05T05:00:07Z",
+   "sha256": "20f692e5f38818d757ecf1a59db48b67ed3eb39350dd1e6c3aca13588540005a",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-5318"
+  },
+  "vulns/CVE-2025-5351.json": {
+   "bytes": 2467,
+   "retrieved_at": "2026-10-05T05:00:07Z",
+   "sha256": "19484473e446a9f49509b238b8a16d4bdc2910daedeec4361fd549587e171283",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-5351"
+  },
+  "vulns/CVE-2025-5372.json": {
+   "bytes": 2883,
+   "retrieved_at": "2026-10-05T05:00:08Z",
+   "sha256": "703fb0291841267aaaafb4b72b9360d8d248a1a6dc23116dc95d9dcedea5c1d5",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-5372"
+  },
+  "vulns/CVE-2025-53859.json": {
+   "bytes": 7684,
+   "retrieved_at": "2026-10-05T04:55:54Z",
+   "sha256": "6db25299f9b1b3dd13d011a494c7a0c4cdba93b26c42b754393bd12883850aa0",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-53859"
+  },
+  "vulns/CVE-2025-55753.json": {
+   "bytes": 2278,
+   "retrieved_at": "2026-10-05T05:00:08Z",
+   "sha256": "63771c6c4f744840c14d966beaf82bc1f3a9f6ea4c286e80e0b5fad19ea347a0",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-55753"
+  },
+  "vulns/CVE-2025-58098.json": {
+   "bytes": 2143,
+   "retrieved_at": "2026-10-05T04:55:54Z",
+   "sha256": "ee28799c7df749d3a45c725e51b27b1998f3ba120e8f54f41e7523ab0cb8d31c",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-58098"
+  },
+  "vulns/CVE-2025-58767.json": {
+   "bytes": 2028,
+   "retrieved_at": "2026-10-05T05:00:08Z",
+   "sha256": "407730f88cb9b39915338cd207bb3bd02bf07fffe14daa81c06d0d14b43afaab",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-58767"
+  },
+  "vulns/CVE-2025-5914.json": {
+   "bytes": 4835,
+   "retrieved_at": "2026-10-05T05:00:08Z",
+   "sha256": "c95c6a1abb707726a7b266675be4dc013fc0da2e039d6477942af01d8cc19660",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-5914"
+  },
+  "vulns/CVE-2025-5915.json": {
+   "bytes": 2481,
+   "retrieved_at": "2026-10-05T05:00:08Z",
+   "sha256": "4b5346da71bbfabf52f7bb111303c55f118087dab2129586b9e13c396a5b077b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-5915"
+  },
+  "vulns/CVE-2025-5916.json": {
+   "bytes": 2628,
+   "retrieved_at": "2026-10-05T05:00:08Z",
+   "sha256": "03e1ab2769d3d3b44761b1f6565a43842099a307261ee0e53799fc8a73c48e82",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-5916"
+  },
+  "vulns/CVE-2025-5917.json": {
+   "bytes": 2517,
+   "retrieved_at": "2026-10-05T05:00:08Z",
+   "sha256": "2919f90193bce5d104c3002fed3eae0b5806aa499eef55797597e8d28323c7ad",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-5917"
+  },
+  "vulns/CVE-2025-5918.json": {
+   "bytes": 2354,
+   "retrieved_at": "2026-10-05T04:55:53Z",
+   "sha256": "164d9baccb61549711ea9a30d6f1146eacc9c8e905af778779d5429cd67a2fdd",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-5918"
+  },
+  "vulns/CVE-2025-59375.json": {
+   "bytes": 3315,
+   "retrieved_at": "2026-10-05T04:55:59Z",
+   "sha256": "588525764a3ed342e4c51cce4641300ef48342b2b3296fa92ec6a3226cf49bf7",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-59375"
+  },
+  "vulns/CVE-2025-5987.json": {
+   "bytes": 3380,
+   "retrieved_at": "2026-10-05T05:00:08Z",
+   "sha256": "f7dc7134d034ae8f436e5e194dd9fa6569bf3c4338550bd176a6753d479d19d4",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-5987"
+  },
+  "vulns/CVE-2025-6021.json": {
+   "bytes": 7206,
+   "retrieved_at": "2026-10-05T05:00:08Z",
+   "sha256": "12c9ceb7b2dc1a96dd45df847673cb92fad3aa004d7303f2cc644ea96fa69e3d",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-6021"
+  },
+  "vulns/CVE-2025-6069.json": {
+   "bytes": 6255,
+   "retrieved_at": "2026-10-05T05:00:08Z",
+   "sha256": "1d797abc3af20756bf63eca19ef418be994ac155d56dd8e32a26b5fe9476bda0",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-6069"
+  },
+  "vulns/CVE-2025-6075.json": {
+   "bytes": 6339,
+   "retrieved_at": "2026-10-05T05:00:09Z",
+   "sha256": "86eb0f95e4c99daa346278de572c6e1e4bbdd14101f6413c3a1e8188ffe31f7e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-6075"
+  },
+  "vulns/CVE-2025-60753.json": {
+   "bytes": 1875,
+   "retrieved_at": "2026-10-05T05:00:09Z",
+   "sha256": "e7d3e603740819f0b3e03e3c33d441088a8170c160fc82900da91e93d2780e47",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-60753"
+  },
+  "vulns/CVE-2025-61143.json": {
+   "bytes": 1991,
+   "retrieved_at": "2026-10-05T05:00:09Z",
+   "sha256": "075fc1f387cf288e867a5c889cf395d3735e322fee4c0a599a2978412a46a1b6",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-61143"
+  },
+  "vulns/CVE-2025-61144.json": {
+   "bytes": 3184,
+   "retrieved_at": "2026-10-05T05:00:09Z",
+   "sha256": "bab2918c9c3ca2356c157448be4fe8e42ff84a1ebac61466aa867333744ccc59",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-61144"
+  },
+  "vulns/CVE-2025-61145.json": {
+   "bytes": 1920,
+   "retrieved_at": "2026-10-05T05:00:09Z",
+   "sha256": "ad4170506132d529ad3ea754802552c2b197a3e046268ccd1f9616a6345ce6fa",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-61145"
+  },
+  "vulns/CVE-2025-61594.json": {
+   "bytes": 2691,
+   "retrieved_at": "2026-10-05T05:00:09Z",
+   "sha256": "11d42d6f34877cd58936f9b21555ad8f76a84d44e4b35aeb467987b844142e58",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-61594"
+  },
+  "vulns/CVE-2025-6170.json": {
+   "bytes": 7844,
+   "retrieved_at": "2026-10-05T05:00:09Z",
+   "sha256": "c322b1b004d284f8de21de1da1f3c60e35459f0075c31e4d43160d0d7fd8dfc4",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-6170"
+  },
+  "vulns/CVE-2025-61984.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T04:55:52Z",
+   "sha256": "23661e45d3676c08add6d2876b2fa547b0c4d92db4cf9c373bf6448b289abfc3",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-61984"
+  },
+  "vulns/CVE-2025-61985.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T04:55:52Z",
+   "sha256": "ef91957efb897f6ff48c0a1605e1c4b4ff2865dae9c4e72e0cfb08df5ff37341",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-61985"
+  },
+  "vulns/CVE-2025-6395.json": {
+   "bytes": 7352,
+   "retrieved_at": "2026-10-05T05:00:09Z",
+   "sha256": "2f3cbe3e16845c468e02cda231f9f4f28446fef88676240c50cbac8eb50a35d3",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-6395"
+  },
+  "vulns/CVE-2025-6491.json": {
+   "bytes": 2485,
+   "retrieved_at": "2026-10-05T05:00:10Z",
+   "sha256": "2dbad4d1d473bf0e742fd1ada9269d9bdee421a7651fc45baad941c0e9981a2d",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-6491"
+  },
+  "vulns/CVE-2025-65082.json": {
+   "bytes": 2252,
+   "retrieved_at": "2026-10-05T05:00:10Z",
+   "sha256": "673972ae0e8ecaa9404bb1cb043dac78b2d1984f29a95c3d58be97ff4c8d5da4",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-65082"
+  },
+  "vulns/CVE-2025-66199.json": {
+   "bytes": 7960,
+   "retrieved_at": "2026-10-05T05:00:10Z",
+   "sha256": "3e0ebd9d2cbf0630d6eb387bdc9ef1ea43a45f3880dc0dd7650fde1ec7ee59de",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-66199"
+  },
+  "vulns/CVE-2025-66200.json": {
+   "bytes": 2229,
+   "retrieved_at": "2026-10-05T05:00:10Z",
+   "sha256": "59c5395f3aad10156134db487c0ba6dc5d152355db68a5962d7dc034e807092d",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-66200"
+  },
+  "vulns/CVE-2025-66382.json": {
+   "bytes": 2316,
+   "retrieved_at": "2026-10-05T05:00:10Z",
+   "sha256": "6156433913008a3f14c48c654767b7f14c758d0c615ea827ca0264478c9623af",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-66382"
+  },
+  "vulns/CVE-2025-68160.json": {
+   "bytes": 11640,
+   "retrieved_at": "2026-10-05T05:00:10Z",
+   "sha256": "eb7f344a860f378efddd5877eb0f2789cf353701808e8d6b0fb135c7b08674d6",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-68160"
+  },
+  "vulns/CVE-2025-69418.json": {
+   "bytes": 15195,
+   "retrieved_at": "2026-10-05T05:00:10Z",
+   "sha256": "230bdac7bcd35eb7f6c08b5692ad081eec6b0a738c6cbc7d59d110ce6d732c8e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-69418"
+  },
+  "vulns/CVE-2025-69419.json": {
+   "bytes": 14899,
+   "retrieved_at": "2026-10-05T05:00:10Z",
+   "sha256": "3a91d164c12e02262bf778d90b6fba1058eb59384c215ca735de9bed8f533b3c",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-69419"
+  },
+  "vulns/CVE-2025-69420.json": {
+   "bytes": 12985,
+   "retrieved_at": "2026-10-05T05:00:10Z",
+   "sha256": "31e14050bbd1db867cbe0e00e00f5690e137aff5533e7fc58ba1869400b157ac",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-69420"
+  },
+  "vulns/CVE-2025-69421.json": {
+   "bytes": 10129,
+   "retrieved_at": "2026-10-05T05:00:10Z",
+   "sha256": "9394d0a90e7259cb0d92fbfb24decb01b4456dd8535730aef23f2be9c3a72f0f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-69421"
+  },
+  "vulns/CVE-2025-69534.json": {
+   "bytes": 3525,
+   "retrieved_at": "2026-10-05T05:00:10Z",
+   "sha256": "64069c5a9b8ef5060a1bb2e5c3638a9e386b18decb070233b6d7bf871a1c3b7f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-69534"
+  },
+  "vulns/CVE-2025-6965.json": {
+   "bytes": 6925,
+   "retrieved_at": "2026-10-05T05:00:10Z",
+   "sha256": "e7135ede74755ad95b7fe9b91b2654914c8e83736c10f9d35488d55c52aa0212",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-6965"
+  },
+  "vulns/CVE-2025-70873.json": {
+   "bytes": 6005,
+   "retrieved_at": "2026-10-05T05:00:11Z",
+   "sha256": "d88ea53198b2478ac49e1eccd3bcb63e7bb5f3196dbd3068ec0eb027b17fd4b7",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-70873"
+  },
+  "vulns/CVE-2025-7458.json": {
+   "bytes": 1923,
+   "retrieved_at": "2026-10-05T05:00:11Z",
+   "sha256": "84f7f93c9e53a9c609fa5224ca48e81173e1194052b4df5685c588c082877f5b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-7458"
+  },
+  "vulns/CVE-2025-7519.json": {
+   "bytes": 3414,
+   "retrieved_at": "2026-10-05T05:00:11Z",
+   "sha256": "14e2405c1b69e16ca7f543ca6dc4c08bd0592267af76a7bedd26cb777eb9a7a2",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-7519"
+  },
+  "vulns/CVE-2025-7709.json": {
+   "bytes": 810,
+   "retrieved_at": "2026-10-05T04:55:59Z",
+   "sha256": "c7455bb7f75162da0491bfe3724fb664b9e61b62f2f3d0a827c3992a0f0e50f6",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-7709"
+  },
+  "vulns/CVE-2025-8058.json": {
+   "bytes": 8448,
+   "retrieved_at": "2026-10-05T05:00:11Z",
+   "sha256": "a5e38d2c5273607bed2e940a59d070c8c32d80ac2461c7812c9980b6e64a7bd3",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-8058"
+  },
+  "vulns/CVE-2025-8114.json": {
+   "bytes": 2762,
+   "retrieved_at": "2026-10-05T05:00:11Z",
+   "sha256": "e63956d37ba3b30b4018d2f1494cb13c803f1e8969a3fc37c190f8509c10940e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-8114"
+  },
+  "vulns/CVE-2025-8176.json": {
+   "bytes": 3012,
+   "retrieved_at": "2026-10-05T05:00:11Z",
+   "sha256": "fca63119efd7f8ff4ccc02d4444bb32fa840d03e9a9e164d26b7ab25dd4b94e4",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-8176"
+  },
+  "vulns/CVE-2025-8177.json": {
+   "bytes": 3217,
+   "retrieved_at": "2026-10-05T05:00:11Z",
+   "sha256": "20625e4ed517745b782ce87655c7bd6944776ffcd4d085ed1547d6fcf8c2ab0a",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-8177"
+  },
+  "vulns/CVE-2025-8194.json": {
+   "bytes": 6973,
+   "retrieved_at": "2026-10-05T05:00:11Z",
+   "sha256": "f71964e56088d8c108bd2d77760f510dee3071181b97aa16949a0c94303a4f4e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-8194"
+  },
+  "vulns/CVE-2025-8277.json": {
+   "bytes": 966,
+   "retrieved_at": "2026-10-05T04:56:00Z",
+   "sha256": "357723d702a5bb83867f912e1816c5816d308513fe498822c3aa49f0bb3afba8",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-8277"
+  },
+  "vulns/CVE-2025-8291.json": {
+   "bytes": 7196,
+   "retrieved_at": "2026-10-05T05:00:11Z",
+   "sha256": "23839f9494195f0ef865dc3ce48f46bf4dc59ae0893c95d3528afb61987abe42",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-8291"
+  },
+  "vulns/CVE-2025-8534.json": {
+   "bytes": 4316,
+   "retrieved_at": "2026-10-05T05:00:11Z",
+   "sha256": "09546405b87b4bb9a3776d400eef69a44712d12a747229270b63b97060fedc69",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-8534"
+  },
+  "vulns/CVE-2025-8677.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T04:55:55Z",
+   "sha256": "23373a953aa4b1ec5e5823e10c3710f4a07858bcc555aa2da1aa1372b63730cf",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-8677"
+  },
+  "vulns/CVE-2025-8732.json": {
+   "bytes": 6059,
+   "retrieved_at": "2026-10-05T04:55:59Z",
+   "sha256": "d394a539bc195aa176885b99328375c520bb3a3930259d1b6722a38e35b61ace",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-8732"
+  },
+  "vulns/CVE-2025-8851.json": {
+   "bytes": 5009,
+   "retrieved_at": "2026-10-05T05:00:12Z",
+   "sha256": "004f050939aa732bba83fa179fd5c4bbb66e352d30225fc5c5542277fec70c85",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-8851"
+  },
+  "vulns/CVE-2025-8961.json": {
+   "bytes": 2293,
+   "retrieved_at": "2026-10-05T05:00:12Z",
+   "sha256": "b4453c16bdae8dcd40e6aed2e27a05ea0a4c667b1ddd317afb275b512000eaab",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-8961"
+  },
+  "vulns/CVE-2025-9086.json": {
+   "bytes": 3328,
+   "retrieved_at": "2026-10-05T05:00:12Z",
+   "sha256": "6673cd6c84bc5f3e4d665fbbfd0740be380065ef2b52522178ede063dc6608e3",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-9086"
+  },
+  "vulns/CVE-2025-9165.json": {
+   "bytes": 4076,
+   "retrieved_at": "2026-10-05T05:00:12Z",
+   "sha256": "4a17fd7ace7a3c3a2f071a99ba1842c5a0050ff53eb049b919787b61a727208f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-9165"
+  },
+  "vulns/CVE-2025-9230.json": {
+   "bytes": 9530,
+   "retrieved_at": "2026-10-05T05:00:12Z",
+   "sha256": "dd1020257ab46a1ccf20001f241f2981c5bd1c62c71ca76793da8ae490bf8544",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-9230"
+  },
+  "vulns/CVE-2025-9231.json": {
+   "bytes": 8925,
+   "retrieved_at": "2026-10-05T05:00:12Z",
+   "sha256": "3cae9b1578bd78727d2e598cf895878324e48bb30a4f86d45cc8b0e5d0a0dc30",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-9231"
+  },
+  "vulns/CVE-2025-9232.json": {
+   "bytes": 8894,
+   "retrieved_at": "2026-10-05T04:55:51Z",
+   "sha256": "d6fed04e9c2ed67723abb6f896399e74a422f7198c014e98de1855aecb625e8c",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-9232"
+  },
+  "vulns/CVE-2025-9640.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:12Z",
+   "sha256": "c283974c6c069f5da1a69e09a292883ae14a4b30408c295ed258cce929afa456",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-9640"
+  },
+  "vulns/CVE-2025-9714.json": {
+   "bytes": 8774,
+   "retrieved_at": "2026-10-05T05:00:12Z",
+   "sha256": "0add7b8b56190719dd8ee34e1568d2cf4d7d36a618f7cbe383ba4d977acbb8a3",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-9714"
+  },
+  "vulns/CVE-2025-9820.json": {
+   "bytes": 5200,
+   "retrieved_at": "2026-10-05T05:00:12Z",
+   "sha256": "4276b6edaba2b889f054d1b85d4fa499d6c96718ac30426411590c076a3dc530",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-9820"
+  },
+  "vulns/CVE-2025-9900.json": {
+   "bytes": 5736,
+   "retrieved_at": "2026-10-05T04:56:00Z",
+   "sha256": "374ea1db0c2edd640ed25f8b7976ab3a2e955df079b8b2f5b4c6d1675107cc22",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2025-9900"
+  },
+  "vulns/CVE-2026-0672.json": {
+   "bytes": 6420,
+   "retrieved_at": "2026-10-05T05:00:12Z",
+   "sha256": "020205f1fc6e8874e0105c48e39be7ecbee2cc34781676ce5bcc719fac9046b1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-0672"
+  },
+  "vulns/CVE-2026-0861.json": {
+   "bytes": 3801,
+   "retrieved_at": "2026-10-05T05:00:13Z",
+   "sha256": "1d3e253306ac2e9f01f0a8cf0a330788aa802eb9211ad0ee2aaabe27ac347a13",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-0861"
+  },
+  "vulns/CVE-2026-0864.json": {
+   "bytes": 6449,
+   "retrieved_at": "2026-10-05T05:00:13Z",
+   "sha256": "2bd1b9b52e72842b76794f3a311f59a52556d2ce8b3c991b06113dc68fcf86f2",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-0864"
+  },
+  "vulns/CVE-2026-0865.json": {
+   "bytes": 7266,
+   "retrieved_at": "2026-10-05T05:00:13Z",
+   "sha256": "431f03b50fffc3471861a62556fd111b4f29a59e144fc0df7bf972de16318dcb",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-0865"
+  },
+  "vulns/CVE-2026-0915.json": {
+   "bytes": 35324,
+   "retrieved_at": "2026-10-05T04:55:59Z",
+   "sha256": "651cde7004bba6635508e9e535245249d974d7822cc56257c452e8f5c78cdf5f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-0915"
+  },
+  "vulns/CVE-2026-0964.json": {
+   "bytes": 2371,
+   "retrieved_at": "2026-10-05T05:00:13Z",
+   "sha256": "27eb10405a11d39176b388fdc67820476a59b013bcbda66b5a45bf2a708e5289",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-0964"
+  },
+  "vulns/CVE-2026-0965.json": {
+   "bytes": 2368,
+   "retrieved_at": "2026-10-05T05:00:13Z",
+   "sha256": "0ee25c3bd3b33f84766250d528dac66a3c6fc6391a81925c21bd6c96f8602508",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-0965"
+  },
+  "vulns/CVE-2026-0966.json": {
+   "bytes": 2628,
+   "retrieved_at": "2026-10-05T05:00:13Z",
+   "sha256": "6b8c7a6a70ef8e43d61cc051d90ee4f77b6b959ed7612abf24acb31706ddf87e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-0966"
+  },
+  "vulns/CVE-2026-0967.json": {
+   "bytes": 2418,
+   "retrieved_at": "2026-10-05T05:00:13Z",
+   "sha256": "4f638e1048067aeea77d2241049a62b5b40225aef0c8f952b123fe993c6f9bc8",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-0967"
+  },
+  "vulns/CVE-2026-0968.json": {
+   "bytes": 2437,
+   "retrieved_at": "2026-10-05T05:00:13Z",
+   "sha256": "4ce77cfbddf6b3f836ded4399e791c25560822b5d0fbd659d778450e5b53ea77",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-0968"
+  },
+  "vulns/CVE-2026-0989.json": {
+   "bytes": 8336,
+   "retrieved_at": "2026-10-05T04:55:59Z",
+   "sha256": "bd4727ec5d009f7324b650559cb14b0e26d9c3150a4fa63201ff94cb8162f6ad",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-0989"
+  },
+  "vulns/CVE-2026-0990.json": {
+   "bytes": 8410,
+   "retrieved_at": "2026-10-05T04:55:58Z",
+   "sha256": "629d79f9238374a22b8db06a04471ddc6f5c14010adc4e3aa102438c737d4a20",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-0990"
+  },
+  "vulns/CVE-2026-0992.json": {
+   "bytes": 8352,
+   "retrieved_at": "2026-10-05T05:00:13Z",
+   "sha256": "f2faeafa057ab64006d7e11052714175fe57f144a78649cfd105b3ad27e54198",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-0992"
+  },
+  "vulns/CVE-2026-102633.json": {
+   "bytes": 2118,
+   "retrieved_at": "2026-10-05T05:00:13Z",
+   "sha256": "c3fa2712e5672550e0441c0e5d6a5fc215e5c16338dcc1efe43a92bfbf27d700",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-102633"
+  },
+  "vulns/CVE-2026-10536.json": {
+   "bytes": 4384,
+   "retrieved_at": "2026-10-05T05:00:14Z",
+   "sha256": "51764274ba78e2ae28d7f81d38ad1457b37ea1784ae48b7b931ab31bf265608f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-10536"
+  },
+  "vulns/CVE-2026-10723.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:14Z",
+   "sha256": "a8be2b4640aa52b87f5fd18246d52fbf82ed78176077a8fa503d44002febc9d4",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-10723"
+  },
+  "vulns/CVE-2026-10822.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:14Z",
+   "sha256": "e718107e7105ed80b6559e5c7359a33b7034e12b36657dc9b6868f1c14b8d8ea",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-10822"
+  },
+  "vulns/CVE-2026-11331.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:14Z",
+   "sha256": "64da3a28026a1001a6e86c489deb251cb2c5cbecef82fc3250d84687477d3807",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-11331"
+  },
+  "vulns/CVE-2026-11605.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:14Z",
+   "sha256": "9f6325e4714e1bd2a192628bcc3b20110a790390a4a6ace82df724eb20dcdd0a",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-11605"
+  },
+  "vulns/CVE-2026-11622.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:14Z",
+   "sha256": "eefc2ab5a6aa9cd7470ca7b1029eaab33ac75bdde3dfac26258d2eb18919b840",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-11622"
+  },
+  "vulns/CVE-2026-11721.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:14Z",
+   "sha256": "df748d7c3629b28769b1f284e236497a6b920ed270e765d635b275cfb60414c5",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-11721"
+  },
+  "vulns/CVE-2026-11822.json": {
+   "bytes": 7066,
+   "retrieved_at": "2026-10-05T04:55:59Z",
+   "sha256": "eff9a5afd826f7c38df67396e43e2fe4bd27d58eae39473e37fae164ec3b6dd1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-11822"
+  },
+  "vulns/CVE-2026-11824.json": {
+   "bytes": 7055,
+   "retrieved_at": "2026-10-05T05:00:14Z",
+   "sha256": "fd142dd4e0cb719b189f27e6e3d7ed162030c7fb2a9c6fbf83c78a4e7aab7044",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-11824"
+  },
+  "vulns/CVE-2026-11856.json": {
+   "bytes": 12427,
+   "retrieved_at": "2026-10-05T05:00:14Z",
+   "sha256": "b4bde009874f04d86d142c9996a0d978f81e6faa09d4a715342924a665eb2efc",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-11856"
+  },
+  "vulns/CVE-2026-11940.json": {
+   "bytes": 6668,
+   "retrieved_at": "2026-10-05T05:00:14Z",
+   "sha256": "d7ad1037547e9e9e973a7c5ae29b1465c98f215d47159538b39d99cf6ca59df7",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-11940"
+  },
+  "vulns/CVE-2026-11972.json": {
+   "bytes": 6182,
+   "retrieved_at": "2026-10-05T05:00:15Z",
+   "sha256": "231d0ac4288868a396d12d5f005abcaef8ab3f0745af2a264f0a03153240f273",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-11972"
+  },
+  "vulns/CVE-2026-11979.json": {
+   "bytes": 6714,
+   "retrieved_at": "2026-10-05T05:00:15Z",
+   "sha256": "56e607225cb855bb6c0be439ba905881bdc924fc824f2e1e7f7b384b1ff9075e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-11979"
+  },
+  "vulns/CVE-2026-12003.json": {
+   "bytes": 7505,
+   "retrieved_at": "2026-10-05T05:00:15Z",
+   "sha256": "fa0ebf2ccf8a84447eec393adedb59beeb5458bb36ff964679c6412a241489d1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-12003"
+  },
+  "vulns/CVE-2026-12064.json": {
+   "bytes": 5112,
+   "retrieved_at": "2026-10-05T05:00:15Z",
+   "sha256": "1aab2abb0fba1b5fd12741e9f26f73661f1a13eae4ef302f99b9c7a55edb763a",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-12064"
+  },
+  "vulns/CVE-2026-12087.json": {
+   "bytes": 4992,
+   "retrieved_at": "2026-10-05T05:00:15Z",
+   "sha256": "cbc32fdf8491eacfc5f6cb5a5a6e75f25d3f9f1d15b16f13fa4e743953f38404",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-12087"
+  },
+  "vulns/CVE-2026-12184.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:15Z",
+   "sha256": "00527b719a5e4129a4c13634f6b16bad31f2e7e83e5440232b0b12e430f03fc1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-12184"
+  },
+  "vulns/CVE-2026-12318.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:15Z",
+   "sha256": "31079b707c26b7effcd6659b2d2c31acd4c63940ad8688c3351ab81fe4eb8a20",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-12318"
+  },
+  "vulns/CVE-2026-12345.json": {
+   "bytes": 4234,
+   "retrieved_at": "2026-10-05T05:00:15Z",
+   "sha256": "f93df7dbb071e868ec0d48951bd10a3bde66fc53e16b0d7b1653a3c8606eb913",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-12345"
+  },
+  "vulns/CVE-2026-12617.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:15Z",
+   "sha256": "d358fb8837013531bd24344fca553a17b07753f062abe07582d22599d1049df8",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-12617"
+  },
+  "vulns/CVE-2026-12912.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:16Z",
+   "sha256": "c7261055d1c8a4629c3830b57e23d5a2c062eb1e869460fac6c4d505801d414b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-12912"
+  },
+  "vulns/CVE-2026-1299.json": {
+   "bytes": 6653,
+   "retrieved_at": "2026-10-05T05:00:16Z",
+   "sha256": "3ccb6812c1204b2a75854c6cd0a70affa5028652b095f6c0217b39953d0f06ba",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-1299"
+  },
+  "vulns/CVE-2026-13204.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:16Z",
+   "sha256": "16afdd108418e1cc0bcf1cf0a73dff9ac6c7c9769c1d894e1c85e85f73b7ed50",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-13204"
+  },
+  "vulns/CVE-2026-13221.json": {
+   "bytes": 6030,
+   "retrieved_at": "2026-10-05T05:00:16Z",
+   "sha256": "f79b475f42f5f2490bcdfdc9fc3284f39de01ceb6db23227acfae5dbd5dec1cc",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-13221"
+  },
+  "vulns/CVE-2026-13321.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:16Z",
+   "sha256": "0ff0d183e58d6efe2c5ee3729d1f85d89c3ddc8c353fd86b6d9edee26da6695f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-13321"
+  },
+  "vulns/CVE-2026-13608.json": {
+   "bytes": 3378,
+   "retrieved_at": "2026-10-05T05:00:16Z",
+   "sha256": "0ddee9ad5122b0990854f6ceb94ac332f61624492a880a67a5707e705175a857",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-13608"
+  },
+  "vulns/CVE-2026-14164.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:16Z",
+   "sha256": "8b35dfaf0438fcf8e115d1c9c69b88ca201cac66d6c110858e764312fa298fe9",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-14164"
+  },
+  "vulns/CVE-2026-14355.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:16Z",
+   "sha256": "70d53b02e5d47eeabda145823f39322298b7b7a270f678ab4af836e8b33b24f0",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-14355"
+  },
+  "vulns/CVE-2026-14456.json": {
+   "bytes": 17504,
+   "retrieved_at": "2026-10-05T05:00:16Z",
+   "sha256": "e851dd81325ef8097073ed9cb4c10bf32b62e79fd7e717bd4a21f5f349e23d56",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-14456"
+  },
+  "vulns/CVE-2026-14457.json": {
+   "bytes": 12649,
+   "retrieved_at": "2026-10-05T05:00:16Z",
+   "sha256": "c7ae23a3b248c599e4491a019c11384efbccfdb0edb1e927a4fcf6828000c2da",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-14457"
+  },
+  "vulns/CVE-2026-1502.json": {
+   "bytes": 6101,
+   "retrieved_at": "2026-10-05T05:00:17Z",
+   "sha256": "0439847c5be90cba5fd4af305b703eef8a10bdde825d776ff1333d1cb501c4d2",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-1502"
+  },
+  "vulns/CVE-2026-15028.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:17Z",
+   "sha256": "96720bd243c28faabae551fd3ab7f93c755db0d927537f441c72fb431c174a18",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-15028"
+  },
+  "vulns/CVE-2026-1519.json": {
+   "bytes": 5715,
+   "retrieved_at": "2026-10-05T04:55:55Z",
+   "sha256": "74c5ee9e47e8e0c36dbbc742977b327394954d6dc38abec64b3b43577109a619",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-1519"
+  },
+  "vulns/CVE-2026-15308.json": {
+   "bytes": 6664,
+   "retrieved_at": "2026-10-05T05:00:17Z",
+   "sha256": "0ad72e0cf4729d8c39555c85983a2c7f94dcb9455b9b7703f5c57ffccf9a1d08",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-15308"
+  },
+  "vulns/CVE-2026-15310.json": {
+   "bytes": 6467,
+   "retrieved_at": "2026-10-05T05:00:17Z",
+   "sha256": "9a3afd5ada84e8a95d8ddc17305ea5c67e47f4a6088d1870eb3e3b0f5ee2276b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-15310"
+  },
+  "vulns/CVE-2026-15370.json": {
+   "bytes": 2504,
+   "retrieved_at": "2026-10-05T05:00:17Z",
+   "sha256": "1ba51b36c694a306cea7a7daa7fe60c961b03da453b0a2cedd50d5f00bc9f8be",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-15370"
+  },
+  "vulns/CVE-2026-15534.json": {
+   "bytes": 7018,
+   "retrieved_at": "2026-10-05T05:00:17Z",
+   "sha256": "9dfe84f019dceae9e1aa370d05b818a048b990b4be8ed97f68f682ea65824b67",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-15534"
+  },
+  "vulns/CVE-2026-15779.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:17Z",
+   "sha256": "97dfce87d27a038d3be7b23f2c8b0c28de40997346058a46919f0ab0a0099810",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-15779"
+  },
+  "vulns/CVE-2026-15806.json": {
+   "bytes": 7032,
+   "retrieved_at": "2026-10-05T05:00:17Z",
+   "sha256": "ae76872f01841ed01d3b2d1668126f50d6bc5b1aed8215bf61c7263bcf304c4e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-15806"
+  },
+  "vulns/CVE-2026-16389.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T04:55:51Z",
+   "sha256": "5e2ef8ddd9d173eca0c30c98c9fb039581106a8960fe1e19ec289a6866135e3d",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-16389"
+  },
+  "vulns/CVE-2026-1642.json": {
+   "bytes": 7111,
+   "retrieved_at": "2026-10-05T05:00:17Z",
+   "sha256": "0a501c1dded20ba890fed661d57179eb4770a18e63921523e71778e67d9b5765",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-1642"
+  },
+  "vulns/CVE-2026-16517.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:17Z",
+   "sha256": "1db10760ff7e9ba9bf78b06bd726170495b78da5efa67f06c5ea553e7d1ef4f4",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-16517"
+  },
+  "vulns/CVE-2026-17084.json": {
+   "bytes": 6574,
+   "retrieved_at": "2026-10-05T05:00:18Z",
+   "sha256": "b0df64aae41bfb9c33424be9f45f2c1682e44d1293927e3252fde75e1f088b2f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-17084"
+  },
+  "vulns/CVE-2026-17543.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:18Z",
+   "sha256": "eae9a4b3d4d98364530c1af8fcdf3ae0c7015560afbac905a6c35f53120e338e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-17543"
+  },
+  "vulns/CVE-2026-17544.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:18Z",
+   "sha256": "2483515fc2f30ddcd2274335fba9848f97b11f4d71b518667107742613a48ad1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-17544"
+  },
+  "vulns/CVE-2026-1757.json": {
+   "bytes": 1393,
+   "retrieved_at": "2026-10-05T05:00:18Z",
+   "sha256": "e7ee371c9c8be047a6e357415b2332139eb7349ed4025442497037ed8558be34",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-1757"
+  },
+  "vulns/CVE-2026-18374.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:18Z",
+   "sha256": "b6b5ee12d5ed652af9b3ae0c8ea14e2ff63aea433816c46e128df6648cad8bc2",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-18374"
+  },
+  "vulns/CVE-2026-18495.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:18Z",
+   "sha256": "3e002e65b2d0f7b7a6cf4654bb9cdddb787e815c3883510dc0a832156210b5e0",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-18495"
+  },
+  "vulns/CVE-2026-18503.json": {
+   "bytes": 5622,
+   "retrieved_at": "2026-10-05T05:00:18Z",
+   "sha256": "99b23eee499738fdc94f1ee6ef4a65c6088e7259e09b30f505791223df2e5670",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-18503"
+  },
+  "vulns/CVE-2026-18798.json": {
+   "bytes": 17249,
+   "retrieved_at": "2026-10-05T05:00:18Z",
+   "sha256": "fc9a496152d5f477823339e9de77f0c35ceae54e664de610989b15dbd18ba7b6",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-18798"
+  },
+  "vulns/CVE-2026-18924.json": {
+   "bytes": 4364,
+   "retrieved_at": "2026-10-05T05:00:18Z",
+   "sha256": "12a02d29be87de88ba7cc194aa52d7260bbc40da45d52456f3f20e2aa5871a6f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-18924"
+  },
+  "vulns/CVE-2026-19033.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:18Z",
+   "sha256": "dc3a0e46a970cf955c39cd5e48aca79d895bf87fd654e68d542c8aee75e43c77",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-19033"
+  },
+  "vulns/CVE-2026-1933.json": {
+   "bytes": 3816,
+   "retrieved_at": "2026-10-05T05:00:19Z",
+   "sha256": "f1a166d7d366c34fda1cc424299fa33607e0f6acde93c08baea94eb7b44c67d0",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-1933"
+  },
+  "vulns/CVE-2026-19445.json": {
+   "bytes": 6167,
+   "retrieved_at": "2026-10-05T05:00:19Z",
+   "sha256": "44f668b67394cee35f5da1d017a09c881283644e461084b0cf516e4ae7c72ad2",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-19445"
+  },
+  "vulns/CVE-2026-19487.json": {
+   "bytes": 5525,
+   "retrieved_at": "2026-10-05T05:00:19Z",
+   "sha256": "b06f59aff731b330151eaa5be69d2db59fc8e577908a62377618b1fa4b8ee556",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-19487"
+  },
+  "vulns/CVE-2026-19499.json": {
+   "bytes": 2346,
+   "retrieved_at": "2026-10-05T05:00:19Z",
+   "sha256": "548a7ffebeeff02fe82bd291646f4139117fefc4cb2126a8f0255071345f2d92",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-19499"
+  },
+  "vulns/CVE-2026-19542.json": {
+   "bytes": 13302,
+   "retrieved_at": "2026-10-05T05:00:19Z",
+   "sha256": "cbb049f0f646f7518fbc458edbe67d178a69256fb8a35096bc3a2b2e72e6e25e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-19542"
+  },
+  "vulns/CVE-2026-19553.json": {
+   "bytes": 6811,
+   "retrieved_at": "2026-10-05T05:00:19Z",
+   "sha256": "c9bf6c14c9f6d01ad32da49a78944604d53d5d1b0b63792d71818ad9c6493661",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-19553"
+  },
+  "vulns/CVE-2026-1965.json": {
+   "bytes": 7585,
+   "retrieved_at": "2026-10-05T05:00:19Z",
+   "sha256": "26d4682cfe053565cd5d3c371ef75978f1df828ad24a778b167e3354b9572b44",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-1965"
+  },
+  "vulns/CVE-2026-19662.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:19Z",
+   "sha256": "217fc74d52492361ce938bca112967b7e82feb328040b9389eab1ce0c2c8bef2",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-19662"
+  },
+  "vulns/CVE-2026-19666.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:19Z",
+   "sha256": "b1d7396fdbfaba234aca8fe0faf32430e4d05799679c231137a0cc4636d79a04",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-19666"
+  },
+  "vulns/CVE-2026-19667.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:19Z",
+   "sha256": "8d54f7ba8b11147f2786a14eff5bab6988087112a3f75c979337aef06648fb23",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-19667"
+  },
+  "vulns/CVE-2026-19668.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:20Z",
+   "sha256": "95a8e102630f1f9bef2570fe411deffb298ec032e4b6e527f663ea80868dea12",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-19668"
+  },
+  "vulns/CVE-2026-19672.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:20Z",
+   "sha256": "196dfa0717d355301eaaafdb10c538abdfdd9087b15060d2ae1c37e3bf17cacc",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-19672"
+  },
+  "vulns/CVE-2026-19931.json": {
+   "bytes": 3726,
+   "retrieved_at": "2026-10-05T05:00:20Z",
+   "sha256": "a0fcd437a216636b4bd213eddb5243abb32003cee4a17d6ec1246ab157222e4f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-19931"
+  },
+  "vulns/CVE-2026-19941.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:20Z",
+   "sha256": "888272b4a4c04e43550269c6ba62f682402458c08e9daa00804f6c9ab25b4383",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-19941"
+  },
+  "vulns/CVE-2026-22795.json": {
+   "bytes": 15418,
+   "retrieved_at": "2026-10-05T05:00:20Z",
+   "sha256": "7705dc0c6bfbc8990760ab3afe1e3fc2a2bcd24a2fb2d62cedfe9624a5fbd001",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-22795"
+  },
+  "vulns/CVE-2026-22796.json": {
+   "bytes": 16202,
+   "retrieved_at": "2026-10-05T05:00:20Z",
+   "sha256": "5fa14e5faa51ffb68dd1d028c1bad7228c110e07a583fce4c189ca447a55a4ba",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-22796"
+  },
+  "vulns/CVE-2026-2297.json": {
+   "bytes": 56980,
+   "retrieved_at": "2026-10-05T05:00:20Z",
+   "sha256": "0d8c70f7045540949cca1f595a324ccebab2ec303437f86ceb2c270ffc8ab089",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-2297"
+  },
+  "vulns/CVE-2026-2340.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:20Z",
+   "sha256": "393c3fe13953bf5100e8ec2a02c7a06b1a58dc211fc65a39bfb8d94915f46ccf",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-2340"
+  },
+  "vulns/CVE-2026-23918.json": {
+   "bytes": 2297,
+   "retrieved_at": "2026-10-05T04:55:54Z",
+   "sha256": "260cd10fc68387d647ecd491e570f6ae5d614f82f8b62a7454fc2ce574041c85",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-23918"
+  },
+  "vulns/CVE-2026-24072.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:20Z",
+   "sha256": "1ece9b77529199a1df741337ec2b32587554d0719d0b579e0763adb2c9a7f875",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-24072"
+  },
+  "vulns/CVE-2026-24515.json": {
+   "bytes": 2295,
+   "retrieved_at": "2026-10-05T05:00:20Z",
+   "sha256": "8bbcaf64c7bfbf8dc5aa319491b5061aeb824fcaec4477d47f0b25ea71907654",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-24515"
+  },
+  "vulns/CVE-2026-25210.json": {
+   "bytes": 2480,
+   "retrieved_at": "2026-10-05T04:55:59Z",
+   "sha256": "182c7636bc2b55cff6c4ee040d31574e8445faa1c45b2ffa2fecae923b7c8b4a",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-25210"
+  },
+  "vulns/CVE-2026-2673.json": {
+   "bytes": 16484,
+   "retrieved_at": "2026-10-05T05:00:20Z",
+   "sha256": "f6eeeca80eaa95bccf85b27c45bdd21b187392b30872b8f0735d6a04df690b8f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-2673"
+  },
+  "vulns/CVE-2026-27171.json": {
+   "bytes": 1935,
+   "retrieved_at": "2026-10-05T05:00:21Z",
+   "sha256": "982b2706fbc7b50cb86790e6d9123e34370ab6de7a0a6105ac567fbd3d2e20e8",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-27171"
+  },
+  "vulns/CVE-2026-27651.json": {
+   "bytes": 10486,
+   "retrieved_at": "2026-10-05T05:00:21Z",
+   "sha256": "0024e40d33c1591c76a44e3190c7586603a0650a2dd26f0d99a856a848daf04a",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-27651"
+  },
+  "vulns/CVE-2026-27654.json": {
+   "bytes": 11259,
+   "retrieved_at": "2026-10-05T04:55:54Z",
+   "sha256": "57f0c1f424d348a791302185d1d122c8b71ef5d9ca883bbffa7e24f457350aab",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-27654"
+  },
+  "vulns/CVE-2026-27784.json": {
+   "bytes": 6131,
+   "retrieved_at": "2026-10-05T05:00:21Z",
+   "sha256": "b64d3565aa314851fe78388e3696eadc93845d3b0ce3619807d142f03fe5a118",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-27784"
+  },
+  "vulns/CVE-2026-2781.json": {
+   "bytes": 1598,
+   "retrieved_at": "2026-10-05T05:00:21Z",
+   "sha256": "643230f938927f5ade62cf362bb8a6ad19c7d594bc263c4d8c98b7eb69847e6c",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-2781"
+  },
+  "vulns/CVE-2026-27820.json": {
+   "bytes": 2494,
+   "retrieved_at": "2026-10-05T05:00:21Z",
+   "sha256": "bcd72f4765d9267930cb8a0e5facb09714639085c29c5a969390abd7e9cac1d8",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-27820"
+  },
+  "vulns/CVE-2026-28387.json": {
+   "bytes": 8338,
+   "retrieved_at": "2026-10-05T05:00:21Z",
+   "sha256": "e39895ad74f20a2522a2d344f87c3e3b164347c20fd170bf30017cf73a8c1cc5",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-28387"
+  },
+  "vulns/CVE-2026-28388.json": {
+   "bytes": 10859,
+   "retrieved_at": "2026-10-05T04:55:51Z",
+   "sha256": "32d957629f30683deb4655ad47ae02edeef89899ff6716f77c31e172d2923473",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-28388"
+  },
+  "vulns/CVE-2026-28389.json": {
+   "bytes": 19256,
+   "retrieved_at": "2026-10-05T05:00:21Z",
+   "sha256": "11d4aaf4252df19b64dad6849c286a79c39c94a546824523df029d156e117523",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-28389"
+  },
+  "vulns/CVE-2026-28390.json": {
+   "bytes": 15915,
+   "retrieved_at": "2026-10-05T05:00:21Z",
+   "sha256": "64e63a013d3e05b588b1b4cd2b506fcdb1b1d5b349a7731599b5f90ee5ce3bb4",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-28390"
+  },
+  "vulns/CVE-2026-28753.json": {
+   "bytes": 8729,
+   "retrieved_at": "2026-10-05T05:00:21Z",
+   "sha256": "135d1a01b5917f15145a08c0820125fca9c89a00bea3f9749c5154fbec39968d",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-28753"
+  },
+  "vulns/CVE-2026-28780.json": {
+   "bytes": 3355,
+   "retrieved_at": "2026-10-05T05:00:21Z",
+   "sha256": "d8078115c0cceb13164b5817f0341662e80c3642225329521f8251caa3497a74",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-28780"
+  },
+  "vulns/CVE-2026-29167.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:22Z",
+   "sha256": "e0f3b0b83ba0a12ac5231b60837c446c0cfdf73db9e6dccb64c1738ea223ba0e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-29167"
+  },
+  "vulns/CVE-2026-29168.json": {
+   "bytes": 2025,
+   "retrieved_at": "2026-10-05T05:00:22Z",
+   "sha256": "b5b349c22861583ffd1937dcf36ebcacee8977c9326482fd99006560e827e1ce",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-29168"
+  },
+  "vulns/CVE-2026-29169.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:22Z",
+   "sha256": "8d03e38fd885e046c4ae83295a4dcb76cd7ad1bb31c8ee277b5a359fd238a8f9",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-29169"
+  },
+  "vulns/CVE-2026-29170.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:22Z",
+   "sha256": "432139a6f6f6da2ab3d24de563ef570c7486e14c5cef7c1afde1e65e9747ec61",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-29170"
+  },
+  "vulns/CVE-2026-3012.json": {
+   "bytes": 4180,
+   "retrieved_at": "2026-10-05T05:00:22Z",
+   "sha256": "5027fbf25804dc618412a43f07436f5c2229f83fbdbc4f6f10cbac97177ee106",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-3012"
+  },
+  "vulns/CVE-2026-3039.json": {
+   "bytes": 4434,
+   "retrieved_at": "2026-10-05T04:55:54Z",
+   "sha256": "cae8e063e686475cf211a04f26ae0ba874ef2c876dcd856dc683df257fce08d0",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-3039"
+  },
+  "vulns/CVE-2026-3104.json": {
+   "bytes": 2453,
+   "retrieved_at": "2026-10-05T05:00:22Z",
+   "sha256": "27f3e7b6e15284662ecbc9fa15cc1ec788091e2150b5ee873ce79c130c524c2b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-3104"
+  },
+  "vulns/CVE-2026-3119.json": {
+   "bytes": 2274,
+   "retrieved_at": "2026-10-05T05:00:22Z",
+   "sha256": "b711840f5d0962dce9411f5bfe6adbfcd4766c318b502ae97c4cef93faa146a8",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-3119"
+  },
+  "vulns/CVE-2026-31789.json": {
+   "bytes": 11812,
+   "retrieved_at": "2026-10-05T05:00:22Z",
+   "sha256": "d35c99cb84e2f76fb50a6140bf45a1eae338e85c451cea392315a79a0f265fc7",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-31789"
+  },
+  "vulns/CVE-2026-31790.json": {
+   "bytes": 10478,
+   "retrieved_at": "2026-10-05T05:00:22Z",
+   "sha256": "c156384e34ebf88c46c463f561bc6f3cacbb194ed9546fd0c9b0592a1e73d18e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-31790"
+  },
+  "vulns/CVE-2026-3238.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T04:55:56Z",
+   "sha256": "6a40a943fabb57b110354409f0a14e56c0022651527e064a7f39edf4114e65e5",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-3238"
+  },
+  "vulns/CVE-2026-32647.json": {
+   "bytes": 7812,
+   "retrieved_at": "2026-10-05T05:00:22Z",
+   "sha256": "5c5f4ccb420869599f2f85e27bfb02815fa262dcbf7c982d5ff1ff9a06dec87b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-32647"
+  },
+  "vulns/CVE-2026-3276.json": {
+   "bytes": 25527,
+   "retrieved_at": "2026-10-05T05:00:23Z",
+   "sha256": "5f8e7389b97c1d93bedc2c9f4ef19423b81f6b4c18e95396935783cbbec9b837",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-3276"
+  },
+  "vulns/CVE-2026-32776.json": {
+   "bytes": 2589,
+   "retrieved_at": "2026-10-05T05:00:23Z",
+   "sha256": "24a129e30a00e33f11513abd75430ee672c3f95d442baf3a1d4186e18b997fe1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-32776"
+  },
+  "vulns/CVE-2026-32777.json": {
+   "bytes": 2703,
+   "retrieved_at": "2026-10-05T05:00:23Z",
+   "sha256": "fff07f7bc6c5c6490ba88c561e8313c8bfbca7634f1bbb502460ffab999e0f3f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-32777"
+  },
+  "vulns/CVE-2026-32778.json": {
+   "bytes": 2621,
+   "retrieved_at": "2026-10-05T05:00:23Z",
+   "sha256": "821f69ba840e6355269e93c7a764977640484a51b4910a92639cb1ce4c1d6467",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-32778"
+  },
+  "vulns/CVE-2026-33006.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:23Z",
+   "sha256": "e6d0ab35d371c12629db74e08612bb7ef245107fc54f6c1bd4777d09973c3683",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-33006"
+  },
+  "vulns/CVE-2026-33007.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:23Z",
+   "sha256": "bb54128b4d2986d0ff1374fdadbee3bac6207db19fc5c1e07f233fa5ba69ddbf",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-33007"
+  },
+  "vulns/CVE-2026-33523.json": {
+   "bytes": 1991,
+   "retrieved_at": "2026-10-05T05:00:23Z",
+   "sha256": "1261f5389d8d871b58178faa53b1fafd695978a501a5e1886fe0b68a2257b87b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-33523"
+  },
+  "vulns/CVE-2026-33845.json": {
+   "bytes": 8886,
+   "retrieved_at": "2026-10-05T05:00:23Z",
+   "sha256": "fd30ead5f7887ca1935e8d0338f357d0202d6216cbccfa4f41b965b13ebf0c78",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-33845"
+  },
+  "vulns/CVE-2026-33846.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T04:55:51Z",
+   "sha256": "c4b630563036f12cb473ec796a52fdb7fc968a2469d5f62f044b35b2641f4abf",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-33846"
+  },
+  "vulns/CVE-2026-33857.json": {
+   "bytes": 1940,
+   "retrieved_at": "2026-10-05T05:00:23Z",
+   "sha256": "8be7d43684f00082c662352b1b7774324e70d8fb7b68aa9ba52a143405951da8",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-33857"
+  },
+  "vulns/CVE-2026-34032.json": {
+   "bytes": 2007,
+   "retrieved_at": "2026-10-05T05:00:23Z",
+   "sha256": "e3012252e8aec21986dcd6f47d1ebcbcbda3ba7e4e9fed1cf4c2cdd67fd275c6",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-34032"
+  },
+  "vulns/CVE-2026-34059.json": {
+   "bytes": 1945,
+   "retrieved_at": "2026-10-05T05:00:24Z",
+   "sha256": "3ce1c83edd78c6cdeb2a8b71771c0a41df61b79b9318f22b54f0ecabd30d0565",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-34059"
+  },
+  "vulns/CVE-2026-34180.json": {
+   "bytes": 17090,
+   "retrieved_at": "2026-10-05T05:00:24Z",
+   "sha256": "bf701c4417414db45d5d54b7001e025bcb1c23e6672036a40ee52f23db83e2ee",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-34180"
+  },
+  "vulns/CVE-2026-34181.json": {
+   "bytes": 7827,
+   "retrieved_at": "2026-10-05T05:00:24Z",
+   "sha256": "97971c78fc8595d1e0933195756f548379e51734f9265d6cfc3499475afe1776",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-34181"
+  },
+  "vulns/CVE-2026-34182.json": {
+   "bytes": 11276,
+   "retrieved_at": "2026-10-05T05:00:24Z",
+   "sha256": "67c73eaf3acdf785ac8d16649a3166103ec82f720a29a0d9e26ecdb81608e1de",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-34182"
+  },
+  "vulns/CVE-2026-34183.json": {
+   "bytes": 26466,
+   "retrieved_at": "2026-10-05T05:00:24Z",
+   "sha256": "fd8f47236f29a078ec7e53a3ea5504c2af43c41a4b684df65c453219b1086abf",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-34183"
+  },
+  "vulns/CVE-2026-34355.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:24Z",
+   "sha256": "e3d3f2e9e37394fbe78e893c643e17a69cb3fa35c7b532e44a90b86284395fd3",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-34355"
+  },
+  "vulns/CVE-2026-34356.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:24Z",
+   "sha256": "10f1df9135a105feffb1d635f00769d8ca79fa8fb595d96fa62f2ac19914ac62",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-34356"
+  },
+  "vulns/CVE-2026-3446.json": {
+   "bytes": 13886,
+   "retrieved_at": "2026-10-05T05:00:24Z",
+   "sha256": "1001128acd662c4678fbc0de9e550788de1f538590a623440a4f5b86be76f49f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-3446"
+  },
+  "vulns/CVE-2026-34743.json": {
+   "bytes": 4057,
+   "retrieved_at": "2026-10-05T04:55:53Z",
+   "sha256": "d67c013e1b677418982beb3a8ee1f5d36eedb78c1e17eb9cb60e62f350b761d5",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-34743"
+  },
+  "vulns/CVE-2026-3479.json": {
+   "bytes": 4981,
+   "retrieved_at": "2026-10-05T05:00:24Z",
+   "sha256": "35d2a1549821bd8a1d0372868ec067b79216fca61999a3a00a662811d1ee904e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-3479"
+  },
+  "vulns/CVE-2026-3497.json": {
+   "bytes": 6328,
+   "retrieved_at": "2026-10-05T04:55:51Z",
+   "sha256": "03a87a2aa0a325e4d091773268d50f174c29c3b0e87dae697603a9f03afdffa8",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-3497"
+  },
+  "vulns/CVE-2026-35189.json": {
+   "bytes": 31827,
+   "retrieved_at": "2026-10-05T05:00:25Z",
+   "sha256": "ed4f2585bb6b20397fa5880d33ed3ced91949ced7e9669d8ebb02eba059c94b6",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-35189"
+  },
+  "vulns/CVE-2026-35191.json": {
+   "bytes": 10052,
+   "retrieved_at": "2026-10-05T05:00:25Z",
+   "sha256": "de15f44ff3b5e3bbf64ea264286457576b5138ba366fbd0e7ef710833b1dbe1e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-35191"
+  },
+  "vulns/CVE-2026-35385.json": {
+   "bytes": 6392,
+   "retrieved_at": "2026-10-05T04:55:51Z",
+   "sha256": "6c555e78cc0b2d000ff7b4b7bb94c8bdf4bf32f1ba072f837dfa8433d58d6a1e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-35385"
+  },
+  "vulns/CVE-2026-35386.json": {
+   "bytes": 3484,
+   "retrieved_at": "2026-10-05T05:00:25Z",
+   "sha256": "0111f6fdc74a6a39fc050ceb30ef9b3fdca51295a69f7cd138beee5bfb869da0",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-35386"
+  },
+  "vulns/CVE-2026-35387.json": {
+   "bytes": 3417,
+   "retrieved_at": "2026-10-05T04:55:52Z",
+   "sha256": "234c0b03746f09fa73a7aa1e53d3906588be2e93a4b756fe0bbf503bff6e3be4",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-35387"
+  },
+  "vulns/CVE-2026-35388.json": {
+   "bytes": 3535,
+   "retrieved_at": "2026-10-05T05:00:25Z",
+   "sha256": "817211407fc8131ce3d8fd075f8fb837b9b3a835a85da3c3b4359343bac5788e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-35388"
+  },
+  "vulns/CVE-2026-35414.json": {
+   "bytes": 3797,
+   "retrieved_at": "2026-10-05T05:00:25Z",
+   "sha256": "f0df1cf88804bd58b785ca9203c05b5022bb9a46220a76bc26ce0cfc9879f575",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-35414"
+  },
+  "vulns/CVE-2026-35535.json": {
+   "bytes": 11281,
+   "retrieved_at": "2026-10-05T04:55:52Z",
+   "sha256": "c8def4d757703e2a12378190c0eab8fd77e59a895b58af5a7e0ab9b5f9d40e28",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-35535"
+  },
+  "vulns/CVE-2026-3591.json": {
+   "bytes": 2375,
+   "retrieved_at": "2026-10-05T05:00:25Z",
+   "sha256": "0b1d7dc6f22eee0d1e4809bc1c095cffd8e7de212f5f0a901017610194d9678c",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-3591"
+  },
+  "vulns/CVE-2026-3592.json": {
+   "bytes": 3130,
+   "retrieved_at": "2026-10-05T05:00:25Z",
+   "sha256": "3d436f65523cb687d24e330b6db65e4ebdb133e37ba00f6902d6af38c8be0bc6",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-3592"
+  },
+  "vulns/CVE-2026-3593.json": {
+   "bytes": 2442,
+   "retrieved_at": "2026-10-05T05:00:25Z",
+   "sha256": "7fbff36838d4e52ba289c955bf43d445f46bc1bd33444a1e046f8c11d0be4586",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-3593"
+  },
+  "vulns/CVE-2026-3644.json": {
+   "bytes": 5963,
+   "retrieved_at": "2026-10-05T05:00:25Z",
+   "sha256": "940679ff9305e5495ca3918463ab004e903ab3ae62445221feb8fa968d129325",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-3644"
+  },
+  "vulns/CVE-2026-36849.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:25Z",
+   "sha256": "83d8c78c078004dcba98bbc722f1fead0e92e7c5205390ff04c06ec4a2eeaae0",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-36849"
+  },
+  "vulns/CVE-2026-3731.json": {
+   "bytes": 3790,
+   "retrieved_at": "2026-10-05T04:56:00Z",
+   "sha256": "464f9cb349f691c3aac55533c624be537d5b83dafb48a6326ccce34544071a72",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-3731"
+  },
+  "vulns/CVE-2026-3783.json": {
+   "bytes": 4986,
+   "retrieved_at": "2026-10-05T05:00:25Z",
+   "sha256": "cd00611a9a7bc2182e6c3f55a8667690e16e20d3e54854a2522983399aff821d",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-3783"
+  },
+  "vulns/CVE-2026-3784.json": {
+   "bytes": 6890,
+   "retrieved_at": "2026-10-05T05:00:26Z",
+   "sha256": "8e48779f86a037ba6d781b79973a6055e458aab4e1b4dedadf1ecb60f6501c9f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-3784"
+  },
+  "vulns/CVE-2026-3805.json": {
+   "bytes": 2373,
+   "retrieved_at": "2026-10-05T05:00:26Z",
+   "sha256": "801689ac8ca1bbafd2528dfe2727dccb527f3a704937510b3d61d79273f7ee64",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-3805"
+  },
+  "vulns/CVE-2026-3832.json": {
+   "bytes": 7256,
+   "retrieved_at": "2026-10-05T05:00:26Z",
+   "sha256": "e5f6f3f4320bcb9ebe7fdb9065b8e413c403ea6f96a57b8a76cb54cf67649f46",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-3832"
+  },
+  "vulns/CVE-2026-3833.json": {
+   "bytes": 8888,
+   "retrieved_at": "2026-10-05T05:00:26Z",
+   "sha256": "c3b9da764a67e1c6e705dfccb59b5b6a29490f4ad8489d45e3170f500944bcf0",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-3833"
+  },
+  "vulns/CVE-2026-4046.json": {
+   "bytes": 12534,
+   "retrieved_at": "2026-10-05T04:55:59Z",
+   "sha256": "1b212742b3bffdfc71f11497d7bed1121f9d37ef3bf70c4d8712d6bd138adb93",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-4046"
+  },
+  "vulns/CVE-2026-40460.json": {
+   "bytes": 3828,
+   "retrieved_at": "2026-10-05T05:00:26Z",
+   "sha256": "7c8fa0d447eecdfa8438b827eea6d12dd929b2e89e576242740cc6d358b1019e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-40460"
+  },
+  "vulns/CVE-2026-40684.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:26Z",
+   "sha256": "09f010549edbfef2566d9e3fe5a65442bc3ac4d09a5679e8118abb2ae3c0849b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-40684"
+  },
+  "vulns/CVE-2026-40685.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:26Z",
+   "sha256": "a6031342216dfefdaa52783b2a808cf566523ffe7cf21e864459e1cc2d2b3848",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-40685"
+  },
+  "vulns/CVE-2026-40686.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:26Z",
+   "sha256": "53fab755a78f62caf633329a19d293bb13f835902da6277fb70d694233b18ca7",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-40686"
+  },
+  "vulns/CVE-2026-40687.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:26Z",
+   "sha256": "7767d51619564c43e3b11791b64b1a15215b867367fdefbf747c3d75ff85a10e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-40687"
+  },
+  "vulns/CVE-2026-40701.json": {
+   "bytes": 4589,
+   "retrieved_at": "2026-10-05T05:00:27Z",
+   "sha256": "0710235606cb8a4f8bea684a5b34b88ed9f0b1d8f2fff9d022c53bf2f192c961",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-40701"
+  },
+  "vulns/CVE-2026-41080.json": {
+   "bytes": 2473,
+   "retrieved_at": "2026-10-05T05:00:27Z",
+   "sha256": "ad51510e5ab48d3df57abf311b1c909b836f8886f420d3f7ad5cc4a12af900b6",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-41080"
+  },
+  "vulns/CVE-2026-4111.json": {
+   "bytes": 1455,
+   "retrieved_at": "2026-10-05T05:00:27Z",
+   "sha256": "2d3d5321cdb2c6c5271258113af200b9dcf132e9ef1899d06fbf24990d12faaa",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-4111"
+  },
+  "vulns/CVE-2026-41316.json": {
+   "bytes": 4099,
+   "retrieved_at": "2026-10-05T04:55:57Z",
+   "sha256": "a2d199195454c9cdd8ce207d5b38f9f0dbf74deb467a258a1e6f469759e93bea",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-41316"
+  },
+  "vulns/CVE-2026-42009.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T04:55:51Z",
+   "sha256": "2733f4d606a1a672b176ec134cae21331ea1f98c974ec63849261c4a417cb838",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42009"
+  },
+  "vulns/CVE-2026-42010.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:27Z",
+   "sha256": "a438e14fc9f2a3d1a8997362d30aecf8c4cbaf5351b14f51312b1df2ed310021",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42010"
+  },
+  "vulns/CVE-2026-42011.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:27Z",
+   "sha256": "53372b63016af507660f87e462e43cbc9de278c0b6d787e736862bb83de2abeb",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42011"
+  },
+  "vulns/CVE-2026-42012.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:27Z",
+   "sha256": "b21668160003a1bbea8ccc97e0d1a38277fba4886b23c8b7474f65f2a29d6cd9",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42012"
+  },
+  "vulns/CVE-2026-42013.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:27Z",
+   "sha256": "48ea4a5698ee846a7f3ca43cad4c0c2ff19a95f11377dba476770195b2551f46",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42013"
+  },
+  "vulns/CVE-2026-42014.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:27Z",
+   "sha256": "a2be9585b17a5d574ff45764e2feb11ac9a7fdbe8936835b575a598ecbe824bd",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42014"
+  },
+  "vulns/CVE-2026-42015.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:27Z",
+   "sha256": "421c235cda559f401bc0a4c08630fea088c7e0dbcd86f40b70d24791b2177aaa",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42015"
+  },
+  "vulns/CVE-2026-42055.json": {
+   "bytes": 9930,
+   "retrieved_at": "2026-10-05T04:55:54Z",
+   "sha256": "ac4dd5ac1213ed3652e62c1abb3ddd30603e9585feb7eff9c890200e5ff34ffa",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42055"
+  },
+  "vulns/CVE-2026-4224.json": {
+   "bytes": 11608,
+   "retrieved_at": "2026-10-05T04:55:56Z",
+   "sha256": "79912a3e600d9537b63c9516439bc17fc08a44578789e7a12a39b1280890dd39",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-4224"
+  },
+  "vulns/CVE-2026-42245.json": {
+   "bytes": 3354,
+   "retrieved_at": "2026-10-05T05:00:27Z",
+   "sha256": "27d897e1c0a972d69f305ee75d37528d85de8fea4278795013d52d8cbe444071",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42245"
+  },
+  "vulns/CVE-2026-42246.json": {
+   "bytes": 5433,
+   "retrieved_at": "2026-10-05T05:00:28Z",
+   "sha256": "d22d61d9c5ee5d877922d1962be66120f718c0bd5691e728b39fffc216f4d4c0",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42246"
+  },
+  "vulns/CVE-2026-42250.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T04:55:53Z",
+   "sha256": "35d85a8a279d0d1bf193f002e170ddcbbf5602fcf15015667d4970339bb3e2f5",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42250"
+  },
+  "vulns/CVE-2026-42256.json": {
+   "bytes": 3367,
+   "retrieved_at": "2026-10-05T05:00:28Z",
+   "sha256": "4e83df6c8799e4f9f3f6bf4666904740d51a47b9268baee208d05a2bf5049070",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42256"
+  },
+  "vulns/CVE-2026-42257.json": {
+   "bytes": 2916,
+   "retrieved_at": "2026-10-05T05:00:28Z",
+   "sha256": "ea130b0a26e04f901fd1d5abe91a136dacac857b0e90aa6a562bdb718bc28d57",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42257"
+  },
+  "vulns/CVE-2026-42258.json": {
+   "bytes": 4654,
+   "retrieved_at": "2026-10-05T05:00:28Z",
+   "sha256": "d0324c5587cefb6ccfa297e5ef5db2621edf8dbfff5dde2bb79b30a7b2d184e0",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42258"
+  },
+  "vulns/CVE-2026-42356.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:28Z",
+   "sha256": "53669500ad4642c7d8a0c06904b103cb538c63b35c393d4c7ef604299818e75d",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42356"
+  },
+  "vulns/CVE-2026-42496.json": {
+   "bytes": 3052,
+   "retrieved_at": "2026-10-05T05:00:28Z",
+   "sha256": "5b8143cb16cf014a691ea3e5e5d1d65a7dfbf0433123ede4fa2223e5f0834985",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42496"
+  },
+  "vulns/CVE-2026-42497.json": {
+   "bytes": 2552,
+   "retrieved_at": "2026-10-05T05:00:28Z",
+   "sha256": "bf3ce9ef06b9827f3b4565ac4ab2f4a4c50dd589fdb0359d0b4b68228ca6c543",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42497"
+  },
+  "vulns/CVE-2026-42528.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:28Z",
+   "sha256": "816dd247ba2109a75c8990c683b3fc4563a3eb6f04b39fef4356e84c67ef0263",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42528"
+  },
+  "vulns/CVE-2026-42533.json": {
+   "bytes": 4486,
+   "retrieved_at": "2026-10-05T05:00:28Z",
+   "sha256": "7348b39189005f541b4cee4c60c1bcc034b4b752636589e68f4b02ca67a37389",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42533"
+  },
+  "vulns/CVE-2026-42535.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:28Z",
+   "sha256": "20d58d974cce85270c5ef5d05314ce661249d49c93b5927f9d7da8107c64fa52",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42535"
+  },
+  "vulns/CVE-2026-42536.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:29Z",
+   "sha256": "bc66a8ee90d7f1fd125df3a64f766cc425ebe36e4cb2a66a65be58207d72749e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42536"
+  },
+  "vulns/CVE-2026-42764.json": {
+   "bytes": 6179,
+   "retrieved_at": "2026-10-05T05:00:29Z",
+   "sha256": "daa0f66947ef25f00d7215e8c570ef595cbf206a8d36fd22dcb6ca1d73fe5eb2",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42764"
+  },
+  "vulns/CVE-2026-42766.json": {
+   "bytes": 10339,
+   "retrieved_at": "2026-10-05T05:00:29Z",
+   "sha256": "c37bf91f04d20c3a1dd434d82f37d96a0c7cb82ff84dfbf375d0da9784c115ff",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42766"
+  },
+  "vulns/CVE-2026-42767.json": {
+   "bytes": 10593,
+   "retrieved_at": "2026-10-05T05:00:29Z",
+   "sha256": "d779e7625138be7cbef2f2c0b3434225e401a84f265a75961f0e6f819b23625b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42767"
+  },
+  "vulns/CVE-2026-42768.json": {
+   "bytes": 12759,
+   "retrieved_at": "2026-10-05T05:00:29Z",
+   "sha256": "5fc4955a53540fd2adc9de8b352eea093e0dde36e6252578f00361ea695cbbdf",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42768"
+  },
+  "vulns/CVE-2026-42769.json": {
+   "bytes": 9623,
+   "retrieved_at": "2026-10-05T05:00:29Z",
+   "sha256": "f096df4ee36bbbd5a761007a7fd3efc45bdfc4b491564aad6c6e257b95e844db",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42769"
+  },
+  "vulns/CVE-2026-42770.json": {
+   "bytes": 9682,
+   "retrieved_at": "2026-10-05T05:00:29Z",
+   "sha256": "335bd6945957cee1df464e7b8be648930c7d17b880f378b730763dd533c4bc38",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42770"
+  },
+  "vulns/CVE-2026-42772.json": {
+   "bytes": 133207,
+   "retrieved_at": "2026-10-05T05:00:29Z",
+   "sha256": "6f4587b6faa3e589fad2013ba6f3a749cab258a14929ff3e6286d2097c9cf74f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42772"
+  },
+  "vulns/CVE-2026-42934.json": {
+   "bytes": 10414,
+   "retrieved_at": "2026-10-05T05:00:30Z",
+   "sha256": "766c121c9e8fccc71747350d82e23806e329eb7da95340ff307a6e32b0c61439",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42934"
+  },
+  "vulns/CVE-2026-42945.json": {
+   "bytes": 11851,
+   "retrieved_at": "2026-10-05T05:00:30Z",
+   "sha256": "a7f1cc89f8083057b5726e73f6138532171d53eaa27bf532b6075ee2f87bfaf1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42945"
+  },
+  "vulns/CVE-2026-42946.json": {
+   "bytes": 7110,
+   "retrieved_at": "2026-10-05T05:00:30Z",
+   "sha256": "98928f05e2a47dbac0c89b040fe8535344a25ab3a6191ed329a0fc5cba963970",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-42946"
+  },
+  "vulns/CVE-2026-4360.json": {
+   "bytes": 6191,
+   "retrieved_at": "2026-10-05T05:00:30Z",
+   "sha256": "4ca337fecc885c0134d5a429fbaa5dda1648bc1edb7b110fc3a0eb1628a73eff",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-4360"
+  },
+  "vulns/CVE-2026-43951.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:30Z",
+   "sha256": "63efddf59ff1f6d4485651c5ff1ca99599cf395286cc733e336963b0eec40a39",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-43951"
+  },
+  "vulns/CVE-2026-43964.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T04:55:56Z",
+   "sha256": "6535f86337f8c07e3f7811f6f0ee68ab28d4dcd5c8f226b2b85523e77b959508",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-43964"
+  },
+  "vulns/CVE-2026-4408.json": {
+   "bytes": 4157,
+   "retrieved_at": "2026-10-05T05:00:30Z",
+   "sha256": "5a09553bb923164d9bf1c6f77a4d18a56b247053389935512f85b06da9b79f92",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-4408"
+  },
+  "vulns/CVE-2026-44119.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:30Z",
+   "sha256": "036118457ee0010426c5b43cc90f4171f3fb83472f487983c1588352c1f8f663",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-44119"
+  },
+  "vulns/CVE-2026-44185.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:30Z",
+   "sha256": "d3dee4546f5e2d9c5ac05d05826115f1ad4b87b86b4ff872d193fb641f3e50d3",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-44185"
+  },
+  "vulns/CVE-2026-44186.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:30Z",
+   "sha256": "6863d8a240a36e76f0638c7b5bd12834c98a7174bc753b8ab0ff9b6cf5af86de",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-44186"
+  },
+  "vulns/CVE-2026-4424.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T04:55:53Z",
+   "sha256": "61dcce82e1df45285e64bc304e3ed9e63f737df3c8f58ae67608d0e80d0c11f1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-4424"
+  },
+  "vulns/CVE-2026-4426.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:30Z",
+   "sha256": "35c73af1a36693677a7a8fb3ef6ef7a9e9161f61cf4b6ff1f7ab648ed61b5414",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-4426"
+  },
+  "vulns/CVE-2026-4437.json": {
+   "bytes": 2394,
+   "retrieved_at": "2026-10-05T05:00:30Z",
+   "sha256": "28dbc76e0b9528db682a28eb5f6b55472f3b0ec9e49f12b29e46612828a70337",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-4437"
+  },
+  "vulns/CVE-2026-4438.json": {
+   "bytes": 2287,
+   "retrieved_at": "2026-10-05T05:00:30Z",
+   "sha256": "e765dd428689e0585826f9f8b39651075b9c10988ef01ebfcf9c3ad8500399b4",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-4438"
+  },
+  "vulns/CVE-2026-44631.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:31Z",
+   "sha256": "435160833e244c719798a6bab6c4855d7a09c6655e4d86af40ffe61ee829c720",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-44631"
+  },
+  "vulns/CVE-2026-4480.json": {
+   "bytes": 3294,
+   "retrieved_at": "2026-10-05T04:55:56Z",
+   "sha256": "a61f28b32fc417f0aa823a068b1a510b1df96eb8fd25127a1127ef4530c22bdf",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-4480"
+  },
+  "vulns/CVE-2026-45185.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T04:55:55Z",
+   "sha256": "0ad229082bdf6826107c3da5d9c28dedd672f9d026365e81b0a2d2daa7c7e996",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-45185"
+  },
+  "vulns/CVE-2026-45186.json": {
+   "bytes": 3252,
+   "retrieved_at": "2026-10-05T04:55:59Z",
+   "sha256": "9db856190981ca7999f67c933e089604fe5ee7200a431bc9123c1d2723125695",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-45186"
+  },
+  "vulns/CVE-2026-4519.json": {
+   "bytes": 11281,
+   "retrieved_at": "2026-10-05T05:00:31Z",
+   "sha256": "a4499e304fb70b42860d74bac15841bd352650a5941028cfbcc58fefbf306662",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-4519"
+  },
+  "vulns/CVE-2026-45445.json": {
+   "bytes": 14698,
+   "retrieved_at": "2026-10-05T05:00:31Z",
+   "sha256": "cebb52bc6a98743783558804a6a3313daae16daf3de67548296a2bc5a91f28a5",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-45445"
+  },
+  "vulns/CVE-2026-45446.json": {
+   "bytes": 22887,
+   "retrieved_at": "2026-10-05T05:00:31Z",
+   "sha256": "42a14ed89e3bcb01b7795c49d04f4e170e28776dd420f0be5b065dfc270e82ef",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-45446"
+  },
+  "vulns/CVE-2026-45447.json": {
+   "bytes": 12219,
+   "retrieved_at": "2026-10-05T04:55:50Z",
+   "sha256": "f0b29bf6161d9412cc0bb5bf5fa00c975b93a7cfcef530d1b09ed8381f84672c",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-45447"
+  },
+  "vulns/CVE-2026-46729.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:31Z",
+   "sha256": "d3faff487baf2554afee2774ed60101f44b33a4e85253213c2d94adf73566dd9",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-46729"
+  },
+  "vulns/CVE-2026-47240.json": {
+   "bytes": 2891,
+   "retrieved_at": "2026-10-05T05:00:31Z",
+   "sha256": "bf9359268397232e614f7c16810072917788d852df28ebe1afc827071973a1e8",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-47240"
+  },
+  "vulns/CVE-2026-47241.json": {
+   "bytes": 2634,
+   "retrieved_at": "2026-10-05T05:00:31Z",
+   "sha256": "4f83f688461dc68722d3e5b4a413dbe6f9151e6a09ae6e747be8bb4f15af6c55",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-47241"
+  },
+  "vulns/CVE-2026-47242.json": {
+   "bytes": 2567,
+   "retrieved_at": "2026-10-05T05:00:31Z",
+   "sha256": "30b793cf0153dc4fadcecd725859361c9ae539c094a5f81e649b0a815a5f9b80",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-47242"
+  },
+  "vulns/CVE-2026-47360.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:31Z",
+   "sha256": "3d9506f895be0f4f72ef8127d9dd6d952ca1474de70e17dbcde79251b0748154",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-47360"
+  },
+  "vulns/CVE-2026-4775.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T04:56:00Z",
+   "sha256": "4754d2a2ec96ab1c147adda498ec1265190397b1c032e53cce5ea583e6a1fd02",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-4775"
+  },
+  "vulns/CVE-2026-48005.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:32Z",
+   "sha256": "88a4838465387c537a36f0430bac772f38c21b01203328c1f6ef11f4d4563212",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-48005"
+  },
+  "vulns/CVE-2026-48142.json": {
+   "bytes": 8032,
+   "retrieved_at": "2026-10-05T05:00:32Z",
+   "sha256": "00b982ddc55495d5fbe1d64ae1090abfec130ca0830ae147cdd8f170c6bae2f1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-48142"
+  },
+  "vulns/CVE-2026-4873.json": {
+   "bytes": 5402,
+   "retrieved_at": "2026-10-05T05:00:32Z",
+   "sha256": "9b49fcf80538287d40ac79908fa6b281b1b4bd471767e822ccc2f26a993da9ac",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-4873"
+  },
+  "vulns/CVE-2026-48840.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:32Z",
+   "sha256": "958e1ba3959fc2af6528be09d3de23de8d568ff07c9e9f844f0310be93b176b4",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-48840"
+  },
+  "vulns/CVE-2026-48913.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:32Z",
+   "sha256": "da7de710d0c32d3a8a2d29706b2ff6af4ca8039466d9df63d24ddb4a462dcaa5",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-48913"
+  },
+  "vulns/CVE-2026-48959.json": {
+   "bytes": 3132,
+   "retrieved_at": "2026-10-05T04:55:57Z",
+   "sha256": "42dc9e868e734900f98dff53187060d491528231155f1675fb9ba8e86b4c737f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-48959"
+  },
+  "vulns/CVE-2026-48961.json": {
+   "bytes": 2595,
+   "retrieved_at": "2026-10-05T05:00:32Z",
+   "sha256": "4eb8106554af91c0f09e4749eb39654a8e32d414bb65c2346aad18b7a99cb5ad",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-48961"
+  },
+  "vulns/CVE-2026-48962.json": {
+   "bytes": 4542,
+   "retrieved_at": "2026-10-05T04:55:57Z",
+   "sha256": "852e31959c8cfaa27acbccaace05acc8334ee8d964c8d6b4dc7abdaa78c2b2d6",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-48962"
+  },
+  "vulns/CVE-2026-4897.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T04:55:52Z",
+   "sha256": "ae1893b3f59fc6e64ff6cb6e4d737ef9a4fbee7ef2fd13289239eab68749a3c4",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-4897"
+  },
+  "vulns/CVE-2026-49975.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:32Z",
+   "sha256": "7a73da9ea40780c63d07e790c9e56140c486f7efd2abfd4f8c86dd6bb429ad73",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-49975"
+  },
+  "vulns/CVE-2026-50219.json": {
+   "bytes": 2273,
+   "retrieved_at": "2026-10-05T05:00:32Z",
+   "sha256": "04fc82f81d6d15ab7aab63236298c818dab678c49ecfe95b4a13a9163379c156",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-50219"
+  },
+  "vulns/CVE-2026-50812.json": {
+   "bytes": 6819,
+   "retrieved_at": "2026-10-05T05:00:32Z",
+   "sha256": "9808a47dda909bd719c8621a823b8009a4a32528b8c103f2246ef9cd23e075e9",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-50812"
+  },
+  "vulns/CVE-2026-50813.json": {
+   "bytes": 7149,
+   "retrieved_at": "2026-10-05T05:00:32Z",
+   "sha256": "2937266afde604f599d755d94fc6f03afb350e87c10a9e81d08ee604a33ceb5f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-50813"
+  },
+  "vulns/CVE-2026-5121.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T04:55:53Z",
+   "sha256": "e5561bcd3abb512b54fa9b4548b6e1bdff76c7cba8b85045f6f02d0826b1c07b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-5121"
+  },
+  "vulns/CVE-2026-52490.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:32Z",
+   "sha256": "95bb93f99f46fef716879bdf65d443f114d954aac735d375a29120aaf6a9c493",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-52490"
+  },
+  "vulns/CVE-2026-52491.json": {
+   "bytes": 2683,
+   "retrieved_at": "2026-10-05T05:00:32Z",
+   "sha256": "27464bbcb3269d0d4f559c2866eaded33e78724c4044a7f96e0d042ae0fd7904",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-52491"
+  },
+  "vulns/CVE-2026-52492.json": {
+   "bytes": 301374,
+   "retrieved_at": "2026-10-05T05:00:33Z",
+   "sha256": "90058cd023e72998177201ba7c1eed794f68b572b41dc4498c14b42920e43de8",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-52492"
+  },
+  "vulns/CVE-2026-5260.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:33Z",
+   "sha256": "e87544b3eb7672103094145ceecd82f47662c9976173ef72fba09c559de04e26",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-5260"
+  },
+  "vulns/CVE-2026-5419.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:33Z",
+   "sha256": "4528c18503bbaf01965cc244b77e920d00ca7465157f38246471ed051dac9422",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-5419"
+  },
+  "vulns/CVE-2026-5435.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:33Z",
+   "sha256": "218525761445ed92c825a3c38d1c0102c019b5f9f4eb96a810c12cdc96e00118",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-5435"
+  },
+  "vulns/CVE-2026-5450.json": {
+   "bytes": 5299,
+   "retrieved_at": "2026-10-05T05:00:33Z",
+   "sha256": "d4368071ffb1bed226ddcc8e6eebe775eb70820498236515743c113a17daa812",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-5450"
+  },
+  "vulns/CVE-2026-54872.json": {
+   "bytes": 14035,
+   "retrieved_at": "2026-10-05T05:00:33Z",
+   "sha256": "500bda65755b20dca6f2d00276b73f4806dd760132b321a20af0c484a3a82651",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-54872"
+  },
+  "vulns/CVE-2026-54873.json": {
+   "bytes": 89432,
+   "retrieved_at": "2026-10-05T05:00:33Z",
+   "sha256": "6095d09231987edf7cfe56ecc633c776779aee9d53ce9beee571660eb0ac5ced",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-54873"
+  },
+  "vulns/CVE-2026-54874.json": {
+   "bytes": 17203,
+   "retrieved_at": "2026-10-05T05:00:33Z",
+   "sha256": "ca44220c89b52e42b684477edef8c4c4fbdaa3e24f4c5334748b9f5dc03fd270",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-54874"
+  },
+  "vulns/CVE-2026-54875.json": {
+   "bytes": 31646,
+   "retrieved_at": "2026-10-05T05:00:33Z",
+   "sha256": "121f59f10087d4b8af9760e0f5b2cf979fa22cc7f7a03adf1ddefa4dc3b053c6",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-54875"
+  },
+  "vulns/CVE-2026-5545.json": {
+   "bytes": 7059,
+   "retrieved_at": "2026-10-05T05:00:33Z",
+   "sha256": "fe8bbeec0723945a18b8f310ccbed392af848dba27cdde04a26de7eca774a681",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-5545"
+  },
+  "vulns/CVE-2026-55654.json": {
+   "bytes": 3190,
+   "retrieved_at": "2026-10-05T05:00:34Z",
+   "sha256": "b0031428baed71cf68ca38a4c0352fcff3927c40f1643bf0e541d23bab2edefe",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-55654"
+  },
+  "vulns/CVE-2026-56131.json": {
+   "bytes": 2200,
+   "retrieved_at": "2026-10-05T05:00:34Z",
+   "sha256": "1893b0766cca9478659d95657378e43e0b2395b44a0de619dad64f892f3e5e80",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-56131"
+  },
+  "vulns/CVE-2026-56132.json": {
+   "bytes": 2240,
+   "retrieved_at": "2026-10-05T05:00:34Z",
+   "sha256": "ee91d94fbccee98e6c0419198123aeb14cfecbfb4d9c5a95456f8d03d622f783",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-56132"
+  },
+  "vulns/CVE-2026-56153.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:34Z",
+   "sha256": "b90d9fa8996fcf20ac9fc386aff7b2071eba1053080ff2a77366a6b76aa5d7b9",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-56153"
+  },
+  "vulns/CVE-2026-56154.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:34Z",
+   "sha256": "232ee16d5d694f1c0a42876b44c13d2e5f491ece694627e1e697ffe3a265a8fa",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-56154"
+  },
+  "vulns/CVE-2026-56403.json": {
+   "bytes": 2045,
+   "retrieved_at": "2026-10-05T05:00:34Z",
+   "sha256": "b815c676a57e01ed9ff681f9cb8aaa4f009155555b2b6c461237905ba3385e57",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-56403"
+  },
+  "vulns/CVE-2026-56404.json": {
+   "bytes": 2046,
+   "retrieved_at": "2026-10-05T05:00:34Z",
+   "sha256": "c91c99f0061ee2fd5640f2bd32624dd26b4697d23178979d330cd01a294d6734",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-56404"
+  },
+  "vulns/CVE-2026-56405.json": {
+   "bytes": 2050,
+   "retrieved_at": "2026-10-05T05:00:34Z",
+   "sha256": "cfcd49d60942eebd234b13b99727ece24f735b0bad9a14db5551cdde91e1a6e5",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-56405"
+  },
+  "vulns/CVE-2026-56406.json": {
+   "bytes": 2107,
+   "retrieved_at": "2026-10-05T05:00:34Z",
+   "sha256": "e58c1639412fe129205f280577bf862debb51894256cb0d1d33442f8b9f6feca",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-56406"
+  },
+  "vulns/CVE-2026-56407.json": {
+   "bytes": 2099,
+   "retrieved_at": "2026-10-05T05:00:34Z",
+   "sha256": "baf3f4c1240a9515950e6bb4d2b3ffb6bc479a2900b5335fa4d6e36791b915c3",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-56407"
+  },
+  "vulns/CVE-2026-56408.json": {
+   "bytes": 2958,
+   "retrieved_at": "2026-10-05T05:00:35Z",
+   "sha256": "7a0f55ca1f592f7541f8c1ba7eadbf022b82e745f52b28bb5c8b7fdd1a11bfef",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-56408"
+  },
+  "vulns/CVE-2026-56409.json": {
+   "bytes": 2091,
+   "retrieved_at": "2026-10-05T05:00:35Z",
+   "sha256": "03205d7605a10dec9d86fbae8d9de690ef918f73ca489c04ac10eb3ccf02a52a",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-56409"
+  },
+  "vulns/CVE-2026-56410.json": {
+   "bytes": 2060,
+   "retrieved_at": "2026-10-05T05:00:35Z",
+   "sha256": "8f52900df21322d323017f4cc621a48d0d42b3095f291eb2ab6d6255dce6a8a6",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-56410"
+  },
+  "vulns/CVE-2026-56411.json": {
+   "bytes": 2085,
+   "retrieved_at": "2026-10-05T05:00:35Z",
+   "sha256": "ec4eb35cf8ebb557284681c4c597131251150bc50b7887c6caddc7fdc2da3948",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-56411"
+  },
+  "vulns/CVE-2026-56412.json": {
+   "bytes": 2283,
+   "retrieved_at": "2026-10-05T05:00:35Z",
+   "sha256": "9d47c41caafad8e80111ad5bf4c53c61bb7c8a9d632c15ece71a1373d9d534d6",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-56412"
+  },
+  "vulns/CVE-2026-56434.json": {
+   "bytes": 4176,
+   "retrieved_at": "2026-10-05T05:00:35Z",
+   "sha256": "8067d71a8ad4e714c8a26e55ec537d5d14b31d06e5e3ad3981a1077752d5c8be",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-56434"
+  },
+  "vulns/CVE-2026-56449.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:35Z",
+   "sha256": "b6d7dd3f1a2d6671721313b9b482f035d1c4936139df9faaa20619ff0ebd19f5",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-56449"
+  },
+  "vulns/CVE-2026-57432.json": {
+   "bytes": 6013,
+   "retrieved_at": "2026-10-05T05:00:35Z",
+   "sha256": "ee3fd5622f6c81331ab0dcf2f3ee9c476c049ecda4e4782927044d35a9af98a3",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-57432"
+  },
+  "vulns/CVE-2026-57433.json": {
+   "bytes": 4567,
+   "retrieved_at": "2026-10-05T05:00:35Z",
+   "sha256": "c28de0bbbb5cb056e5aa9abefc459a0b3be018fb709ff9a9d12e7db96a3b08c5",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-57433"
+  },
+  "vulns/CVE-2026-5745.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:36Z",
+   "sha256": "b329b8d90b9203c586cb4e4f96e2e0b3e33b98bc64040b8ffd0bc64bac3dae27",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-5745"
+  },
+  "vulns/CVE-2026-5773.json": {
+   "bytes": 5125,
+   "retrieved_at": "2026-10-05T04:55:58Z",
+   "sha256": "49cb69195d4da30baf80b6fae361f2693573e76c8a9fb49d98e4b59927700b51",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-5773"
+  },
+  "vulns/CVE-2026-57941.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:36Z",
+   "sha256": "4ed82f653e3a70df749b0e063ee74eea61940b46b518002de01bac1efdfd10b4",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-57941"
+  },
+  "vulns/CVE-2026-58216.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:36Z",
+   "sha256": "c94864c2aa137bec44a3069c6b497e9c5594872b9cb7eee65af98b6785e145d3",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-58216"
+  },
+  "vulns/CVE-2026-58218.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:36Z",
+   "sha256": "ae5d4d56027d0dd3c97c4b281dac853bb5e56f3cb119a628f8536cb939e794f0",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-58218"
+  },
+  "vulns/CVE-2026-58221.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:36Z",
+   "sha256": "94b9357a58921ff547fce7fe55d8858bf2435197e757b099b8f1796dfc1be9e9",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-58221"
+  },
+  "vulns/CVE-2026-58222.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:36Z",
+   "sha256": "726a8471bf54993a97c130f40be63feac1b9212b313a223f117c2b1ebfaeafff",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-58222"
+  },
+  "vulns/CVE-2026-58224.json": {
+   "bytes": 3480,
+   "retrieved_at": "2026-10-05T05:00:36Z",
+   "sha256": "14fa1e0b3d010b397147e89f02af7a3645bfd4a23f035d5cc715047121d6e737",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-58224"
+  },
+  "vulns/CVE-2026-58415.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:36Z",
+   "sha256": "25a5189eec422296496ace05ec560a7d3813a54681908b8758c3cf1fd436896d",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-58415"
+  },
+  "vulns/CVE-2026-5928.json": {
+   "bytes": 29192,
+   "retrieved_at": "2026-10-05T05:00:36Z",
+   "sha256": "e4588050cc1caaf413ba4199f77730c3c2a0a4c4a4faf8f5f0cb4e36c39f69d8",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-5928"
+  },
+  "vulns/CVE-2026-5946.json": {
+   "bytes": 4607,
+   "retrieved_at": "2026-10-05T04:55:55Z",
+   "sha256": "c3741a36555c23e5a92fdc9f8ff15b127c5fa5a249f6b332b0749327febe9ecd",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-5946"
+  },
+  "vulns/CVE-2026-5947.json": {
+   "bytes": 2815,
+   "retrieved_at": "2026-10-05T05:00:36Z",
+   "sha256": "841649b2d62bd0e829f922a825cbd2f230b90647f731d3b90392e42d103f662b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-5947"
+  },
+  "vulns/CVE-2026-5950.json": {
+   "bytes": 2625,
+   "retrieved_at": "2026-10-05T05:00:37Z",
+   "sha256": "2c671265ab594b70a0c5a88db3d6a66e4fc77b960a888854f03f5e494ebd5521",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-5950"
+  },
+  "vulns/CVE-2026-59797.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:37Z",
+   "sha256": "5db24887a5469ef1b0064e366373e24431274fbeba388ae261e4d5ab19907ad1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-59797"
+  },
+  "vulns/CVE-2026-59843.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T04:56:00Z",
+   "sha256": "6df50be2cb2f460248e8786d6cd868019c45103339da4b0d04e72a0ec40076c1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-59843"
+  },
+  "vulns/CVE-2026-59844.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:37Z",
+   "sha256": "dbe5ce5f1026e328555d1d9b053f35e5f6b5022181ae4f0203ed79c1225c6017",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-59844"
+  },
+  "vulns/CVE-2026-59845.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:37Z",
+   "sha256": "58c9620dd53c94e4a6708fa7c141664688dc17b4c00e6884e758de6d6d7d09cc",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-59845"
+  },
+  "vulns/CVE-2026-59846.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:37Z",
+   "sha256": "91bbee33146cea15d13382ff75d957954b942678bf226d23fdd4dc8ea40725b8",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-59846"
+  },
+  "vulns/CVE-2026-59847.json": {
+   "bytes": 2621,
+   "retrieved_at": "2026-10-05T05:00:37Z",
+   "sha256": "0585494511cd83b0000a6f8a6dbd98123e36724ab50108ed55d95926dca54c19",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-59847"
+  },
+  "vulns/CVE-2026-59848.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:37Z",
+   "sha256": "9a273cc7454f99ba71c95fb062aaecaf4392ae301ec9508bfe7c5ea1ef1c1937",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-59848"
+  },
+  "vulns/CVE-2026-59849.json": {
+   "bytes": 2410,
+   "retrieved_at": "2026-10-05T05:00:37Z",
+   "sha256": "af2ca3c7ff446866b77c05d713b4e6bfa78826d2a5d018a5e86606fa49f02dbb",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-59849"
+  },
+  "vulns/CVE-2026-59850.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:37Z",
+   "sha256": "8c609c32fd3937085a351690ef86d1e6d2191adfa4687ed2c655bcd2a08a2f70",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-59850"
+  },
+  "vulns/CVE-2026-59995.json": {
+   "bytes": 3419,
+   "retrieved_at": "2026-10-05T05:00:37Z",
+   "sha256": "3b8f6cbfc20ee07fc609e4e8c330042b7ad20eed6779a915e74d3f303df3ca53",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-59995"
+  },
+  "vulns/CVE-2026-59996.json": {
+   "bytes": 3386,
+   "retrieved_at": "2026-10-05T05:00:38Z",
+   "sha256": "7928546b2e784f8cddd3af6d0e196185364466924ac041d1fba3c99b71c1b261",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-59996"
+  },
+  "vulns/CVE-2026-59997.json": {
+   "bytes": 3442,
+   "retrieved_at": "2026-10-05T05:00:38Z",
+   "sha256": "f4c0c3e41a2a734a780813f02dd4848e0b4dda42d308337ff3152f4ca4f7b640",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-59997"
+  },
+  "vulns/CVE-2026-59998.json": {
+   "bytes": 3365,
+   "retrieved_at": "2026-10-05T05:00:38Z",
+   "sha256": "33335e0de99655b7af80ea69deb01ae9082cc84cc43e39242c659a7e9e518ad3",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-59998"
+  },
+  "vulns/CVE-2026-59999.json": {
+   "bytes": 3380,
+   "retrieved_at": "2026-10-05T05:00:38Z",
+   "sha256": "373f123e43d041ed2baa9035be2c608c16dc74bcf9069266149ce46be28706c1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-59999"
+  },
+  "vulns/CVE-2026-60000.json": {
+   "bytes": 3409,
+   "retrieved_at": "2026-10-05T05:00:38Z",
+   "sha256": "fa4274d6764dd36e2b73414222f85c96c900a5c851ca9c82525bb6a714d2c8f7",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-60000"
+  },
+  "vulns/CVE-2026-60001.json": {
+   "bytes": 3324,
+   "retrieved_at": "2026-10-05T05:00:38Z",
+   "sha256": "048fa433c686b52a179664bb2a90e1894d5fa4fea690873f377667a8dd73cdd4",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-60001"
+  },
+  "vulns/CVE-2026-60002.json": {
+   "bytes": 3401,
+   "retrieved_at": "2026-10-05T05:00:38Z",
+   "sha256": "0253242264c51b1eb0f3c33110e972a7de7d631656d46ca0e54b1bbc579d46a6",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-60002"
+  },
+  "vulns/CVE-2026-60005.json": {
+   "bytes": 5270,
+   "retrieved_at": "2026-10-05T05:00:38Z",
+   "sha256": "7a66157b1dd15d164e642922a177bd61d976d72bd86768bbd854f9d75bcf3b3b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-60005"
+  },
+  "vulns/CVE-2026-6019.json": {
+   "bytes": 4834,
+   "retrieved_at": "2026-10-05T05:00:38Z",
+   "sha256": "0b632ba85e034f20fc31761faed966987aab98d0dc8f376d8443732dfaea1caa",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-6019"
+  },
+  "vulns/CVE-2026-6100.json": {
+   "bytes": 16264,
+   "retrieved_at": "2026-10-05T04:55:56Z",
+   "sha256": "569a729dcf6dc1bb6463ace8d8bb40c357b623c987ebbe476665b03a35456596",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-6100"
+  },
+  "vulns/CVE-2026-6103.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:39Z",
+   "sha256": "d423cb31f1be2fbac0302819e069b2ddbd2afc48f36b9f6e325f1598a1acdd42",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-6103"
+  },
+  "vulns/CVE-2026-6104.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:39Z",
+   "sha256": "764e7eb97f4cb2310d24b2e90894f507a7274b101fa5b32ea0ed7f97c871f0c5",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-6104"
+  },
+  "vulns/CVE-2026-6238.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:39Z",
+   "sha256": "b5121e2b5ea6577b818e862e1cd160ed2b61e894b9c2dee16f7c261999329695",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-6238"
+  },
+  "vulns/CVE-2026-6253.json": {
+   "bytes": 6197,
+   "retrieved_at": "2026-10-05T05:00:39Z",
+   "sha256": "f0d2b241d7d8f5163c68c02b9109560091b9b9751e98f111dff0301e7b083111",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-6253"
+  },
+  "vulns/CVE-2026-6276.json": {
+   "bytes": 3614,
+   "retrieved_at": "2026-10-05T05:00:39Z",
+   "sha256": "7223b7b113c20c746bebf492d5745b88960ee76ececc269773bb7d19538ae1f9",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-6276"
+  },
+  "vulns/CVE-2026-63045.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:39Z",
+   "sha256": "a99e5802cc20ff34e93cd498f1ab0bc98fa8c74e1df1e16891ddf1a33e4da2a9",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-63045"
+  },
+  "vulns/CVE-2026-63072.json": {
+   "bytes": 12605,
+   "retrieved_at": "2026-10-05T05:00:39Z",
+   "sha256": "b6c21dd8ee55c35301e18cabb9c6fc4a9bc2075c21860123659769ae33d768f1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-63072"
+  },
+  "vulns/CVE-2026-63073.json": {
+   "bytes": 7944,
+   "retrieved_at": "2026-10-05T05:00:39Z",
+   "sha256": "87dabad6e214b2fb2f468a08123d0683b1298ce8d4145756b71a9efb0a4ca72b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-63073"
+  },
+  "vulns/CVE-2026-63074.json": {
+   "bytes": 10054,
+   "retrieved_at": "2026-10-05T05:00:39Z",
+   "sha256": "3ab0abfdd535a9957e995a3fbc8ae57c91d42639604dbb359a314c549f2fe779",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-63074"
+  },
+  "vulns/CVE-2026-63075.json": {
+   "bytes": 13338,
+   "retrieved_at": "2026-10-05T05:00:39Z",
+   "sha256": "160dbc91712a362530221fc300f944883d8946b8e5990cc73bf5ea9c81604cae",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-63075"
+  },
+  "vulns/CVE-2026-63076.json": {
+   "bytes": 8250,
+   "retrieved_at": "2026-10-05T05:00:39Z",
+   "sha256": "f836b75e9ed35226493b4caad1eebfa298c1ec3d8e8e4a1ef8d3b7db3f063c55",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-63076"
+  },
+  "vulns/CVE-2026-63292.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:40Z",
+   "sha256": "e5e4a9adc28933509a44ad3546a5857d9f80ffc40d8b9a81207d903f6cf839ca",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-63292"
+  },
+  "vulns/CVE-2026-6368.json": {
+   "bytes": 28290,
+   "retrieved_at": "2026-10-05T05:00:40Z",
+   "sha256": "5a30256ef8674e9e261b35a717a4b1991e73deb8f0a55ecd2114ff00cf7a2e23",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-6368"
+  },
+  "vulns/CVE-2026-63686.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:40Z",
+   "sha256": "8d429b1fb495a3b50814337e512a6c1e270044be04a5e23c2247ea3efcb0fa6f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-63686"
+  },
+  "vulns/CVE-2026-63718.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:40Z",
+   "sha256": "39334dd881fbc8cf71ed5e66b8211b0d97caa1240a199e80bfa831dd748f4e4c",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-63718"
+  },
+  "vulns/CVE-2026-6429.json": {
+   "bytes": 5854,
+   "retrieved_at": "2026-10-05T05:00:40Z",
+   "sha256": "b2cfc925115e5edf4b8ac45a93045c5eeba582259371fb3a1b2b3ff8669820b8",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-6429"
+  },
+  "vulns/CVE-2026-66046.json": {
+   "bytes": 2967,
+   "retrieved_at": "2026-10-05T05:00:40Z",
+   "sha256": "3ff97907976191431a1b027aeecd8a3091b230bf4dcde9eff3cdf14ff93eecd8",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-66046"
+  },
+  "vulns/CVE-2026-66140.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:40Z",
+   "sha256": "e6369c7cd2ff40977f29e54110c04e02a79d9f7b6c2ab2ed9ed2ec199bff7d9d",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-66140"
+  },
+  "vulns/CVE-2026-66141.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:40Z",
+   "sha256": "257d052211ab334623b944a1359d602caae64f396d45638b229f9d62d2e51800",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-66141"
+  },
+  "vulns/CVE-2026-6653.json": {
+   "bytes": 2197,
+   "retrieved_at": "2026-10-05T05:00:40Z",
+   "sha256": "53ade7b127469d75f9e3935ab4830bdc6eaa968a426c714dcfad2c4aff285d82",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-6653"
+  },
+  "vulns/CVE-2026-6722.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T04:55:58Z",
+   "sha256": "674282c6767a2d458d1e2e58b7db08f3b6dbd47bb438a2e18650b761dfe76423",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-6722"
+  },
+  "vulns/CVE-2026-6735.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:40Z",
+   "sha256": "d06cabdf4f11bf776ab32e58b7cec07c9758c2f5bdf8321d8c2d799399948a1f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-6735"
+  },
+  "vulns/CVE-2026-6766.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:41Z",
+   "sha256": "e0b9b038bd0293676e9e94edfbcc360608c8d9a10acf9ef82e56858504527d92",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-6766"
+  },
+  "vulns/CVE-2026-6767.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:41Z",
+   "sha256": "d1654333d4b9bc384e2562115391279f00db374eb0a2f5780a2aad6f77738234",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-6767"
+  },
+  "vulns/CVE-2026-6772.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:41Z",
+   "sha256": "93f51eb4e9af53eade6154ddd5d785e99ca79a3f790dbe3c539931d787512298",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-6772"
+  },
+  "vulns/CVE-2026-6791.json": {
+   "bytes": 18675,
+   "retrieved_at": "2026-10-05T05:00:41Z",
+   "sha256": "f91ca2dbe6da5e508f17cf07c62b29d844dad0853200a603a4f541bf6f5e6a9b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-6791"
+  },
+  "vulns/CVE-2026-6879.json": {
+   "bytes": 5943,
+   "retrieved_at": "2026-10-05T05:00:41Z",
+   "sha256": "3e051e4d41b0a59ac9cda4c668dc9fede8a8e6fbda79c42e3f3dddcc6e151ddc",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-6879"
+  },
+  "vulns/CVE-2026-6949.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:41Z",
+   "sha256": "8537b6d4a13cc8ad2653f2a506a6bba7a0f7b0305bb09daddbd32d4821f7da46",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-6949"
+  },
+  "vulns/CVE-2026-7010.json": {
+   "bytes": 3551,
+   "retrieved_at": "2026-10-05T05:00:41Z",
+   "sha256": "9111ac6181dc105614e8a4e88ba4e0e5d1d820eedf3b86e1bc2e52d0dde9b050",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-7010"
+  },
+  "vulns/CVE-2026-7017.json": {
+   "bytes": 4374,
+   "retrieved_at": "2026-10-05T05:00:41Z",
+   "sha256": "ecabaecdc514c4a30ef133989d129f918a8002ef8739d0481269e302be180038",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-7017"
+  },
+  "vulns/CVE-2026-7168.json": {
+   "bytes": 6233,
+   "retrieved_at": "2026-10-05T04:55:58Z",
+   "sha256": "481c1c8a6f67e4649b8434145be1fcd6a473491df831d54bec3c44cc88a14e96",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-7168"
+  },
+  "vulns/CVE-2026-7210.json": {
+   "bytes": 6274,
+   "retrieved_at": "2026-10-05T05:00:41Z",
+   "sha256": "8f5ffc3078e7928e95b9b2340de2debd8f1cd505f787f263fbc889aec0c9b3f5",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-7210"
+  },
+  "vulns/CVE-2026-72522.json": {
+   "bytes": 2338,
+   "retrieved_at": "2026-10-05T05:00:41Z",
+   "sha256": "fcd1808b1cb5f5ac53a7b1de1d208cf653ed12b7ead7a4cbc48898842a60e123",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-72522"
+  },
+  "vulns/CVE-2026-7258.json": {
+   "bytes": 2428,
+   "retrieved_at": "2026-10-05T05:00:42Z",
+   "sha256": "343e7227f05111f3152d0812861c0ef0acf23a655443ddbb953a78412d7181d2",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-7258"
+  },
+  "vulns/CVE-2026-7259.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:42Z",
+   "sha256": "9d2a171001863908eebd579b73eaddfba84bd502a48a24179f4e395f6438de82",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-7259"
+  },
+  "vulns/CVE-2026-7260.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:42Z",
+   "sha256": "c772ca91eb32f073b306ec85e2bfa9dec9271867d56b8e96c73a36c71ae44966",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-7260"
+  },
+  "vulns/CVE-2026-7261.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:42Z",
+   "sha256": "a2f17c46b0084917a603d5679a1f1cdd3fe9673ba99c3e773bf3d142a9ec8250",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-7261"
+  },
+  "vulns/CVE-2026-7262.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:42Z",
+   "sha256": "5120c927ee61a8dfcdd8fbf324e864ad145dedf3c26743a9b0f351a8cea13745",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-7262"
+  },
+  "vulns/CVE-2026-7263.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:42Z",
+   "sha256": "4481f65d2a5ea34244af8bcab7b194bbc74eca7f69edc93e8dfb30babda37f13",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-7263"
+  },
+  "vulns/CVE-2026-72897.json": {
+   "bytes": 10688,
+   "retrieved_at": "2026-10-05T05:00:42Z",
+   "sha256": "96ebf0a075d71aa7806f0c66b9e362c5c52aeadc3fc738669f2963da06485ce8",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-72897"
+  },
+  "vulns/CVE-2026-73281.json": {
+   "bytes": 3265,
+   "retrieved_at": "2026-10-05T05:00:42Z",
+   "sha256": "633d49b7bca3f67255737725f042982561bb4186314d213313ff3dc28f68dfb2",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-73281"
+  },
+  "vulns/CVE-2026-73282.json": {
+   "bytes": 3162,
+   "retrieved_at": "2026-10-05T05:00:42Z",
+   "sha256": "c0f40519670d14db6a2176e36935e0f4228af028a8b23c56a87c834b2c34358d",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-73282"
+  },
+  "vulns/CVE-2026-73283.json": {
+   "bytes": 3141,
+   "retrieved_at": "2026-10-05T05:00:42Z",
+   "sha256": "ae0e00e19ede173ec0ec869f17ac6457246e75b2fc0c2ffbf9db67fa4cee818c",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-73283"
+  },
+  "vulns/CVE-2026-73636.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:43Z",
+   "sha256": "7d4494b76b2848df820ec5739fc392a1b8c8b2a61bbc95da2ffdd374b4ac9c10",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-73636"
+  },
+  "vulns/CVE-2026-73637.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:43Z",
+   "sha256": "6fd8851da3bfae99c649d97b8457cda1591546d250227950d9111b5f1adc0f28",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-73637"
+  },
+  "vulns/CVE-2026-7383.json": {
+   "bytes": 15944,
+   "retrieved_at": "2026-10-05T05:00:43Z",
+   "sha256": "397e916fd3be64639b1bd63ec368bfcf72f23b81a81f1eeb33da901f6b2c80de",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-7383"
+  },
+  "vulns/CVE-2026-74860.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:43Z",
+   "sha256": "5473ca4ecc6a8e3718cb511f62603e16423d23c6d1f66cb2224b146a317427cf",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-74860"
+  },
+  "vulns/CVE-2026-75029.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:43Z",
+   "sha256": "b9aa8bee5fea97edddbc66fb6add56c0dc111abddd0ec69e62d73365a07beb4f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-75029"
+  },
+  "vulns/CVE-2026-7568.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:43Z",
+   "sha256": "3b75dc898eb3c992b2bc6aeef9b242dacb3d29f75f9c9f7b7f33dd77969a0f31",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-7568"
+  },
+  "vulns/CVE-2026-75803.json": {
+   "bytes": 19210,
+   "retrieved_at": "2026-10-05T05:00:43Z",
+   "sha256": "53e5f8b0c38e4fceedeb69c023596ad257011687f2e7443e19e61d39f23969c5",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-75803"
+  },
+  "vulns/CVE-2026-75804.json": {
+   "bytes": 8312,
+   "retrieved_at": "2026-10-05T05:00:43Z",
+   "sha256": "01a079f754cdd87650da91f0167aecd8f240de95a3b262f047d096a8554c7202",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-75804"
+  },
+  "vulns/CVE-2026-75805.json": {
+   "bytes": 9726,
+   "retrieved_at": "2026-10-05T05:00:43Z",
+   "sha256": "4763644fe78e31a2952b2eb3b433bdef3065e18c0177bedded509b6c02d12617",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-75805"
+  },
+  "vulns/CVE-2026-75806.json": {
+   "bytes": 12991,
+   "retrieved_at": "2026-10-05T05:00:43Z",
+   "sha256": "abe9ef00b88518f4a5ca0c0758fa86145ae2dbf77d337d424f7958d8ef3f1e2c",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-75806"
+  },
+  "vulns/CVE-2026-76163.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:44Z",
+   "sha256": "b298d0cb349d59b73031ea7b5deddbcfc3b863a4a11f073f69f338f33738cb7e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-76163"
+  },
+  "vulns/CVE-2026-76781.json": {
+   "bytes": 1889,
+   "retrieved_at": "2026-10-05T05:00:44Z",
+   "sha256": "38cc85771d1270cb7beaa78a5f7bdc5a940daf00d2903113bd1aa3055113528f",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-76781"
+  },
+  "vulns/CVE-2026-76956.json": {
+   "bytes": 1635,
+   "retrieved_at": "2026-10-05T05:00:44Z",
+   "sha256": "3d6ee26259725fd5e31be24e61e2447c186db7de1e0fde751f6a740131019996",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-76956"
+  },
+  "vulns/CVE-2026-76957.json": {
+   "bytes": 2273,
+   "retrieved_at": "2026-10-05T05:00:44Z",
+   "sha256": "bdc483fc825d83899f10c6e8ed853faa650628f06138e49c085b8beb61ca3ad2",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-76957"
+  },
+  "vulns/CVE-2026-77117.json": {
+   "bytes": 12726,
+   "retrieved_at": "2026-10-05T05:00:44Z",
+   "sha256": "60fdbfdad8f770b9a67f8e4378e7f3aa18710dcfd0107fcd0bede2288bcbef9e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-77117"
+  },
+  "vulns/CVE-2026-77119.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:44Z",
+   "sha256": "87ca1f7dd13ba600342a9bac6249354ab5416d463edceaf48f851ce363bdbb74",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-77119"
+  },
+  "vulns/CVE-2026-77692.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:44Z",
+   "sha256": "598be760d982ce85e60fd4c884a17574dd24c6321a91cd5228ee6092973b17db",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-77692"
+  },
+  "vulns/CVE-2026-77696.json": {
+   "bytes": 13980,
+   "retrieved_at": "2026-10-05T05:00:44Z",
+   "sha256": "30a7fdd5e15e3b05027c5e2c62f1611f49be67475aa741dbfed32b65b6b08dd7",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-77696"
+  },
+  "vulns/CVE-2026-7774.json": {
+   "bytes": 6314,
+   "retrieved_at": "2026-10-05T04:55:57Z",
+   "sha256": "65bf668a39ad9f36a7d8350877570d4a088b169d9a7ac99077c3f4ed7db9a0ab",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-7774"
+  },
+  "vulns/CVE-2026-78301.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:44Z",
+   "sha256": "e3e42397b9fc7cabade2b8ffeaebd25fea063f8dc97ca5dd671b909f15af0aa1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-78301"
+  },
+  "vulns/CVE-2026-79768.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:44Z",
+   "sha256": "fc657a1d0a19c299604e619ea837904e6b7e26a1212710a63d64d7f5339a59f1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-79768"
+  },
+  "vulns/CVE-2026-80229.json": {
+   "bytes": 2865,
+   "retrieved_at": "2026-10-05T05:00:45Z",
+   "sha256": "b71ea6af624306ee4646e62ccd2cf865418761704645b5be12283f5b0c9c2ceb",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-80229"
+  },
+  "vulns/CVE-2026-80230.json": {
+   "bytes": 4774,
+   "retrieved_at": "2026-10-05T05:00:45Z",
+   "sha256": "ecfa4ae5f42fa934b8b88adc73bd3ad83e70793f0628a233841792b93f8f263e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-80230"
+  },
+  "vulns/CVE-2026-80255.json": {
+   "bytes": 2506,
+   "retrieved_at": "2026-10-05T05:00:45Z",
+   "sha256": "3dcce8adba8be0b6f93096b4a2a4bc0acde07f9b650e8370949f49a5547c2cee",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-80255"
+  },
+  "vulns/CVE-2026-80274.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:45Z",
+   "sha256": "c01dfc4920897fe2d48d3e75e21ebec5d100dbe563f0165bc0c043d097c2e0fd",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-80274"
+  },
+  "vulns/CVE-2026-80489.json": {
+   "bytes": 12716,
+   "retrieved_at": "2026-10-05T05:00:45Z",
+   "sha256": "806469ac6832bd01ef6b36c97e1482e077beec37f96a13d52b874bb597e4da05",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-80489"
+  },
+  "vulns/CVE-2026-81563.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:45Z",
+   "sha256": "83575e44bb562112015f378b046a7aa0b6c6ead4987d755f81fe6a7a10b40c09",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-81563"
+  },
+  "vulns/CVE-2026-81736.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:45Z",
+   "sha256": "fa81dcfd66031cc1b589bc9005826c24713446cbcef783899173cd27240c96fd",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-81736"
+  },
+  "vulns/CVE-2026-82049.json": {
+   "bytes": 6270,
+   "retrieved_at": "2026-10-05T05:00:45Z",
+   "sha256": "6b3a4d2c548a18ab7042a42a722fdc154490e32f1d90f450790f0be42ab5d6f2",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-82049"
+  },
+  "vulns/CVE-2026-82208.json": {
+   "bytes": 2641,
+   "retrieved_at": "2026-10-05T05:00:45Z",
+   "sha256": "e752cd6297897d1f68b787c5a063b311963ecb0477c39568ff8c472a65f96027",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-82208"
+  },
+  "vulns/CVE-2026-82209.json": {
+   "bytes": 4728,
+   "retrieved_at": "2026-10-05T05:00:45Z",
+   "sha256": "7e9a22f2d177ac131c106de8cad95b2393e2c16131608a9ebaee7e263508cfed",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-82209"
+  },
+  "vulns/CVE-2026-82474.json": {
+   "bytes": 14802,
+   "retrieved_at": "2026-10-05T05:00:46Z",
+   "sha256": "59fdec09708e6351045978aa0e0d09eb6f66d19455516b3649eb70b127a37ffa",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-82474"
+  },
+  "vulns/CVE-2026-82560.json": {
+   "bytes": 6513,
+   "retrieved_at": "2026-10-05T05:00:46Z",
+   "sha256": "15e7aef165cc2a7bfa6933aad2cb2b40b17649af2e22bf651977797be8117ca5",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-82560"
+  },
+  "vulns/CVE-2026-8286.json": {
+   "bytes": 8976,
+   "retrieved_at": "2026-10-05T05:00:46Z",
+   "sha256": "521c2c04186cefc65f3e47d13ca356eb13623ff54f64d5facf038d3c7dc59119",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-8286"
+  },
+  "vulns/CVE-2026-8328.json": {
+   "bytes": 6353,
+   "retrieved_at": "2026-10-05T05:00:46Z",
+   "sha256": "70b26c96e2dbd6b4e6c2ad70ec31ab223c015c404c0194815a9a8bf419171af5",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-8328"
+  },
+  "vulns/CVE-2026-8376.json": {
+   "bytes": 5851,
+   "retrieved_at": "2026-10-05T05:00:46Z",
+   "sha256": "d8ca5e670b0174cc45dd7b7597c0fb1498278761dc7cf0ffad25ab8d6de67529",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-8376"
+  },
+  "vulns/CVE-2026-8458.json": {
+   "bytes": 8384,
+   "retrieved_at": "2026-10-05T05:00:46Z",
+   "sha256": "88a4255b74fb745251c33bc9fec8673d02b6d3b7c23193a1e5d39a8667fd9193",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-8458"
+  },
+  "vulns/CVE-2026-84782.json": {
+   "bytes": 17238,
+   "retrieved_at": "2026-10-05T05:00:46Z",
+   "sha256": "c9644e644d18aa415fad82cad1cad183da2b98e8d35274a2cc14a1791cbfbbf5",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-84782"
+  },
+  "vulns/CVE-2026-84784.json": {
+   "bytes": 16560,
+   "retrieved_at": "2026-10-05T05:00:46Z",
+   "sha256": "bbf773510210ea01e98c6788140cd2ed3f5d39ef9c23d7d71ad9f2021f2cf949",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-84784"
+  },
+  "vulns/CVE-2026-85091.json": {
+   "bytes": 1945,
+   "retrieved_at": "2026-10-05T04:55:53Z",
+   "sha256": "256d894e5e25eb354d1b16b0c06e5db02266ac1a1854c2a62a4a25d31fdaf439",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-85091"
+  },
+  "vulns/CVE-2026-86137.json": {
+   "bytes": 5727,
+   "retrieved_at": "2026-10-05T05:00:46Z",
+   "sha256": "b5fdcaf41fadc1701aee23639e8a80c420f805ea16a34917dd026c60de3ceddd",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-86137"
+  },
+  "vulns/CVE-2026-86138.json": {
+   "bytes": 5524,
+   "retrieved_at": "2026-10-05T05:00:46Z",
+   "sha256": "9fce414515888603717e739564389329e5f0f36c039cec00dcde25c081d67fa6",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-86138"
+  },
+  "vulns/CVE-2026-86139.json": {
+   "bytes": 5283,
+   "retrieved_at": "2026-10-05T05:00:46Z",
+   "sha256": "768fd4a3bc0720caaead781652dda5974d92b732d3a341458047b35e57273400",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-86139"
+  },
+  "vulns/CVE-2026-86140.json": {
+   "bytes": 5550,
+   "retrieved_at": "2026-10-05T05:00:47Z",
+   "sha256": "22646782017f4af9fbdd980ff8e5c54210da1839333673245eb240b54d3070be",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-86140"
+  },
+  "vulns/CVE-2026-86141.json": {
+   "bytes": 5685,
+   "retrieved_at": "2026-10-05T05:00:47Z",
+   "sha256": "5dcb6e64cee91fc9501a8e948c8d4185e8db918fa0aa413ca82d10545007ec2c",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-86141"
+  },
+  "vulns/CVE-2026-86142.json": {
+   "bytes": 5489,
+   "retrieved_at": "2026-10-05T05:00:47Z",
+   "sha256": "3dba01942adff48e44a242d1130470ad80ecfec04af5a8df7cccaa62bdcc7361",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-86142"
+  },
+  "vulns/CVE-2026-86143.json": {
+   "bytes": 6514,
+   "retrieved_at": "2026-10-05T05:00:47Z",
+   "sha256": "657842eea92b7d4c36aefd445d4435e3d488a64c1ee04e3fc2c149308635a85c",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-86143"
+  },
+  "vulns/CVE-2026-86144.json": {
+   "bytes": 7392,
+   "retrieved_at": "2026-10-05T05:00:47Z",
+   "sha256": "59c3d29c3eaad334a03265bd906aa8ab5b8d1c3ca1131e846fd19726a582fcdb",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-86144"
+  },
+  "vulns/CVE-2026-8674.json": {
+   "bytes": 3344,
+   "retrieved_at": "2026-10-05T05:00:47Z",
+   "sha256": "9afa37497a45c1ad898da14c23cc368d89adad9853e24d7686e9006155bdf1be",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-8674"
+  },
+  "vulns/CVE-2026-86805.json": {
+   "bytes": 3707,
+   "retrieved_at": "2026-10-05T05:00:47Z",
+   "sha256": "c35e92dd3a6dc3ea36855d70c9c6c15d07dabaa3f0e93356730ee97a3a8eb3ed",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-86805"
+  },
+  "vulns/CVE-2026-87910.json": {
+   "bytes": 6388,
+   "retrieved_at": "2026-10-05T05:00:47Z",
+   "sha256": "7b1bc228c859116b80c4ab30babf7d9935256a9314899493957e12fb9893ee89",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-87910"
+  },
+  "vulns/CVE-2026-89092.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:48Z",
+   "sha256": "06bfae3c274a3a2eb6f02c3973f49121a8a2d65e99c2b0399f215f7e85b59338",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-89092"
+  },
+  "vulns/CVE-2026-8924.json": {
+   "bytes": 7992,
+   "retrieved_at": "2026-10-05T05:00:48Z",
+   "sha256": "fe1ff10e1b04d70cfdeed70fd045d1b39b68431915e5fc282cdc9716d35b28e4",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-8924"
+  },
+  "vulns/CVE-2026-8926.json": {
+   "bytes": 3082,
+   "retrieved_at": "2026-10-05T05:00:48Z",
+   "sha256": "0938bc46f7d1647418fb7b8666c9e7efdbd2e33920d988e329ae322566b40741",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-8926"
+  },
+  "vulns/CVE-2026-8927.json": {
+   "bytes": 12351,
+   "retrieved_at": "2026-10-05T05:00:48Z",
+   "sha256": "094448189dcf7511728f700b2276c93c1121581ed67df42defe3e4b16bca365e",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-8927"
+  },
+  "vulns/CVE-2026-8932.json": {
+   "bytes": 13775,
+   "retrieved_at": "2026-10-05T05:00:48Z",
+   "sha256": "9bacf70ee3f9b54231329eaec844e8d76eff8b2a37701a2f3a4cc38c3fd70f46",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-8932"
+  },
+  "vulns/CVE-2026-9076.json": {
+   "bytes": 12137,
+   "retrieved_at": "2026-10-05T05:00:48Z",
+   "sha256": "4bf00d08f7d70ef7c73bbebe19f081b8f55fb623cd49711f615e7c2e54a740fb",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-9076"
+  },
+  "vulns/CVE-2026-9079.json": {
+   "bytes": 3290,
+   "retrieved_at": "2026-10-05T05:00:48Z",
+   "sha256": "ede791d6c02e94e5ae5838032f293abaaccf3f5dc1077db7e8be3a1e945ff00c",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-9079"
+  },
+  "vulns/CVE-2026-9080.json": {
+   "bytes": 2792,
+   "retrieved_at": "2026-10-05T05:00:48Z",
+   "sha256": "f3d8637b36334dd1a185bc416e6a29fca88c26b72926c10b1deab7d26efc37e0",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-9080"
+  },
+  "vulns/CVE-2026-91765.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:48Z",
+   "sha256": "371fd20c621f044b28792f41b4553cac8a12d4bf0e33085bb33ebe7f5872b6c1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-91765"
+  },
+  "vulns/CVE-2026-91766.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:48Z",
+   "sha256": "0e5b198a72e9923dc517659c1526e0c208bebbcb5a49c0ac34aac809d65cf7ff",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-91766"
+  },
+  "vulns/CVE-2026-91767.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:49Z",
+   "sha256": "5c1ce4fbe89262962aa876ca36d3a1916538ba012f3f2346c6f1035c9d9787d9",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-91767"
+  },
+  "vulns/CVE-2026-91768.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:49Z",
+   "sha256": "e5464f225ca60b041ad358c883db7b85697aaa0956942da875be24730ba84bbc",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-91768"
+  },
+  "vulns/CVE-2026-91769.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:49Z",
+   "sha256": "bfd54e329d6b1bcd5ce98bca1ae99427c6b56af967eb05552039851be780c3f6",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-91769"
+  },
+  "vulns/CVE-2026-9256.json": {
+   "bytes": 16027,
+   "retrieved_at": "2026-10-05T05:00:49Z",
+   "sha256": "1ac7846fa42e75db265b9dd064d710d6bbde64d6f77c14ab5cf78d4f53ea2ba3",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-9256"
+  },
+  "vulns/CVE-2026-92842.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:49Z",
+   "sha256": "a9de30a5c550c9d572776fdff2881e27464e54b6ca547b3eac5d8c34c0c07fdc",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-92842"
+  },
+  "vulns/CVE-2026-93546.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:49Z",
+   "sha256": "819a7bca08463d10dc624db36174a6321b4b4f1f1bb82f26fd06c3f6cb93b687",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-93546"
+  },
+  "vulns/CVE-2026-93682.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:49Z",
+   "sha256": "33b0539df52a0b734fffae4d501eb988783c20d0ffbe7cd2f98eba1f4ef8c043",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-93682"
+  },
+  "vulns/CVE-2026-93990.json": {
+   "bytes": 2951,
+   "retrieved_at": "2026-10-05T05:00:49Z",
+   "sha256": "7020b9d86d5a635508595db75e0a361f1a7307e3bfee609378bbb328ed8732a3",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-93990"
+  },
+  "vulns/CVE-2026-94054.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:49Z",
+   "sha256": "6c261f0914d9e86e7206a65f94f39a8f9f7454b8d8f1945ce0d29819c24ed130",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-94054"
+  },
+  "vulns/CVE-2026-94056.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:49Z",
+   "sha256": "015b882dc19351756549a744b276e0a37ec029042b48da2bd196917a74cf52c0",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-94056"
+  },
+  "vulns/CVE-2026-94057.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:49Z",
+   "sha256": "d5ff3019d6bf0532fc9a1665683aed66ab43ec340475b83e297bf6b09996b5e1",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-94057"
+  },
+  "vulns/CVE-2026-9538.json": {
+   "bytes": 2458,
+   "retrieved_at": "2026-10-05T05:00:50Z",
+   "sha256": "a14aa13cc2b44d218f4bfe4d574fc05e335aa975f37fc99e45f562746c2bc1b9",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-9538"
+  },
+  "vulns/CVE-2026-9545.json": {
+   "bytes": 3393,
+   "retrieved_at": "2026-10-05T05:00:50Z",
+   "sha256": "c5c8c76f7148dbc06b593e376adf9aea1b99726a164ffea2689d8f5fc65b06aa",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-9545"
+  },
+  "vulns/CVE-2026-9547.json": {
+   "bytes": 5949,
+   "retrieved_at": "2026-10-05T05:00:50Z",
+   "sha256": "2c0439f04c83e2411e1406f391c6cc4a01b32744d16a083d606611b5577fb14b",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-9547"
+  },
+  "vulns/CVE-2026-95818.json": {
+   "bytes": 2935,
+   "retrieved_at": "2026-10-05T05:00:50Z",
+   "sha256": "29c25eac28050945560a828b1ea87208652ef059a5946d91b90702dd1e2d89bd",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-95818"
+  },
+  "vulns/CVE-2026-96512.json": {
+   "bytes": 4739,
+   "retrieved_at": "2026-10-05T05:00:50Z",
+   "sha256": "f2d9124199a9a70ff7c5d6d216662137aeac6cd74185f21cb90f23a197854883",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-96512"
+  },
+  "vulns/CVE-2026-9669.json": {
+   "bytes": 21334,
+   "retrieved_at": "2026-10-05T05:00:50Z",
+   "sha256": "b5b6bcda78750c77a0df3d86229946c524aa187b4dd1ae80f522ce422d2c0bbe",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-9669"
+  },
+  "vulns/CVE-2026-9672.json": {
+   "bytes": 70,
+   "retrieved_at": "2026-10-05T05:00:50Z",
+   "sha256": "3f8806a86d9c647f40076b4e6aaf91335aefc1f22edc1fa1e2188c6e615ea3b2",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-9672"
+  },
+  "vulns/CVE-2026-97399.json": {
+   "bytes": 71,
+   "retrieved_at": "2026-10-05T05:00:50Z",
+   "sha256": "16f2b2582db76483db9d1ec2ff9f47180a8d69b5f2e08cbbcd1f7185b8890e22",
+   "url": "https://api.osv.dev/v1/vulns/CVE-2026-97399"
+  },
+  "vulns/DEBIAN-CVE-2005-1119.json": {
+   "bytes": 2284,
+   "retrieved_at": "2026-10-05T05:19:41Z",
+   "sha256": "21bae7cd4763eb8183ae539479da317a5fd255bc41db6caa18ef1bd3426b277b",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2005-1119"
+  },
+  "vulns/DEBIAN-CVE-2010-4344.json": {
+   "bytes": 1749,
+   "retrieved_at": "2026-10-05T05:07:17Z",
+   "sha256": "80b91367802d63297622f773a377b109f0231ae0d15fe4fa7e18f63d804a5380",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2010-4344"
+  },
+  "vulns/DEBIAN-CVE-2010-4345.json": {
+   "bytes": 1709,
+   "retrieved_at": "2026-10-05T05:07:17Z",
+   "sha256": "68d6490237e39f7f95bd4745ea9b16b1ff46cf1f637567fefe49cadba1194d5a",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2010-4345"
+  },
+  "vulns/DEBIAN-CVE-2014-0160.json": {
+   "bytes": 1831,
+   "retrieved_at": "2026-10-05T05:07:12Z",
+   "sha256": "ef7f30770038f7059c8b30f7473778beef34bb08847da521b1d54b96d6c7f319",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2014-0160"
+  },
+  "vulns/DEBIAN-CVE-2016-2568.json": {
+   "bytes": 1743,
+   "retrieved_at": "2026-10-05T05:07:14Z",
+   "sha256": "50ab0561f3cda3fffce28937a421bebf3590b261201826d15a7e10e83545c286",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2016-2568"
+  },
+  "vulns/DEBIAN-CVE-2017-7494.json": {
+   "bytes": 1720,
+   "retrieved_at": "2026-10-05T05:07:18Z",
+   "sha256": "55c53bdfee424e69239400a5335789a2ef2e7a98a3630cce9947cfa3bb796821",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2017-7494"
+  },
+  "vulns/DEBIAN-CVE-2018-6789.json": {
+   "bytes": 1659,
+   "retrieved_at": "2026-10-05T05:07:17Z",
+   "sha256": "240810dff8aaa727192372a64a5572dca51d236d13a539f7e3f3d50bf7bffa08",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2018-6789"
+  },
+  "vulns/DEBIAN-CVE-2019-0211.json": {
+   "bytes": 1842,
+   "retrieved_at": "2026-10-05T05:07:15Z",
+   "sha256": "511380c38503aa4290e838453612b4839a831c4339bfc308c125941cdde1cf97",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2019-0211"
+  },
+  "vulns/DEBIAN-CVE-2019-10149.json": {
+   "bytes": 1659,
+   "retrieved_at": "2026-10-05T05:07:17Z",
+   "sha256": "c6a64a3b663dab2929006a1de53ba3ca90282b1e2cd1e421bb261bb6bedbf508",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2019-10149"
+  },
+  "vulns/DEBIAN-CVE-2019-16928.json": {
+   "bytes": 1667,
+   "retrieved_at": "2026-10-05T05:07:17Z",
+   "sha256": "c77cf6961255f5b7e850b1d8034dbbac56c1daf5fbc445406b7f2f87a838070e",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2019-16928"
+  },
+  "vulns/DEBIAN-CVE-2019-18634.json": {
+   "bytes": 1877,
+   "retrieved_at": "2026-10-05T05:07:14Z",
+   "sha256": "f608e9c89cad74a3e4155d186b3a89e22bc4b9b3960961df7643608a78a06cfd",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2019-18634"
+  },
+  "vulns/DEBIAN-CVE-2020-1472.json": {
+   "bytes": 2773,
+   "retrieved_at": "2026-10-05T05:07:18Z",
+   "sha256": "818c83508e1f6f451f45e60b6920fed4ae7844c7bfa02f8e189d4175410b8a4a",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2020-1472"
+  },
+  "vulns/DEBIAN-CVE-2021-23017.json": {
+   "bytes": 1701,
+   "retrieved_at": "2026-10-05T05:07:16Z",
+   "sha256": "a1ac14ec68a9d9d5a6addcb539f4db0026c5789a98ab8d59408eb95758b342b7",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2021-23017"
+  },
+  "vulns/DEBIAN-CVE-2021-3156.json": {
+   "bytes": 1696,
+   "retrieved_at": "2026-10-05T05:07:14Z",
+   "sha256": "24802da82e03177c67a05a911d2e4b0b5465ee5617ced5c2bde00a708b93fab2",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2021-3156"
+  },
+  "vulns/DEBIAN-CVE-2021-3560.json": {
+   "bytes": 1880,
+   "retrieved_at": "2026-10-05T05:07:14Z",
+   "sha256": "69837e5e42cac51c6fb0a2cd6c82fb48bf0450b1812d70c800c84f3bd379db30",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2021-3560"
+  },
+  "vulns/DEBIAN-CVE-2021-4034.json": {
+   "bytes": 2145,
+   "retrieved_at": "2026-10-05T05:07:14Z",
+   "sha256": "3261c235c9199e6e328ce8917955ee7a7c626660c1be6f16718de44d3cde28c9",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2021-4034"
+  },
+  "vulns/DEBIAN-CVE-2021-40438.json": {
+   "bytes": 1654,
+   "retrieved_at": "2026-10-05T05:07:15Z",
+   "sha256": "5b8f1718cfa67bb0b5b844b19f0712d3f2b08fada73234c1dc01728c6eb6c586",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2021-40438"
+  },
+  "vulns/DEBIAN-CVE-2021-41617.json": {
+   "bytes": 1889,
+   "retrieved_at": "2026-10-05T05:07:13Z",
+   "sha256": "34d031690e40988814e07368dfa934fac3e69ab96f035720f4144851e28e80c1",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2021-41617"
+  },
+  "vulns/DEBIAN-CVE-2021-41773.json": {
+   "bytes": 2135,
+   "retrieved_at": "2026-10-05T05:07:15Z",
+   "sha256": "ea00b94f30f1d0ec922f176ad1189eb61bb78bf0b61752fd4bc4e2a508194085",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2021-41773"
+  },
+  "vulns/DEBIAN-CVE-2021-42013.json": {
+   "bytes": 2025,
+   "retrieved_at": "2026-10-05T05:07:15Z",
+   "sha256": "2193b748f8c83ae9a8925ddfe99e731edb034a64f00e189ee1ba5ad34b9d9ec0",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2021-42013"
+  },
+  "vulns/DEBIAN-CVE-2021-44142.json": {
+   "bytes": 1977,
+   "retrieved_at": "2026-10-05T05:07:18Z",
+   "sha256": "b9aae6d00b4134d5a8a4e226221ab440edf598d72dcdb2235b19f06d5fbb9169",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2021-44142"
+  },
+  "vulns/DEBIAN-CVE-2021-44224.json": {
+   "bytes": 1850,
+   "retrieved_at": "2026-10-05T05:07:16Z",
+   "sha256": "20b0a4295ccc19a705b5e8638d6896d937bdae0ca0111cbb250517e97d672b94",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2021-44224"
+  },
+  "vulns/DEBIAN-CVE-2023-24329.json": {
+   "bytes": 2131,
+   "retrieved_at": "2026-10-05T05:07:19Z",
+   "sha256": "1e2335f1b62c8ae40a674454a559c56d4317f816fb42194af90c6b0ae22cd6ec",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2023-24329"
+  },
+  "vulns/DEBIAN-CVE-2023-25652.json": {
+   "bytes": 2259,
+   "retrieved_at": "2026-10-05T05:19:46Z",
+   "sha256": "b44ff0b02bc3ae0c8813805fa5f238af46d2bbc4e6210b52bef96b1cd8c90630",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2023-25652"
+  },
+  "vulns/DEBIAN-CVE-2023-25690.json": {
+   "bytes": 2322,
+   "retrieved_at": "2026-10-05T05:07:16Z",
+   "sha256": "e8dd62727a5a85e451c6fd9c26a5974c3454c8e33b15a4969dfbe7415f1c2169",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2023-25690"
+  },
+  "vulns/DEBIAN-CVE-2023-2911.json": {
+   "bytes": 1971,
+   "retrieved_at": "2026-10-05T05:07:16Z",
+   "sha256": "24ab4749992f86a809eabab495a46c5e22046dd5238750228fdcd84a08d8a3a4",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2023-2911"
+  },
+  "vulns/DEBIAN-CVE-2023-31484.json": {
+   "bytes": 1622,
+   "retrieved_at": "2026-10-05T05:07:19Z",
+   "sha256": "62f46ff4d073949a666adb814ab11f8a7a629082190425715febc794b64b2744",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2023-31484"
+  },
+  "vulns/DEBIAN-CVE-2023-4091.json": {
+   "bytes": 2337,
+   "retrieved_at": "2026-10-05T05:18:38Z",
+   "sha256": "6d4cdba6e09f1fb446738066ee4a19bbe6ef35a4447b6abcf41510e866c685cd",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2023-4091"
+  },
+  "vulns/DEBIAN-CVE-2023-41105.json": {
+   "bytes": 1181,
+   "retrieved_at": "2026-10-05T05:19:43Z",
+   "sha256": "e34b61c9c0038d87b93eee82deff90659496e4bd0f989591ed0fbd97664c7a06",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2023-41105"
+  },
+  "vulns/DEBIAN-CVE-2023-42115.json": {
+   "bytes": 2094,
+   "retrieved_at": "2026-10-05T05:07:17Z",
+   "sha256": "0643ebd1d08254607c665b6ca0acf5f9461bfcefde72715afc962d159e77649e",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2023-42115"
+  },
+  "vulns/DEBIAN-CVE-2023-42116.json": {
+   "bytes": 2110,
+   "retrieved_at": "2026-10-05T05:07:18Z",
+   "sha256": "220221dd4a5a2e6f730956fafcdebdc6a639108e58c17476ed174a618ac120b1",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2023-42116"
+  },
+  "vulns/DEBIAN-CVE-2023-42117.json": {
+   "bytes": 2125,
+   "retrieved_at": "2026-10-05T05:07:18Z",
+   "sha256": "97d33445c499888309980542338fd084be4a10a3ec648b0322bd24cdf6c4a87f",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2023-42117"
+  },
+  "vulns/DEBIAN-CVE-2023-44487.json": {
+   "bytes": 13731,
+   "retrieved_at": "2026-10-05T05:07:16Z",
+   "sha256": "12127ce833a25c8c9b205b7dbae4b2289e3f117f501f9512766ac38e08039bbf",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2023-44487"
+  },
+  "vulns/DEBIAN-CVE-2023-45853.json": {
+   "bytes": 2538,
+   "retrieved_at": "2026-10-05T05:18:37Z",
+   "sha256": "55c114982ee96513e5a6b4799210572dacb32e3feab8652e6ae99bb7ace768b6",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2023-45853"
+  },
+  "vulns/DEBIAN-CVE-2023-47038.json": {
+   "bytes": 1712,
+   "retrieved_at": "2026-10-05T05:18:38Z",
+   "sha256": "4b36d3672eb39fcce4d19a1f16806fdbc3fc0bd2c0c149580d2a2a0a8fdf8c20",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2023-47038"
+  },
+  "vulns/DEBIAN-CVE-2023-4863.json": {
+   "bytes": 6885,
+   "retrieved_at": "2026-10-05T05:07:23Z",
+   "sha256": "8796cf15f2fa03e81b18b7d8e773cea08dcb810ed2df5c681ea2ffdd36359f79",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2023-4863"
+  },
+  "vulns/DEBIAN-CVE-2023-4911.json": {
+   "bytes": 1846,
+   "retrieved_at": "2026-10-05T05:07:21Z",
+   "sha256": "64e94d3884642bb70ed5510fcfa9a1b818691d9a9e8f25e77184fe7f50cd284e",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2023-4911"
+  },
+  "vulns/DEBIAN-CVE-2023-51764.json": {
+   "bytes": 2297,
+   "retrieved_at": "2026-10-05T05:07:18Z",
+   "sha256": "fd813364367d1115def6c9962cc1d6c5f8baf57141e7285bc037282130aa401b",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2023-51764"
+  },
+  "vulns/DEBIAN-CVE-2024-27280.json": {
+   "bytes": 1215,
+   "retrieved_at": "2026-10-05T05:07:20Z",
+   "sha256": "1b695f82ded3e6cb54d50e59ae85fca4b752802ef2ad3cee8050941f01ffe56b",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2024-27280"
+  },
+  "vulns/DEBIAN-CVE-2024-2756.json": {
+   "bytes": 1152,
+   "retrieved_at": "2026-10-05T05:07:20Z",
+   "sha256": "0aaf0a7fa3a8f63e17a9e9107a5b0614cf40adbc551a6291825c00f73187fd50",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2024-2756"
+  },
+  "vulns/DEBIAN-CVE-2024-38475.json": {
+   "bytes": 2254,
+   "retrieved_at": "2026-10-05T05:07:16Z",
+   "sha256": "a1702a26d8f271c752d2870220402c0bf43f6c35ab9bb4267c6b5ef0a9cd28e7",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2024-38475"
+  },
+  "vulns/DEBIAN-CVE-2024-4577.json": {
+   "bytes": 77,
+   "retrieved_at": "2026-10-05T05:07:20Z",
+   "sha256": "5bd90d82a888aa6bd1a025999e55b9f1f16bda42e2187ceca69d6b554bbfadc8",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2024-4577"
+  },
+  "vulns/DEBIAN-CVE-2024-56406.json": {
+   "bytes": 2083,
+   "retrieved_at": "2026-10-05T05:19:44Z",
+   "sha256": "a51e95f2388b782684eb0cba313b97b09b88741b7b23c60ee70f68028c0f57b2",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2024-56406"
+  },
+  "vulns/DEBIAN-CVE-2024-6387.json": {
+   "bytes": 1834,
+   "retrieved_at": "2026-10-05T05:07:13Z",
+   "sha256": "be8d5d547a4faee2d92a882f9e46ede42ed6aaf745519842407ba4fcd1d4d206",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2024-6387"
+  },
+  "vulns/DEBIAN-CVE-2025-10230.json": {
+   "bytes": 2674,
+   "retrieved_at": "2026-10-05T05:07:19Z",
+   "sha256": "e12e4c429d6dda6fa979d7ee684b78edf6f0ecc905c75464b1fe8d5943486206",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-10230"
+  },
+  "vulns/DEBIAN-CVE-2025-12084.json": {
+   "bytes": 5481,
+   "retrieved_at": "2026-10-05T05:19:43Z",
+   "sha256": "876c0b1b3f96df295c753072915cb633c307d47f86e9dbf2dff93c020d67a730",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-12084"
+  },
+  "vulns/DEBIAN-CVE-2025-13836.json": {
+   "bytes": 4395,
+   "retrieved_at": "2026-10-05T05:07:19Z",
+   "sha256": "87efb8ec129ae313464d74bc5c1acda902948e78975f562466c72b9dbdf06d77",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-13836"
+  },
+  "vulns/DEBIAN-CVE-2025-13878.json": {
+   "bytes": 2319,
+   "retrieved_at": "2026-10-05T05:18:38Z",
+   "sha256": "115b0fd01ddc7bea84904202df2816cb2cb694454629c806ceefe1816cc7e3c2",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-13878"
+  },
+  "vulns/DEBIAN-CVE-2025-14524.json": {
+   "bytes": 2646,
+   "retrieved_at": "2026-10-05T05:07:21Z",
+   "sha256": "be661f007fc82f9a420cc248481377cd593f65f63211f034f5a4be9e00393ce1",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-14524"
+  },
+  "vulns/DEBIAN-CVE-2025-14819.json": {
+   "bytes": 2779,
+   "retrieved_at": "2026-10-05T05:07:21Z",
+   "sha256": "16e879697f6df861208afe8fbc08740f1137884100e9d5735478129590114af4",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-14819"
+  },
+  "vulns/DEBIAN-CVE-2025-15467.json": {
+   "bytes": 3376,
+   "retrieved_at": "2026-10-05T05:07:12Z",
+   "sha256": "2456327078934534a4ae588eeba341b677504dd21c25172622360de9d17f99d1",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-15467"
+  },
+  "vulns/DEBIAN-CVE-2025-26465.json": {
+   "bytes": 2044,
+   "retrieved_at": "2026-10-05T05:18:37Z",
+   "sha256": "c941328bc08c9f815b93c9986a5f62c0f734f55b46a67b96e2e13da0c853abbe",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-26465"
+  },
+  "vulns/DEBIAN-CVE-2025-27613.json": {
+   "bytes": 2403,
+   "retrieved_at": "2026-10-05T05:19:46Z",
+   "sha256": "afd769eb676e0cdfe55f78b24788fc11d93a6c2dd3dfc4071be09665db33af66",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-27613"
+  },
+  "vulns/DEBIAN-CVE-2025-32462.json": {
+   "bytes": 1701,
+   "retrieved_at": "2026-10-05T05:19:41Z",
+   "sha256": "74f202b668eaf4687f590f277275413b71dd79a83ade350e69b477bdb2dfc71e",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-32462"
+  },
+  "vulns/DEBIAN-CVE-2025-32463.json": {
+   "bytes": 1259,
+   "retrieved_at": "2026-10-05T05:07:14Z",
+   "sha256": "c404434124210656c40c9d965c27998b00c01d15a77c390e79b9e90bcd7819e6",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-32463"
+  },
+  "vulns/DEBIAN-CVE-2025-40777.json": {
+   "bytes": 3558,
+   "retrieved_at": "2026-10-05T05:07:17Z",
+   "sha256": "14e59391355893215d7db671a94150263fe0d977d80403b7468a006d5b561a9a",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-40777"
+  },
+  "vulns/DEBIAN-CVE-2025-40778.json": {
+   "bytes": 2259,
+   "retrieved_at": "2026-10-05T05:19:43Z",
+   "sha256": "c88a69df5ca5d793ac8c7179d8cd31079ec863fbbb7108906d2fe9bef6705912",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-40778"
+  },
+  "vulns/DEBIAN-CVE-2025-46835.json": {
+   "bytes": 2198,
+   "retrieved_at": "2026-10-05T05:07:23Z",
+   "sha256": "2d066daefba6578898ae1667e47e7a2d97fa863ecf984657f5d06578dd36c0a8",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-46835"
+  },
+  "vulns/DEBIAN-CVE-2025-48384.json": {
+   "bytes": 2668,
+   "retrieved_at": "2026-10-05T05:07:23Z",
+   "sha256": "f2e93dfd64f8613f4d2300ac1f1773823b0c2f375e6caa3450d7c647729f7b70",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-48384"
+  },
+  "vulns/DEBIAN-CVE-2025-48385.json": {
+   "bytes": 3109,
+   "retrieved_at": "2026-10-05T05:07:23Z",
+   "sha256": "3c564f2cdfeb62ab3cfd69b85a6a73b9115160941e80023119c0bcd59a9538b7",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-48385"
+  },
+  "vulns/DEBIAN-CVE-2025-5918.json": {
+   "bytes": 1972,
+   "retrieved_at": "2026-10-05T05:19:42Z",
+   "sha256": "26474835d80c422fdbc01ac0fd496c7ab53a447877ab0907daa114df4b770026",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-5918"
+  },
+  "vulns/DEBIAN-CVE-2025-59375.json": {
+   "bytes": 15018,
+   "retrieved_at": "2026-10-05T05:07:21Z",
+   "sha256": "2b42e72555e3725949cdc9b3b86033f72e123c44405326ea8c6e0c0ae9f3c4ad",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-59375"
+  },
+  "vulns/DEBIAN-CVE-2025-6965.json": {
+   "bytes": 1764,
+   "retrieved_at": "2026-10-05T05:19:46Z",
+   "sha256": "93b2c3fa23849f3b8744c44f91b97e468209b98d7589ad6fe06276b43125bc7b",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-6965"
+  },
+  "vulns/DEBIAN-CVE-2025-7519.json": {
+   "bytes": 2003,
+   "retrieved_at": "2026-10-05T05:19:42Z",
+   "sha256": "d79107d827114261949262345182c1bc2da7e021a8d8bbd6102c23c0a3f9c2db",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-7519"
+  },
+  "vulns/DEBIAN-CVE-2025-7709.json": {
+   "bytes": 2259,
+   "retrieved_at": "2026-10-05T05:07:22Z",
+   "sha256": "95b23970ff3670dd56452c6f6398eea8ad054d1520f59f82ae2bd2fac1f0fea0",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-7709"
+  },
+  "vulns/DEBIAN-CVE-2025-8114.json": {
+   "bytes": 1886,
+   "retrieved_at": "2026-10-05T05:18:39Z",
+   "sha256": "6aa8b288adfb8492c5dd577b3af67236760235153e62b4f201975046c33a5f30",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-8114"
+  },
+  "vulns/DEBIAN-CVE-2025-8277.json": {
+   "bytes": 1973,
+   "retrieved_at": "2026-10-05T05:07:22Z",
+   "sha256": "b1b54db29bccc6a5ccd4ca0036480cd8d224da55dbeb1052ecdbb3f13bfeaf47",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-8277"
+  },
+  "vulns/DEBIAN-CVE-2025-8677.json": {
+   "bytes": 2179,
+   "retrieved_at": "2026-10-05T05:07:17Z",
+   "sha256": "b34e63982dbd24ae87732a9a5156a23eeab1aaf4ee9f8ed64e0242b01db604f7",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-8677"
+  },
+  "vulns/DEBIAN-CVE-2025-9232.json": {
+   "bytes": 3122,
+   "retrieved_at": "2026-10-05T05:19:40Z",
+   "sha256": "7f0b02f4265f5ee3bd22a6eb5e9f4457cc0025204eed5a23a4d97db8001629d2",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-9232"
+  },
+  "vulns/DEBIAN-CVE-2025-9900.json": {
+   "bytes": 2101,
+   "retrieved_at": "2026-10-05T05:07:22Z",
+   "sha256": "b8b664cb227a623c49ec6ee3924755ef0c19cb5145c133fc9fa947b9c6618245",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2025-9900"
+  },
+  "vulns/DEBIAN-CVE-2026-0915.json": {
+   "bytes": 2180,
+   "retrieved_at": "2026-10-05T05:19:45Z",
+   "sha256": "d6c9b9e18e188824356ebb858a2f6e0cb944fd8f6298961909648a0e6ecbb6fd",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-0915"
+  },
+  "vulns/DEBIAN-CVE-2026-0989.json": {
+   "bytes": 2702,
+   "retrieved_at": "2026-10-05T05:18:38Z",
+   "sha256": "d4d67106f115576b4deb4e67128182b09364535c01f88a62e257351b9d76d903",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-0989"
+  },
+  "vulns/DEBIAN-CVE-2026-0990.json": {
+   "bytes": 2803,
+   "retrieved_at": "2026-10-05T05:07:21Z",
+   "sha256": "b16a35d30bb1f7cf954138e842721c4ecaba1e6dcabf97744ab8f3d676ca6077",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-0990"
+  },
+  "vulns/DEBIAN-CVE-2026-0992.json": {
+   "bytes": 2773,
+   "retrieved_at": "2026-10-05T05:19:45Z",
+   "sha256": "a3bbbaa3ad688e64e7cac89b737d66cb142323fb56eb1e879b4b3aa148ffe37d",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-0992"
+  },
+  "vulns/DEBIAN-CVE-2026-11822.json": {
+   "bytes": 2603,
+   "retrieved_at": "2026-10-05T05:07:22Z",
+   "sha256": "435074ff2009ab0d02f7afaa94589ef2f340de1580eee4dc55621e102d949737",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-11822"
+  },
+  "vulns/DEBIAN-CVE-2026-11824.json": {
+   "bytes": 2588,
+   "retrieved_at": "2026-10-05T05:18:39Z",
+   "sha256": "30921052e3e97b47ad0830fcee7073c9c33ff4e5cbfca025fc7f60b4b8496fd2",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-11824"
+  },
+  "vulns/DEBIAN-CVE-2026-11940.json": {
+   "bytes": 4627,
+   "retrieved_at": "2026-10-05T05:07:19Z",
+   "sha256": "20cfb217f3c83631c01a24d46263e752805ddde3397a13a9033c707901aafb96",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-11940"
+  },
+  "vulns/DEBIAN-CVE-2026-11972.json": {
+   "bytes": 5107,
+   "retrieved_at": "2026-10-05T05:19:43Z",
+   "sha256": "108ad4e42338a667303e14cd478a998b895a05ed7bb926280b8f7fa996617730",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-11972"
+  },
+  "vulns/DEBIAN-CVE-2026-12912.json": {
+   "bytes": 2311,
+   "retrieved_at": "2026-10-05T05:19:46Z",
+   "sha256": "3f21560f66b658b651a1370746013aeaac81acc09fe557c3bb2353ee6edf9120",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-12912"
+  },
+  "vulns/DEBIAN-CVE-2026-14164.json": {
+   "bytes": 2252,
+   "retrieved_at": "2026-10-05T05:19:42Z",
+   "sha256": "b1d82510bfd0fc0f841ec63d2193d8b169b30121471110dbba4316481d2e1ce1",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-14164"
+  },
+  "vulns/DEBIAN-CVE-2026-15028.json": {
+   "bytes": 2235,
+   "retrieved_at": "2026-10-05T05:19:42Z",
+   "sha256": "bb355a086e19d61fe4a37705aad30dec44947e548e5069c58e7793fa17c0926a",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-15028"
+  },
+  "vulns/DEBIAN-CVE-2026-1519.json": {
+   "bytes": 2951,
+   "retrieved_at": "2026-10-05T05:19:43Z",
+   "sha256": "c1aa1f13310fd7963d52f268ccebe864c35b147eba6353a453881f5ab8f62032",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-1519"
+  },
+  "vulns/DEBIAN-CVE-2026-15370.json": {
+   "bytes": 2154,
+   "retrieved_at": "2026-10-05T05:19:46Z",
+   "sha256": "d376f617ca8bf3c5f262879b1520970ec628c7f5739123a88acbf64603ca8510",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-15370"
+  },
+  "vulns/DEBIAN-CVE-2026-16389.json": {
+   "bytes": 1955,
+   "retrieved_at": "2026-10-05T05:07:13Z",
+   "sha256": "5ec4f17215ef157e1d249641b9990dec6f2f067af1e94868ca6bcfd9543d7854",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-16389"
+  },
+  "vulns/DEBIAN-CVE-2026-17084.json": {
+   "bytes": 6054,
+   "retrieved_at": "2026-10-05T05:19:43Z",
+   "sha256": "b56c09af9359f59590eaef28695a1ce19b5ddf53040c527af1d8e92aa7a5d245",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-17084"
+  },
+  "vulns/DEBIAN-CVE-2026-23918.json": {
+   "bytes": 2673,
+   "retrieved_at": "2026-10-05T05:07:16Z",
+   "sha256": "17681f4a37f01286fbe2e095febafa39098bb8d57a0a7c0af377debb723c9e42",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-23918"
+  },
+  "vulns/DEBIAN-CVE-2026-24515.json": {
+   "bytes": 1809,
+   "retrieved_at": "2026-10-05T05:19:45Z",
+   "sha256": "70ca51332dbfd3e030d14394bec88a49b0d0d8e9fe420b75e013d80d00d11470",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-24515"
+  },
+  "vulns/DEBIAN-CVE-2026-25210.json": {
+   "bytes": 1885,
+   "retrieved_at": "2026-10-05T05:18:39Z",
+   "sha256": "1237a8062ff626cff1edb97898f12534a8bfbea68cd040f217edcf4fa1275753",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-25210"
+  },
+  "vulns/DEBIAN-CVE-2026-27171.json": {
+   "bytes": 2186,
+   "retrieved_at": "2026-10-05T05:07:15Z",
+   "sha256": "c493d9e07f40900d773d0d9b9981c583d763df4eea2168a691abe203f0d3dd52",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-27171"
+  },
+  "vulns/DEBIAN-CVE-2026-27654.json": {
+   "bytes": 2706,
+   "retrieved_at": "2026-10-05T05:07:16Z",
+   "sha256": "d1222b6baa5bb8620de421d940ec607c81cb0e2fa99c368050528e07ee34a8bb",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-27654"
+  },
+  "vulns/DEBIAN-CVE-2026-27784.json": {
+   "bytes": 2592,
+   "retrieved_at": "2026-10-05T05:19:42Z",
+   "sha256": "ba6fb58834807cb9fcf40599ab14a73c752d529feb46033611d3e5fffc965c4e",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-27784"
+  },
+  "vulns/DEBIAN-CVE-2026-2781.json": {
+   "bytes": 14483,
+   "retrieved_at": "2026-10-05T05:07:13Z",
+   "sha256": "370dc635d7c19001a4ebc83ec160132a0ef951a9f8db3088355a57047388955e",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-2781"
+  },
+  "vulns/DEBIAN-CVE-2026-28388.json": {
+   "bytes": 3561,
+   "retrieved_at": "2026-10-05T05:07:12Z",
+   "sha256": "de16432b3ce512319c8b9e291bf8c34035fe75aaeb25989850868746a00191d4",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-28388"
+  },
+  "vulns/DEBIAN-CVE-2026-28389.json": {
+   "bytes": 3129,
+   "retrieved_at": "2026-10-05T05:19:40Z",
+   "sha256": "99d7b24cde4aaf557871ce08623d53a10165a9611465db431c8fbe32ea5d3967",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-28389"
+  },
+  "vulns/DEBIAN-CVE-2026-28780.json": {
+   "bytes": 3337,
+   "retrieved_at": "2026-10-05T05:19:42Z",
+   "sha256": "b6c81ef5f0378a4f21c9de94459599d49f5ae0b5837066c7a410ce81230b7ecd",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-28780"
+  },
+  "vulns/DEBIAN-CVE-2026-3012.json": {
+   "bytes": 3211,
+   "retrieved_at": "2026-10-05T05:19:43Z",
+   "sha256": "cfd423a3c798315601777cbb95733cff6394d193d8bb0c50bd65fcf7462e90f3",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-3012"
+  },
+  "vulns/DEBIAN-CVE-2026-3039.json": {
+   "bytes": 3113,
+   "retrieved_at": "2026-10-05T05:07:17Z",
+   "sha256": "ec69b669d900d17f80442d6660d49191979a16b3faf8c180b5dd366665a92136",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-3039"
+  },
+  "vulns/DEBIAN-CVE-2026-3238.json": {
+   "bytes": 3064,
+   "retrieved_at": "2026-10-05T05:19:43Z",
+   "sha256": "42d8336d58e9e60bbeed6b8139a84e2d803444b857d04d6874a79ec4da82fac6",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-3238"
+  },
+  "vulns/DEBIAN-CVE-2026-3276.json": {
+   "bytes": 3075,
+   "retrieved_at": "2026-10-05T05:19:43Z",
+   "sha256": "8b40136e62eeb3d0e2d966a7c5748b61f5a940ea28a6dc3ccbc8fa84f9d53b52",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-3276"
+  },
+  "vulns/DEBIAN-CVE-2026-33845.json": {
+   "bytes": 2128,
+   "retrieved_at": "2026-10-05T05:19:40Z",
+   "sha256": "3fa1cb8732131b806bb25da312fed9435ecd23493872cf9552f26bd16c400cf1",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-33845"
+  },
+  "vulns/DEBIAN-CVE-2026-33846.json": {
+   "bytes": 2777,
+   "retrieved_at": "2026-10-05T05:07:13Z",
+   "sha256": "66039f7f37a5e052d2ab958a17fc2f2b538460e756fcbd1a057bc56fa952df09",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-33846"
+  },
+  "vulns/DEBIAN-CVE-2026-34180.json": {
+   "bytes": 3712,
+   "retrieved_at": "2026-10-05T05:18:37Z",
+   "sha256": "e644ac49afa1aac0062b79baa4bb368001739f1870ef9d5e73986f7449191cec",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-34180"
+  },
+  "vulns/DEBIAN-CVE-2026-34182.json": {
+   "bytes": 4170,
+   "retrieved_at": "2026-10-05T05:19:40Z",
+   "sha256": "7adf31e3d2f4ba684cd82986eb4eea72064de86248b6584136d2a4bc29fa16ed",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-34182"
+  },
+  "vulns/DEBIAN-CVE-2026-34355.json": {
+   "bytes": 3364,
+   "retrieved_at": "2026-10-05T05:19:42Z",
+   "sha256": "8105990f998225d1df3d6fdbdc87dd18c5dde4a8d38e5dd80d360ccd5b5db2a4",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-34355"
+  },
+  "vulns/DEBIAN-CVE-2026-34743.json": {
+   "bytes": 2013,
+   "retrieved_at": "2026-10-05T05:07:14Z",
+   "sha256": "f6979689ff01ad3787ddb649020a4a5b986985fba745bd601f28d7f8833eec10",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-34743"
+  },
+  "vulns/DEBIAN-CVE-2026-3497.json": {
+   "bytes": 2806,
+   "retrieved_at": "2026-10-05T05:07:13Z",
+   "sha256": "741f5fc1cb2ee5843080d7c5772112b57a53cffabee492aaf75541a4bf6dab9c",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-3497"
+  },
+  "vulns/DEBIAN-CVE-2026-35385.json": {
+   "bytes": 2211,
+   "retrieved_at": "2026-10-05T05:19:41Z",
+   "sha256": "eaeb78d821d3d52b6131f4082c8297169d416299a7f0b1471ab8142bedec60bf",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-35385"
+  },
+  "vulns/DEBIAN-CVE-2026-35387.json": {
+   "bytes": 2174,
+   "retrieved_at": "2026-10-05T05:19:41Z",
+   "sha256": "c6b0a5d4efc3c54a2a17dd9a35b5ee9b479c90540de2deab4349124c1d3505ac",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-35387"
+  },
+  "vulns/DEBIAN-CVE-2026-35535.json": {
+   "bytes": 1927,
+   "retrieved_at": "2026-10-05T05:07:14Z",
+   "sha256": "72f977e9e4a0f649233f8b29c27302dba307fb8f5b7be71c92d3dc38b6f3b20c",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-35535"
+  },
+  "vulns/DEBIAN-CVE-2026-3592.json": {
+   "bytes": 2997,
+   "retrieved_at": "2026-10-05T05:19:42Z",
+   "sha256": "723e4c3261c0416b87d076c647e68becd256b5666944ba4f0b5b2704b4eda9f9",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-3592"
+  },
+  "vulns/DEBIAN-CVE-2026-3593.json": {
+   "bytes": 2132,
+   "retrieved_at": "2026-10-05T05:19:42Z",
+   "sha256": "17a85702a818ffbdc21261b3e4d8eda3eaa4ef878ef036660f1f3e1d3e00f28f",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-3593"
+  },
+  "vulns/DEBIAN-CVE-2026-3731.json": {
+   "bytes": 2276,
+   "retrieved_at": "2026-10-05T05:19:46Z",
+   "sha256": "eea0248d7a70c5442d5a75d3a8428fc38602ea87ba4bd270f16b62aae9ca49ec",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-3731"
+  },
+  "vulns/DEBIAN-CVE-2026-3783.json": {
+   "bytes": 2972,
+   "retrieved_at": "2026-10-05T05:19:44Z",
+   "sha256": "7ff582e013b90626b00319c37e2b7f5d34da6a4cc0abe1260f503f770e57bb08",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-3783"
+  },
+  "vulns/DEBIAN-CVE-2026-3833.json": {
+   "bytes": 2375,
+   "retrieved_at": "2026-10-05T05:19:40Z",
+   "sha256": "62208377442778d25e7a3196224e7a00b382e0cde74d324038e476727fbeb612",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-3833"
+  },
+  "vulns/DEBIAN-CVE-2026-4046.json": {
+   "bytes": 2411,
+   "retrieved_at": "2026-10-05T05:07:22Z",
+   "sha256": "1d685746096fbf2345fa6b4413438be861e35919c21fe94ec7a6dbdd2762832b",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-4046"
+  },
+  "vulns/DEBIAN-CVE-2026-40687.json": {
+   "bytes": 2268,
+   "retrieved_at": "2026-10-05T05:07:18Z",
+   "sha256": "8f926a5ab7fa42b4c4d6c8de4ee571dfa8f83ab0ddae638119f27e182a9f256e",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-40687"
+  },
+  "vulns/DEBIAN-CVE-2026-4111.json": {
+   "bytes": 2292,
+   "retrieved_at": "2026-10-05T05:07:15Z",
+   "sha256": "0f1ee84cb88b7d0da7e6a36b9fc2a7778dd10300f4a655882255529516cc1946",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-4111"
+  },
+  "vulns/DEBIAN-CVE-2026-41316.json": {
+   "bytes": 2356,
+   "retrieved_at": "2026-10-05T05:07:20Z",
+   "sha256": "5e3a80e6af199d62295e5488974f1c6a51e429f173b0233ef439da181de1e89a",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-41316"
+  },
+  "vulns/DEBIAN-CVE-2026-42009.json": {
+   "bytes": 2232,
+   "retrieved_at": "2026-10-05T05:07:13Z",
+   "sha256": "3d690e84d423e8728b02e95871ec91bdb916e4714890701bc6915ff5ca5021df",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-42009"
+  },
+  "vulns/DEBIAN-CVE-2026-42010.json": {
+   "bytes": 2254,
+   "retrieved_at": "2026-10-05T05:18:37Z",
+   "sha256": "a61b36575a3b616f19f92644e55054a096d354504d894afb71f032f5eeb6f59c",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-42010"
+  },
+  "vulns/DEBIAN-CVE-2026-42015.json": {
+   "bytes": 2194,
+   "retrieved_at": "2026-10-05T05:18:37Z",
+   "sha256": "a3990e5f7def65e92a44c9feeb68cb5fa9e91310198c9d984783b7a0ed57688f",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-42015"
+  },
+  "vulns/DEBIAN-CVE-2026-42055.json": {
+   "bytes": 3055,
+   "retrieved_at": "2026-10-05T05:07:16Z",
+   "sha256": "756a78955c9a790f225cb30bd165427b5079015590e50e58110648578d5adf53",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-42055"
+  },
+  "vulns/DEBIAN-CVE-2026-42245.json": {
+   "bytes": 2065,
+   "retrieved_at": "2026-10-05T05:19:44Z",
+   "sha256": "fe53f2082ccfc7e98d6edf3b6399674397b97d6d5a273285ebe9d95b0ee392be",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-42245"
+  },
+  "vulns/DEBIAN-CVE-2026-42250.json": {
+   "bytes": 1949,
+   "retrieved_at": "2026-10-05T05:07:15Z",
+   "sha256": "1605b73bebfe223efe3d3953857fd495bcb9294023f670fb1ff238798a1e9fa9",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-42250"
+  },
+  "vulns/DEBIAN-CVE-2026-42256.json": {
+   "bytes": 2075,
+   "retrieved_at": "2026-10-05T05:19:44Z",
+   "sha256": "7a9e59f2a64dc5db65b556366d153107de75aaef4eac16fa1aea613cdd26adc5",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-42256"
+  },
+  "vulns/DEBIAN-CVE-2026-42258.json": {
+   "bytes": 1968,
+   "retrieved_at": "2026-10-05T05:07:20Z",
+   "sha256": "e1064e00c34e4b72ff9c5dc6f81d73c327c7b859c09b781f8c22bc705e585d97",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-42258"
+  },
+  "vulns/DEBIAN-CVE-2026-42497.json": {
+   "bytes": 2705,
+   "retrieved_at": "2026-10-05T05:19:44Z",
+   "sha256": "1ece5d9f70a5c2f66b6319832c2b7fb05551722ac8199932c45298110fba1df6",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-42497"
+  },
+  "vulns/DEBIAN-CVE-2026-42536.json": {
+   "bytes": 3432,
+   "retrieved_at": "2026-10-05T05:18:38Z",
+   "sha256": "b1a68c9e7cb7e243344ed32f0c03fd2f97d5d405771476b1b75b9be5b281317e",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-42536"
+  },
+  "vulns/DEBIAN-CVE-2026-42766.json": {
+   "bytes": 3306,
+   "retrieved_at": "2026-10-05T05:19:40Z",
+   "sha256": "563cfbfa9e645bc1434d4d2b8937098a84bea35bd8dd1be37979305ac07a0d95",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-42766"
+  },
+  "vulns/DEBIAN-CVE-2026-42945.json": {
+   "bytes": 2869,
+   "retrieved_at": "2026-10-05T05:18:38Z",
+   "sha256": "262a4d847fa49a992e8b7dc61868757ac29b497ad22a8795f8c61d9039da21d3",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-42945"
+  },
+  "vulns/DEBIAN-CVE-2026-42946.json": {
+   "bytes": 2466,
+   "retrieved_at": "2026-10-05T05:19:42Z",
+   "sha256": "55787208d93a7f01cf52325530abeba1a193d8254f077fdea4a837b4bcbc94db",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-42946"
+  },
+  "vulns/DEBIAN-CVE-2026-43964.json": {
+   "bytes": 2791,
+   "retrieved_at": "2026-10-05T05:07:18Z",
+   "sha256": "ceef7e08b7ab8071baa6ea33fabda608f4dcf77e8fd9bb18d719ad74097ec7cb",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-43964"
+  },
+  "vulns/DEBIAN-CVE-2026-4408.json": {
+   "bytes": 3316,
+   "retrieved_at": "2026-10-05T05:19:43Z",
+   "sha256": "ee316a0729f591d105aa0820dbf51873e6793ce3cdee3aab199cd06c4609ab6d",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-4408"
+  },
+  "vulns/DEBIAN-CVE-2026-4424.json": {
+   "bytes": 2078,
+   "retrieved_at": "2026-10-05T05:07:15Z",
+   "sha256": "981fbd080c3c5a1435c7b91ca0ecb6351845728f6b25b3f939b9da6f201b1843",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-4424"
+  },
+  "vulns/DEBIAN-CVE-2026-4426.json": {
+   "bytes": 2071,
+   "retrieved_at": "2026-10-05T05:18:38Z",
+   "sha256": "96b70b1abed8b61c472fd907b300abe29d431a62a99618212ecaec3d8b042b55",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-4426"
+  },
+  "vulns/DEBIAN-CVE-2026-4480.json": {
+   "bytes": 3172,
+   "retrieved_at": "2026-10-05T05:07:18Z",
+   "sha256": "e400bd4ed40ea964dbc38bb7539672c52c2747159468ed3608df1a98603524a6",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-4480"
+  },
+  "vulns/DEBIAN-CVE-2026-45185.json": {
+   "bytes": 2454,
+   "retrieved_at": "2026-10-05T05:07:18Z",
+   "sha256": "80c0e408b5f26de36ae41a8df4604be8d78547a29e81ce507759fd1b8ae54635",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-45185"
+  },
+  "vulns/DEBIAN-CVE-2026-45186.json": {
+   "bytes": 1899,
+   "retrieved_at": "2026-10-05T05:07:21Z",
+   "sha256": "d7936f3ee145e1b2763eecccc3f5ef6a788167295a3904b57e80143c090cd19e",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-45186"
+  },
+  "vulns/DEBIAN-CVE-2026-45447.json": {
+   "bytes": 3589,
+   "retrieved_at": "2026-10-05T05:07:12Z",
+   "sha256": "805941a68e05b20bff55d67028104d898a44bfe0105e3f894ca687e616be20aa",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-45447"
+  },
+  "vulns/DEBIAN-CVE-2026-47240.json": {
+   "bytes": 2673,
+   "retrieved_at": "2026-10-05T05:19:44Z",
+   "sha256": "14aaa6c14d8fc7d548516300fd07cc75581d87607f3d2708bfd2d2668086903f",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-47240"
+  },
+  "vulns/DEBIAN-CVE-2026-4775.json": {
+   "bytes": 2021,
+   "retrieved_at": "2026-10-05T05:19:46Z",
+   "sha256": "5c50c74c84380ba555c86571cdf7cd70b0a0ae10e55c64d704efe6ae74334778",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-4775"
+  },
+  "vulns/DEBIAN-CVE-2026-48959.json": {
+   "bytes": 3850,
+   "retrieved_at": "2026-10-05T05:07:19Z",
+   "sha256": "7e756eeea848245c79d165b9677fb74f88a2b0e292b1ece9a22998d71a6abd6f",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-48959"
+  },
+  "vulns/DEBIAN-CVE-2026-48962.json": {
+   "bytes": 3844,
+   "retrieved_at": "2026-10-05T05:07:19Z",
+   "sha256": "283505fc49866ae80f605cb4fd59064e827ad5ccc19e6dc731279d5f5bffacd7",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-48962"
+  },
+  "vulns/DEBIAN-CVE-2026-4897.json": {
+   "bytes": 1976,
+   "retrieved_at": "2026-10-05T05:07:14Z",
+   "sha256": "0c39e7ecc4c362499a2499e61e1cd955d807bb91245ddc86311eae42017988a2",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-4897"
+  },
+  "vulns/DEBIAN-CVE-2026-49975.json": {
+   "bytes": 3177,
+   "retrieved_at": "2026-10-05T05:07:16Z",
+   "sha256": "3e19f2a4af33738e1a01ff7c4e7bd6738f4dbb30989784246a41d12f1226937a",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-49975"
+  },
+  "vulns/DEBIAN-CVE-2026-50219.json": {
+   "bytes": 1996,
+   "retrieved_at": "2026-10-05T05:19:45Z",
+   "sha256": "01891dc42946ad7a493fbd9a3a8ed80ddd92a9945de4f9be05a390ec95f6195e",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-50219"
+  },
+  "vulns/DEBIAN-CVE-2026-50812.json": {
+   "bytes": 2337,
+   "retrieved_at": "2026-10-05T05:19:45Z",
+   "sha256": "207937973a8981fb41563a7a27f0385081ac11b6b96ede6cfe63e2a2403fd213",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-50812"
+  },
+  "vulns/DEBIAN-CVE-2026-5121.json": {
+   "bytes": 2001,
+   "retrieved_at": "2026-10-05T05:07:15Z",
+   "sha256": "9be680ba32205b91f3a2ebdde010f703a85270eca3e0c76ce7b21d5b7d034b82",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-5121"
+  },
+  "vulns/DEBIAN-CVE-2026-52491.json": {
+   "bytes": 2099,
+   "retrieved_at": "2026-10-05T05:07:22Z",
+   "sha256": "d865a61472db6ab5bcf99bc509af8fa9b7a9c5e17a98bca438c9e473c5335d5e",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-52491"
+  },
+  "vulns/DEBIAN-CVE-2026-52492.json": {
+   "bytes": 2175,
+   "retrieved_at": "2026-10-05T05:18:39Z",
+   "sha256": "672213078b6caaa5dfacce1be6e59cbaf497519ce368c371f4d4c4cf3e600f83",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-52492"
+  },
+  "vulns/DEBIAN-CVE-2026-5260.json": {
+   "bytes": 2125,
+   "retrieved_at": "2026-10-05T05:07:13Z",
+   "sha256": "222d85689d8a9b5b158d347f6a4f5d0c01d2b41ca6875c300d546e24cdd166ed",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-5260"
+  },
+  "vulns/DEBIAN-CVE-2026-5545.json": {
+   "bytes": 6184,
+   "retrieved_at": "2026-10-05T05:19:44Z",
+   "sha256": "cc4ba98245afc2d23f2919fd220c833813765ed37ed168228c47651f11062cbf",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-5545"
+  },
+  "vulns/DEBIAN-CVE-2026-56412.json": {
+   "bytes": 2060,
+   "retrieved_at": "2026-10-05T05:19:45Z",
+   "sha256": "4e5897eda2d22b61584da043475daff62c0b6b3fdda76dbbf47e5a2e970bcc19",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-56412"
+  },
+  "vulns/DEBIAN-CVE-2026-5773.json": {
+   "bytes": 3412,
+   "retrieved_at": "2026-10-05T05:07:20Z",
+   "sha256": "09a4877922905625b66b3d2cf6558bd22184881ee14860c9f41c2fb6ea66c8ee",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-5773"
+  },
+  "vulns/DEBIAN-CVE-2026-58224.json": {
+   "bytes": 6859,
+   "retrieved_at": "2026-10-05T05:19:43Z",
+   "sha256": "2a76974608edf66e973c38945b7a51dd112c7921eb845b00b91d619805ce7016",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-58224"
+  },
+  "vulns/DEBIAN-CVE-2026-5946.json": {
+   "bytes": 3284,
+   "retrieved_at": "2026-10-05T05:07:17Z",
+   "sha256": "14a24a7371a8174a17f0552055b569c85f1c9a98aa5b80f592433d987d766937",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-5946"
+  },
+  "vulns/DEBIAN-CVE-2026-5947.json": {
+   "bytes": 2527,
+   "retrieved_at": "2026-10-05T05:19:42Z",
+   "sha256": "9c872239317f2719ff65a1530420817113c9d27439ebe05149f7ddcce02e8f65",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-5947"
+  },
+  "vulns/DEBIAN-CVE-2026-5950.json": {
+   "bytes": 2988,
+   "retrieved_at": "2026-10-05T05:18:38Z",
+   "sha256": "e902013bd9e79a39bfb8eafb321b5f0dfb1aabc29315c7bf4d357b301886ffed",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-5950"
+  },
+  "vulns/DEBIAN-CVE-2026-59843.json": {
+   "bytes": 2034,
+   "retrieved_at": "2026-10-05T05:19:46Z",
+   "sha256": "6e0e121129a2052b0efd16253ea31a662e5569c2440aeeba88dcf657a14fa689",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-59843"
+  },
+  "vulns/DEBIAN-CVE-2026-59847.json": {
+   "bytes": 2031,
+   "retrieved_at": "2026-10-05T05:07:22Z",
+   "sha256": "58fb4c37113183230d78aca3d6b99ceba8953c451780c58a9f0591bd295fb2ab",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-59847"
+  },
+  "vulns/DEBIAN-CVE-2026-59849.json": {
+   "bytes": 2055,
+   "retrieved_at": "2026-10-05T05:07:22Z",
+   "sha256": "a04bcefb47dde629e261767e6f9e972df1b4915302c8bbef592500a994d57486",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-59849"
+  },
+  "vulns/DEBIAN-CVE-2026-59996.json": {
+   "bytes": 3482,
+   "retrieved_at": "2026-10-05T05:19:41Z",
+   "sha256": "2cb2b3200e08c7b7923876bf047043a185c82b154e9c8e5d6e23047d7832b2bc",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-59996"
+  },
+  "vulns/DEBIAN-CVE-2026-60000.json": {
+   "bytes": 3540,
+   "retrieved_at": "2026-10-05T05:07:13Z",
+   "sha256": "ad570679d3ee02547559e944c9455911cdcfebf29a12093a84f8332190e0bf38",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-60000"
+  },
+  "vulns/DEBIAN-CVE-2026-60001.json": {
+   "bytes": 3419,
+   "retrieved_at": "2026-10-05T05:19:41Z",
+   "sha256": "923fdf1e6e1dbab414494ab253a9bd49305240619219fe2fc9b87ba53fa36d85",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-60001"
+  },
+  "vulns/DEBIAN-CVE-2026-60002.json": {
+   "bytes": 3496,
+   "retrieved_at": "2026-10-05T05:07:13Z",
+   "sha256": "eba59f379a3508464e9f093b67b99aa7e7af5937ae1736dd58ff058a701b8545",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-60002"
+  },
+  "vulns/DEBIAN-CVE-2026-6253.json": {
+   "bytes": 5628,
+   "retrieved_at": "2026-10-05T05:18:38Z",
+   "sha256": "f9e4e1038c8836b14decafbfd757346a37399b21349fc9f0b8381bcdea3b7fd3",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-6253"
+  },
+  "vulns/DEBIAN-CVE-2026-63076.json": {
+   "bytes": 4208,
+   "retrieved_at": "2026-10-05T05:07:12Z",
+   "sha256": "9ac8088945d632fd0f7adde0554124af684c7658d6570dbcd5981c5a76254841",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-63076"
+  },
+  "vulns/DEBIAN-CVE-2026-6429.json": {
+   "bytes": 5345,
+   "retrieved_at": "2026-10-05T05:19:44Z",
+   "sha256": "398bee6a8b8e4796f28fffe5e004fd4089f29708c052ba45be82cdd4edc6fca2",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-6429"
+  },
+  "vulns/DEBIAN-CVE-2026-6653.json": {
+   "bytes": 3633,
+   "retrieved_at": "2026-10-05T05:07:21Z",
+   "sha256": "d17489162d5f0490c78c547809e6c37a12464c44ead42fd1fa4a9cf14320d1d4",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-6653"
+  },
+  "vulns/DEBIAN-CVE-2026-6722.json": {
+   "bytes": 2718,
+   "retrieved_at": "2026-10-05T05:07:20Z",
+   "sha256": "fd69d69fdec5e81efc419f7e1f75257e5210006482af5f0632a7cf8a628293a2",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-6722"
+  },
+  "vulns/DEBIAN-CVE-2026-6766.json": {
+   "bytes": 16133,
+   "retrieved_at": "2026-10-05T05:19:40Z",
+   "sha256": "01fff697f5d4a178f912d8d9d614ab11355422ed8a0f5f7732f7638b4e1f980b",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-6766"
+  },
+  "vulns/DEBIAN-CVE-2026-6767.json": {
+   "bytes": 16135,
+   "retrieved_at": "2026-10-05T05:19:40Z",
+   "sha256": "e3e8f180857e602158e1976e90be8997555512ea4cbbed18582b18e030aa7026",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-6767"
+  },
+  "vulns/DEBIAN-CVE-2026-6772.json": {
+   "bytes": 16153,
+   "retrieved_at": "2026-10-05T05:18:37Z",
+   "sha256": "2b2c04bd090c56114a5e7b189c656674e798e7b66a8d661c72a0be8ca5d41dc7",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-6772"
+  },
+  "vulns/DEBIAN-CVE-2026-6791.json": {
+   "bytes": 4520,
+   "retrieved_at": "2026-10-05T05:19:45Z",
+   "sha256": "14d8ca0d9d168841496bfb5d28b5102b3720d75539a4ac9d0ca35c88b8c08691",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-6791"
+  },
+  "vulns/DEBIAN-CVE-2026-7168.json": {
+   "bytes": 3082,
+   "retrieved_at": "2026-10-05T05:07:21Z",
+   "sha256": "43a5eab6c09910f66a18eea6534d36bdf842ebfcc11669193ca86c54554faebf",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-7168"
+  },
+  "vulns/DEBIAN-CVE-2026-7210.json": {
+   "bytes": 3124,
+   "retrieved_at": "2026-10-05T05:07:19Z",
+   "sha256": "8982b9e475093f7b0bb9fd0721d27c8103e89f2d3d1870102f103722695596eb",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-7210"
+  },
+  "vulns/DEBIAN-CVE-2026-72522.json": {
+   "bytes": 2011,
+   "retrieved_at": "2026-10-05T05:07:21Z",
+   "sha256": "a1a0c8d124c4c6d19f4ae84c7d4f830c3025e821e0d378d84637177f91f7a695",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-72522"
+  },
+  "vulns/DEBIAN-CVE-2026-7258.json": {
+   "bytes": 2388,
+   "retrieved_at": "2026-10-05T05:07:20Z",
+   "sha256": "7e6b81c2e5a4385557de7c573ee6af6adef1e673f733d52acfe9db7afaaa23c2",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-7258"
+  },
+  "vulns/DEBIAN-CVE-2026-7262.json": {
+   "bytes": 2439,
+   "retrieved_at": "2026-10-05T05:18:38Z",
+   "sha256": "9475fdaf1c460653c079fdedd01cee3ce9a9ea131c73b9ae58ba2b12dbadd441",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-7262"
+  },
+  "vulns/DEBIAN-CVE-2026-7568.json": {
+   "bytes": 2505,
+   "retrieved_at": "2026-10-05T05:19:44Z",
+   "sha256": "07404f0091d275e236bd559a650151593ac2e78d19982729112dadebd84fdb91",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-7568"
+  },
+  "vulns/DEBIAN-CVE-2026-76781.json": {
+   "bytes": 3999,
+   "retrieved_at": "2026-10-05T05:19:45Z",
+   "sha256": "96e417491320b9bd969dc35e2936dcdeeee65b74d8fa9a8776c53966a58930b5",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-76781"
+  },
+  "vulns/DEBIAN-CVE-2026-77117.json": {
+   "bytes": 4778,
+   "retrieved_at": "2026-10-05T05:07:22Z",
+   "sha256": "77e8f85aadc1c43d4ec87b5acdddece9c2e7271aead510dae30288dac0ea4c08",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-77117"
+  },
+  "vulns/DEBIAN-CVE-2026-7774.json": {
+   "bytes": 3573,
+   "retrieved_at": "2026-10-05T05:07:19Z",
+   "sha256": "351cd09487fafec75f1caa0492bdbf44f54b6d0743b35a36af3ae7bb39516a46",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-7774"
+  },
+  "vulns/DEBIAN-CVE-2026-80489.json": {
+   "bytes": 4770,
+   "retrieved_at": "2026-10-05T05:07:22Z",
+   "sha256": "b8cde3c0150528f7c9dec482ff67be5c28adf5dce00c8231c0c579d367346ef8",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-80489"
+  },
+  "vulns/DEBIAN-CVE-2026-82474.json": {
+   "bytes": 2675,
+   "retrieved_at": "2026-10-05T05:19:41Z",
+   "sha256": "70b713e89c10d557da15735c0c5768cc8c2316159ea81fafc18d752621e881bf",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-82474"
+  },
+  "vulns/DEBIAN-CVE-2026-8376.json": {
+   "bytes": 2701,
+   "retrieved_at": "2026-10-05T05:19:44Z",
+   "sha256": "48f248a6468214cde9943b4f1ff59a5dca0663d641057e6503438c8727c16484",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-8376"
+  },
+  "vulns/DEBIAN-CVE-2026-85091.json": {
+   "bytes": 2562,
+   "retrieved_at": "2026-10-05T05:07:15Z",
+   "sha256": "1054b87f0561dc4ecc41921907f05d5329542e33d34fdcc1fa2abbc82f612a12",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-85091"
+  },
+  "vulns/DEBIAN-CVE-2026-86143.json": {
+   "bytes": 3982,
+   "retrieved_at": "2026-10-05T05:07:21Z",
+   "sha256": "04a3a503f3aee09b1cfc223dc98c7d6027750bfaaa11847bd4f453d81b3e64a9",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-86143"
+  },
+  "vulns/DEBIAN-CVE-2026-86144.json": {
+   "bytes": 4078,
+   "retrieved_at": "2026-10-05T05:19:45Z",
+   "sha256": "2c0ea1611582c6dcfd6235ec2259faf4f5d176c1d4c5cf92f8b5cc3fd7555abb",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-86144"
+  },
+  "vulns/DEBIAN-CVE-2026-8674.json": {
+   "bytes": 4850,
+   "retrieved_at": "2026-10-05T05:19:45Z",
+   "sha256": "7af9d5ac28a678737ddaafcc9b15ec6443dd1d44f1e3aa0468a41ec3f4dbebf9",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-8674"
+  },
+  "vulns/DEBIAN-CVE-2026-9256.json": {
+   "bytes": 2992,
+   "retrieved_at": "2026-10-05T05:19:42Z",
+   "sha256": "76b37422a32d3102fa789cd812c249255341fc5ac1386a4d04c46ab94b6b8522",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-9256"
+  },
+  "vulns/DEBIAN-CVE-2026-96512.json": {
+   "bytes": 2925,
+   "retrieved_at": "2026-10-05T05:07:14Z",
+   "sha256": "b689c081b3c29117fe6bbfa163c03ace8ee60055f887bbfa270616d6de48f67e",
+   "url": "https://api.osv.dev/v1/vulns/DEBIAN-CVE-2026-96512"
+  }
+ },
+ "license": "OSV.dev data, CC-BY 4.0 / per-source licenses (Debian DSA/DLA records)",
+ "n_files": 811,
+ "snapshot_date": "2026-10-05",
+ "source": "osv"
+}

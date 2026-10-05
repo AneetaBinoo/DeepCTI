@@ -1,0 +1,59 @@
+{"note": {"cve": "CVE-2025-32463", "release": "bookworm", "why": "status resolved fixed 0"}}
+{"note": {"cve": "CVE-2026-34743", "why": "src present in both base images: no V1/V6"}}
+{"note": {"cve": "CVE-2026-85091", "why": "src present in both base images: no V1/V6"}}
+{"note": {"cve": "CVE-2026-27171", "why": "src present in both base images: no V1/V6"}}
+{"note": {"cve": "CVE-2026-42250", "why": "src present in both base images: no V1/V6"}}
+{"note": {"cve": "CVE-2023-2911", "release": "bookworm", "why": "no in-release vulnerable snapshot version"}}
+{"note": {"cve": "CVE-2025-8677", "release": "trixie", "why": "no in-release vulnerable snapshot version"}}
+{"note": {"cve": "CVE-2026-7210", "release": "trixie", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2026-11940", "release": "trixie", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2023-24329", "release": "trixie", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2026-7774", "release": "bookworm", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2025-13836", "release": "bookworm", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2026-48959", "why": "src present in both base images: no V1/V6"}}
+{"note": {"cve": "CVE-2026-48962", "why": "src present in both base images: no V1/V6"}}
+{"note": {"cve": "CVE-2023-31484", "why": "src present in both base images: no V1/V6"}}
+{"note": {"cve": "CVE-2026-42258", "release": "trixie", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2024-27280", "release": "trixie", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2026-41316", "release": "bookworm", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2024-4577", "release": "bookworm", "why": "status resolved fixed 0"}}
+{"note": {"cve": "CVE-2024-4577", "release": "trixie", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2026-7258", "release": "trixie", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2024-2756", "release": "trixie", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2026-6722", "release": "bookworm", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2026-45186", "release": "trixie", "why": "no in-release vulnerable snapshot version"}}
+{"note": {"cve": "CVE-2025-59375", "release": "trixie", "why": "no in-release vulnerable snapshot version"}}
+{"note": {"cve": "CVE-2023-4911", "why": "src present in both base images: no V1/V6"}}
+{"note": {"cve": "CVE-2026-80489", "why": "src present in both base images: no V1/V6"}}
+{"note": {"cve": "CVE-2026-77117", "why": "src present in both base images: no V1/V6"}}
+{"note": {"cve": "CVE-2026-4046", "why": "src present in both base images: no V1/V6"}}
+{"note": {"cve": "CVE-2025-48384", "release": "trixie", "why": "no in-release vulnerable snapshot version"}}
+{"note": {"cve": "CVE-2025-48385", "release": "trixie", "why": "no in-release vulnerable snapshot version"}}
+{"note": {"cve": "CVE-2025-46835", "release": "trixie", "why": "no in-release vulnerable snapshot version"}}
+{"note": {"cve": "CVE-2023-45853", "why": "src present in both base images: no V1/V6"}}
+{"note": {"cve": "CVE-2026-3593", "release": "bookworm", "why": "status resolved fixed 0"}}
+{"note": {"cve": "CVE-2026-5947", "release": "bookworm", "why": "status resolved fixed 0"}}
+{"note": {"cve": "CVE-2025-40778", "release": "trixie", "why": "no in-release vulnerable snapshot version"}}
+{"note": {"cve": "CVE-2026-17084", "release": "trixie", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2023-41105", "release": "trixie", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2026-11972", "release": "bookworm", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2026-3276", "release": "bookworm", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2025-12084", "release": "bookworm", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2026-8376", "why": "src present in both base images: no V1/V6"}}
+{"note": {"cve": "CVE-2026-42497", "why": "src present in both base images: no V1/V6"}}
+{"note": {"cve": "CVE-2023-47038", "why": "src present in both base images: no V1/V6"}}
+{"note": {"cve": "CVE-2024-56406", "why": "src present in both base images: no V1/V6"}}
+{"note": {"cve": "CVE-2026-47240", "release": "trixie", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2026-42245", "release": "bookworm", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2026-42256", "release": "bookworm", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2026-7262", "release": "bookworm", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2026-7568", "release": "bookworm", "why": "src not in release / tracker"}}
+{"note": {"cve": "CVE-2026-50219", "release": "trixie", "why": "no in-release vulnerable snapshot version"}}
+{"note": {"cve": "CVE-2026-56412", "release": "trixie", "why": "no in-release vulnerable snapshot version"}}
+{"note": {"cve": "CVE-2026-25210", "release": "trixie", "why": "no in-release vulnerable snapshot version"}}
+{"note": {"cve": "CVE-2026-24515", "release": "trixie", "why": "no in-release vulnerable snapshot version"}}
+{"note": {"cve": "CVE-2026-8674", "why": "src present in both base images: no V1/V6"}}
+{"note": {"cve": "CVE-2026-6791", "why": "src present in both base images: no V1/V6"}}
+{"note": {"cve": "CVE-2026-0915", "why": "src present in both base images: no V1/V6"}}
+{"note": {"cve": "CVE-2025-27613", "release": "trixie", "why": "no in-release vulnerable snapshot version"}}
+{"note": {"cve": "CVE-2023-25652", "release": "bookworm", "why": "no in-release vulnerable snapshot version"}}

@@ -1,0 +1,368 @@
+{
+ "files": {
+  "package/apache2.json": {
+   "bytes": 10045,
+   "retrieved_at": "2026-10-05T04:56:52Z",
+   "sha256": "8a14997500a0037f0dd5f3afb542fe99e9c5ec28b6fcc85a4fab31403dab7c85",
+   "url": "https://snapshot.debian.org/mr/package/apache2/"
+  },
+  "package/apr.json": {
+   "bytes": 2506,
+   "retrieved_at": "2026-10-05T04:57:15Z",
+   "sha256": "14583a9da8ae067664a5f3779a28cb0dbc8ee85a31864965b4db1d28a29847b6",
+   "url": "https://snapshot.debian.org/mr/package/apr/"
+  },
+  "package/bind9.json": {
+   "bytes": 15904,
+   "retrieved_at": "2026-10-05T04:56:53Z",
+   "sha256": "b51fa113b9f792222f9c6853ab1f4f2a1d651b2fac3ac3f7fe73f80d98ad8220",
+   "url": "https://snapshot.debian.org/mr/package/bind9/"
+  },
+  "package/bzip2.json": {
+   "bytes": 1485,
+   "retrieved_at": "2026-10-05T04:56:55Z",
+   "sha256": "ff72dd909e2e91f44227ab0b590989a50e1699cdcda2073a2ae3c47fbfe3f2b5",
+   "url": "https://snapshot.debian.org/mr/package/bzip2/"
+  },
+  "package/cifs-utils.json": {
+   "bytes": 1249,
+   "retrieved_at": "2026-10-05T04:57:17Z",
+   "sha256": "86b6b497f733a9c56246b91bd969eb7250f0a87b39bdfd3a9df195c0412a02c1",
+   "url": "https://snapshot.debian.org/mr/package/cifs-utils/"
+  },
+  "package/curl.json": {
+   "bytes": 13931,
+   "retrieved_at": "2026-10-05T04:56:55Z",
+   "sha256": "d0525d92dceb0e64eb3ae286e1cb20d2fd7b9614263039ba349f99100b18412a",
+   "url": "https://snapshot.debian.org/mr/package/curl/"
+  },
+  "package/exim4.json": {
+   "bytes": 14802,
+   "retrieved_at": "2026-10-05T04:56:56Z",
+   "sha256": "3fd42bb944b5f6b1b5b48356a5c577523025300b1c8d02cc1221a390bc7cdbea",
+   "url": "https://snapshot.debian.org/mr/package/exim4/"
+  },
+  "package/expat.json": {
+   "bytes": 3497,
+   "retrieved_at": "2026-10-05T04:56:56Z",
+   "sha256": "495157745069c6cb6e27a375204fa940fb2eb685177c92518d6221d078dbf7da",
+   "url": "https://snapshot.debian.org/mr/package/expat/"
+  },
+  "package/git-lfs.json": {
+   "bytes": 2095,
+   "retrieved_at": "2026-10-05T04:57:24Z",
+   "sha256": "c061a7b14fb1c3406d10ce1594094b44c06b947e8c6ac9271cd7de28c47df6e6",
+   "url": "https://snapshot.debian.org/mr/package/git-lfs/"
+  },
+  "package/git.json": {
+   "bytes": 20427,
+   "retrieved_at": "2026-10-05T04:56:57Z",
+   "sha256": "81fa586f5bbc0827def814870da1d089cc0910186b6209f0d4b1f4ddbc0750ce",
+   "url": "https://snapshot.debian.org/mr/package/git/"
+  },
+  "package/glibc.json": {
+   "bytes": 16736,
+   "retrieved_at": "2026-10-05T04:56:57Z",
+   "sha256": "0907989113fd0cf751507f5f678e4a1c842813a2072c99c3735727368b8fe2a5",
+   "url": "https://snapshot.debian.org/mr/package/glibc/"
+  },
+  "package/gnutls28.json": {
+   "bytes": 9551,
+   "retrieved_at": "2026-10-05T04:56:58Z",
+   "sha256": "da8a8e92c34148788a0b1b88698ff2cc38f03c8b06bbdeae8d42fa5e691bb2b2",
+   "url": "https://snapshot.debian.org/mr/package/gnutls28/"
+  },
+  "package/lbzip2.json": {
+   "bytes": 547,
+   "retrieved_at": "2026-10-05T04:57:13Z",
+   "sha256": "ca79050015b85ce85472edffb483813fdf06692e92c003476d3bb21cf9d1eafe",
+   "url": "https://snapshot.debian.org/mr/package/lbzip2/"
+  },
+  "package/ldns.json": {
+   "bytes": 2155,
+   "retrieved_at": "2026-10-05T04:57:16Z",
+   "sha256": "19958fa009d4e90b27df39b9b46eaf7409d9066797b79304d624553d07e06c16",
+   "url": "https://snapshot.debian.org/mr/package/ldns/"
+  },
+  "package/libarchive-zip-perl.json": {
+   "bytes": 937,
+   "retrieved_at": "2026-10-05T04:57:14Z",
+   "sha256": "a7531bc0ba7acc41b9289a9ad98e52223de6ad82279cd6e3ad6277bffddac61b",
+   "url": "https://snapshot.debian.org/mr/package/libarchive-zip-perl/"
+  },
+  "package/libarchive.json": {
+   "bytes": 3870,
+   "retrieved_at": "2026-10-05T04:56:58Z",
+   "sha256": "a10fda8655ee0dd23f185e54d10a58b7edb612935ec856e8c5d0abc01b1ca5f7",
+   "url": "https://snapshot.debian.org/mr/package/libarchive/"
+  },
+  "package/libdbd-sqlite3-perl.json": {
+   "bytes": 1278,
+   "retrieved_at": "2026-10-05T04:57:22Z",
+   "sha256": "fc9a0ef7d343eea439e4269fbed8faa86146ce56802cecc3c7e45b4b6ef0334c",
+   "url": "https://snapshot.debian.org/mr/package/libdbd-sqlite3-perl/"
+  },
+  "package/liberror-perl.json": {
+   "bytes": 467,
+   "retrieved_at": "2026-10-05T04:57:19Z",
+   "sha256": "01b361f5e0bc3577280cb33e6c622fb0a4cda7fcda00063cc31f3bac7bea23ac",
+   "url": "https://snapshot.debian.org/mr/package/liberror-perl/"
+  },
+  "package/libssh.json": {
+   "bytes": 2712,
+   "retrieved_at": "2026-10-05T04:56:59Z",
+   "sha256": "981b08ad9809f11ee202074cbe374dc37e483f60e2a4eabaa1c0b1e01d3cb35f",
+   "url": "https://snapshot.debian.org/mr/package/libssh/"
+  },
+  "package/libssh2.json": {
+   "bytes": 1748,
+   "retrieved_at": "2026-10-05T04:57:23Z",
+   "sha256": "4833ada0ca07d2026e8020acaa843c5354ee512bd225df56b03e4d91be0a9224",
+   "url": "https://snapshot.debian.org/mr/package/libssh2/"
+  },
+  "package/libwebp.json": {
+   "bytes": 1721,
+   "retrieved_at": "2026-10-05T04:56:59Z",
+   "sha256": "1f71e0aeaf5f6f5c35f69bab81df80c3deac5f3d063a6699f7ff168184cbd7b2",
+   "url": "https://snapshot.debian.org/mr/package/libwebp/"
+  },
+  "package/libxml-libxml-perl.json": {
+   "bytes": 2310,
+   "retrieved_at": "2026-10-05T04:57:21Z",
+   "sha256": "e4dae145fe0bcce3f46497c16a4f2355a608a81d62da3e7f0930fefdde897372",
+   "url": "https://snapshot.debian.org/mr/package/libxml-libxml-perl/"
+  },
+  "package/libxml-parser-perl.json": {
+   "bytes": 660,
+   "retrieved_at": "2026-10-05T04:57:21Z",
+   "sha256": "a41ba739f0278142b91554e71f2f2bc31cf42fb3e97645d8a41d33476aa9cc6d",
+   "url": "https://snapshot.debian.org/mr/package/libxml-parser-perl/"
+  },
+  "package/libxml2.json": {
+   "bytes": 8072,
+   "retrieved_at": "2026-10-05T04:57:00Z",
+   "sha256": "2d725975fcd7524000ae376ff865f5c7feb8b115fc07bb5dc5774ba4f0581e8c",
+   "url": "https://snapshot.debian.org/mr/package/libxml2/"
+  },
+  "package/musl.json": {
+   "bytes": 1162,
+   "retrieved_at": "2026-10-05T04:57:21Z",
+   "sha256": "0be613fb450a810a03216304bb2f21985c6953d015a52d34a7d2722fad66eb2a",
+   "url": "https://snapshot.debian.org/mr/package/musl/"
+  },
+  "package/nginx.json": {
+   "bytes": 8983,
+   "retrieved_at": "2026-10-05T04:57:00Z",
+   "sha256": "bf7c6d5f153371080507fc9231f98bebeb17146c8187ea75e65ad07fd4dd3daa",
+   "url": "https://snapshot.debian.org/mr/package/nginx/"
+  },
+  "package/nss-mdns.json": {
+   "bytes": 779,
+   "retrieved_at": "2026-10-05T04:57:10Z",
+   "sha256": "79c63cf83f3a9ed4023339a0ec344e30242efb548050efd5727e076e53803de5",
+   "url": "https://snapshot.debian.org/mr/package/nss-mdns/"
+  },
+  "package/nss.json": {
+   "bytes": 8163,
+   "retrieved_at": "2026-10-05T04:57:01Z",
+   "sha256": "94dc90edc11521fd191ed7f46b66ee442bfc20205ffb16750306ec0ed008a944",
+   "url": "https://snapshot.debian.org/mr/package/nss/"
+  },
+  "package/opendoas.json": {
+   "bytes": 73,
+   "retrieved_at": "2026-10-05T04:57:11Z",
+   "sha256": "1ff1c0dee80cae9f2bb584e59ea44f672292b12d230a94fe1128c9b1c37f011d",
+   "url": "https://snapshot.debian.org/mr/package/opendoas/"
+  },
+  "package/openssh.json": {
+   "bytes": 9701,
+   "retrieved_at": "2026-10-05T04:57:01Z",
+   "sha256": "e8fee0df3ba4c72b60d718ddcb0a01f067a2ed18a261250d38e066770296dda8",
+   "url": "https://snapshot.debian.org/mr/package/openssh/"
+  },
+  "package/openssl.json": {
+   "bytes": 12535,
+   "retrieved_at": "2026-10-05T04:57:02Z",
+   "sha256": "3b0175f9fbd81826e6370fd82c525acc318087e31630f11f11b004d348bd5fc6",
+   "url": "https://snapshot.debian.org/mr/package/openssl/"
+  },
+  "package/perl.json": {
+   "bytes": 10270,
+   "retrieved_at": "2026-10-05T04:57:02Z",
+   "sha256": "0a1a226a8c14760a523f82dcc2d152656e0130e264c0ddf987f7a1b01ccf6356",
+   "url": "https://snapshot.debian.org/mr/package/perl/"
+  },
+  "package/php-defaults.json": {
+   "bytes": 1345,
+   "retrieved_at": "2026-10-05T04:57:19Z",
+   "sha256": "f248b6ef74f6a1def013e525333156cf1498c768d6fcb128b32205a34f632785",
+   "url": "https://snapshot.debian.org/mr/package/php-defaults/"
+  },
+  "package/php8.2.json": {
+   "bytes": 1106,
+   "retrieved_at": "2026-10-05T04:57:03Z",
+   "sha256": "8039d5901db7e8a1856c2559ca42169b07fd75443f7135b998251ac838220e21",
+   "url": "https://snapshot.debian.org/mr/package/php8.2/"
+  },
+  "package/php8.4.json": {
+   "bytes": 849,
+   "retrieved_at": "2026-10-05T04:57:03Z",
+   "sha256": "0c9b24e7e9aa7f59c5e5630d9549c126915da9c3d242ca99f608d15dd3054740",
+   "url": "https://snapshot.debian.org/mr/package/php8.4/"
+  },
+  "package/pigz.json": {
+   "bytes": 594,
+   "retrieved_at": "2026-10-05T04:57:13Z",
+   "sha256": "81293560b685e49ed33953e033180afb56ff084863fd1cd45cdf795551b8cf40",
+   "url": "https://snapshot.debian.org/mr/package/pigz/"
+  },
+  "package/pixz.json": {
+   "bytes": 309,
+   "retrieved_at": "2026-10-05T04:57:12Z",
+   "sha256": "9ddee1cc8f9f3879f6a1c4aca994960086081457deb71b53f9be545d4fd0689c",
+   "url": "https://snapshot.debian.org/mr/package/pixz/"
+  },
+  "package/policykit-1.json": {
+   "bytes": 3133,
+   "retrieved_at": "2026-10-05T04:57:04Z",
+   "sha256": "3ddf2fe729873222e34bdfcd162429c750b86737cb4f548d45274fa25112e9e9",
+   "url": "https://snapshot.debian.org/mr/package/policykit-1/"
+  },
+  "package/polkit-kde-agent-1.json": {
+   "bytes": 2697,
+   "retrieved_at": "2026-10-05T04:57:12Z",
+   "sha256": "570862305f809e0f170f436cdd1fa2060b445c9efc48defd8fb6f6854bde2639",
+   "url": "https://snapshot.debian.org/mr/package/polkit-kde-agent-1/"
+  },
+  "package/postfix.json": {
+   "bytes": 8343,
+   "retrieved_at": "2026-10-05T04:57:04Z",
+   "sha256": "672ae30029ef1a40bbb9126c9ca622f2bf83768d7fbd9a952788aaa35df729ea",
+   "url": "https://snapshot.debian.org/mr/package/postfix/"
+  },
+  "package/pycurl.json": {
+   "bytes": 2206,
+   "retrieved_at": "2026-10-05T04:57:20Z",
+   "sha256": "d2ae75f15c13c0e7926362f8a7f3e310a27031f08dc51fd3d832bb9c2d4e7c43",
+   "url": "https://snapshot.debian.org/mr/package/pycurl/"
+  },
+  "package/pyopenssl.json": {
+   "bytes": 1707,
+   "retrieved_at": "2026-10-05T04:57:10Z",
+   "sha256": "5df3dd2138b2577a46cfcf2c25e0aab6fd7f8751a5c01eb5e41928c1c317290f",
+   "url": "https://snapshot.debian.org/mr/package/pyopenssl/"
+  },
+  "package/pypolicyd-spf.json": {
+   "bytes": 889,
+   "retrieved_at": "2026-10-05T04:57:17Z",
+   "sha256": "87dddc8c56a84b14334ed2446ad5d88c81166e78839aa45ea020515634addfcf",
+   "url": "https://snapshot.debian.org/mr/package/pypolicyd-spf/"
+  },
+  "package/python-certbot-nginx.json": {
+   "bytes": 1320,
+   "retrieved_at": "2026-10-05T04:57:16Z",
+   "sha256": "7047cc1fccfe0bf45674090603b98f0832e56949c0c683977eb62739535f96ca",
+   "url": "https://snapshot.debian.org/mr/package/python-certbot-nginx/"
+  },
+  "package/python-pip.json": {
+   "bytes": 2489,
+   "retrieved_at": "2026-10-05T04:57:18Z",
+   "sha256": "4af294adbd5c8f196b39c15fca260d500ca404b785eb5b33d450149423b6986e",
+   "url": "https://snapshot.debian.org/mr/package/python-pip/"
+  },
+  "package/python3.11.json": {
+   "bytes": 1204,
+   "retrieved_at": "2026-10-05T04:57:05Z",
+   "sha256": "f98cb93e147aa6cae6ec80c3a8c44fe03228c15efe0a6ca5ce4156dbddbadbd3",
+   "url": "https://snapshot.debian.org/mr/package/python3.11/"
+  },
+  "package/python3.13.json": {
+   "bytes": 1314,
+   "retrieved_at": "2026-10-05T04:57:05Z",
+   "sha256": "5ae15e848477a8e695e78ceffa3f33e39e139de24021b85ac160ff7e564e72a6",
+   "url": "https://snapshot.debian.org/mr/package/python3.13/"
+  },
+  "package/ruby-rack.json": {
+   "bytes": 2348,
+   "retrieved_at": "2026-10-05T04:57:19Z",
+   "sha256": "bf898be326bd1c667e19ece816d0ec044f9ae17f37058e239ac1ab8be82e1ca3",
+   "url": "https://snapshot.debian.org/mr/package/ruby-rack/"
+  },
+  "package/ruby3.1.json": {
+   "bytes": 412,
+   "retrieved_at": "2026-10-05T04:57:06Z",
+   "sha256": "cff551ea2900ff3be58ff9b07bb1d269b6fc498cf47c0e04e8c7db31b30d7e14",
+   "url": "https://snapshot.debian.org/mr/package/ruby3.1/"
+  },
+  "package/ruby3.3.json": {
+   "bytes": 570,
+   "retrieved_at": "2026-10-05T04:57:06Z",
+   "sha256": "e75ec1e4aaffe8245be17658ae4b5a2385c7555318205fdc62165d48f9f728a0",
+   "url": "https://snapshot.debian.org/mr/package/ruby3.3/"
+  },
+  "package/sa-exim.json": {
+   "bytes": 637,
+   "retrieved_at": "2026-10-05T04:57:17Z",
+   "sha256": "8b161b0e78c5f52a6550a0df32e316142119a2bb369f920d028b4e1ac27543f1",
+   "url": "https://snapshot.debian.org/mr/package/sa-exim/"
+  },
+  "package/samba.json": {
+   "bytes": 24395,
+   "retrieved_at": "2026-10-05T04:57:07Z",
+   "sha256": "0543838959d71a9dea598211993f2751f5ac2010ced978a7543d5874e003cf04",
+   "url": "https://snapshot.debian.org/mr/package/samba/"
+  },
+  "package/sqlite3.json": {
+   "bytes": 7272,
+   "retrieved_at": "2026-10-05T04:57:07Z",
+   "sha256": "84efc273dc8d56e7970351f5e7dda75c1406ed9945b94623fe2186b274aa7626",
+   "url": "https://snapshot.debian.org/mr/package/sqlite3/"
+  },
+  "package/ssh-askpass.json": {
+   "bytes": 552,
+   "retrieved_at": "2026-10-05T04:57:11Z",
+   "sha256": "7f95cd4ab534f9e5c13ab6bc5be72fc2ca9a3aa1ff37a3b2808bb873071999a1",
+   "url": "https://snapshot.debian.org/mr/package/ssh-askpass/"
+  },
+  "package/sudo.json": {
+   "bytes": 5622,
+   "retrieved_at": "2026-10-05T04:57:08Z",
+   "sha256": "91e53cca1cdfca74a596d0842977ea815201f9750aac7676ed8a1e79a1b07e21",
+   "url": "https://snapshot.debian.org/mr/package/sudo/"
+  },
+  "package/tiff.json": {
+   "bytes": 6816,
+   "retrieved_at": "2026-10-05T04:57:08Z",
+   "sha256": "8ecc0779485f8744fa2a06c3ea2385ed1c6abaed1c8a9ff6ceeb404c82bad1e2",
+   "url": "https://snapshot.debian.org/mr/package/tiff/"
+  },
+  "package/tifffile.json": {
+   "bytes": 2536,
+   "retrieved_at": "2026-10-05T04:57:23Z",
+   "sha256": "6ef59ed2e4eb5b5e018a5f464ae9f25883d586160ccd8c0bd64914613f6971d7",
+   "url": "https://snapshot.debian.org/mr/package/tifffile/"
+  },
+  "package/webp-pixbuf-loader.json": {
+   "bytes": 333,
+   "retrieved_at": "2026-10-05T04:57:23Z",
+   "sha256": "af9b498b05bc20a6f56d9d6af580a3bdf37a2987b2b79d6593371c5cbd6cd04c",
+   "url": "https://snapshot.debian.org/mr/package/webp-pixbuf-loader/"
+  },
+  "package/xz-utils.json": {
+   "bytes": 2699,
+   "retrieved_at": "2026-10-05T04:57:09Z",
+   "sha256": "88d3dc5f9d866ae441bb4e8cd139ad57c233d3c2f16c60f5e23a6147e2dc32eb",
+   "url": "https://snapshot.debian.org/mr/package/xz-utils/"
+  },
+  "package/zlib.json": {
+   "bytes": 3068,
+   "retrieved_at": "2026-10-05T04:57:09Z",
+   "sha256": "8e75321f94b4390adf6f460fe8be6f27653d97b7ae3d9425310f42fdc0f7a1a7",
+   "url": "https://snapshot.debian.org/mr/package/zlib/"
+  }
+ },
+ "license": "snapshot.debian.org machine-readable API responses (metadata only)",
+ "n_files": 60,
+ "snapshot_date": "2026-10-05",
+ "source": "snapshot_debian"
+}

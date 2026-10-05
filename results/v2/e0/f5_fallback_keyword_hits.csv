@@ -1,0 +1,5 @@
+profile,action_keyword_recall,info_keyword_recall,contradiction_correct,quality
+affected,1.0,1.0,1.0,1.0
+not_applicable,1.0,1.0,1.0,1.0
+uncertain,0.5,1.0,0.0,0.6999999999999998
+contradictory,1.0,1.0,1.0,1.0

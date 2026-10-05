@@ -1,0 +1,5 @@
+mode,step,rows,pool_size_mean,pool_size_max,k,retrieved_mean,share_retrieved_entire_pool
+iterative_no_memory,0,300,2.0,2,8,2.0,1.0
+iterative_no_memory,1,299,3.0,3,8,3.0,1.0
+iterative_no_memory,2,297,4.0,4,8,4.0,1.0
+rag_once,2,300,4.0,4,8,4.0,1.0
