@@ -1,0 +1,29 @@
+{
+ "files": {
+  "raw/Maven/all.zip": {
+   "bytes": 10346626,
+   "retrieved_at": "2026-10-05T15:12:02Z",
+   "sha256": "706a54025735570b05aefe8f64a807dff1288e873b92bfa5efd1fc78fcbb3c12",
+   "url": "https://osv-vulnerabilities.storage.googleapis.com/Maven/all.zip"
+  },
+  "raw/PyPI/all.zip": {
+   "bytes": 35436843,
+   "retrieved_at": "2026-10-05T15:12:01Z",
+   "sha256": "59443fcd9d13fa73c7871d8ede75099f784d3a50b02a633e1ceb851e85013460",
+   "url": "https://osv-vulnerabilities.storage.googleapis.com/PyPI/all.zip"
+  }
+ },
+ "license": "OSV.dev ecosystem exports (osv-vulnerabilities bucket), CC-BY 4.0 / per-source",
+ "n_files": 2,
+ "notes": {
+  "Ubuntu": {
+   "bytes": 772217532,
+   "note": "downloaded by OSV-Scanner on 2026-10-05 05:08Z (D1 run); used as the OSV Ubuntu cross-check",
+   "path": "tools/cache/osv/osv-scalibr/Ubuntu/all.zip",
+   "sha256": "481a6953ebcc750220f78eef6b1c2c82af90ef7b74fbaaaf1467213c53c82514",
+   "url": "https://osv-vulnerabilities.storage.googleapis.com/Ubuntu/all.zip"
+  }
+ },
+ "snapshot_date": "2026-10-05",
+ "source": "osv_ecosystems"
+}

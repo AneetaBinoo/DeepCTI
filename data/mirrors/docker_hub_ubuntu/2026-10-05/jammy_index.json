@@ -1,0 +1,200 @@
+{
+ "manifests": [
+  {
+   "annotations": {
+    "com.docker.official-images.bashbrew.arch": "amd64",
+    "org.opencontainers.image.base.name": "scratch",
+    "org.opencontainers.image.created": "2026-09-24T00:00:00Z",
+    "org.opencontainers.image.revision": "ef3b086ba9259bdab229dd265fa3b5dbf6ea3a9a",
+    "org.opencontainers.image.source": "https://git.launchpad.net/cloud-images/+oci/ubuntu-base",
+    "org.opencontainers.image.url": "https://hub.docker.com/_/ubuntu",
+    "org.opencontainers.image.version": "22.04"
+   },
+   "digest": "sha256:08ea48a03a3e78ebc7cd526e6a275053223aadd88bfc09cc49b06d5281525fde",
+   "mediaType": "application/vnd.oci.image.manifest.v1+json",
+   "platform": {
+    "architecture": "amd64",
+    "os": "linux"
+   },
+   "size": 424
+  },
+  {
+   "annotations": {
+    "com.docker.official-images.bashbrew.arch": "amd64",
+    "vnd.docker.reference.digest": "sha256:08ea48a03a3e78ebc7cd526e6a275053223aadd88bfc09cc49b06d5281525fde",
+    "vnd.docker.reference.type": "attestation-manifest"
+   },
+   "digest": "sha256:dbfac55370997e8a2b85d5bb78d15b62b44bee8427b048012dfafc7c85b514a0",
+   "mediaType": "application/vnd.oci.image.manifest.v1+json",
+   "platform": {
+    "architecture": "unknown",
+    "os": "unknown"
+   },
+   "size": 562
+  },
+  {
+   "annotations": {
+    "com.docker.official-images.bashbrew.arch": "arm32v7",
+    "org.opencontainers.image.base.name": "scratch",
+    "org.opencontainers.image.created": "2026-09-24T00:00:00Z",
+    "org.opencontainers.image.revision": "9a41e2584d810bca022dcd8155dd9ba1efc42ec1",
+    "org.opencontainers.image.source": "https://git.launchpad.net/cloud-images/+oci/ubuntu-base",
+    "org.opencontainers.image.url": "https://hub.docker.com/_/ubuntu",
+    "org.opencontainers.image.version": "22.04"
+   },
+   "digest": "sha256:dfa74b18a511a6e979ab0819ce67067cb6489348220a0207912758af57f1c358",
+   "mediaType": "application/vnd.oci.image.manifest.v1+json",
+   "platform": {
+    "architecture": "arm",
+    "os": "linux",
+    "variant": "v7"
+   },
+   "size": 424
+  },
+  {
+   "annotations": {
+    "com.docker.official-images.bashbrew.arch": "arm32v7",
+    "vnd.docker.reference.digest": "sha256:dfa74b18a511a6e979ab0819ce67067cb6489348220a0207912758af57f1c358",
+    "vnd.docker.reference.type": "attestation-manifest"
+   },
+   "digest": "sha256:66d71289cc4377e78ccfcee86bdbf19396647bee0e5bc3acad98c587af1a33ff",
+   "mediaType": "application/vnd.oci.image.manifest.v1+json",
+   "platform": {
+    "architecture": "unknown",
+    "os": "unknown"
+   },
+   "size": 562
+  },
+  {
+   "annotations": {
+    "com.docker.official-images.bashbrew.arch": "arm64v8",
+    "org.opencontainers.image.base.name": "scratch",
+    "org.opencontainers.image.created": "2026-09-24T00:00:00Z",
+    "org.opencontainers.image.revision": "8fde8043b509d484ac8e289e052cec1ee8d00800",
+    "org.opencontainers.image.source": "https://git.launchpad.net/cloud-images/+oci/ubuntu-base",
+    "org.opencontainers.image.url": "https://hub.docker.com/_/ubuntu",
+    "org.opencontainers.image.version": "22.04"
+   },
+   "digest": "sha256:30dfd7fe96f97c5f5ddf388ce8d098aa509644ad68fdef67244fb71b8169ffcb",
+   "mediaType": "application/vnd.oci.image.manifest.v1+json",
+   "platform": {
+    "architecture": "arm64",
+    "os": "linux",
+    "variant": "v8"
+   },
+   "size": 424
+  },
+  {
+   "annotations": {
+    "com.docker.official-images.bashbrew.arch": "arm64v8",
+    "vnd.docker.reference.digest": "sha256:30dfd7fe96f97c5f5ddf388ce8d098aa509644ad68fdef67244fb71b8169ffcb",
+    "vnd.docker.reference.type": "attestation-manifest"
+   },
+   "digest": "sha256:40494ba93b534ae8802894c960086291fef5027964248aedfc4058c149df14b7",
+   "mediaType": "application/vnd.oci.image.manifest.v1+json",
+   "platform": {
+    "architecture": "unknown",
+    "os": "unknown"
+   },
+   "size": 562
+  },
+  {
+   "annotations": {
+    "com.docker.official-images.bashbrew.arch": "ppc64le",
+    "org.opencontainers.image.base.name": "scratch",
+    "org.opencontainers.image.created": "2026-09-24T00:00:00Z",
+    "org.opencontainers.image.revision": "7a08b4d043239b70dfb21402ab29ba69e548d093",
+    "org.opencontainers.image.source": "https://git.launchpad.net/cloud-images/+oci/ubuntu-base",
+    "org.opencontainers.image.url": "https://hub.docker.com/_/ubuntu",
+    "org.opencontainers.image.version": "22.04"
+   },
+   "digest": "sha256:6974b2e959b8d5196ad220ccc6ddb0561b6d8844b1bfb6c4fe2372f52b210e82",
+   "mediaType": "application/vnd.oci.image.manifest.v1+json",
+   "platform": {
+    "architecture": "ppc64le",
+    "os": "linux"
+   },
+   "size": 424
+  },
+  {
+   "annotations": {
+    "com.docker.official-images.bashbrew.arch": "ppc64le",
+    "vnd.docker.reference.digest": "sha256:6974b2e959b8d5196ad220ccc6ddb0561b6d8844b1bfb6c4fe2372f52b210e82",
+    "vnd.docker.reference.type": "attestation-manifest"
+   },
+   "digest": "sha256:f1fe2a9bf96406db044885cca5e4e9f9b0ee8c59078a29c2755c22c86be899d2",
+   "mediaType": "application/vnd.oci.image.manifest.v1+json",
+   "platform": {
+    "architecture": "unknown",
+    "os": "unknown"
+   },
+   "size": 562
+  },
+  {
+   "annotations": {
+    "com.docker.official-images.bashbrew.arch": "riscv64",
+    "org.opencontainers.image.base.name": "scratch",
+    "org.opencontainers.image.created": "2026-09-24T00:00:00Z",
+    "org.opencontainers.image.revision": "3f376fcdfd702740f7d0f4d8a40caeea36b61597",
+    "org.opencontainers.image.source": "https://git.launchpad.net/cloud-images/+oci/ubuntu-base",
+    "org.opencontainers.image.url": "https://hub.docker.com/_/ubuntu",
+    "org.opencontainers.image.version": "22.04"
+   },
+   "digest": "sha256:b2bac2a49274d63ce2f906c289b1b5c54b12a5de10d75ccaf4ec91adb39e66e3",
+   "mediaType": "application/vnd.oci.image.manifest.v1+json",
+   "platform": {
+    "architecture": "riscv64",
+    "os": "linux"
+   },
+   "size": 424
+  },
+  {
+   "annotations": {
+    "com.docker.official-images.bashbrew.arch": "riscv64",
+    "vnd.docker.reference.digest": "sha256:b2bac2a49274d63ce2f906c289b1b5c54b12a5de10d75ccaf4ec91adb39e66e3",
+    "vnd.docker.reference.type": "attestation-manifest"
+   },
+   "digest": "sha256:a4bb63f242aad445f3075918ef1afc17dca54e47fc80c7642196a0417e19cc10",
+   "mediaType": "application/vnd.oci.image.manifest.v1+json",
+   "platform": {
+    "architecture": "unknown",
+    "os": "unknown"
+   },
+   "size": 562
+  },
+  {
+   "annotations": {
+    "com.docker.official-images.bashbrew.arch": "s390x",
+    "org.opencontainers.image.base.name": "scratch",
+    "org.opencontainers.image.created": "2026-09-24T00:00:00Z",
+    "org.opencontainers.image.revision": "0c3db674223fedcb01e6a1038608a23c27ae32bf",
+    "org.opencontainers.image.source": "https://git.launchpad.net/cloud-images/+oci/ubuntu-base",
+    "org.opencontainers.image.url": "https://hub.docker.com/_/ubuntu",
+    "org.opencontainers.image.version": "22.04"
+   },
+   "digest": "sha256:49a29fe633ba553409c8267a46ba52a9cc012ccdcb81678d7e1d7647ea8b3aad",
+   "mediaType": "application/vnd.oci.image.manifest.v1+json",
+   "platform": {
+    "architecture": "s390x",
+    "os": "linux"
+   },
+   "size": 424
+  },
+  {
+   "annotations": {
+    "com.docker.official-images.bashbrew.arch": "s390x",
+    "vnd.docker.reference.digest": "sha256:49a29fe633ba553409c8267a46ba52a9cc012ccdcb81678d7e1d7647ea8b3aad",
+    "vnd.docker.reference.type": "attestation-manifest"
+   },
+   "digest": "sha256:ab0b2eaad3cf4de92e24a5791ee040e454f1bfb82dac9d6a8599ffc5744d48b3",
+   "mediaType": "application/vnd.oci.image.manifest.v1+json",
+   "platform": {
+    "architecture": "unknown",
+    "os": "unknown"
+   },
+   "size": 562
+  }
+ ],
+ "mediaType": "application/vnd.oci.image.index.v1+json",
+ "schemaVersion": 2
+}

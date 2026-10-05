@@ -1,0 +1,272 @@
+{
+ "files": {
+  "metadata/ch.qos.logback/logback-classic.xml": {
+   "bytes": 5933,
+   "retrieved_at": "2026-10-05T15:36:30Z",
+   "sha256": "2fa4c6a57b366517402ce975beaf15db9d10122309f0b305e9f85a211af776d0",
+   "url": "https://repo1.maven.org/maven2/ch/qos/logback/logback-classic/maven-metadata.xml"
+  },
+  "metadata/ch.qos.logback/logback-core.xml": {
+   "bytes": 5930,
+   "retrieved_at": "2026-10-05T15:36:30Z",
+   "sha256": "9c5e86c377259bdc88cbf3e0759850299e04ba69f9741f15ffe79fc40037f32e",
+   "url": "https://repo1.maven.org/maven2/ch/qos/logback/logback-core/maven-metadata.xml"
+  },
+  "metadata/ch.qos.reload4j/reload4j.xml": {
+   "bytes": 761,
+   "retrieved_at": "2026-10-05T15:36:30Z",
+   "sha256": "bba6feabba4b58c797464032fc5b9405c01839dca190ad82ad7efa160530313f",
+   "url": "https://repo1.maven.org/maven2/ch/qos/reload4j/reload4j/maven-metadata.xml"
+  },
+  "metadata/com.fasterxml.jackson.core/jackson-core.xml": {
+   "bytes": 6601,
+   "retrieved_at": "2026-10-05T15:36:30Z",
+   "sha256": "f18699ac5038c27a597312ba5b9b489c17c29c860c13b62fee2a693c4e633cde",
+   "url": "https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/maven-metadata.xml"
+  },
+  "metadata/com.fasterxml.jackson.core/jackson-databind.xml": {
+   "bytes": 7976,
+   "retrieved_at": "2026-10-05T15:36:30Z",
+   "sha256": "95c2afbf081029c60358303e529a53d0440d8d35bd2a2907df70bc5eae9e181f",
+   "url": "https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/maven-metadata.xml"
+  },
+  "metadata/com.h2database/h2-mvstore.xml": {
+   "bytes": 1360,
+   "retrieved_at": "2026-10-05T15:36:30Z",
+   "sha256": "33a9371d329ca175319aae63c8f07adb39117351abc3e23a1ee6be30271d9017",
+   "url": "https://repo1.maven.org/maven2/com/h2database/h2-mvstore/maven-metadata.xml"
+  },
+  "metadata/com.h2database/h2.xml": {
+   "bytes": 4979,
+   "retrieved_at": "2026-10-05T15:36:30Z",
+   "sha256": "4253299e9046501b3b8d109e0a2d301a13352ea1a30faf37615b5ff6ce76abdc",
+   "url": "https://repo1.maven.org/maven2/com/h2database/h2/maven-metadata.xml"
+  },
+  "metadata/com.impossibl.pgjdbc-ng/pgjdbc-ng.xml": {
+   "bytes": 825,
+   "retrieved_at": "2026-10-05T15:36:30Z",
+   "sha256": "a2dedf75cc8b68806b171c12407bd89bb7256e560a7542a6c06b5c9e62795f68",
+   "url": "https://repo1.maven.org/maven2/com/impossibl/pgjdbc-ng/pgjdbc-ng/maven-metadata.xml"
+  },
+  "metadata/com.thoughtworks.qdox/qdox.xml": {
+   "bytes": 1173,
+   "retrieved_at": "2026-10-05T15:36:30Z",
+   "sha256": "37bb7e78522c908975722c12cae4a2fe4b1838df3664a8a7c386fdb2549b79bd",
+   "url": "https://repo1.maven.org/maven2/com/thoughtworks/qdox/qdox/maven-metadata.xml"
+  },
+  "metadata/com.thoughtworks.xstream/xstream.xml": {
+   "bytes": 1626,
+   "retrieved_at": "2026-10-05T15:36:30Z",
+   "sha256": "e0333bfb8b60afae3e499c57a2f7bdb0668a1f119ddf7898dbe85a5242108954",
+   "url": "https://repo1.maven.org/maven2/com/thoughtworks/xstream/xstream/maven-metadata.xml"
+  },
+  "metadata/commons-codec/commons-codec.xml": {
+   "bytes": 1118,
+   "retrieved_at": "2026-10-05T15:36:30Z",
+   "sha256": "96125ef1391df8f41863670990ad854de3b0023d6765dcd87ece7be3ccb85e01",
+   "url": "https://repo1.maven.org/maven2/commons-codec/commons-codec/maven-metadata.xml"
+  },
+  "metadata/commons-fileupload/commons-fileupload.xml": {
+   "bytes": 635,
+   "retrieved_at": "2026-10-05T15:36:30Z",
+   "sha256": "5d667c179fd73931c66ab0d316665c69694957c28fae60da7efefdeda66eb42e",
+   "url": "https://repo1.maven.org/maven2/commons-fileupload/commons-fileupload/maven-metadata.xml"
+  },
+  "metadata/commons-io/commons-io.xml": {
+   "bytes": 1360,
+   "retrieved_at": "2026-10-05T15:36:30Z",
+   "sha256": "d4cfab4d36abe07a1e41c779c53918ee0bff6c30b374e5ec5e43d1960706ad04",
+   "url": "https://repo1.maven.org/maven2/commons-io/commons-io/maven-metadata.xml"
+  },
+  "metadata/io.netty/netty-buffer.xml": {
+   "bytes": 10241,
+   "retrieved_at": "2026-10-05T15:36:30Z",
+   "sha256": "67165f95a3ef8f8695e8e9afe84d32e0bdfd430aa08996ffa9104f7aeca51812",
+   "url": "https://repo1.maven.org/maven2/io/netty/netty-buffer/maven-metadata.xml"
+  },
+  "metadata/io.netty/netty-codec-http.xml": {
+   "bytes": 10245,
+   "retrieved_at": "2026-10-05T15:36:30Z",
+   "sha256": "81a6add29302dcf9fef411b192a0db33393f8b39ba327bf00e47155a4113d3f3",
+   "url": "https://repo1.maven.org/maven2/io/netty/netty-codec-http/maven-metadata.xml"
+  },
+  "metadata/io.netty/netty-codec-http2.xml": {
+   "bytes": 7173,
+   "retrieved_at": "2026-10-05T15:36:30Z",
+   "sha256": "26ff76d500e97ba5ad9bc9ea294d6d38fdf89b057c134de583a9c6666e2f823b",
+   "url": "https://repo1.maven.org/maven2/io/netty/netty-codec-http2/maven-metadata.xml"
+  },
+  "metadata/io.netty/netty-common.xml": {
+   "bytes": 10241,
+   "retrieved_at": "2026-10-05T15:36:31Z",
+   "sha256": "7ed1cb46bdcd28570f7d82d5bbbd18808ea4cc602c527c83f911f7c003b6ef09",
+   "url": "https://repo1.maven.org/maven2/io/netty/netty-common/maven-metadata.xml"
+  },
+  "metadata/log4j/log4j.xml": {
+   "bytes": 750,
+   "retrieved_at": "2026-10-05T15:36:31Z",
+   "sha256": "5a1e2691ad641cb8a8c1f481fbd14e2fc76138d0d1787ceb38e95555fdba96b0",
+   "url": "https://repo1.maven.org/maven2/log4j/log4j/maven-metadata.xml"
+  },
+  "metadata/org.apache.activemq/activemq-client.xml": {
+   "bytes": 3684,
+   "retrieved_at": "2026-10-05T15:36:31Z",
+   "sha256": "c2a94314f0fa25cdb4007ed2a55b6c6998514dc4a63866d1d6568e419504c32b",
+   "url": "https://repo1.maven.org/maven2/org/apache/activemq/activemq-client/maven-metadata.xml"
+  },
+  "metadata/org.apache.activemq/artemis-jms-client.xml": {
+   "bytes": 2720,
+   "retrieved_at": "2026-10-05T15:36:31Z",
+   "sha256": "d709e4857d7c066e9cdb6a1cc74a1c6500cff35cafec010f93f9186f6ed906c0",
+   "url": "https://repo1.maven.org/maven2/org/apache/activemq/artemis-jms-client/maven-metadata.xml"
+  },
+  "metadata/org.apache.commons/commons-lang3.xml": {
+   "bytes": 1134,
+   "retrieved_at": "2026-10-05T15:36:31Z",
+   "sha256": "f9eb651b28423ff404e5c843275f9c7365b0bcaef0b2e03576aa6b5394147cc8",
+   "url": "https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/maven-metadata.xml"
+  },
+  "metadata/org.apache.commons/commons-text.xml": {
+   "bytes": 858,
+   "retrieved_at": "2026-10-05T15:36:31Z",
+   "sha256": "906c7557ae0bb2f7c6df550459e817102a1f399264b9403690a09ceb54e7e9e3",
+   "url": "https://repo1.maven.org/maven2/org/apache/commons/commons-text/maven-metadata.xml"
+  },
+  "metadata/org.apache.logging.log4j/log4j-api.xml": {
+   "bytes": 2800,
+   "retrieved_at": "2026-10-05T15:36:31Z",
+   "sha256": "3297b052bb53ea953cdd82f0fb5bb3205011424a67fd34982348be3c48fb8493",
+   "url": "https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-api/maven-metadata.xml"
+  },
+  "metadata/org.apache.logging.log4j/log4j-core.xml": {
+   "bytes": 2838,
+   "retrieved_at": "2026-10-05T15:36:31Z",
+   "sha256": "b0ae403c2a95eeda3b9ecfc529137b85604eb57a80006ed337fb9b4ba8feba38",
+   "url": "https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-core/maven-metadata.xml"
+  },
+  "metadata/org.apache.shiro/shiro-core.xml": {
+   "bytes": 1850,
+   "retrieved_at": "2026-10-05T15:36:31Z",
+   "sha256": "10eb274b9217e412ac185381791065ce454a05c44039092ae88dd0cd101efcda",
+   "url": "https://repo1.maven.org/maven2/org/apache/shiro/shiro-core/maven-metadata.xml"
+  },
+  "metadata/org.apache.shiro/shiro-crypto-cipher.xml": {
+   "bytes": 1476,
+   "retrieved_at": "2026-10-05T15:36:31Z",
+   "sha256": "5e82161a90ab52780a55edddf452728cbb311866bb3871f24e1314545ffb05c6",
+   "url": "https://repo1.maven.org/maven2/org/apache/shiro/shiro-crypto-cipher/maven-metadata.xml"
+  },
+  "metadata/org.apache.struts/struts-core.xml": {
+   "bytes": 431,
+   "retrieved_at": "2026-10-05T15:36:31Z",
+   "sha256": "0b058295df810397dace3fcfdd12ad9ae8fd0406191bdec352ec5601cf1245a1",
+   "url": "https://repo1.maven.org/maven2/org/apache/struts/struts-core/maven-metadata.xml"
+  },
+  "metadata/org.apache.struts/struts2-core.xml": {
+   "bytes": 3910,
+   "retrieved_at": "2026-10-05T15:36:31Z",
+   "sha256": "3c4e0aa9eaece6a1a9c2f51ba66ed0d1ff6d0d6944d7a5328e9431726a01541c",
+   "url": "https://repo1.maven.org/maven2/org/apache/struts/struts2-core/maven-metadata.xml"
+  },
+  "metadata/org.apache.tomcat.embed/tomcat-embed-core.xml": {
+   "bytes": 15660,
+   "retrieved_at": "2026-10-05T15:36:31Z",
+   "sha256": "2adcf897b4f0236ffabe9fec1b0ccf7e2284b7dbb11946be91de8c4d3c86e4d3",
+   "url": "https://repo1.maven.org/maven2/org/apache/tomcat/embed/tomcat-embed-core/maven-metadata.xml"
+  },
+  "metadata/org.apache.tomcat.embed/tomcat-embed-el.xml": {
+   "bytes": 14499,
+   "retrieved_at": "2026-10-05T15:36:31Z",
+   "sha256": "cd948e7a9a24a2e661fe7d275e1a15c12151787f8e0dc9e4f93333ba7d88d8c3",
+   "url": "https://repo1.maven.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/maven-metadata.xml"
+  },
+  "metadata/org.bouncycastle/bcprov-jdk18on.xml": {
+   "bytes": 944,
+   "retrieved_at": "2026-10-05T15:36:31Z",
+   "sha256": "13fa5055fbca5db0afe1f00fe19fc6aca6651a858f47f9fd999d2dbfd1daec36",
+   "url": "https://repo1.maven.org/maven2/org/bouncycastle/bcprov-jdk18on/maven-metadata.xml"
+  },
+  "metadata/org.eclipse.jetty/jetty-server.xml": {
+   "bytes": 17076,
+   "retrieved_at": "2026-10-05T15:36:31Z",
+   "sha256": "7238257741f23c8fb0da1b67ded332134bb0a0d4f71d91a27f693637e89f265b",
+   "url": "https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-server/maven-metadata.xml"
+  },
+  "metadata/org.eclipse.jetty/jetty-util.xml": {
+   "bytes": 17074,
+   "retrieved_at": "2026-10-05T15:36:31Z",
+   "sha256": "26cd291a6ab5110cb4045fb5bac717c46e7b85e483ceefd86919dd21495d4bb4",
+   "url": "https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-util/maven-metadata.xml"
+  },
+  "metadata/org.postgresql/postgresql.xml": {
+   "bytes": 7596,
+   "retrieved_at": "2026-10-05T15:36:31Z",
+   "sha256": "2f4a75d79a34ca5837ba5f249b7a7ac835b69c675a2c1b31c2aa0e10b56ff61e",
+   "url": "https://repo1.maven.org/maven2/org/postgresql/postgresql/maven-metadata.xml"
+  },
+  "metadata/org.slf4j/log4j-over-slf4j.xml": {
+   "bytes": 3710,
+   "retrieved_at": "2026-10-05T15:36:31Z",
+   "sha256": "5002b511c5416558c383fb9bab188a6956f68de3e400938b9c511eab70b4e9b4",
+   "url": "https://repo1.maven.org/maven2/org/slf4j/log4j-over-slf4j/maven-metadata.xml"
+  },
+  "metadata/org.slf4j/slf4j-api.xml": {
+   "bytes": 3887,
+   "retrieved_at": "2026-10-05T15:36:31Z",
+   "sha256": "25c85978e007536b0427bd92c904e48d0a79593c9be4c1c1bcae7f18e42d0a94",
+   "url": "https://repo1.maven.org/maven2/org/slf4j/slf4j-api/maven-metadata.xml"
+  },
+  "metadata/org.slf4j/slf4j-simple.xml": {
+   "bytes": 4187,
+   "retrieved_at": "2026-10-05T15:36:32Z",
+   "sha256": "1ef93be5ce4a1d8b2e2460049bfc50cf4b7ed60554b2798d9ba55c16d58983f3",
+   "url": "https://repo1.maven.org/maven2/org/slf4j/slf4j-simple/maven-metadata.xml"
+  },
+  "metadata/org.snakeyaml/snakeyaml-engine.xml": {
+   "bytes": 830,
+   "retrieved_at": "2026-10-05T15:36:32Z",
+   "sha256": "08de55287d5a15621a98746f3ad044bdab37b797272e25ff3a1a7a461745b353",
+   "url": "https://repo1.maven.org/maven2/org/snakeyaml/snakeyaml-engine/maven-metadata.xml"
+  },
+  "metadata/org.springframework.cloud/spring-cloud-commons.xml": {
+   "bytes": 3854,
+   "retrieved_at": "2026-10-05T15:36:32Z",
+   "sha256": "796d848796e433887a9f66426ce5b67b80e5a0c007c5e26c96b1587479e9a276",
+   "url": "https://repo1.maven.org/maven2/org/springframework/cloud/spring-cloud-commons/maven-metadata.xml"
+  },
+  "metadata/org.springframework.cloud/spring-cloud-function-context.xml": {
+   "bytes": 2996,
+   "retrieved_at": "2026-10-05T15:36:32Z",
+   "sha256": "d17df5b7f4fe15372bcc7d4c3b34fdbb0048da5caabe79546d84c8e1ad236c96",
+   "url": "https://repo1.maven.org/maven2/org/springframework/cloud/spring-cloud-function-context/maven-metadata.xml"
+  },
+  "metadata/org.springframework.security/spring-security-crypto.xml": {
+   "bytes": 9660,
+   "retrieved_at": "2026-10-05T15:36:32Z",
+   "sha256": "9d1c69e9a9be54bf62e8a2673ebe920fe25846ed3bd3c043c3a613d0a76a4649",
+   "url": "https://repo1.maven.org/maven2/org/springframework/security/spring-security-crypto/maven-metadata.xml"
+  },
+  "metadata/org.springframework/spring-beans.xml": {
+   "bytes": 11999,
+   "retrieved_at": "2026-10-05T15:36:32Z",
+   "sha256": "2728fb93fb44bcf478c825fe79f83c44e2599a64ca2b7191d48755586b2753f2",
+   "url": "https://repo1.maven.org/maven2/org/springframework/spring-beans/maven-metadata.xml"
+  },
+  "metadata/org.springframework/spring-core.xml": {
+   "bytes": 12216,
+   "retrieved_at": "2026-10-05T15:36:32Z",
+   "sha256": "e7c5e4f3552157bddc6775d98f7a5d997906da8d062d73413f66951a03983842",
+   "url": "https://repo1.maven.org/maven2/org/springframework/spring-core/maven-metadata.xml"
+  },
+  "metadata/org.yaml/snakeyaml.xml": {
+   "bytes": 1415,
+   "retrieved_at": "2026-10-05T15:36:32Z",
+   "sha256": "f07a62e28bfa01356dbbbdf10f0137ae73c74bd1bda4cdf01af5959d468d5f45",
+   "url": "https://repo1.maven.org/maven2/org/yaml/snakeyaml/maven-metadata.xml"
+  }
+ },
+ "license": "Maven Central maven-metadata.xml (repo1.maven.org), public metadata",
+ "n_files": 44,
+ "snapshot_date": "2026-10-05",
+ "source": "maven_central"
+}

@@ -1,0 +1,464 @@
+,case_id,system,model,source,accepted,wrong,reason
+0,D7-CVE-2017-12617-vendor-noble-V4,DC_noverify,qwen3_14b,proc,True,False,accepted
+1,D7-CVE-2017-12617-vendor-noble-V4,DC,qwen3_14b,proc,True,False,accepted
+2,D7-CVE-2020-1938-vendor-noble-V5,DC_noverify,qwen3_14b,proc,True,False,accepted
+3,D7-CVE-2017-12617-vendor-noble-V4,DC_noverify,qwen3_14b,fs,True,False,accepted
+4,D7-CVE-2017-12617-vendor-noble-V4,DC_noverify,qwen3_14b,proc,True,False,accepted
+5,D7-CVE-2017-12617-vendor-noble-V4,DC_noverify,qwen3_14b,fs,True,False,accepted
+6,D7-CVE-2017-12617-vendor-noble-V4,DC_noverify,qwen3_14b,proc,True,False,accepted
+7,D7-CVE-2020-1938-vendor-noble-V5,DC,qwen3_14b,proc,True,False,accepted
+8,D7-CVE-2017-12617-vendor-noble-V4,DC,qwen3_14b,fs,True,False,accepted
+9,D7-CVE-2017-12617-vendor-noble-V4,DC,qwen3_14b,proc,True,False,accepted
+10,D7-CVE-2017-12617-vendor-noble-V4,DC,qwen3_14b,fs,True,False,accepted
+11,D7-CVE-2017-12617-vendor-noble-V4,DC,qwen3_14b,proc,True,False,accepted
+12,D7-CVE-2020-1938-vendor-noble-V5,DC_noverify,qwen3_14b,fs,True,False,accepted
+13,D7-CVE-2020-1938-vendor-noble-V5,DC_noverify,qwen3_14b,proc,True,False,accepted
+14,D7-CVE-2020-1938-vendor-noble-V5,DC_noverify,qwen3_14b,fs,True,False,accepted
+15,D7-CVE-2020-1938-vendor-noble-V5,DC_noverify,qwen3_14b,proc,True,False,accepted
+16,D7-CVE-2020-1938-vendor-noble-V5,DC,qwen3_14b,fs,True,False,accepted
+17,D7-CVE-2020-1938-vendor-noble-V5,DC,qwen3_14b,proc,True,False,accepted
+18,D7-CVE-2020-1938-vendor-noble-V5,DC,qwen3_14b,fs,True,False,accepted
+19,D7-CVE-2020-1938-vendor-noble-V5,DC,qwen3_14b,proc,True,False,accepted
+20,D7-CVE-2023-0051-deb-ubuntu-jammy-V4,DC,qwen3_14b,fs,True,False,accepted
+21,D7-CVE-2023-0051-deb-ubuntu-jammy-V4,DC,qwen3_14b,fs,True,False,accepted
+22,D7-CVE-2023-0051-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,fs,True,False,accepted
+23,D7-CVE-2023-0051-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,fs,True,False,accepted
+24,D7-CVE-2023-2911-deb-ubuntu-jammy-V3,DC_noverify,qwen3_14b,fs,True,False,accepted
+25,D7-CVE-2023-2911-deb-ubuntu-jammy-V3,DC_noverify,qwen3_14b,proc,True,False,accepted
+26,D7-CVE-2023-2911-deb-ubuntu-jammy-V3,DC_noverify,qwen3_14b,fs,True,False,accepted
+27,D7-CVE-2023-2911-deb-ubuntu-jammy-V3,DC_noverify,qwen3_14b,proc,True,False,accepted
+28,D7-CVE-2023-2911-deb-ubuntu-jammy-V3,DC,qwen3_14b,fs,True,False,accepted
+29,D7-CVE-2023-2911-deb-ubuntu-jammy-V3,DC,qwen3_14b,proc,True,False,accepted
+30,D7-CVE-2023-2911-deb-ubuntu-jammy-V3,DC,qwen3_14b,fs,True,False,accepted
+31,D7-CVE-2023-2911-deb-ubuntu-jammy-V3,DC,qwen3_14b,proc,True,False,accepted
+32,D7-CVE-2023-2911-deb-ubuntu-jammy-V5,DC_noverify,qwen3_14b,fs,True,False,accepted
+33,D7-CVE-2023-2911-deb-ubuntu-jammy-V5,DC_noverify,qwen3_14b,proc,True,False,accepted
+34,D7-CVE-2023-2911-deb-ubuntu-jammy-V5,DC,qwen3_14b,fs,True,False,accepted
+35,D7-CVE-2023-2911-deb-ubuntu-jammy-V5,DC,qwen3_14b,proc,True,False,accepted
+36,D7-CVE-2023-2911-deb-ubuntu-jammy-V5,DC_noverify,qwen3_14b,fs,True,False,accepted
+37,D7-CVE-2023-2911-deb-ubuntu-jammy-V5,DC_noverify,qwen3_14b,proc,True,False,accepted
+38,D7-CVE-2023-2911-deb-ubuntu-jammy-V5,DC,qwen3_14b,fs,True,False,accepted
+39,D7-CVE-2023-2911-deb-ubuntu-jammy-V5,DC,qwen3_14b,proc,True,False,accepted
+40,D7-CVE-2023-4091-deb-ubuntu-jammy-V2,DC,qwen3_14b,fs,True,False,accepted
+41,D7-CVE-2023-4091-deb-ubuntu-jammy-V2,DC,qwen3_14b,proc,True,False,accepted
+42,D7-CVE-2023-4091-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,fs,True,False,accepted
+43,D7-CVE-2023-4091-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,proc,True,False,accepted
+44,D7-CVE-2023-4091-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,fs,True,False,accepted
+45,D7-CVE-2023-4091-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,proc,True,False,accepted
+46,D7-CVE-2023-4091-deb-ubuntu-jammy-V2,DC,qwen3_14b,fs,True,False,accepted
+47,D7-CVE-2023-4091-deb-ubuntu-jammy-V2,DC,qwen3_14b,proc,True,False,accepted
+48,D7-CVE-2023-4091-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,fs,True,False,accepted
+49,D7-CVE-2023-4091-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,proc,True,False,accepted
+50,D7-CVE-2023-4091-deb-ubuntu-jammy-V4,DC,qwen3_14b,fs,True,False,accepted
+51,D7-CVE-2023-4091-deb-ubuntu-jammy-V4,DC,qwen3_14b,proc,True,False,accepted
+52,D7-CVE-2023-4091-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,fs,True,False,accepted
+53,D7-CVE-2023-4091-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,proc,True,False,accepted
+54,D7-CVE-2023-4091-deb-ubuntu-jammy-V5,DC_noverify,qwen3_14b,fs,True,False,accepted
+55,D7-CVE-2023-4091-deb-ubuntu-jammy-V5,DC_noverify,qwen3_14b,proc,True,False,accepted
+56,D7-CVE-2023-4091-deb-ubuntu-jammy-V4,DC,qwen3_14b,fs,True,False,accepted
+57,D7-CVE-2023-4091-deb-ubuntu-jammy-V4,DC,qwen3_14b,proc,True,False,accepted
+58,D7-CVE-2023-4091-deb-ubuntu-jammy-V5,DC,qwen3_14b,fs,True,False,accepted
+59,D7-CVE-2023-4091-deb-ubuntu-jammy-V5,DC,qwen3_14b,proc,True,False,accepted
+60,D7-CVE-2023-4091-deb-ubuntu-jammy-V5,DC_noverify,qwen3_14b,fs,True,False,accepted
+61,D7-CVE-2023-4091-deb-ubuntu-jammy-V5,DC_noverify,qwen3_14b,proc,True,False,accepted
+62,D7-CVE-2023-4091-deb-ubuntu-jammy-V5,DC,qwen3_14b,fs,True,False,accepted
+63,D7-CVE-2023-4091-deb-ubuntu-jammy-V5,DC,qwen3_14b,proc,True,False,accepted
+64,D7-CVE-2023-4091-deb-ubuntu-noble-V3,DC_noverify,qwen3_14b,fs,True,False,accepted
+65,D7-CVE-2023-4091-deb-ubuntu-noble-V3,DC_noverify,qwen3_14b,proc,True,False,accepted
+66,D7-CVE-2023-4091-deb-ubuntu-noble-V3,DC_noverify,qwen3_14b,fs,True,False,accepted
+67,D7-CVE-2023-4091-deb-ubuntu-noble-V3,DC_noverify,qwen3_14b,proc,True,False,accepted
+68,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,fs,True,False,accepted
+69,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,proc,True,False,accepted
+70,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,fs,True,False,accepted
+71,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,proc,True,False,accepted
+72,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,proc,True,False,accepted
+73,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,fs,True,False,accepted
+74,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,proc,True,False,accepted
+75,D7-CVE-2023-4091-deb-ubuntu-noble-V3,DC,qwen3_14b,fs,True,False,accepted
+76,D7-CVE-2023-4091-deb-ubuntu-noble-V3,DC,qwen3_14b,proc,True,False,accepted
+77,D7-CVE-2023-4091-deb-ubuntu-noble-V3,DC,qwen3_14b,fs,True,False,accepted
+78,D7-CVE-2023-4091-deb-ubuntu-noble-V3,DC,qwen3_14b,proc,True,False,accepted
+79,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DC,qwen3_14b,fs,True,False,accepted
+80,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DC,qwen3_14b,proc,True,False,accepted
+81,D7-CVE-2023-42117-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,fs,True,False,accepted
+82,D7-CVE-2023-42117-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,proc,True,False,accepted
+83,D7-CVE-2023-42117-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,fs,True,False,accepted
+84,D7-CVE-2023-42117-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,proc,True,False,accepted
+85,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DC,qwen3_14b,fs,True,False,accepted
+86,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DC,qwen3_14b,proc,True,False,accepted
+87,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DC,qwen3_14b,proc,True,False,accepted
+88,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DC,qwen3_14b,fs,True,False,accepted
+89,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DC,qwen3_14b,proc,True,False,accepted
+90,D7-CVE-2023-42117-deb-ubuntu-jammy-V5,DC_noverify,qwen3_14b,fs,True,False,accepted
+91,D7-CVE-2023-42117-deb-ubuntu-jammy-V5,DC_noverify,qwen3_14b,proc,True,False,accepted
+92,D7-CVE-2023-42117-deb-ubuntu-jammy-V5,DC_noverify,qwen3_14b,fs,True,False,accepted
+93,D7-CVE-2023-42117-deb-ubuntu-jammy-V5,DC_noverify,qwen3_14b,proc,True,False,accepted
+94,D7-CVE-2023-42117-deb-ubuntu-jammy-V4,DC,qwen3_14b,fs,True,False,accepted
+95,D7-CVE-2023-42117-deb-ubuntu-jammy-V4,DC,qwen3_14b,proc,True,False,accepted
+96,D7-CVE-2023-42117-deb-ubuntu-jammy-V4,DC,qwen3_14b,fs,True,False,accepted
+97,D7-CVE-2023-42117-deb-ubuntu-jammy-V4,DC,qwen3_14b,proc,True,False,accepted
+98,D7-CVE-2023-42117-deb-ubuntu-jammy-V5,DC,qwen3_14b,fs,True,False,accepted
+99,D7-CVE-2023-42117-deb-ubuntu-jammy-V5,DC,qwen3_14b,proc,True,False,accepted
+100,D7-CVE-2023-42117-deb-ubuntu-jammy-V5,DC,qwen3_14b,fs,True,False,accepted
+101,D7-CVE-2023-42117-deb-ubuntu-jammy-V5,DC,qwen3_14b,proc,True,False,accepted
+102,D7-CVE-2023-7028-vendor-jammy-V4,DC_noverify,qwen3_14b,fs,True,False,accepted
+103,D7-CVE-2024-23897-vendor-jammy-V4,DC_noverify,qwen3_14b,proc,True,False,accepted without verification (ablation)
+104,D7-CVE-2023-6129-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,fs,True,False,accepted
+105,D7-CVE-2023-7028-vendor-jammy-V4,DC,qwen3_14b,fs,True,False,accepted
+106,D7-CVE-2023-6129-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,fs,True,False,accepted
+107,D7-CVE-2023-6129-deb-ubuntu-noble-V3,DC_noverify,qwen3_14b,fs,True,False,accepted
+108,D7-CVE-2024-23897-vendor-jammy-V4,DC_noverify,qwen3_14b,proc,True,False,accepted without verification (ablation)
+109,D7-CVE-2024-23897-vendor-jammy-V4,DC,qwen3_14b,proc,False,False,span does not name the case component
+110,D7-CVE-2023-6129-deb-ubuntu-noble-V3,DC_noverify,qwen3_14b,fs,True,False,accepted
+111,D7-CVE-2023-6129-deb-ubuntu-jammy-V4,DC,qwen3_14b,fs,True,False,accepted
+112,D7-CVE-2023-6129-deb-ubuntu-jammy-V4,DC,qwen3_14b,fs,True,False,accepted
+113,D7-CVE-2024-23897-vendor-jammy-V4,DC_noverify,qwen3_14b,proc,True,False,accepted without verification (ablation)
+114,D7-CVE-2023-6129-deb-ubuntu-noble-V3,DC,qwen3_14b,fs,True,False,accepted
+115,D7-CVE-2024-23897-vendor-noble-V3,DC_noverify,qwen3_14b,proc,True,False,accepted without verification (ablation)
+116,D7-CVE-2024-23897-vendor-jammy-V4,DC,qwen3_14b,proc,False,False,span does not name the case component
+117,D7-CVE-2023-6129-deb-ubuntu-noble-V3,DC,qwen3_14b,fs,True,False,accepted
+118,D7-CVE-2024-23897-vendor-jammy-V4,DC,qwen3_14b,proc,False,False,span does not name the case component
+119,D7-CVE-2023-7028-vendor-jammy-V4,DC_noverify,qwen3_14b,fs,True,False,accepted
+120,D7-CVE-2023-7028-vendor-jammy-V4,DC_noverify,qwen3_14b,proc,True,False,accepted
+121,D7-CVE-2023-7028-vendor-jammy-V4,DC_noverify,qwen3_14b,fs,True,False,accepted
+122,D7-CVE-2023-7028-vendor-jammy-V4,DC_noverify,qwen3_14b,proc,True,False,accepted
+123,D7-CVE-2024-23897-vendor-noble-V3,DC_noverify,qwen3_14b,proc,True,False,accepted without verification (ablation)
+124,D7-CVE-2024-23897-vendor-noble-V3,DC,qwen3_14b,proc,False,False,span does not name the case component
+125,D7-CVE-2024-23897-vendor-noble-V3,DC_noverify,qwen3_14b,proc,True,False,accepted without verification (ablation)
+126,D7-CVE-2023-7028-vendor-jammy-V4,DC,qwen3_14b,fs,True,False,accepted
+127,D7-CVE-2023-7028-vendor-jammy-V4,DC,qwen3_14b,proc,True,False,accepted
+128,D7-CVE-2023-7028-vendor-jammy-V4,DC,qwen3_14b,fs,True,False,accepted
+129,D7-CVE-2023-7028-vendor-jammy-V4,DC,qwen3_14b,proc,True,False,accepted
+130,D7-CVE-2024-23897-vendor-noble-V3,DC,qwen3_14b,proc,False,False,span does not name the case component
+131,D7-CVE-2024-23897-vendor-noble-V3,DC,qwen3_14b,proc,False,False,span does not name the case component
+132,D7-CVE-2024-31228-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,fs,True,False,accepted
+133,D7-CVE-2024-31228-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,proc,True,False,accepted
+134,D7-CVE-2024-31228-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,fs,True,False,accepted
+135,D7-CVE-2024-31228-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,proc,True,False,accepted
+136,D7-CVE-2024-31228-deb-ubuntu-jammy-V4,DC,qwen3_14b,fs,True,False,accepted
+137,D7-CVE-2024-31228-deb-ubuntu-jammy-V4,DC,qwen3_14b,proc,True,False,accepted
+138,D7-CVE-2024-31228-deb-ubuntu-jammy-V4,DC,qwen3_14b,fs,True,False,accepted
+139,D7-CVE-2024-31228-deb-ubuntu-jammy-V4,DC,qwen3_14b,proc,True,False,accepted
+140,D7-CVE-2024-31228-deb-ubuntu-noble-V2,DC_noverify,qwen3_14b,fs,True,False,accepted
+141,D7-CVE-2024-31228-deb-ubuntu-noble-V2,DC_noverify,qwen3_14b,proc,True,False,accepted
+142,D7-CVE-2024-31228-deb-ubuntu-noble-V2,DC_noverify,qwen3_14b,fs,True,False,accepted
+143,D7-CVE-2024-31228-deb-ubuntu-noble-V2,DC_noverify,qwen3_14b,proc,True,False,accepted
+144,D7-CVE-2024-31228-deb-ubuntu-noble-V2,DC,qwen3_14b,fs,True,False,accepted
+145,D7-CVE-2024-31228-deb-ubuntu-noble-V2,DC,qwen3_14b,proc,True,False,accepted
+146,D7-CVE-2024-31228-deb-ubuntu-noble-V2,DC,qwen3_14b,fs,True,False,accepted
+147,D7-CVE-2024-31228-deb-ubuntu-noble-V2,DC,qwen3_14b,proc,True,False,accepted
+148,D7-CVE-2024-31228-deb-ubuntu-noble-V3,DC_noverify,qwen3_14b,fs,True,False,accepted
+149,D7-CVE-2024-31228-deb-ubuntu-noble-V3,DC_noverify,qwen3_14b,proc,True,False,accepted
+150,D7-CVE-2024-31228-deb-ubuntu-noble-V3,DC_noverify,qwen3_14b,fs,True,False,accepted
+151,D7-CVE-2024-31228-deb-ubuntu-noble-V3,DC_noverify,qwen3_14b,proc,True,False,accepted
+152,D7-CVE-2024-31228-deb-ubuntu-noble-V3,DC,qwen3_14b,fs,True,False,accepted
+153,D7-CVE-2024-31228-deb-ubuntu-noble-V3,DC,qwen3_14b,proc,True,False,accepted
+154,D7-CVE-2024-31228-deb-ubuntu-noble-V3,DC,qwen3_14b,fs,True,False,accepted
+155,D7-CVE-2024-31228-deb-ubuntu-noble-V3,DC,qwen3_14b,proc,True,False,accepted
+156,D7-CVE-2025-26465-deb-ubuntu-jammy-V5,DC_noverify,qwen3_14b,fs,True,False,accepted
+157,D7-CVE-2025-26465-deb-ubuntu-jammy-V5,DC_noverify,qwen3_14b,proc,True,False,accepted
+158,D7-CVE-2025-26465-deb-ubuntu-noble-V2,DC_noverify,qwen3_14b,fs,True,False,accepted
+159,D7-CVE-2025-26465-deb-ubuntu-noble-V2,DC_noverify,qwen3_14b,proc,True,False,accepted
+160,D7-CVE-2025-26465-deb-ubuntu-jammy-V5,DC_noverify,qwen3_14b,fs,True,False,accepted
+161,D7-CVE-2025-26465-deb-ubuntu-jammy-V5,DC_noverify,qwen3_14b,proc,True,False,accepted
+162,D7-CVE-2025-26465-deb-ubuntu-noble-V2,DC_noverify,qwen3_14b,fs,True,False,accepted
+163,D7-CVE-2025-26465-deb-ubuntu-noble-V2,DC_noverify,qwen3_14b,proc,True,False,accepted
+164,D7-CVE-2025-26465-deb-ubuntu-jammy-V5,DC,qwen3_14b,fs,True,False,accepted
+165,D7-CVE-2025-26465-deb-ubuntu-jammy-V5,DC,qwen3_14b,proc,True,False,accepted
+166,D7-CVE-2025-26465-deb-ubuntu-jammy-V5,DC,qwen3_14b,fs,True,False,accepted
+167,D7-CVE-2025-26465-deb-ubuntu-jammy-V5,DC,qwen3_14b,proc,True,False,accepted
+168,D7-CVE-2025-26465-deb-ubuntu-noble-V2,DC,qwen3_14b,fs,True,False,accepted
+169,D7-CVE-2025-26465-deb-ubuntu-noble-V2,DC,qwen3_14b,proc,True,False,accepted
+170,D7-CVE-2025-26465-deb-ubuntu-noble-V4,DC_noverify,qwen3_14b,fs,True,False,accepted
+171,D7-CVE-2025-26465-deb-ubuntu-noble-V4,DC_noverify,qwen3_14b,proc,True,False,accepted
+172,D7-CVE-2025-26465-deb-ubuntu-noble-V2,DC,qwen3_14b,fs,True,False,accepted
+173,D7-CVE-2025-26465-deb-ubuntu-noble-V2,DC,qwen3_14b,proc,True,False,accepted
+174,D7-CVE-2025-26465-deb-ubuntu-noble-V4,DC_noverify,qwen3_14b,fs,True,False,accepted
+175,D7-CVE-2025-26465-deb-ubuntu-noble-V4,DC_noverify,qwen3_14b,proc,True,False,accepted
+176,D7-CVE-2026-32792-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,fs,True,False,accepted
+177,D7-CVE-2026-32792-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,proc,True,False,accepted
+178,D7-CVE-2026-32792-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,proc,True,True,accepted without verification (ablation)
+179,D7-CVE-2026-32792-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,fs,True,False,accepted
+180,D7-CVE-2026-32792-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,proc,True,False,accepted
+181,D7-CVE-2026-32792-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,proc,True,True,accepted without verification (ablation)
+182,D7-CVE-2025-26465-deb-ubuntu-noble-V4,DC,qwen3_14b,fs,True,False,accepted
+183,D7-CVE-2025-26465-deb-ubuntu-noble-V4,DC,qwen3_14b,proc,True,False,accepted
+184,D7-CVE-2025-26465-deb-ubuntu-noble-V4,DC,qwen3_14b,fs,True,False,accepted
+185,D7-CVE-2025-26465-deb-ubuntu-noble-V4,DC,qwen3_14b,proc,True,False,accepted
+186,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,fs,True,False,accepted
+187,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,proc,True,False,accepted
+188,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,proc,True,True,accepted without verification (ablation)
+189,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,fs,True,False,accepted
+190,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,proc,True,False,accepted
+191,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DC_noverify,qwen3_14b,proc,True,True,accepted without verification (ablation)
+192,D7-CVE-2026-32792-deb-ubuntu-jammy-V2,DC,qwen3_14b,fs,True,False,accepted
+193,D7-CVE-2026-32792-deb-ubuntu-jammy-V2,DC,qwen3_14b,proc,True,False,accepted
+194,D7-CVE-2026-32792-deb-ubuntu-jammy-V2,DC,qwen3_14b,proc,False,True,distribution packages: version only from the package-level process start line
+195,D7-CVE-2026-32792-deb-ubuntu-jammy-V2,DC,qwen3_14b,fs,True,False,accepted
+196,D7-CVE-2026-32792-deb-ubuntu-jammy-V2,DC,qwen3_14b,proc,True,False,accepted
+197,D7-CVE-2026-32792-deb-ubuntu-jammy-V2,DC,qwen3_14b,proc,False,True,distribution packages: version only from the package-level process start line
+198,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DC,qwen3_14b,fs,True,False,accepted
+199,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DC,qwen3_14b,proc,True,False,accepted
+200,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DC,qwen3_14b,proc,False,True,distribution packages: version only from the package-level process start line
+201,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DC,qwen3_14b,fs,True,False,accepted
+202,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DC,qwen3_14b,proc,True,False,accepted
+203,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DC,qwen3_14b,proc,False,True,distribution packages: version only from the package-level process start line
+204,D7-CVE-2026-50812-deb-ubuntu-noble-V3,DC,qwen3_14b,fs,True,False,accepted
+205,D7-CVE-2026-50812-deb-ubuntu-noble-V3,DC_noverify,qwen3_14b,fs,True,False,accepted
+206,D7-CVE-2026-50812-deb-ubuntu-noble-V3,DC_noverify,qwen3_14b,fs,True,False,accepted
+207,D7-CVE-2026-50812-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,fs,True,False,accepted
+208,D7-CVE-2026-50812-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,fs,True,False,accepted
+209,D7-CVE-2026-50812-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,fs,True,False,accepted
+210,D7-CVE-2026-50812-deb-ubuntu-jammy-V2,DC_noverify,qwen3_14b,fs,True,False,accepted
+211,D7-CVE-2026-50812-deb-ubuntu-noble-V3,DC_noverify,qwen3_14b,fs,True,False,accepted
+212,D7-CVE-2026-50812-deb-ubuntu-jammy-V2,DC,qwen3_14b,fs,True,False,accepted
+213,D7-CVE-2026-50812-deb-ubuntu-jammy-V2,DC,qwen3_14b,fs,True,False,accepted
+214,D7-CVE-2026-50812-deb-ubuntu-jammy-V2,DC,qwen3_14b,fs,True,False,accepted
+215,D7-CVE-2026-50812-deb-ubuntu-jammy-V2,DC,qwen3_14b,fs,True,False,accepted
+216,D7-CVE-2026-50812-deb-ubuntu-noble-V3,DC,qwen3_14b,fs,True,False,accepted
+217,D7-CVE-2026-62643-vendor-jammy-V4,DC_noverify,qwen3_14b,fs,True,False,accepted without verification (ablation)
+218,D7-CVE-2026-62643-vendor-noble-V3,DC_noverify,qwen3_14b,fs,True,False,accepted without verification (ablation)
+219,D7-CVE-2026-62643-vendor-jammy-V4,DC,qwen3_14b,fs,False,False,span does not name the case component
+220,D7-CVE-2026-62643-vendor-jammy-V4,DC,qwen3_14b,proc,True,False,accepted
+221,D7-CVE-2026-62643-vendor-jammy-V4,DC_noverify,qwen3_14b,fs,True,False,accepted without verification (ablation)
+222,D7-CVE-2026-62643-vendor-jammy-V4,DC_noverify,qwen3_14b,proc,True,False,accepted
+223,D7-CVE-2026-62643-vendor-jammy-V4,DC,qwen3_14b,fs,False,False,span does not name the case component
+224,D7-CVE-2026-62643-vendor-jammy-V4,DC,qwen3_14b,proc,True,False,accepted
+225,D7-CVE-2026-62643-vendor-jammy-V4,DC_noverify,qwen3_14b,fs,True,False,accepted without verification (ablation)
+226,D7-CVE-2026-62643-vendor-jammy-V4,DC_noverify,qwen3_14b,proc,True,False,accepted
+227,D7-CVE-2026-68763-vendor-jammy-V3,DC_noverify,qwen3_14b,fs,True,False,accepted
+228,D7-CVE-2026-62643-vendor-noble-V3,DC,qwen3_14b,fs,False,False,span does not name the case component
+229,D7-CVE-2026-62643-vendor-noble-V3,DC,qwen3_14b,proc,True,False,accepted
+230,D7-CVE-2026-62643-vendor-jammy-V4,DC,qwen3_14b,fs,False,False,span does not name the case component
+231,D7-CVE-2026-62643-vendor-jammy-V4,DC,qwen3_14b,proc,True,False,accepted
+232,D7-CVE-2026-62643-vendor-noble-V3,DC_noverify,qwen3_14b,fs,True,False,accepted without verification (ablation)
+233,D7-CVE-2026-62643-vendor-noble-V3,DC_noverify,qwen3_14b,proc,True,False,accepted
+234,D7-CVE-2026-62643-vendor-noble-V3,DC_noverify,qwen3_14b,fs,True,False,accepted without verification (ablation)
+235,D7-CVE-2026-62643-vendor-noble-V3,DC_noverify,qwen3_14b,proc,True,False,accepted
+236,D7-CVE-2026-68763-vendor-jammy-V3,DC,qwen3_14b,fs,True,False,accepted
+237,D7-CVE-2026-8280-vendor-noble-V3,DC_noverify,qwen3_14b,fs,True,False,accepted
+238,D7-CVE-2026-8280-vendor-noble-V6,DC_noverify,qwen3_14b,fs,True,True,accepted without verification (ablation)
+239,D7-CVE-2026-62643-vendor-noble-V3,DC,qwen3_14b,fs,False,False,span does not name the case component
+240,D7-CVE-2026-62643-vendor-noble-V3,DC,qwen3_14b,proc,True,False,accepted
+241,D7-CVE-2026-62643-vendor-noble-V3,DC,qwen3_14b,fs,False,False,span does not name the case component
+242,D7-CVE-2026-62643-vendor-noble-V3,DC,qwen3_14b,proc,True,False,accepted
+243,D7-CVE-2026-63076-deb-ubuntu-noble-V2,DC_noverify,qwen3_14b,fs,True,False,accepted
+244,D7-CVE-2026-63076-deb-ubuntu-noble-V2,DC_noverify,qwen3_14b,fs,True,False,accepted
+245,D7-CVE-2026-8280-vendor-noble-V3,DC,qwen3_14b,fs,True,False,accepted
+246,D7-CVE-2026-68763-vendor-jammy-V3,DC_noverify,qwen3_14b,fs,True,False,accepted
+247,D7-CVE-2026-68763-vendor-jammy-V3,DC_noverify,qwen3_14b,proc,True,False,accepted
+248,D7-CVE-2026-8280-vendor-noble-V6,DC,qwen3_14b,fs,False,True,span does not name the case component
+249,D7-CVE-2026-68763-vendor-jammy-V3,DC_noverify,qwen3_14b,fs,True,False,accepted
+250,D7-CVE-2026-68763-vendor-jammy-V3,DC_noverify,qwen3_14b,proc,True,False,accepted
+251,D7-CVE-2026-63076-deb-ubuntu-noble-V2,DC,qwen3_14b,fs,True,False,accepted
+252,D7-CVE-2026-8280-vendor-noble-V3,DC_noverify,qwen3_14b,fs,True,False,accepted
+253,D7-CVE-2026-8280-vendor-noble-V3,DC_noverify,qwen3_14b,proc,True,False,accepted
+254,D7-CVE-2026-63076-deb-ubuntu-noble-V2,DC,qwen3_14b,fs,True,False,accepted
+255,D7-CVE-2026-8280-vendor-noble-V3,DC_noverify,qwen3_14b,fs,True,False,accepted
+256,D7-CVE-2026-8280-vendor-noble-V3,DC_noverify,qwen3_14b,proc,True,False,accepted
+257,D7-CVE-2026-68763-vendor-jammy-V3,DC,qwen3_14b,fs,True,False,accepted
+258,D7-CVE-2026-68763-vendor-jammy-V3,DC,qwen3_14b,proc,True,False,accepted
+259,D7-CVE-2026-8280-vendor-noble-V6,DC_noverify,qwen3_14b,fs,True,True,accepted without verification (ablation)
+260,D7-CVE-2026-68763-vendor-jammy-V3,DC,qwen3_14b,fs,True,False,accepted
+261,D7-CVE-2026-68763-vendor-jammy-V3,DC,qwen3_14b,proc,True,False,accepted
+262,D7-CVE-2026-8280-vendor-noble-V6,DC_noverify,qwen3_14b,fs,True,True,accepted without verification (ablation)
+263,D7-CVE-2026-8280-vendor-noble-V6,DC,qwen3_14b,fs,False,True,span does not name the case component
+264,D7-CVE-2026-8280-vendor-noble-V3,DC,qwen3_14b,fs,True,False,accepted
+265,D7-CVE-2026-8280-vendor-noble-V3,DC,qwen3_14b,proc,True,False,accepted
+266,D7-CVE-2026-8280-vendor-noble-V3,DC,qwen3_14b,fs,True,False,accepted
+267,D7-CVE-2026-8280-vendor-noble-V3,DC,qwen3_14b,proc,True,False,accepted
+268,D7-CVE-2026-8280-vendor-noble-V6,DC,qwen3_14b,fs,False,True,span does not name the case component
+269,D7-CVE-2020-1938-vendor-noble-V5,DCv21,qwen3_14b,proc,True,False,accepted
+270,D7-CVE-2017-12617-vendor-noble-V4,DCv21,qwen3_14b,proc,True,False,accepted
+271,D7-CVE-2017-12617-vendor-noble-V4,DCv21,qwen3_14b,fs,True,False,accepted
+272,D7-CVE-2023-2911-deb-ubuntu-jammy-V3,DCv21,qwen3_14b,proc,True,False,accepted
+273,D7-CVE-2020-1938-vendor-noble-V5,DCv21,qwen3_14b,fs,True,False,accepted
+274,D7-CVE-2020-1938-vendor-noble-V5,DCv21,qwen3_14b,proc,True,False,accepted
+275,D7-CVE-2020-1938-vendor-noble-V5,DCv21,qwen3_14b,fs,True,False,accepted
+276,D7-CVE-2020-1938-vendor-noble-V5,DCv21,qwen3_14b,proc,True,False,accepted
+277,D7-CVE-2023-4091-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,proc,True,False,accepted
+278,D7-CVE-2023-0051-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+279,D7-CVE-2023-0051-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+280,D7-CVE-2023-0051-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+281,D7-CVE-2023-0051-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+282,D7-CVE-2017-12617-vendor-noble-V4,DCv21,qwen3_14b,fs,True,False,accepted
+283,D7-CVE-2017-12617-vendor-noble-V4,DCv21,qwen3_14b,proc,True,False,accepted
+284,D7-CVE-2017-12617-vendor-noble-V4,DCv21,qwen3_14b,fs,True,False,accepted
+285,D7-CVE-2017-12617-vendor-noble-V4,DCv21,qwen3_14b,proc,True,False,accepted
+286,D7-CVE-2023-4091-deb-ubuntu-noble-V3,DCv21,qwen3_14b,proc,True,False,accepted
+287,D7-CVE-2023-42117-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,proc,True,False,accepted
+288,D7-CVE-2023-4091-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,fs,True,False,accepted
+289,D7-CVE-2023-4091-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,proc,True,False,accepted
+290,D7-CVE-2023-4091-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,fs,True,False,accepted
+291,D7-CVE-2023-2911-deb-ubuntu-jammy-V3,DCv21,qwen3_14b,fs,True,False,accepted
+292,D7-CVE-2023-2911-deb-ubuntu-jammy-V3,DCv21,qwen3_14b,proc,True,False,accepted
+293,D7-CVE-2023-2911-deb-ubuntu-jammy-V3,DCv21,qwen3_14b,fs,True,False,accepted
+294,D7-CVE-2023-2911-deb-ubuntu-jammy-V3,DCv21,qwen3_14b,fs,True,False,accepted
+295,D7-CVE-2023-2911-deb-ubuntu-jammy-V3,DCv21,qwen3_14b,proc,True,False,accepted
+296,D7-CVE-2023-2911-deb-ubuntu-jammy-V3,DCv21,qwen3_14b,fs,True,False,accepted
+297,D7-CVE-2023-4091-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,fs,True,False,accepted
+298,D7-CVE-2023-4091-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,proc,True,False,accepted
+299,D7-CVE-2023-4091-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,fs,True,False,accepted
+300,D7-CVE-2023-4091-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+301,D7-CVE-2023-4091-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,proc,True,False,accepted
+302,D7-CVE-2023-4091-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+303,D7-CVE-2023-4091-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+304,D7-CVE-2023-4091-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,proc,True,False,accepted
+305,D7-CVE-2023-4091-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+306,D7-CVE-2023-4091-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,fs,True,False,accepted
+307,D7-CVE-2023-4091-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,proc,True,False,accepted
+308,D7-CVE-2023-4091-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,fs,True,False,accepted
+309,D7-CVE-2023-4091-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,fs,True,False,accepted
+310,D7-CVE-2023-4091-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,proc,True,False,accepted
+311,D7-CVE-2023-4091-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,fs,True,False,accepted
+312,D7-CVE-2023-4091-deb-ubuntu-noble-V3,DCv21,qwen3_14b,fs,True,False,accepted
+313,D7-CVE-2023-4091-deb-ubuntu-noble-V3,DCv21,qwen3_14b,proc,True,False,accepted
+314,D7-CVE-2023-4091-deb-ubuntu-noble-V3,DCv21,qwen3_14b,fs,True,False,accepted
+315,D7-CVE-2023-4091-deb-ubuntu-noble-V3,DCv21,qwen3_14b,fs,True,False,accepted
+316,D7-CVE-2023-4091-deb-ubuntu-noble-V3,DCv21,qwen3_14b,proc,True,False,accepted
+317,D7-CVE-2023-4091-deb-ubuntu-noble-V3,DCv21,qwen3_14b,fs,True,False,accepted
+318,D7-CVE-2024-23897-vendor-jammy-V4,DCv21,qwen3_14b,proc,False,False,span does not name the case component
+319,D7-CVE-2023-7028-vendor-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+320,D7-CVE-2023-7028-vendor-jammy-V4,DCv21,qwen3_14b,proc,True,False,accepted
+321,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,fs,True,False,accepted
+322,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,proc,True,False,accepted
+323,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,proc,True,False,accepted
+324,D7-CVE-2023-2911-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,fs,True,False,accepted
+325,D7-CVE-2023-2911-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,proc,True,False,accepted
+326,D7-CVE-2023-2911-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,fs,True,False,accepted
+327,D7-CVE-2023-2911-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,fs,True,False,accepted
+328,D7-CVE-2023-2911-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,proc,True,False,accepted
+329,D7-CVE-2023-2911-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,fs,True,False,accepted
+330,D7-CVE-2024-23897-vendor-jammy-V4,DCv21,qwen3_14b,proc,False,False,span does not name the case component
+331,D7-CVE-2024-23897-vendor-jammy-V4,DCv21,qwen3_14b,proc,False,False,span does not name the case component
+332,D7-CVE-2023-42117-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+333,D7-CVE-2023-42117-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,proc,True,False,accepted
+334,D7-CVE-2023-42117-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+335,D7-CVE-2023-42117-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+336,D7-CVE-2023-42117-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,proc,True,False,accepted
+337,D7-CVE-2023-42117-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+338,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,fs,True,False,accepted
+339,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,proc,True,False,accepted
+340,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,fs,True,False,accepted
+341,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,fs,True,False,accepted
+342,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,proc,True,False,accepted
+343,D7-CVE-2023-42117-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,fs,True,False,accepted
+344,D7-CVE-2024-23897-vendor-noble-V3,DCv21,qwen3_14b,proc,False,False,span does not name the case component
+345,D7-CVE-2024-23897-vendor-noble-V3,DCv21,qwen3_14b,proc,False,False,span does not name the case component
+346,D7-CVE-2023-42117-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,fs,True,False,accepted
+347,D7-CVE-2023-42117-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,proc,True,False,accepted
+348,D7-CVE-2023-42117-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,fs,True,False,accepted
+349,D7-CVE-2024-31228-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,proc,True,False,accepted
+350,D7-CVE-2023-42117-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,fs,True,False,accepted
+351,D7-CVE-2023-42117-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,proc,True,False,accepted
+352,D7-CVE-2023-42117-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,fs,True,False,accepted
+353,D7-CVE-2024-23897-vendor-noble-V3,DCv21,qwen3_14b,proc,False,False,span does not name the case component
+354,D7-CVE-2023-6129-deb-ubuntu-noble-V3,DCv21,qwen3_14b,fs,True,False,accepted
+355,D7-CVE-2023-6129-deb-ubuntu-noble-V3,DCv21,qwen3_14b,fs,True,False,accepted
+356,D7-CVE-2023-6129-deb-ubuntu-noble-V3,DCv21,qwen3_14b,fs,True,False,accepted
+357,D7-CVE-2023-6129-deb-ubuntu-noble-V3,DCv21,qwen3_14b,fs,True,False,accepted
+358,D7-CVE-2023-6129-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+359,D7-CVE-2023-6129-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+360,D7-CVE-2023-6129-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+361,D7-CVE-2023-6129-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+362,D7-CVE-2023-7028-vendor-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+363,D7-CVE-2023-7028-vendor-jammy-V4,DCv21,qwen3_14b,proc,True,False,accepted
+364,D7-CVE-2023-7028-vendor-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+365,D7-CVE-2023-7028-vendor-jammy-V4,DCv21,qwen3_14b,proc,True,False,accepted
+366,D7-CVE-2024-31228-deb-ubuntu-noble-V3,DCv21,qwen3_14b,proc,True,False,accepted
+367,D7-CVE-2024-31228-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+368,D7-CVE-2024-31228-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,proc,True,False,accepted
+369,D7-CVE-2024-31228-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+370,D7-CVE-2024-31228-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+371,D7-CVE-2024-31228-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,proc,True,False,accepted
+372,D7-CVE-2024-31228-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+373,D7-CVE-2025-26465-deb-ubuntu-noble-V4,DCv21,qwen3_14b,proc,True,False,accepted
+374,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,proc,True,False,accepted
+375,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,proc,False,True,distribution packages: version only from the package-level process start line
+376,D7-CVE-2024-31228-deb-ubuntu-noble-V2,DCv21,qwen3_14b,fs,True,False,accepted
+377,D7-CVE-2024-31228-deb-ubuntu-noble-V2,DCv21,qwen3_14b,proc,True,False,accepted
+378,D7-CVE-2024-31228-deb-ubuntu-noble-V2,DCv21,qwen3_14b,fs,True,False,accepted
+379,D7-CVE-2024-31228-deb-ubuntu-noble-V2,DCv21,qwen3_14b,fs,True,False,accepted
+380,D7-CVE-2024-31228-deb-ubuntu-noble-V2,DCv21,qwen3_14b,proc,True,False,accepted
+381,D7-CVE-2024-31228-deb-ubuntu-noble-V2,DCv21,qwen3_14b,fs,True,False,accepted
+382,D7-CVE-2024-31228-deb-ubuntu-noble-V3,DCv21,qwen3_14b,fs,True,False,accepted
+383,D7-CVE-2024-31228-deb-ubuntu-noble-V3,DCv21,qwen3_14b,proc,True,False,accepted
+384,D7-CVE-2024-31228-deb-ubuntu-noble-V3,DCv21,qwen3_14b,fs,True,False,accepted
+385,D7-CVE-2024-31228-deb-ubuntu-noble-V3,DCv21,qwen3_14b,fs,True,False,accepted
+386,D7-CVE-2024-31228-deb-ubuntu-noble-V3,DCv21,qwen3_14b,proc,True,False,accepted
+387,D7-CVE-2024-31228-deb-ubuntu-noble-V3,DCv21,qwen3_14b,fs,True,False,accepted
+388,D7-CVE-2025-26465-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,fs,True,False,accepted
+389,D7-CVE-2025-26465-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,proc,True,False,accepted
+390,D7-CVE-2025-26465-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,fs,True,False,accepted
+391,D7-CVE-2026-32792-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,fs,True,False,accepted
+392,D7-CVE-2026-32792-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,proc,True,False,accepted
+393,D7-CVE-2026-32792-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,proc,False,True,distribution packages: version only from the package-level process start line
+394,D7-CVE-2026-32792-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,fs,True,False,accepted
+395,D7-CVE-2026-32792-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,fs,True,False,accepted
+396,D7-CVE-2026-32792-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,proc,True,False,accepted
+397,D7-CVE-2026-32792-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,proc,False,True,distribution packages: version only from the package-level process start line
+398,D7-CVE-2026-32792-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,fs,True,False,accepted
+399,D7-CVE-2025-26465-deb-ubuntu-noble-V2,DCv21,qwen3_14b,fs,True,False,accepted
+400,D7-CVE-2025-26465-deb-ubuntu-noble-V2,DCv21,qwen3_14b,proc,True,False,accepted
+401,D7-CVE-2025-26465-deb-ubuntu-noble-V2,DCv21,qwen3_14b,fs,True,False,accepted
+402,D7-CVE-2025-26465-deb-ubuntu-noble-V2,DCv21,qwen3_14b,fs,True,False,accepted
+403,D7-CVE-2025-26465-deb-ubuntu-noble-V2,DCv21,qwen3_14b,proc,True,False,accepted
+404,D7-CVE-2025-26465-deb-ubuntu-noble-V2,DCv21,qwen3_14b,fs,True,False,accepted
+405,D7-CVE-2025-26465-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,fs,True,False,accepted
+406,D7-CVE-2025-26465-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,proc,True,False,accepted
+407,D7-CVE-2025-26465-deb-ubuntu-jammy-V5,DCv21,qwen3_14b,fs,True,False,accepted
+408,D7-CVE-2025-26465-deb-ubuntu-noble-V4,DCv21,qwen3_14b,fs,True,False,accepted
+409,D7-CVE-2025-26465-deb-ubuntu-noble-V4,DCv21,qwen3_14b,proc,True,False,accepted
+410,D7-CVE-2025-26465-deb-ubuntu-noble-V4,DCv21,qwen3_14b,fs,True,False,accepted
+411,D7-CVE-2025-26465-deb-ubuntu-noble-V4,DCv21,qwen3_14b,fs,True,False,accepted
+412,D7-CVE-2025-26465-deb-ubuntu-noble-V4,DCv21,qwen3_14b,proc,True,False,accepted
+413,D7-CVE-2025-26465-deb-ubuntu-noble-V4,DCv21,qwen3_14b,fs,True,False,accepted
+414,D7-CVE-2026-50812-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,fs,True,False,accepted
+415,D7-CVE-2026-50812-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,fs,True,False,accepted
+416,D7-CVE-2026-50812-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,fs,True,False,accepted
+417,D7-CVE-2026-50812-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,fs,True,False,accepted
+418,D7-CVE-2026-50812-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,fs,True,False,accepted
+419,D7-CVE-2026-50812-deb-ubuntu-jammy-V2,DCv21,qwen3_14b,fs,True,False,accepted
+420,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+421,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,proc,True,False,accepted
+422,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,proc,False,True,distribution packages: version only from the package-level process start line
+423,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+424,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+425,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,proc,True,False,accepted
+426,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,proc,False,True,distribution packages: version only from the package-level process start line
+427,D7-CVE-2026-32792-deb-ubuntu-jammy-V4,DCv21,qwen3_14b,fs,True,False,accepted
+428,D7-CVE-2026-62643-vendor-jammy-V4,DCv21,qwen3_14b,fs,False,False,span does not name the case component
+429,D7-CVE-2026-62643-vendor-jammy-V4,DCv21,qwen3_14b,proc,True,False,accepted
+430,D7-CVE-2026-8280-vendor-noble-V6,DCv21,qwen3_14b,fs,False,True,span does not name the case component
+431,D7-CVE-2026-50812-deb-ubuntu-noble-V3,DCv21,qwen3_14b,fs,True,False,accepted
+432,D7-CVE-2026-50812-deb-ubuntu-noble-V3,DCv21,qwen3_14b,fs,True,False,accepted
+433,D7-CVE-2026-62643-vendor-noble-V3,DCv21,qwen3_14b,fs,False,False,span does not name the case component
+434,D7-CVE-2026-62643-vendor-noble-V3,DCv21,qwen3_14b,proc,True,False,accepted
+435,D7-CVE-2026-50812-deb-ubuntu-noble-V3,DCv21,qwen3_14b,fs,True,False,accepted
+436,D7-CVE-2026-50812-deb-ubuntu-noble-V3,DCv21,qwen3_14b,fs,True,False,accepted
+437,D7-CVE-2026-68763-vendor-jammy-V3,DCv21,qwen3_14b,fs,True,False,accepted
+438,D7-CVE-2026-68763-vendor-jammy-V3,DCv21,qwen3_14b,proc,True,False,accepted
+439,D7-CVE-2026-62643-vendor-jammy-V4,DCv21,qwen3_14b,fs,False,False,span does not name the case component
+440,D7-CVE-2026-62643-vendor-jammy-V4,DCv21,qwen3_14b,proc,True,False,accepted
+441,D7-CVE-2026-62643-vendor-noble-V3,DCv21,qwen3_14b,fs,False,False,span does not name the case component
+442,D7-CVE-2026-62643-vendor-noble-V3,DCv21,qwen3_14b,proc,True,False,accepted
+443,D7-CVE-2026-62643-vendor-jammy-V4,DCv21,qwen3_14b,fs,False,False,span does not name the case component
+444,D7-CVE-2026-62643-vendor-jammy-V4,DCv21,qwen3_14b,proc,True,False,accepted
+445,D7-CVE-2026-68763-vendor-jammy-V3,DCv21,qwen3_14b,fs,True,False,accepted
+446,D7-CVE-2026-68763-vendor-jammy-V3,DCv21,qwen3_14b,proc,True,False,accepted
+447,D7-CVE-2026-8280-vendor-noble-V3,DCv21,qwen3_14b,fs,True,False,accepted
+448,D7-CVE-2026-8280-vendor-noble-V3,DCv21,qwen3_14b,proc,True,False,accepted
+449,D7-CVE-2026-68763-vendor-jammy-V3,DCv21,qwen3_14b,fs,True,False,accepted
+450,D7-CVE-2026-68763-vendor-jammy-V3,DCv21,qwen3_14b,proc,True,False,accepted
+451,D7-CVE-2026-62643-vendor-noble-V3,DCv21,qwen3_14b,fs,False,False,span does not name the case component
+452,D7-CVE-2026-62643-vendor-noble-V3,DCv21,qwen3_14b,proc,True,False,accepted
+453,D7-CVE-2026-8280-vendor-noble-V6,DCv21,qwen3_14b,fs,False,True,span does not name the case component
+454,D7-CVE-2026-8280-vendor-noble-V6,DCv21,qwen3_14b,fs,False,True,span does not name the case component
+455,D7-CVE-2026-8280-vendor-noble-V3,DCv21,qwen3_14b,fs,True,False,accepted
+456,D7-CVE-2026-8280-vendor-noble-V3,DCv21,qwen3_14b,proc,True,False,accepted
+457,D7-CVE-2026-8280-vendor-noble-V3,DCv21,qwen3_14b,fs,True,False,accepted
+458,D7-CVE-2026-8280-vendor-noble-V3,DCv21,qwen3_14b,proc,True,False,accepted
+459,D7-CVE-2026-63076-deb-ubuntu-noble-V2,DCv21,qwen3_14b,fs,True,False,accepted
+460,D7-CVE-2026-63076-deb-ubuntu-noble-V2,DCv21,qwen3_14b,fs,True,False,accepted
+461,D7-CVE-2026-63076-deb-ubuntu-noble-V2,DCv21,qwen3_14b,fs,True,False,accepted
+462,D7-CVE-2026-63076-deb-ubuntu-noble-V2,DCv21,qwen3_14b,fs,True,False,accepted

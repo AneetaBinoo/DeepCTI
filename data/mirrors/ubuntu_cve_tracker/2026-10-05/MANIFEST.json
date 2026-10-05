@@ -1,0 +1,326 @@
+{
+ "files": {
+  "cves/CVE-2022-41741.json": {
+   "bytes": 36018,
+   "retrieved_at": "2026-10-05T15:32:12Z",
+   "sha256": "27fbebd41302ad63acf811e021fb613cc5f93be2023d40ca862924d98707deeb",
+   "url": "https://ubuntu.com/security/cves/CVE-2022-41741.json"
+  },
+  "cves/CVE-2023-0051.json": {
+   "bytes": 21309,
+   "retrieved_at": "2026-10-05T15:33:40Z",
+   "sha256": "fa1767667575da9898f08340151ecfe19d6d4c439cba8331efd0396a7f4be36f",
+   "url": "https://ubuntu.com/security/cves/CVE-2023-0051.json"
+  },
+  "cves/CVE-2023-25690.json": {
+   "bytes": 18578,
+   "retrieved_at": "2026-10-05T15:31:39Z",
+   "sha256": "bb79d2af110959bfa601637426bb921b5aed2a90bf3d7142532b14bba8e86e89",
+   "url": "https://ubuntu.com/security/cves/CVE-2023-25690.json"
+  },
+  "cves/CVE-2023-2911.json": {
+   "bytes": 16943,
+   "retrieved_at": "2026-10-05T15:32:07Z",
+   "sha256": "9a6cd3459c68d4da5def84b37fc2dc64fa00cb04cd9aee925794fbf51fe1ee65",
+   "url": "https://ubuntu.com/security/cves/CVE-2023-2911.json"
+  },
+  "cves/CVE-2023-38408.json": {
+   "bytes": 16500,
+   "retrieved_at": "2026-10-05T15:31:39Z",
+   "sha256": "0d278c0d28da91bb7b0f8fcf64d6c640cbf4c80b2b38e78f84762f92e7002dbb",
+   "url": "https://ubuntu.com/security/cves/CVE-2023-38408.json"
+  },
+  "cves/CVE-2023-4091.json": {
+   "bytes": 31083,
+   "retrieved_at": "2026-10-05T15:32:07Z",
+   "sha256": "9a9ad267751bfaf3b82a536c8dc450419210936e17dc08c5f11a11304a6ba01b",
+   "url": "https://ubuntu.com/security/cves/CVE-2023-4091.json"
+  },
+  "cves/CVE-2023-42115.json": {
+   "bytes": 13955,
+   "retrieved_at": "2026-10-05T15:32:07Z",
+   "sha256": "b64cf32267596f4f86051de9de1136933fbdd2dd439f3c33852e8737347583cd",
+   "url": "https://ubuntu.com/security/cves/CVE-2023-42115.json"
+  },
+  "cves/CVE-2023-42116.json": {
+   "bytes": 13977,
+   "retrieved_at": "2026-10-05T15:32:07Z",
+   "sha256": "5c145750e17a678e8fec1058feee89e8bd3049536f777a3d6c6f6399b101987e",
+   "url": "https://ubuntu.com/security/cves/CVE-2023-42116.json"
+  },
+  "cves/CVE-2023-42117.json": {
+   "bytes": 15674,
+   "retrieved_at": "2026-10-05T15:32:07Z",
+   "sha256": "3d6d3d556f530656589f89ae6dd70fab1c5abe36e5d8df64876d397deeedc926",
+   "url": "https://ubuntu.com/security/cves/CVE-2023-42117.json"
+  },
+  "cves/CVE-2023-47038.json": {
+   "bytes": 14558,
+   "retrieved_at": "2026-10-05T15:33:40Z",
+   "sha256": "6b45a0323f8964ccc59e18e5e28467e619c5820dcc1a0fe771eb2e75ac5257ef",
+   "url": "https://ubuntu.com/security/cves/CVE-2023-47038.json"
+  },
+  "cves/CVE-2023-4863.json": {
+   "bytes": 126929,
+   "retrieved_at": "2026-10-05T15:32:55Z",
+   "sha256": "5e4718a43da69b60d4dd6f80a4bf276c8e9c24abe7aa68240456c27942d8d082",
+   "url": "https://ubuntu.com/security/cves/CVE-2023-4863.json"
+  },
+  "cves/CVE-2023-48795.json": {
+   "bytes": 84440,
+   "retrieved_at": "2026-10-05T15:32:55Z",
+   "sha256": "7313083cc14bd104a7353904d07eacab68b976b0b0eadae2a4396d3bed29906e",
+   "url": "https://ubuntu.com/security/cves/CVE-2023-48795.json"
+  },
+  "cves/CVE-2023-4911.json": {
+   "bytes": 14419,
+   "retrieved_at": "2026-10-05T15:32:46Z",
+   "sha256": "6b2774cb15f0d2a1d86659062588bce252f5af709290eb930723154b4fddb2e2",
+   "url": "https://ubuntu.com/security/cves/CVE-2023-4911.json"
+  },
+  "cves/CVE-2023-52425.json": {
+   "bytes": 42343,
+   "retrieved_at": "2026-10-05T15:33:39Z",
+   "sha256": "708b3dddcb3bb54a3134e2bbf44f01a9281d7e1714d20ef35d5f7d5a07549574",
+   "url": "https://ubuntu.com/security/cves/CVE-2023-52425.json"
+  },
+  "cves/CVE-2023-6129.json": {
+   "bytes": 15081,
+   "retrieved_at": "2026-10-05T15:33:32Z",
+   "sha256": "eadc2134a7d42fd57f43ef38b52b7737de04862b7f452049327e9829edd7b5b4",
+   "url": "https://ubuntu.com/security/cves/CVE-2023-6129.json"
+  },
+  "cves/CVE-2023-7104.json": {
+   "bytes": 15120,
+   "retrieved_at": "2026-10-05T15:33:35Z",
+   "sha256": "023bb990729f54d8c8c59ccf56292b5ffe7b8763e5dd6dd8a8a155dae37080fa",
+   "url": "https://ubuntu.com/security/cves/CVE-2023-7104.json"
+  },
+  "cves/CVE-2024-2004.json": {
+   "bytes": 12845,
+   "retrieved_at": "2026-10-05T15:33:32Z",
+   "sha256": "b8656b53ecd2d2a855aa4f333652d66d9dbd5c294824f99e77f76106b5501a62",
+   "url": "https://ubuntu.com/security/cves/CVE-2024-2004.json"
+  },
+  "cves/CVE-2024-31228.json": {
+   "bytes": 10657,
+   "retrieved_at": "2026-10-05T15:33:44Z",
+   "sha256": "c02eb25f49b3b977962f64da9b6645e971323658280797beeb53c1e777836e0f",
+   "url": "https://ubuntu.com/security/cves/CVE-2024-31228.json"
+  },
+  "cves/CVE-2024-33599.json": {
+   "bytes": 33612,
+   "retrieved_at": "2026-10-05T15:33:34Z",
+   "sha256": "f848afc34a940edb61a95b72b69ee61f96100b00e94fbb480cb4b36351b6cf65",
+   "url": "https://ubuntu.com/security/cves/CVE-2024-33599.json"
+  },
+  "cves/CVE-2024-38475.json": {
+   "bytes": 26966,
+   "retrieved_at": "2026-10-05T15:32:46Z",
+   "sha256": "dee66e6f5d0b0e62951727f57f1a17719d946fbaeac9655d0b7c2ff195766629",
+   "url": "https://ubuntu.com/security/cves/CVE-2024-38475.json"
+  },
+  "cves/CVE-2024-56171.json": {
+   "bytes": 14189,
+   "retrieved_at": "2026-10-05T15:33:39Z",
+   "sha256": "604f6af962881086a1d88f4764c67687a56ade42a6636711d8b848bdd60edd72",
+   "url": "https://ubuntu.com/security/cves/CVE-2024-56171.json"
+  },
+  "cves/CVE-2024-6387.json": {
+   "bytes": 10501,
+   "retrieved_at": "2026-10-05T15:30:35Z",
+   "sha256": "542dfee2ba795d964483d49ac9aaad3f75f7aaa5a4d8bc5e1226fe8c6c75a3be",
+   "url": "https://ubuntu.com/security/cves/CVE-2024-6387.json"
+  },
+  "cves/CVE-2024-7347.json": {
+   "bytes": 32814,
+   "retrieved_at": "2026-10-05T15:32:07Z",
+   "sha256": "1cf84fb1b329e4bcdecd6b80a6f307063e23a3eda32e4ddb83f16d0d2614de80",
+   "url": "https://ubuntu.com/security/cves/CVE-2024-7347.json"
+  },
+  "cves/CVE-2025-23419.json": {
+   "bytes": 27136,
+   "retrieved_at": "2026-10-05T15:33:01Z",
+   "sha256": "787f2e1d5d8ea749ed6af057c0f2c07ab03d521894202ff28b8e51013e377e83",
+   "url": "https://ubuntu.com/security/cves/CVE-2025-23419.json"
+  },
+  "cves/CVE-2025-26465.json": {
+   "bytes": 15814,
+   "retrieved_at": "2026-10-05T15:30:57Z",
+   "sha256": "490dac33967d586830ab8ab39fee1c84577f81cec2434381765a6425cd614060",
+   "url": "https://ubuntu.com/security/cves/CVE-2025-26465.json"
+  },
+  "cves/CVE-2025-32462.json": {
+   "bytes": 9758,
+   "retrieved_at": "2026-10-05T15:32:46Z",
+   "sha256": "742952d1ba58d9db62362bf8409418502f39faaae781124d42c256e142af19db",
+   "url": "https://ubuntu.com/security/cves/CVE-2025-32462.json"
+  },
+  "cves/CVE-2025-32463.json": {
+   "bytes": 6815,
+   "retrieved_at": "2026-10-05T15:32:46Z",
+   "sha256": "6e11569d316efc6e9ed22fa8b9d86aa7cc0654af0735db6a616f48057e255e68",
+   "url": "https://ubuntu.com/security/cves/CVE-2025-32463.json"
+  },
+  "cves/CVE-2025-48384.json": {
+   "bytes": 26834,
+   "retrieved_at": "2026-10-05T15:32:46Z",
+   "sha256": "7e21c9f7841d58902cf303fee3ffdcf0eb9324b726f9a767f8e189fbaf507575",
+   "url": "https://ubuntu.com/security/cves/CVE-2025-48384.json"
+  },
+  "cves/CVE-2025-49630.json": {
+   "bytes": 21802,
+   "retrieved_at": "2026-10-05T15:31:39Z",
+   "sha256": "0941ef9b4f0ed7725d4ae11a7aa88dd6c29559bc04fe05867d39a3b38b62285f",
+   "url": "https://ubuntu.com/security/cves/CVE-2025-49630.json"
+  },
+  "cves/CVE-2025-49812.json": {
+   "bytes": 36626,
+   "retrieved_at": "2026-10-05T15:31:39Z",
+   "sha256": "96f31d6479441ec8f0ea101fe6af5f5cbb13818619a971941b9f7553b36531d9",
+   "url": "https://ubuntu.com/security/cves/CVE-2025-49812.json"
+  },
+  "cves/CVE-2025-8714.json": {
+   "bytes": 39551,
+   "retrieved_at": "2026-10-05T15:33:40Z",
+   "sha256": "27cc64a4b9f16cefe6c5bbc6151b102b7e07a23a78338c145a3cd57262aa196d",
+   "url": "https://ubuntu.com/security/cves/CVE-2025-8714.json"
+  },
+  "cves/CVE-2026-10723.json": {
+   "bytes": 13844,
+   "retrieved_at": "2026-10-05T15:33:20Z",
+   "sha256": "dade282c086dba6bcbb0309292ca253382ab6965139a5624b79f22ffc36e1046",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-10723.json"
+  },
+  "cves/CVE-2026-12969.json": {
+   "bytes": 9940,
+   "retrieved_at": "2026-10-05T15:33:09Z",
+   "sha256": "d8fcfd1644f1932fc3b0a0e18d0de150c91d33c2069d833d9ff8ea4bed54b016",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-12969.json"
+  },
+  "cves/CVE-2026-13221.json": {
+   "bytes": 19591,
+   "retrieved_at": "2026-10-05T15:33:01Z",
+   "sha256": "9925be8fd8eeb4b6d214572f45b73ad591e2a1f341990dd39a5f06fd7e3f32ad",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-13221.json"
+  },
+  "cves/CVE-2026-18924.json": {
+   "bytes": 15756,
+   "retrieved_at": "2026-10-05T15:33:01Z",
+   "sha256": "54ca82a00f7bbd1637d347037878206252f0282836812607cf556b66e8cd3636",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-18924.json"
+  },
+  "cves/CVE-2026-2340.json": {
+   "bytes": 37597,
+   "retrieved_at": "2026-10-05T15:33:21Z",
+   "sha256": "7186c2fa68bf3918cda0a26c8ec2e25563830b7ab8d9143752f7125db00aa60b",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-2340.json"
+  },
+  "cves/CVE-2026-24072.json": {
+   "bytes": 27948,
+   "retrieved_at": "2026-10-05T15:33:25Z",
+   "sha256": "b1bedec35c6a3ed3ddd43b6d7a82645fd20d9d1e66ebd4155370f803decb75f1",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-24072.json"
+  },
+  "cves/CVE-2026-32792.json": {
+   "bytes": 13754,
+   "retrieved_at": "2026-10-05T15:33:09Z",
+   "sha256": "fa288e5a18c20ea10a991622a443a9b34ae4f0fd43aabdd0d0ae32811a6135b0",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-32792.json"
+  },
+  "cves/CVE-2026-33846.json": {
+   "bytes": 23119,
+   "retrieved_at": "2026-10-05T15:33:27Z",
+   "sha256": "04c16875bfdd1c013405001b3f29e32de8626e2542fae53f3b3641b0040965b6",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-33846.json"
+  },
+  "cves/CVE-2026-42533.json": {
+   "bytes": 55348,
+   "retrieved_at": "2026-10-05T15:33:25Z",
+   "sha256": "03fa2533697bd873f2f9aea4f6ec73b9df0b4bb9bef898729a73c98bbde0b8c6",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-42533.json"
+  },
+  "cves/CVE-2026-43617.json": {
+   "bytes": 11744,
+   "retrieved_at": "2026-10-05T15:33:09Z",
+   "sha256": "d6d8e3bf1c29197909ccc7167b9541c79b13c90534ec721b17b507c4f5f5bc49",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-43617.json"
+  },
+  "cves/CVE-2026-46483.json": {
+   "bytes": 25501,
+   "retrieved_at": "2026-10-05T15:33:10Z",
+   "sha256": "990c08f37a34a9f9eadd8d2c44e10cea48da3a71eaf2f7c001de63a8eebfd05f",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-46483.json"
+  },
+  "cves/CVE-2026-50012.json": {
+   "bytes": 3512,
+   "retrieved_at": "2026-10-05T15:33:16Z",
+   "sha256": "4fb6ca78e235355e739c72531c345dbdd3d9fbd05db30e95636b1de8328e6b24",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-50012.json"
+  },
+  "cves/CVE-2026-50812.json": {
+   "bytes": 10980,
+   "retrieved_at": "2026-10-05T15:33:09Z",
+   "sha256": "020fc19f10daa17a42c68f06a7520bc27c678a4f4af0228c3d459794409004bf",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-50812.json"
+  },
+  "cves/CVE-2026-55203.json": {
+   "bytes": 7743,
+   "retrieved_at": "2026-10-05T15:33:20Z",
+   "sha256": "38dd203bf2593fe8804b8233a946033b60059991a5d980edb96b10e7facb74bd",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-55203.json"
+  },
+  "cves/CVE-2026-56407.json": {
+   "bytes": 36423,
+   "retrieved_at": "2026-10-05T15:33:01Z",
+   "sha256": "cfbd014080755285a3c610deb240d0f3c2c064774776859bca703944a336ca4c",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-56407.json"
+  },
+  "cves/CVE-2026-59846.json": {
+   "bytes": 8814,
+   "retrieved_at": "2026-10-05T15:33:09Z",
+   "sha256": "6daf440f6e51fb49506f34db33fe438320dfa1d4d07326d7bee0951aff5be741",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-59846.json"
+  },
+  "cves/CVE-2026-59998.json": {
+   "bytes": 21011,
+   "retrieved_at": "2026-10-05T15:33:25Z",
+   "sha256": "f6d1f8bf3c8a9993d569e6fe119f081ba8e46de1568a364917585e30099e5222",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-59998.json"
+  },
+  "cves/CVE-2026-63076.json": {
+   "bytes": 27170,
+   "retrieved_at": "2026-10-05T15:33:01Z",
+   "sha256": "52aebdbbf655e632aa8da704981400907f29583dc9374f3a629c3ebdfe9bbcf0",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-63076.json"
+  },
+  "cves/CVE-2026-6653.json": {
+   "bytes": 6664,
+   "retrieved_at": "2026-10-05T15:33:11Z",
+   "sha256": "e3f6768f67ce5f677857c70bc0f48fd38cbab877305ca56fcf38eb891bf94bdc",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-6653.json"
+  },
+  "cves/CVE-2026-80489.json": {
+   "bytes": 21596,
+   "retrieved_at": "2026-10-05T15:33:09Z",
+   "sha256": "b9abaac5f20d33a31abd88e2feed81565a86a192b909874ca2b20d37a1b170a1",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-80489.json"
+  },
+  "cves/CVE-2026-90698.json": {
+   "bytes": 5694,
+   "retrieved_at": "2026-10-05T15:33:20Z",
+   "sha256": "aca933592e86354cbcdc6b44dd3804a5c497daf55aba6d95619bd1262505a338",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-90698.json"
+  },
+  "cves/CVE-2026-94054.json": {
+   "bytes": 9190,
+   "retrieved_at": "2026-10-05T15:33:27Z",
+   "sha256": "1f525003810d9e13e8c90b9030560661d2730ef6ec80e131c0e165bc1642bdae",
+   "url": "https://ubuntu.com/security/cves/CVE-2026-94054.json"
+  }
+ },
+ "license": "Ubuntu CVE tracker JSON API (ubuntu.com/security/cves), Canonical, public data",
+ "n_files": 53,
+ "snapshot_date": "2026-10-05",
+ "source": "ubuntu_cve_tracker"
+}

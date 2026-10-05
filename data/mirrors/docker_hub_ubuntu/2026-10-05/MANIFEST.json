@@ -1,0 +1,50 @@
+{
+ "files": {
+  "jammy_index.json": {
+   "bytes": 7617,
+   "digest": "sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae763010dc3035bb8da3ae6cf026486401",
+   "retrieved_at": "2026-10-05T15:11:56Z",
+   "sha256": "69a0d56a2684ae31910784165e5cf05b54f6026abd9419adacdd6ae241aeb32c",
+   "url": "https://registry-1.docker.io/v2/library/ubuntu/manifests/22.04"
+  },
+  "jammy_manifest_amd64.json": {
+   "bytes": 457,
+   "digest": "sha256:08ea48a03a3e78ebc7cd526e6a275053223aadd88bfc09cc49b06d5281525fde",
+   "retrieved_at": "2026-10-05T15:11:56Z",
+   "sha256": "28cee2a2efc226137cf3922d029e237b1b77f7d5cec5a9217c063621ab18baa1",
+   "url": "https://registry-1.docker.io/v2/library/ubuntu/manifests/sha256:08ea48a03a3e78ebc7cd526e6a275053223aadd88bfc09cc49b06d5281525fde"
+  },
+  "noble_index.json": {
+   "bytes": 7617,
+   "digest": "sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55",
+   "retrieved_at": "2026-10-05T15:11:57Z",
+   "sha256": "3b603e7d61db78080d3a333976a8e9e7c8e4c389388b74205fbe7bf3628414bd",
+   "url": "https://registry-1.docker.io/v2/library/ubuntu/manifests/24.04"
+  },
+  "noble_manifest_amd64.json": {
+   "bytes": 457,
+   "digest": "sha256:f610ab94648195aa356059f5b41d6085c9d4d903c072430cdd1af7bdb646106b",
+   "retrieved_at": "2026-10-05T15:11:57Z",
+   "sha256": "12f9986970e0a6121930cf83090b2b05d6591f7cb18aedbce99b01ea6cb2e80f",
+   "url": "https://registry-1.docker.io/v2/library/ubuntu/manifests/sha256:f610ab94648195aa356059f5b41d6085c9d4d903c072430cdd1af7bdb646106b"
+  },
+  "raw/jammy/sha256_98c4455a98982b35380ec62f90d5cf0edff02eeb4b3bb18595d871fdeb0c0c67.tar.gz": {
+   "bytes": 29751627,
+   "digest": "sha256:98c4455a98982b35380ec62f90d5cf0edff02eeb4b3bb18595d871fdeb0c0c67",
+   "retrieved_at": "2026-10-05T15:11:56Z",
+   "sha256": "98c4455a98982b35380ec62f90d5cf0edff02eeb4b3bb18595d871fdeb0c0c67",
+   "url": "https://registry-1.docker.io/v2/library/ubuntu/blobs/sha256:98c4455a98982b35380ec62f90d5cf0edff02eeb4b3bb18595d871fdeb0c0c67"
+  },
+  "raw/noble/sha256_a60ef8ec184edb5ed91f5983f00261359fb2fe20f603e8d488b9477d32fcad70.tar.gz": {
+   "bytes": 29764422,
+   "digest": "sha256:a60ef8ec184edb5ed91f5983f00261359fb2fe20f603e8d488b9477d32fcad70",
+   "retrieved_at": "2026-10-05T15:11:58Z",
+   "sha256": "a60ef8ec184edb5ed91f5983f00261359fb2fe20f603e8d488b9477d32fcad70",
+   "url": "https://registry-1.docker.io/v2/library/ubuntu/blobs/sha256:a60ef8ec184edb5ed91f5983f00261359fb2fe20f603e8d488b9477d32fcad70"
+  }
+ },
+ "license": "Ubuntu official images (Docker Official Images); Canonical, mostly DFSG-free contents",
+ "n_files": 6,
+ "snapshot_date": "2026-10-05",
+ "source": "docker_hub_ubuntu"
+}

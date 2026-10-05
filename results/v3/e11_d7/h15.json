@@ -1,0 +1,21 @@
+{
+ "margin": -0.02,
+ "diff": -0.017757433386755506,
+ "lo": -0.0468820038870616,
+ "hi": 0.009845801580532809,
+ "p_signflip": 0.2268773122687731,
+ "faithfulness_DCv21": 0.6824189334562778,
+ "faithfulness_DC": 0.7001763668430336,
+ "n_claims_DCv21": 2169,
+ "n_claims_DC": 1890,
+ "n_cves": 65,
+ "n_pairs": 504,
+ "n_pairs_per_arm": {
+  "tracker": 168,
+  "withheld": 168,
+  "blind": 168
+ },
+ "H15_holds": false,
+ "claims_without_eligible_validated_judge": 0,
+ "share_fallback_DCv21": 0.061507936507936505
+}

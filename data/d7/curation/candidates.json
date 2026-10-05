@@ -1,0 +1,901 @@
+[
+ {
+  "cve": "CVE-2024-6387",
+  "src_package": "openssh",
+  "reason": "config",
+  "ecosystem": "deb-ubuntu",
+  "component": "openssh"
+ },
+ {
+  "cve": "CVE-2025-26465",
+  "src_package": "openssh",
+  "reason": "config",
+  "ecosystem": "deb-ubuntu",
+  "component": "openssh"
+ },
+ {
+  "cve": "CVE-2023-38408",
+  "src_package": "openssh",
+  "reason": "config",
+  "ecosystem": "deb-ubuntu",
+  "component": "openssh"
+ },
+ {
+  "cve": "CVE-2023-25690",
+  "src_package": "apache2",
+  "reason": "config",
+  "ecosystem": "deb-ubuntu",
+  "component": "apache2"
+ },
+ {
+  "cve": "CVE-2025-49812",
+  "src_package": "apache2",
+  "reason": "config",
+  "ecosystem": "deb-ubuntu",
+  "component": "apache2"
+ },
+ {
+  "cve": "CVE-2025-49630",
+  "src_package": "apache2",
+  "reason": "config",
+  "ecosystem": "deb-ubuntu",
+  "component": "apache2"
+ },
+ {
+  "cve": "CVE-2023-2911",
+  "src_package": "bind9",
+  "reason": "config",
+  "ecosystem": "deb-ubuntu",
+  "component": "bind9"
+ },
+ {
+  "cve": "CVE-2023-42115",
+  "src_package": "exim4",
+  "reason": "config",
+  "ecosystem": "deb-ubuntu",
+  "component": "exim4"
+ },
+ {
+  "cve": "CVE-2023-42116",
+  "src_package": "exim4",
+  "reason": "config",
+  "ecosystem": "deb-ubuntu",
+  "component": "exim4"
+ },
+ {
+  "cve": "CVE-2023-42117",
+  "src_package": "exim4",
+  "reason": "config",
+  "ecosystem": "deb-ubuntu",
+  "component": "exim4"
+ },
+ {
+  "cve": "CVE-2023-4091",
+  "src_package": "samba",
+  "reason": "config",
+  "ecosystem": "deb-ubuntu",
+  "component": "samba"
+ },
+ {
+  "cve": "CVE-2024-7347",
+  "src_package": "nginx",
+  "reason": "config",
+  "ecosystem": "deb-ubuntu",
+  "component": "nginx"
+ },
+ {
+  "cve": "CVE-2022-41741",
+  "src_package": "nginx",
+  "reason": "config",
+  "ecosystem": "deb-ubuntu",
+  "component": "nginx"
+ },
+ {
+  "cve": "CVE-2025-32462",
+  "src_package": "sudo",
+  "reason": "config",
+  "ecosystem": "deb-ubuntu",
+  "component": "sudo"
+ },
+ {
+  "cve": "CVE-2023-4911",
+  "src_package": "glibc",
+  "reason": "kev",
+  "ecosystem": "deb-ubuntu",
+  "component": "glibc"
+ },
+ {
+  "cve": "CVE-2024-38475",
+  "src_package": "apache2",
+  "reason": "kev",
+  "ecosystem": "deb-ubuntu",
+  "component": "apache2"
+ },
+ {
+  "cve": "CVE-2025-32463",
+  "src_package": "sudo",
+  "reason": "kev",
+  "ecosystem": "deb-ubuntu",
+  "component": "sudo"
+ },
+ {
+  "cve": "CVE-2025-48384",
+  "src_package": "git",
+  "reason": "kev",
+  "ecosystem": "deb-ubuntu",
+  "component": "git"
+ },
+ {
+  "cve": "CVE-2023-4863",
+  "src_package": "libwebp",
+  "reason": "kev",
+  "ecosystem": "deb-ubuntu",
+  "component": "libwebp"
+ },
+ {
+  "cve": "CVE-2023-48795",
+  "src_package": "openssh",
+  "reason": "famous",
+  "ecosystem": "deb-ubuntu",
+  "component": "openssh"
+ },
+ {
+  "cve": "CVE-2025-23419",
+  "src_package": "nginx",
+  "reason": "famous",
+  "ecosystem": "deb-ubuntu",
+  "component": "nginx"
+ },
+ {
+  "cve": "CVE-2024-34069",
+  "component": "werkzeug",
+  "reason": "config",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2024-23334",
+  "component": "aiohttp",
+  "reason": "config",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2024-49768",
+  "component": "waitress",
+  "reason": "config",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2026-48710",
+  "component": "starlette",
+  "reason": "kev",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2026-64849",
+  "component": "mlflow",
+  "reason": "kev",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2024-45231",
+  "component": "django",
+  "reason": "classic",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2024-37891",
+  "component": "urllib3",
+  "reason": "classic",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2024-35195",
+  "component": "requests",
+  "reason": "classic",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2024-22195",
+  "component": "jinja2",
+  "reason": "classic",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2024-1135",
+  "component": "gunicorn",
+  "reason": "classic",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2023-50782",
+  "component": "cryptography",
+  "reason": "classic",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2024-6345",
+  "component": "setuptools",
+  "reason": "classic",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2020-1747",
+  "component": "pyyaml",
+  "reason": "classic",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2024-52804",
+  "component": "tornado",
+  "reason": "classic",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2023-30861",
+  "component": "flask",
+  "reason": "classic",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2024-3651",
+  "component": "idna",
+  "reason": "classic",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2023-50447",
+  "component": "pillow",
+  "reason": "classic",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2024-24762",
+  "component": "python-multipart",
+  "reason": "classic",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2026-34993",
+  "component": "aiohttp",
+  "reason": "recent",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2026-8404",
+  "component": "django",
+  "reason": "recent",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2026-6907",
+  "component": "django",
+  "reason": "recent",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2026-48522",
+  "component": "pyjwt",
+  "reason": "recent",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2026-42308",
+  "component": "pillow",
+  "reason": "recent",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2026-49854",
+  "component": "tornado",
+  "reason": "recent",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2026-44431",
+  "component": "urllib3",
+  "reason": "recent",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2026-54282",
+  "component": "starlette",
+  "reason": "recent",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2026-45409",
+  "component": "idna",
+  "reason": "recent",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2026-42561",
+  "component": "python-multipart",
+  "reason": "recent",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2026-40110",
+  "component": "jupyter-server",
+  "reason": "recent",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2026-69249",
+  "component": "cryptography",
+  "reason": "recent",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2026-59890",
+  "component": "setuptools",
+  "reason": "recent",
+  "ecosystem": "pypi"
+ },
+ {
+  "cve": "CVE-2021-44228",
+  "component": "org.apache.logging.log4j:log4j-core",
+  "reason": "config",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2021-45046",
+  "component": "org.apache.logging.log4j:log4j-core",
+  "reason": "config",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2021-45105",
+  "component": "org.apache.logging.log4j:log4j-core",
+  "reason": "config",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2021-44832",
+  "component": "org.apache.logging.log4j:log4j-core",
+  "reason": "config",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2022-22965",
+  "component": "org.springframework:spring-beans",
+  "reason": "config",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2021-42392",
+  "component": "com.h2database:h2",
+  "reason": "config",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2016-4437",
+  "component": "org.apache.shiro:shiro-core",
+  "reason": "config",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2021-4104",
+  "component": "log4j:log4j",
+  "reason": "config",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2018-11776",
+  "component": "org.apache.struts:struts2-core",
+  "reason": "config",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2024-1597",
+  "component": "org.postgresql:postgresql",
+  "reason": "config",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2023-6378",
+  "component": "ch.qos.logback:logback-classic",
+  "reason": "config",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2017-5638",
+  "component": "org.apache.struts:struts2-core",
+  "reason": "kev",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2023-46604",
+  "component": "org.apache.activemq:activemq-client",
+  "reason": "kev",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2022-22963",
+  "component": "org.springframework.cloud:spring-cloud-function-context",
+  "reason": "kev",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2021-39144",
+  "component": "com.thoughtworks.xstream:xstream",
+  "reason": "kev",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2022-42889",
+  "component": "org.apache.commons:commons-text",
+  "reason": "classic",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2022-1471",
+  "component": "org.yaml:snakeyaml",
+  "reason": "classic",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2023-24998",
+  "component": "commons-fileupload:commons-fileupload",
+  "reason": "classic",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2020-36518",
+  "component": "com.fasterxml.jackson.core:jackson-databind",
+  "reason": "classic",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2026-43515",
+  "component": "org.apache.tomcat.embed:tomcat-embed-core",
+  "reason": "recent",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2026-9828",
+  "component": "ch.qos.logback:logback-core",
+  "reason": "recent",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2026-54512",
+  "component": "com.fasterxml.jackson.core:jackson-databind",
+  "reason": "recent",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2026-41417",
+  "component": "io.netty:netty-codec-http",
+  "reason": "recent",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2026-48043",
+  "component": "io.netty:netty-codec-http2",
+  "reason": "recent",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2026-49268",
+  "component": "org.apache.shiro:shiro-core",
+  "reason": "recent",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2026-42198",
+  "component": "org.postgresql:postgresql",
+  "reason": "recent",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2026-8763",
+  "component": "org.bouncycastle:bcprov-jdk18on",
+  "reason": "recent",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2026-10051",
+  "component": "org.eclipse.jetty:jetty-server",
+  "reason": "recent",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2026-41848",
+  "component": "org.springframework:spring-core",
+  "reason": "recent",
+  "ecosystem": "maven"
+ },
+ {
+  "cve": "CVE-2020-1938",
+  "component": "tomcat",
+  "reason": "config",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2017-12617",
+  "component": "tomcat",
+  "reason": "config",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2025-24813",
+  "component": "tomcat",
+  "reason": "config",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2020-9484",
+  "component": "tomcat",
+  "reason": "config",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2026-55276",
+  "component": "tomcat",
+  "reason": "recent",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2026-55956",
+  "component": "tomcat",
+  "reason": "recent",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2026-65183",
+  "component": "tomcat",
+  "reason": "recent",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2026-68763",
+  "component": "tomcat",
+  "reason": "recent",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2021-41773",
+  "component": "httpd",
+  "reason": "config",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2021-42013",
+  "component": "httpd",
+  "reason": "config",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2021-40438",
+  "component": "httpd",
+  "reason": "config",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2026-34059",
+  "component": "httpd",
+  "reason": "recent",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2026-29167",
+  "component": "httpd",
+  "reason": "recent",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2026-56153",
+  "component": "httpd",
+  "reason": "recent",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2024-23897",
+  "component": "jenkins",
+  "reason": "kev",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2018-1000861",
+  "component": "jenkins",
+  "reason": "kev",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2026-53435",
+  "component": "jenkins",
+  "reason": "recent",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2026-70430",
+  "component": "jenkins",
+  "reason": "recent",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2026-84645",
+  "component": "jenkins",
+  "reason": "recent",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2025-49113",
+  "component": "roundcube",
+  "reason": "kev",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2024-37383",
+  "component": "roundcube",
+  "reason": "kev",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2023-43770",
+  "component": "roundcube",
+  "reason": "kev",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2026-62643",
+  "component": "roundcube",
+  "reason": "recent",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2026-75007",
+  "component": "roundcube",
+  "reason": "recent",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2023-7028",
+  "component": "gitlab",
+  "reason": "kev",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2021-22205",
+  "component": "gitlab",
+  "reason": "kev",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2026-8280",
+  "component": "gitlab",
+  "reason": "recent",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2026-10733",
+  "component": "gitlab",
+  "reason": "recent",
+  "ecosystem": "vendor"
+ },
+ {
+  "cve": "CVE-2026-63076",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "openssl",
+  "reason": "auto-recent",
+  "component": "openssl"
+ },
+ {
+  "cve": "CVE-2026-18924",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "curl",
+  "reason": "auto-recent",
+  "component": "curl"
+ },
+ {
+  "cve": "CVE-2026-56407",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "expat",
+  "reason": "auto-recent",
+  "component": "expat"
+ },
+ {
+  "cve": "CVE-2026-13221",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "perl",
+  "reason": "auto-recent",
+  "component": "perl"
+ },
+ {
+  "cve": "CVE-2026-32792",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "unbound",
+  "reason": "auto-recent",
+  "component": "unbound"
+ },
+ {
+  "cve": "CVE-2026-12969",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "dnsmasq",
+  "reason": "auto-recent",
+  "component": "dnsmasq"
+ },
+ {
+  "cve": "CVE-2026-43617",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "rsync",
+  "reason": "auto-recent",
+  "component": "rsync"
+ },
+ {
+  "cve": "CVE-2026-59846",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "libssh",
+  "reason": "auto-recent",
+  "component": "libssh"
+ },
+ {
+  "cve": "CVE-2026-80489",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "glibc",
+  "reason": "auto-recent",
+  "component": "glibc"
+ },
+ {
+  "cve": "CVE-2026-50812",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "sqlite3",
+  "reason": "auto-recent",
+  "component": "sqlite3"
+ },
+ {
+  "cve": "CVE-2026-46483",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "vim",
+  "reason": "auto-recent",
+  "component": "vim"
+ },
+ {
+  "cve": "CVE-2026-6653",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "libxml2",
+  "reason": "auto-recent",
+  "component": "libxml2"
+ },
+ {
+  "cve": "CVE-2026-50012",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "squid",
+  "reason": "auto-recent",
+  "component": "squid"
+ },
+ {
+  "cve": "CVE-2026-55203",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "haproxy",
+  "reason": "auto-recent",
+  "component": "haproxy"
+ },
+ {
+  "cve": "CVE-2026-90698",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "memcached",
+  "reason": "auto-recent",
+  "component": "memcached"
+ },
+ {
+  "cve": "CVE-2026-10723",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "bind9",
+  "reason": "auto-recent",
+  "component": "bind9"
+ },
+ {
+  "cve": "CVE-2026-2340",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "samba",
+  "reason": "auto-recent",
+  "component": "samba"
+ },
+ {
+  "cve": "CVE-2026-59998",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "openssh",
+  "reason": "auto-recent",
+  "component": "openssh"
+ },
+ {
+  "cve": "CVE-2026-24072",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "apache2",
+  "reason": "auto-recent",
+  "component": "apache2"
+ },
+ {
+  "cve": "CVE-2026-42533",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "nginx",
+  "reason": "auto-recent",
+  "component": "nginx"
+ },
+ {
+  "cve": "CVE-2026-94054",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "exim4",
+  "reason": "auto-recent",
+  "component": "exim4"
+ },
+ {
+  "cve": "CVE-2026-33846",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "gnutls28",
+  "reason": "auto-recent",
+  "component": "gnutls28"
+ },
+ {
+  "cve": "CVE-2024-2004",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "curl",
+  "reason": "auto-old",
+  "component": "curl"
+ },
+ {
+  "cve": "CVE-2023-6129",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "openssl",
+  "reason": "auto-old",
+  "component": "openssl"
+ },
+ {
+  "cve": "CVE-2024-33599",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "glibc",
+  "reason": "auto-old",
+  "component": "glibc"
+ },
+ {
+  "cve": "CVE-2023-7104",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "sqlite3",
+  "reason": "auto-old",
+  "component": "sqlite3"
+ },
+ {
+  "cve": "CVE-2024-56171",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "libxml2",
+  "reason": "auto-old",
+  "component": "libxml2"
+ },
+ {
+  "cve": "CVE-2023-52425",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "expat",
+  "reason": "auto-old",
+  "component": "expat"
+ },
+ {
+  "cve": "CVE-2023-47038",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "perl",
+  "reason": "auto-old",
+  "component": "perl"
+ },
+ {
+  "cve": "CVE-2023-0051",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "vim",
+  "reason": "auto-old",
+  "component": "vim"
+ },
+ {
+  "cve": "CVE-2025-8714",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "postgresql-14",
+  "reason": "auto-old",
+  "component": "postgresql-14"
+ },
+ {
+  "cve": "CVE-2024-31228",
+  "ecosystem": "deb-ubuntu",
+  "src_package": "redis",
+  "reason": "auto-old",
+  "component": "redis"
+ }
+]

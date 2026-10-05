@@ -1,0 +1,116 @@
+{
+ "files": {
+  "raw/jammy-security/InRelease": {
+   "bytes": 128927,
+   "retrieved_at": "2026-10-05T15:12:01Z",
+   "sha256": "f09b0c6e303de688445280c976d7f24f67221b50903cbbb6b97018a3b888305f",
+   "url": "http://security.ubuntu.com/ubuntu/dists/jammy-security/InRelease"
+  },
+  "raw/jammy-security/main_binary-amd64_Packages.xz": {
+   "bytes": 3629864,
+   "retrieved_at": "2026-10-05T15:12:01Z",
+   "sha256": "20d41d3fbdbca1e20b1f6a21a42b09797c89af3ada0f5f3a91bcd2d6c71b4176",
+   "url": "http://security.ubuntu.com/ubuntu/dists/jammy-security/main/binary-amd64/Packages.xz"
+  },
+  "raw/jammy-security/universe_binary-amd64_Packages.xz": {
+   "bytes": 1052108,
+   "retrieved_at": "2026-10-05T15:12:01Z",
+   "sha256": "43b08426e816c8222ae239fc14e847efa3f40d929c152e0cd965e59b1ccbe3c8",
+   "url": "http://security.ubuntu.com/ubuntu/dists/jammy-security/universe/binary-amd64/Packages.xz"
+  },
+  "raw/jammy-updates/InRelease": {
+   "bytes": 128049,
+   "retrieved_at": "2026-10-05T15:12:01Z",
+   "sha256": "1a761bb89c08d31e877befc257355febd9213defadfa3586a1fc934ae21f01f6",
+   "url": "http://archive.ubuntu.com/ubuntu/dists/jammy-updates/InRelease"
+  },
+  "raw/jammy-updates/main_binary-amd64_Packages.xz": {
+   "bytes": 3899128,
+   "retrieved_at": "2026-10-05T15:12:01Z",
+   "sha256": "669c5cd48857b046754cd4e682d70e80e1bcf04a53bcc44ffd8811ef1dcb5356",
+   "url": "http://archive.ubuntu.com/ubuntu/dists/jammy-updates/main/binary-amd64/Packages.xz"
+  },
+  "raw/jammy-updates/universe_binary-amd64_Packages.xz": {
+   "bytes": 1284904,
+   "retrieved_at": "2026-10-05T15:12:01Z",
+   "sha256": "79dcdbb47dd5f3b7941e4161c64bdfa9c7efded0838d851ae0488bc80bc61257",
+   "url": "http://archive.ubuntu.com/ubuntu/dists/jammy-updates/universe/binary-amd64/Packages.xz"
+  },
+  "raw/jammy/InRelease": {
+   "bytes": 270087,
+   "retrieved_at": "2026-10-05T15:12:01Z",
+   "sha256": "c14060cd8c6d625874dfcb9523a35a395bf4865c28b6b6a82569ef326fe92dc6",
+   "url": "http://archive.ubuntu.com/ubuntu/dists/jammy/InRelease"
+  },
+  "raw/jammy/main_binary-amd64_Packages.xz": {
+   "bytes": 1394768,
+   "retrieved_at": "2026-10-05T15:12:01Z",
+   "sha256": "37cb57f1554cbfa71c5a29ee9ffee18a9a8c1782bb0568e0874b7ff4ce8f9c11",
+   "url": "http://archive.ubuntu.com/ubuntu/dists/jammy/main/binary-amd64/Packages.xz"
+  },
+  "raw/jammy/universe_binary-amd64_Packages.xz": {
+   "bytes": 14090084,
+   "retrieved_at": "2026-10-05T15:12:01Z",
+   "sha256": "d29cb24c93fec5f43255706bce7eb46d4779952039d8c68ac1bb14a6f3655ce2",
+   "url": "http://archive.ubuntu.com/ubuntu/dists/jammy/universe/binary-amd64/Packages.xz"
+  },
+  "raw/noble-security/InRelease": {
+   "bytes": 126127,
+   "retrieved_at": "2026-10-05T15:12:01Z",
+   "sha256": "ce65f58b8e785ee5d7111b49050661967b42fadb133b3814057ff8ea60cb9645",
+   "url": "http://security.ubuntu.com/ubuntu/dists/noble-security/InRelease"
+  },
+  "raw/noble-security/main_binary-amd64_Packages.xz": {
+   "bytes": 1069312,
+   "retrieved_at": "2026-10-05T15:12:01Z",
+   "sha256": "b3f53ec99e6efbe2e2b520cff6d3a62f4d99ea9f9ea2e216a68ef4030522fb32",
+   "url": "http://security.ubuntu.com/ubuntu/dists/noble-security/main/binary-amd64/Packages.xz"
+  },
+  "raw/noble-security/universe_binary-amd64_Packages.xz": {
+   "bytes": 1216060,
+   "retrieved_at": "2026-10-05T15:12:01Z",
+   "sha256": "33383caa0f98242250dfa525a8a074f53e5e6a82d85fb2811be960826693fba2",
+   "url": "http://security.ubuntu.com/ubuntu/dists/noble-security/universe/binary-amd64/Packages.xz"
+  },
+  "raw/noble-updates/InRelease": {
+   "bytes": 126125,
+   "retrieved_at": "2026-10-05T15:12:01Z",
+   "sha256": "fa26529cca0bc636d37850096f201158cdd392576b4cd3a27321992e89294dae",
+   "url": "http://archive.ubuntu.com/ubuntu/dists/noble-updates/InRelease"
+  },
+  "raw/noble-updates/main_binary-amd64_Packages.xz": {
+   "bytes": 1365836,
+   "retrieved_at": "2026-10-05T15:12:01Z",
+   "sha256": "9bc331bcfdd41f6619973ba30944abdd98cc9878533beba1d720a855292aa200",
+   "url": "http://archive.ubuntu.com/ubuntu/dists/noble-updates/main/binary-amd64/Packages.xz"
+  },
+  "raw/noble-updates/universe_binary-amd64_Packages.xz": {
+   "bytes": 1699488,
+   "retrieved_at": "2026-10-05T15:12:01Z",
+   "sha256": "88270b523a1100f34760be7ec53b37fabcad7701f1e9e577ff3c1e2c2386c7c4",
+   "url": "http://archive.ubuntu.com/ubuntu/dists/noble-updates/universe/binary-amd64/Packages.xz"
+  },
+  "raw/noble/InRelease": {
+   "bytes": 255850,
+   "retrieved_at": "2026-10-05T15:12:01Z",
+   "sha256": "cdb2f31d809f589719a53c6ad15f255b27569c4059542ada282aaa21b8e164b0",
+   "url": "http://archive.ubuntu.com/ubuntu/dists/noble/InRelease"
+  },
+  "raw/noble/main_binary-amd64_Packages.xz": {
+   "bytes": 1401160,
+   "retrieved_at": "2026-10-05T15:12:01Z",
+   "sha256": "2a6a199e1031a5c279cb346646d594993f35b1c03dd4a82aaa0323980dd92451",
+   "url": "http://archive.ubuntu.com/ubuntu/dists/noble/main/binary-amd64/Packages.xz"
+  },
+  "raw/noble/universe_binary-amd64_Packages.xz": {
+   "bytes": 15037908,
+   "retrieved_at": "2026-10-05T15:12:01Z",
+   "sha256": "ba9057fa1b91438cc8a1d26808d00c85389fe101d0c1496254df97236405599a",
+   "url": "http://archive.ubuntu.com/ubuntu/dists/noble/universe/binary-amd64/Packages.xz"
+  }
+ },
+ "license": "Ubuntu archive indices (archive.ubuntu.com / security.ubuntu.com) package metadata",
+ "n_files": 18,
+ "snapshot_date": "2026-10-05",
+ "source": "ubuntu_archive"
+}

@@ -1,0 +1,824 @@
+{
+ "files": {
+  "raw/apache2/2.4.52-1ubuntu4.14_changelog": {
+   "bytes": 300176,
+   "retrieved_at": "2026-10-05T15:48:59Z",
+   "sha256": "7937119e1da40fecc3cd245f6d2bea01631e93756c1f84f254a5e1d2091aa9fe",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/a/apache2/apache2_2.4.52-1ubuntu4.14/changelog"
+  },
+  "raw/apache2/2.4.52-1ubuntu4.19_changelog": {
+   "bytes": 304183,
+   "retrieved_at": "2026-10-05T15:48:59Z",
+   "sha256": "832a56d25c8879520044814521ef6846e9441bd955427dea28cc5edbe31440c0",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/a/apache2/apache2_2.4.52-1ubuntu4.19/changelog"
+  },
+  "raw/apache2/2.4.52-1ubuntu4.23_changelog": {
+   "bytes": 310428,
+   "retrieved_at": "2026-10-05T15:48:59Z",
+   "sha256": "746893909907988a010f5eee424315b27a7f179446d5e38b384f1709a258db51",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/a/apache2/apache2_2.4.52-1ubuntu4.23/changelog"
+  },
+  "raw/apache2/2.4.52-1ubuntu4.3_changelog": {
+   "bytes": 292135,
+   "retrieved_at": "2026-10-05T15:49:00Z",
+   "sha256": "dac249e3702ffe7e9e0dc881cf700ab64c78085d7ca2fc6cfaab29b20a00d749",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/a/apache2/apache2_2.4.52-1ubuntu4.3/changelog"
+  },
+  "raw/apache2/2.4.52-1ubuntu4.9_changelog": {
+   "bytes": 295659,
+   "retrieved_at": "2026-10-05T15:49:00Z",
+   "sha256": "80b1e22139f4b5a426fc6ac3826a2e2c5bd22ae46ab08c2b2c6aa1a103f02e7d",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/a/apache2/apache2_2.4.52-1ubuntu4.9/changelog"
+  },
+  "raw/apache2/2.4.58-1ubuntu8.11_changelog": {
+   "bytes": 312217,
+   "retrieved_at": "2026-10-05T15:49:00Z",
+   "sha256": "e2672ffe111ae3c6576520b0736df4ca07c00f76944705ed52e82afde350015d",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/a/apache2/apache2_2.4.58-1ubuntu8.11/changelog"
+  },
+  "raw/apache2/2.4.58-1ubuntu8.15_changelog": {
+   "bytes": 318510,
+   "retrieved_at": "2026-10-05T15:49:00Z",
+   "sha256": "2c2cebc6b905a8dd9a583e478100262c18886493ca34efdc71c52ce0aab888c7",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/a/apache2/apache2_2.4.58-1ubuntu8.15/changelog"
+  },
+  "raw/apache2/2.4.58-1ubuntu8.1_changelog": {
+   "bytes": 303826,
+   "retrieved_at": "2026-10-05T15:49:00Z",
+   "sha256": "4ec3b52ee2f115d9a7e824d5eaa763cd9ae47b60b250d28bfb7736de4649648e",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/a/apache2/apache2_2.4.58-1ubuntu8.1/changelog"
+  },
+  "raw/apache2/2.4.58-1ubuntu8.6_changelog": {
+   "bytes": 308212,
+   "retrieved_at": "2026-10-05T15:49:00Z",
+   "sha256": "33204ff7f39a2643ea18d7e1468e6a000a4cd58b3fcf67d8049c0c94b73882c3",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/a/apache2/apache2_2.4.58-1ubuntu8.6/changelog"
+  },
+  "raw/bind9/9.18.12-0ubuntu0.22.04.1_changelog": {
+   "bytes": 176463,
+   "retrieved_at": "2026-10-05T15:49:00Z",
+   "sha256": "daa5f069e81554344ef48bc42f017b2dcf90dfdecd132b1dd48366ad871b3ae4",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/b/bind9/bind9_9.18.12-0ubuntu0.22.04.1/changelog"
+  },
+  "raw/bind9/9.18.39-0ubuntu0.22.04.4_changelog": {
+   "bytes": 196653,
+   "retrieved_at": "2026-10-05T15:49:00Z",
+   "sha256": "7137caa062d68ec3d500826ae6d8ba99989523d0b96ad394ed8abbb8efa58696",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/b/bind9/bind9_9.18.39-0ubuntu0.22.04.4/changelog"
+  },
+  "raw/bind9/9.18.39-0ubuntu0.22.04.6_changelog": {
+   "bytes": 202543,
+   "retrieved_at": "2026-10-05T15:49:01Z",
+   "sha256": "1f4804bfa4625f6a846892aff8656b7a530f513e5ce5238a66737af4b7a4ff6c",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/b/bind9/bind9_9.18.39-0ubuntu0.22.04.6/changelog"
+  },
+  "raw/bind9/9.18.39-0ubuntu0.24.04.5_changelog": {
+   "bytes": 205265,
+   "retrieved_at": "2026-10-05T15:49:01Z",
+   "sha256": "b84bf878a01f739dcaa2df8a55bea57139e16f619d88e5b97868b7d31f67eeb3",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/b/bind9/bind9_9.18.39-0ubuntu0.24.04.5/changelog"
+  },
+  "raw/bind9/9.18.39-0ubuntu0.24.04.7_changelog": {
+   "bytes": 211155,
+   "retrieved_at": "2026-10-05T15:49:01Z",
+   "sha256": "027b3e599243debaddb154438ff72543ad66243e7e12ee533918a51dfc7fd928",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/b/bind9/bind9_9.18.39-0ubuntu0.24.04.7/changelog"
+  },
+  "raw/curl/7.81.0-1ubuntu1.27_changelog": {
+   "bytes": 106854,
+   "retrieved_at": "2026-10-05T15:49:01Z",
+   "sha256": "fb313ec456adc1346513b1a6a7b0597f5f9a1bb0cbcbfc0de36917d85766b331",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/c/curl/curl_7.81.0-1ubuntu1.27/changelog"
+  },
+  "raw/curl/7.81.0-1ubuntu1.29_changelog": {
+   "bytes": 108226,
+   "retrieved_at": "2026-10-05T15:49:01Z",
+   "sha256": "8fc089a354259cb9c75c7bdfd95cdaa321c5af1d238e77d84c3c937412324c6a",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/c/curl/curl_7.81.0-1ubuntu1.29/changelog"
+  },
+  "raw/curl/8.5.0-2ubuntu10.13_changelog": {
+   "bytes": 122831,
+   "retrieved_at": "2026-10-05T15:49:02Z",
+   "sha256": "dd4b8bbef33bd1193b702523e94cb1e2d7af36a3f47a41964db77698a7860f02",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/c/curl/curl_8.5.0-2ubuntu10.13/changelog"
+  },
+  "raw/curl/8.5.0-2ubuntu10.15_changelog": {
+   "bytes": 124372,
+   "retrieved_at": "2026-10-05T15:49:02Z",
+   "sha256": "39273a471683aa8f81dce02f92fbda0c70636f2a04a6343c7117dc8b2c7060c6",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/c/curl/curl_8.5.0-2ubuntu10.15/changelog"
+  },
+  "raw/curl/8.5.0-2ubuntu10_changelog": {
+   "bytes": 113083,
+   "retrieved_at": "2026-10-05T15:49:02Z",
+   "sha256": "f3510800286950bd174ede3f815a081e01270faab53aa8d893794c716c71e614",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/c/curl/curl_8.5.0-2ubuntu10/changelog"
+  },
+  "raw/dnsmasq/2.90-0ubuntu0.22.04.3_changelog": {
+   "bytes": 53981,
+   "retrieved_at": "2026-10-05T15:49:02Z",
+   "sha256": "28dd41a443dc175ded1da3183ab5523b13c94e838e0e196116edd8b7689609d0",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/d/dnsmasq/dnsmasq_2.90-0ubuntu0.22.04.3/changelog"
+  },
+  "raw/dnsmasq/2.90-2ubuntu0.3_changelog": {
+   "bytes": 56852,
+   "retrieved_at": "2026-10-05T15:49:02Z",
+   "sha256": "3e4fc5bb4ac3a9a165bffa26cb94a58076e5e97460ac480a240950b5540f0438",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/d/dnsmasq/dnsmasq_2.90-2ubuntu0.3/changelog"
+  },
+  "raw/dnsmasq/2.91-0ubuntu0.22.04.1_changelog": {
+   "bytes": 55748,
+   "retrieved_at": "2026-10-05T15:49:02Z",
+   "sha256": "52c0c0ca430189467d8b89dabe5e435fa441f89177956232906648000e3921e9",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/d/dnsmasq/dnsmasq_2.91-0ubuntu0.22.04.1/changelog"
+  },
+  "raw/dnsmasq/2.91-0ubuntu0.24.04.1_changelog": {
+   "bytes": 58735,
+   "retrieved_at": "2026-10-05T15:49:03Z",
+   "sha256": "e5f9e1628f0e29bd43c47de0388452cc4730bfd9cf3328755502d10a97c4da66",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/d/dnsmasq/dnsmasq_2.91-0ubuntu0.24.04.1/changelog"
+  },
+  "raw/exim4/4.95-4ubuntu2.11_changelog": {
+   "bytes": 343684,
+   "retrieved_at": "2026-10-05T15:49:03Z",
+   "sha256": "73da8e994a52fe4586b5841cf9650bb5e8b53b3a30f2763a6a720900ee6bba38",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/e/exim4/exim4_4.95-4ubuntu2.11/changelog"
+  },
+  "raw/exim4/4.95-4ubuntu2.12_changelog": {
+   "bytes": 344445,
+   "retrieved_at": "2026-10-05T15:49:03Z",
+   "sha256": "0ba04bbe19d60449ae7623b141889980984cb4d7086438dd7edb562d16f6b9de",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/e/exim4/exim4_4.95-4ubuntu2.12/changelog"
+  },
+  "raw/exim4/4.95-4ubuntu2.2_changelog": {
+   "bytes": 339142,
+   "retrieved_at": "2026-10-05T15:49:03Z",
+   "sha256": "0d4e4f51b390a6197c3181cd9486901c843a36dc4380d58edea672ad8eaabbed",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/e/exim4/exim4_4.95-4ubuntu2.2/changelog"
+  },
+  "raw/exim4/4.95-4ubuntu2.3_changelog": {
+   "bytes": 339843,
+   "retrieved_at": "2026-10-05T15:49:04Z",
+   "sha256": "83731f40a0c54c23ac951626cf546bced0fe6818403958a049a7e11693fe7ce6",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/e/exim4/exim4_4.95-4ubuntu2.3/changelog"
+  },
+  "raw/exim4/4.97-4ubuntu4.7_changelog": {
+   "bytes": 368502,
+   "retrieved_at": "2026-10-05T15:49:04Z",
+   "sha256": "70605b6643320de6f73e7e516a76b126b1c4deeda788aa7698f6c2cf4b1a3298",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/e/exim4/exim4_4.97-4ubuntu4.7/changelog"
+  },
+  "raw/exim4/4.97-4ubuntu4.8_changelog": {
+   "bytes": 369258,
+   "retrieved_at": "2026-10-05T15:49:04Z",
+   "sha256": "c453b2488752582283ea6e401fe913785f43aa079961d68651930ab6cc961f62",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/e/exim4/exim4_4.97-4ubuntu4.8/changelog"
+  },
+  "raw/expat/2.4.7-1ubuntu0.2_changelog": {
+   "bytes": 29791,
+   "retrieved_at": "2026-10-05T15:49:04Z",
+   "sha256": "5d0a1009c87a0b3f234ba4fa87298b6902a6c1d2f45b2b1200c90bb8334beb73",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/e/expat/expat_2.4.7-1ubuntu0.2/changelog"
+  },
+  "raw/expat/2.4.7-1ubuntu0.8_changelog": {
+   "bytes": 40404,
+   "retrieved_at": "2026-10-05T15:49:04Z",
+   "sha256": "9a238f2840c72096940ebffe2551f3c232afca5d3fbddcda62a865195b1b3620",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/e/expat/expat_2.4.7-1ubuntu0.8/changelog"
+  },
+  "raw/expat/2.4.7-1ubuntu0.9_changelog": {
+   "bytes": 44375,
+   "retrieved_at": "2026-10-05T15:49:04Z",
+   "sha256": "74fa061f27d8004a201fb4644b25c966466a6fbcc104e613d282dedbe1a26e46",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/e/expat/expat_2.4.7-1ubuntu0.9/changelog"
+  },
+  "raw/expat/2.6.1-2ubuntu0.5_changelog": {
+   "bytes": 47751,
+   "retrieved_at": "2026-10-05T15:49:05Z",
+   "sha256": "c2bdcc5226bee54454371073c711118d23e60fcc6caba7a0153976a276eb3089",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/e/expat/expat_2.6.1-2ubuntu0.5/changelog"
+  },
+  "raw/expat/2.6.1-2ubuntu0.6_changelog": {
+   "bytes": 51671,
+   "retrieved_at": "2026-10-05T15:49:05Z",
+   "sha256": "bd30aa4eae58e6a804241a141604584ff0a170a41cd8004a7caaafbc94780e26",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/e/expat/expat_2.6.1-2ubuntu0.6/changelog"
+  },
+  "raw/git/2.34.1-1ubuntu1.12_changelog": {
+   "bytes": 185761,
+   "retrieved_at": "2026-10-05T15:49:05Z",
+   "sha256": "5955e7eac0011e997d85ec8b4030cdcbc71233d0851618d598d77604f7d51021",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/g/git/git_2.34.1-1ubuntu1.12/changelog"
+  },
+  "raw/git/2.34.1-1ubuntu1.17_changelog": {
+   "bytes": 189133,
+   "retrieved_at": "2026-10-05T15:49:05Z",
+   "sha256": "34c2b5a9c2256edcfac3323b00eba9c2dcea3218cb87943a06bef5c133f47a78",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/g/git/git_2.34.1-1ubuntu1.17/changelog"
+  },
+  "raw/git/2.43.0-1ubuntu7.2_changelog": {
+   "bytes": 190769,
+   "retrieved_at": "2026-10-05T15:49:06Z",
+   "sha256": "1109e197d40b3fbb3a9001949bc061d21229a2e17ce83523222f147a988a6327",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/g/git/git_2.43.0-1ubuntu7.2/changelog"
+  },
+  "raw/git/2.43.0-1ubuntu7.3_changelog": {
+   "bytes": 192439,
+   "retrieved_at": "2026-10-05T15:49:06Z",
+   "sha256": "7ad704e9f99e749a2d526558763cd93e40e385bd2c4887d16fbf0e9d44551da3",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/g/git/git_2.43.0-1ubuntu7.3/changelog"
+  },
+  "raw/glibc/2.35-0ubuntu3.14_changelog": {
+   "bytes": 906634,
+   "retrieved_at": "2026-10-05T15:49:06Z",
+   "sha256": "49cd5341206970395e90f662f8b150b3ad874a8e0bed02ee8df2c4aad853c5b2",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/g/glibc/glibc_2.35-0ubuntu3.14/changelog"
+  },
+  "raw/glibc/2.35-0ubuntu3.15_changelog": {
+   "bytes": 908362,
+   "retrieved_at": "2026-10-05T15:49:06Z",
+   "sha256": "f7583c85c0cb832c2588e4d0c38ff19a985b749f1b3d449cfb37f07092e5ffa5",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/g/glibc/glibc_2.35-0ubuntu3.15/changelog"
+  },
+  "raw/glibc/2.35-0ubuntu3.3_changelog": {
+   "bytes": 897846,
+   "retrieved_at": "2026-10-05T15:49:06Z",
+   "sha256": "69ae7ccac188f0eda3986e184a7df0841e98961b77a525ae224c142101ba3fa0",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/g/glibc/glibc_2.35-0ubuntu3.3/changelog"
+  },
+  "raw/glibc/2.35-0ubuntu3.7_changelog": {
+   "bytes": 901748,
+   "retrieved_at": "2026-10-05T15:49:07Z",
+   "sha256": "e0ae6147e937925f8f4c78c7f60c31b2c15377e216bf1c5dc46426b354b6f6f4",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/g/glibc/glibc_2.35-0ubuntu3.7/changelog"
+  },
+  "raw/glibc/2.39-0ubuntu8.1_changelog": {
+   "bytes": 990152,
+   "retrieved_at": "2026-10-05T15:49:07Z",
+   "sha256": "4a2f07abf51946edd894cfd239c61bad0be615760607fbbc9ff177de46a3b8ba",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/g/glibc/glibc_2.39-0ubuntu8.1/changelog"
+  },
+  "raw/glibc/2.39-0ubuntu8.8_changelog": {
+   "bytes": 995372,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "5b6f00e3c517fae0bf69add3e18f03ac78d5c13ead189513face6f24c6df3586",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/g/glibc/glibc_2.39-0ubuntu8.8/changelog"
+  },
+  "raw/glibc/2.39-0ubuntu8.9_changelog": {
+   "bytes": 997393,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "10026413ad3032f641a51af4e4d65a860e599484bc144402840a4f11d48fd384",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/g/glibc/glibc_2.39-0ubuntu8.9/changelog"
+  },
+  "raw/gnutls28/3.7.3-4ubuntu1.8_changelog": {
+   "bytes": 160482,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "fe516c338fcbba1ae47808430177ae04670fca65d68e7ec22416cae6b7b00359",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/g/gnutls28/gnutls28_3.7.3-4ubuntu1.8/changelog"
+  },
+  "raw/gnutls28/3.7.3-4ubuntu1.9_changelog": {
+   "bytes": 165327,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "fe505f744d60d5afab2664d9e411e9893c4374460ca41245f3ef49d5e4e01ca9",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/g/gnutls28/gnutls28_3.7.3-4ubuntu1.9/changelog"
+  },
+  "raw/gnutls28/3.8.3-1.1ubuntu3.5_changelog": {
+   "bytes": 172960,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "ab2951f0192cb7b5d16b0ab3ccf9c39607a5df344450dc0ae79f015c124cfb99",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/g/gnutls28/gnutls28_3.8.3-1.1ubuntu3.5/changelog"
+  },
+  "raw/gnutls28/3.8.3-1.1ubuntu3.6_changelog": {
+   "bytes": 177925,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "cbe4e9243576ff3a66c091ea89809ab9ad471bd96dd4a6f05edc29e672c274ec",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/g/gnutls28/gnutls28_3.8.3-1.1ubuntu3.6/changelog"
+  },
+  "raw/haproxy/2.4.30-0ubuntu0.22.04.1_changelog": {
+   "bytes": 98815,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "24debf4522cb6fd4e399e2e34872272c06984c2acdf26a12d9bd14f26a6a0dbb",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/h/haproxy/haproxy_2.4.30-0ubuntu0.22.04.1/changelog"
+  },
+  "raw/haproxy/2.4.30-0ubuntu0.22.04.2_changelog": {
+   "bytes": 99375,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "1a68276ff28dbb5bdc9695ad8f8e9b7ca1ed1c84ce3e3220fef9a35ba2e6bf94",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/h/haproxy/haproxy_2.4.30-0ubuntu0.22.04.2/changelog"
+  },
+  "raw/haproxy/2.8.16-0ubuntu0.24.04.2_changelog": {
+   "bytes": 107576,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "61865d742c67fc4d4f857122e01e82d0be775a75205645bdb053f3ea74469e42",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/h/haproxy/haproxy_2.8.16-0ubuntu0.24.04.2/changelog"
+  },
+  "raw/haproxy/2.8.16-0ubuntu0.24.04.3_changelog": {
+   "bytes": 108136,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "19ff4f30a67725d0d4bd32c8f04452281ead88561fcc7f66dc6570b24bf69088",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/h/haproxy/haproxy_2.8.16-0ubuntu0.24.04.3/changelog"
+  },
+  "raw/libssh/0.10.6-2ubuntu0.4_changelog": {
+   "bytes": 34432,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "4269f6acff04c7c9939a13f6d8c345f6b304d3dc205ffac8dca3a3a2a638d4db",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/libs/libssh/libssh_0.10.6-2ubuntu0.4/changelog"
+  },
+  "raw/libssh/0.10.6-2ubuntu0.5_changelog": {
+   "bytes": 36586,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "2e98c2b43277dfe23cb0fae8634d927bded34a70134d4e346cac6cada817019d",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/libs/libssh/libssh_0.10.6-2ubuntu0.5/changelog"
+  },
+  "raw/libssh/0.9.6-2ubuntu0.22.04.7_changelog": {
+   "bytes": 32318,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "ac8a04b7e7ecdf38c60281be6ce86b7121c861d4cdb0456caf49abd44bed99ef",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/libs/libssh/libssh_0.9.6-2ubuntu0.22.04.7/changelog"
+  },
+  "raw/libssh/0.9.6-2ubuntu0.22.04.8_changelog": {
+   "bytes": 34477,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "ff4994cd2dcca46fe4455662acbdea6abb366abf3262f29bbea7c225b015c56f",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/libs/libssh/libssh_0.9.6-2ubuntu0.22.04.8/changelog"
+  },
+  "raw/libwebp/1.2.2-2ubuntu0.22.04.1_changelog": {
+   "bytes": 8648,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "02cc4588c720cbb28b97f4b46959bc47013ac14b97953462f06c33c44b11cb5f",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/libw/libwebp/libwebp_1.2.2-2ubuntu0.22.04.1/changelog"
+  },
+  "raw/libwebp/1.2.2-2ubuntu0.22.04.2_changelog": {
+   "bytes": 9069,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "fce56ab90a1f4603099dba515fc343b34ba152bbd6bdd0ca39dbcdfcf80ba0b1",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/libw/libwebp/libwebp_1.2.2-2ubuntu0.22.04.2/changelog"
+  },
+  "raw/libwebp/1.3.2-0.4build3_changelog": {
+   "bytes": 14054,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "9ec3b892e5ca01fdd054cbfadf7b35480a42fc36c2be15413c5b85d1447d7b14",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/libw/libwebp/libwebp_1.3.2-0.4build3/changelog"
+  },
+  "raw/libxml2/2.9.13+dfsg-1ubuntu0.11_changelog": {
+   "bytes": 89372,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "04c88dc14b6185c5bc7505a798d97acd174011fd490d307545cc048166cb60d4",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/libx/libxml2/libxml2_2.9.13+dfsg-1ubuntu0.11/changelog"
+  },
+  "raw/libxml2/2.9.13+dfsg-1ubuntu0.13_changelog": {
+   "bytes": 90376,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "36676949a98ca9137fb080a42af8320672ce0c61be86afab9a86987d0142f85d",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/libx/libxml2/libxml2_2.9.13+dfsg-1ubuntu0.13/changelog"
+  },
+  "raw/libxml2/2.9.13+dfsg-1ubuntu0.5_changelog": {
+   "bytes": 85086,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "ea449028c50827f5c9fba98bab9c48e1b9ea3fb18acae4b52ad1f2d16b57d7e0",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/libx/libxml2/libxml2_2.9.13+dfsg-1ubuntu0.5/changelog"
+  },
+  "raw/libxml2/2.9.14+dfsg-1.3ubuntu3.1_changelog": {
+   "bytes": 85410,
+   "retrieved_at": "2026-10-05T15:49:12Z",
+   "sha256": "935b3a52ec531acef7cde54b36dd1b169f5bc58ac47bbd08ec472382370007be",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/libx/libxml2/libxml2_2.9.14+dfsg-1.3ubuntu3.1/changelog"
+  },
+  "raw/libxml2/2.9.14+dfsg-1.3ubuntu3.7_changelog": {
+   "bytes": 89706,
+   "retrieved_at": "2026-10-05T15:49:22Z",
+   "sha256": "9acbd2e2b26f5f764f45c1f9cb32c7f024ad7136dcb0575f92039a0359d8b025",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/libx/libxml2/libxml2_2.9.14+dfsg-1.3ubuntu3.7/changelog"
+  },
+  "raw/libxml2/2.9.14+dfsg-1.3ubuntu3.9_changelog": {
+   "bytes": 90712,
+   "retrieved_at": "2026-10-05T15:49:22Z",
+   "sha256": "ff85e6c60ceba381e9ca391c27e62e318d5ed02fc780168ccd1fe13b3f06fff3",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/libx/libxml2/libxml2_2.9.14+dfsg-1.3ubuntu3.9/changelog"
+  },
+  "raw/memcached/1.6.14-1ubuntu0.2_changelog": {
+   "bytes": 28537,
+   "retrieved_at": "2026-10-05T15:49:22Z",
+   "sha256": "d823f44c75b717f7dabdaa541271fcc212fa7fc1a193273e92cb98acaee941fd",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/m/memcached/memcached_1.6.14-1ubuntu0.2/changelog"
+  },
+  "raw/memcached/1.6.14-1ubuntu0.3_changelog": {
+   "bytes": 29151,
+   "retrieved_at": "2026-10-05T15:49:22Z",
+   "sha256": "df4de7e4ae85169b9ceae22e81f1f44a286c01d5165e5f300a9c707c669ba678",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/m/memcached/memcached_1.6.14-1ubuntu0.3/changelog"
+  },
+  "raw/memcached/1.6.24-1ubuntu0.2_changelog": {
+   "bytes": 31551,
+   "retrieved_at": "2026-10-05T15:49:22Z",
+   "sha256": "f0941c9887abd3747b26b355eea6b890169efe2d8c12a67a33fd1504f25958b8",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/m/memcached/memcached_1.6.24-1ubuntu0.2/changelog"
+  },
+  "raw/memcached/1.6.24-1ubuntu0.3_changelog": {
+   "bytes": 32165,
+   "retrieved_at": "2026-10-05T15:49:22Z",
+   "sha256": "f2a30ca07474eddfaf5963b50fe2b103c1aa1ea8c51e1dc9a48ebb0e04e5b46b",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/m/memcached/memcached_1.6.24-1ubuntu0.3/changelog"
+  },
+  "raw/nginx/1.18.0-6ubuntu14.20_changelog": {
+   "bytes": 162332,
+   "retrieved_at": "2026-10-05T15:49:22Z",
+   "sha256": "818cab131bd4a6cb037cdc6cf10af85076c1ed1ea657bb1f9c3786bcae1ce404",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/n/nginx/nginx_1.18.0-6ubuntu14.20/changelog"
+  },
+  "raw/nginx/1.18.0-6ubuntu14.21_changelog": {
+   "bytes": 163192,
+   "retrieved_at": "2026-10-05T15:49:22Z",
+   "sha256": "a5aeb21473ef8c246e748e64dac94fc5ba869614fa94ad180d3ed43268c956f5",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/universe/n/nginx/nginx_1.18.0-6ubuntu14.21/changelog"
+  },
+  "raw/nginx/1.18.0-6ubuntu14.2_changelog": {
+   "bytes": 151820,
+   "retrieved_at": "2026-10-05T15:49:22Z",
+   "sha256": "f84bcca4c85d1982d51b546f0b91fde320dc2ffa5fc13929ac2de3bf70b1f5c1",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/universe/n/nginx/nginx_1.18.0-6ubuntu14.2/changelog"
+  },
+  "raw/nginx/1.18.0-6ubuntu14.4_changelog": {
+   "bytes": 152507,
+   "retrieved_at": "2026-10-05T15:49:22Z",
+   "sha256": "28a13ef0137b6268d8832b9912b93b9bf3067dad05ab05e3ce8146190bb620f5",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/universe/n/nginx/nginx_1.18.0-6ubuntu14.4/changelog"
+  },
+  "raw/nginx/1.18.0-6ubuntu14.5_changelog": {
+   "bytes": 152991,
+   "retrieved_at": "2026-10-05T15:49:22Z",
+   "sha256": "d6414b5481c0dbf4e227b870aec7416cfed53a485695770e246f141c728ed7fa",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/n/nginx/nginx_1.18.0-6ubuntu14.5/changelog"
+  },
+  "raw/nginx/1.24.0-2ubuntu7.17_changelog": {
+   "bytes": 193354,
+   "retrieved_at": "2026-10-05T15:49:26Z",
+   "sha256": "e56cfda24279c49949d3a24f1d6e43b0cd20945e5743465fc764c068a0195cd0",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/n/nginx/nginx_1.24.0-2ubuntu7.17/changelog"
+  },
+  "raw/nginx/1.24.0-2ubuntu7.18_changelog": {
+   "bytes": 194213,
+   "retrieved_at": "2026-10-05T15:49:26Z",
+   "sha256": "ea92efd324b787f4978949787171da58bf90310b30ba47a1c49d99aee4078cb2",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/n/nginx/nginx_1.24.0-2ubuntu7.18/changelog"
+  },
+  "raw/nginx/1.24.0-2ubuntu7.1_changelog": {
+   "bytes": 183400,
+   "retrieved_at": "2026-10-05T15:49:22Z",
+   "sha256": "ce99b5e8fe39cef09e09e02eb417909776fb6df9fa3607d24cb59222e9930c82",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/n/nginx/nginx_1.24.0-2ubuntu7.1/changelog"
+  },
+  "raw/nginx/1.24.0-2ubuntu7_changelog": {
+   "bytes": 182917,
+   "retrieved_at": "2026-10-05T15:49:22Z",
+   "sha256": "3ff7650fec4c333a12146bb0eeb6115fb7ceaa38fe29d6be52c32974469f2c47",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/n/nginx/nginx_1.24.0-2ubuntu7/changelog"
+  },
+  "raw/openssh/8.9p1-3ubuntu0.10_changelog": {
+   "bytes": 325805,
+   "retrieved_at": "2026-10-05T15:49:26Z",
+   "sha256": "ebf004271c23aaa202c7289f593082029c73c96f486407122ae27272f0dd654d",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/o/openssh/openssh_8.9p1-3ubuntu0.10/changelog"
+  },
+  "raw/openssh/8.9p1-3ubuntu0.15_changelog": {
+   "bytes": 329070,
+   "retrieved_at": "2026-10-05T15:49:26Z",
+   "sha256": "fe1dfb610da2e3a035a3e550846c0ce3e849739b484d4b2af2ee259db6a788ba",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/o/openssh/openssh_8.9p1-3ubuntu0.15/changelog"
+  },
+  "raw/openssh/8.9p1-3ubuntu0.17_changelog": {
+   "bytes": 331915,
+   "retrieved_at": "2026-10-05T15:49:26Z",
+   "sha256": "c6dcf8f538b9fb0dc1ca3853e18f2ee8e294c5cff01c57cfb7bfd1ea5939bb45",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/o/openssh/openssh_8.9p1-3ubuntu0.17/changelog"
+  },
+  "raw/openssh/8.9p1-3ubuntu0.1_changelog": {
+   "bytes": 322802,
+   "retrieved_at": "2026-10-05T15:49:26Z",
+   "sha256": "62dbf8e25c2db58a68b6dc3285c1fcc3d76ae5b964729ba632490f896ae21be7",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/o/openssh/openssh_8.9p1-3ubuntu0.1/changelog"
+  },
+  "raw/openssh/8.9p1-3ubuntu0.4_changelog": {
+   "bytes": 323875,
+   "retrieved_at": "2026-10-05T15:49:26Z",
+   "sha256": "2be7ea9ea2ac242ab8de4b5317e21717fecceb038d2d6c48ae94fa23c374e2c4",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/o/openssh/openssh_8.9p1-3ubuntu0.4/changelog"
+  },
+  "raw/openssh/8.9p1-3ubuntu0.7_changelog": {
+   "bytes": 325464,
+   "retrieved_at": "2026-10-05T15:49:26Z",
+   "sha256": "5d63fbc4c96b0e41355b6ea75faedb4aa817b999d930eb235e8450ee046c86ca",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/o/openssh/openssh_8.9p1-3ubuntu0.7/changelog"
+  },
+  "raw/openssh/9.6p1-3ubuntu13.16_changelog": {
+   "bytes": 382484,
+   "retrieved_at": "2026-10-05T15:49:28Z",
+   "sha256": "88c306fea9d60faaba8c013e2198443de790c9a4069e7f6b45b3daa51c629d0f",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/o/openssh/openssh_9.6p1-3ubuntu13.16/changelog"
+  },
+  "raw/openssh/9.6p1-3ubuntu13.19_changelog": {
+   "bytes": 385566,
+   "retrieved_at": "2026-10-05T15:49:28Z",
+   "sha256": "f98c83091943b8b1d007be0e9828f72fb1774fcdd521104b7081deb9f3d2d3a4",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/o/openssh/openssh_9.6p1-3ubuntu13.19/changelog"
+  },
+  "raw/openssh/9.6p1-3ubuntu13.7_changelog": {
+   "bytes": 378851,
+   "retrieved_at": "2026-10-05T15:49:28Z",
+   "sha256": "f87b7b1534bd53d62a11b5e1bc2b1e0de44ca5ac65689c5c50dfc240f62541c2",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/o/openssh/openssh_9.6p1-3ubuntu13.7/changelog"
+  },
+  "raw/openssh/9.6p1-3ubuntu13_changelog": {
+   "bytes": 376759,
+   "retrieved_at": "2026-10-05T15:49:26Z",
+   "sha256": "769f136859a7b736362c9d4190f7d9a76ae9a6bc64abec6eda2cb1f657f0e636",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/o/openssh/openssh_9.6p1-3ubuntu13/changelog"
+  },
+  "raw/openssl/3.0.13-0ubuntu3.12_changelog": {
+   "bytes": 151219,
+   "retrieved_at": "2026-10-05T15:49:28Z",
+   "sha256": "22ca43ae879807161c3dc45a6cf026b0425c1f58bd857d945495fd6fdfe82064",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/o/openssl/openssl_3.0.13-0ubuntu3.12/changelog"
+  },
+  "raw/openssl/3.0.13-0ubuntu3.16_changelog": {
+   "bytes": 156015,
+   "retrieved_at": "2026-10-05T15:49:28Z",
+   "sha256": "7c6321aaebfad406d0b29dfe993494d79dde456b48fbbed6ad2f84d92b26a0b2",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/o/openssl/openssl_3.0.13-0ubuntu3.16/changelog"
+  },
+  "raw/openssl/3.0.2-0ubuntu1.13_changelog": {
+   "bytes": 124508,
+   "retrieved_at": "2026-10-05T15:49:28Z",
+   "sha256": "4dc712a853c4c767077158dba682645b648450e5099f707b84da2d64d470946e",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/o/openssl/openssl_3.0.2-0ubuntu1.13/changelog"
+  },
+  "raw/openssl/3.0.2-0ubuntu1.26_changelog": {
+   "bytes": 138685,
+   "retrieved_at": "2026-10-05T15:49:28Z",
+   "sha256": "22691be5b4e4d278238076682e87af91723f5fa8e93c5ef8f100b36a3a0b8ae9",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/o/openssl/openssl_3.0.2-0ubuntu1.26/changelog"
+  },
+  "raw/openssl/3.0.2-0ubuntu1.30_changelog": {
+   "bytes": 143290,
+   "retrieved_at": "2026-10-05T15:49:28Z",
+   "sha256": "0e52efea55c1a0a19dc79587a318fc8cfd7812a84ea9992bcc340e05c08fdd60",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/o/openssl/openssl_3.0.2-0ubuntu1.30/changelog"
+  },
+  "raw/perl/5.34.0-3ubuntu1.2_changelog": {
+   "bytes": 220253,
+   "retrieved_at": "2026-10-05T15:49:28Z",
+   "sha256": "917617dbdaebaa477e44e2e2596a35962e8f064d8045199d0017256451b1ba2c",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/p/perl/perl_5.34.0-3ubuntu1.2/changelog"
+  },
+  "raw/perl/5.34.0-3ubuntu1.7_changelog": {
+   "bytes": 223651,
+   "retrieved_at": "2026-10-05T15:49:28Z",
+   "sha256": "952a820e10aa62e12a41d4eb818060ae72eccc025ea7db75237021b30e988901",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/p/perl/perl_5.34.0-3ubuntu1.7/changelog"
+  },
+  "raw/perl/5.34.0-3ubuntu1.9_changelog": {
+   "bytes": 225574,
+   "retrieved_at": "2026-10-05T15:49:28Z",
+   "sha256": "5766b368db57a2e65829613d505611afc9a587b7525f2d54fc31f5069165a558",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/p/perl/perl_5.34.0-3ubuntu1.9/changelog"
+  },
+  "raw/perl/5.38.2-3.2ubuntu0.3_changelog": {
+   "bytes": 225894,
+   "retrieved_at": "2026-10-05T15:49:28Z",
+   "sha256": "9c32928273a461cc87c2ced8aea5f79d2152e203fc7c9dde1b7d543266adae36",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/p/perl/perl_5.38.2-3.2ubuntu0.3/changelog"
+  },
+  "raw/perl/5.38.2-3.2ubuntu0.6_changelog": {
+   "bytes": 229359,
+   "retrieved_at": "2026-10-05T15:49:29Z",
+   "sha256": "182eae610bd7e1ba03493ca1c2364b2c469578f8db48ac598dd35f3055da8fd7",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/p/perl/perl_5.38.2-3.2ubuntu0.6/changelog"
+  },
+  "raw/postgresql-14/14.18-0ubuntu0.22.04.1_changelog": {
+   "bytes": 32990,
+   "retrieved_at": "2026-10-05T15:49:29Z",
+   "sha256": "efb225f90a140e9937e7e529ff76528170a6292bc25952fa4df2f3cc685c9b7e",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/p/postgresql-14/postgresql-14_14.18-0ubuntu0.22.04.1/changelog"
+  },
+  "raw/postgresql-14/14.24-0ubuntu0.22.04.1_changelog": {
+   "bytes": 57033,
+   "retrieved_at": "2026-10-05T15:49:29Z",
+   "sha256": "5e94763c5b99c851f7caf15d164239db630cce0e1cdc87e12fc6380401ba3300",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/p/postgresql-14/postgresql-14_14.24-0ubuntu0.22.04.1/changelog"
+  },
+  "raw/redis/6.0.16-1ubuntu1.1_changelog": {
+   "bytes": 66251,
+   "retrieved_at": "2026-10-05T15:49:29Z",
+   "sha256": "5f4d531e12f421e359c1c10078559ce2439d40796e0ccd209f9b14ea5abb00d0",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/universe/r/redis/redis_6.0.16-1ubuntu1.1/changelog"
+  },
+  "raw/redis/6.0.16-1ubuntu1_changelog": {
+   "bytes": 65904,
+   "retrieved_at": "2026-10-05T15:49:29Z",
+   "sha256": "7d4c3d6c201d6feea60724660721469eda5a432d8a67c501c3db43345011c0b3",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/universe/r/redis/redis_6.0.16-1ubuntu1/changelog"
+  },
+  "raw/redis/7.0.15-1build2_changelog": {
+   "bytes": 74064,
+   "retrieved_at": "2026-10-05T15:49:30Z",
+   "sha256": "578c38a78c0039deb688e5f70ca38f6c3f1b5618a0eeab2d8b4e04e5580fdfb9",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/universe/r/redis/redis_7.0.15-1build2/changelog"
+  },
+  "raw/redis/7.0.15-1ubuntu0.24.04.4_changelog": {
+   "bytes": 75771,
+   "retrieved_at": "2026-10-05T15:49:30Z",
+   "sha256": "966f8c40983b24db79bf7381c3602f37fc9822a0358457808ace52cf8c51f05b",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/universe/r/redis/redis_7.0.15-1ubuntu0.24.04.4/changelog"
+  },
+  "raw/rsync/3.2.7-0ubuntu0.22.04.4_changelog": {
+   "bytes": 57762,
+   "retrieved_at": "2026-10-05T15:49:30Z",
+   "sha256": "3517e476b895bad7a6289b91e0d91834111202b269417c4706af117f2a5ecae3",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/r/rsync/rsync_3.2.7-0ubuntu0.22.04.4/changelog"
+  },
+  "raw/rsync/3.2.7-0ubuntu0.22.04.7_changelog": {
+   "bytes": 58747,
+   "retrieved_at": "2026-10-05T15:49:30Z",
+   "sha256": "81525d9af48f568d59ce7990f3ac4b9945dc762ae51165dfb1762807e349d0bb",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/r/rsync/rsync_3.2.7-0ubuntu0.22.04.7/changelog"
+  },
+  "raw/rsync/3.2.7-1ubuntu1.2_changelog": {
+   "bytes": 59152,
+   "retrieved_at": "2026-10-05T15:49:30Z",
+   "sha256": "c0beb138ed32fa6f82cd7d41d0f9915f318750b1718b057a83a75b05b6377335",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/r/rsync/rsync_3.2.7-1ubuntu1.2/changelog"
+  },
+  "raw/rsync/3.2.7-1ubuntu1.5_changelog": {
+   "bytes": 60219,
+   "retrieved_at": "2026-10-05T15:49:31Z",
+   "sha256": "b1a4f45d60fcb6201bcba332d10dfccb517276d0c34a56bec03f4d7db59320db",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/r/rsync/rsync_3.2.7-1ubuntu1.5/changelog"
+  },
+  "raw/samba/4.15.13+dfsg-0ubuntu1.10_changelog": {
+   "bytes": 448638,
+   "retrieved_at": "2026-10-05T15:49:31Z",
+   "sha256": "e6ac10e17c3f3ad3ed3c0f085fb6b47b458d04fa8b6af6c4e9b79b57a0568514",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/s/samba/samba_4.15.13+dfsg-0ubuntu1.10/changelog"
+  },
+  "raw/samba/4.15.13+dfsg-0ubuntu1.13_changelog": {
+   "bytes": 450420,
+   "retrieved_at": "2026-10-05T15:49:31Z",
+   "sha256": "77149279e7570541d209256d331f6a6136d72e99fa6dae128e3dccd304977e7d",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/s/samba/samba_4.15.13+dfsg-0ubuntu1.13/changelog"
+  },
+  "raw/samba/4.15.13+dfsg-0ubuntu1.4_changelog": {
+   "bytes": 444927,
+   "retrieved_at": "2026-10-05T15:49:31Z",
+   "sha256": "61401b23f2825b095ecd50508693728bb9ba7ab7051c2f8cfc367b67a2abe8a9",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/s/samba/samba_4.15.13+dfsg-0ubuntu1.4/changelog"
+  },
+  "raw/samba/4.19.5+dfsg-4ubuntu9.4_changelog": {
+   "bytes": 542250,
+   "retrieved_at": "2026-10-05T15:49:32Z",
+   "sha256": "605992119ddef464fc5c220811ea49d9aea5735bdcbd723218e9e574a1799a65",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/s/samba/samba_4.19.5+dfsg-4ubuntu9.4/changelog"
+  },
+  "raw/samba/4.19.5+dfsg-4ubuntu9.7_changelog": {
+   "bytes": 543967,
+   "retrieved_at": "2026-10-05T15:49:32Z",
+   "sha256": "f1e93b18f3ebe7c71729709b237b1cd88448bb885eb62205c57d45c61d1fe9f0",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/s/samba/samba_4.19.5+dfsg-4ubuntu9.7/changelog"
+  },
+  "raw/sqlite3/3.37.2-2ubuntu0.1_changelog": {
+   "bytes": 55103,
+   "retrieved_at": "2026-10-05T15:49:32Z",
+   "sha256": "795c4119c5986746d933e46a7061558ed3bc6b8195e46219276bba44a6415976",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/s/sqlite3/sqlite3_3.37.2-2ubuntu0.1/changelog"
+  },
+  "raw/sqlite3/3.37.2-2ubuntu0.6_changelog": {
+   "bytes": 56909,
+   "retrieved_at": "2026-10-05T15:49:32Z",
+   "sha256": "d7a938627a4868215f1246ebaf5a241769a260fe89a3d22eda33a91ef5f75558",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/s/sqlite3/sqlite3_3.37.2-2ubuntu0.6/changelog"
+  },
+  "raw/sqlite3/3.37.2-2ubuntu0.8_changelog": {
+   "bytes": 58239,
+   "retrieved_at": "2026-10-05T15:49:32Z",
+   "sha256": "7bb50eebeeae0e6b6948d5380d31413c05bdb971033398499a85218a696565ee",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/s/sqlite3/sqlite3_3.37.2-2ubuntu0.8/changelog"
+  },
+  "raw/sqlite3/3.45.1-1ubuntu2.6_changelog": {
+   "bytes": 62398,
+   "retrieved_at": "2026-10-05T15:49:33Z",
+   "sha256": "7ac0bd0a0d65eb98d2a4a53943a6d6ff8a406d00a6afd0c64da799f2a593aae9",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/s/sqlite3/sqlite3_3.45.1-1ubuntu2.6/changelog"
+  },
+  "raw/sqlite3/3.45.1-1ubuntu2.8_changelog": {
+   "bytes": 63728,
+   "retrieved_at": "2026-10-05T15:49:33Z",
+   "sha256": "0006f9f62bb8b95b673991cbeb230b337f285a9efd05380d08cee5f81e287a7c",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/s/sqlite3/sqlite3_3.45.1-1ubuntu2.8/changelog"
+  },
+  "raw/squid/5.9-0ubuntu0.22.04.5_changelog": {
+   "bytes": 103974,
+   "retrieved_at": "2026-10-05T15:49:33Z",
+   "sha256": "b5271210c63a94f72803a881697294e2e609571b4b72c4731e92f628e09bb28f",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/s/squid/squid_5.9-0ubuntu0.22.04.5/changelog"
+  },
+  "raw/squid/5.9-0ubuntu0.22.04.7_changelog": {
+   "bytes": 104686,
+   "retrieved_at": "2026-10-05T15:49:33Z",
+   "sha256": "97cf9d6cad9432662b3dcbb857be2c2ed02a992e921164cf081d0bc3c741706c",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/s/squid/squid_5.9-0ubuntu0.22.04.7/changelog"
+  },
+  "raw/squid/6.14-0ubuntu0.24.04.2_changelog": {
+   "bytes": 117368,
+   "retrieved_at": "2026-10-05T15:49:33Z",
+   "sha256": "79ac0adf65f09d31c2e951792e0466153ddaa4174107a7b303138ce0237757eb",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/s/squid/squid_6.14-0ubuntu0.24.04.2/changelog"
+  },
+  "raw/squid/6.14-0ubuntu0.24.04.4_changelog": {
+   "bytes": 118081,
+   "retrieved_at": "2026-10-05T15:49:33Z",
+   "sha256": "138e91c7c7e393a655e6d862587a951ffbf57a8a5724649c1e88161595ac0d0c",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/s/squid/squid_6.14-0ubuntu0.24.04.4/changelog"
+  },
+  "raw/sudo/1.9.15p5-3ubuntu5.24.04.3_changelog": {
+   "bytes": 118734,
+   "retrieved_at": "2026-10-05T15:49:34Z",
+   "sha256": "4797a7782af4e03afee2cc052a282883f6835aeba046ee4558abab03e12b4d2a",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/s/sudo/sudo_1.9.15p5-3ubuntu5.24.04.3/changelog"
+  },
+  "raw/sudo/1.9.15p5-3ubuntu5_changelog": {
+   "bytes": 116908,
+   "retrieved_at": "2026-10-05T15:49:34Z",
+   "sha256": "538c68d82f399f95e668be968b719061432f949c0849fc596696468cf123b7bd",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/s/sudo/sudo_1.9.15p5-3ubuntu5/changelog"
+  },
+  "raw/sudo/1.9.9-1ubuntu2.4_changelog": {
+   "bytes": 102631,
+   "retrieved_at": "2026-10-05T15:49:34Z",
+   "sha256": "0519b9ea4da99a8d33365f172bf09aded89d71934e618e4e53725bb739426432",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/s/sudo/sudo_1.9.9-1ubuntu2.4/changelog"
+  },
+  "raw/sudo/1.9.9-1ubuntu2.6_changelog": {
+   "bytes": 103487,
+   "retrieved_at": "2026-10-05T15:49:34Z",
+   "sha256": "63d88f8d2307dc708ed1059c891ac3de2f993cf3901bc9e9bfa54d088e7dc845",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/s/sudo/sudo_1.9.9-1ubuntu2.6/changelog"
+  },
+  "raw/unbound/1.13.1-1ubuntu5.14_changelog": {
+   "bytes": 34311,
+   "retrieved_at": "2026-10-05T15:49:34Z",
+   "sha256": "827aca1bf3e03bdb2fb62740e2cad82ca2cab736eb9d65db2ba1936b63070777",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/universe/u/unbound/unbound_1.13.1-1ubuntu5.14/changelog"
+  },
+  "raw/unbound/1.13.1-1ubuntu5.15_changelog": {
+   "bytes": 35942,
+   "retrieved_at": "2026-10-05T15:49:35Z",
+   "sha256": "88ca25c475693ffba34a29334c61dfb26f9be238ef0ce80d2c6b58c8a53887f1",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/universe/u/unbound/unbound_1.13.1-1ubuntu5.15/changelog"
+  },
+  "raw/unbound/1.19.2-1ubuntu3.7_changelog": {
+   "bytes": 50689,
+   "retrieved_at": "2026-10-05T15:49:35Z",
+   "sha256": "1cf6fc8c7f94347831cb577fb85d2891839dc3021ecb80aa64e33a780b2db3e7",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/universe/u/unbound/unbound_1.19.2-1ubuntu3.7/changelog"
+  },
+  "raw/unbound/1.19.2-1ubuntu3.9_changelog": {
+   "bytes": 53455,
+   "retrieved_at": "2026-10-05T15:49:35Z",
+   "sha256": "14d66dd684d238a33ed894a3d7d47db27479bdb94c6f32424b6e15040a5c1d0e",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/universe/u/unbound/unbound_1.19.2-1ubuntu3.9/changelog"
+  },
+  "raw/vim/8.2.3995-1ubuntu2.30_changelog": {
+   "bytes": 424546,
+   "retrieved_at": "2026-10-05T15:49:39Z",
+   "sha256": "f6f75af89df6ca65f604056e345acd8214ffdb7104c0960b2d6c2dad36a53cfb",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/v/vim/vim_8.2.3995-1ubuntu2.30/changelog"
+  },
+  "raw/vim/8.2.3995-1ubuntu2.36_changelog": {
+   "bytes": 430611,
+   "retrieved_at": "2026-10-05T15:49:40Z",
+   "sha256": "a68fc5eb4aede8186bb1b5972b84e1b439a6a88bfce2eca1dad3cfd2cd3e401f",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/v/vim/vim_8.2.3995-1ubuntu2.36/changelog"
+  },
+  "raw/vim/8.2.3995-1ubuntu2.3_changelog": {
+   "bytes": 393792,
+   "retrieved_at": "2026-10-05T15:49:39Z",
+   "sha256": "f1dbd55f602d9aa562bc9cefeb1cebcaba3fa5ad300eecc9bc545d6d9563def4",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/v/vim/vim_8.2.3995-1ubuntu2.3/changelog"
+  },
+  "raw/vim/9.1.0016-1ubuntu7.14_changelog": {
+   "bytes": 436141,
+   "retrieved_at": "2026-10-05T15:49:40Z",
+   "sha256": "6627f7598af2e0bcad6d474e8300f125f03940a5f52b5a9fe0fddfb10fee9423",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/v/vim/vim_9.1.0016-1ubuntu7.14/changelog"
+  },
+  "raw/vim/9.1.0016-1ubuntu7.20_changelog": {
+   "bytes": 442034,
+   "retrieved_at": "2026-10-05T15:49:40Z",
+   "sha256": "68b0152a253b3dbac7b320816e16c41f95ce1dfd7dd20c7d7b878cfbee545130",
+   "url": "https://changelogs.ubuntu.com/changelogs/pool/main/v/vim/vim_9.1.0016-1ubuntu7.20/changelog"
+  }
+ },
+ "license": "changelogs.ubuntu.com Debian changelogs (package metadata, per-package license)",
+ "n_files": 136,
+ "snapshot_date": "2026-10-05",
+ "source": "ubuntu_changelogs"
+}

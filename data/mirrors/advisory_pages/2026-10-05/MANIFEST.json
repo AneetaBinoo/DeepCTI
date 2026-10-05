@@ -1,0 +1,176 @@
+{
+ "files": {
+  "raw/ghsa_aiohttp_GHSA-5h86-8mv2-jq9f.json": {
+   "bytes": 7468,
+   "retrieved_at": "2026-10-05T15:25:39Z",
+   "sha256": "5c05569084d4f1df2f372192442704392a91b71dc03a1c27cfbd64494a61ed64",
+   "url": "https://api.github.com/advisories/GHSA-5h86-8mv2-jq9f"
+  },
+  "raw/ghsa_h2_GHSA-h376-j262-vhq6.json": {
+   "bytes": 3580,
+   "retrieved_at": "2026-10-05T15:25:39Z",
+   "sha256": "47971df645ff27bb421e2416be6e708cf019c546cefb7c0d72e4de9bf238c90d",
+   "url": "https://api.github.com/advisories/GHSA-h376-j262-vhq6"
+  },
+  "raw/ghsa_logback_GHSA-vmq6-5m68-f53m.json": {
+   "bytes": 9892,
+   "retrieved_at": "2026-10-05T15:33:07Z",
+   "sha256": "5bb8b3d00f10ecae6adfa67de57a3425086ce419546d8cbf8290fd09e6bd9f28",
+   "url": "https://api.github.com/advisories/GHSA-vmq6-5m68-f53m"
+  },
+  "raw/ghsa_pgjdbc_GHSA-24rp-q3w6-vc56.json": {
+   "bytes": 6200,
+   "retrieved_at": "2026-10-05T15:25:39Z",
+   "sha256": "1867124f6dba58bd1dac6cf4a5546c2627ce48820c0e8089f8d0b163f5275f35",
+   "url": "https://api.github.com/advisories/GHSA-24rp-q3w6-vc56"
+  },
+  "raw/ghsa_waitress_GHSA-9298-4cf8-g4wj.json": {
+   "bytes": 5278,
+   "retrieved_at": "2026-10-05T15:25:39Z",
+   "sha256": "407edda3f827fcb943fc730e3bedaa23c068735d5d2e16dfaf4e4b6dea17ca71",
+   "url": "https://api.github.com/advisories/GHSA-9298-4cf8-g4wj"
+  },
+  "raw/ghsa_werkzeug_GHSA-2g68-c3qc-8985.json": {
+   "bytes": 3435,
+   "retrieved_at": "2026-10-05T15:25:39Z",
+   "sha256": "cc08d58a9ad0efad187435d60e99cd357e0006ba252770efaed62e1e936a3f55",
+   "url": "https://api.github.com/advisories/GHSA-2g68-c3qc-8985"
+  },
+  "raw/httpd_vulnerabilities_24.html": {
+   "bytes": 205075,
+   "retrieved_at": "2026-10-05T15:23:30Z",
+   "sha256": "3edeb2dde2f2207cede2f2994dd55fcf8697638275671c4bd113d1ab88175cfd",
+   "url": "https://httpd.apache.org/security/vulnerabilities_24.html"
+  },
+  "raw/log4j_security.html": {
+   "bytes": 107900,
+   "retrieved_at": "2026-10-05T15:25:39Z",
+   "sha256": "0312d5703e5b22a97d11de32ad56b36affc5b2c6fef867187071c98b43ce3caf",
+   "url": "https://logging.apache.org/security.html"
+  },
+  "raw/log4j_security_wayback_20211211.html": {
+   "bytes": 26485,
+   "retrieved_at": "2026-10-05T15:26:50Z",
+   "sha256": "e61847daa611457d8988799e37af1f184bc94a00469b25859e6b7bcf95b176d9",
+   "url": "http://web.archive.org/web/20211211235935/https://logging.apache.org/log4j/2.x/security.html"
+  },
+  "raw/logback_news.html": {
+   "bytes": 71814,
+   "retrieved_at": "2026-10-05T15:25:39Z",
+   "sha256": "08d4b2fb6ef8de692b75e4709206d3b8d6adea113cc5784d56c537c03e5128d0",
+   "url": "https://logback.qos.ch/news.html"
+  },
+  "raw/nginx_announce_2022_mp4.html": {
+   "bytes": 3920,
+   "retrieved_at": "2026-10-05T15:26:16Z",
+   "sha256": "9cffc8f6a63b8a051d55ccdc4857c1cf0f097b1ea3f894ed399e26b8cc4b8fd0",
+   "url": "https://mailman.nginx.org/pipermail/nginx-announce/2022/RBRRON6PYBJJM2XIAPQBFBVLR4Q6IHRA.html"
+  },
+  "raw/nginx_announce_2024_mp4.html": {
+   "bytes": 121,
+   "retrieved_at": "2026-10-05T15:23:30Z",
+   "sha256": "5c5d1c2c9817addad080d92217370885c46e9f16f60b5268d6d50f5747c8c67f",
+   "url": "https://mailman.nginx.org/pipermail/nginx-announce/2024/NYEAGPZBKC32XNX2QP3IBZV6S2BJ7BRN.html"
+  },
+  "raw/nginx_announce_2024_mp4b.html": {
+   "bytes": 3494,
+   "retrieved_at": "2026-10-05T15:26:16Z",
+   "sha256": "1d76bae3d4eeb37f45e9c7ceb179bf3781c3464cdd1613201f81ca21402b3d66",
+   "url": "https://mailman.nginx.org/pipermail/nginx-announce/2024/UUOCLLONPR6244YQYU65PO5LB7JDYCWM.html"
+  },
+  "raw/nginx_security_advisories.html": {
+   "bytes": 23815,
+   "retrieved_at": "2026-10-05T15:23:30Z",
+   "sha256": "1e4c842d6de1ec2cd7aff7f0fcb4936cbf760523129eeef5dceb0c274d3d92f9",
+   "url": "https://nginx.org/en/security_advisories.html"
+  },
+  "raw/openssh_release-10.1.txt": {
+   "bytes": 12979,
+   "retrieved_at": "2026-10-05T15:23:30Z",
+   "sha256": "2e35677590699e026ed00096f4cb8e67da8cbc7f4b117eecfd777663e7e10f0d",
+   "url": "https://www.openssh.com/txt/release-10.1"
+  },
+  "raw/openssh_release-9.3p2.txt": {
+   "bytes": 2592,
+   "retrieved_at": "2026-10-05T15:23:30Z",
+   "sha256": "14f311a2173a7caec8e99664c515c7ac746e75845dc21e4596f228c09a67152f",
+   "url": "https://www.openssh.com/txt/release-9.3p2"
+  },
+  "raw/redhat_CVE-2021-4104.html": {
+   "bytes": 381257,
+   "retrieved_at": "2026-10-05T15:25:39Z",
+   "sha256": "118331f1fc5287d96eda144e3a5788128a9bac9e929da347b279a08be2657a69",
+   "url": "https://access.redhat.com/security/cve/CVE-2021-4104"
+  },
+  "raw/samba_CVE-2025-10230.html": {
+   "bytes": 3609,
+   "retrieved_at": "2026-10-05T15:25:39Z",
+   "sha256": "5ba8380d2c449c67420a829c361851aca88f1967924b05ad4bce171a0b61193e",
+   "url": "https://www.samba.org/samba/security/CVE-2025-10230.html"
+  },
+  "raw/shiro_security_reports.html": {
+   "bytes": 35308,
+   "retrieved_at": "2026-10-05T15:25:39Z",
+   "sha256": "27f8548fc7625c19c6a8191f2644939d19aee4320580bfe6843c59fc4f2ed923",
+   "url": "https://shiro.apache.org/security-reports.html"
+  },
+  "raw/spring_cve-2022-22947.html": {
+   "bytes": 399519,
+   "retrieved_at": "2026-10-05T15:25:39Z",
+   "sha256": "d8c252f862819b78c4196f4f5dccbc0376563abec1be34b5227ad46d65bf36c7",
+   "url": "https://spring.io/security/cve-2022-22947"
+  },
+  "raw/spring_cve-2022-22965.html": {
+   "bytes": 399944,
+   "retrieved_at": "2026-10-05T15:25:39Z",
+   "sha256": "bc01509d8ad11ad345e814cc3a09c83c8888ceb91e4514b5404101b406e80599",
+   "url": "https://spring.io/security/cve-2022-22965"
+  },
+  "raw/struts_S2-057.html": {
+   "bytes": 55009,
+   "retrieved_at": "2026-10-05T15:25:39Z",
+   "sha256": "c94dab336b65fa00846ff12b2bc02f59e4fbf6ad9f9c4457ecaf01d8c5838eca",
+   "url": "https://cwiki.apache.org/confluence/display/WW/S2-057"
+  },
+  "raw/sudo_host_any.html": {
+   "bytes": 93164,
+   "retrieved_at": "2026-10-05T15:23:30Z",
+   "sha256": "a01a87738eaf97afbe665896ae582f7218280c06a5136922d8685e03f65c61f7",
+   "url": "https://www.sudo.ws/security/advisories/host_any/"
+  },
+  "raw/tomcat_security-10.html": {
+   "bytes": 121582,
+   "retrieved_at": "2026-10-05T15:25:39Z",
+   "sha256": "d13ad3359142968ac3b2d6e72ca9499cbea49196976b76d3f235f52e2ce25423",
+   "url": "https://tomcat.apache.org/security-10.html"
+  },
+  "raw/tomcat_security-11.html": {
+   "bytes": 84760,
+   "retrieved_at": "2026-10-05T15:25:39Z",
+   "sha256": "93ff775cdaf84b70037e380f3b7f834430da1efa25cda3490c82d3b103b78b16",
+   "url": "https://tomcat.apache.org/security-11.html"
+  },
+  "raw/tomcat_security-7.html": {
+   "bytes": 120923,
+   "retrieved_at": "2026-10-05T15:25:39Z",
+   "sha256": "4d9d3f2408275ec857cbd83256e835ce6e7e3e16ca09457ade5cb146728e599d",
+   "url": "https://tomcat.apache.org/security-7.html"
+  },
+  "raw/tomcat_security-8.html": {
+   "bytes": 142735,
+   "retrieved_at": "2026-10-05T15:25:39Z",
+   "sha256": "258f352a57276ed6538f0aee9253954fdf5906fbf533eca23a5f0be64b93956e",
+   "url": "https://tomcat.apache.org/security-8.html"
+  },
+  "raw/tomcat_security-9.html": {
+   "bytes": 171366,
+   "retrieved_at": "2026-10-05T15:25:39Z",
+   "sha256": "a565a93f27dbc4c48f2db63109b2af8fac786a074665ec5147d9b71844379829",
+   "url": "https://tomcat.apache.org/security-9.html"
+  }
+ },
+ "license": "Vendor advisory pages (fetched for verbatim quotes of configuration preconditions)",
+ "n_files": 28,
+ "snapshot_date": "2026-10-05",
+ "source": "advisory_pages"
+}

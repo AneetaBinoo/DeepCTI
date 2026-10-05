@@ -1,0 +1,116 @@
+{
+ "files": {
+  "raw/jammy/apache2_2.4.52-1ubuntu4.23_amd64.deb": {
+   "bytes": 97898,
+   "retrieved_at": "2026-10-05T15:32:00Z",
+   "sha256": "43780362eb783bfc77cf8df02c63bdd9b51b27467d120d626dc3bc305e3a8a20",
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/a/apache2/apache2_2.4.52-1ubuntu4.23_amd64.deb"
+  },
+  "raw/jammy/bind9_9.18.39-0ubuntu0.22.04.6_amd64.deb": {
+   "bytes": 264858,
+   "retrieved_at": "2026-10-05T15:32:00Z",
+   "sha256": "ae2d95582c6de7c9ca3e3ee19c2b01aa5003eb1c1cb3fe0c8c3f7189c358cd84",
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/b/bind9/bind9_9.18.39-0ubuntu0.22.04.6_amd64.deb"
+  },
+  "raw/jammy/exim4-config_4.95-4ubuntu2.12_all.deb": {
+   "bytes": 252114,
+   "retrieved_at": "2026-10-05T15:32:00Z",
+   "sha256": "e3289adfde7e3edcd6bc06fbd0e5b646e5a97bb89f96e582349260ebb2ddcef9",
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/e/exim4/exim4-config_4.95-4ubuntu2.12_all.deb"
+  },
+  "raw/jammy/nginx-common_1.18.0-6ubuntu14.21_all.deb": {
+   "bytes": 40516,
+   "retrieved_at": "2026-10-05T15:32:00Z",
+   "sha256": "7b35829e1896be123f8365c5c134e707978151ea292770e19335340b8bffa40c",
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/n/nginx/nginx-common_1.18.0-6ubuntu14.21_all.deb"
+  },
+  "raw/jammy/openssh-client_8.9p1-3ubuntu0.17_amd64.deb": {
+   "bytes": 904732,
+   "retrieved_at": "2026-10-05T15:32:00Z",
+   "sha256": "9ecaed1cff0d1858f5fa2a5c2f3fccedba875cf409bf4346ba919c30fca6718b",
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh-client_8.9p1-3ubuntu0.17_amd64.deb"
+  },
+  "raw/jammy/openssh-server_8.9p1-3ubuntu0.17_amd64.deb": {
+   "bytes": 435760,
+   "retrieved_at": "2026-10-05T15:31:59Z",
+   "sha256": "2baa4f236eebc486ec351ade604f1929286ede9ec3e2858a7206ddc412e3cbb6",
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh-server_8.9p1-3ubuntu0.17_amd64.deb"
+  },
+  "raw/jammy/samba-common_4.15.13+dfsg-0ubuntu1.13_all.deb": {
+   "bytes": 76316,
+   "retrieved_at": "2026-10-05T15:32:00Z",
+   "sha256": "bc664dcb852002c93bc193731ed4cec874b7be0e95af980ecbaab383975a57f3",
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/s/samba/samba-common_4.15.13+dfsg-0ubuntu1.13_all.deb"
+  },
+  "raw/jammy/samba_4.15.13+dfsg-0ubuntu1.13_amd64.deb": {
+   "bytes": 1193098,
+   "retrieved_at": "2026-10-05T15:32:00Z",
+   "sha256": "9fc7c4603e35cf3b22262fb72028c0c66c0d6ca8fdade71dfedbac1a99cff549",
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/s/samba/samba_4.15.13+dfsg-0ubuntu1.13_amd64.deb"
+  },
+  "raw/jammy/sudo_1.9.9-1ubuntu2.6_amd64.deb": {
+   "bytes": 820202,
+   "retrieved_at": "2026-10-05T15:32:00Z",
+   "sha256": "a6f151b3cee2dc09afc625330a7156d4c61ebb80aad9d447abb8806d26c428f2",
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.9.9-1ubuntu2.6_amd64.deb"
+  },
+  "raw/noble/apache2_2.4.58-1ubuntu8.15_amd64.deb": {
+   "bytes": 90240,
+   "retrieved_at": "2026-10-05T15:32:00Z",
+   "sha256": "19f54b814b9db6be3b730b46c729b9682343f01d64fd0f69bfc3d913f8e5cacd",
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/a/apache2/apache2_2.4.58-1ubuntu8.15_amd64.deb"
+  },
+  "raw/noble/bind9_9.18.39-0ubuntu0.24.04.7_amd64.deb": {
+   "bytes": 258002,
+   "retrieved_at": "2026-10-05T15:32:01Z",
+   "sha256": "dd3e9c99d36af2b24b9388547686f52e6cb43ccde25c99c77753da5cb9f70267",
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/b/bind9/bind9_9.18.39-0ubuntu0.24.04.7_amd64.deb"
+  },
+  "raw/noble/exim4-config_4.97-4ubuntu4.8_all.deb": {
+   "bytes": 259640,
+   "retrieved_at": "2026-10-05T15:32:01Z",
+   "sha256": "38590c920b55a0eceec2b78251411d9e22d77bdf4b6ea10864be3795eed74cff",
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/e/exim4/exim4-config_4.97-4ubuntu4.8_all.deb"
+  },
+  "raw/noble/nginx-common_1.24.0-2ubuntu7.18_all.deb": {
+   "bytes": 45076,
+   "retrieved_at": "2026-10-05T15:32:00Z",
+   "sha256": "70ccc3eff389c9f0f5edafeb9641f46c0e704f34d1936f80dcbac42c09c67963",
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/n/nginx/nginx-common_1.24.0-2ubuntu7.18_all.deb"
+  },
+  "raw/noble/openssh-client_9.6p1-3ubuntu13.19_amd64.deb": {
+   "bytes": 907922,
+   "retrieved_at": "2026-10-05T15:32:00Z",
+   "sha256": "c77365e50089a9be1ccc4cb28a586d7485b9d83798e67b8ad6636e53cc921649",
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh-client_9.6p1-3ubuntu13.19_amd64.deb"
+  },
+  "raw/noble/openssh-server_9.6p1-3ubuntu13.19_amd64.deb": {
+   "bytes": 511342,
+   "retrieved_at": "2026-10-05T15:32:00Z",
+   "sha256": "dae4c1ee35cc57555f4e594805845c280350e2d40f0fecf84c6e8bb245848581",
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh-server_9.6p1-3ubuntu13.19_amd64.deb"
+  },
+  "raw/noble/samba-common_4.19.5+dfsg-4ubuntu9.7_all.deb": {
+   "bytes": 65742,
+   "retrieved_at": "2026-10-05T15:32:00Z",
+   "sha256": "e544b4ed9157d9893c990a60c4680972146c4b0be62a8b06d14f1e334511df7d",
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/s/samba/samba-common_4.19.5+dfsg-4ubuntu9.7_all.deb"
+  },
+  "raw/noble/samba_4.19.5+dfsg-4ubuntu9.7_amd64.deb": {
+   "bytes": 1004544,
+   "retrieved_at": "2026-10-05T15:32:00Z",
+   "sha256": "a9a57d15acd2ad411c6682919266434e5630551259fd1155df0a1843f61a3684",
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/s/samba/samba_4.19.5+dfsg-4ubuntu9.7_amd64.deb"
+  },
+  "raw/noble/sudo_1.9.15p5-3ubuntu5.24.04.3_amd64.deb": {
+   "bytes": 948870,
+   "retrieved_at": "2026-10-05T15:32:01Z",
+   "sha256": "f0a64eab46d4a8881bba7b757de34aa0016870516813a50ccc08cdf67381a329",
+   "url": "http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.9.15p5-3ubuntu5.24.04.3_amd64.deb"
+  }
+ },
+ "license": "Ubuntu binary packages (only default configuration files are used in fixtures)",
+ "n_files": 18,
+ "snapshot_date": "2026-10-05",
+ "source": "ubuntu_debs"
+}

@@ -1,0 +1,9218 @@
+[
+ {
+  "sel": {
+   "cve": "CVE-2022-41741",
+   "src_package": "nginx",
+   "reason": "config",
+   "ecosystem": "deb-ubuntu",
+   "component": "nginx",
+   "published": "2022-10-19",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.00794,
+   "config_gated": true,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "1.18.0-6ubuntu14.2",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "1.18.0-6ubuntu14.21",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "jammy",
+    "variant": "V5",
+    "version": "1.18.0-6ubuntu14.2",
+    "version_source": "same-as-V2"
+   },
+   {
+    "release": "noble",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "python3-certbot-nginx"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "1.18.0-6ubuntu14.3",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:f5:nginx:*:*:*:*:open_source:*:*:*",
+    "versionStartIncluding": "1.1.3",
+    "versionEndIncluding": "1.22.0"
+   },
+   {
+    "cpe": "cpe:2.3:a:f5:nginx:*:*:*:*:plus:*:*:*",
+    "versionStartIncluding": "r22",
+    "versionEndIncluding": "r27"
+   },
+   {
+    "cpe": "cpe:2.3:a:f5:nginx:1.23.0:*:*:*:open_source:*:*:*"
+   },
+   {
+    "cpe": "cpe:2.3:a:f5:nginx:1.23.1:*:*:*:open_source:*:*:*"
+   },
+   {
+    "cpe": "cpe:2.3:a:f5:nginx:r1:*:*:*:open_source_subscription:*:*:*"
+   },
+   {
+    "cpe": "cpe:2.3:a:f5:nginx:r2:*:*:*:open_source_subscription:*:*:*"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-0051",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "vim",
+   "reason": "auto-old",
+   "component": "vim",
+   "published": "2023-01-04",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.00518,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "2:8.2.3995-1ubuntu2.3",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "2:8.2.3995-1ubuntu2.36",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "neovim"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "2:8.2.3995-1ubuntu2.4",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:vim:vim:*:*:*:*:*:*:*:*",
+    "versionEndExcluding": "9.0.1144"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-25690",
+   "src_package": "apache2",
+   "reason": "config",
+   "ecosystem": "deb-ubuntu",
+   "component": "apache2",
+   "published": "2023-03-07",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.84508,
+   "config_gated": true,
+   "split": "test",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "2.4.52-1ubuntu4.3",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "2.4.52-1ubuntu4.23",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V3",
+    "version": "2.4.58-1ubuntu8.15",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": false
+   },
+   {
+    "release": "jammy",
+    "variant": "V5",
+    "version": "2.4.52-1ubuntu4.3",
+    "version_source": "same-as-V2"
+   },
+   {
+    "release": "noble",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "libapr1"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "2.4.52-1ubuntu4.4",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "2.4.55-1ubuntu2",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "2.4.0",
+    "versionEndIncluding": "2.4.55"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-2911",
+   "src_package": "bind9",
+   "reason": "config",
+   "ecosystem": "deb-ubuntu",
+   "component": "bind9",
+   "published": "2023-06-21",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.02451,
+   "config_gated": true,
+   "split": "dev",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "1:9.18.12-0ubuntu0.22.04.1",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V3",
+    "version": "1:9.18.39-0ubuntu0.22.04.6",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": false
+   },
+   {
+    "release": "noble",
+    "variant": "V3",
+    "version": "1:9.18.39-0ubuntu0.24.04.7",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": false
+   },
+   {
+    "release": "jammy",
+    "variant": "V5",
+    "version": "1:9.18.12-0ubuntu0.22.04.1",
+    "version_source": "same-as-V2"
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "ldnsutils"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "1:9.18.12-0ubuntu0.22.04.2",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "1:9.18.12-1ubuntu2",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:isc:bind:*:*:*:*:-:*:*:*",
+    "versionStartIncluding": "9.16.33",
+    "versionEndIncluding": "9.16.41"
+   },
+   {
+    "cpe": "cpe:2.3:a:isc:bind:*:*:*:*:supported_preview:*:*:*",
+    "versionStartIncluding": "9.16.33",
+    "versionEndIncluding": "9.16.41"
+   },
+   {
+    "cpe": "cpe:2.3:a:isc:bind:*:*:*:*:-:*:*:*",
+    "versionStartIncluding": "9.18.7",
+    "versionEndIncluding": "9.18.15"
+   },
+   {
+    "cpe": "cpe:2.3:a:isc:bind:*:*:*:*:supported_preview:*:*:*",
+    "versionStartIncluding": "9.18.11",
+    "versionEndIncluding": "9.18.15"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-38408",
+   "src_package": "openssh",
+   "reason": "config",
+   "ecosystem": "deb-ubuntu",
+   "component": "openssh",
+   "published": "2023-07-20",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.797,
+   "config_gated": true,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "1:8.9p1-3ubuntu0.1",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "1:8.9p1-3ubuntu0.17",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V3",
+    "version": "1:9.6p1-3ubuntu13.19",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": false
+   },
+   {
+    "release": "jammy",
+    "variant": "V5",
+    "version": "1:8.9p1-3ubuntu0.1",
+    "version_source": "same-as-V2"
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "ssh-askpass"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "1:8.9p1-3ubuntu0.3",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "1:9.3p1-1ubuntu2",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:openbsd:openssh:*:*:*:*:*:*:*:*",
+    "versionEndExcluding": "9.3"
+   },
+   {
+    "cpe": "cpe:2.3:a:openbsd:openssh:9.3:-:*:*:*:*:*:*"
+   },
+   {
+    "cpe": "cpe:2.3:a:openbsd:openssh:9.3:p1:*:*:*:*:*:*"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-4091",
+   "src_package": "samba",
+   "reason": "config",
+   "ecosystem": "deb-ubuntu",
+   "component": "samba",
+   "published": "2023-11-03",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.01184,
+   "config_gated": true,
+   "split": "dev",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "2:4.15.13+dfsg-0ubuntu1.4",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "2:4.15.13+dfsg-0ubuntu1.13",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V3",
+    "version": "2:4.19.5+dfsg-4ubuntu9.7",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": false
+   },
+   {
+    "release": "jammy",
+    "variant": "V5",
+    "version": "2:4.15.13+dfsg-0ubuntu1.4",
+    "version_source": "same-as-V2"
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "cifs-utils"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "2:4.15.13+dfsg-0ubuntu1.5",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "2:4.18.6+dfsg-1ubuntu2.1",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:samba:samba:*:*:*:*:*:*:*:*",
+    "versionEndExcluding": "4.17.12"
+   },
+   {
+    "cpe": "cpe:2.3:a:samba:samba:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "4.18.0",
+    "versionEndExcluding": "4.18.8"
+   },
+   {
+    "cpe": "cpe:2.3:a:samba:samba:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "4.19.0",
+    "versionEndExcluding": "4.19.1"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-42115",
+   "src_package": "exim4",
+   "reason": "config",
+   "ecosystem": "deb-ubuntu",
+   "component": "exim4",
+   "published": "2024-05-03",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.12088,
+   "config_gated": true,
+   "split": "calib",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "4.95-4ubuntu2.2",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "4.95-4ubuntu2.12",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "jammy",
+    "variant": "V5",
+    "version": "4.95-4ubuntu2.2",
+    "version_source": "same-as-V2"
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "sa-exim"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "4.95-4ubuntu2.3",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:exim:exim:*:*:*:*:*:*:*:*",
+    "versionEndExcluding": "4.96.1"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-42116",
+   "src_package": "exim4",
+   "reason": "config",
+   "ecosystem": "deb-ubuntu",
+   "component": "exim4",
+   "published": "2024-05-03",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.03756,
+   "config_gated": true,
+   "split": "test",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "4.95-4ubuntu2.2",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "4.95-4ubuntu2.12",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "jammy",
+    "variant": "V5",
+    "version": "4.95-4ubuntu2.2",
+    "version_source": "same-as-V2"
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "sa-exim"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "4.95-4ubuntu2.3",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:exim:exim:*:*:*:*:*:*:*:*",
+    "versionEndExcluding": "4.96.1"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-42117",
+   "src_package": "exim4",
+   "reason": "config",
+   "ecosystem": "deb-ubuntu",
+   "component": "exim4",
+   "published": "2024-05-03",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.0679,
+   "config_gated": true,
+   "split": "dev",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "4.95-4ubuntu2.3",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "4.95-4ubuntu2.12",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "jammy",
+    "variant": "V5",
+    "version": "4.95-4ubuntu2.3",
+    "version_source": "same-as-V2"
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "sa-exim"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "4.95-4ubuntu2.4",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:exim:exim:*:*:*:*:*:*:*:*",
+    "versionEndExcluding": "4.96.2"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-47038",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "perl",
+   "reason": "auto-old",
+   "component": "perl",
+   "published": "2023-12-18",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.00814,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "5.34.0-3ubuntu1.2",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "5.34.0-3ubuntu1.9",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V3",
+    "version": "5.38.2-3.2ubuntu0.6",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": false
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "5.34.0-3ubuntu1.3",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "5.36.0-10ubuntu1",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:perl:perl:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "5.30.0",
+    "versionEndIncluding": "5.38.0"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-4863",
+   "src_package": "libwebp",
+   "reason": "kev",
+   "ecosystem": "deb-ubuntu",
+   "component": "libwebp",
+   "published": "2023-09-12",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.99979,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "1.2.2-2ubuntu0.22.04.1",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "1.2.2-2ubuntu0.22.04.2",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V3",
+    "version": "1.3.2-0.4build3",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": false
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "webp-pixbuf-loader"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "1.2.2-2ubuntu0.22.04.2",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "1.2.4-0.2ubuntu1",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:webmproject:libwebp:*:*:*:*:*:*:*:*",
+    "versionEndExcluding": "1.3.2"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-48795",
+   "src_package": "openssh",
+   "reason": "famous",
+   "ecosystem": "deb-ubuntu",
+   "component": "openssh",
+   "published": "2023-12-18",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.93547,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "1:8.9p1-3ubuntu0.4",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "1:8.9p1-3ubuntu0.17",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V3",
+    "version": "1:9.6p1-3ubuntu13.19",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": false
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "ssh-askpass"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "1:8.9p1-3ubuntu0.5",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "1:9.6p1-3ubuntu1",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:openbsd:openssh:*:*:*:*:*:*:*:*",
+    "versionEndExcluding": "9.6"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-4911",
+   "src_package": "glibc",
+   "reason": "kev",
+   "ecosystem": "deb-ubuntu",
+   "component": "glibc",
+   "published": "2023-10-03",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.63769,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "2.35-0ubuntu3.3",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "2.35-0ubuntu3.15",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V3",
+    "version": "2.39-0ubuntu8.9",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": false
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "2.35-0ubuntu3.4",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "2.38-1ubuntu6",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:gnu:glibc:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "2.34",
+    "versionEndExcluding": "2.39"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-52425",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "expat",
+   "reason": "auto-old",
+   "component": "expat",
+   "published": "2024-02-04",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.01815,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "2.4.7-1ubuntu0.2",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "2.4.7-1ubuntu0.9",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V3",
+    "version": "2.6.1-2ubuntu0.6",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": false
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "libxml-parser-perl"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "2.4.7-1ubuntu0.3",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "2.6.0-1",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:libexpat_project:libexpat:*:*:*:*:*:*:*:*",
+    "versionEndIncluding": "2.5.0"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-6129",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "openssl",
+   "reason": "auto-old",
+   "component": "openssl",
+   "published": "2024-01-09",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.02323,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "3.0.2-0ubuntu1.13",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "3.0.2-0ubuntu1.30",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V3",
+    "version": "3.0.13-0ubuntu3.16",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": false
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "3.0.2-0ubuntu1.14",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "3.0.10-1ubuntu4",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "3.0.0",
+    "versionEndIncluding": "3.0.12"
+   },
+   {
+    "cpe": "cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "3.1.0",
+    "versionEndIncluding": "3.1.4"
+   },
+   {
+    "cpe": "cpe:2.3:a:openssl:openssl:3.2.0:*:*:*:*:*:*:*"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-7104",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "sqlite3",
+   "reason": "auto-old",
+   "component": "sqlite3",
+   "published": "2023-12-29",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.01249,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "3.37.2-2ubuntu0.1",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "3.37.2-2ubuntu0.8",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "libdbd-sqlite3-perl"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "3.37.2-2ubuntu0.3",
+    "note": null
+   },
+   "noble": {
+    "status": "not-affected",
+    "fixed_version": null,
+    "note": "3.44.2-1"
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:sqlite:sqlite:*:*:*:*:*:*:*:*",
+    "versionEndIncluding": "3.43.0"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-2004",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "curl",
+   "reason": "auto-old",
+   "component": "curl",
+   "published": "2024-03-27",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.01681,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "8.5.0-2ubuntu10",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "8.5.0-2ubuntu10.15",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "python3-pycurl"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "not-affected",
+    "fixed_version": null,
+    "note": "7.81.0-1ubuntu1.15"
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "8.5.0-2ubuntu10.1",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:haxx:curl:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "7.85.0",
+    "versionEndExcluding": "8.7.0"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-31228",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "redis",
+   "reason": "auto-old",
+   "component": "redis",
+   "published": "2024-10-07",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.01011,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "5:6.0.16-1ubuntu1",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "5:6.0.16-1ubuntu1.1",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "5:7.0.15-1build2",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V3",
+    "version": "5:7.0.15-1ubuntu0.24.04.4",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": false
+   },
+   {
+    "release": "noble",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "python3-redis"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "5:6.0.16-1ubuntu1+esm2",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "5:7.0.15-1ubuntu0.24.04.1",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "2.2.5",
+    "versionEndExcluding": "6.2.16"
+   },
+   {
+    "cpe": "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "7.2.0",
+    "versionEndExcluding": "7.2.6"
+   },
+   {
+    "cpe": "cpe:2.3:a:redis:redis:7.4.0:-:*:*:*:*:*:*"
+   },
+   {
+    "cpe": "cpe:2.3:a:redis:redis:7.4.0:rc1:*:*:*:*:*:*"
+   },
+   {
+    "cpe": "cpe:2.3:a:redis:redis:7.4.0:rc2:*:*:*:*:*:*"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-33599",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "glibc",
+   "reason": "auto-old",
+   "component": "glibc",
+   "published": "2024-05-06",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.0131,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "2.35-0ubuntu3.7",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "2.35-0ubuntu3.15",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "2.39-0ubuntu8.1",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "2.39-0ubuntu8.9",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "2.35-0ubuntu3.8",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "2.39-0ubuntu8.2",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:gnu:glibc:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "2.15",
+    "versionEndExcluding": "2.40"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-38475",
+   "src_package": "apache2",
+   "reason": "kev",
+   "ecosystem": "deb-ubuntu",
+   "component": "apache2",
+   "published": "2024-07-01",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.99957,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "2.4.52-1ubuntu4.9",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "2.4.52-1ubuntu4.23",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "2.4.58-1ubuntu8.1",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "2.4.58-1ubuntu8.15",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "libapr1"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "2.4.52-1ubuntu4.10",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "2.4.58-1ubuntu8.2",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "2.4.0",
+    "versionEndExcluding": "2.4.60"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-56171",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "libxml2",
+   "reason": "auto-old",
+   "component": "libxml2",
+   "published": "2025-02-18",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.01178,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "2.9.13+dfsg-1ubuntu0.5",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "2.9.13+dfsg-1ubuntu0.13",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "2.9.14+dfsg-1.3ubuntu3.1",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "2.9.14+dfsg-1.3ubuntu3.9",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "libxml-libxml-perl"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "2.9.13+dfsg-1ubuntu0.6",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "2.9.14+dfsg-1.3ubuntu3.2",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:xmlsoft:libxml2:*:*:*:*:*:*:*:*",
+    "versionEndExcluding": "2.12.10"
+   },
+   {
+    "cpe": "cpe:2.3:a:xmlsoft:libxml2:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "2.13.0",
+    "versionEndExcluding": "2.13.6"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-6387",
+   "src_package": "openssh",
+   "reason": "config",
+   "ecosystem": "deb-ubuntu",
+   "component": "openssh",
+   "published": "2024-07-01",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.99506,
+   "config_gated": true,
+   "split": "calib",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "1:8.9p1-3ubuntu0.7",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "1:8.9p1-3ubuntu0.17",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "1:9.6p1-3ubuntu13",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "1:9.6p1-3ubuntu13.19",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "jammy",
+    "variant": "V5",
+    "version": "1:8.9p1-3ubuntu0.7",
+    "version_source": "same-as-V2"
+   },
+   {
+    "release": "noble",
+    "variant": "V5",
+    "version": "1:9.6p1-3ubuntu13",
+    "version_source": "same-as-V2"
+   },
+   {
+    "release": "noble",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "ssh-askpass"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "1:8.9p1-3ubuntu0.10",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "1:9.6p1-3ubuntu13.3",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:openbsd:openssh:*:*:*:*:*:*:*:*",
+    "versionEndExcluding": "4.4"
+   },
+   {
+    "cpe": "cpe:2.3:a:openbsd:openssh:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "8.6",
+    "versionEndIncluding": "9.8"
+   },
+   {
+    "cpe": "cpe:2.3:a:openbsd:openssh:4.4:-:*:*:*:*:*:*"
+   },
+   {
+    "cpe": "cpe:2.3:a:openbsd:openssh:8.5:p1:*:*:*:*:*:*"
+   },
+   {
+    "cpe": "cpe:2.3:a:openbsd:openssh:8.6:-:*:*:*:*:*:*"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-7347",
+   "src_package": "nginx",
+   "reason": "config",
+   "ecosystem": "deb-ubuntu",
+   "component": "nginx",
+   "published": "2024-08-14",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.0032,
+   "config_gated": true,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "1.18.0-6ubuntu14.4",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V3",
+    "version": "1.18.0-6ubuntu14.21",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": null
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "1.24.0-2ubuntu7",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V3",
+    "version": "1.24.0-2ubuntu7.18",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V5",
+    "version": "1.18.0-6ubuntu14.4",
+    "version_source": "same-as-V2"
+   },
+   {
+    "release": "noble",
+    "variant": "V5",
+    "version": "1.24.0-2ubuntu7",
+    "version_source": "same-as-V2"
+   },
+   {
+    "release": "noble",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "python3-certbot-nginx"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "1.18.0-6ubuntu14.5",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "1.24.0-2ubuntu7.1",
+    "note": null
+   }
+  },
+  "nvd_ranges": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2025-23419",
+   "src_package": "nginx",
+   "reason": "famous",
+   "ecosystem": "deb-ubuntu",
+   "component": "nginx",
+   "published": "2025-02-05",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.02795,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "1.18.0-6ubuntu14.5",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "1.18.0-6ubuntu14.21",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "1.24.0-2ubuntu7.1",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "1.24.0-2ubuntu7.18",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "python3-certbot-nginx"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "1.18.0-6ubuntu14.6",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "1.24.0-2ubuntu7.3",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:f5:nginx:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "1.11.4",
+    "versionEndExcluding": "1.26.3"
+   },
+   {
+    "cpe": "cpe:2.3:a:f5:nginx:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "1.27.0",
+    "versionEndExcluding": "1.27.4"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2025-26465",
+   "src_package": "openssh",
+   "reason": "config",
+   "ecosystem": "deb-ubuntu",
+   "component": "openssh",
+   "published": "2025-02-18",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.07723,
+   "config_gated": true,
+   "split": "dev",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "1:8.9p1-3ubuntu0.10",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "1:8.9p1-3ubuntu0.17",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "1:9.6p1-3ubuntu13.7",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "1:9.6p1-3ubuntu13.19",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "jammy",
+    "variant": "V5",
+    "version": "1:8.9p1-3ubuntu0.10",
+    "version_source": "same-as-V2"
+   },
+   {
+    "release": "noble",
+    "variant": "V5",
+    "version": "1:9.6p1-3ubuntu13.7",
+    "version_source": "same-as-V2"
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "ssh-askpass"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "1:8.9p1-3ubuntu0.11",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "1:9.6p1-3ubuntu13.8",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:openbsd:openssh:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "6.9",
+    "versionEndIncluding": "9.8"
+   },
+   {
+    "cpe": "cpe:2.3:a:openbsd:openssh:6.8:p1:*:*:*:*:*:*"
+   },
+   {
+    "cpe": "cpe:2.3:a:openbsd:openssh:9.9:-:*:*:*:*:*:*"
+   },
+   {
+    "cpe": "cpe:2.3:a:openbsd:openssh:9.9:p1:*:*:*:*:*:*"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2025-32462",
+   "src_package": "sudo",
+   "reason": "config",
+   "ecosystem": "deb-ubuntu",
+   "component": "sudo",
+   "published": "2025-06-30",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.04477,
+   "config_gated": true,
+   "split": "test",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "1.9.9-1ubuntu2.4",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "1.9.9-1ubuntu2.6",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "1.9.15p5-3ubuntu5",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "1.9.15p5-3ubuntu5.24.04.3",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "jammy",
+    "variant": "V5",
+    "version": "1.9.9-1ubuntu2.4",
+    "version_source": "same-as-V2"
+   },
+   {
+    "release": "noble",
+    "variant": "V5",
+    "version": "1.9.15p5-3ubuntu5",
+    "version_source": "same-as-V2"
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "doas"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "1.9.9-1ubuntu2.5",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "1.9.15p5-3ubuntu5.24.04.1",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:sudo_project:sudo:*:*:*:*:*:*:*:*",
+    "versionEndExcluding": "1.9.17"
+   },
+   {
+    "cpe": "cpe:2.3:a:sudo_project:sudo:1.9.17:-:*:*:*:*:*:*"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2025-32463",
+   "src_package": "sudo",
+   "reason": "kev",
+   "ecosystem": "deb-ubuntu",
+   "component": "sudo",
+   "published": "2025-06-30",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.55498,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "1.9.15p5-3ubuntu5",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "1.9.15p5-3ubuntu5.24.04.3",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "doas"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "not-affected",
+    "fixed_version": null,
+    "note": "code not present"
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "1.9.15p5-3ubuntu5.24.04.1",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:sudo_project:sudo:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "1.9.14",
+    "versionEndExcluding": "1.9.17"
+   },
+   {
+    "cpe": "cpe:2.3:a:sudo_project:sudo:1.9.17:-:*:*:*:*:*:*"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2025-48384",
+   "src_package": "git",
+   "reason": "kev",
+   "ecosystem": "deb-ubuntu",
+   "component": "git",
+   "published": "2025-07-08",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.042,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "1:2.34.1-1ubuntu1.12",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "1:2.34.1-1ubuntu1.17",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "1:2.43.0-1ubuntu7.2",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "1:2.43.0-1ubuntu7.3",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "git-lfs"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "1:2.34.1-1ubuntu1.13",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "1:2.43.0-1ubuntu7.3",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:git-scm:git:*:*:*:*:*:*:*:*",
+    "versionEndExcluding": "2.43.7"
+   },
+   {
+    "cpe": "cpe:2.3:a:git-scm:git:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "2.44.0",
+    "versionEndExcluding": "2.44.4"
+   },
+   {
+    "cpe": "cpe:2.3:a:git-scm:git:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "2.45.0",
+    "versionEndExcluding": "2.45.4"
+   },
+   {
+    "cpe": "cpe:2.3:a:git-scm:git:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "2.46.0",
+    "versionEndExcluding": "2.46.4"
+   },
+   {
+    "cpe": "cpe:2.3:a:git-scm:git:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "2.47.0",
+    "versionEndExcluding": "2.47.3"
+   },
+   {
+    "cpe": "cpe:2.3:a:git-scm:git:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "2.48.0",
+    "versionEndExcluding": "2.48.2"
+   },
+   {
+    "cpe": "cpe:2.3:a:git-scm:git:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "2.49.0",
+    "versionEndExcluding": "2.49.1"
+   },
+   {
+    "cpe": "cpe:2.3:a:git-scm:git:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "2.50.0",
+    "versionEndExcluding": "2.50.1"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2025-49630",
+   "src_package": "apache2",
+   "reason": "config",
+   "ecosystem": "deb-ubuntu",
+   "component": "apache2",
+   "published": "2025-07-10",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.01301,
+   "config_gated": true,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "2.4.52-1ubuntu4.14",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "2.4.52-1ubuntu4.23",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "2.4.58-1ubuntu8.6",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "2.4.58-1ubuntu8.15",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "jammy",
+    "variant": "V5",
+    "version": "2.4.52-1ubuntu4.14",
+    "version_source": "same-as-V2"
+   },
+   {
+    "release": "noble",
+    "variant": "V5",
+    "version": "2.4.58-1ubuntu8.6",
+    "version_source": "same-as-V2"
+   },
+   {
+    "release": "noble",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "libapr1"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "2.4.52-1ubuntu4.15",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "2.4.58-1ubuntu8.7",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "2.4.26",
+    "versionEndExcluding": "2.4.64"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2025-49812",
+   "src_package": "apache2",
+   "reason": "config",
+   "ecosystem": "deb-ubuntu",
+   "component": "apache2",
+   "published": "2025-07-10",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.00591,
+   "config_gated": true,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "2.4.52-1ubuntu4.14",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "2.4.52-1ubuntu4.23",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "2.4.58-1ubuntu8.6",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "2.4.58-1ubuntu8.15",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "jammy",
+    "variant": "V5",
+    "version": "2.4.52-1ubuntu4.14",
+    "version_source": "same-as-V2"
+   },
+   {
+    "release": "noble",
+    "variant": "V5",
+    "version": "2.4.58-1ubuntu8.6",
+    "version_source": "same-as-V2"
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "libapr1t64"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "2.4.52-1ubuntu4.15",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "2.4.58-1ubuntu8.7",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*",
+    "versionEndExcluding": "2.4.64"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2025-8714",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "postgresql-14",
+   "reason": "auto-old",
+   "component": "postgresql-14",
+   "published": "2025-08-14",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.00762,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "14.18-0ubuntu0.22.04.1",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V3",
+    "version": "14.24-0ubuntu0.22.04.1",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "postgresql-common"
+   }
+  ],
+  "tracker": {
+   "noble": {
+    "status": "DNE",
+    "fixed_version": null,
+    "note": ""
+   },
+   "jammy": {
+    "status": "released",
+    "fixed_version": "14.19-0ubuntu0.22.04.1",
+    "note": null
+   }
+  },
+  "nvd_ranges": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-10723",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "bind9",
+   "reason": "auto-recent",
+   "component": "bind9",
+   "published": "2026-07-22",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00272,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "1:9.18.39-0ubuntu0.22.04.4",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V3",
+    "version": "1:9.18.39-0ubuntu0.22.04.6",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": null
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "1:9.18.39-0ubuntu0.24.04.5",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V3",
+    "version": "1:9.18.39-0ubuntu0.24.04.7",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": null
+   },
+   {
+    "release": "noble",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "ldnsutils"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "1:9.18.39-0ubuntu0.22.04.5",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "1:9.18.39-0ubuntu0.24.04.6",
+    "note": null
+   }
+  },
+  "nvd_ranges": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-12969",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "dnsmasq",
+   "reason": "auto-recent",
+   "component": "dnsmasq",
+   "published": "2026-06-23",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.004,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "2.90-0ubuntu0.22.04.3",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "2.91-0ubuntu0.22.04.1",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "2.90-2ubuntu0.3",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "2.91-0ubuntu0.24.04.1",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "dns-root-data"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "2.90-0ubuntu0.22.04.4",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "2.90-2ubuntu0.4",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:thekelleys:dnsmasq:*:*:*:*:*:*:*:*",
+    "versionEndExcluding": "2.93"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-13221",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "perl",
+   "reason": "auto-recent",
+   "component": "perl",
+   "published": "2026-07-13",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00432,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "5.34.0-3ubuntu1.7",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "5.34.0-3ubuntu1.9",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "5.38.2-3.2ubuntu0.3",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "5.38.2-3.2ubuntu0.6",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "5.34.0-3ubuntu1.8",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "5.38.2-3.2ubuntu0.4",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:perl:perl:*:*:*:*:*:*:*:*",
+    "versionEndIncluding": "5.43.9"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-18924",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "curl",
+   "reason": "auto-recent",
+   "component": "curl",
+   "published": "2026-09-06",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00584,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "7.81.0-1ubuntu1.27",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "7.81.0-1ubuntu1.29",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "8.5.0-2ubuntu10.13",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "8.5.0-2ubuntu10.15",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "python3-pycurl"
+   }
+  ],
+  "tracker": {
+   "noble": {
+    "status": "released",
+    "fixed_version": "8.5.0-2ubuntu10.15",
+    "note": null
+   },
+   "jammy": {
+    "status": "released",
+    "fixed_version": "7.81.0-1ubuntu1.29",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:haxx:curl:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "7.44.0",
+    "versionEndExcluding": "8.22.0"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-2340",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "samba",
+   "reason": "auto-recent",
+   "component": "samba",
+   "published": "2026-05-27",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00939,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "2:4.15.13+dfsg-0ubuntu1.10",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "2:4.15.13+dfsg-0ubuntu1.13",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "2:4.19.5+dfsg-4ubuntu9.4",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "2:4.19.5+dfsg-4ubuntu9.7",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "cifs-utils"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "2:4.15.13+dfsg-0ubuntu1.12",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "2:4.19.5+dfsg-4ubuntu9.6",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:samba:samba:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "4.1.0"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-24072",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "apache2",
+   "reason": "auto-recent",
+   "component": "apache2",
+   "published": "2026-05-04",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00654,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "2.4.52-1ubuntu4.19",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "2.4.52-1ubuntu4.23",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "2.4.58-1ubuntu8.11",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "2.4.58-1ubuntu8.15",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "libapr1"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "2.4.52-1ubuntu4.20",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "2.4.58-1ubuntu8.12",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*",
+    "versionEndExcluding": "2.4.67"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-32792",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "unbound",
+   "reason": "auto-recent",
+   "component": "unbound",
+   "published": "2026-05-20",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.004,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "1.13.1-1ubuntu5.14",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "1.13.1-1ubuntu5.15",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "1.19.2-1ubuntu3.7",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "1.19.2-1ubuntu3.9",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "ldnsutils"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "1.13.1-1ubuntu5.15",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "1.19.2-1ubuntu3.8",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:nlnetlabs:unbound:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "1.6.2",
+    "versionEndExcluding": "1.25.1"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-33846",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "gnutls28",
+   "reason": "auto-recent",
+   "component": "gnutls28",
+   "published": "2026-05-04",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.01123,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "3.7.3-4ubuntu1.8",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V3",
+    "version": "3.7.3-4ubuntu1.9",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": null
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "3.8.3-1.1ubuntu3.5",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V3",
+    "version": "3.8.3-1.1ubuntu3.6",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": null
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "3.7.3-4ubuntu1.9",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "3.8.3-1.1ubuntu3.6",
+    "note": null
+   }
+  },
+  "nvd_ranges": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-42533",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "nginx",
+   "reason": "auto-recent",
+   "component": "nginx",
+   "published": "2026-07-15",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00894,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "1.18.0-6ubuntu14.20",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V3",
+    "version": "1.18.0-6ubuntu14.21",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": null
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "1.24.0-2ubuntu7.17",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V3",
+    "version": "1.24.0-2ubuntu7.18",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "python3-certbot-nginx"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "1.18.0-6ubuntu14.21",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "1.24.0-2ubuntu7.18",
+    "note": null
+   }
+  },
+  "nvd_ranges": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-43617",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "rsync",
+   "reason": "auto-recent",
+   "component": "rsync",
+   "published": "2026-05-20",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00315,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "3.2.7-0ubuntu0.22.04.4",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "3.2.7-0ubuntu0.22.04.7",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "3.2.7-1ubuntu1.2",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "3.2.7-1ubuntu1.5",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "librsync2"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "3.2.7-0ubuntu0.22.04.6",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "3.2.7-1ubuntu1.4",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:samba:rsync:*:*:*:*:*:*:*:*",
+    "versionEndIncluding": "3.4.2"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-46483",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "vim",
+   "reason": "auto-recent",
+   "component": "vim",
+   "published": "2026-05-15",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00713,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "2:8.2.3995-1ubuntu2.30",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "2:8.2.3995-1ubuntu2.36",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "2:9.1.0016-1ubuntu7.14",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "2:9.1.0016-1ubuntu7.20",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "neovim"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "2:8.2.3995-1ubuntu2.31",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "2:9.1.0016-1ubuntu7.15",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:vim:vim:*:*:*:*:*:*:*:*",
+    "versionEndExcluding": "9.2.0479"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-50012",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "squid",
+   "reason": "auto-recent",
+   "component": "squid",
+   "published": "2026-07-16",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.02681,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "5.9-0ubuntu0.22.04.5",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "5.9-0ubuntu0.22.04.7",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "6.14-0ubuntu0.24.04.2",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "6.14-0ubuntu0.24.04.4",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "squid-langpack"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "5.9-0ubuntu0.22.04.7",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "6.14-0ubuntu0.24.04.4",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:squid-cache:squid:*:*:*:*:*:*:*:*",
+    "versionEndExcluding": "7.6"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-50812",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "sqlite3",
+   "reason": "auto-recent",
+   "component": "sqlite3",
+   "published": "2026-07-08",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.0016,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "3.37.2-2ubuntu0.6",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V3",
+    "version": "3.37.2-2ubuntu0.8",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": null
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "3.45.1-1ubuntu2.6",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V3",
+    "version": "3.45.1-1ubuntu2.8",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": null
+   },
+   {
+    "release": "noble",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "libdbd-sqlite3-perl"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "3.37.2-2ubuntu0.7",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "3.45.1-1ubuntu2.7",
+    "note": null
+   }
+  },
+  "nvd_ranges": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-55203",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "haproxy",
+   "reason": "auto-recent",
+   "component": "haproxy",
+   "published": "2026-06-18",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00576,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "2.4.30-0ubuntu0.22.04.1",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "2.4.30-0ubuntu0.22.04.2",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "2.8.16-0ubuntu0.24.04.2",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "2.8.16-0ubuntu0.24.04.3",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "2.4.30-0ubuntu0.22.04.2",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "2.8.16-0ubuntu0.24.04.3",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:haproxy:haproxy:*:*:*:*:*:*:*:*",
+    "versionEndIncluding": "3.4.0"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-56407",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "expat",
+   "reason": "auto-recent",
+   "component": "expat",
+   "published": "2026-06-21",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00174,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "2.4.7-1ubuntu0.8",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "2.4.7-1ubuntu0.9",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "2.6.1-2ubuntu0.5",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "2.6.1-2ubuntu0.6",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "libxml-parser-perl"
+   }
+  ],
+  "tracker": {
+   "noble": {
+    "status": "released",
+    "fixed_version": "2.6.1-2ubuntu0.6",
+    "note": null
+   },
+   "jammy": {
+    "status": "released",
+    "fixed_version": "2.4.7-1ubuntu0.9",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:libexpat_project:libexpat:*:*:*:*:*:*:*:*",
+    "versionEndExcluding": "2.8.2"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-59846",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "libssh",
+   "reason": "auto-recent",
+   "component": "libssh",
+   "published": "2026-07-21",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.0012,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "0.9.6-2ubuntu0.22.04.7",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "0.9.6-2ubuntu0.22.04.8",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "0.10.6-2ubuntu0.4",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "0.10.6-2ubuntu0.5",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "libssh2-1"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "0.9.6-2ubuntu0.22.04.8",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "0.10.6-2ubuntu0.5",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:libssh:libssh:-:*:*:*:*:*:*:*"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-59998",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "openssh",
+   "reason": "auto-recent",
+   "component": "openssh",
+   "published": "2026-07-08",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.0018,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "1:8.9p1-3ubuntu0.15",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "1:8.9p1-3ubuntu0.17",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "1:9.6p1-3ubuntu13.16",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "1:9.6p1-3ubuntu13.19",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "ssh-askpass"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "1:8.9p1-3ubuntu0.16",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "1:9.6p1-3ubuntu13.18",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:openbsd:openssh:*:*:*:*:*:*:*:*",
+    "versionEndExcluding": "10.4"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-63076",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "openssl",
+   "reason": "auto-recent",
+   "component": "openssl",
+   "published": "2026-08-25",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.01602,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "3.0.2-0ubuntu1.26",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "3.0.2-0ubuntu1.30",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "3.0.13-0ubuntu3.12",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "3.0.13-0ubuntu3.16",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "3.0.2-0ubuntu1.29",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "3.0.13-0ubuntu3.15",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "3.0.0",
+    "versionEndExcluding": "3.0.22"
+   },
+   {
+    "cpe": "cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "3.4.0",
+    "versionEndExcluding": "3.4.7"
+   },
+   {
+    "cpe": "cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "3.5.0",
+    "versionEndExcluding": "3.5.8"
+   },
+   {
+    "cpe": "cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "3.6.0",
+    "versionEndExcluding": "3.6.4"
+   },
+   {
+    "cpe": "cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "4.0.0",
+    "versionEndExcluding": "4.0.2"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-6653",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "libxml2",
+   "reason": "auto-recent",
+   "component": "libxml2",
+   "published": "2026-06-22",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00355,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "2.9.13+dfsg-1ubuntu0.11",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "2.9.13+dfsg-1ubuntu0.13",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "2.9.14+dfsg-1.3ubuntu3.7",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "2.9.14+dfsg-1.3ubuntu3.9",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "libxml-libxml-perl"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "2.9.13+dfsg-1ubuntu0.12",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "2.9.14+dfsg-1.3ubuntu3.8",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:xmlsoft:libxml2:*:*:*:*:*:*:*:*",
+    "versionStartIncluding": "2.9.11",
+    "versionEndIncluding": "2.11.0"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-80489",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "glibc",
+   "reason": "auto-recent",
+   "component": "glibc",
+   "published": "2026-09-15",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00412,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "2.35-0ubuntu3.14",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V3",
+    "version": "2.35-0ubuntu3.15",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": null
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "2.39-0ubuntu8.8",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V3",
+    "version": "2.39-0ubuntu8.9",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": null
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "2.35-0ubuntu3.15",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "2.39-0ubuntu8.9",
+    "note": null
+   }
+  },
+  "nvd_ranges": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-90698",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "memcached",
+   "reason": "auto-recent",
+   "component": "memcached",
+   "published": "2026-09-14",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00859,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "1.6.14-1ubuntu0.2",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V3",
+    "version": "1.6.14-1ubuntu0.3",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": null
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "1.6.24-1ubuntu0.2",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V3",
+    "version": "1.6.24-1ubuntu0.3",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": null
+   },
+   {
+    "release": "noble",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "jammy",
+    "variant": "V6",
+    "version": null,
+    "decoy": "libmemcached11"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "1.6.14-1ubuntu0.3",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "1.6.24-1ubuntu0.3",
+    "note": null
+   }
+  },
+  "nvd_ranges": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-94054",
+   "ecosystem": "deb-ubuntu",
+   "src_package": "exim4",
+   "reason": "auto-recent",
+   "component": "exim4",
+   "published": "2026-09-19",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00268,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "release": "jammy",
+    "variant": "V2",
+    "version": "4.95-4ubuntu2.11",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "jammy",
+    "variant": "V4",
+    "version": "4.95-4ubuntu2.12",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "noble",
+    "variant": "V2",
+    "version": "4.97-4ubuntu4.7",
+    "version_source": "launchpad"
+   },
+   {
+    "release": "noble",
+    "variant": "V4",
+    "version": "4.97-4ubuntu4.8",
+    "version_source": "archive-current",
+    "nvd_upstream_in_range": true
+   },
+   {
+    "release": "jammy",
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "release": "noble",
+    "variant": "V6",
+    "version": null,
+    "decoy": "sa-exim"
+   }
+  ],
+  "tracker": {
+   "jammy": {
+    "status": "released",
+    "fixed_version": "4.95-4ubuntu2.12",
+    "note": null
+   },
+   "noble": {
+    "status": "released",
+    "fixed_version": "4.97-4ubuntu4.8",
+    "note": null
+   }
+  },
+  "nvd_ranges": [
+   {
+    "cpe": "cpe:2.3:a:exim:exim:*:*:*:*:*:*:*:*",
+    "versionEndExcluding": "4.100.1"
+   }
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2016-4437",
+   "component": "org.apache.shiro:shiro-core",
+   "reason": "config",
+   "ecosystem": "maven",
+   "published": "2016-06-07",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.93039,
+   "config_gated": true,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "1.2.3"
+   },
+   {
+    "variant": "V2",
+    "version": "1.2.0",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "1.2.5"
+   },
+   {
+    "variant": "V5",
+    "version": "1.2.3"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "org.apache.shiro:shiro-crypto-cipher"
+   },
+   {
+    "variant": "V7",
+    "version": "1.2.3",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "1.2.5"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-p836-389h-j692"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2017-5638",
+   "component": "org.apache.struts:struts2-core",
+   "reason": "kev",
+   "ecosystem": "maven",
+   "published": "2017-03-11",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.99999,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "2.5.5"
+   },
+   {
+    "variant": "V2",
+    "version": "2.3.31",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.5.10.1"
+   },
+   {
+    "variant": "V4",
+    "version": "2.3.32"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "org.apache.struts:struts-core"
+   },
+   {
+    "variant": "V7",
+    "version": "2.5.5",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "2.3.0",
+    "fixed": "2.3.32"
+   },
+   {
+    "introduced": "2.5.0",
+    "fixed": "2.5.10.1"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-j77q-2qqg-6989"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2018-11776",
+   "component": "org.apache.struts:struts2-core",
+   "reason": "config",
+   "ecosystem": "maven",
+   "published": "2018-08-22",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.99991,
+   "config_gated": true,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "2.5.14.1"
+   },
+   {
+    "variant": "V2",
+    "version": "2.3.34",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.5.17"
+   },
+   {
+    "variant": "V4",
+    "version": "2.3.35"
+   },
+   {
+    "variant": "V5",
+    "version": "2.5.14.1"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "org.apache.struts:struts-core"
+   },
+   {
+    "variant": "V7",
+    "version": "2.5.14.1",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "2.0.4",
+    "fixed": "2.3.35"
+   },
+   {
+    "introduced": "2.5",
+    "fixed": "2.5.17"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-cr6j-3jp9-rw65"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2020-36518",
+   "component": "com.fasterxml.jackson.core:jackson-databind",
+   "reason": "classic",
+   "ecosystem": "maven",
+   "published": "2022-03-11",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.0486,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "2.13.2"
+   },
+   {
+    "variant": "V2",
+    "version": "2.12.6",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.13.2.1"
+   },
+   {
+    "variant": "V4",
+    "version": "2.12.6.1"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "com.fasterxml.jackson.core:jackson-core"
+   },
+   {
+    "variant": "V7",
+    "version": "2.13.2",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "2.13.0",
+    "fixed": "2.13.2.1"
+   },
+   {
+    "introduced": "0",
+    "fixed": "2.12.6.1"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-57j2-w4cx-62h2"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2021-39144",
+   "component": "com.thoughtworks.xstream:xstream",
+   "reason": "kev",
+   "ecosystem": "maven",
+   "published": "2021-08-23",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.98124,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "1.4.16"
+   },
+   {
+    "variant": "V2",
+    "version": "1.0.2",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "1.4.18"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "com.thoughtworks.qdox:qdox"
+   },
+   {
+    "variant": "V7",
+    "version": "1.4.16",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "1.4.18"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-j9h8-phrw-h4fh"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2021-4104",
+   "component": "log4j:log4j",
+   "reason": "config",
+   "ecosystem": "maven",
+   "published": "2021-12-14",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.80599,
+   "config_gated": true,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "1.2.17"
+   },
+   {
+    "variant": "V2",
+    "version": "1.2.11",
+    "tag": "b2"
+   },
+   {
+    "variant": "V5",
+    "version": "1.2.17"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "org.slf4j:log4j-over-slf4j"
+   },
+   {
+    "variant": "V7",
+    "version": "1.2.17",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "1.2.0",
+    "last_affected": "1.2.17"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-fp5r-v3w9-4333"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2021-42392",
+   "component": "com.h2database:h2",
+   "reason": "config",
+   "ecosystem": "maven",
+   "published": "2022-01-10",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.83176,
+   "config_gated": true,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "1.4.200"
+   },
+   {
+    "variant": "V2",
+    "version": "1.2.144",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.0.206"
+   },
+   {
+    "variant": "V5",
+    "version": "1.4.200"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "com.h2database:h2-mvstore"
+   },
+   {
+    "variant": "V7",
+    "version": "1.4.200",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "1.1.100",
+    "fixed": "2.0.206"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-h376-j262-vhq6"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2021-44228",
+   "component": "org.apache.logging.log4j:log4j-core",
+   "reason": "config",
+   "ecosystem": "maven",
+   "published": "2021-12-10",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.99999,
+   "config_gated": true,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "2.14.0"
+   },
+   {
+    "variant": "V2",
+    "version": "2.12.1",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.15.0"
+   },
+   {
+    "variant": "V4",
+    "version": "2.12.2"
+   },
+   {
+    "variant": "V5",
+    "version": "2.14.0"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "org.apache.logging.log4j:log4j-api"
+   },
+   {
+    "variant": "V7",
+    "version": "2.14.0",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "2.13.0",
+    "fixed": "2.15.0"
+   },
+   {
+    "introduced": "2.0-beta9",
+    "fixed": "2.3.1"
+   },
+   {
+    "introduced": "2.4",
+    "fixed": "2.12.2"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-jfh8-c2jp-5v3q"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2021-44832",
+   "component": "org.apache.logging.log4j:log4j-core",
+   "reason": "config",
+   "ecosystem": "maven",
+   "published": "2021-12-28",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.97906,
+   "config_gated": true,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "2.16.0"
+   },
+   {
+    "variant": "V2",
+    "version": "2.12.3",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.17.1"
+   },
+   {
+    "variant": "V4",
+    "version": "2.12.4"
+   },
+   {
+    "variant": "V5",
+    "version": "2.16.0"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "org.apache.logging.log4j:log4j-api"
+   },
+   {
+    "variant": "V7",
+    "version": "2.16.0",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "2.0-beta7",
+    "fixed": "2.3.2"
+   },
+   {
+    "introduced": "2.4",
+    "fixed": "2.12.4"
+   },
+   {
+    "introduced": "2.13.0",
+    "fixed": "2.17.1"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-8489-44mv-ggj8"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2021-45046",
+   "component": "org.apache.logging.log4j:log4j-core",
+   "reason": "config",
+   "ecosystem": "maven",
+   "published": "2021-12-14",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.99977,
+   "config_gated": true,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "2.14.1"
+   },
+   {
+    "variant": "V2",
+    "version": "2.12.1",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.16.0"
+   },
+   {
+    "variant": "V4",
+    "version": "2.12.2"
+   },
+   {
+    "variant": "V5",
+    "version": "2.14.1"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "org.apache.logging.log4j:log4j-api"
+   },
+   {
+    "variant": "V7",
+    "version": "2.14.1",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "2.13.0",
+    "fixed": "2.16.0"
+   },
+   {
+    "introduced": "2.4.0",
+    "fixed": "2.12.2"
+   },
+   {
+    "introduced": "0",
+    "fixed": "2.3.1"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-7rjr-3q55-vv33"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2021-45105",
+   "component": "org.apache.logging.log4j:log4j-core",
+   "reason": "config",
+   "ecosystem": "maven",
+   "published": "2021-12-18",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.99999,
+   "config_gated": true,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "2.14.1"
+   },
+   {
+    "variant": "V2",
+    "version": "2.12.2",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.17.0"
+   },
+   {
+    "variant": "V4",
+    "version": "2.12.3"
+   },
+   {
+    "variant": "V5",
+    "version": "2.14.1"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "org.apache.logging.log4j:log4j-api"
+   },
+   {
+    "variant": "V7",
+    "version": "2.14.1",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "2.4.0",
+    "fixed": "2.12.3"
+   },
+   {
+    "introduced": "2.13.0",
+    "fixed": "2.17.0"
+   },
+   {
+    "introduced": "0",
+    "fixed": "2.3.1"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-p6xc-xr62-6r2g"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2022-1471",
+   "component": "org.yaml:snakeyaml",
+   "reason": "classic",
+   "ecosystem": "maven",
+   "published": "2022-12-01",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.99569,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "1.32"
+   },
+   {
+    "variant": "V2",
+    "version": "1.13",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.0"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "org.snakeyaml:snakeyaml-engine"
+   },
+   {
+    "variant": "V7",
+    "version": "1.32",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "2.0"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-mjmj-j48q-9wg2"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2022-22963",
+   "component": "org.springframework.cloud:spring-cloud-function-context",
+   "reason": "kev",
+   "ecosystem": "maven",
+   "published": "2022-04-01",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.99938,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "3.2.2"
+   },
+   {
+    "variant": "V2",
+    "version": "3.1.6",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "3.2.3"
+   },
+   {
+    "variant": "V4",
+    "version": "3.1.7"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "org.springframework.cloud:spring-cloud-commons"
+   },
+   {
+    "variant": "V7",
+    "version": "3.2.2",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "3.2.0",
+    "fixed": "3.2.3"
+   },
+   {
+    "introduced": "0",
+    "fixed": "3.1.7"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-6v73-fgf6-w5j7"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2022-22965",
+   "component": "org.springframework:spring-beans",
+   "reason": "config",
+   "ecosystem": "maven",
+   "published": "2022-04-01",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.99638,
+   "config_gated": true,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "5.3.16"
+   },
+   {
+    "variant": "V2",
+    "version": "5.2.19.RELEASE",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "5.3.18"
+   },
+   {
+    "variant": "V4",
+    "version": "5.2.20.RELEASE"
+   },
+   {
+    "variant": "V5",
+    "version": "5.3.16"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "org.springframework.security:spring-security-crypto"
+   },
+   {
+    "variant": "V7",
+    "version": "5.3.16",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "5.2.20.RELEASE"
+   },
+   {
+    "introduced": "5.3.0",
+    "fixed": "5.3.18"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-36p3-wjmg-h94x"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2022-42889",
+   "component": "org.apache.commons:commons-text",
+   "reason": "classic",
+   "ecosystem": "maven",
+   "published": "2022-10-13",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.99931,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "1.9"
+   },
+   {
+    "variant": "V2",
+    "version": "1.5",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "1.10.0"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "org.apache.commons:commons-lang3"
+   },
+   {
+    "variant": "V7",
+    "version": "1.9",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "1.5",
+    "fixed": "1.10.0"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-599f-7c49-w659"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-24998",
+   "component": "commons-fileupload:commons-fileupload",
+   "reason": "classic",
+   "ecosystem": "maven",
+   "published": "2023-02-20",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.48788,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "1.3.2"
+   },
+   {
+    "variant": "V2",
+    "version": "1.2",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "1.5"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "commons-io:commons-io"
+   },
+   {
+    "variant": "V7",
+    "version": "1.3.2",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "1.5"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-hfrx-6qgj-fp6c"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-46604",
+   "component": "org.apache.activemq:activemq-client",
+   "reason": "kev",
+   "ecosystem": "maven",
+   "published": "2023-10-27",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.99891,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "5.18.2"
+   },
+   {
+    "variant": "V2",
+    "version": "5.17.5",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "5.18.3"
+   },
+   {
+    "variant": "V4",
+    "version": "5.17.6"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "org.apache.activemq:artemis-jms-client"
+   },
+   {
+    "variant": "V7",
+    "version": "5.18.2",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "5.15.16"
+   },
+   {
+    "introduced": "5.16.0",
+    "fixed": "5.16.7"
+   },
+   {
+    "introduced": "5.17.0",
+    "fixed": "5.17.6"
+   },
+   {
+    "introduced": "5.18.0",
+    "fixed": "5.18.3"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-crg9-44h2-xw35"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-6378",
+   "component": "ch.qos.logback:logback-classic",
+   "reason": "config",
+   "ecosystem": "maven",
+   "published": "2023-11-29",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.009,
+   "config_gated": true,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "1.4.11"
+   },
+   {
+    "variant": "V2",
+    "version": "1.3.11",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "1.4.12"
+   },
+   {
+    "variant": "V4",
+    "version": "1.3.12"
+   },
+   {
+    "variant": "V5",
+    "version": "1.4.11"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "org.slf4j:slf4j-simple"
+   },
+   {
+    "variant": "V7",
+    "version": "1.4.11",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "1.3.0",
+    "fixed": "1.3.12"
+   },
+   {
+    "introduced": "1.4.0",
+    "fixed": "1.4.12"
+   },
+   {
+    "introduced": "0",
+    "fixed": "1.2.13"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-vmq6-5m68-f53m"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-1597",
+   "component": "org.postgresql:postgresql",
+   "reason": "config",
+   "ecosystem": "maven",
+   "published": "2024-02-19",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.0481,
+   "config_gated": true,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "42.7.1"
+   },
+   {
+    "variant": "V2",
+    "version": "42.6.0",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "42.7.2"
+   },
+   {
+    "variant": "V4",
+    "version": "42.6.1"
+   },
+   {
+    "variant": "V5",
+    "version": "42.7.1"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "com.impossibl.pgjdbc-ng:pgjdbc-ng"
+   },
+   {
+    "variant": "V7",
+    "version": "42.7.1",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "42.2.28"
+   },
+   {
+    "introduced": "42.3.0",
+    "fixed": "42.3.9"
+   },
+   {
+    "introduced": "42.4.0",
+    "fixed": "42.4.4"
+   },
+   {
+    "introduced": "42.5.0",
+    "fixed": "42.5.5"
+   },
+   {
+    "introduced": "42.6.0",
+    "fixed": "42.6.1"
+   },
+   {
+    "introduced": "42.7.0",
+    "fixed": "42.7.2"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-24rp-q3w6-vc56"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-10051",
+   "component": "org.eclipse.jetty:jetty-server",
+   "reason": "recent",
+   "ecosystem": "maven",
+   "published": "2026-07-14",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00302,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "12.1.8"
+   },
+   {
+    "variant": "V2",
+    "version": "12.0.35",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "12.1.10"
+   },
+   {
+    "variant": "V4",
+    "version": "12.0.36"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "org.eclipse.jetty:jetty-util"
+   },
+   {
+    "variant": "V7",
+    "version": "12.1.8",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "12.0.0",
+    "fixed": "12.0.36"
+   },
+   {
+    "introduced": "12.1.0",
+    "fixed": "12.1.10"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-f4v5-65jj-pcr2"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-41417",
+   "component": "io.netty:netty-codec-http",
+   "reason": "recent",
+   "ecosystem": "maven",
+   "published": "2026-05-06",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00336,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "4.2.12.Final"
+   },
+   {
+    "variant": "V2",
+    "version": "4.1.132.Final",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "4.2.13.Final"
+   },
+   {
+    "variant": "V4",
+    "version": "4.1.133.Final"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "io.netty:netty-buffer"
+   },
+   {
+    "variant": "V7",
+    "version": "4.2.12.Final",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "4.1.133.Final"
+   },
+   {
+    "introduced": "4.2.0.Alpha1",
+    "fixed": "4.2.13.Final"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-v8h7-rr48-vmmv"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-41848",
+   "component": "org.springframework:spring-core",
+   "reason": "recent",
+   "ecosystem": "maven",
+   "published": "2026-06-09",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00405,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "7.0.6"
+   },
+   {
+    "variant": "V2",
+    "version": "6.2.18",
+    "tag": "b2"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "org.springframework.security:spring-security-crypto"
+   },
+   {
+    "variant": "V7",
+    "version": "7.0.6",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "7.0.0",
+    "fixed": "7.0.8"
+   },
+   {
+    "introduced": "6.2.0",
+    "fixed": "6.2.19"
+   },
+   {
+    "introduced": "6.1.0",
+    "last_affected": "6.1.21"
+   },
+   {
+    "introduced": "0",
+    "last_affected": "5.3.39"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-659m-px2c-25wj"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-42198",
+   "component": "org.postgresql:postgresql",
+   "reason": "recent",
+   "ecosystem": "maven",
+   "published": "2026-04-29",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.04117,
+   "config_gated": false,
+   "note": "selected as recent but NVD published 2026-04-29 < 2026-05-01",
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "42.7.8"
+   },
+   {
+    "variant": "V2",
+    "version": "42.3.3",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "42.7.11"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "com.impossibl.pgjdbc-ng:pgjdbc-ng"
+   },
+   {
+    "variant": "V7",
+    "version": "42.7.8",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "42.2.0",
+    "fixed": "42.7.11"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-98qh-xjc8-98pq"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-43515",
+   "component": "org.apache.tomcat.embed:tomcat-embed-core",
+   "reason": "recent",
+   "ecosystem": "maven",
+   "published": "2026-05-12",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.01221,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "11.0.20"
+   },
+   {
+    "variant": "V2",
+    "version": "10.1.54",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "11.0.22"
+   },
+   {
+    "variant": "V4",
+    "version": "10.1.55"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "org.apache.tomcat.embed:tomcat-embed-el"
+   },
+   {
+    "variant": "V7",
+    "version": "11.0.20",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "9.0.118"
+   },
+   {
+    "introduced": "10.1.0-M1",
+    "fixed": "10.1.55"
+   },
+   {
+    "introduced": "11.0.0-M1",
+    "fixed": "11.0.22"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-5m62-pw8w-7w9f"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-48043",
+   "component": "io.netty:netty-codec-http2",
+   "reason": "recent",
+   "ecosystem": "maven",
+   "published": "2026-06-12",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00882,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "4.2.13.Final"
+   },
+   {
+    "variant": "V2",
+    "version": "4.1.134.Final",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "4.2.15.Final"
+   },
+   {
+    "variant": "V4",
+    "version": "4.1.135.Final"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "io.netty:netty-common"
+   },
+   {
+    "variant": "V7",
+    "version": "4.2.13.Final",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "4.1.135.Final"
+   },
+   {
+    "introduced": "4.2.0.Alpha1",
+    "fixed": "4.2.15.Final"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-c2gf-v879-257j"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-49268",
+   "component": "org.apache.shiro:shiro-core",
+   "reason": "recent",
+   "ecosystem": "maven",
+   "published": "2026-06-17",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00755,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "2.0.6"
+   },
+   {
+    "variant": "V2",
+    "version": "1.9.1",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "3.0.0"
+   },
+   {
+    "variant": "V4",
+    "version": "2.2.1"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "org.apache.shiro:shiro-crypto-cipher"
+   },
+   {
+    "variant": "V7",
+    "version": "2.0.6",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "2.2.1"
+   },
+   {
+    "introduced": "3.0.0-alpha-0",
+    "fixed": "3.0.0-alpha-2"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-x96m-rh44-vgv8"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-54512",
+   "component": "com.fasterxml.jackson.core:jackson-databind",
+   "reason": "recent",
+   "ecosystem": "maven",
+   "published": "2026-06-23",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00999,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "2.21.2"
+   },
+   {
+    "variant": "V2",
+    "version": "2.18.7",
+    "tag": "b2"
+   },
+   {
+    "variant": "V4",
+    "version": "2.21.4"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "com.fasterxml.jackson.core:jackson-core"
+   },
+   {
+    "variant": "V7",
+    "version": "2.21.2",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "2.10.0",
+    "fixed": "2.18.8"
+   },
+   {
+    "introduced": "3.0.0",
+    "fixed": "3.1.4"
+   },
+   {
+    "introduced": "2.19.0",
+    "fixed": "2.21.4"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-j3rv-43j4-c7qm"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-8763",
+   "component": "org.bouncycastle:bcprov-jdk18on",
+   "reason": "recent",
+   "ecosystem": "maven",
+   "published": "2026-08-03",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.0043,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "1.82"
+   },
+   {
+    "variant": "V2",
+    "version": "1.78.1",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "1.85"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V7",
+    "version": "1.82",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "1.85"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-9pwp-9qqc-pr26"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-9828",
+   "component": "ch.qos.logback:logback-core",
+   "reason": "recent",
+   "ecosystem": "maven",
+   "published": "2026-05-28",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00545,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "1.5.32"
+   },
+   {
+    "variant": "V2",
+    "version": "1.3.16",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "1.5.33"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "ch.qos.reload4j:reload4j"
+   },
+   {
+    "variant": "V7",
+    "version": "1.5.32",
+    "vendored": "fatjar"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "1.5.33"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": [
+   "GHSA-p47f-322f-whfh"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2020-1747",
+   "component": "pyyaml",
+   "reason": "classic",
+   "ecosystem": "pypi",
+   "published": "2020-03-24",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.05442,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "5.2"
+   },
+   {
+    "variant": "V2",
+    "version": "5.1",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "5.3.1"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "ruamel.yaml"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "5.1b7",
+    "fixed": "5.3.1"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "5.1",
+     "fixed": "5.3.1"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-6757-jp84-gxfx",
+   "PYSEC-2020-96"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-30861",
+   "component": "flask",
+   "reason": "classic",
+   "ecosystem": "pypi",
+   "published": "2023-05-02",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.01261,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "2.3.0"
+   },
+   {
+    "variant": "V2",
+    "version": "2.2.4",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.3.2"
+   },
+   {
+    "variant": "V4",
+    "version": "2.2.5"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "blinker"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "2.3.0",
+    "fixed": "2.3.2"
+   },
+   {
+    "introduced": "0",
+    "fixed": "2.2.5"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "2.2.5"
+    },
+    {
+     "introduced": "2.3.0",
+     "fixed": "2.3.2"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-m2qf-hxjv-5gpq",
+   "PYSEC-2023-62"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-50447",
+   "component": "pillow",
+   "reason": "classic",
+   "ecosystem": "pypi",
+   "published": "2024-01-19",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.01703,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "10.1.0"
+   },
+   {
+    "variant": "V2",
+    "version": "7.1.0",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "10.2.0"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "pilkit"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "10.2.0"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "10.2.0"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-3f63-hfp8-52jq",
+   "PYSEC-2026-457"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-50782",
+   "component": "cryptography",
+   "reason": "classic",
+   "ecosystem": "pypi",
+   "published": "2024-02-05",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.01118,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "41.0.5"
+   },
+   {
+    "variant": "V2",
+    "version": "3.2.1",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "42.0.0"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "pycryptodome"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "42.0.0"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "42.0.0"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-3ww4-gg4f-jr7f",
+   "PYSEC-2026-1283"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-1135",
+   "component": "gunicorn",
+   "reason": "classic",
+   "ecosystem": "pypi",
+   "published": "2024-04-16",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.02996,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "21.2.0"
+   },
+   {
+    "variant": "V2",
+    "version": "19.8.0",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "22.0.0"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "uvicorn"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "22.0.0"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "22.0.0"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-w3h3-4rj7-4ph4",
+   "PYSEC-2026-1434"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-22195",
+   "component": "jinja2",
+   "reason": "classic",
+   "ecosystem": "pypi",
+   "published": "2024-01-11",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.00892,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "3.1.2"
+   },
+   {
+    "variant": "V2",
+    "version": "2.9.3",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "3.1.3"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "markupsafe"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "3.1.3"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "3.1.3"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-h5c8-rqwp-cp95",
+   "PYSEC-2026-1473"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-23334",
+   "component": "aiohttp",
+   "reason": "config",
+   "ecosystem": "pypi",
+   "published": "2024-01-29",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.76875,
+   "config_gated": true,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "3.9.0"
+   },
+   {
+    "variant": "V2",
+    "version": "2.0.1",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "3.9.2"
+   },
+   {
+    "variant": "V5",
+    "version": "3.9.0"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "aiosignal"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "1.0.5",
+    "fixed": "3.9.2"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "1.0.5",
+     "fixed": "3.9.2"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-5h86-8mv2-jq9f",
+   "PYSEC-2024-24"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-24762",
+   "component": "python-multipart",
+   "reason": "classic",
+   "ecosystem": "pypi",
+   "published": "2024-02-05",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.0151,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "0.0.6"
+   },
+   {
+    "variant": "V2",
+    "version": "0.0.1",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "0.0.7"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "multipart"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "0.0.7"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "0.0.7"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-2jv5-9r88-3w3p",
+   "PYSEC-2024-38",
+   "PYSEC-2026-1850"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-34069",
+   "component": "werkzeug",
+   "reason": "config",
+   "ecosystem": "pypi",
+   "published": "2024-05-06",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.03397,
+   "config_gated": true,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "3.0.1"
+   },
+   {
+    "variant": "V2",
+    "version": "0.11.15",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "3.0.3"
+   },
+   {
+    "variant": "V5",
+    "version": "3.0.1"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "itsdangerous"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "3.0.3"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "3.0.3"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-2g68-c3qc-8985",
+   "PYSEC-2026-2043"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-35195",
+   "component": "requests",
+   "reason": "classic",
+   "ecosystem": "pypi",
+   "published": "2024-05-20",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.0034,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "2.29.0"
+   },
+   {
+    "variant": "V2",
+    "version": "2.23.0",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.32.2"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "types-requests"
+   },
+   {
+    "variant": "V7",
+    "version": "2.31.0",
+    "vendored": "pip",
+    "pip_version": "24.0"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "2.32.0"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "2.32.0"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-9wx4-h78v-vm56",
+   "PYSEC-2026-1873"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-3651",
+   "component": "idna",
+   "reason": "classic",
+   "ecosystem": "pypi",
+   "published": "2024-07-07",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.01386,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "3.5"
+   },
+   {
+    "variant": "V2",
+    "version": "2.8",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "3.7"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V7",
+    "version": "3.4",
+    "vendored": "pip",
+    "pip_version": "24.0"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "3.7"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0.1",
+     "fixed": "3.7"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-jjg7-2v4v-x38h",
+   "PYSEC-2024-60"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-37891",
+   "component": "urllib3",
+   "reason": "classic",
+   "ecosystem": "pypi",
+   "published": "2024-06-17",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.01141,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "2.2.1"
+   },
+   {
+    "variant": "V2",
+    "version": "1.26.18",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.2.2"
+   },
+   {
+    "variant": "V4",
+    "version": "1.26.19"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "types-urllib3"
+   },
+   {
+    "variant": "V7",
+    "version": "1.26.17",
+    "vendored": "pip",
+    "pip_version": "24.0"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "1.26.19"
+   },
+   {
+    "introduced": "2.0.0",
+    "fixed": "2.2.2"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "1.26.19"
+    },
+    {
+     "introduced": "2.0.0",
+     "fixed": "2.2.2"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-34jh-p97f-mpxf",
+   "PYSEC-2026-1995"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-45231",
+   "component": "django",
+   "reason": "classic",
+   "ecosystem": "pypi",
+   "published": "2024-10-08",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.00788,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "5.1"
+   },
+   {
+    "variant": "V2",
+    "version": "5.0.8",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "5.1.1"
+   },
+   {
+    "variant": "V4",
+    "version": "5.0.9"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "django-environ"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "5.1",
+    "fixed": "5.1.1"
+   },
+   {
+    "introduced": "5.0",
+    "fixed": "5.0.9"
+   },
+   {
+    "introduced": "0",
+    "fixed": "4.2.16"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "4.2.16"
+    },
+    {
+     "introduced": "5.0",
+     "fixed": "5.0.9"
+    },
+    {
+     "introduced": "5.1",
+     "fixed": "5.1.1"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-rrqc-c2jx-6jgv",
+   "PYSEC-2026-1297"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-49768",
+   "component": "waitress",
+   "reason": "config",
+   "ecosystem": "pypi",
+   "published": "2024-10-29",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.00486,
+   "config_gated": true,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "2.1.2"
+   },
+   {
+    "variant": "V2",
+    "version": "2.0.0",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "3.0.1"
+   },
+   {
+    "variant": "V5",
+    "version": "2.1.2"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "hupper"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "2.0.0",
+    "fixed": "3.0.1"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "2.0.0",
+     "fixed": "3.0.1"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-9298-4cf8-g4wj",
+   "PYSEC-2024-210"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-52804",
+   "component": "tornado",
+   "reason": "classic",
+   "ecosystem": "pypi",
+   "published": "2024-11-22",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.01044,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "6.4.1"
+   },
+   {
+    "variant": "V2",
+    "version": "2.1.1",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "6.4.2"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "6.4.2"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "6.4.2"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-8w49-h785-mj3c",
+   "PYSEC-2026-1975"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-6345",
+   "component": "setuptools",
+   "reason": "classic",
+   "ecosystem": "pypi",
+   "published": "2024-07-15",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.01939,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "69.5.1"
+   },
+   {
+    "variant": "V2",
+    "version": "67.3.2",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "70.0.0"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "wheel"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "70.0.0"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "70.0.0"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-cx63-2mw6-8hw5",
+   "PYSEC-2026-1918"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-34993",
+   "component": "aiohttp",
+   "reason": "recent",
+   "ecosystem": "pypi",
+   "published": "2026-06-02",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00495,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "3.13.3"
+   },
+   {
+    "variant": "V2",
+    "version": "3.2.1",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "3.14.0"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "aiosignal"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "3.14.0"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "3.14.0"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-jg22-mg44-37j8",
+   "PYSEC-2026-2104"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-40110",
+   "component": "jupyter-server",
+   "reason": "recent",
+   "ecosystem": "pypi",
+   "published": "2026-05-05",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.0047,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "2.16.0"
+   },
+   {
+    "variant": "V2",
+    "version": "1.15.0",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.18.0"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "jupyter-client"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "2.18.0"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "2.18.0"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-24qx-w28j-9m6p",
+   "PYSEC-2026-2187"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-42308",
+   "component": "pillow",
+   "reason": "recent",
+   "ecosystem": "pypi",
+   "published": "2026-05-09",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00159,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "12.1.1"
+   },
+   {
+    "variant": "V2",
+    "version": "3.2.0",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "12.2.0"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "pilkit"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "12.2.0"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "12.2.0"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-wjx4-4jcj-g98j",
+   "PYSEC-2026-165"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-42561",
+   "component": "python-multipart",
+   "reason": "recent",
+   "ecosystem": "pypi",
+   "published": "2026-05-13",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00849,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "0.0.24"
+   },
+   {
+    "variant": "V2",
+    "version": "0.0.5",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "0.0.27"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "multipart"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "0.0.27"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "0.0.27"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-pp6c-gr5w-3c5g",
+   "PYSEC-2026-3039"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-44431",
+   "component": "urllib3",
+   "reason": "recent",
+   "ecosystem": "pypi",
+   "published": "2026-05-13",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00339,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "2.6.1"
+   },
+   {
+    "variant": "V2",
+    "version": "2.2.3",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.7.0"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "types-urllib3"
+   },
+   {
+    "variant": "V7",
+    "version": "1.26.17",
+    "vendored": "pip",
+    "pip_version": "24.0"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "1.23",
+    "fixed": "2.7.0"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "1.23",
+     "fixed": "2.7.0"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-qccp-gfcp-xxvc",
+   "PYSEC-2026-141"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-45409",
+   "component": "idna",
+   "reason": "recent",
+   "ecosystem": "pypi",
+   "published": "2026-06-05",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00457,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "3.14"
+   },
+   {
+    "variant": "V2",
+    "version": "0.4",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "3.15"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V7",
+    "version": "3.4",
+    "vendored": "pip",
+    "pip_version": "24.0"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "3.15"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "3.15"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-65pc-fj4g-8rjx",
+   "PYSEC-2026-215"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-48522",
+   "component": "pyjwt",
+   "reason": "recent",
+   "ecosystem": "pypi",
+   "published": "2026-05-28",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.0022,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "2.11.0"
+   },
+   {
+    "variant": "V2",
+    "version": "2.0.1",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.13.0"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "jwt"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "2.0.0",
+    "fixed": "2.13.0"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "2.13.0"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-993g-76c3-p5m4",
+   "PYSEC-2026-175"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-48710",
+   "component": "starlette",
+   "reason": "kev",
+   "ecosystem": "pypi",
+   "published": "2026-05-26",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": true,
+   "epss": 0.07056,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "0.52.0"
+   },
+   {
+    "variant": "V2",
+    "version": "0.19.0",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "1.0.1"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "hypercorn"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "1.0.1"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "1.0.1"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-86qp-5c8j-p5mr",
+   "PYSEC-2026-161"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-49854",
+   "component": "tornado",
+   "reason": "recent",
+   "ecosystem": "pypi",
+   "published": "2026-07-14",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00419,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "6.5.3"
+   },
+   {
+    "variant": "V2",
+    "version": "3.0",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "6.5.6"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "6.5.6"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "6.5.6"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-cx3h-4qpv-8hc9",
+   "PYSEC-2026-3388"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-54282",
+   "component": "starlette",
+   "reason": "recent",
+   "ecosystem": "pypi",
+   "published": "2026-06-22",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00273,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "1.2.1"
+   },
+   {
+    "variant": "V2",
+    "version": "0.47.3",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "1.3.0"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "hypercorn"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "1.3.0"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "1.3.0"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-jp82-jpqv-5vv3",
+   "PYSEC-2026-248"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-59890",
+   "component": "setuptools",
+   "reason": "recent",
+   "ecosystem": "pypi",
+   "published": "2026-07-08",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00405,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "82.0.0"
+   },
+   {
+    "variant": "V2",
+    "version": "32.3.1",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "83.0.0"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "wheel"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "83.0.0"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "83.0.0"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-h35f-9h28-mq5c",
+   "PYSEC-2026-3447"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-64849",
+   "component": "mlflow",
+   "reason": "kev",
+   "ecosystem": "pypi",
+   "published": "2026-08-17",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": true,
+   "epss": 0.09839,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "3.14.0"
+   },
+   {
+    "variant": "V2",
+    "version": "3.10.1",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "3.15.0"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "3.3.0",
+    "fixed": "3.15.0"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "3.15.0"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-7gwp-5pfp-969j",
+   "PYSEC-2026-3687"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-6907",
+   "component": "django",
+   "reason": "recent",
+   "ecosystem": "pypi",
+   "published": "2026-05-05",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00439,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "6.0.3"
+   },
+   {
+    "variant": "V2",
+    "version": "5.2.13",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "6.0.5"
+   },
+   {
+    "variant": "V4",
+    "version": "5.2.14"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "django-environ"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "6.0",
+    "fixed": "6.0.5"
+   },
+   {
+    "introduced": "5.2",
+    "fixed": "5.2.14"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "5.2",
+     "fixed": "5.2.14"
+    },
+    {
+     "introduced": "6.0",
+     "fixed": "6.0.5"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-5hrc-gvxj-w55p",
+   "PYSEC-2026-55"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-69249",
+   "component": "cryptography",
+   "reason": "recent",
+   "ecosystem": "pypi",
+   "published": "2026-08-03",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00252,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "48.0.1"
+   },
+   {
+    "variant": "V2",
+    "version": "46.0.1",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "49.0.0"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "pycryptodome"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "42.0.0",
+    "fixed": "49.0.0"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "0",
+     "fixed": "49.0.0"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-jwv3-5hgf-82ww",
+   "PYSEC-2026-3553"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-8404",
+   "component": "django",
+   "reason": "recent",
+   "ecosystem": "pypi",
+   "published": "2026-06-03",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00429,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V2",
+    "version": "6.0.3"
+   },
+   {
+    "variant": "V2",
+    "version": "5.2.14",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "6.0.6"
+   },
+   {
+    "variant": "V4",
+    "version": "5.2.15"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "django-environ"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "5.2.15"
+   },
+   {
+    "introduced": "6.0.0",
+    "fixed": "6.0.6"
+   }
+  ],
+  "alt_ranges": [
+   [
+    {
+     "introduced": "5.2",
+     "fixed": "5.2.15"
+    },
+    {
+     "introduced": "6.0",
+     "fixed": "6.0.6"
+    }
+   ]
+  ],
+  "osv_ids": [
+   "GHSA-8cjm-8mp7-r2xf",
+   "PYSEC-2026-201"
+  ]
+ },
+ {
+  "sel": {
+   "cve": "CVE-2017-12617",
+   "component": "tomcat",
+   "reason": "config",
+   "ecosystem": "vendor",
+   "published": "2017-10-04",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.99968,
+   "config_gated": true,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "8.5.20"
+   },
+   {
+    "variant": "V8",
+    "version": "8.0.46",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "9.0.1"
+   },
+   {
+    "variant": "V4",
+    "version": "8.5.23"
+   },
+   {
+    "variant": "V5",
+    "version": "8.5.20"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "httpd"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "7.0.0",
+    "fixed": "7.0.82"
+   },
+   {
+    "introduced": "8.0.0",
+    "fixed": "8.0.47"
+   },
+   {
+    "introduced": "8.5.0",
+    "fixed": "8.5.23"
+   },
+   {
+    "introduced": "9.0.0.M1",
+    "fixed": "9.0.1"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2018-1000861",
+   "component": "jenkins",
+   "reason": "kev",
+   "ecosystem": "vendor",
+   "published": "2018-12-10",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.98326,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "2.151"
+   },
+   {
+    "variant": "V8",
+    "version": "2.138.3",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.154"
+   },
+   {
+    "variant": "V4",
+    "version": "2.138.4"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "jenkins-agent"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "2.138.4"
+   },
+   {
+    "introduced": "2.139",
+    "fixed": "2.154"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2020-1938",
+   "component": "tomcat",
+   "reason": "config",
+   "ecosystem": "vendor",
+   "published": "2020-02-24",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.9927,
+   "config_gated": true,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "9.0.30"
+   },
+   {
+    "variant": "V8",
+    "version": "8.5.50",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "9.0.31"
+   },
+   {
+    "variant": "V4",
+    "version": "8.5.51"
+   },
+   {
+    "variant": "V5",
+    "version": "9.0.30"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "httpd"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "7.0.0",
+    "fixed": "7.0.100"
+   },
+   {
+    "introduced": "8.5.0",
+    "fixed": "8.5.51"
+   },
+   {
+    "introduced": "9.0.0.M1",
+    "fixed": "9.0.31"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2020-9484",
+   "component": "tomcat",
+   "reason": "config",
+   "ecosystem": "vendor",
+   "published": "2020-05-20",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": false,
+   "epss": 0.5552,
+   "config_gated": true,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "10.0.0"
+   },
+   {
+    "variant": "V8",
+    "version": "9.0.41",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "10.0.2"
+   },
+   {
+    "variant": "V4",
+    "version": "9.0.43"
+   },
+   {
+    "variant": "V5",
+    "version": "10.0.0"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "httpd"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "7.0.0",
+    "fixed": "7.0.108"
+   },
+   {
+    "introduced": "8.5.0",
+    "fixed": "8.5.63"
+   },
+   {
+    "introduced": "9.0.0.M1",
+    "fixed": "9.0.43"
+   },
+   {
+    "introduced": "10.0.0-M1",
+    "fixed": "10.0.2"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2021-22205",
+   "component": "gitlab",
+   "reason": "kev",
+   "ecosystem": "vendor",
+   "published": "2021-04-23",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.99731,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "13.10.2"
+   },
+   {
+    "variant": "V8",
+    "version": "13.9.5",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "13.10.3"
+   },
+   {
+    "variant": "V4",
+    "version": "13.9.6"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "gitlab-runner"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "11.9.0",
+    "fixed": "13.8.8"
+   },
+   {
+    "introduced": "13.9.0",
+    "fixed": "13.9.6"
+   },
+   {
+    "introduced": "13.10.0",
+    "fixed": "13.10.3"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2021-40438",
+   "component": "httpd",
+   "reason": "config",
+   "ecosystem": "vendor",
+   "published": "2021-09-16",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.99999,
+   "config_gated": true,
+   "split": "test",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "2.4.46"
+   },
+   {
+    "variant": "V8",
+    "version": "2.4.33",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.4.49"
+   },
+   {
+    "variant": "V5",
+    "version": "2.4.46"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "tomcat"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "2.4.49"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2021-41773",
+   "component": "httpd",
+   "reason": "config",
+   "ecosystem": "vendor",
+   "published": "2021-10-05",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.99992,
+   "config_gated": true,
+   "split": "calib",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "2.4.49"
+   },
+   {
+    "variant": "V3",
+    "version": "2.4.50"
+   },
+   {
+    "variant": "V5",
+    "version": "2.4.49"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "tomcat"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "2.4.49",
+    "fixed": "2.4.50"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2021-42013",
+   "component": "httpd",
+   "reason": "config",
+   "ecosystem": "vendor",
+   "published": "2021-10-07",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.99964,
+   "config_gated": true,
+   "split": "calib",
+   "split_source": "D1 (kept)"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "2.4.49"
+   },
+   {
+    "variant": "V3",
+    "version": "2.4.51"
+   },
+   {
+    "variant": "V5",
+    "version": "2.4.49"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "tomcat"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "2.4.49",
+    "fixed": "2.4.51"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-43770",
+   "component": "roundcube",
+   "reason": "kev",
+   "ecosystem": "vendor",
+   "published": "2023-09-22",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.6366,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "1.6.0"
+   },
+   {
+    "variant": "V8",
+    "version": "1.5.3",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "1.6.3"
+   },
+   {
+    "variant": "V4",
+    "version": "1.5.4"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "rcmcarddav"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "1.4.14"
+   },
+   {
+    "introduced": "1.5.0",
+    "fixed": "1.5.4"
+   },
+   {
+    "introduced": "1.6.0",
+    "fixed": "1.6.3"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2023-7028",
+   "component": "gitlab",
+   "reason": "kev",
+   "ecosystem": "vendor",
+   "published": "2024-01-12",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.94647,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "16.7.0"
+   },
+   {
+    "variant": "V8",
+    "version": "16.6.2",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "16.7.2"
+   },
+   {
+    "variant": "V4",
+    "version": "16.6.4"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "gitlab-runner"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "16.1.0",
+    "fixed": "16.1.6"
+   },
+   {
+    "introduced": "16.2.0",
+    "fixed": "16.2.9"
+   },
+   {
+    "introduced": "16.3.0",
+    "fixed": "16.3.7"
+   },
+   {
+    "introduced": "16.4.0",
+    "fixed": "16.4.5"
+   },
+   {
+    "introduced": "16.5.0",
+    "fixed": "16.5.6"
+   },
+   {
+    "introduced": "16.6.0",
+    "fixed": "16.6.4"
+   },
+   {
+    "introduced": "16.7.0",
+    "fixed": "16.7.2"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-23897",
+   "component": "jenkins",
+   "reason": "kev",
+   "ecosystem": "vendor",
+   "published": "2024-01-24",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.99999,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "2.441"
+   },
+   {
+    "variant": "V8",
+    "version": "2.426.2",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.442"
+   },
+   {
+    "variant": "V4",
+    "version": "2.426.3"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "jenkins-agent"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "2.426.3"
+   },
+   {
+    "introduced": "2.427",
+    "fixed": "2.442"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2024-37383",
+   "component": "roundcube",
+   "reason": "kev",
+   "ecosystem": "vendor",
+   "published": "2024-06-07",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.73296,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "1.6.4"
+   },
+   {
+    "variant": "V8",
+    "version": "1.5.6",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "1.6.7"
+   },
+   {
+    "variant": "V4",
+    "version": "1.5.7"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "rcmcarddav"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "1.5.7"
+   },
+   {
+    "introduced": "1.6.0",
+    "fixed": "1.6.7"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2025-24813",
+   "component": "tomcat",
+   "reason": "config",
+   "ecosystem": "vendor",
+   "published": "2025-03-10",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.99927,
+   "config_gated": true,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "11.0.0"
+   },
+   {
+    "variant": "V8",
+    "version": "10.1.34",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "11.0.3"
+   },
+   {
+    "variant": "V4",
+    "version": "10.1.35"
+   },
+   {
+    "variant": "V5",
+    "version": "11.0.0"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "httpd"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "8.5.0",
+    "fixed": "9.0.99"
+   },
+   {
+    "introduced": "10.1.0-M1",
+    "fixed": "10.1.35"
+   },
+   {
+    "introduced": "11.0.0-M1",
+    "fixed": "11.0.3"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2025-49113",
+   "component": "roundcube",
+   "reason": "kev",
+   "ecosystem": "vendor",
+   "published": "2025-06-02",
+   "published_source": "nvd",
+   "temporal_holdout": false,
+   "kev": true,
+   "epss": 0.98897,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "1.6.9"
+   },
+   {
+    "variant": "V8",
+    "version": "1.5.9",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "1.6.11"
+   },
+   {
+    "variant": "V4",
+    "version": "1.5.10"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "rcmcarddav"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "1.5.10"
+   },
+   {
+    "introduced": "1.6.0",
+    "fixed": "1.6.11"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-10733",
+   "component": "gitlab",
+   "reason": "recent",
+   "ecosystem": "vendor",
+   "published": "2026-06-11",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.0022,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "19.0.1"
+   },
+   {
+    "variant": "V8",
+    "version": "18.11.4",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "19.0.2"
+   },
+   {
+    "variant": "V4",
+    "version": "18.11.5"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "gitlab-runner"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "17.0.0",
+    "fixed": "18.10.8"
+   },
+   {
+    "introduced": "18.11.0",
+    "fixed": "18.11.5"
+   },
+   {
+    "introduced": "19.0.0",
+    "fixed": "19.0.2"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-29167",
+   "component": "httpd",
+   "reason": "recent",
+   "ecosystem": "vendor",
+   "published": "2026-06-08",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00688,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "2.4.67"
+   },
+   {
+    "variant": "V8",
+    "version": "2.4.41",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.4.68"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "tomcat"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "2.4.0",
+    "fixed": "2.4.68"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-34059",
+   "component": "httpd",
+   "reason": "recent",
+   "ecosystem": "vendor",
+   "published": "2026-05-04",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00951,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "2.4.65"
+   },
+   {
+    "variant": "V8",
+    "version": "2.4.37",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.4.67"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "tomcat"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "2.4.67"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-53435",
+   "component": "jenkins",
+   "reason": "recent",
+   "ecosystem": "vendor",
+   "published": "2026-06-10",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.02163,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "2.566"
+   },
+   {
+    "variant": "V8",
+    "version": "2.555.2",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.568"
+   },
+   {
+    "variant": "V4",
+    "version": "2.555.3"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "jenkins-agent"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "2.555.3"
+   },
+   {
+    "introduced": "2.556",
+    "fixed": "2.568"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-55276",
+   "component": "tomcat",
+   "reason": "recent",
+   "ecosystem": "vendor",
+   "published": "2026-06-29",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00607,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "11.0.22"
+   },
+   {
+    "variant": "V8",
+    "version": "10.1.55",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "11.0.23"
+   },
+   {
+    "variant": "V4",
+    "version": "10.1.56"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "httpd"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "9.0.119"
+   },
+   {
+    "introduced": "10.1.0",
+    "fixed": "10.1.56"
+   },
+   {
+    "introduced": "11.0.0",
+    "fixed": "11.0.23"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-55956",
+   "component": "tomcat",
+   "reason": "recent",
+   "ecosystem": "vendor",
+   "published": "2026-06-29",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00695,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "11.0.21"
+   },
+   {
+    "variant": "V8",
+    "version": "10.1.55",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "11.0.23"
+   },
+   {
+    "variant": "V4",
+    "version": "10.1.56"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "httpd"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "9.0.119"
+   },
+   {
+    "introduced": "10.1.0",
+    "fixed": "10.1.56"
+   },
+   {
+    "introduced": "11.0.0",
+    "fixed": "11.0.23"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-56153",
+   "component": "httpd",
+   "reason": "recent",
+   "ecosystem": "vendor",
+   "published": "2026-10-01",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00498,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "2.4.68"
+   },
+   {
+    "variant": "V8",
+    "version": "2.4.16",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.4.69"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "tomcat"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "2.4.0",
+    "fixed": "2.4.69"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-62643",
+   "component": "roundcube",
+   "reason": "recent",
+   "ecosystem": "vendor",
+   "published": "2026-07-14",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.0044,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "1.7.0"
+   },
+   {
+    "variant": "V8",
+    "version": "1.6.16",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "1.7.2"
+   },
+   {
+    "variant": "V4",
+    "version": "1.6.17"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "rcmcarddav"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "1.6.17"
+   },
+   {
+    "introduced": "1.7.0",
+    "fixed": "1.7.2"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-65183",
+   "component": "tomcat",
+   "reason": "recent",
+   "ecosystem": "vendor",
+   "published": "2026-08-25",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00398,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "11.0.23"
+   },
+   {
+    "variant": "V8",
+    "version": "10.1.57",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "11.0.25"
+   },
+   {
+    "variant": "V4",
+    "version": "10.1.59"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "httpd"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "9.0.42",
+    "fixed": "9.0.121"
+   },
+   {
+    "introduced": "10.1.0",
+    "fixed": "10.1.58"
+   },
+   {
+    "introduced": "11.0.0",
+    "fixed": "11.0.25"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-68763",
+   "component": "tomcat",
+   "reason": "recent",
+   "ecosystem": "vendor",
+   "published": "2026-08-25",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00745,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "11.0.22"
+   },
+   {
+    "variant": "V8",
+    "version": "10.1.57",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "11.0.25"
+   },
+   {
+    "variant": "V4",
+    "version": "10.1.59"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "httpd"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "8.5.59",
+    "fixed": "9.0.121"
+   },
+   {
+    "introduced": "10.1.0",
+    "fixed": "10.1.58"
+   },
+   {
+    "introduced": "11.0.0",
+    "fixed": "11.0.25"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-70430",
+   "component": "jenkins",
+   "reason": "recent",
+   "ecosystem": "vendor",
+   "published": "2026-08-05",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.00311,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "2.574"
+   },
+   {
+    "variant": "V8",
+    "version": "2.568.1",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.576"
+   },
+   {
+    "variant": "V4",
+    "version": "2.568.2"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "jenkins-agent"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "2.568.2"
+   },
+   {
+    "introduced": "2.569",
+    "fixed": "2.576"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-75007",
+   "component": "roundcube",
+   "reason": "recent",
+   "ecosystem": "vendor",
+   "published": "2026-08-17",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.005,
+   "config_gated": false,
+   "split": "calib",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "1.7.0"
+   },
+   {
+    "variant": "V8",
+    "version": "1.6.17",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "1.7.3"
+   },
+   {
+    "variant": "V4",
+    "version": "1.6.18"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "rcmcarddav"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "1.6.18"
+   },
+   {
+    "introduced": "1.7.0",
+    "fixed": "1.7.3"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-8280",
+   "component": "gitlab",
+   "reason": "recent",
+   "ecosystem": "vendor",
+   "published": "2026-05-14",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.0053,
+   "config_gated": false,
+   "split": "dev",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "18.11.2"
+   },
+   {
+    "variant": "V8",
+    "version": "18.10.5",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "18.11.3"
+   },
+   {
+    "variant": "V4",
+    "version": "18.10.6"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "gitlab-runner"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "8.3.0",
+    "fixed": "18.9.7"
+   },
+   {
+    "introduced": "18.10.0",
+    "fixed": "18.10.6"
+   },
+   {
+    "introduced": "18.11.0",
+    "fixed": "18.11.3"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ },
+ {
+  "sel": {
+   "cve": "CVE-2026-84645",
+   "component": "jenkins",
+   "reason": "recent",
+   "ecosystem": "vendor",
+   "published": "2026-09-02",
+   "published_source": "nvd",
+   "temporal_holdout": true,
+   "kev": false,
+   "epss": 0.0079,
+   "config_gated": false,
+   "split": "test",
+   "split_source": "seeded"
+  },
+  "plans": [
+   {
+    "variant": "V8",
+    "version": "2.577"
+   },
+   {
+    "variant": "V8",
+    "version": "2.568.2",
+    "tag": "b2"
+   },
+   {
+    "variant": "V3",
+    "version": "2.580"
+   },
+   {
+    "variant": "V4",
+    "version": "2.568.3"
+   },
+   {
+    "variant": "V1",
+    "version": null
+   },
+   {
+    "variant": "V6",
+    "version": null,
+    "decoy": "jenkins-agent"
+   }
+  ],
+  "ranges": [
+   {
+    "introduced": "0",
+    "fixed": "2.568.3"
+   },
+   {
+    "introduced": "2.569",
+    "fixed": "2.580"
+   }
+  ],
+  "alt_ranges": [],
+  "osv_ids": []
+ }
+]

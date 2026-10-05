@@ -1,0 +1,8 @@
+{
+ "record_keys_matching_repair_fallback_valid_retry": [],
+ "note": "keys searched in every DC record (excluding calls/trace) with regex repair|fallback|valid|retry|regenerat",
+ "extraction_verifier_verdicts": {
+  "installed_version|accepted=True|accepted": 2407,
+  "installed_version|accepted=False|span does not name the case component": 40
+ }
+}

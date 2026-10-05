@@ -1,0 +1,705 @@
+{
+ "files": {
+  "archive.apache.org/dist/tomcat/tomcat-10/v10.1.59/bin/apache-tomcat-10.1.59.tar.gz": {
+   "bytes": 14424246,
+   "files": [
+    "NOTICE",
+    "RELEASE-NOTES",
+    "RUNNING.txt",
+    "conf/catalina.properties",
+    "conf/context.xml",
+    "conf/logging.properties",
+    "conf/server.xml",
+    "conf/tomcat-users.xml",
+    "conf/web.xml"
+   ],
+   "retrieved_at": "2026-10-05T16:00:11Z",
+   "sha256": "15e435e8ecafd30e500dec7cd30fc289aed4cd8743db14d55024896be77d9241",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.59/bin/apache-tomcat-10.1.59.tar.gz"
+  },
+  "archive.apache.org/dist/tomcat/tomcat-11/v11.0.0/bin/apache-tomcat-11.0.0.tar.gz": {
+   "bytes": 13609083,
+   "files": [
+    "NOTICE",
+    "RELEASE-NOTES",
+    "RUNNING.txt",
+    "conf/catalina.properties",
+    "conf/context.xml",
+    "conf/logging.properties",
+    "conf/server.xml",
+    "conf/tomcat-users.xml",
+    "conf/web.xml"
+   ],
+   "retrieved_at": "2026-10-05T15:59:29Z",
+   "sha256": "d0ca319af349838f59009a9c5ed3709f02344201059dbc26dce4313ee969cd20",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-11/v11.0.0/bin/apache-tomcat-11.0.0.tar.gz"
+  },
+  "archive.apache.org/dist/tomcat/tomcat-11/v11.0.21/bin/apache-tomcat-11.0.21.tar.gz": {
+   "bytes": 14357540,
+   "files": [
+    "NOTICE",
+    "RELEASE-NOTES",
+    "RUNNING.txt",
+    "conf/catalina.properties",
+    "conf/context.xml",
+    "conf/logging.properties",
+    "conf/server.xml",
+    "conf/tomcat-users.xml",
+    "conf/web.xml"
+   ],
+   "retrieved_at": "2026-10-05T15:58:24Z",
+   "sha256": "989033650c7d880377e026307b6ab0b51deafe9e8ea0e398ead038ccfa62756d",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-11/v11.0.21/bin/apache-tomcat-11.0.21.tar.gz"
+  },
+  "archive.apache.org/dist/tomcat/tomcat-11/v11.0.22/bin/apache-tomcat-11.0.22.tar.gz": {
+   "bytes": 14370214,
+   "files": [
+    "NOTICE",
+    "RELEASE-NOTES",
+    "RUNNING.txt",
+    "conf/catalina.properties",
+    "conf/context.xml",
+    "conf/logging.properties",
+    "conf/server.xml",
+    "conf/tomcat-users.xml",
+    "conf/web.xml"
+   ],
+   "retrieved_at": "2026-10-05T15:59:51Z",
+   "sha256": "73d239232f14dfde2278e8d931f767ed454aed9b018e4d70a1d404c2579b5998",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-11/v11.0.22/bin/apache-tomcat-11.0.22.tar.gz"
+  },
+  "archive.apache.org/dist/tomcat/tomcat-11/v11.0.23/bin/apache-tomcat-11.0.23.tar.gz": {
+   "bytes": 14414365,
+   "files": [
+    "NOTICE",
+    "RELEASE-NOTES",
+    "RUNNING.txt",
+    "conf/catalina.properties",
+    "conf/context.xml",
+    "conf/logging.properties",
+    "conf/server.xml",
+    "conf/tomcat-users.xml",
+    "conf/web.xml"
+   ],
+   "retrieved_at": "2026-10-05T16:00:25Z",
+   "sha256": "0473e3e87c88ecf5c1ac3cd046b504573aa4de39fc5f4bf865ae807cf8c5546e",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-11/v11.0.23/bin/apache-tomcat-11.0.23.tar.gz"
+  },
+  "archive.apache.org/dist/tomcat/tomcat-11/v11.0.25/bin/apache-tomcat-11.0.25.tar.gz": {
+   "bytes": 14466222,
+   "files": [
+    "NOTICE",
+    "RELEASE-NOTES",
+    "RUNNING.txt",
+    "conf/catalina.properties",
+    "conf/context.xml",
+    "conf/logging.properties",
+    "conf/server.xml",
+    "conf/tomcat-users.xml",
+    "conf/web.xml"
+   ],
+   "retrieved_at": "2026-10-05T15:59:33Z",
+   "sha256": "071ae2c6213e3c02c58b8581113b7887a96ef2756439b3c5be36fa6aec350090",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-11/v11.0.25/bin/apache-tomcat-11.0.25.tar.gz"
+  },
+  "archive.apache.org/dist/tomcat/tomcat-11/v11.0.3/bin/apache-tomcat-11.0.3.tar.gz": {
+   "bytes": 13846128,
+   "files": [
+    "NOTICE",
+    "RELEASE-NOTES",
+    "RUNNING.txt",
+    "conf/catalina.properties",
+    "conf/context.xml",
+    "conf/logging.properties",
+    "conf/server.xml",
+    "conf/tomcat-users.xml",
+    "conf/web.xml"
+   ],
+   "retrieved_at": "2026-10-05T16:00:31Z",
+   "sha256": "00a01f9886593859716bc40473db6db9d5c0c3b5569c810898e33d73157aba56",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-11/v11.0.3/bin/apache-tomcat-11.0.3.tar.gz"
+  },
+  "archive.apache.org/dist/tomcat/tomcat-8/v8.0.46/bin/apache-tomcat-8.0.46.tar.gz": {
+   "bytes": 9352747,
+   "files": [
+    "NOTICE",
+    "RELEASE-NOTES",
+    "RUNNING.txt",
+    "conf/catalina.properties",
+    "conf/context.xml",
+    "conf/logging.properties",
+    "conf/server.xml",
+    "conf/tomcat-users.xml",
+    "conf/web.xml"
+   ],
+   "retrieved_at": "2026-10-05T16:01:45Z",
+   "sha256": "f37e8bdc76c5b36e6b78fe3f40988c16b3f905739ad5bdb99102fcb35e4d8b93",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-8/v8.0.46/bin/apache-tomcat-8.0.46.tar.gz"
+  },
+  "archive.apache.org/dist/tomcat/tomcat-8/v8.5.20/bin/apache-tomcat-8.5.20.tar.gz": {
+   "bytes": 9433364,
+   "files": [
+    "NOTICE",
+    "RELEASE-NOTES",
+    "RUNNING.txt",
+    "conf/catalina.properties",
+    "conf/context.xml",
+    "conf/logging.properties",
+    "conf/server.xml",
+    "conf/tomcat-users.xml",
+    "conf/web.xml"
+   ],
+   "retrieved_at": "2026-10-05T16:00:26Z",
+   "sha256": "0a5db37147b4874e378417628514662d16f23f1f79659297b3526ba57e7facd0",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.20/bin/apache-tomcat-8.5.20.tar.gz"
+  },
+  "archive.apache.org/dist/tomcat/tomcat-8/v8.5.23/bin/apache-tomcat-8.5.23.tar.gz": {
+   "bytes": 9472492,
+   "files": [
+    "NOTICE",
+    "RELEASE-NOTES",
+    "RUNNING.txt",
+    "conf/catalina.properties",
+    "conf/context.xml",
+    "conf/logging.properties",
+    "conf/server.xml",
+    "conf/tomcat-users.xml",
+    "conf/web.xml"
+   ],
+   "retrieved_at": "2026-10-05T16:01:33Z",
+   "sha256": "36aace475dd609ee2123eb3674a095ef7d4dcbbfb322cb85c38095d3c1e1dce2",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.23/bin/apache-tomcat-8.5.23.tar.gz"
+  },
+  "archive.apache.org/dist/tomcat/tomcat-8/v8.5.50/bin/apache-tomcat-8.5.50.tar.gz": {
+   "bytes": 10305939,
+   "files": [
+    "NOTICE",
+    "RELEASE-NOTES",
+    "RUNNING.txt",
+    "conf/catalina.properties",
+    "conf/context.xml",
+    "conf/logging.properties",
+    "conf/server.xml",
+    "conf/tomcat-users.xml",
+    "conf/web.xml"
+   ],
+   "retrieved_at": "2026-10-05T16:02:12Z",
+   "sha256": "ea762293e889f85d40f5ec14ac4474e133a379522d623f4ba5993da6260bf06e",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.50/bin/apache-tomcat-8.5.50.tar.gz"
+  },
+  "archive.apache.org/dist/tomcat/tomcat-8/v8.5.51/bin/apache-tomcat-8.5.51.tar.gz": {
+   "bytes": 10315164,
+   "files": [
+    "NOTICE",
+    "RELEASE-NOTES",
+    "RUNNING.txt",
+    "conf/catalina.properties",
+    "conf/context.xml",
+    "conf/logging.properties",
+    "conf/server.xml",
+    "conf/tomcat-users.xml",
+    "conf/web.xml"
+   ],
+   "retrieved_at": "2026-10-05T16:01:21Z",
+   "sha256": "836ecd816605e281636cae78c5b494ccaeb168c24f8266a72e9e704b2204affe",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.51/bin/apache-tomcat-8.5.51.tar.gz"
+  },
+  "archive.apache.org/dist/tomcat/tomcat-9/v9.0.1/bin/apache-tomcat-9.0.1.tar.gz": {
+   "bytes": 9397803,
+   "files": [
+    "NOTICE",
+    "RELEASE-NOTES",
+    "RUNNING.txt",
+    "conf/catalina.properties",
+    "conf/context.xml",
+    "conf/logging.properties",
+    "conf/server.xml",
+    "conf/tomcat-users.xml",
+    "conf/web.xml"
+   ],
+   "retrieved_at": "2026-10-05T16:01:22Z",
+   "sha256": "976d9aa996fc34d387ef8de87eed79c5f20c0679b76c1a1fcf331eaa7cdf758f",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.1/bin/apache-tomcat-9.0.1.tar.gz"
+  },
+  "archive.apache.org/dist/tomcat/tomcat-9/v9.0.30/bin/apache-tomcat-9.0.30.tar.gz": {
+   "bytes": 11026056,
+   "files": [
+    "NOTICE",
+    "RELEASE-NOTES",
+    "RUNNING.txt",
+    "conf/catalina.properties",
+    "conf/context.xml",
+    "conf/logging.properties",
+    "conf/server.xml",
+    "conf/tomcat-users.xml",
+    "conf/web.xml"
+   ],
+   "retrieved_at": "2026-10-05T16:02:05Z",
+   "sha256": "43a9b268671bbd3aace427637fbf577e742b521901e111342321ae901478100b",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.30/bin/apache-tomcat-9.0.30.tar.gz"
+  },
+  "archive.apache.org/dist/tomcat/tomcat-9/v9.0.31/bin/apache-tomcat-9.0.31.tar.gz": {
+   "bytes": 11042076,
+   "files": [
+    "NOTICE",
+    "RELEASE-NOTES",
+    "RUNNING.txt",
+    "conf/catalina.properties",
+    "conf/context.xml",
+    "conf/logging.properties",
+    "conf/server.xml",
+    "conf/tomcat-users.xml",
+    "conf/web.xml"
+   ],
+   "retrieved_at": "2026-10-05T16:02:25Z",
+   "sha256": "1b111d890f8c0b3f3eb7f8f8f557a8e163ef6b06bca3e262ba1062808467cb43",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.31/bin/apache-tomcat-9.0.31.tar.gz"
+  },
+  "archive.apache.org/dist/tomcat/tomcat-9/v9.0.41/bin/apache-tomcat-9.0.41.tar.gz": {
+   "bytes": 11442169,
+   "files": [
+    "NOTICE",
+    "RELEASE-NOTES",
+    "RUNNING.txt",
+    "conf/catalina.properties",
+    "conf/context.xml",
+    "conf/logging.properties",
+    "conf/server.xml",
+    "conf/tomcat-users.xml",
+    "conf/web.xml"
+   ],
+   "retrieved_at": "2026-10-05T16:02:45Z",
+   "sha256": "6a5fc1f79f002f25480e3a50daa1fb16fdb2f0a969bc2f806c88bc550002cf71",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.41/bin/apache-tomcat-9.0.41.tar.gz"
+  },
+  "archive.apache.org/dist/tomcat/tomcat-9/v9.0.43/bin/apache-tomcat-9.0.43.tar.gz": {
+   "bytes": 11483588,
+   "files": [
+    "NOTICE",
+    "RELEASE-NOTES",
+    "RUNNING.txt",
+    "conf/catalina.properties",
+    "conf/context.xml",
+    "conf/logging.properties",
+    "conf/server.xml",
+    "conf/tomcat-users.xml",
+    "conf/web.xml"
+   ],
+   "retrieved_at": "2026-10-05T16:03:59Z",
+   "sha256": "30703af07182c3c815a7e44376939b69da406ab64bd6f9c5ced9c455ad013a1b",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.43/bin/apache-tomcat-9.0.43.tar.gz"
+  },
+  "github.com/roundcube/roundcubemail/releases/download/1.5.10/roundcubemail-1.5.10.tar.gz": {
+   "bytes": 4552887,
+   "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "config/defaults.inc.php",
+    "program/include/iniset.php"
+   ],
+   "retrieved_at": "2026-10-05T15:57:07Z",
+   "sha256": "406b3629f20088cdc8546d745143d71497dcbb47039e923ddb02ad128bceff48",
+   "url": "https://github.com/roundcube/roundcubemail/releases/download/1.5.10/roundcubemail-1.5.10.tar.gz"
+  },
+  "github.com/roundcube/roundcubemail/releases/download/1.5.3/roundcubemail-1.5.3.tar.gz": {
+   "bytes": 4583382,
+   "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "config/defaults.inc.php",
+    "program/include/iniset.php"
+   ],
+   "retrieved_at": "2026-10-05T15:57:08Z",
+   "sha256": "22fdfa0f868fc478dfbb1dfa9bcd5fc91be981182334ca6079ad1ae03ac4c96e",
+   "url": "https://github.com/roundcube/roundcubemail/releases/download/1.5.3/roundcubemail-1.5.3.tar.gz"
+  },
+  "github.com/roundcube/roundcubemail/releases/download/1.5.4/roundcubemail-1.5.4.tar.gz": {
+   "bytes": 4600039,
+   "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "config/defaults.inc.php",
+    "program/include/iniset.php"
+   ],
+   "retrieved_at": "2026-10-05T15:57:08Z",
+   "sha256": "264d04050596715b01f43a8c49c1fac8e273a7b8e20a22bc46e6289f50081130",
+   "url": "https://github.com/roundcube/roundcubemail/releases/download/1.5.4/roundcubemail-1.5.4.tar.gz"
+  },
+  "github.com/roundcube/roundcubemail/releases/download/1.5.6/roundcubemail-1.5.6.tar.gz": {
+   "bytes": 4600657,
+   "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "config/defaults.inc.php",
+    "program/include/iniset.php"
+   ],
+   "retrieved_at": "2026-10-05T15:57:09Z",
+   "sha256": "a92881bc1c70abb0cc52b546a4710a45b0c78fe41ce173fd76db9b190efa25d6",
+   "url": "https://github.com/roundcube/roundcubemail/releases/download/1.5.6/roundcubemail-1.5.6.tar.gz"
+  },
+  "github.com/roundcube/roundcubemail/releases/download/1.5.7/roundcubemail-1.5.7.tar.gz": {
+   "bytes": 4603158,
+   "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "config/defaults.inc.php",
+    "program/include/iniset.php"
+   ],
+   "retrieved_at": "2026-10-05T15:57:08Z",
+   "sha256": "27e152ba2efce059045a1e35c3a4ca6a1b8990dea21caf4fa48a12094d6de80e",
+   "url": "https://github.com/roundcube/roundcubemail/releases/download/1.5.7/roundcubemail-1.5.7.tar.gz"
+  },
+  "github.com/roundcube/roundcubemail/releases/download/1.5.9/roundcubemail-1.5.9.tar.gz": {
+   "bytes": 4603355,
+   "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "config/defaults.inc.php",
+    "program/include/iniset.php"
+   ],
+   "retrieved_at": "2026-10-05T15:57:10Z",
+   "sha256": "5458e36ea91243e70185a45faa9c87fce5e6668099542afee4b38b0c3dc61cac",
+   "url": "https://github.com/roundcube/roundcubemail/releases/download/1.5.9/roundcubemail-1.5.9.tar.gz"
+  },
+  "github.com/roundcube/roundcubemail/releases/download/1.6.0/roundcubemail-1.6.0.tar.gz": {
+   "bytes": 3886912,
+   "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "config/defaults.inc.php",
+    "program/include/iniset.php"
+   ],
+   "retrieved_at": "2026-10-05T15:57:07Z",
+   "sha256": "1224eaf628888e503c49d0e8a69aa4997e566c3605738d0303d9c7a09722f363",
+   "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.0/roundcubemail-1.6.0.tar.gz"
+  },
+  "github.com/roundcube/roundcubemail/releases/download/1.6.11/roundcubemail-1.6.11.tar.gz": {
+   "bytes": 3905099,
+   "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "config/defaults.inc.php",
+    "program/include/iniset.php"
+   ],
+   "retrieved_at": "2026-10-05T15:57:08Z",
+   "sha256": "199e2713f55da2e91af0e2382b2abf7dab6e1bf1f773317c8a4e64dadc0fae8f",
+   "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.11/roundcubemail-1.6.11.tar.gz"
+  },
+  "github.com/roundcube/roundcubemail/releases/download/1.6.16/roundcubemail-1.6.16.tar.gz": {
+   "bytes": 3907258,
+   "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "config/defaults.inc.php",
+    "program/include/iniset.php"
+   ],
+   "retrieved_at": "2026-10-05T15:57:09Z",
+   "sha256": "44e917f7d4b0508ac5a8eaffa7985cd86fe8865d0fad2ab98a7e1e5768e07139",
+   "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.16/roundcubemail-1.6.16.tar.gz"
+  },
+  "github.com/roundcube/roundcubemail/releases/download/1.6.17/roundcubemail-1.6.17.tar.gz": {
+   "bytes": 3908806,
+   "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "config/defaults.inc.php",
+    "program/include/iniset.php"
+   ],
+   "retrieved_at": "2026-10-05T15:57:09Z",
+   "sha256": "b268f406b5d1d0acb7e7a8903558caeb52ee8c92e906bebee0b6a7f435f8cda7",
+   "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.17/roundcubemail-1.6.17.tar.gz"
+  },
+  "github.com/roundcube/roundcubemail/releases/download/1.6.18/roundcubemail-1.6.18.tar.gz": {
+   "bytes": 3910872,
+   "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "config/defaults.inc.php",
+    "program/include/iniset.php"
+   ],
+   "retrieved_at": "2026-10-05T15:57:08Z",
+   "sha256": "f77b619ad27b2a5d7e27f7717085a19ce370c81c475a6bc04279b92344f706f4",
+   "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.18/roundcubemail-1.6.18.tar.gz"
+  },
+  "github.com/roundcube/roundcubemail/releases/download/1.6.3/roundcubemail-1.6.3.tar.gz": {
+   "bytes": 3947036,
+   "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "config/defaults.inc.php",
+    "program/include/iniset.php"
+   ],
+   "retrieved_at": "2026-10-05T15:57:10Z",
+   "sha256": "9ed23673b5668d3face853d22d915f5e1162fb2abcd2e3e1c459449a0863551f",
+   "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.3/roundcubemail-1.6.3.tar.gz"
+  },
+  "github.com/roundcube/roundcubemail/releases/download/1.6.4/roundcubemail-1.6.4.tar.gz": {
+   "bytes": 3947013,
+   "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "config/defaults.inc.php",
+    "program/include/iniset.php"
+   ],
+   "retrieved_at": "2026-10-05T15:57:09Z",
+   "sha256": "f116dc5e874ca10e73d04efcb4a5ca90e3ca2a2923c0f0fa5b0f478192677656",
+   "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.4/roundcubemail-1.6.4.tar.gz"
+  },
+  "github.com/roundcube/roundcubemail/releases/download/1.6.7/roundcubemail-1.6.7.tar.gz": {
+   "bytes": 3946495,
+   "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "config/defaults.inc.php",
+    "program/include/iniset.php"
+   ],
+   "retrieved_at": "2026-10-05T15:57:10Z",
+   "sha256": "b12c4f9f84890830ce10e470ac0d698b7de00d29f432a9326b4cf8c590e558de",
+   "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.7/roundcubemail-1.6.7.tar.gz"
+  },
+  "github.com/roundcube/roundcubemail/releases/download/1.6.9/roundcubemail-1.6.9.tar.gz": {
+   "bytes": 3946988,
+   "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "config/defaults.inc.php",
+    "program/include/iniset.php"
+   ],
+   "retrieved_at": "2026-10-05T15:57:09Z",
+   "sha256": "5adaecacc7203ae844a4f452d6cc5eae94799f248825d5978ca48cb7a9d7a51c",
+   "url": "https://github.com/roundcube/roundcubemail/releases/download/1.6.9/roundcubemail-1.6.9.tar.gz"
+  },
+  "github.com/roundcube/roundcubemail/releases/download/1.7.0/roundcubemail-1.7.0.tar.gz": {
+   "bytes": 4210207,
+   "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "config/defaults.inc.php",
+    "program/include/iniset.php"
+   ],
+   "retrieved_at": "2026-10-05T15:57:11Z",
+   "sha256": "d84fb637e4ec36be96f98e719f65fab3c17b1dace8d2a590f948111e51847cba",
+   "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7.0/roundcubemail-1.7.0.tar.gz"
+  },
+  "github.com/roundcube/roundcubemail/releases/download/1.7.2/roundcubemail-1.7.2.tar.gz": {
+   "bytes": 4222480,
+   "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "config/defaults.inc.php",
+    "program/include/iniset.php"
+   ],
+   "retrieved_at": "2026-10-05T15:57:10Z",
+   "sha256": "18ea0458ef7212155979dd76cb00aec35f92e1e94a54263fb939adec28138da0",
+   "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7.2/roundcubemail-1.7.2.tar.gz"
+  },
+  "github.com/roundcube/roundcubemail/releases/download/1.7.3/roundcubemail-1.7.3.tar.gz": {
+   "bytes": 4225642,
+   "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "config/defaults.inc.php",
+    "program/include/iniset.php"
+   ],
+   "retrieved_at": "2026-10-05T15:57:10Z",
+   "sha256": "08916e7902c9afae7e57a4303de09f0110159823563b7b73d2bd18607aabf276",
+   "url": "https://github.com/roundcube/roundcubemail/releases/download/1.7.3/roundcubemail-1.7.3.tar.gz"
+  },
+  "raw/lists/gitlab_tags_v13.10.json": {
+   "bytes": 7858,
+   "retrieved_at": "2026-10-05T15:40:18Z",
+   "sha256": "08643b3579c4983b4c4261196fc50c1bd1891eea6ad0435598e999df3c413151",
+   "url": "https://gitlab.com/api/v4/projects/278964/repository/tags?search=%5Ev13.10.&per_page=100"
+  },
+  "raw/lists/gitlab_tags_v13.11.json": {
+   "bytes": 9568,
+   "retrieved_at": "2026-10-05T15:40:18Z",
+   "sha256": "59b740e1eb48e61f1df8f58fb0fced9c68e2fa5be64f4a7b518d142a820944fd",
+   "url": "https://gitlab.com/api/v4/projects/278964/repository/tags?search=%5Ev13.11.&per_page=100"
+  },
+  "raw/lists/gitlab_tags_v13.8.json": {
+   "bytes": 8661,
+   "retrieved_at": "2026-10-05T15:40:18Z",
+   "sha256": "28a3e2c9bbd9274e701cd2ff9fe8e3fa1ad64b2ad3cf78fc0b552a021751099f",
+   "url": "https://gitlab.com/api/v4/projects/278964/repository/tags?search=%5Ev13.8.&per_page=100"
+  },
+  "raw/lists/gitlab_tags_v13.9.json": {
+   "bytes": 9546,
+   "retrieved_at": "2026-10-05T15:40:18Z",
+   "sha256": "e90a09a299d2f5f8a573d7cb98b2ede4bfc14d23e8ea745223885f750ea13267",
+   "url": "https://gitlab.com/api/v4/projects/278964/repository/tags?search=%5Ev13.9.&per_page=100"
+  },
+  "raw/lists/gitlab_tags_v16.1.json": {
+   "bytes": 9422,
+   "retrieved_at": "2026-10-05T15:40:17Z",
+   "sha256": "0e8d9c6c0b1e241679550c9dd577818cbf2e48adf3ce3094476e31c1ab76341e",
+   "url": "https://gitlab.com/api/v4/projects/278964/repository/tags?search=%5Ev16.1.&per_page=100"
+  },
+  "raw/lists/gitlab_tags_v16.2.json": {
+   "bytes": 14646,
+   "retrieved_at": "2026-10-05T15:40:17Z",
+   "sha256": "e4ab4ef020c3412debb2767ed2646a8dbdc4aa8e7d25257cad44ef60902df012",
+   "url": "https://gitlab.com/api/v4/projects/278964/repository/tags?search=%5Ev16.2.&per_page=100"
+  },
+  "raw/lists/gitlab_tags_v16.3.json": {
+   "bytes": 11162,
+   "retrieved_at": "2026-10-05T15:40:17Z",
+   "sha256": "8c4a4389f6eaf0697e1476e8a9379a1451222ed27c172dea1ea75153101ac17e",
+   "url": "https://gitlab.com/api/v4/projects/278964/repository/tags?search=%5Ev16.3.&per_page=100"
+  },
+  "raw/lists/gitlab_tags_v16.4.json": {
+   "bytes": 9432,
+   "retrieved_at": "2026-10-05T15:40:17Z",
+   "sha256": "6c342f4713923733f4dec2f4c0d3dcaaa58b8c4d6357b265f4323ea4dc9cfa28",
+   "url": "https://gitlab.com/api/v4/projects/278964/repository/tags?search=%5Ev16.4.&per_page=100"
+  },
+  "raw/lists/gitlab_tags_v16.5.json": {
+   "bytes": 11126,
+   "retrieved_at": "2026-10-05T15:40:17Z",
+   "sha256": "9b2fce2f191b44e59f16d5cfd6d39e8fa655bb1014ca9e5c71acd5b6a81a5967",
+   "url": "https://gitlab.com/api/v4/projects/278964/repository/tags?search=%5Ev16.5.&per_page=100"
+  },
+  "raw/lists/gitlab_tags_v16.6.json": {
+   "bytes": 11963,
+   "retrieved_at": "2026-10-05T15:40:18Z",
+   "sha256": "da066567819183a7c270a2b30c1e30e70d4c5c80c03b02be95f6b17ec0ecdcaf",
+   "url": "https://gitlab.com/api/v4/projects/278964/repository/tags?search=%5Ev16.6.&per_page=100"
+  },
+  "raw/lists/gitlab_tags_v16.7.json": {
+   "bytes": 11811,
+   "retrieved_at": "2026-10-05T15:40:18Z",
+   "sha256": "d96d4f47aa86e43bfd42358ee9191f545ca2af64f325ab2ab93dc14950a12f8a",
+   "url": "https://gitlab.com/api/v4/projects/278964/repository/tags?search=%5Ev16.7.&per_page=100"
+  },
+  "raw/lists/gitlab_tags_v16.8.json": {
+   "bytes": 11002,
+   "retrieved_at": "2026-10-05T15:40:18Z",
+   "sha256": "eb088e7f18b5d10ac6f7b877571dbfa5eb13ae5e9c4253e038725a7b75ec2825",
+   "url": "https://gitlab.com/api/v4/projects/278964/repository/tags?search=%5Ev16.8.&per_page=100"
+  },
+  "raw/lists/gitlab_tags_v18.10.json": {
+   "bytes": 9140,
+   "retrieved_at": "2026-10-05T15:40:19Z",
+   "sha256": "a145c9c9846df577d30e76060daa09ac0f5f877ebd38e52763ea699c3c7b0de9",
+   "url": "https://gitlab.com/api/v4/projects/278964/repository/tags?search=%5Ev18.10.&per_page=100"
+  },
+  "raw/lists/gitlab_tags_v18.11.json": {
+   "bytes": 11631,
+   "retrieved_at": "2026-10-05T15:40:19Z",
+   "sha256": "959e2856aa5e3cd43e2eceebffe7e702cb0f069941260b0b64fb992352604a48",
+   "url": "https://gitlab.com/api/v4/projects/278964/repository/tags?search=%5Ev18.11.&per_page=100"
+  },
+  "raw/lists/gitlab_tags_v18.9.json": {
+   "bytes": 9118,
+   "retrieved_at": "2026-10-05T15:40:19Z",
+   "sha256": "00aa4b8a099e6aa863d5dcf3394f3bbd5842a2cf7ed7d422ddbffbad39067ca7",
+   "url": "https://gitlab.com/api/v4/projects/278964/repository/tags?search=%5Ev18.9.&per_page=100"
+  },
+  "raw/lists/gitlab_tags_v19.0.json": {
+   "bytes": 9118,
+   "retrieved_at": "2026-10-05T15:40:19Z",
+   "sha256": "8cfa40ba4d36b4e16e9d4f1529d28c2a403bc3ae2d07259094bbf3813926d9cf",
+   "url": "https://gitlab.com/api/v4/projects/278964/repository/tags?search=%5Ev19.0.&per_page=100"
+  },
+  "raw/lists/gitlab_tags_v19.1.json": {
+   "bytes": 8291,
+   "retrieved_at": "2026-10-05T15:40:19Z",
+   "sha256": "f19db0cd9165d3d18effa12fcb0fbc1773fb9cc3dbf4a25994077aa28d7b9711",
+   "url": "https://gitlab.com/api/v4/projects/278964/repository/tags?search=%5Ev19.1.&per_page=100"
+  },
+  "raw/lists/httpd.html": {
+   "bytes": 240679,
+   "retrieved_at": "2026-10-05T15:32:38Z",
+   "sha256": "7bcc6266d5b4dddecee70f3d467a89257e7033471481ce14fe7999d7ead078a8",
+   "url": "https://archive.apache.org/dist/httpd/"
+  },
+  "raw/lists/jenkins-war-maven-metadata.xml": {
+   "bytes": 33470,
+   "retrieved_at": "2026-10-05T15:32:38Z",
+   "sha256": "b4eedbea8442e1faaf0a15053881879f70d16125ebd5083ac7b9ff221456a397",
+   "url": "https://repo.jenkins-ci.org/releases/org/jenkins-ci/main/jenkins-war/maven-metadata.xml"
+  },
+  "raw/lists/roundcube_tags_1.json": {
+   "bytes": 43978,
+   "retrieved_at": "2026-10-05T15:32:38Z",
+   "sha256": "71b68e0c3187c67aeeb8db7a73ef123da4a0e6bbe6c916bc49e493934d3297f1",
+   "url": "https://api.github.com/repos/roundcube/roundcubemail/tags?per_page=100&page=1"
+  },
+  "raw/lists/roundcube_tags_2.json": {
+   "bytes": 42791,
+   "retrieved_at": "2026-10-05T15:32:38Z",
+   "sha256": "0612006a7003c8ee7fc602c87463fc8dea57f9cc9f4c947f38739cbb4defe17d",
+   "url": "https://api.github.com/repos/roundcube/roundcubemail/tags?per_page=100&page=2"
+  },
+  "raw/lists/roundcube_tags_3.json": {
+   "bytes": 8556,
+   "retrieved_at": "2026-10-05T15:32:38Z",
+   "sha256": "4b6f096935c4ff0ed7cf837f60f27fbf372abc5bfca38cec0dcb984ae75dda6c",
+   "url": "https://api.github.com/repos/roundcube/roundcubemail/tags?per_page=100&page=3"
+  },
+  "raw/lists/tomcat-10.html": {
+   "bytes": 12484,
+   "retrieved_at": "2026-10-05T15:32:34Z",
+   "sha256": "a33cf217b1047c1515a9ba742a69eb79504c9dcc0aa2c5ae42d51ccba9af8a81",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-10/"
+  },
+  "raw/lists/tomcat-11.html": {
+   "bytes": 6863,
+   "retrieved_at": "2026-10-05T15:32:34Z",
+   "sha256": "fee7337e84019bd74df0147ad29aae41d8c8c73c265aa0d59e50eb4422becd45",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-11/"
+  },
+  "raw/lists/tomcat-7.html": {
+   "bytes": 10205,
+   "retrieved_at": "2026-10-05T15:32:33Z",
+   "sha256": "b06d8a3576b84ac17f23eec116a8a770cc1b81922b689ff724d6bef201243243",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-7/"
+  },
+  "raw/lists/tomcat-8.html": {
+   "bytes": 16226,
+   "retrieved_at": "2026-10-05T15:32:33Z",
+   "sha256": "57a29cbf32327e73c3d738387685c3441c7b994af49834ea69bb911ba7aeb065",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-8/"
+  },
+  "raw/lists/tomcat-9.html": {
+   "bytes": 15263,
+   "retrieved_at": "2026-10-05T15:32:34Z",
+   "sha256": "96907a4899bcd98a7b260ed0cc885deb92e35ca923953f45ce896699fc57c700",
+   "url": "https://archive.apache.org/dist/tomcat/tomcat-9/"
+  },
+  "raw/pip/22.0.2/vendor.txt": {
+   "bytes": 496,
+   "retrieved_at": "2026-10-05T15:38:15Z",
+   "sha256": "1fef5f49ca1a87b9f1e0af0ee147edd25e621f63ff995a3846acae3153932447",
+   "url": "https://raw.githubusercontent.com/pypa/pip/22.0.2/src/pip/_vendor/vendor.txt"
+  },
+  "raw/pip/23.0.1/vendor.txt": {
+   "bytes": 476,
+   "retrieved_at": "2026-10-05T15:38:15Z",
+   "sha256": "de2dd9afbfe44430fd504bdad08f1838cae8099f31b99f4e59dfd0e2399acea1",
+   "url": "https://raw.githubusercontent.com/pypa/pip/23.0.1/src/pip/_vendor/vendor.txt"
+  },
+  "raw/pip/24.0/vendor.txt": {
+   "bytes": 493,
+   "retrieved_at": "2026-10-05T15:38:15Z",
+   "sha256": "e0d2a4edf42156c670d14fb4ce69bd4362e01b268f5da7056e7240692d10e846",
+   "url": "https://raw.githubusercontent.com/pypa/pip/24.0/src/pip/_vendor/vendor.txt"
+  },
+  "raw/pip/24.2/vendor.txt": {
+   "bytes": 330,
+   "retrieved_at": "2026-10-05T15:38:15Z",
+   "sha256": "3f135ac71924a416b0e73393b03a47118fb311a1e38240e0cab4b13aec60f27c",
+   "url": "https://raw.githubusercontent.com/pypa/pip/24.2/src/pip/_vendor/vendor.txt"
+  },
+  "raw/pip/25.0.1/vendor.txt": {
+   "bytes": 333,
+   "retrieved_at": "2026-10-05T15:38:15Z",
+   "sha256": "116f84ddc1395c402d545cc62278a402b38c0f118fd032d45b35e96384597c56",
+   "url": "https://raw.githubusercontent.com/pypa/pip/25.0.1/src/pip/_vendor/vendor.txt"
+  }
+ },
+ "license": "Vendor release files (Apache-2.0 Tomcat/httpd; GPL-3.0 Roundcube; MIT GitLab)",
+ "n_files": 67,
+ "snapshot_date": "2026-10-05",
+ "source": "vendor_files"
+}

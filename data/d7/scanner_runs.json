@@ -1,0 +1,64 @@
+{
+ "osv_online_runs": [
+  {
+   "finished_at": "2026-10-05T16:40:15Z",
+   "n_hosts": 822,
+   "n_failed_hosts": 0,
+   "tools": {
+    "trivy": "Version: 0.75.0\nVulnerability DB:\n  Version: 2\n  UpdatedAt: 2026-10-05 01:10:31.191619217 +0000 UTC\n  NextUpdate: 2026-10-06 01:10:31.191618696 +0000 UTC\n  DownloadedAt: 2026-10-05 04:50:45.911845911 +0000 UTC\nJava DB:\n  Version: 1\n  UpdatedAt: 2026-10-05 01:08:25.742361399 +0000 UTC\n  NextUpdate: 2026-10-08 01:08:25.742361269 +0000 UTC\n  DownloadedAt: 2026-10-05 15:12:40.078050214 +0000 UTC",
+    "grype": "Application:         grype\nVersion:             0.120.0\nBuildDate:           2026-10-02T14:05:58Z\nGitCommit:           10fbc043ecbaf8436daa9efac9f1632557caf277\nGitDescription:      v0.120.0\nPlatform:            linux/amd64\nGoVersion:           go1.26.8\nCompiler:            gc\nSyft Version:        v1.54.0\nSupported DB Schema: 6",
+    "grype_db": "Path:      /storage/data/DeepCTI/tools/cache/grype/6/vulnerability.db\nSchema:    v6.1.10\nBuilt:     2026-10-04T08:11:47Z\nFrom:      https://grype.anchore.io/databases/v6/vulnerability-db_v6.1.10_2026-10-04T01:12:18Z_1791101507.tar.zst?checksum=sha256%3A2bd87418b8877e75d07351ef8daa9636ef98d69e09e0f69a15ae9c191e895d39\nStatus:    valid",
+    "osv-scanner": "osv-scanner version: 2.6.0\nosv-scalibr version: 0.5.2\ncommit: e840a6e8adb14b7777c78e26cfbf6e2abc1d1fc6\nbuilt at: 2026-09-14T01:44:58Z",
+    "osv_db": {
+     "Debian": {
+      "bytes": 74267777,
+      "mtime": "2026-10-05T05:10:34.910568"
+     },
+     "Maven": {
+      "bytes": 10346626,
+      "mtime": "2026-10-05T15:12:02.131631"
+     },
+     "PyPI": {
+      "bytes": 35436843,
+      "mtime": "2026-10-05T15:12:01.855626"
+     },
+     "Ubuntu": {
+      "bytes": 772217532,
+      "mtime": "2026-10-05T05:08:18.815988"
+     }
+    }
+   },
+   "failures": [],
+   "mode": "osv-scanner scan image --archive (online api.osv.dev)"
+  }
+ ],
+ "finished_at": "2026-10-05T16:40:43Z",
+ "n_hosts": 822,
+ "n_failed_hosts": 0,
+ "tools": {
+  "trivy": "Version: 0.75.0\nVulnerability DB:\n  Version: 2\n  UpdatedAt: 2026-10-05 01:10:31.191619217 +0000 UTC\n  NextUpdate: 2026-10-06 01:10:31.191618696 +0000 UTC\n  DownloadedAt: 2026-10-05 04:50:45.911845911 +0000 UTC\nJava DB:\n  Version: 1\n  UpdatedAt: 2026-10-05 01:08:25.742361399 +0000 UTC\n  NextUpdate: 2026-10-08 01:08:25.742361269 +0000 UTC\n  DownloadedAt: 2026-10-05 15:12:40.078050214 +0000 UTC",
+  "grype": "Application:         grype\nVersion:             0.120.0\nBuildDate:           2026-10-02T14:05:58Z\nGitCommit:           10fbc043ecbaf8436daa9efac9f1632557caf277\nGitDescription:      v0.120.0\nPlatform:            linux/amd64\nGoVersion:           go1.26.8\nCompiler:            gc\nSyft Version:        v1.54.0\nSupported DB Schema: 6",
+  "grype_db": "Path:      /storage/data/DeepCTI/tools/cache/grype/6/vulnerability.db\nSchema:    v6.1.10\nBuilt:     2026-10-04T08:11:47Z\nFrom:      https://grype.anchore.io/databases/v6/vulnerability-db_v6.1.10_2026-10-04T01:12:18Z_1791101507.tar.zst?checksum=sha256%3A2bd87418b8877e75d07351ef8daa9636ef98d69e09e0f69a15ae9c191e895d39\nStatus:    valid",
+  "osv-scanner": "osv-scanner version: 2.6.0\nosv-scalibr version: 0.5.2\ncommit: e840a6e8adb14b7777c78e26cfbf6e2abc1d1fc6\nbuilt at: 2026-09-14T01:44:58Z",
+  "osv_db": {
+   "Debian": {
+    "bytes": 74267777,
+    "mtime": "2026-10-05T05:10:34.910568"
+   },
+   "Maven": {
+    "bytes": 10346626,
+    "mtime": "2026-10-05T15:12:02.131631"
+   },
+   "PyPI": {
+    "bytes": 35436843,
+    "mtime": "2026-10-05T15:12:01.855626"
+   },
+   "Ubuntu": {
+    "bytes": 772217532,
+    "mtime": "2026-10-05T05:08:18.815988"
+   }
+  }
+ },
+ "failures": [],
+ "osv_note": "osv.json files come from the osv_online run (offline OSV cannot match Ubuntu packages)"
+}

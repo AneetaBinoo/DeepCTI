@@ -1,0 +1,512 @@
+{
+ "files": {
+  "sources/jammy/apache2.json": {
+   "bytes": 78777,
+   "retrieved_at": "2026-10-05T15:18:05Z",
+   "sha256": "a6f7453475d380b5f64901681099419fd6535baa7e94b4270e672c30f5937df4",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=apache2&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/bind9.json": {
+   "bytes": 71754,
+   "retrieved_at": "2026-10-05T15:18:05Z",
+   "sha256": "245017af61738f0a83617b0d8b33765f4fc4d439dbacd717613cc3a7da7f4e69",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=bind9&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/cups.json": {
+   "bytes": 56765,
+   "retrieved_at": "2026-10-05T15:18:17Z",
+   "sha256": "5cb212906376d21208a51f48d3b0dd76ad8026be217aae9057179d5bc5efd3f8",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=cups&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/curl.json": {
+   "bytes": 82734,
+   "retrieved_at": "2026-10-05T15:18:07Z",
+   "sha256": "b92669f50b8c9345b2dcaa13fc1305ae2256374efb0784734b560d362f12a904",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=curl&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/dnsmasq.json": {
+   "bytes": 32956,
+   "retrieved_at": "2026-10-05T15:18:13Z",
+   "sha256": "f1583839f5d62a629ffb14677fe828cf9b2c5464b4da64499f4967a909b5a82b",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=dnsmasq&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/exim4.json": {
+   "bytes": 49092,
+   "retrieved_at": "2026-10-05T15:18:05Z",
+   "sha256": "0b375a1ca1558a20444fc5f01f4146be9181bd675c53142c9cb397c00e3e14f1",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=exim4&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/expat.json": {
+   "bytes": 51473,
+   "retrieved_at": "2026-10-05T15:18:07Z",
+   "sha256": "9fe18850c896a98e79c66fa1e6db450a1b1ce3ad32d6e4f74b75d0153670a7ff",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=expat&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/git.json": {
+   "bytes": 50686,
+   "retrieved_at": "2026-10-05T15:18:10Z",
+   "sha256": "df42dc95bba180e2174bd568d10d01261ff90f5e75d872716d5aef50208a3d1b",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=git&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/glibc.json": {
+   "bytes": 50784,
+   "retrieved_at": "2026-10-05T15:18:09Z",
+   "sha256": "165ca80fd5d3f0409effde835ede400146c6b09790a44b1a396633c8dddf6c5c",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=glibc&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/gnutls28.json": {
+   "bytes": 39424,
+   "retrieved_at": "2026-10-05T15:18:18Z",
+   "sha256": "4e15c44f6c10406700c824949402ca7b44bc89d6e56af60ec8e404491624b132",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=gnutls28&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/haproxy.json": {
+   "bytes": 64134,
+   "retrieved_at": "2026-10-05T15:18:18Z",
+   "sha256": "3b654f766d448aa8fea49c9e5f9d71eb29b1d545998dcbb4a128286351ca74c2",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=haproxy&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/krb5.json": {
+   "bytes": 40165,
+   "retrieved_at": "2026-10-05T15:18:19Z",
+   "sha256": "5def79323d0a1a969a8bd015d06030f68b99763f71c671077dfe5b3360aaa5a9",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=krb5&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/libarchive.json": {
+   "bytes": 36145,
+   "retrieved_at": "2026-10-05T15:18:19Z",
+   "sha256": "0184f81d1b82fb5585206d1d65a2612ee176359a1ba49f8e59516160091970b1",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=libarchive&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/libssh.json": {
+   "bytes": 33349,
+   "retrieved_at": "2026-10-05T15:18:14Z",
+   "sha256": "f1cd53253f70519e333da284009d755f2c59d8e0798af65d4ce2cfed52611e5d",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=libssh&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/libwebp.json": {
+   "bytes": 18236,
+   "retrieved_at": "2026-10-05T15:18:11Z",
+   "sha256": "027550ab5d897a8489702db5dab2586d2e7e88e81688d0d539c8694bb29533bc",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=libwebp&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/libxml2.json": {
+   "bytes": 54144,
+   "retrieved_at": "2026-10-05T15:18:09Z",
+   "sha256": "43e243f118055afd703ea458aedb6f74e06a06ab14daf87ee58c689cb885a1c4",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=libxml2&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/libxslt.json": {
+   "bytes": 21612,
+   "retrieved_at": "2026-10-05T15:18:24Z",
+   "sha256": "0eea3f8ec218fa4b6f0a6fdd924fcd8ff88443e0b724a033a4a9fcfacb0c293d",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=libxslt&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/memcached.json": {
+   "bytes": 28563,
+   "retrieved_at": "2026-10-05T15:18:20Z",
+   "sha256": "b8650a67d81c3254854e70226edfd1d7ebd0944f2aa80a5195c69ee7fadfb849",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=memcached&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/mysql-8.0.json": {
+   "bytes": 96017,
+   "retrieved_at": "2026-10-05T15:18:24Z",
+   "sha256": "b5edbed95e407839ac43cd326fff09f9af55b96520a9d89fe3bb3d919b4f5379",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=mysql-8.0&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/nginx.json": {
+   "bytes": 66985,
+   "retrieved_at": "2026-10-05T15:18:05Z",
+   "sha256": "3953313e62dd5f3a17eec2892219a24fcb36039affd085d18deff178942dca6b",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=nginx&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/openssh.json": {
+   "bytes": 60890,
+   "retrieved_at": "2026-10-05T15:18:02Z",
+   "sha256": "efde1ca0523772f9e62d0c136d672c45a4180b0d947989b15c3f01e77acf3b65",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=openssh&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/openssl.json": {
+   "bytes": 86043,
+   "retrieved_at": "2026-10-05T15:18:05Z",
+   "sha256": "6087c130b37579dbb46c1a870b2c07902a89918d72184fce4792414271f29a73",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=openssl&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/pam.json": {
+   "bytes": 33102,
+   "retrieved_at": "2026-10-05T15:18:24Z",
+   "sha256": "c7256ad5c2ce5e1a9bafe332d09cf297be75420491a66ef70ec5ed1d77d97e65",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=pam&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/perl.json": {
+   "bytes": 30134,
+   "retrieved_at": "2026-10-05T15:18:11Z",
+   "sha256": "a9a56c257e58fd13e06cc493253c751811031bc6de75da54cf42df8b748b6bf5",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=perl&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/php8.1.json": {
+   "bytes": 90065,
+   "retrieved_at": "2026-10-05T15:18:22Z",
+   "sha256": "544af5bb8fcb1401c95442369207f8f5200a419774c82a44cb515b4129fe52f6",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=php8.1&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/php8.3.json": {
+   "bytes": 44,
+   "retrieved_at": "2026-10-05T15:18:22Z",
+   "sha256": "aeccab7ba3548115eac64a023c8f60fa448132b168d09e179f15732ea44e50f7",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=php8.3&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/postgresql-14.json": {
+   "bytes": 77935,
+   "retrieved_at": "2026-10-05T15:18:15Z",
+   "sha256": "cefb942fabaa55ac8d0329f3979ac39c5827aa9e9f530112a26dfd5fa400e0ab",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=postgresql-14&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/postgresql-16.json": {
+   "bytes": 44,
+   "retrieved_at": "2026-10-05T15:18:15Z",
+   "sha256": "aeccab7ba3548115eac64a023c8f60fa448132b168d09e179f15732ea44e50f7",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=postgresql-16&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/python3.10.json": {
+   "bytes": 115503,
+   "retrieved_at": "2026-10-05T15:18:12Z",
+   "sha256": "05a854083f74904d3e8179738f2bf39ec9442cbb52a59293849145c0a276056b",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=python3.10&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/python3.12.json": {
+   "bytes": 44,
+   "retrieved_at": "2026-10-05T15:18:12Z",
+   "sha256": "aeccab7ba3548115eac64a023c8f60fa448132b168d09e179f15732ea44e50f7",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=python3.12&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/redis.json": {
+   "bytes": 12621,
+   "retrieved_at": "2026-10-05T15:18:17Z",
+   "sha256": "16dce7a8c685b1f1303994e3397ac016aeee808ecf1b3e7e3dd145f6ac17dc0e",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=redis&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/rsync.json": {
+   "bytes": 30368,
+   "retrieved_at": "2026-10-05T15:18:13Z",
+   "sha256": "d19809c73bd59589a2dd9949123dcd9061b7fe88d994a35d7e2cea206cf221c4",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=rsync&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/ruby3.0.json": {
+   "bytes": 49474,
+   "retrieved_at": "2026-10-05T15:18:22Z",
+   "sha256": "3e004e468573c3ea8c512476aabf82c42e204b59a51fc31bb1505acdb925c95a",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=ruby3.0&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/ruby3.2.json": {
+   "bytes": 44,
+   "retrieved_at": "2026-10-05T15:18:22Z",
+   "sha256": "aeccab7ba3548115eac64a023c8f60fa448132b168d09e179f15732ea44e50f7",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=ruby3.2&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/samba.json": {
+   "bytes": 78980,
+   "retrieved_at": "2026-10-05T15:18:05Z",
+   "sha256": "03f123051b4a45f5d2bd08e21260739a2c57339a5886ed8a06516175cbd477dd",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=samba&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/sqlite3.json": {
+   "bytes": 30020,
+   "retrieved_at": "2026-10-05T15:18:09Z",
+   "sha256": "3088c57a73bd59db84a63569abe9e5ccfbd560a552b4d77ae272afdb1f46018a",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=sqlite3&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/squid.json": {
+   "bytes": 50639,
+   "retrieved_at": "2026-10-05T15:18:17Z",
+   "sha256": "f939bf72a7663bd7067c7e41d1093d0b248fc8bb65b18638d11c3ae28726d877",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=squid&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/sudo.json": {
+   "bytes": 22760,
+   "retrieved_at": "2026-10-05T15:18:06Z",
+   "sha256": "e3e3f37e9d48be5b2fb18b7c3faa22150295e5e87082302d1c2c439c33a5ed70",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=sudo&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/systemd.json": {
+   "bytes": 87213,
+   "retrieved_at": "2026-10-05T15:18:20Z",
+   "sha256": "99162ba81a3b4e78259452991857c59670fea0a8948cdcc51c79816deb83c3db",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=systemd&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/tiff.json": {
+   "bytes": 56087,
+   "retrieved_at": "2026-10-05T15:18:21Z",
+   "sha256": "f47ab5d93f23f886b85b073c02da76eb423fc1a165ab6ef3c652ae0b109edf64",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=tiff&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/unbound.json": {
+   "bytes": 49211,
+   "retrieved_at": "2026-10-05T15:18:12Z",
+   "sha256": "566c2db34c7baeb51aa25cdb19df0ddde39a7922c5dd98bd61618438ebb9332c",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=unbound&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/jammy/vim.json": {
+   "bytes": 120553,
+   "retrieved_at": "2026-10-05T15:18:17Z",
+   "sha256": "22519d348fe4bb076799eaa4d8e092a5f0d250e8705ab1457ef6bd7d6e3a481b",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=vim&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fjammy&ws.size=300"
+  },
+  "sources/noble/apache2.json": {
+   "bytes": 62607,
+   "retrieved_at": "2026-10-05T15:18:05Z",
+   "sha256": "a747d65ba411a20ac9632533a6836686b92bc4ffc0df82974839496a4788aa22",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=apache2&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/bind9.json": {
+   "bytes": 45228,
+   "retrieved_at": "2026-10-05T15:18:05Z",
+   "sha256": "bec8c412751c27dce98c1ec7de9cfdc636e40d94b1e7c84c3541cac882754987",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=bind9&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/cups.json": {
+   "bytes": 43263,
+   "retrieved_at": "2026-10-05T15:18:17Z",
+   "sha256": "338782dbc9b8f74e5fb7270805501c3c5c55d91d0d5e12fb74b516a58a8b9055",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=cups&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/curl.json": {
+   "bytes": 72361,
+   "retrieved_at": "2026-10-05T15:18:07Z",
+   "sha256": "ffa265c99c0eba11974f18b4dee978f633d2575160efd012e32c2045313d2215",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=curl&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/dnsmasq.json": {
+   "bytes": 25419,
+   "retrieved_at": "2026-10-05T15:18:13Z",
+   "sha256": "a421ca4d689442fea2f62f8128b184446644a29ec21f01e78d76c4a160a4ad63",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=dnsmasq&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/exim4.json": {
+   "bytes": 43330,
+   "retrieved_at": "2026-10-05T15:18:06Z",
+   "sha256": "e7cd17bd9b299b399430e10b31aa79ddbf48fd4f67600dba49cd045f0b7dbfd3",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=exim4&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/expat.json": {
+   "bytes": 28444,
+   "retrieved_at": "2026-10-05T15:18:09Z",
+   "sha256": "87bde7dc8aa8d2fe1d6fca3b2869b915442f163452263afbd974cd87c245b49e",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=expat&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/git.json": {
+   "bytes": 28581,
+   "retrieved_at": "2026-10-05T15:18:11Z",
+   "sha256": "8fea771fbb0272ed822c580681def3394eb69d21a53d34fc29559eac7bae2dcb",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=git&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/glibc.json": {
+   "bytes": 50619,
+   "retrieved_at": "2026-10-05T15:18:09Z",
+   "sha256": "96d8f886f184f4338d475c57ef7c3df03cbfa37e7cb8045603b09a336e84e05e",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=glibc&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/gnutls28.json": {
+   "bytes": 43431,
+   "retrieved_at": "2026-10-05T15:18:18Z",
+   "sha256": "efad07d7dd569826aa57663b85043d255805962ef1fe92df06bf2ee4d6ec4691",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=gnutls28&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/haproxy.json": {
+   "bytes": 34765,
+   "retrieved_at": "2026-10-05T15:18:18Z",
+   "sha256": "bd9beb7108afe14eb9aee081d88c274c73161c3fcf22b53c49834a26b2365af8",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=haproxy&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/krb5.json": {
+   "bytes": 47188,
+   "retrieved_at": "2026-10-05T15:18:19Z",
+   "sha256": "d0688ec4e4f95955bb66eb63100b2e883c4b4bef42718d3253e71ff71cc9b934",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=krb5&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/libarchive.json": {
+   "bytes": 40731,
+   "retrieved_at": "2026-10-05T15:18:19Z",
+   "sha256": "52c0335ef3df0823168db9c92619daf156c4645a452de3254459a6605f2eb718",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=libarchive&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/libssh.json": {
+   "bytes": 28731,
+   "retrieved_at": "2026-10-05T15:18:14Z",
+   "sha256": "1db2138378f3b979e13bf2a2251035c1f9e138af3c0bf735528e466b04b5c285",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=libssh&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/libwebp.json": {
+   "bytes": 15700,
+   "retrieved_at": "2026-10-05T15:18:11Z",
+   "sha256": "d6b2220baf03e1d85293dedf9044c8f64d1bb1dd693d8e5ff0fca828378f1d1e",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=libwebp&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/libxml2.json": {
+   "bytes": 47046,
+   "retrieved_at": "2026-10-05T15:18:09Z",
+   "sha256": "4833370263bb5783d8e1105bbe27ef84394ffcc23880f3c7969dcba2bdc11cd5",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=libxml2&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/libxslt.json": {
+   "bytes": 17114,
+   "retrieved_at": "2026-10-05T15:18:24Z",
+   "sha256": "d2f988afd6f9cd289b2a71b16fa1e75055fe3214dfb416b9d3c1b54654712887",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=libxslt&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/memcached.json": {
+   "bytes": 25667,
+   "retrieved_at": "2026-10-05T15:18:20Z",
+   "sha256": "66be09b9ded7b7084cbb165bc3bac549cab54606e57347c23e097f9f6e384053",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=memcached&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/mysql-8.0.json": {
+   "bytes": 71841,
+   "retrieved_at": "2026-10-05T15:18:24Z",
+   "sha256": "30ac5858a503988f960fd86b21d35f9c1a9491eee2555dc5489f040f0ee695b1",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=mysql-8.0&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/nginx.json": {
+   "bytes": 72902,
+   "retrieved_at": "2026-10-05T15:18:05Z",
+   "sha256": "5a37f4d069665203f170757000f45ff94aea1f21fe8e3740d0c15517bfa00f76",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=nginx&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/openssh.json": {
+   "bytes": 82939,
+   "retrieved_at": "2026-10-05T15:18:02Z",
+   "sha256": "82585da50f2fa1a10dce4b4669701cd52f62ec1f4558e8c9d2541e4125c6694c",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=openssh&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/openssl.json": {
+   "bytes": 59712,
+   "retrieved_at": "2026-10-05T15:18:05Z",
+   "sha256": "ab854665e338d81a17e376501a7313e7d019584568a6f3b4a197210897e2ff28",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=openssl&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/pam.json": {
+   "bytes": 40421,
+   "retrieved_at": "2026-10-05T15:18:24Z",
+   "sha256": "8b1cf0bdd086c8ca835869bded0de93cd52fce332c38d905b79f0d45ac583392",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=pam&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/perl.json": {
+   "bytes": 37202,
+   "retrieved_at": "2026-10-05T15:18:11Z",
+   "sha256": "694c3d39091c0b4cadb935f44c9ba1821e0aedd6ee09344ffc269f0620349824",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=perl&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/php8.1.json": {
+   "bytes": 44,
+   "retrieved_at": "2026-10-05T15:18:22Z",
+   "sha256": "aeccab7ba3548115eac64a023c8f60fa448132b168d09e179f15732ea44e50f7",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=php8.1&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/php8.3.json": {
+   "bytes": 56637,
+   "retrieved_at": "2026-10-05T15:18:22Z",
+   "sha256": "542a2a9a23616d094ed04f4e83c7bc3bf34d55425035feb940cc91d75a83e143",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=php8.3&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/postgresql-14.json": {
+   "bytes": 44,
+   "retrieved_at": "2026-10-05T15:18:15Z",
+   "sha256": "aeccab7ba3548115eac64a023c8f60fa448132b168d09e179f15732ea44e50f7",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=postgresql-14&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/postgresql-16.json": {
+   "bytes": 65861,
+   "retrieved_at": "2026-10-05T15:18:15Z",
+   "sha256": "80213e5d227983215602ace8a33f9748911d9afd70a7a1a8b498875f08a0e2c0",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=postgresql-16&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/python3.10.json": {
+   "bytes": 1542,
+   "retrieved_at": "2026-10-05T15:18:12Z",
+   "sha256": "97db2f272f57a48c37b62120e3d2f082c87f0202dc0a2a054b64cdc94ab2759e",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=python3.10&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/python3.12.json": {
+   "bytes": 102654,
+   "retrieved_at": "2026-10-05T15:18:12Z",
+   "sha256": "d2d3469a4e34bdf6dcf3157b8a4a58fe6d4bb93e9626bf8536fc9fe55d6c16a9",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=python3.12&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/redis.json": {
+   "bytes": 28778,
+   "retrieved_at": "2026-10-05T15:18:17Z",
+   "sha256": "b92f594fe4b2497da34f060880e2570ce21f4ed6b57ef9b56cd8070df9dabfea",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=redis&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/rsync.json": {
+   "bytes": 25566,
+   "retrieved_at": "2026-10-05T15:18:14Z",
+   "sha256": "af142a8f94dc81701fc7a1d5fd7564e1ca7bc51561ac05663fb4de95f21c5e9f",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=rsync&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/ruby3.0.json": {
+   "bytes": 44,
+   "retrieved_at": "2026-10-05T15:18:22Z",
+   "sha256": "aeccab7ba3548115eac64a023c8f60fa448132b168d09e179f15732ea44e50f7",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=ruby3.0&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/ruby3.2.json": {
+   "bytes": 32070,
+   "retrieved_at": "2026-10-05T15:18:22Z",
+   "sha256": "8778d8006f62b7fb872bc1686543d51a65f410364ed4076290ea2b50ca455cae",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=ruby3.2&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/samba.json": {
+   "bytes": 57759,
+   "retrieved_at": "2026-10-05T15:18:05Z",
+   "sha256": "f7ea91398bc3f83c24e49995655dd719ae5d7667a472e2e45e48c2efa4b1e7dc",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=samba&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/sqlite3.json": {
+   "bytes": 43050,
+   "retrieved_at": "2026-10-05T15:18:10Z",
+   "sha256": "9d23cada45da6fd9efe1ecc3a7db2d37d9915042c5e2f0fcf08d7e5adae955cd",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=sqlite3&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/squid.json": {
+   "bytes": 47695,
+   "retrieved_at": "2026-10-05T15:18:17Z",
+   "sha256": "5c321c10798e5eabe158778baa45fd614b90478c0067b276c9996bb559ed43dc",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=squid&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/sudo.json": {
+   "bytes": 24563,
+   "retrieved_at": "2026-10-05T15:18:06Z",
+   "sha256": "cc5337dd19cee25592c1d0269b720f4645ece61451a2dab843f3f02585b31893",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=sudo&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/systemd.json": {
+   "bytes": 73667,
+   "retrieved_at": "2026-10-05T15:18:20Z",
+   "sha256": "5a3f0c303f4f2f0fa00f71ed2836322d451b6ef8ec1cffa80718eaf2c16c0f1a",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=systemd&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/tiff.json": {
+   "bytes": 26231,
+   "retrieved_at": "2026-10-05T15:18:21Z",
+   "sha256": "9b0243d5047863b1f7d59dc88cdb914440074b67977c341521acfa370393383d",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=tiff&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/unbound.json": {
+   "bytes": 49117,
+   "retrieved_at": "2026-10-05T15:18:13Z",
+   "sha256": "e82b27add29df0f9614419730bfc6031aaf1bbe1106b6bb73a364051a0a5776c",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=unbound&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  },
+  "sources/noble/vim.json": {
+   "bytes": 97988,
+   "retrieved_at": "2026-10-05T15:18:17Z",
+   "sha256": "92b03ec7c76bb45b045c6598a95dafa7e8fc4508ce3ddcbec5ffbffb88fb893d",
+   "url": "https://api.launchpad.net/1.0/ubuntu/+archive/primary?ws.op=getPublishedSources&source_name=vim&exact_match=true&distro_series=https%3A%2F%2Fapi.launchpad.net%2F1.0%2Fubuntu%2Fnoble&ws.size=300"
+  }
+ },
+ "license": "Launchpad API (api.launchpad.net) published source history, public metadata",
+ "n_files": 84,
+ "snapshot_date": "2026-10-05",
+ "source": "launchpad"
+}

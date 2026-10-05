@@ -1,0 +1,18 @@
+{
+ "rule": {
+  "recall_min": 0.85,
+  "false_alarm_max": 0.1
+ },
+ "validated": [
+  "gemma_4_31b",
+  "granite_41_30b",
+  "nemotron_super_49b"
+ ],
+ "enough": true,
+ "perturbations_missed_by_all_judges": {
+  "flipped_polarity": 0,
+  "invented_id": 0,
+  "wrong_status": 1,
+  "wrong_version": 0
+ }
+}
