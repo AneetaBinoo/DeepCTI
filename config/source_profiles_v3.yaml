@@ -1,0 +1,296 @@
+estimated_on: d7 dev
+rule: trusted iff Wilson95 upper bounds of FP and FN <= 0.1 with n >= 20 each (per
+  ecosystem)
+by_ecosystem:
+  deb-ubuntu:
+    cmdb:
+      trust: U
+      fp: 0.0417
+      fn: 0.0169
+      fp_detail:
+        k: 1
+        n: 24
+        rate: 0.0417
+        ci95:
+        - 0.0074
+        - 0.2024
+      fn_detail:
+        k: 1
+        n: 59
+        rate: 0.0169
+        ci95:
+        - 0.003
+        - 0.09
+    scanner:grype:
+      trust: U
+      fp: 0.0189
+      fn: 0.0
+      fp_detail:
+        k: 1
+        n: 53
+        rate: 0.0189
+        ci95:
+        - 0.0033
+        - 0.0994
+      fn_detail:
+        k: 0
+        n: 30
+        rate: 0.0
+        ci95:
+        - 0.0
+        - 0.1135
+    scanner:osv:
+      trust: U
+      fp: 0.0
+      fn: 0.0
+      fp_detail:
+        k: 0
+        n: 53
+        rate: 0.0
+        ci95:
+        - 0.0
+        - 0.0676
+      fn_detail:
+        k: 0
+        n: 30
+        rate: 0.0
+        ci95:
+        - 0.0
+        - 0.1135
+    scanner:trivy:
+      trust: U
+      fp: 0.0189
+      fn: 0.0
+      fp_detail:
+        k: 1
+        n: 53
+        rate: 0.0189
+        ci95:
+        - 0.0033
+        - 0.0994
+      fn_detail:
+        k: 0
+        n: 30
+        rate: 0.0
+        ci95:
+        - 0.0
+        - 0.1135
+  maven:
+    cmdb:
+      trust: U
+      fp: 0.1176
+      fn: 0.2273
+      fp_detail:
+        k: 2
+        n: 17
+        rate: 0.1176
+        ci95:
+        - 0.0329
+        - 0.3434
+      fn_detail:
+        k: 10
+        n: 44
+        rate: 0.2273
+        ci95:
+        - 0.1284
+        - 0.3699
+    scanner:grype:
+      trust: U
+      fp: 0.0
+      fn: 0.0
+      fp_detail:
+        k: 0
+        n: 31
+        rate: 0.0
+        ci95:
+        - 0.0
+        - 0.1103
+      fn_detail:
+        k: 0
+        n: 30
+        rate: 0.0
+        ci95:
+        - 0.0
+        - 0.1135
+    scanner:osv:
+      trust: U
+      fp: 0.0
+      fn: 0.0
+      fp_detail:
+        k: 0
+        n: 31
+        rate: 0.0
+        ci95:
+        - 0.0
+        - 0.1103
+      fn_detail:
+        k: 0
+        n: 30
+        rate: 0.0
+        ci95:
+        - 0.0
+        - 0.1135
+    scanner:trivy:
+      trust: U
+      fp: 0.0
+      fn: 0.0
+      fp_detail:
+        k: 0
+        n: 31
+        rate: 0.0
+        ci95:
+        - 0.0
+        - 0.1103
+      fn_detail:
+        k: 0
+        n: 30
+        rate: 0.0
+        ci95:
+        - 0.0
+        - 0.1135
+  pypi:
+    cmdb:
+      trust: U
+      fp: 0.1176
+      fn: 0.375
+      fp_detail:
+        k: 2
+        n: 17
+        rate: 0.1176
+        ci95:
+        - 0.0329
+        - 0.3434
+      fn_detail:
+        k: 12
+        n: 32
+        rate: 0.375
+        ci95:
+        - 0.2293
+        - 0.5475
+    scanner:grype:
+      trust: U
+      fp: 0.0
+      fn: 0.1364
+      fp_detail:
+        k: 0
+        n: 27
+        rate: 0.0
+        ci95:
+        - 0.0
+        - 0.1246
+      fn_detail:
+        k: 3
+        n: 22
+        rate: 0.1364
+        ci95:
+        - 0.0475
+        - 0.3334
+    scanner:osv:
+      trust: U
+      fp: 0.0
+      fn: 0.1364
+      fp_detail:
+        k: 0
+        n: 27
+        rate: 0.0
+        ci95:
+        - 0.0
+        - 0.1246
+      fn_detail:
+        k: 3
+        n: 22
+        rate: 0.1364
+        ci95:
+        - 0.0475
+        - 0.3334
+    scanner:trivy:
+      trust: U
+      fp: 0.0
+      fn: 0.1364
+      fp_detail:
+        k: 0
+        n: 27
+        rate: 0.0
+        ci95:
+        - 0.0
+        - 0.1246
+      fn_detail:
+        k: 3
+        n: 22
+        rate: 0.1364
+        ci95:
+        - 0.0475
+        - 0.3334
+  vendor:
+    cmdb:
+      trust: U
+      fp: 0.1875
+      fn: 0.2647
+      fp_detail:
+        k: 3
+        n: 16
+        rate: 0.1875
+        ci95:
+        - 0.0659
+        - 0.4301
+      fn_detail:
+        k: 9
+        n: 34
+        rate: 0.2647
+        ci95:
+        - 0.146
+        - 0.4312
+    scanner:grype:
+      trust: U
+      fp: 0.0
+      fn: 1.0
+      fp_detail:
+        k: 0
+        n: 32
+        rate: 0.0
+        ci95:
+        - 0.0
+        - 0.1072
+      fn_detail:
+        k: 18
+        n: 18
+        rate: 1.0
+        ci95:
+        - 0.8241
+        - 1.0
+    scanner:osv:
+      trust: U
+      fp: 0.0
+      fn: 1.0
+      fp_detail:
+        k: 0
+        n: 32
+        rate: 0.0
+        ci95:
+        - 0.0
+        - 0.1072
+      fn_detail:
+        k: 18
+        n: 18
+        rate: 1.0
+        ci95:
+        - 0.8241
+        - 1.0
+    scanner:trivy:
+      trust: U
+      fp: 0.0
+      fn: 1.0
+      fp_detail:
+        k: 0
+        n: 32
+        rate: 0.0
+        ci95:
+        - 0.0
+        - 0.1072
+      fn_detail:
+        k: 18
+        n: 18
+        rate: 1.0
+        ci95:
+        - 0.8241
+        - 1.0

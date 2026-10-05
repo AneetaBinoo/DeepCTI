@@ -27,7 +27,8 @@ pytestmark = pytest.mark.skipif(not (RUNS / "E2" / "none.jsonl").exists(), reaso
 
 
 def _iter(exp: str, systems: tuple[str, ...] | None = None):
-    for path in sorted((RUNS / exp).glob("*.jsonl")):
+    v1_panel = {"none", "qwen3_4b", "llama31_8b", "granite41_8b", "qwen3_14b", "mistral_small_24b", "gemma4_31b"}
+    for path in sorted(p for p in (RUNS / exp).glob("*.jsonl") if p.stem in v1_panel):  # prereg-v1 panel only
         with path.open(encoding="utf-8") as fh:
             for line in fh:
                 if systems is not None and not any(f"|{s}|" in line[:300] for s in systems):

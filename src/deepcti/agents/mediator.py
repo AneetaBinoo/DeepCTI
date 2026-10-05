@@ -51,6 +51,16 @@ class Mediator:
 
     def decision(self):
         req = bool(self.program and self.program.precondition and self.program.trusted)
+        app = (self.program.precondition or {}).get("applies_to_versions") if req else None
+        if app:  # v3: the precondition only applies to some versions; decide from trusted version facts
+            from ..core import versions as _v
+            vs = [f.version for f in self.facts if f.source.trust == "T"]
+            if vs:
+                eco = self.case.get("ecosystem", "deb-debian")
+                try:
+                    req = any(_v.classify(eco, v, app)[0] for v in vs)
+                except Exception:  # noqa: BLE001 - unparseable version: stay conservative
+                    req = True
         if self.instance_aware:
             return decide_instance_aware(self.state(), req)
         return decide(self.state(), req)

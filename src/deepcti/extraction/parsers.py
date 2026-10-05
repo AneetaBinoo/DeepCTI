@@ -198,6 +198,8 @@ def parse_result(result: ToolResult, case: dict, program: CaseProgram | None) ->
 def _predicate_from_matches(pre: dict, matches: list[dict]) -> bool | None:
     pred = pre.get("predicate") or {}
     kind, key = pred.get("kind"), str(pre.get("key"))
+    if kind == "regex_present":  # v3: config_get returns the active regex matches
+        return any(m.get("regex") for m in matches)
     if kind == "module_enabled":
         return any(m.get("line") == 0 for m in matches)
     values = []

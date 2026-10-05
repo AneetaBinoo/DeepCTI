@@ -34,3 +34,5 @@ data/sealed/*.jsonl
 *.tex
 
 .renv/
+data/d7/hosts/
+data/d7/curation/raw/

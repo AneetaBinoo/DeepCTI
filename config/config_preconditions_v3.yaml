@@ -1,0 +1,731 @@
+# DeepCTI v3 — curated configuration preconditions for D1 and D7 (superset of config_preconditions.yaml).
+#
+# The D1 entries below are copied unchanged from config/config_preconditions.yaml (same schema, same
+# predicate semantics; see the comment block that follows). D7 entries are appended after the marker
+# "D7 additions". Quotes for D7 entries were taken verbatim (whitespace-normalised) on 2026-10-05 from the
+# advisory pages mirrored under data/mirrors/advisory_pages/2026-10-05/ (see MANIFEST.json there).
+#
+# D7 schema additions (all optional; D1 entries do not use them):
+#   * ecosystem: deb-ubuntu | pypi | maven | vendor  (absent = D1 Debian entry)
+#   * component: ecosystem component the precondition belongs to (PyPI name, groupId:artifactId, product)
+#     (`src_package` repeats it for non-deb entries so that consumers of the D1 schema keep working)
+#   * applies_to_versions: list of half-open ranges [{introduced, fixed}] in the ecosystem's version
+#     semantics. The precondition (req_config) only applies to installed versions inside one of these
+#     ranges; outside them the vulnerable code path is reachable regardless of configuration.
+#   * predicate kind `regex_present`: TRUE iff Python `re.search(pattern, text, re.MULTILINE)` matches,
+#     where `text` is the file content after (1) removing XML comments `<!-- ... -->` and (2) dropping
+#     lines whose first non-blank character is '#' or ';'. A missing file is FALSE.
+#   * files under opt/<app>/ use one fixed application directory per CVE (the D7 builder places every
+#     host of that CVE there).
+# DeepCTI v2 — curated configuration preconditions (D1 atoms req_config / vuln_config_enabled).
+#
+# Each entry documents, from the cited advisory, that the vulnerable code is only reachable when a
+# specific feature is configured. Quotes were fetched verbatim on 2026-10-05.
+#
+# Predicate semantics (evaluated deterministically on the fixture rootfs; TRUE = vulnerable feature ENABLED):
+#   * config syntax: one directive per line, "Key value" or "key = value"; lines starting with '#' or ';'
+#     (after leading whitespace) are comments. The value is the rest of the line after the key
+#     (and after '=' for "key = value"), whitespace-trimmed, compared exactly (case-sensitive).
+#   * directive_present / directive_absent: an uncommented line with that key exists / does not exist.
+#   * value_equals / value_not_equals: compare the value of the LAST uncommented occurrence of the key
+#     (sshd uses the first occurrence; fixtures only ever contain one occurrence, so both agree).
+#     A missing file or missing key makes value_equals FALSE and value_not_equals FALSE.
+#   * module_enabled: `file` is a directory (apache-style mods-enabled) and `key` is the "<module>.load"
+#     name; TRUE iff file/key exists in the fixture.
+# Fixture convention: for every host that installs the package, the key is written explicitly
+# (vulnerable or safe line), so the "missing key" corner case never decides a label.
+# Bind values keep the trailing ';' exactly as written in named.conf syntax.
+preconditions:
+  - cve: CVE-2024-6387
+    src_package: openssh
+    service: ssh
+    file: etc/ssh/sshd_config
+    key: LoginGraceTime
+    predicate: {kind: value_not_equals, value: "0"}
+    vulnerable_when: "LoginGraceTime != 0 (sshd default is 120 when unset)"
+    vulnerable_setting: "LoginGraceTime 120"
+    safe_setting: "LoginGraceTime 0"
+    advisory_url: https://www.qualys.com/2024/07/01/cve-2024-6387/regresshion.txt
+    quote: "this signal handler race condition can be fixed by simply setting LoginGraceTime to 0 in the
+      configuration file. This makes sshd vulnerable to a denial of service (the exhaustion of all
+      MaxStartups connections), but it makes it safe from the remote code execution presented in this
+      advisory."
+    notes: "Mitigation trades RCE for DoS. Debian default (commented '#LoginGraceTime 2m') is vulnerable."
+
+  - cve: CVE-2021-41617
+    src_package: openssh
+    service: ssh
+    file: etc/ssh/sshd_config
+    key: AuthorizedKeysCommandUser
+    predicate: {kind: directive_present}
+    vulnerable_when: "AuthorizedKeysCommand with AuthorizedKeysCommandUser configured"
+    vulnerable_setting: "AuthorizedKeysCommandUser nobody   (with AuthorizedKeysCommand /usr/local/bin/get-keys %u)"
+    safe_setting: "#AuthorizedKeysCommandUser nobody"
+    advisory_url: https://www.openssh.com/txt/release-8.8
+    quote: "sshd(8) from OpenSSH 6.2 through 8.7 failed to correctly initialise supplemental groups when
+      executing an AuthorizedKeysCommand or AuthorizedPrincipalsCommand, where a AuthorizedKeysCommandUser
+      or AuthorizedPrincipalsCommandUser directive has been set to run the command as a different user.
+      [...] Neither AuthorizedKeysCommand nor AuthorizedPrincipalsCommand are enabled by default in
+      sshd_config(5)."
+    notes: "Fixed in Debian before bookworm/trixie were released: only fixed/absent cases in D1."
+
+  - cve: CVE-2021-23017
+    src_package: nginx
+    service: nginx
+    file: etc/nginx/nginx.conf
+    key: resolver
+    predicate: {kind: directive_present}
+    vulnerable_when: "a 'resolver' directive is configured"
+    vulnerable_setting: "resolver 127.0.0.53;"
+    safe_setting: "(no resolver directive)"
+    advisory_url: http://mailman.nginx.org/pipermail/nginx-announce/2021/000300.html
+    quote: "The issue only affects nginx if the \"resolver\" directive is used in the configuration file."
+    notes: "Fixed in Debian before bookworm/trixie were released."
+
+  - cve: CVE-2021-44142
+    src_package: samba
+    service: smbd
+    file: etc/samba/smb.conf
+    key: vfs objects
+    predicate: {kind: value_equals, value: "catia fruit streams_xattr"}
+    vulnerable_when: "vfs_fruit loaded (fruit in 'vfs objects') with default fruit:metadata/fruit:resource"
+    vulnerable_setting: "vfs objects = catia fruit streams_xattr"
+    safe_setting: "vfs objects = catia streams_xattr"
+    advisory_url: https://www.samba.org/samba/security/CVE-2021-44142.html
+    quote: "The problem in vfs_fruit exists in the default configuration of the fruit VFS module using
+      fruit:metadata=netatalk or fruit:resource=file. If both options are set to different settings than
+      the default values, the system is not affected by the security issue."
+    notes: "Predicate uses the exact fixture value (contract predicate kinds have no 'contains'). Fixed in
+      Debian before bookworm/trixie were released."
+
+  - cve: CVE-2023-25690
+    src_package: apache2
+    service: apache2
+    file: etc/apache2/mods-enabled
+    key: proxy.load
+    predicate: {kind: module_enabled}
+    vulnerable_when: "mod_proxy enabled together with RewriteRule [P]/ProxyPassMatch re-inserting user data"
+    vulnerable_setting: "a2enmod proxy (etc/apache2/mods-enabled/proxy.load)"
+    safe_setting: "a2dismod proxy (remove etc/apache2/mods-enabled/proxy.load)"
+    advisory_url: https://httpd.apache.org/security/vulnerabilities_24.html#CVE-2023-25690
+    quote: "Configurations are affected when mod_proxy is enabled along with some form of RewriteRule or
+      ProxyPassMatch in which a non-specific pattern matches some portion of the user-supplied
+      request-target (URL) data and is then re-inserted into the proxied request-target using variable
+      substitution."
+    notes: "Predicate encodes the necessary condition (mod_proxy enabled). Fixed before bookworm release."
+
+  - cve: CVE-2021-44224
+    src_package: apache2
+    service: apache2
+    file: etc/apache2/mods-enabled/proxy.conf
+    key: ProxyRequests
+    predicate: {kind: value_equals, value: "On"}
+    vulnerable_when: "httpd configured as forward proxy (mod_proxy enabled and ProxyRequests On)"
+    vulnerable_setting: "ProxyRequests On   (in mods-enabled/proxy.conf, i.e. mod_proxy enabled)"
+    safe_setting: "#ProxyRequests On"
+    advisory_url: https://httpd.apache.org/security/vulnerabilities_24.html#CVE-2021-44224
+    quote: "A crafted URI sent to httpd configured as a forward proxy (ProxyRequests on) can cause a crash
+      (NULL pointer dereference) or, for configurations mixing forward and reverse proxy declarations, can
+      allow for requests to be directed to a declared Unix Domain Socket endpoint (Server Side Request
+      Forgery)."
+    notes: "mods-enabled/proxy.conf exists only when mod_proxy is enabled. Fixed before bookworm release."
+
+  - cve: CVE-2023-42115
+    src_package: exim4
+    service: exim4
+    file: etc/exim4/conf.d/auth/50_local_external
+    key: driver
+    predicate: {kind: value_equals, value: "external"}
+    vulnerable_when: "an EXTERNAL authenticator (driver = external) is offered"
+    vulnerable_setting: "driver = external   (authenticator ext_auth, public_name = EXTERNAL)"
+    safe_setting: "# driver = external   (authenticator commented out)"
+    advisory_url: https://exim.org/static/doc/security/CVE-2023-zdi.txt
+    quote: "If you do not use SPA/NTLM, or EXTERNAL authentication, you're not affected. [...] Mitigation:
+      Do not offer EXTERNAL authentication."
+    notes: "Config condition comes from the Exim maintainers' advisory (NVD/ZDI text does not state it)."
+
+  - cve: CVE-2023-42116
+    src_package: exim4
+    service: exim4
+    file: etc/exim4/conf.d/auth/50_local_spa
+    key: driver
+    predicate: {kind: value_equals, value: "spa"}
+    vulnerable_when: "a SPA/NTLM authenticator (driver = spa) is configured"
+    vulnerable_setting: "driver = spa   (authenticator spa_server, public_name = NTLM)"
+    safe_setting: "# driver = spa   (authenticator commented out)"
+    advisory_url: https://exim.org/static/doc/security/CVE-2023-zdi.txt
+    quote: "If you do not use SPA/NTLM, or EXTERNAL authentication, you're not affected. [...] Mitigation:
+      Do not use SPA (NTLM) authentication"
+    notes: ""
+
+  - cve: CVE-2023-42117
+    src_package: exim4
+    service: exim4
+    file: etc/exim4/conf.d/main/05_local_proxy
+    key: hosts_proxy
+    predicate: {kind: directive_present}
+    vulnerable_when: "proxy protocol accepted from some hosts (hosts_proxy set)"
+    vulnerable_setting: "hosts_proxy = 10.0.0.0/8"
+    safe_setting: "# hosts_proxy = 10.0.0.0/8"
+    advisory_url: https://exim.org/static/doc/security/CVE-2023-zdi.txt
+    quote: "One issue is related to data received from a proxy-protocol proxy. If you do not use a proxy in
+      front of Exim, you're not affected. If your proxy is trustworthy, you're not affected. [...]
+      Mitigation: Do not use Exim behind an untrusted proxy-protocol proxy"
+    notes: "hosts_proxy is the Exim main option that enables proxy-protocol handling."
+
+  - cve: CVE-2023-2911
+    src_package: bind9
+    service: named
+    file: etc/bind/named.conf.options
+    key: stale-answer-client-timeout
+    predicate: {kind: value_equals, value: "0;"}
+    vulnerable_when: "stale-answer-enable yes; together with stale-answer-client-timeout 0;"
+    vulnerable_setting: "stale-answer-client-timeout 0;   (with stale-answer-enable yes;)"
+    safe_setting: "stale-answer-client-timeout off;"
+    advisory_url: https://kb.isc.org/docs/cve-2023-2911
+    quote: "If the recursive-clients quota is reached on a BIND 9 resolver configured with both
+      stale-answer-enable yes; and stale-answer-client-timeout 0;, a sequence of serve-stale-related
+      lookups could cause named to loop and terminate unexpectedly due to a stack overflow."
+    notes: "ISC workaround: setting stale-answer-client-timeout to off or a non-zero value prevents it."
+
+  - cve: CVE-2025-40777
+    src_package: bind9
+    service: named
+    file: etc/bind/named.conf.options
+    key: stale-answer-client-timeout
+    predicate: {kind: value_equals, value: "0;"}
+    vulnerable_when: "serve-stale enabled with stale-answer-client-timeout 0 on a caching resolver"
+    vulnerable_setting: "stale-answer-client-timeout 0;   (with stale-answer-enable yes;)"
+    safe_setting: "stale-answer-client-timeout off;"
+    advisory_url: https://kb.isc.org/docs/cve-2025-40777
+    quote: "If a named caching resolver is configured with serve-stale-enable yes, and with
+      stale-answer-client-timeout set to 0 (the only allowable value other than disabled) [...] the daemon
+      will abort with an assertion failure."
+    notes: "Advisory names 'serve-stale-enable'; the real option is stale-answer-enable (used in its own
+      workaround: 'stale-answer-client-timeout off; or stale-answer-enable no;')."
+
+  - cve: CVE-2019-18634
+    src_package: sudo
+    service: null
+    file: etc/sudoers.d/pwfeedback
+    key: Defaults
+    predicate: {kind: value_equals, value: "pwfeedback"}
+    vulnerable_when: "Defaults pwfeedback enabled in sudoers"
+    vulnerable_setting: "Defaults pwfeedback"
+    safe_setting: "Defaults !pwfeedback"
+    advisory_url: https://www.sudo.ws/security/advisories/pwfeedback/
+    quote: "Due to a bug, when the pwfeedback option is enabled in the sudoers file, a user may be able to
+      trigger a stack-based buffer overflow."
+    notes: "sudo is not a daemon (service null). Fixed in Debian before bookworm/trixie were released."
+
+  - cve: CVE-2025-26465
+    src_package: openssh
+    service: null
+    file: etc/ssh/ssh_config
+    key: VerifyHostKeyDNS
+    predicate: {kind: value_equals, value: "yes"}
+    vulnerable_when: "ssh client with VerifyHostKeyDNS yes (or ask); default is no"
+    vulnerable_setting: "    VerifyHostKeyDNS yes   (in the 'Host *' block)"
+    safe_setting: "    VerifyHostKeyDNS no"
+    advisory_url: https://www.openssh.com/txt/release-9.9p2
+    quote: "ssh(1) in OpenSSH versions 6.8p1 to 9.9p1 (inclusive) contained a logic error that allowed an
+      on-path attacker (a.k.a MITM) to impersonate any server when the VerifyHostKeyDNS option is enabled.
+      This option is off by default."
+    notes: "Client-side (openssh-client, no service). Qualys also lists 'ask' as vulnerable; fixtures only
+      write yes/no. Verified 2026-10-05."
+
+  - cve: CVE-2023-4091
+    src_package: samba
+    service: smbd
+    file: etc/samba/smb.conf
+    key: "acl_xattr:ignore system acls"
+    predicate: {kind: value_equals, value: "yes"}
+    vulnerable_when: "acl_xattr VFS module with 'acl_xattr:ignore system acls = yes'"
+    vulnerable_setting: "acl_xattr:ignore system acls = yes   (share with vfs objects = acl_xattr)"
+    safe_setting: "acl_xattr:ignore system acls = no"
+    advisory_url: https://www.samba.org/samba/security/CVE-2023-4091.html
+    quote: "The widely used Samba VFS module \"acl_xattr\" when configured with the module configuration
+      parameter \"acl_xattr:ignore system acls = yes\" is the only upstream Samba module that allows this
+      behavior and is the only known method of reproducing this security flaw. If (as is the default) the
+      module configuration parameter \"acl_xattr:ignore system acls=no\", then the Samba server is not
+      vulnerable to this attack."
+    notes: "Verified 2026-10-05."
+
+  # ===================================================================================== D7 additions
+  # ---------------------------------------------------------------------------------- deb-ubuntu
+  - cve: CVE-2023-38408
+    ecosystem: deb-ubuntu
+    component: openssh
+    src_package: openssh
+    service: null
+    file: etc/ssh/ssh_config
+    key: ForwardAgent
+    predicate: {kind: value_equals, value: "yes"}
+    vulnerable_when: "ssh-agent forwarding enabled for connections (ForwardAgent yes)"
+    vulnerable_setting: "    ForwardAgent yes   (in the 'Host *' block)"
+    safe_setting: "    ForwardAgent no"
+    advisory_url: https://www.openssh.com/txt/release-9.3p2
+    quote: "the PKCS#11 support could be abused to achieve remote code execution via a forwarded agent
+      socket if the following conditions are met: * Exploitation requires the presence of specific
+      libraries on the victim system. * Remote exploitation requires that the agent was forwarded to an
+      attacker-controlled system."
+    notes: "Client-side (ssh-agent / ssh). Predicate encodes the necessary condition (agent forwarding)."
+
+  - cve: CVE-2025-49812
+    ecosystem: deb-ubuntu
+    component: apache2
+    src_package: apache2
+    service: apache2
+    file: etc/apache2/sites-enabled/010-tls-upgrade.conf
+    key: SSLEngine
+    predicate: {kind: value_equals, value: "optional"}
+    vulnerable_when: "a virtual host uses 'SSLEngine optional' (RFC 2817 TLS upgrade)"
+    vulnerable_setting: "SSLEngine optional"
+    safe_setting: "SSLEngine off"
+    advisory_url: https://httpd.apache.org/security/vulnerabilities_24.html#CVE-2025-49812
+    quote: "In some mod_ssl configurations on Apache HTTP Server versions through to 2.4.63, an HTTP
+      desynchronisation attack allows a man-in-the-middle attacker to hijack an HTTP session via a TLS
+      upgrade. Only configurations using \"SSLEngine optional\" to enable TLS upgrades are affected."
+    notes: "Fixture enables mod_ssl and the site in both states; only the SSLEngine value differs."
+
+  - cve: CVE-2025-49630
+    ecosystem: deb-ubuntu
+    component: apache2
+    src_package: apache2
+    service: apache2
+    file: etc/apache2/sites-enabled/020-h2-backend.conf
+    key: ProxyPreserveHost
+    predicate: {kind: value_equals, value: "On"}
+    vulnerable_when: "reverse proxy to an HTTP/2 backend (mod_proxy_http2) with ProxyPreserveHost On"
+    vulnerable_setting: "ProxyPreserveHost On   (with ProxyPass \"/api/\" \"h2c://10.20.0.15:8080/\")"
+    safe_setting: "ProxyPreserveHost Off"
+    advisory_url: https://httpd.apache.org/security/vulnerabilities_24.html#CVE-2025-49630
+    quote: "In certain proxy configurations, a denial of service attack against Apache HTTP Server versions
+      2.4.26 through to 2.4.63 can be triggered by untrusted clients causing an assertion in
+      mod_proxy_http2. Configurations affected are a reverse proxy is configured for an HTTP/2 backend,
+      with ProxyPreserveHost set to \"on\"."
+    notes: "Fixture enables proxy + proxy_http2 and the h2c ProxyPass in both states."
+
+  - cve: CVE-2024-7347
+    ecosystem: deb-ubuntu
+    component: nginx
+    src_package: nginx
+    service: nginx
+    file: etc/nginx/sites-available/media
+    key: mp4
+    predicate: {kind: regex_present, pattern: "^\\s*mp4\\s*;"}
+    vulnerable_when: "nginx built with ngx_http_mp4_module and the 'mp4' directive used"
+    vulnerable_setting: "location /videos/ { mp4; }"
+    safe_setting: "location /videos/ { }   (no mp4 directive)"
+    advisory_url: https://mailman.nginx.org/pipermail/nginx-announce/2024/UUOCLLONPR6244YQYU65PO5LB7JDYCWM.html
+    quote: "The issue only affects nginx if it is built with the ngx_http_mp4_module (the module is not
+      built by default) and the “mp4” directive is used in the configuration file."
+    notes: "Ubuntu builds the module into nginx-extras (jammy) and the nginx binary package (noble); the
+      D7 fixtures install those binaries for this CVE. The site file is enabled via an absolute symlink
+      sites-enabled/media -> /etc/nginx/sites-available/media; the predicate reads the target file."
+
+  - cve: CVE-2022-41741
+    ecosystem: deb-ubuntu
+    component: nginx
+    src_package: nginx
+    service: nginx
+    file: etc/nginx/sites-available/media
+    key: mp4
+    predicate: {kind: regex_present, pattern: "^\\s*mp4\\s*;"}
+    vulnerable_when: "nginx built with ngx_http_mp4_module and the 'mp4' directive used"
+    vulnerable_setting: "location /videos/ { mp4; }"
+    safe_setting: "location /videos/ { }   (no mp4 directive)"
+    advisory_url: https://mailman.nginx.org/pipermail/nginx-announce/2022/RBRRON6PYBJJM2XIAPQBFBVLR4Q6IHRA.html
+    quote: "The issues only affect nginx if it is built with the ngx_http_mp4_module (the module is not
+      built by default) and the \"mp4\" directive is used in the configuration file."
+    notes: ""
+
+  - cve: CVE-2025-32462
+    ecosystem: deb-ubuntu
+    component: sudo
+    src_package: sudo
+    service: null
+    file: etc/sudoers.d/90-shared-rules
+    key: "(host field)"
+    predicate: {kind: regex_present, pattern: "^\\s*[A-Za-z%][\\w%.-]*\\s+(?!ALL\\b)[A-Za-z][\\w.-]*\\s*="}
+    vulnerable_when: "a sudoers rule whose host field is neither ALL nor the current host"
+    vulnerable_setting: "deploy  buildhost01 = (root) ALL"
+    safe_setting: "deploy  ALL = (root) /usr/bin/systemctl restart app"
+    advisory_url: https://www.sudo.ws/security/advisories/host_any/
+    quote: "Sudoers files that include rules where the host field is not the current host or ALL are
+      affected. This primarily affects sites that use a common sudoers file that is distributed to
+      multiple machines."
+    notes: "Fixture host names never equal the rule's host (buildhost01), so the regex is exact here."
+
+  # --------------------------------------------------------------------------------------- maven
+  - cve: CVE-2021-44228
+    ecosystem: maven
+    component: org.apache.logging.log4j:log4j-core
+    src_package: org.apache.logging.log4j:log4j-core
+    service: inventory-api
+    file: opt/inventory-api/conf/jvm.options
+    key: -Dlog4j2.formatMsgNoLookups
+    predicate: {kind: value_equals, value: "false"}
+    applies_to_versions: [{introduced: "2.10.0", fixed: "2.15.0"}]
+    vulnerable_when: "message lookups enabled (log4j2.formatMsgNoLookups not true) on log4j-core 2.10-2.14.1"
+    vulnerable_setting: "-Dlog4j2.formatMsgNoLookups=false"
+    safe_setting: "-Dlog4j2.formatMsgNoLookups=true"
+    advisory_url: http://web.archive.org/web/20211211235935/https://logging.apache.org/log4j/2.x/security.html
+    quote: "In releases >=2.10, this behavior can be mitigated by setting either the system property
+      log4j2.formatMsgNoLookups or the environment variable LOG4J_FORMAT_MSG_NO_LOOKUPS to true."
+    notes: "Original Apache advisory (archived 2021-12-11). Apache later called this mitigation
+      insufficient because lookups in non-default PatternLayouts (CVE-2021-45046) stay reachable; D7
+      fixtures that use it keep the default PatternLayout (no ctx lookups). Below 2.10 the property does
+      not exist, hence applies_to_versions. Known weakness, see data/d7/BUILD_REPORT.md."
+
+  - cve: CVE-2021-45046
+    ecosystem: maven
+    component: org.apache.logging.log4j:log4j-core
+    src_package: org.apache.logging.log4j:log4j-core
+    service: billing-api
+    file: opt/billing-api/conf/log4j2.xml
+    key: "(PatternLayout pattern)"
+    predicate: {kind: regex_present, pattern: "\\$?\\$\\{ctx:"}
+    vulnerable_when: "non-default PatternLayout with a Thread Context (ctx) lookup"
+    vulnerable_setting: "<PatternLayout pattern=\"%d %p %c [$${ctx:loginId}] %m%n\"/>"
+    safe_setting: "<PatternLayout pattern=\"%d %p %c [%X{loginId}] %m%n\"/>"
+    advisory_url: https://logging.apache.org/security.html#CVE-2021-45046
+    quote: "When the logging configuration uses a non-default Pattern Layout with a Thread Context Lookup
+      (for example, $${ctx:loginId} ), attackers with control over Thread Context Map (MDC) can craft
+      malicious input data using a JNDI Lookup pattern, resulting in an information leak and remote code
+      execution in some environments and local code execution in all environments."
+    notes: ""
+
+  - cve: CVE-2021-45105
+    ecosystem: maven
+    component: org.apache.logging.log4j:log4j-core
+    src_package: org.apache.logging.log4j:log4j-core
+    service: audit-svc
+    file: opt/audit-svc/conf/log4j2.xml
+    key: "(PatternLayout pattern)"
+    predicate: {kind: regex_present, pattern: "\\$?\\$\\{ctx:"}
+    vulnerable_when: "non-default PatternLayout with a Context Lookup"
+    vulnerable_setting: "<PatternLayout pattern=\"%d %p %c [$${ctx:loginId}] %m%n\"/>"
+    safe_setting: "<PatternLayout pattern=\"%d %p %c [%X{loginId}] %m%n\"/>"
+    advisory_url: https://logging.apache.org/security.html#CVE-2021-45105
+    quote: "When the logging configuration uses a non-default Pattern Layout with a Context Lookup (for
+      example, $${ctx:loginId} ), attackers with control over Thread Context Map (MDC) input data can craft
+      malicious input data that contains a recursive lookup, resulting in a StackOverflowError that will
+      terminate the process."
+    notes: ""
+
+  - cve: CVE-2021-44832
+    ecosystem: maven
+    component: org.apache.logging.log4j:log4j-core
+    src_package: org.apache.logging.log4j:log4j-core
+    service: reporting-svc
+    file: opt/reporting-svc/conf/log4j2.xml
+    key: "(JDBC DataSource jndiName)"
+    predicate: {kind: regex_present, pattern: "<DataSource\\s+jndiName=\"(?!java:)"}
+    vulnerable_when: "JDBC Appender with a DataSource whose JNDI name uses a protocol other than java:"
+    vulnerable_setting: "<DataSource jndiName=\"ldap://ldap.corp.example:389/cn=reportdb\"/>"
+    safe_setting: "<DataSource jndiName=\"java:comp/env/jdbc/ReportDB\"/>"
+    advisory_url: https://logging.apache.org/security.html#CVE-2021-44832
+    quote: "An attacker with write access to the logging configuration can construct a malicious
+      configuration using a JDBC Appender with a data source referencing a JNDI URI which can execute
+      remote code. [...] In prior releases confirm that if the JDBC Appender is being used it is not
+      configured to use any protocol other than java ."
+    notes: "Requires write access to the config; the predicate encodes the configured (unsafe) data source."
+
+  - cve: CVE-2022-22965
+    ecosystem: maven
+    component: org.springframework:spring-beans
+    src_package: org.springframework:spring-beans
+    service: customer-portal
+    file: opt/customer-portal/jre/release
+    key: JAVA_VERSION
+    predicate: {kind: regex_present, pattern: "^JAVA_VERSION=\"(9|[1-9][0-9])[.\"]"}
+    vulnerable_when: "application runs on JDK 9 or later (bundled JRE release file)"
+    vulnerable_setting: "JAVA_VERSION=\"17.0.2\""
+    safe_setting: "JAVA_VERSION=\"1.8.0_322\""
+    advisory_url: https://spring.io/security/cve-2022-22965
+    quote: "A Spring MVC or Spring WebFlux application running on JDK 9+ may be vulnerable to remote code
+      execution (RCE) via data binding."
+    notes: "Spring also lists Tomcat/WAR for the published exploit but warns other exploitation paths may
+      exist; only the JDK 9+ condition (stated in the description) is used as the precondition."
+
+  - cve: CVE-2021-42392
+    ecosystem: maven
+    component: com.h2database:h2
+    src_package: com.h2database:h2
+    service: admin-console
+    file: opt/admin-console/config/application.properties
+    key: spring.h2.console.settings.web-allow-others
+    predicate: {kind: value_equals, value: "true"}
+    vulnerable_when: "H2 Console reachable remotely (web-allow-others / -webAllowOthers enabled)"
+    vulnerable_setting: "spring.h2.console.settings.web-allow-others=true"
+    safe_setting: "spring.h2.console.settings.web-allow-others=false"
+    advisory_url: https://github.com/advisories/GHSA-h376-j262-vhq6
+    quote: "H2 Console doesn't accept remote connections by default. If remote access was enabled explicitly
+      and some protection method (such as security constraint) wasn't set, an intruder can load own custom
+      class and execute its code in a process with H2 Console"
+    notes: "spring.h2.console.enabled=true on every fixture of this CVE."
+
+  - cve: CVE-2016-4437
+    ecosystem: maven
+    component: org.apache.shiro:shiro-core
+    src_package: org.apache.shiro:shiro-core
+    service: sso-gateway
+    file: opt/sso-gateway/conf/shiro.ini
+    key: securityManager.rememberMeManager.cipherKey
+    predicate: {kind: directive_absent}
+    vulnerable_when: "no cipher key configured for the rememberMe feature (built-in default key in use)"
+    vulnerable_setting: "# securityManager.rememberMeManager.cipherKey = 0x...   (commented out)"
+    safe_setting: "securityManager.rememberMeManager.cipherKey = 0x<site-specific 128-bit key>"
+    advisory_url: https://shiro.apache.org/security-reports.html
+    quote: "Apache Shiro before 1.2.5, when a cipher key has not been configured for the \"remember me\"
+      feature, allows remote attackers to execute arbitrary code or bypass intended access restrictions via
+      an unspecified request parameter."
+    notes: ""
+
+  - cve: CVE-2021-4104
+    ecosystem: maven
+    component: log4j:log4j
+    src_package: log4j:log4j
+    service: legacy-batch
+    file: opt/legacy-batch/conf/log4j.properties
+    key: "(appender class)"
+    predicate: {kind: regex_present, pattern: "^\\s*log4j\\.appender\\.\\w+\\s*=\\s*org\\.apache\\.log4j\\.net\\.JMSAppender\\s*$"}
+    vulnerable_when: "a JMSAppender is configured"
+    vulnerable_setting: "log4j.appender.jms=org.apache.log4j.net.JMSAppender"
+    safe_setting: "(no JMSAppender; console/file appenders only)"
+    advisory_url: https://logging.apache.org/security.html#CVE-2021-44228
+    quote: "Applications using Log4j 1 are only vulnerable to this attack when they use JNDI in their
+      configuration. A separate CVE ( CVE-2021-4104 ) has been filed for this vulnerability. To mitigate,
+      audit your logging configuration to ensure it has no JMSAppender configured. Log4j 1 configurations
+      without JMSAppender are not impacted by this vulnerability."
+    notes: "log4j:log4j has no fixed release (EOL); OSV range is introduced 1.2.0, last_affected 1.2.17."
+
+  - cve: CVE-2018-11776
+    ecosystem: maven
+    component: org.apache.struts:struts2-core
+    src_package: org.apache.struts:struts2-core
+    service: claims-web
+    file: opt/claims-web/conf/struts.xml
+    key: struts.mapper.alwaysSelectFullNamespace
+    predicate: {kind: regex_present, pattern: "name=\"struts\\.mapper\\.alwaysSelectFullNamespace\"\\s+value=\"true\""}
+    vulnerable_when: "alwaysSelectFullNamespace true (with results/url tags without namespace)"
+    vulnerable_setting: "<constant name=\"struts.mapper.alwaysSelectFullNamespace\" value=\"true\"/>"
+    safe_setting: "<constant name=\"struts.mapper.alwaysSelectFullNamespace\" value=\"false\"/>"
+    advisory_url: https://cwiki.apache.org/confluence/display/WW/S2-057
+    quote: "Possible Remote Code Execution when alwaysSelectFullNamespace is true (either by user or a
+      plugin like Convention Plugin) and then: results are used with no namespace and in same time, its
+      upper package have no or wildcard namespace"
+    notes: "Fixtures always contain a package without namespace and a redirectAction result without
+      namespace; the predicate encodes the alwaysSelectFullNamespace switch."
+
+  - cve: CVE-2024-1597
+    ecosystem: maven
+    component: org.postgresql:postgresql
+    src_package: org.postgresql:postgresql
+    service: ledger-svc
+    file: opt/ledger-svc/config/application.properties
+    key: spring.datasource.url
+    predicate: {kind: regex_present, pattern: "preferQueryMode=simple"}
+    vulnerable_when: "JDBC connection property preferQueryMode=simple"
+    vulnerable_setting: "spring.datasource.url=jdbc:postgresql://db01:5432/ledger?preferQueryMode=simple"
+    safe_setting: "spring.datasource.url=jdbc:postgresql://db01:5432/ledger?preferQueryMode=extended"
+    advisory_url: https://github.com/advisories/GHSA-24rp-q3w6-vc56
+    quote: "SQL injection is possible when using the non-default connection property preferQueryMode=simple
+      in combination with application code that has a vulnerable SQL that negates a parameter value. There
+      is no vulnerability in the driver when using the default query mode. Users that do not override the
+      query mode are not impacted."
+    notes: ""
+
+  - cve: CVE-2023-6378
+    ecosystem: maven
+    component: ch.qos.logback:logback-classic
+    src_package: ch.qos.logback:logback-classic
+    service: event-collector
+    file: opt/event-collector/conf/logback.xml
+    key: "(receiver element)"
+    predicate: {kind: regex_present, pattern: "<receiver\\s+class=\"ch\\.qos\\.logback\\.classic\\.net\\.(server\\.ServerSocketReceiver|SocketReceiver)\""}
+    vulnerable_when: "a logback receiver component is deployed in logback.xml"
+    vulnerable_setting: "<receiver class=\"ch.qos.logback.classic.net.server.ServerSocketReceiver\"><port>6000</port></receiver>"
+    safe_setting: "(no <receiver> element)"
+    advisory_url: https://github.com/advisories/GHSA-vmq6-5m68-f53m
+    quote: "A serialization vulnerability in logback receiver component part of logback allows an attacker
+      to mount a Denial-Of-Service attack by sending poisoned data. This is only exploitable if logback
+      receiver component is deployed."
+    notes: ""
+
+  # ---------------------------------------------------------------------------------------- pypi
+  - cve: CVE-2024-34069
+    ecosystem: pypi
+    component: werkzeug
+    src_package: werkzeug
+    service: flask-portal
+    file: opt/flask-portal/app.env
+    key: FLASK_DEBUG
+    predicate: {kind: value_equals, value: "1"}
+    vulnerable_when: "Werkzeug interactive debugger enabled (FLASK_DEBUG=1)"
+    vulnerable_setting: "FLASK_DEBUG=1"
+    safe_setting: "FLASK_DEBUG=0"
+    advisory_url: https://github.com/advisories/GHSA-2g68-c3qc-8985
+    quote: "The debugger in affected versions of Werkzeug can allow an attacker to execute code on a
+      developer's machine under some circumstances. This requires the attacker to get the developer to
+      interact with a domain and subdomain they control, and enter the debugger PIN"
+    notes: "The flaw is in the debugger; without the debugger enabled the code path is unreachable."
+
+  - cve: CVE-2024-23334
+    ecosystem: pypi
+    component: aiohttp
+    src_package: aiohttp
+    service: media-api
+    file: opt/media-api/app.py
+    key: follow_symlinks
+    predicate: {kind: regex_present, pattern: "follow_symlinks\\s*=\\s*True"}
+    vulnerable_when: "static route registered with follow_symlinks=True"
+    vulnerable_setting: "web.static(\"/static\", STATIC_DIR, follow_symlinks=True)"
+    safe_setting: "web.static(\"/static\", STATIC_DIR)"
+    advisory_url: https://github.com/advisories/GHSA-5h86-8mv2-jq9f
+    quote: "When using aiohttp as a web server and configuring static routes, it is necessary to specify
+      the root path for static files. Additionally, the option 'follow_symlinks' can be used to determine
+      whether to follow symbolic links outside the static root directory. When 'follow_symlinks' is set to
+      True, there is no validation to check if a given file path is within the root directory."
+    notes: ""
+
+  - cve: CVE-2024-49768
+    ecosystem: pypi
+    component: waitress
+    src_package: waitress
+    service: pyramid-shop
+    file: opt/pyramid-shop/production.ini
+    key: channel_request_lookahead
+    predicate: {kind: value_not_equals, value: "0"}
+    vulnerable_when: "request lookahead enabled (channel_request_lookahead > 0)"
+    vulnerable_setting: "channel_request_lookahead = 5"
+    safe_setting: "channel_request_lookahead = 0"
+    advisory_url: https://github.com/advisories/GHSA-9298-4cf8-g4wj
+    quote: "When request lookahead is disabled (default) we won't read any more requests, and when the first
+      request fails due to a parsing error, we simply close the connection. However when request lookahead
+      is enabled, it is possible to process and receive the first request, start sending the error message
+      back to the client while we read the next request and queue it."
+    notes: ""
+
+  # -------------------------------------------------------------------------------------- vendor
+  - cve: CVE-2020-1938
+    ecosystem: vendor
+    component: tomcat
+    src_package: tomcat
+    service: tomcat
+    file: opt/tomcat/conf/server.xml
+    key: "(AJP Connector)"
+    predicate: {kind: regex_present, pattern: "<Connector[^>]*protocol=\"AJP/1\\.3\""}
+    vulnerable_when: "an AJP/1.3 Connector is enabled (default in server.xml before 9.0.31/8.5.51/7.0.100)"
+    vulnerable_setting: "<Connector port=\"8009\" protocol=\"AJP/1.3\" redirectPort=\"8443\" />"
+    safe_setting: "<!-- <Connector port=\"8009\" protocol=\"AJP/1.3\" redirectPort=\"8443\" /> -->"
+    advisory_url: https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.31
+    quote: "When using the Apache JServ Protocol (AJP), care must be taken when trusting incoming
+      connections to Apache Tomcat. [...] Prior to Tomcat 9.0.31, Tomcat shipped with an AJP Connector
+      enabled by default that listened on all configured IP addresses. It was expected (and recommended in
+      the security guide) that this Connector would be disabled if not required."
+    notes: "Fixtures use the release's own default server.xml; V5 comments out the AJP connector."
+
+  - cve: CVE-2017-12617
+    ecosystem: vendor
+    component: tomcat
+    src_package: tomcat
+    service: tomcat
+    file: opt/tomcat/conf/web.xml
+    key: readonly
+    predicate: {kind: regex_present, pattern: "<param-name>readonly</param-name>\\s*<param-value>false</param-value>"}
+    vulnerable_when: "HTTP PUT enabled on the Default servlet (readonly=false)"
+    vulnerable_setting: "<init-param><param-name>readonly</param-name><param-value>false</param-value></init-param>"
+    safe_setting: "(default: no readonly init-param, i.e. readonly=true)"
+    advisory_url: https://tomcat.apache.org/security-8.html
+    quote: "When running with HTTP PUTs enabled (e.g. via setting the readonly initialisation parameter of
+      the Default servlet to false) it was possible to upload a JSP file to the server via a specially
+      crafted request."
+    notes: ""
+
+  - cve: CVE-2025-24813
+    ecosystem: vendor
+    component: tomcat
+    src_package: tomcat
+    service: tomcat
+    file: opt/tomcat/conf/web.xml
+    key: readonly
+    predicate: {kind: regex_present, pattern: "<param-name>readonly</param-name>\\s*<param-value>false</param-value>"}
+    vulnerable_when: "writes enabled for the default servlet (readonly=false); partial PUT is on by default"
+    vulnerable_setting: "<init-param><param-name>readonly</param-name><param-value>false</param-value></init-param>"
+    safe_setting: "(default: no readonly init-param, i.e. readonly=true)"
+    advisory_url: https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.99
+    quote: "If all of the following were true, a malicious user was able to view security sensitive files
+      and/or inject content into those files: writes enabled for the default servlet (disabled by default)
+      support for partial PUT (enabled by default) [...]"
+    notes: ""
+
+  - cve: CVE-2020-9484
+    ecosystem: vendor
+    component: tomcat
+    src_package: tomcat
+    service: tomcat
+    file: opt/tomcat/conf/context.xml
+    key: "(PersistentManager FileStore)"
+    predicate: {kind: regex_present, pattern: "<Store\\s+className=\"org\\.apache\\.catalina\\.session\\.FileStore\""}
+    vulnerable_when: "PersistentManager with a FileStore (default sessionAttributeValueClassNameFilter)"
+    vulnerable_setting: "<Manager className=\"org.apache.catalina.session.PersistentManager\"><Store className=\"org.apache.catalina.session.FileStore\"/></Manager>"
+    safe_setting: "(default context.xml: StandardManager, no Store)"
+    advisory_url: https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.35
+    quote: "If: an attacker is able to control the contents and name of a file on the server; and the
+      server is configured to use the PersistenceManager with a FileStore ; and the PersistenceManager is
+      configured with sessionAttributeValueClassNameFilter=\"null\" (the default unless a SecurityManager is
+      used) [...] Note: All of conditions above must be true for the attack to succeed."
+    notes: "Predicate encodes the configuration condition (FileStore); the other conditions are attacker
+      capabilities."
+
+  - cve: CVE-2021-41773
+    ecosystem: vendor
+    component: httpd
+    src_package: httpd
+    service: httpd
+    file: opt/httpd/conf/httpd.conf
+    key: "<Directory /> Require"
+    predicate: {kind: regex_present, pattern: "(?s)<Directory\\s+/>(?:(?!</Directory>).)*Require all granted"}
+    vulnerable_when: "the filesystem root is not protected by 'Require all denied'"
+    vulnerable_setting: "<Directory />  AllowOverride none  Require all granted </Directory>"
+    safe_setting: "<Directory />  AllowOverride none  Require all denied </Directory>   (upstream default)"
+    advisory_url: https://httpd.apache.org/security/vulnerabilities_24.html#CVE-2021-41773
+    quote: "An attacker could use a path traversal attack to map URLs to files outside the directories
+      configured by Alias-like directives. If files outside of these directories are not protected by the
+      usual default configuration \"require all denied\", these requests can succeed."
+    notes: "The RCE variant additionally needs mod_cgi; the predicate encodes the file-disclosure condition."
+
+  - cve: CVE-2021-42013
+    ecosystem: vendor
+    component: httpd
+    src_package: httpd
+    service: httpd
+    file: opt/httpd/conf/httpd.conf
+    key: "<Directory /> Require"
+    predicate: {kind: regex_present, pattern: "(?s)<Directory\\s+/>(?:(?!</Directory>).)*Require all granted"}
+    vulnerable_when: "the filesystem root is not protected by 'Require all denied'"
+    vulnerable_setting: "<Directory />  AllowOverride none  Require all granted </Directory>"
+    safe_setting: "<Directory />  AllowOverride none  Require all denied </Directory>   (upstream default)"
+    advisory_url: https://httpd.apache.org/security/vulnerabilities_24.html#CVE-2021-42013
+    quote: "An attacker could use a path traversal attack to map URLs to files outside the directories
+      configured by Alias-like directives. If files outside of these directories are not protected by the
+      usual default configuration \"require all denied\", these requests can succeed."
+    notes: ""
+
+  - cve: CVE-2021-40438
+    ecosystem: vendor
+    component: httpd
+    src_package: httpd
+    service: httpd
+    file: opt/httpd/conf/httpd.conf
+    key: LoadModule proxy_module
+    predicate: {kind: regex_present, pattern: "^\\s*LoadModule\\s+proxy_module\\s"}
+    vulnerable_when: "mod_proxy loaded (reverse proxy configured)"
+    vulnerable_setting: "LoadModule proxy_module modules/mod_proxy.so   (+ ProxyPass)"
+    safe_setting: "#LoadModule proxy_module modules/mod_proxy.so   (upstream default)"
+    advisory_url: https://httpd.apache.org/security/vulnerabilities_24.html#CVE-2021-40438
+    quote: "A crafted request uri-path can cause mod_proxy to forward the request to an origin server
+      choosen by the remote user. This issue affects Apache HTTP Server 2.4.48 and earlier."
+    notes: "Necessary condition only (the vulnerable code lives in mod_proxy), as for CVE-2023-25690 in D1."

@@ -17,6 +17,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
+import io
 import yaml
 import zipfile
 from debian.deb822 import Deb822
@@ -181,10 +182,14 @@ class Fixture:
                 rel = path.relative_to(rootfs).as_posix()
                 if rel.startswith("var/lib/dpkg/"):
                     continue
-                if rel.endswith("/METADATA") and ".dist-info/" in rel:
+                if rel.startswith("opt/") and rel.endswith("/METADATA") and "/site-packages/" in rel \
+                        and ".dist-info/" in rel:
                     lang.extend(_dist_info(path, rel))
+                if rel.startswith("opt/") and rel.endswith("/_vendor/vendor.txt"):
+                    lang.extend(_vendored(path, rel))
                 if rel.endswith((".jar", ".war", ".ear")):
-                    lang.extend(_jar_info(path, rel))
+                    if rel.startswith("opt/"):
+                        lang.extend(_jar_info(path, rel))
                     if any(fnmatch.fnmatch(rel, pat) for pat in FILE_ALLOW):
                         binaries.append(rel)
                     continue
@@ -226,10 +231,28 @@ def _dist_info(path: Path, rel: str) -> list[dict]:
              "path": rel.rsplit("/", 1)[0], "evidence": "dist-info METADATA"}]
 
 
-def _jar_info(path: Path, rel: str) -> list[dict]:
+def _vendored(path: Path, rel: str) -> list[dict]:
+    """pip-vendored copies listed in _vendor/vendor.txt whose package directory really exists (as the labeller)."""
     out = []
     try:
-        with zipfile.ZipFile(path) as zf:
+        lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
+    except OSError:
+        return out
+    for ln in lines:
+        m = re.match(r"^\s*([A-Za-z0-9_.\-]+)==([^\s#;]+)", ln)
+        if not m:
+            continue
+        mod = m.group(1).lower().replace("-", "_")
+        if (path.parent / mod / "__init__.py").is_file():
+            out.append({"ecosystem": "pypi", "name": m.group(1), "version": m.group(2),
+                        "path": f"{rel.rsplit('/', 1)[0]}/{mod}", "evidence": "vendor.txt (vendored copy)"})
+    return out
+
+
+def _jar_info(path: Path, rel: str, data: bytes | None = None) -> list[dict]:
+    out = []
+    try:
+        with zipfile.ZipFile(io.BytesIO(data) if data is not None else path) as zf:
             manifest = ""
             if "META-INF/MANIFEST.MF" in zf.namelist():
                 manifest = zf.read("META-INF/MANIFEST.MF").decode("utf-8", "replace")
@@ -243,6 +266,10 @@ def _jar_info(path: Path, rel: str) -> list[dict]:
                                     "name": props["artifactId"], "version": props["version"], "path": rel,
                                     "manifest_version": impl.get("Implementation-Version"),
                                     "evidence": f"{name}"})
+            if data is None:  # jars nested in Spring Boot / WAR archives (one level, as the labeller)
+                for name in zf.namelist():
+                    if name.endswith(".jar") and name.startswith(("BOOT-INF/lib/", "WEB-INF/lib/")):
+                        out.extend(_jar_info(path, f"{rel}!/{name}", zf.read(name)))
     except (OSError, zipfile.BadZipFile, KeyError):
         return []
     return out
@@ -387,8 +414,8 @@ class HostEnv:
     def running_versions(self) -> list[str]:
         names = {n.lower() for n in self.names()}
         out = []
-        for svc in self.services.values():
-            owner = str(svc.get("component") or svc.get("package") or "").lower()
+        for key, svc in self.services.items():
+            owner = str(svc.get("component") or svc.get("package") or key or "").lower()
             if owner in names and svc.get("loaded_version") and svc.get("active", True):
                 out.append(str(svc["loaded_version"]))
         return out
@@ -425,8 +452,8 @@ class HostEnv:
                     inst["version"] = event["version"]
             elif kind == "restart":
                 insts = self.instances()
-                for svc in self.services.values():
-                    owner = str(svc.get("component") or svc.get("package") or "").lower()
+                for key, svc in self.services.items():
+                    owner = str(svc.get("component") or svc.get("package") or key or "").lower()
                     if insts and owner in {n.lower() for n in self.names()}:
                         svc["loaded_version"] = insts[0]["version"]
                         if svc.get("banner") and svc.get("version"):
@@ -436,8 +463,8 @@ class HostEnv:
                 drop = {id(i) for i in self.instances()}
                 self.lang = [e for e in self.lang if id(e) not in drop]
                 self.apps = [a for a in self.apps if id(a) not in drop]
-                for svc in self.services.values():
-                    if str(svc.get("component") or "").lower() in {n.lower() for n in self.names()}:
+                for key, svc in self.services.items():
+                    if str(svc.get("component") or svc.get("package") or key).lower() in {n.lower() for n in self.names()}:
                         svc["active"] = False
             self.actions.append({"t": self.clock, "drift": event})
             return
@@ -629,6 +656,16 @@ class HostEnv:
                     continue
                 if re.match(rf"^{re.escape(key)}(\s|=|$)", stripped, flags=re.IGNORECASE):
                     matches.append({"file": path, "line": i, "text": stripped})
+        pred = (self.pre or {}).get("predicate") or {}
+        if self.pre and pred.get("kind") == "regex_present" and key == str(self.pre.get("key")):
+            path = self.pre["file"]
+            body = regex_text(self.files.get(path, ""))
+            hits = [m.group(0) for m in re.finditer(str(pred["pattern"]), body, re.M)]
+            matches = [{"file": path, "line": -1, "text": h, "regex": True} for h in hits]
+            text = (f"{path}: active (non-comment) matches for {key}:\n" + "\n".join(hits)) if hits else \
+                f"{path}: no active (non-comment) {key} found"
+            return "ok", text, {"service": service, "key": key, "files": [path] if path in self.files else [],
+                                "matches": matches, "regex": True}
         if not matches:
             text = f"'{key}' is not set in: " + ", ".join(files)
         else:
@@ -730,6 +767,8 @@ class HostEnv:
                 "predicate": self.pre.get("predicate"),
                 "safe_setting": self.pre.get("safe_setting"),
             }
+            if self.pre.get("applies_to_versions"):
+                record["config_precondition"]["applies_to_versions"] = self.pre["applies_to_versions"]
         return "ok", json.dumps(record, indent=1, sort_keys=True), record
 
     def _t_lang_pkg_query(self, args: dict) -> tuple[str, str, Any]:
@@ -938,7 +977,11 @@ class HostEnv:
                     "vuln_config_enabled": False, "req_config": req, **self._change_truth()}
         cls = [versions.classify(self.eco, v, self.ranges()) for v in vers + self.running_versions()]
         a = any(c[0] for c in cls)
-        x = (not a) and all(c[1] for c in cls[: len(vers)])
+        x = (not a) and any(c[1] for c in cls[: len(vers)])
+        app = (self.pre or {}).get("applies_to_versions")
+        if req and app:
+            req = any(versions.classify(self.eco, v, app)[0] for v in vers)
+            cfg = bool(req and config_enabled(self.pre, self.files))
         return {"present": True, "in_affected_range": a, "fix_applied": x, "vuln_config_enabled": cfg,
                 "req_config": req, **self._change_truth()}
 
@@ -967,6 +1010,11 @@ class HostEnv:
         return on_disk_vuln or bool(in_memory_vuln)
 
 
+def regex_text(text: str) -> str:
+    text = re.sub(r"(?s)<!--.*?-->", "", text)
+    return "\n".join(ln for ln in text.splitlines() if not ln.lstrip().startswith(("#", ";")))
+
+
 def config_enabled(pre: dict, files: dict[str, str]) -> bool:
     """Evaluate a curated precondition predicate on the fixture configuration."""
     pred = pre.get("predicate") or {}
@@ -984,9 +1032,11 @@ def config_enabled(pre: dict, files: dict[str, str]) -> bool:
             m = re.match(rf"^{re.escape(key)}\s*(?:=\s*|\s+|$)(.*)$", s, flags=re.IGNORECASE)
             if m:
                 values.append(m.group(1).strip().strip('"'))
-    if kind == "regex_present":  # v3: regex over the configuration file(s), multiline
-        pattern = re.compile(str(pred["pattern"]), re.M | re.I)
-        return any(pattern.search(t) for p, t in files.items() if p == path or p.startswith(path.rstrip("/") + "/"))
+    if kind == "regex_present":  # v3: regex over the configuration file, comments removed (as the labeller)
+        text = files.get(path)
+        if text is None:
+            return False
+        return re.search(str(pred["pattern"]), regex_text(text), re.M) is not None
     if kind == "directive_present":
         return bool(values)
     if kind == "directive_absent":

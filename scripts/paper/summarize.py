@@ -20,6 +20,11 @@ from deepcti.eval import data
 from deepcti.eval.metrics import episode_metrics, macro_f1
 
 
+# prereg-v1 model panel; addendum models (prereg-v2) are excluded from v2 analyses unless MODEL_FILTER is None
+V1_PANEL = {"none", "qwen3_4b", "llama31_8b", "granite41_8b", "qwen3_14b", "mistral_small_24b", "gemma4_31b"}
+MODEL_FILTER: set | None = None
+
+
 def load_runs(split: str, exp: str, allow_sealed: bool = False) -> pd.DataFrame:
     labels = data.load_labels(split, allow_sealed=allow_sealed)
     rows = []
@@ -43,6 +48,8 @@ def load_runs(split: str, exp: str, allow_sealed: bool = False) -> pd.DataFrame:
                          "truncations": r["usage"]["truncations"], "llm_errors": r["usage"]["errors"],
                          "wall_s": r["wall_s"], "error": False, **m})
     df = pd.DataFrame(rows)
+    if MODEL_FILTER is not None and not df.empty:
+        df = df[df["model"].isin(MODEL_FILTER)]
     if not df.empty and "label_world_mismatch" in df:
         bad = df[df["label_world_mismatch"].fillna(False).astype(bool)]
         if len(bad):

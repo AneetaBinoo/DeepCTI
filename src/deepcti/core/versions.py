@@ -49,8 +49,16 @@ def classify(ecosystem: str, version: str, ranges: list[dict]) -> tuple[bool, bo
     for r in ranges or []:
         lo = r.get("introduced")
         hi = r.get("fixed")
+        last = r.get("last_affected")  # inclusive upper bound (OSV), used when no fix exists on that branch
         above_lo = lo in (None, "", "0") or compare(ecosystem, version, str(lo)) >= 0
-        below_hi = hi in (None, "") or compare(ecosystem, version, str(hi)) < 0
+        if hi not in (None, ""):
+            below_hi = compare(ecosystem, version, str(hi)) < 0
+        elif last not in (None, ""):
+            below_hi = compare(ecosystem, version, str(last)) <= 0
+            if above_lo and not below_hi:
+                continue  # above last_affected on a branch without a fix: not in this range, not 'fixed' by it
+        else:
+            below_hi = True
         if above_lo and below_hi:
             in_range = True
         elif above_lo and not below_hi:
