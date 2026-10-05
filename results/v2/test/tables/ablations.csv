@@ -1,0 +1,7 @@
+system,model,n,acc,coverage,loss,invalid,cost,llm_calls,udar_exec,disruptive_exec,wall_s,DER,sel_macroF1,errors
+DC_k1,mistral_small_24b,906,0.837,1.0,0.034,0.0,6.215,1.349,0,7,1.462,0.0,0.827,0
+DC_k1,qwen3_14b,906,0.837,1.0,0.034,0.0,6.215,1.349,0,7,1.066,0.0,0.827,0
+DC_nofresh,mistral_small_24b,906,0.837,1.0,0.034,0.0,6.215,1.349,0,7,1.452,0.0,0.827,0
+DC_nofresh,qwen3_14b,906,0.837,1.0,0.034,0.0,6.215,1.349,0,7,1.073,0.0,0.827,0
+DC_noverify,mistral_small_24b,906,0.837,1.0,0.034,0.0,6.215,1.349,0,7,1.463,0.0,0.827,0
+DC_noverify,qwen3_14b,906,0.837,1.0,0.034,0.0,6.215,1.349,0,7,1.069,0.0,0.827,0

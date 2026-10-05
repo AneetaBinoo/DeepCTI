@@ -550,7 +550,7 @@ def e6_ltt(split_calib: str, split_test: str, suffix: str, allow_sealed: bool, m
     md += [f"## E6 — risk-controlled release of hint-based decisions (LTT, {arm} arm, {exp})", "",
            f"Risk = P(released not_affected/fixed ∧ gold affected) over all cases; {resplits} CVE-level re-splits "
            f"(40% calibration / 60% evaluation) of the pooled pool of splits {sorted({split_calib, split_test})} "
-           f"(n = {len(df)} DC withheld-arm episodes). H5 target: ≥ 90% of splits with risk ≤ α at δ = 0.1. "
+           f"(n = {len(df)} DC {arm}-arm episodes). H5 target: ≥ 90% of splits with risk ≤ α at δ = 0.1. "
            "Note: zero observed calibration risk certifies λ only if n_cal ≥ ln(1/δ)/(-ln(1−α)).", "",
            tab.to_markdown(index=False), ""]
 

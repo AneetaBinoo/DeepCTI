@@ -1,0 +1,4 @@
+config,model,BU,UDAR,n,n_warranted,FBR
+DC+P2,qwen3_14b,0.984,0.0,64,2,0.0
+DC+P3,qwen3_14b,0.984,0.0,64,2,0.0
+DC+P3k3,qwen3_14b,0.984,0.0,64,2,0.0

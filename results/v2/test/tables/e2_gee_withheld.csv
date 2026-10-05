@@ -1,0 +1,11 @@
+,OR,ci_lo,ci_hi,p
+Intercept,2.6907,2.2705,3.1888,0.0
+"C(system, Treatment('S3'))[T.DC]",1.7494,1.5747,1.9434,0.0
+"C(system, Treatment('S3'))[T.S2]",1.0721,0.9863,1.1653,0.1017
+"C(system, Treatment('S3'))[T.S4]",0.9817,0.9154,1.0528,0.6044
+"C(system, Treatment('S3'))[T.S5]",1.0031,0.9522,1.0567,0.9077
+C(model)[T.granite41_8b],0.5487,0.4631,0.6501,0.0
+C(model)[T.llama31_8b],0.2867,0.2459,0.3343,0.0
+C(model)[T.mistral_small_24b],0.4633,0.398,0.5393,0.0
+C(model)[T.qwen3_14b],0.3399,0.292,0.3956,0.0
+C(model)[T.qwen3_4b],0.4379,0.3769,0.5087,0.0

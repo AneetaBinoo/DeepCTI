@@ -1,0 +1,11 @@
+,OR,ci_lo,ci_hi,p
+Intercept,0.0,0.0,0.0,0.0
+"C(system, Treatment('S3'))[T.DC]",0.0,0.0,0.0,0.0
+"C(system, Treatment('S3'))[T.S2]",inf,inf,inf,0.0
+"C(system, Treatment('S3'))[T.S4]",inf,inf,inf,0.0
+"C(system, Treatment('S3'))[T.S5]",inf,inf,inf,0.0
+C(model)[T.granite41_8b],inf,inf,inf,0.0
+C(model)[T.llama31_8b],inf,inf,inf,0.0
+C(model)[T.mistral_small_24b],inf,inf,inf,0.0
+C(model)[T.qwen3_14b],inf,inf,inf,0.0
+C(model)[T.qwen3_4b],inf,inf,inf,0.0
