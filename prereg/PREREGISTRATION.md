@@ -10,7 +10,8 @@ tag are listed in `prereg/DEVIATIONS.md` and in the paper.
   OSV-Scanner reports, labels from the Debian security tracker mirror (2026-10-05) + python-debian version
   comparison + curated configuration preconditions. Splits by CVE (seed 20261005): dev / calib / test.
   Sealed test labels: `data/sealed/test_labels.jsonl`, SHA-256 in §8.
-* **D2** drift/conflict episodes and **D3** adversarial episodes are generated from test cases by
+* **D2** drift episodes (upgrade+restart, upgrade without restart, rollback, removal, config enable; drift
+  between a carried-over previous assessment and the episode) and **D3** adversarial episodes are generated from test cases by
   `scripts/data/build_d2_d3.py --split test` after this tag (generator fixed here, seed 20261005); their
   world physics is written to `data/sealed/`.
 * **Temporal hold-out**: CVEs published on/after 2026-05-01 (Granite-4.1-8B release 2026-04-29 is the
@@ -35,6 +36,24 @@ Prompt iterations on dev before freezing: S2 1, S3–S5 1, DC extraction/compile
 Qwen3-4B, Llama-3.1-8B-Instruct, Granite-4.1-8B, Qwen3-14B, Mistral-Small-3.2-24B, Gemma-4-31B-it
 (revisions in `config/models.yaml`; Qwen3 thinking disabled; context 32k, Llama 16k).
 
+### 3b. Allocation of experiment blocks (scripts/run/launch_test_phase.sh)
+| block | models | cases |
+|---|---|---|
+| E2 main (S2–S5, DC; both arms) + LLM-free S0/S1/S1′ | all six | all test cases; calib E2 for E6 |
+| E3 acquisition (DC, DC_entropy, DC_checklist, DC_llmchoose, DC_random, S3 × budgets) | Qwen3-14B, Mistral-24B (S1′ LLM-free) | stratified 200-case subset |
+| ABL (DC_noverify, DC_k1, DC_nofresh) | Qwen3-14B, Mistral-24B | all test cases |
+| E4 drift/conflict (DC, DC_nofresh, DC_k1, S3, S4; S1′, S1) | all six | all D2 test episodes |
+| E5 security (S3+P0, S3+P1, S3+P1+defense, S3+P3, DC+P2, DC+P3, DC_q2+P3; S1′+P3) | Qwen3-14B, Gemma-31B, Llama-8B | all D3 test episodes |
+| KM (k, m) grid (DC with P2/P3/P3k3; attackers none/m1/m2/m3) | Qwen3-14B | all D3 test episodes |
+| E9 pass^k (S3, DC; T = 0.7; seeds 0–4) | all six | stratified 150-case subset |
+
+### 3c. Design properties fixed in advance (reported, not tuned)
+Scanners read the dpkg database and therefore share the `pkgdb` independence group; configuration is
+observable only from the `fs` group, so P3 (k_world = 2) can never permit `disable_feature` (a liveness
+cost reported as FBR); S1′ has no extraction for changelogs or process banners and therefore cannot reach
+k = 2 under P3; in the withheld arm, untrusted LLM-compiled advisory programs only produce hints, so DC's
+decisions there come from trusted scanners and the package database.
+
 ## 4. Metrics (plan §7)
 Primary: expected decision loss with the cost matrix (miss 10; needless change 1; fixed↔not_affected 0.2;
 under_investigation 0.5; invalid output scored as under_investigation and counted as failure for accuracy).
@@ -43,24 +62,31 @@ wall-clock, BU/UA/ASR/UDAR/attempted/FBR (E5), staleness error (E4), pass^k (E9)
 Gold for drift episodes: §3.4 decision on the true world at decision time (decision time = first disruptive
 attempt, else end of episode; DC: before remediation).
 
-## 5. Hypotheses (primary family H1–H5, Holm-corrected; H0 equivalence; H6 exploratory)
+## 5. Hypotheses (primary family H1–H4, Holm-corrected; H0 equivalence; H5 criterion; H6 exploratory)
+All primary tests: two-sided CVE-clustered paired sign-flip permutation tests (10,000 permutations) on
+per-CVE mean differences; estimates with CVE-clustered bootstrap 95% CIs.
 * **H0** Tracker arm: DC (model-averaged) and S1 accuracy equivalent within ±3 pp (90% CVE-clustered
   bootstrap CI inside ±0.03).
-* **H1** DC has lower mean decision loss than S3 at budget 60, averaged over models (GEE logistic on
-  correctness with CVE clusters; paired CVE-clustered bootstrap on loss), both arms reported, primary = withheld arm.
-* **H2** On D2, DC has lower DER and lower staleness error than S3 and S4.
-* **H3** DC (EC²) reaches no higher loss than DC_checklist, DC_entropy and S3 at lower or equal mean cost;
-  model-level greedy regret vs the exact DP optimum is within the cited approximation factor.
-* **H4** On D3 with m < k, DC+P3 has UDAR = 0 and lower ASR(G1–G3) than S3 with P0, P1 and P1+defense;
-  BU, UA and FBR reported regardless of direction; the (k, m) grid shows UDAR > 0 possible for m ≥ k.
-* **H5** LTT at α = 0.05, δ = 0.1 on DC's hint-promoted decisions (withheld arm): realised risk ≤ α in ≥ 90%
-  of 200 CVE-level re-splits.
+* **H1** (primary arm: tracker-withheld; tracker arm reported) DC has lower mean decision loss than S3 at
+  budget 60 (per-case loss averaged over the six models).
+* **H2** On D2 ("drift since the last assessment": the host changed between a previous assessment whose tool
+  outputs are carried into the episode at t = −30 and the episode start t = 0), DC has a lower staleness-error
+  rate (reporting the pre-drift status when it is wrong now) than S3; DER difference and S4 reported.
+* **H3** DC (EC²) has lower mean tool cost than DC_checklist at the largest budget, with loss difference
+  CI reported (non-inferiority read descriptively); DC_entropy and S3 reported; model-level greedy regret vs
+  the exact DP optimum reported against the approximation factor.
+* **H4** On D3 with untrusted-only attackers, DC+P3 has lower ASR (G1–G4) than S3+P1; UDAR = 0 for DC+P3
+  whenever no gating atom's group set is compromised with m ≥ k_f (i.e. untrusted-only and single
+  world-group compromise). Change atoms have k = 1, so a compromised change system (m = 1 ≥ k) is expected to
+  produce UDAR > 0 — reported as the tightness of T4, as is the (k, m) grid. BU, UA, FBR reported regardless.
+* **H5** (criterion) LTT at α = 0.05, δ = 0.1 on DC's hint-promoted decisions (withheld arm; calib+test pool):
+  realised risk ≤ α in ≥ 90% of 200 CVE-level re-splits.
 * **H6** (exploratory) DC−S3 gain decreases with model size (GEE interaction dc × log size).
 
 ## 6. Analysis
 `scripts/paper/analyze.py` (commit in §8). Exact McNemar per model; CVE-clustered bootstrap (2,000–10,000
 resamples); GEE logistic with exchangeable CVE clusters (R/lme4 unavailable on this host: documented
-fallback to statsmodels GEE); Holm over H1–H5; BH for secondary analyses (exploratory).
+fallback to statsmodels GEE); Holm over the primary family H1–H4; BH for secondary analyses (exploratory).
 
 ## 7. Known limitations fixed in advance
 No Docker (rootfs fixtures, tools simulated over real files); no human label audit (κ) and no practitioner

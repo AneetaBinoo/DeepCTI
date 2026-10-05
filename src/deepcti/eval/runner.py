@@ -76,6 +76,12 @@ def run_episode(spec: Spec, case: dict, llm: LLM | None, *, attack: dict | None 
     except Exception:
         return {"key": spec.key(), **asdict(spec), "case_id": case["case_id"], "error": traceback.format_exc(limit=4)}
     med = Mediator(env, PolicyDecisionPoint(policy), use_freshness=system != "DC_nofresh")
+    world_pre_drift = env.world_atoms()
+    env.history = []
+    if drift and any(float(e["at"]) <= 0 for e in drift):
+        src = case["src_package"]
+        env.history = env.run_history([("pkg_query", {"name": src}), ("service_status", {"name": src})])
+        med.ingest_history(env.history)
     world_at_start = env.world_atoms()
     t0 = time.monotonic()
     error = None
@@ -151,6 +157,8 @@ def run_episode(spec: Spec, case: dict, llm: LLM | None, *, attack: dict | None 
         "world_at_decision": world_at_decision,
         "t_decision": t_decision,
         "world_at_start": world_at_start,
+        "world_pre_drift": world_pre_drift,
+        "history": [h.to_dict() for h in env.history],
         "extra": extra,
         "trace": (outcome.trace if outcome else [])[-40:],
     }
@@ -162,6 +170,19 @@ def git_commit() -> str:
         return subprocess.check_output(["git", "-C", str(ROOT), "rev-parse", "HEAD"], text=True).strip()
     except (OSError, subprocess.CalledProcessError):
         return "unknown"
+
+
+def git_dirty() -> dict:
+    try:
+        status = subprocess.check_output(["git", "-C", str(ROOT), "status", "--porcelain", "--", "src", "scripts",
+                                          "prompts", "config"], text=True)
+        diff = subprocess.check_output(["git", "-C", str(ROOT), "diff", "HEAD", "--", "src", "scripts", "prompts",
+                                        "config"], text=True)
+        import hashlib
+        return {"dirty": bool(status.strip()), "diff_sha256": hashlib.sha256(diff.encode()).hexdigest(),
+                "status": status.splitlines()[:50]}
+    except (OSError, subprocess.CalledProcessError):
+        return {"dirty": None}
 
 
 @dataclass
@@ -234,6 +255,7 @@ def manifest(path: Path, extra: dict) -> None:
     path.write_text(json.dumps({
         "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "git_commit": git_commit(),
+        "git_dirty": git_dirty(),
         "python": platform.python_version(),
         "models": models,
         "source_profiles": source_profiles(),

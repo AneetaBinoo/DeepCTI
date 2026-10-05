@@ -22,7 +22,9 @@ from deepcti.env.host import HostEnv  # noqa: E402
 from deepcti.eval import data  # noqa: E402
 
 SEED = 20261005
-DRIFT_AT = 6.0
+# Drift happens between the previous assessment (evidence carried over, collected at t=-30) and this
+# episode (t=0): the carried-over evidence is stale and must be re-verified (results audit B3).
+DRIFT_AT = 0.0
 
 
 def env_for(case: dict) -> HostEnv:
@@ -75,7 +77,7 @@ def build_d2(cases: list[dict], rng: random.Random, per_kind: int) -> list[dict]
             env = env_for(it["case"])
             env.drift = list(it["drift"])
             before = env.world_atoms()
-            env.tick(DRIFT_AT)
+            env.run_history([])
             after = env.world_atoms()
             out.append({"episode_id": f"D2-{kind}-{it['case']['case_id']}", "case_id": it["case"]["case_id"],
                         "kind": kind, "drift": it["drift"], "world_before": before, "world_after": after})

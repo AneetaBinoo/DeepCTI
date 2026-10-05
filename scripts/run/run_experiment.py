@@ -70,8 +70,9 @@ def build_jobs(exp: str, split: str, model: str, limit: int | None) -> list[Job]
                     jobs.append(Job(Spec(exp, c["case_id"], s, model, budget=b), c))
     elif exp == "ABL":
         for c in cases:
-            for s in ABLATIONS:
-                jobs.append(Job(Spec(exp, c["case_id"], s, model), c))
+            for arm in ("tracker", "withheld"):
+                for s in ABLATIONS:
+                    jobs.append(Job(Spec(exp, c["case_id"], s, model, arm=arm), c))
     elif exp == "E9":
         subset = stratified_subset(cases, 150)
         for c in subset:
@@ -91,7 +92,8 @@ def build_jobs(exp: str, split: str, model: str, limit: int | None) -> list[Job]
         all_cases = {c["case_id"]: c for c in data.load_cases(split)}
         if exp == "E5":
             configs = ([("S3", "P0", False), ("S3", "P1", False), ("S3", "P1", True), ("S3", "P3", False),
-                        ("DC", "P2", False), ("DC", "P3", False), ("DC_q2", "P3", False)]
+                        ("DC", "P2", False), ("DC", "P3", False), ("DC_q2", "P3", False),
+                        ("DC_noverify", "P3", False)]
                        if llm else [("S1p", "P3", False)])
         else:
             configs = [("DC", p, False) for p in ("P2", "P3", "P3k3")]

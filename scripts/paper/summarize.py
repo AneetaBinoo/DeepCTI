@@ -43,6 +43,12 @@ def load_runs(split: str, exp: str, allow_sealed: bool = False) -> pd.DataFrame:
                          "truncations": r["usage"]["truncations"], "llm_errors": r["usage"]["errors"],
                          "wall_s": r["wall_s"], "error": False, **m})
     df = pd.DataFrame(rows)
+    if not df.empty and "label_world_mismatch" in df:
+        bad = df[df["label_world_mismatch"].fillna(False).astype(bool)]
+        if len(bad):
+            print(f"WARNING: {len(bad)} records whose label disagrees with the start-of-episode world "
+                  f"(cases: {sorted(bad['case_id'].unique())[:10]}) — excluded", file=sys.stderr)
+            df = df[~df["key"].isin(bad["key"])]
     return df.drop_duplicates("key", keep="last") if not df.empty else df
 
 

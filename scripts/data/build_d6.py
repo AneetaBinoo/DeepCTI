@@ -4,7 +4,8 @@ Tuple: {cve, src_package, release, fixed_version, tracker_status, description, d
 label: affected_open (status open, no fix in release) | fixed_in_version (resolved with a real version) |
        not_affected (resolved with fixed_version "0").
 Sampling: userland source packages (no linux kernel), releases bookworm + trixie, label-balanced targets,
-seed 20261005. Split by CVE (dev 30 / calib 20 / test 50); CVEs used in D1 never enter D6 test.
+seed 20261005. Split by CVE (dev 30 / calib 20 / test 50); D1 test CVEs are excluded from D6 and
+D1 dev/calib CVEs never enter D6 test.
 """
 
 from __future__ import annotations
@@ -36,13 +37,18 @@ def label_of(x: dict) -> str | None:
 
 def main() -> None:
     tracker = json.loads((MIRRORS / "debian_tracker" / SNAP_DATE / "raw" / "tracker.json").read_text())
-    d1_cves = {json.loads(line)["cve"] for line in open(DATA / "d1" / "cve_meta.jsonl")}
+    d1_meta = [json.loads(line) for line in open(DATA / "d1" / "cve_meta.jsonl")]
+    d1_cves = {m["cve"] for m in d1_meta}
+    # D1 test CVEs are excluded from D6 entirely (no tracker labels for them may leak via D6 dev/calib)
+    d1_test = {m["cve"] for m in d1_meta if m["split"] == "test"}
     pool: dict[str, list[dict]] = {k: [] for k in TARGET}
     for src, cves in tracker.items():
         if src.startswith(EXCLUDE_PREFIX):
             continue
         for cve, e in cves.items():
             if not cve.startswith("CVE-") or not (e.get("description") or "").strip():
+                continue
+            if cve in d1_test:
                 continue
             for rel in RELEASES:
                 x = e["releases"].get(rel)

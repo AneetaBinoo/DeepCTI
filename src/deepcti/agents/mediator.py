@@ -87,6 +87,12 @@ class Mediator:
         self.add_facts(facts)
         return result
 
+    def ingest_history(self, results: list[ToolResult]) -> None:
+        for r in results:
+            observations, facts = parse_result(r, self.case, self.program)
+            self.log.extend(observations)
+            self.add_facts(facts)
+
     def summary(self) -> dict:
         state = self.state()
         return {

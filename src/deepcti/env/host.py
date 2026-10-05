@@ -322,6 +322,20 @@ class HostEnv:
                 f" -- Debian Security Team <team@security.debian.org>\n"
             )
 
+    def run_history(self, calls: list[tuple[str, dict]], at: float = -30.0) -> list[ToolResult]:
+        """Evidence from a previous assessment (collected at clock ``at`` on the pre-drift host), then apply
+        every drift event scheduled at t <= 0. History calls cost nothing in this episode."""
+        self.clock = at
+        history = []
+        for tool, args in calls:
+            r = self.call(tool, args)
+            r.call_id = "h" + r.call_id[1:]
+            history.append(r)
+        self.calls = []
+        self.clock = 0.0
+        self.tick(0.0)
+        return history
+
     # ---------------------------------------------------------------- dispatch
     def call(self, tool: str, args: dict) -> ToolResult:
         self._n += 1

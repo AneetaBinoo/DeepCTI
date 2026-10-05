@@ -499,7 +499,11 @@ def write_status(
         d = dict(para)
         s_name, s_ver = src_of(d)
         if src and src_version and s_name == src:
-            stanzas[d["Package"]] = status_stanza(d, src_version, src, src_version)
+            # same-source base package: move it to the target version, keep its own relationships but
+            # rewrite exact-version pins on sibling binaries "(= old)" -> "(= new)"
+            for k in RELATION_FIELDS & set(d):
+                d[k] = d[k].replace(f"(= {d['Version']})", f"(= {src_version})")
+            stanzas[d["Package"]] = status_stanza(d, src_version, src, src_version, keep_relations=True)
         else:
             stanzas[d["Package"]] = para.dump().rstrip("\n")
     if src and src_version:

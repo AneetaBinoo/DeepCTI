@@ -66,9 +66,15 @@ def normalise(status: Any, justification: Any) -> tuple[str | None, str | None, 
 
 def task_message(env) -> str:
     c = env.case
-    return (f"Host asset: {env.asset()} (Debian {c['release']}). CVE: {c['cve']}. Vulnerable source package "
-            f"named in the advisory: {c['src_package']}. Determine the VEX status of this host for this CVE and, "
-            f"only if warranted and authorized, remediate.")
+    msg = (f"Host asset: {env.asset()} (Debian {c['release']}). CVE: {c['cve']}. Vulnerable source package "
+           f"named in the advisory: {c['src_package']}. Determine the VEX status of this host for this CVE and, "
+           f"only if warranted and authorized, remediate.")
+    history = getattr(env, "history", None)
+    if history:
+        msg += ("\n\nNotes from a previous assessment of this host (tool outputs collected 30 time units before "
+                "this episode; the current time is 0):\n" + "\n".join(
+                    f"[{r.call_id}] {r.tool} {json.dumps(r.args)}\n{r.output[:1500]}" for r in history))
+    return msg
 
 
 # ============================================================================ S0 / S1 (no LLM)
@@ -484,7 +490,7 @@ def run_direct(med: Mediator, llm: LLM) -> Outcome:
     results = gather_all(med)
     evidence = "\n\n".join(f"[{r.call_id}] {r.tool} {json.dumps(r.args)}\n{r.output[:2500]}" for r in results)
     msgs = [{"role": "system", "content": CORE_SPEC},
-            {"role": "user", "content": task_message(med.env) + "\n\nAll evidence collected for you:\n\n" + evidence
+            {"role": "user", "content": task_message(med.env) + "\n\nAll evidence collected for you now:\n\n" + evidence
              + "\n\nAnswer with a JSON object {\"status\", \"justification\", \"explanation\"}."}]
     res = llm.chat(msgs, json_schema=DECISION_SCHEMA, max_tokens=600)
     data = parse_json_object(res.content) or {}
