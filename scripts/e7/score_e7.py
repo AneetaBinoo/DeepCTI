@@ -181,3 +181,42 @@ for s in summary:
           f"macroF1={s['justif_macro_f1_mean']:.3f}±{s['justif_macro_f1_sd']:.3f} abst={s['abstention_mean']:.3f} "
           f"tools={s['tool_calls_mean']:.1f} tok={s['tokens_per_case_mean']:.0f}")
 print(json.dumps(deltas, indent=0))
+
+# paired task-level bootstrap of B - A (metric averaged over the 3 seeds), 1000 resamples, rng seed 0
+import random  # noqa: E402
+
+boot = []
+for model in ["gemma_4_31b", "qwen3_14b"]:
+    if f"A/{model}" not in metrics_all or f"B/{model}" not in metrics_all:
+        continue
+    rows = {s: [json.loads(l) for l in (OUT / "vexbench_format" / s / model / "parsed.jsonl").read_text().splitlines()] for s in ["A", "B"]}
+    by = {s: defaultdict(list) for s in rows}
+    for s in rows:
+        for r in rows[s]:
+            by[s][r["task_id"]].append(r)
+    tids = sorted(by["A"])
+    rng = random.Random(0)
+
+    def score(sample):
+        out = {}
+        for s in ["A", "B"]:
+            rr = []
+            for i, t in enumerate(sample):
+                for r in by[s][t]:
+                    rr.append({**r, "task_id": f"{t}#{i}"})
+            m = compute_metrics(rr)
+            out[s] = (m["binary"]["f1"]["mean"], m["multiclass"]["macro_f1"]["mean"])
+        return out["B"][0] - out["A"][0], out["B"][1] - out["A"][1]
+
+    d0 = score(tids)
+    ds = [score([rng.choice(tids) for _ in tids]) for _ in range(1000)]
+    for k, name in [(0, "status_f1"), (1, "justif_macro_f1")]:
+        v = sorted(x[k] for x in ds)
+        boot.append({"model": model, "metric": name, "delta_B_minus_A": d0[k], "ci95_lo": v[25], "ci95_hi": v[974],
+                     "p_boot_delta_le_0": sum(x[k] <= 0 for x in ds) / len(ds)})
+with (OUT / "e7_bootstrap.csv").open("w", newline="") as f:
+    w = csv.DictWriter(f, fieldnames=["model", "metric", "delta_B_minus_A", "ci95_lo", "ci95_hi", "p_boot_delta_le_0"])
+    w.writeheader()
+    w.writerows(boot)
+for b in boot:
+    print(b)

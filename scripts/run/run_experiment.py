@@ -63,6 +63,10 @@ def build_jobs(exp: str, split: str, model: str, limit: int | None) -> list[Job]
             for arm in ("tracker", "withheld"):
                 for s in (E2_LLM if llm else LLM_FREE):
                     jobs.append(Job(Spec(exp, c["case_id"], s, model, arm=arm), c))
+    elif exp == "E10":  # post-hoc exploratory (DEVIATIONS D10): no tracker and no scanner coverage
+        for c in cases:
+            for s in (["DC", "S2", "S3"] if llm else ["S1p", "S1", "S0_trivy"]):
+                jobs.append(Job(Spec(exp, c["case_id"], s, model, arm="blind"), c))
     elif exp == "E3":
         for c in cases:
             for b in BUDGETS:

@@ -241,6 +241,7 @@ class HostEnv:
         advisories: dict[str, str],
         *,
         tracker_available: bool = True,
+        scanners_available: bool = True,
         attack: Attack | None = None,
         drift: list[dict] | None = None,
         costs: dict[str, float] | None = None,
@@ -252,6 +253,7 @@ class HostEnv:
         self.pre = preconditions.get(case["cve"])
         self.advisories = advisories
         self.tracker_available = tracker_available
+        self.scanners_available = scanners_available
         self.attack = attack or Attack()
         self.drift = sorted(drift or [], key=lambda d: d["at"])
         self.costs = dict(DEFAULT_COSTS, **(costs or {}))
@@ -561,6 +563,8 @@ class HostEnv:
         name = str(args["tool"])
         if name not in SCANNERS:
             return "invalid", f"unknown scanner {name}", None
+        if not self.scanners_available:
+            return "error", f"{name}: no scanner coverage for this asset", None
         if name not in self.fx.scans or self.fx.scans[name] is None:
             return "error", f"{name}: scan report unavailable for this host", None
         forged = self._forged(f"scanner:{name}")

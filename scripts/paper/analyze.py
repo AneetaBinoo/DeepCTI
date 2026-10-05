@@ -451,7 +451,8 @@ def e5(split: str, suffix: str, allow_sealed: bool, md: list[str], exp: str = "E
 
 
 def e6_ltt(split_calib: str, split_test: str, suffix: str, allow_sealed: bool, md: list[str],
-           alphas=(0.01, 0.05, 0.1), delta: float = 0.1, resplits: int = 200) -> None:
+           alphas=(0.01, 0.05, 0.1), delta: float = 0.1, resplits: int = 200, arm: str = "withheld",
+           exp: str = "E2") -> None:
     """Learn-then-Test on hint-promoted decisions of DC in the tracker-withheld arm (C5).
 
     Base: DC's Belnap decision. If it abstains, a hint-promoted decision d_hint (untrusted hints treated as
@@ -460,10 +461,10 @@ def e6_ltt(split_calib: str, split_test: str, suffix: str, allow_sealed: bool, m
     """
     frames = []
     for sp in sorted({split_calib, split_test}):
-        raw = _raw_records(sp, "E2" + suffix)
+        raw = _raw_records(sp, exp + suffix)
         labels = data.load_labels(sp, allow_sealed=allow_sealed and sp == "test")
         for r in raw.values():
-            if r["system"] != "DC" or r["arm"] != "withheld" or r.get("error"):
+            if r["system"] != "DC" or r["arm"] != arm or r.get("error"):
                 continue
             gold = labels[r["case_id"]]["label"]["status"]
             st = (r.get("extra") or {}).get("assessed_state", {}).get("state", {})
@@ -545,8 +546,8 @@ def e6_ltt(split_calib: str, split_test: str, suffix: str, allow_sealed: bool, m
                          "naive_all_hints_risk": risk(g, -math.inf),
                          "naive_all_hints_coverage": float(np.mean(released(g, -math.inf) != "under_investigation"))})
     tab = pd.DataFrame(rows).round(4)
-    write(tab, "e6_ltt", split_test)
-    md += ["## E6 — risk-controlled release of hint-based decisions (LTT, tracker-withheld arm)", "",
+    write(tab, f"e6_ltt_{arm}", split_test)
+    md += [f"## E6 — risk-controlled release of hint-based decisions (LTT, {arm} arm, {exp})", "",
            f"Risk = P(released not_affected/fixed ∧ gold affected) over all cases; {resplits} CVE-level re-splits "
            f"(40% calibration / 60% evaluation) of the pooled pool of splits {sorted({split_calib, split_test})} "
            f"(n = {len(df)} DC withheld-arm episodes). H5 target: ≥ 90% of splits with risk ≤ α at δ = 0.1. "
@@ -660,6 +661,21 @@ def sensitivity(split: str, suffix: str, allow_sealed: bool, md: list[str]) -> N
     md += out
 
 
+def e10(split: str, suffix: str, allow_sealed: bool, md: list[str]) -> None:
+    """Post-hoc exploratory blind arm (DEVIATIONS D10): no tracker/VEX and no scanner coverage."""
+    df = load_runs(split, "E10" + suffix, allow_sealed)
+    if df.empty:
+        return
+    tab = summary(df, ["system", "model"])
+    write(tab, "e10_blind", split)
+    ok = df[~df["error"]]
+    agg = summary(df, ["system"])
+    md += ["## E10 (post-hoc, exploratory) — blind arm: no tracker and no scanner coverage", "",
+           agg[["n", "acc", "coverage", "loss", "DER", "sel_macroF1", "invalid", "cost", "llm_calls"]].to_markdown(),
+           "", tab[["n", "acc", "coverage", "loss", "DER", "invalid"]].to_markdown(), ""]
+    _ = ok
+
+
 def e9(split: str, suffix: str, allow_sealed: bool, md: list[str]) -> None:
     df = load_runs(split, "E9" + suffix, allow_sealed)
     if df.empty:
@@ -705,10 +721,12 @@ def main() -> None:
     e5(args.split, args.suffix, args.allow_sealed, md, exp="KM")
     e9(args.split, args.suffix, args.allow_sealed, md)
     sensitivity(args.split, args.suffix, args.allow_sealed, md)
-    try:
-        e6_ltt(args.calib_split, args.split, args.suffix, args.allow_sealed, md)
-    except (FileNotFoundError, KeyError, PermissionError) as exc:
-        md += [f"E6 skipped: {exc!r}", ""]
+    for arm, exp in (("withheld", "E2"), ("blind", "E10")):
+        try:
+            e6_ltt(args.calib_split, args.split, args.suffix, args.allow_sealed, md, arm=arm, exp=exp)
+        except (FileNotFoundError, KeyError, PermissionError) as exc:
+            md += [f"E6 ({arm}) skipped: {exc!r}", ""]
+    e10(args.split, args.suffix, args.allow_sealed, md)
     if PRIMARY:
         prim = {k: v["p"] for k, v in PRIMARY.items() if v.get("primary")}
         adj = holm(prim)

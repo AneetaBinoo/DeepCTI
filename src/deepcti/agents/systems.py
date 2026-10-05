@@ -370,6 +370,9 @@ class Controller:
             self.voi_trace.append({"chosen": test.name, "scores": scores, "y": sorted(map(list, y)),
                                    "model_consistent": consistent, "max_region": region, "max_mass": round(mass, 4)})
         assessed = self.med.decision()
+        if assessed.status != UNDER_INVESTIGATION and not self._quorum(assessed):  # D9: abstain without quorum
+            from ..core.decision import Decision
+            assessed = Decision(UNDER_INVESTIGATION, f"quorum<{self.cfg.k_decide}", assessed.required)
         assessed_summary = self.med.summary()
         world_at_decision = self.env.world_atoms()
         t_decision = self.env.clock

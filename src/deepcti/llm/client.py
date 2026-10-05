@@ -37,9 +37,11 @@ class Usage:
     model_seconds: float = 0.0
     errors: int = 0
     truncations: int = 0
+    infra_errors: int = 0  # server/connection failures after retries (not model behaviour)
 
     def add(self, other: Usage) -> None:
-        for k in ("calls", "prompt_tokens", "completion_tokens", "model_seconds", "errors", "truncations"):
+        for k in ("calls", "prompt_tokens", "completion_tokens", "model_seconds", "errors", "truncations",
+                  "infra_errors"):
             setattr(self, k, getattr(self, k) + getattr(other, k))
 
     def to_dict(self) -> dict:
@@ -112,6 +114,7 @@ class LLM:
                 time.sleep(2 * (attempt + 1))
         else:
             usage.errors += 1
+            usage.infra_errors += 1
             return ChatResult(None, "", [], usage, "error", {"error": str(last_exc)[:500]})
         choice = resp.choices[0]
         msg = choice.message

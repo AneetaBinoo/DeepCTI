@@ -71,7 +71,9 @@ def run_episode(spec: Spec, case: dict, llm: LLM | None, *, attack: dict | None 
         policy = spec.policy or "P2"
     try:
         env = HostEnv(case, data.fixture(case["host_id"]), data.cve_meta().get(case["cve"], {}),
-                      data.preconditions(), data.advisories(case["cve"]), tracker_available=spec.arm != "withheld",
+                      data.preconditions(), data.advisories(case["cve"]),
+                      tracker_available=spec.arm not in ("withheld", "blind"),
+                      scanners_available=spec.arm != "blind",
                       attack=Attack(**attack) if attack else None, drift=drift, profiles=profiles)
     except Exception:
         return {"key": spec.key(), **asdict(spec), "case_id": case["case_id"], "error": traceback.format_exc(limit=4)}
@@ -121,6 +123,8 @@ def run_episode(spec: Spec, case: dict, llm: LLM | None, *, attack: dict | None 
         redundant += k in seen
         seen.add(k)
     usage = outcome.usage if outcome else Usage()
+    if error is None and getattr(usage, "infra_errors", 0):  # retried on resume (prereg/DEVIATIONS.md D8)
+        error = f"infrastructure: {usage.infra_errors} LLM request(s) failed after retries"
     extra = outcome.extra if outcome else {}
     if "world_at_decision" in extra:
         world_at_decision, t_decision = extra.pop("world_at_decision"), extra.pop("t_decision")

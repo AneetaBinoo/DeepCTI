@@ -95,6 +95,14 @@ A("|---|---|---|---|---|---|")
 for s in seeds:
     A(f"| {s['model']} | {s['seed']} | {f(s['status_f1_A'])} | {f(s['status_f1_B'])} | {f(s['macro_f1_A'])} | {f(s['macro_f1_B'])} |")
 A("")
+bpath = OUT / "e7_bootstrap.csv"
+if bpath.exists():
+    A("### Paired task-level bootstrap, B − A (1000 resamples of tasks; metric = mean over 3 seeds)\n")
+    A("| Model | Metric | Δ (B − A) | 95% CI | P_boot(Δ ≤ 0) |")
+    A("|---|---|---|---|---|")
+    for b in csv.DictReader(bpath.open()):
+        A(f"| {b['model']} | {b['metric']} | {f(b['delta_B_minus_A'])} | [{f(b['ci95_lo'])}, {f(b['ci95_hi'])}] | {f(b['p_boot_delta_le_0'])} |")
+    A("")
 A("### Trivial reference points (same subset, computed from ground truth)\n")
 gt = [c for c in cases if c["system"] == summ[0]["system"] and c["model"] == summ[0]["model"] and c["seed"] == "0"]
 n = len(gt)
