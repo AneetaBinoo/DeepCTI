@@ -430,18 +430,47 @@ class HostEnv:
         base = str(inst.get("path", "")).split("!/")[0]
         if self.eco == "vendor":  # rewrite version strings in the product's text files
             for p in [p for p in self.files if base and p.startswith(base.rstrip("/") + "/")]:
+                if p.endswith("ap_release.h"):  # httpd splits its version over three #defines
+                    parts = (new.split(".") + ["0", "0"])[:3]
+                    for name, val in zip(("MAJORVERSION", "MINORVERSION", "PATCHLEVEL"), parts):
+                        self.files[p] = re.sub(rf"(#define\s+AP_SERVER_{name}_NUMBER\s+)\d+", rf"\g<1>{val}",
+                                               self.files[p])
+                    continue
                 if old in self.files[p]:  # whole version tokens only (9.0.1 must not hit 9.0.10)
                     self.files[p] = re.sub(rf"(?<![\w.]){re.escape(old)}(?![\w]|\.\d)", new, self.files[p])
-        elif self.eco == "pypi":  # rename the dist-info directory (and its files) to the new version
+        elif self.eco == "pypi":  # rename the dist-info directory (and its files) and rewrite Version: / vendor.txt
             for p in [p for p in self.files if base and p.startswith(base)]:
-                self.files[p.replace(f"-{old}.dist-info", f"-{new}.dist-info")] = self.files.pop(p)
+                text = self.files.pop(p)
+                if p.endswith("/METADATA"):
+                    text = re.sub(rf"(?m)^Version:\s*{re.escape(old)}\s*$", f"Version: {new}", text)
+                self.files[p.replace(f"-{old}.dist-info", f"-{new}.dist-info")] = text
             inst["path"] = base.replace(f"-{old}.dist-info", f"-{new}.dist-info")
-        elif self.eco == "maven":  # the jar file name carries the version
+            vt = base.rsplit("/", 1)[0] + "/vendor.txt" if "/_vendor/" in base else None
+            if vt and vt in self.files:
+                self.files[vt] = re.sub(rf"(?mi)^({re.escape(inst['name'])})=={re.escape(old)}\b", rf"\1=={new}",
+                                        self.files[vt])
+        elif self.eco == "maven":  # the jar file name and its manifest carry the version
+            if inst.get("manifest_version") == old:
+                inst["manifest_version"] = new
             jar = base
-            if jar.endswith(f"-{old}.jar") and "!/" not in str(inst.get("path", "")):
+            full = str(inst.get("path", ""))
+            if "!/" in full:  # nested jar: rename the inner entry
+                outer, inner = full.split("!/", 1)
+                if inner.endswith(f"-{old}.jar"):
+                    inst["path"] = f"{outer}!/{inner[: -len(f'-{old}.jar')]}-{new}.jar"
+            elif jar.endswith(f"-{old}.jar"):
                 new_jar = jar[: -len(f"-{old}.jar")] + f"-{new}.jar"
                 self.binaries = [new_jar if b == jar else b for b in self.binaries]
                 inst["path"] = new_jar
+
+    def _restart_non_deb(self, svc: dict, new: str) -> None:
+        """Restart a non-deb service: the process now runs the on-disk version and prints it in its banner."""
+        old = str(svc.get("loaded_version") or svc.get("version") or "")
+        if svc.get("banner") and old and old != new:
+            svc["banner"] = re.sub(rf"(?<![\w.]){re.escape(old)}(?![\w]|\.\d)", new, svc["banner"])
+        svc["loaded_version"] = new
+        svc["version"] = new
+        svc["active"] = True
 
     def non_deb_target(self, current: str) -> str | None:
         for r in self.ranges():
@@ -478,10 +507,7 @@ class HostEnv:
                 for key, svc in self.services.items():
                     owner = str(svc.get("component") or svc.get("package") or key or "").lower()
                     if insts and owner in {n.lower() for n in self.names()}:
-                        svc["loaded_version"] = insts[0]["version"]
-                        if svc.get("banner") and svc.get("version"):
-                            svc["banner"] = svc["banner"].replace(str(svc["version"]), insts[0]["version"])
-                        svc["version"] = insts[0]["version"]
+                        self._restart_non_deb(svc, str(insts[0]["version"]))
             else:
                 drop = {id(i) for i in self.instances()}
                 self.lang = [e for e in self.lang if id(e) not in drop]
@@ -719,13 +745,14 @@ class HostEnv:
                 f"     Loaded: loaded (/lib/systemd/system/{unit}; enabled; preset: enabled)",
                 f"     Active: {active}",
             ]
-            if loaded and svc.get("banner"):  # v3 services also print their own banner
+            running = bool(svc.get("active", True) and loaded)
+            if running and svc.get("banner"):  # v3 services also print their own banner
                 lines += [f"   Main PID: {pid} ({key})"]
                 if svc.get("package"):  # distribution package: the package-level start line comes first
                     lines.append(f"{self.asset()} {key}[{pid}]: started from package {svc.get('package')} "
                                  f"(binary build {loaded})")
                 lines.append(f"{self.asset()} {key}[{pid}]: server banner: {svc['banner']}")
-            elif loaded:
+            elif running:
                 lines += [
                     f"   Main PID: {pid} ({key})",
                     f"{self.asset()} {key}[{pid}]: started from package {svc.get('package')} "
@@ -924,10 +951,7 @@ class HostEnv:
                 if not self.is_deb():
                     insts = self.instances()
                     if insts:
-                        svc["loaded_version"] = insts[0]["version"]
-                        if svc.get("banner") and svc.get("version"):
-                            svc["banner"] = svc["banner"].replace(str(svc["version"]), insts[0]["version"])
-                            svc["version"] = insts[0]["version"]
+                        self._restart_non_deb(svc, str(insts[0]["version"]))
                     self.actions.append({"t": self.clock, "action": "restart_service", "unit": unit})
                     return "ok", f"Restarted {unit}.", {"unit": unit}
                 svc["loaded_version"] = self._pkg_version(svc.get("package", ""))

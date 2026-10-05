@@ -61,7 +61,7 @@ def verify(proposal: Proposal, result: ToolResult, case: dict) -> Verdict:
             if span not in first_line:
                 return Verdict(proposal, False, "span not in the changelog header line")
         elif (case.get("ecosystem") == "vendor" and re.match(r"(opt|srv)/", path)
-              and re.match(r"(RELEASE[-_]?NOTES|VERSION|README|NOTICE|CHANGELOG|RUNNING|BUILD)",
+              and re.match(r"(RELEASE[-_]?NOTES|VERSION|README|NOTICE|CHANGELOG|BUILD)",
                            path.rsplit("/", 1)[-1], re.I)):
             # v3 vendor grammar: one line of a version-bearing document that names the product
             if "\n" in span:
@@ -79,7 +79,8 @@ def verify(proposal: Proposal, result: ToolResult, case: dict) -> Verdict:
     names = {case["src_package"], *case.get("binary_packages", []), *case.get("aliases", [])}
     if case.get("component"):
         names |= {case["component"], case["component"].split(":")[-1]}
-    named = [n for n in names if n and re.search(rf"(?<![\w.+-]){re.escape(n)}(?![\w.+-])", span, re.I)]
+    name_re = lambda n: rf"(?:(?<![\w.+-])|(?<=X-)){re.escape(n)}(?![\w.+-])"  # noqa: E731 - "X-Jenkins:" headers
+    named = [n for n in names if n and re.search(name_re(n), span, re.I)]
     if not named:
         return Verdict(proposal, False, "span does not name the case component")
     value = proposal.value.strip()
@@ -91,12 +92,14 @@ def verify(proposal: Proposal, result: ToolResult, case: dict) -> Verdict:
     # 40 characters — rejects e.g. interpreter versions in "Flask/2.0.1 Python/3.10" or "gunicorn Python/3.10"
     bound = False
     for n in named:
-        for m in re.finditer(rf"(?<![\w.+-]){re.escape(n)}(?![\w.+-])", span, re.I):
+        for m in re.finditer(name_re(n), span, re.I):
             nxt = VERSION_RE.search(span, m.end())
             if nxt and nxt.start() - m.end() <= 40 and nxt.group(1) == value:
                 bound = True
     if not bound:
         return Verdict(proposal, False, "version is not the first version token after the component name")
+    if case.get("ecosystem") == "vendor" and not re.search(r"\d+\.\d+\.\d+", value):
+        return Verdict(proposal, False, "vendor versions need major.minor.patch (series numbers are not versions)")
     try:
         Version(value)
     except ValueError:

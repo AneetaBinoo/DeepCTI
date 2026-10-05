@@ -73,6 +73,14 @@ def build_jobs(exp: str, split: str, model: str, limit: int | None, dataset: str
                 for s in (V3_LLM if llm else V3_FREE):
                     jobs.append(Job(Spec(exp, c["case_id"], s, model, arm=arm, **kw), c))
         return jobs
+    if exp == "X2V":  # post-hoc sensitivity (DEVIATIONS D21): vendor cases, DC family, verifier fixes
+        for c in cases:
+            if c.get("ecosystem") != "vendor":
+                continue
+            for arm in V3_ARMS:
+                for s in (["DC", "DCv21", "DC_noverify"] if llm else ["S1p"]):
+                    jobs.append(Job(Spec(exp, c["case_id"], s, model, arm=arm, **kw), c))
+        return jobs
     if exp == "X2I":  # v3 third-party ReAct baseline (Inspect AI) on D7, tracker + withheld arms
         for c in cases:
             for arm in ("tracker", "withheld"):
