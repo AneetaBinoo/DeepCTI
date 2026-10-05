@@ -1,0 +1,6 @@
+,OR,ci_lo,ci_hi,p
+Intercept,0.8325,0.3973,1.7446,0.6272
+"C(system, Treatment('S3'))[T.DC]",2.0201,1.0671,3.8243,0.0308
+"C(system, Treatment('S3'))[T.S2]",1.1476,0.7923,1.6622,0.4663
+"C(system, Treatment('S3'))[T.S4]",1.6307,1.0301,2.5813,0.0369
+"C(system, Treatment('S3'))[T.S5]",1.4161,0.9497,2.1114,0.0878

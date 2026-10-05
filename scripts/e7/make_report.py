@@ -103,6 +103,14 @@ if bpath.exists():
     for b in csv.DictReader(bpath.open()):
         A(f"| {b['model']} | {b['metric']} | {f(b['delta_B_minus_A'])} | [{f(b['ci95_lo'])}, {f(b['ci95_hi'])}] | {f(b['p_boot_delta_le_0'])} |")
     A("")
+cpath = OUT / "e7_coverage_matched.csv"
+if cpath.exists():
+    A("### Coverage-matched comparison: only the (task, seed) pairs where B did not abstain (`scripts/e7/coverage_matched.py`)\n")
+    A("| Model | System | Pairs | Status acc. | Category acc. | Exploitable share |")
+    A("|---|---|---|---|---|---|")
+    for c in csv.DictReader(cpath.open()):
+        A(f"| {c['model']} | {c['system']} | {c['n_pairs']} | {f(c['status_acc'])} | {f(c['category_acc'])} | {f(c['exploitable_gt_share'])} |")
+    A("")
 A("### Trivial reference points (same subset, computed from ground truth)\n")
 gt = [c for c in cases if c["system"] == summ[0]["system"] and c["model"] == summ[0]["model"] and c["seed"] == "0"]
 n = len(gt)

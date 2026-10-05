@@ -1,0 +1,408 @@
+{
+  "binary": {
+    "accuracy": {
+      "mean": 0.7204301075268817,
+      "std": 0.051847584736521284
+    },
+    "precision": {
+      "mean": 0.3835978835978836,
+      "std": 0.1442466230710644
+    },
+    "recall": {
+      "mean": 0.15555555555555556,
+      "std": 0.03849001794597506
+    },
+    "f1": {
+      "mean": 0.2166400850611377,
+      "std": 0.05329396467252294
+    },
+    "totals": {
+      "tp": 7,
+      "fp": 13,
+      "tn": 127,
+      "fn": 38,
+      "failed": 1
+    }
+  },
+  "multiclass": {
+    "accuracy": {
+      "mean": 0.27956989247311825,
+      "std": 0.00931210111596173
+    },
+    "macro_precision": {
+      "mean": 0.21114280055456527,
+      "std": 0.022646662429738854
+    },
+    "macro_recall": {
+      "mean": 0.2033333333333333,
+      "std": 0.00400616808384886
+    },
+    "macro_f1": {
+      "mean": 0.15633683215352906,
+      "std": 0.004431735815810317
+    },
+    "weighted_precision": {
+      "mean": 0.4505377713157599,
+      "std": 0.020525036119442674
+    },
+    "weighted_recall": {
+      "mean": 0.27956989247311825,
+      "std": 0.00931210111596173
+    },
+    "weighted_f1": {
+      "mean": 0.32277807472468206,
+      "std": 0.005435280259358037
+    },
+    "per_class": {
+      "code_not_present": {
+        "precision": {
+          "mean": 0.06302521008403361,
+          "std": 0.007277524401549903
+        },
+        "recall": {
+          "mean": 0.5,
+          "std": 0.0
+        },
+        "f1": {
+          "mean": 0.1118421052631579,
+          "std": 0.011395071102426827
+        },
+        "support": 12
+      },
+      "code_not_reachable": {
+        "precision": {
+          "mean": 0.6090909090909091,
+          "std": 0.02405228464604172
+        },
+        "recall": {
+          "mean": 0.3611111111111111,
+          "std": 0.02777777777777779
+        },
+        "f1": {
+          "mean": 0.45320197044334976,
+          "std": 0.027427410654335106
+        },
+        "support": 108
+      },
+      "requires_configuration": {
+        "precision": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "recall": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "f1": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "support": 15
+      },
+      "requires_environment": {
+        "precision": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "recall": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "f1": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "support": 6
+      },
+      "vulnerable": {
+        "precision": {
+          "mean": 0.3835978835978836,
+          "std": 0.1442466230710644
+        },
+        "recall": {
+          "mean": 0.15555555555555556,
+          "std": 0.03849001794597506
+        },
+        "f1": {
+          "mean": 0.2166400850611377,
+          "std": 0.05329396467252294
+        },
+        "support": 45
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "false_positive",
+        "code_not_present",
+        "code_not_reachable",
+        "requires_configuration",
+        "requires_dependency",
+        "requires_environment",
+        "compiler_protected",
+        "runtime_protected",
+        "perimeter_protected",
+        "mitigating_control_protected",
+        "uncertain",
+        "vulnerable",
+        "failed"
+      ],
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          52,
+          39,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          11,
+          1
+        ],
+        [
+          0,
+          13,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          22,
+          16,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "failed_total": 1
+  },
+  "completion": {
+    "completion_rate": {
+      "mean": 0.9946236559139785,
+      "std": 0.009312101115961698
+    },
+    "total": 186,
+    "answered": 185,
+    "status_counts": {
+      "ok": 185,
+      "parse_fail": 1
+    }
+  },
+  "tokens": {
+    "per_case": {
+      "input_tokens": {
+        "mean": 56103.24731182796,
+        "std": 35738.68265170174
+      },
+      "cached_input_tokens": {
+        "mean": 0,
+        "std": 0.0
+      },
+      "cache_write_tokens": {
+        "mean": 0,
+        "std": 0.0
+      },
+      "output_tokens": {
+        "mean": 699.0268817204301,
+        "std": 265.94871346255076
+      },
+      "reasoning_tokens": {
+        "mean": 0,
+        "std": 0.0
+      },
+      "total": {
+        "mean": 56802.27419354839,
+        "std": 35969.89996612529
+      }
+    },
+    "totals": {
+      "input_tokens": 10435204,
+      "cached_input_tokens": 0,
+      "cache_write_tokens": 0,
+      "output_tokens": 130019,
+      "reasoning_tokens": 0,
+      "total": 10565223
+    },
+    "cases": 186
+  },
+  "cost": {
+    "per_case_usd": {
+      "mean": null,
+      "std": null
+    },
+    "total_cost_usd": 0,
+    "priced": 0,
+    "total": 186
+  },
+  "n_runs": 3
+}

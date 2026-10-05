@@ -1,0 +1,347 @@
+{
+ "alibaba/nacos@20caf99db34949b8f83f7908549bcf5133fd3246": {
+  "bytes": 24927065,
+  "entries": 4430,
+  "truncated": false
+ },
+ "apache/airflow@3dbad4f5ca60a3637d70fc31798af2b9e0251dee": {
+  "bytes": 71813989,
+  "entries": 8400,
+  "truncated": false
+ },
+ "apache/dubbo@1d1bb26e79efc55ed78cf8bba1f486e5691fcd32": {
+  "bytes": 18019993,
+  "entries": 6812,
+  "truncated": false
+ },
+ "apache/dubbo@218aab1e4a0d7d3fd8ee9680829639f2685b621a": {
+  "bytes": 19335566,
+  "entries": 7248,
+  "truncated": false
+ },
+ "apache/flink@06309528603333153dcabe1bd0e74bcde19cf6f5": {
+  "bytes": 166657437,
+  "entries": 27437,
+  "truncated": false
+ },
+ "apache/flink@46cbe8bc9d92a7c6fbbaeee2dcbe0a3717c17bcf": {
+  "bytes": 181718423,
+  "entries": 30435,
+  "truncated": false
+ },
+ "apache/flink@e4ea3d81948efab5ef94d31ab3f6b84c92efb793": {
+  "bytes": 180675740,
+  "entries": 29960,
+  "truncated": false
+ },
+ "apache/hadoop@3bf43b414419a475f4d188e75158399ee06edb0e": {
+  "bytes": 236164231,
+  "entries": 19260,
+  "truncated": false
+ },
+ "apache/hadoop@5b1346fb888c6997dd8d79e72948a337e61ef685": {
+  "bytes": 219572987,
+  "entries": 18386,
+  "truncated": false
+ },
+ "apache/hadoop@c5285668110f6a0e46d218cd69b17f4f4019a977": {
+  "bytes": 244020367,
+  "entries": 20311,
+  "truncated": false
+ },
+ "apache/hadoop@ff451f53a68ea179f68c3403590e37b188f1825d": {
+  "bytes": 244020257,
+  "entries": 20311,
+  "truncated": false
+ },
+ "apache/pulsar@137df29f85798b00de75460a1acb91c7bc25453f": {
+  "bytes": 42070024,
+  "entries": 7476,
+  "truncated": false
+ },
+ "apache/pulsar@5e6e6cebcdbeec32ed49729f658f2d5cd0d98347": {
+  "bytes": 38027758,
+  "entries": 7164,
+  "truncated": false
+ },
+ "apache/pulsar@7ab9c700a5684c489de383b2d370e2ba51a5c5db": {
+  "bytes": 38138724,
+  "entries": 7175,
+  "truncated": false
+ },
+ "aquasecurity/trivy@37da98df45f6014fcd5f1744e2e26351b61d2a02": {
+  "bytes": 91129778,
+  "entries": 4344,
+  "truncated": false
+ },
+ "aquasecurity/trivy@98e136eb7baa2b66f4233d96875c1490144e1594": {
+  "bytes": 93568253,
+  "entries": 4613,
+  "truncated": false
+ },
+ "caddyserver/caddy@8dc76676fb5156f971db49c50a5c509d1c93613b": {
+  "bytes": 2916842,
+  "entries": 561,
+  "truncated": false
+ },
+ "cilium/cilium@1228cbc922a31aa9cf83962863d6818ad2eec315": {
+  "bytes": 276509873,
+  "entries": 31205,
+  "truncated": false
+ },
+ "cilium/cilium@3977f6a1120bf5ec0206c1b3c484ba094da82c7d": {
+  "bytes": 219710051,
+  "entries": 27236,
+  "truncated": false
+ },
+ "cilium/cilium@43bff353599662f7d2996c3b77155e383f0a5e96": {
+  "bytes": 219754517,
+  "entries": 27257,
+  "truncated": false
+ },
+ "containers/podman@38ccfa2b3327f0a3d0380c7ba6701046fa7c6aab": {
+  "bytes": 65947143,
+  "entries": 9459,
+  "truncated": false
+ },
+ "containers/podman@5ae63471cf9b370a78c6158c5bbb992be0807beb": {
+  "bytes": 92201540,
+  "entries": 11669,
+  "truncated": false
+ },
+ "containers/podman@6541fc4fb29e4ce56d88b46864b4559e0a07f978": {
+  "bytes": 93336877,
+  "entries": 11917,
+  "truncated": false
+ },
+ "containers/podman@6a6559735845f21a3066cf547b90669ef24f768b": {
+  "bytes": 97395479,
+  "entries": 11189,
+  "truncated": false
+ },
+ "fastapi/fastapi@febf6b6a52e36e0d64920fb54670ad7fc29b2eaa": {
+  "bytes": 23355147,
+  "entries": 2792,
+  "truncated": false
+ },
+ "gitleaks/gitleaks@f487f853788e1f40b802a8476d98d6a049de6373": {
+  "bytes": 1171950,
+  "entries": 565,
+  "truncated": false
+ },
+ "helm/helm@b76a950f6835474e0906b96c9ec68a2eff3a6430": {
+  "bytes": 2744008,
+  "entries": 1819,
+  "truncated": false
+ },
+ "helm/helm@fbb24fe545a5923f4ebb393244654b359c69371b": {
+  "bytes": 2279533,
+  "entries": 1644,
+  "truncated": false
+ },
+ "home-assistant/core@44293a37388aef33d1bb0c67b87a29c74b183a50": {
+  "bytes": 47185946,
+  "entries": 18475,
+  "truncated": false
+ },
+ "home-assistant/core@cd0e9839a06aa1920dbc1c587503151155e0df0a": {
+  "bytes": 77750018,
+  "entries": 15846,
+  "truncated": false
+ },
+ "infiniflow/ragflow@5c955a31cc13ae25236a438b35166613019b16b0": {
+  "bytes": 77779415,
+  "entries": 3244,
+  "truncated": false
+ },
+ "infiniflow/ragflow@c68767acdde0bbe521fad7f202f01130d7aa4ce3": {
+  "bytes": 52731662,
+  "entries": 797,
+  "truncated": false
+ },
+ "istio/istio@042afc3802c1c5daee65f5b6703b0718c1f60541": {
+  "bytes": 26824124,
+  "entries": 5849,
+  "truncated": false
+ },
+ "istio/istio@8903f65dc2e7191a14a958364c63908a05405f12": {
+  "bytes": 32532247,
+  "entries": 7004,
+  "truncated": false
+ },
+ "juanfont/headscale@e172c29360e0c9bdfbd22b5acc41a483ef513393": {
+  "bytes": 2347658,
+  "entries": 301,
+  "truncated": false
+ },
+ "keycloak/keycloak@731414e44a8cc4fe50d6c86b519a1ba9b383e7e1": {
+  "bytes": 95513032,
+  "entries": 14187,
+  "truncated": false
+ },
+ "keycloak/keycloak@9b01bf382d69b0eb4f3d0defd27beddbac15ba37": {
+  "bytes": 51954412,
+  "entries": 12326,
+  "truncated": false
+ },
+ "kubernetes/kubernetes@1ee2acbb2e92caf28d3ff29121af657f2758ce58": {
+  "bytes": 264543544,
+  "entries": 29021,
+  "truncated": false
+ },
+ "kubernetes/kubernetes@6d4b94f0ab25561be59396fd83fc7bf929fd825d": {
+  "bytes": 254996321,
+  "entries": 28865,
+  "truncated": false
+ },
+ "kubernetes/kubernetes@e196d2491087e93bd29f0e5a538aab60667021e3": {
+  "bytes": 277958257,
+  "entries": 29939,
+  "truncated": false
+ },
+ "kubernetes/kubernetes@ec78c0f487ebde300ebbe1fb5189cb178e6a18b5": {
+  "bytes": 207313504,
+  "entries": 27686,
+  "truncated": false
+ },
+ "kubernetes/minikube@e7bf515c48f32d7ef63c81fcdba92cccef619016": {
+  "bytes": 221416337,
+  "entries": 2477,
+  "truncated": false
+ },
+ "labstack/echo@fdacff0d93d54e8065ac7f5072041146f054a201": {
+  "bytes": 873732,
+  "entries": 96,
+  "truncated": false
+ },
+ "langchain-ai/langchain@fa6397d76a97d08588a6f8fe9bfd6dbcfefb6edf": {
+  "bytes": 196083629,
+  "entries": 8097,
+  "truncated": false
+ },
+ "langflow-ai/langflow@374508cf185480a1619724cd820dd35d047a5ec6": {
+  "bytes": 161479035,
+  "entries": 1507,
+  "truncated": false
+ },
+ "langflow-ai/langflow@c46a3eec9ae2a311313d817ce11d0d06b7f380a8": {
+  "bytes": 168902851,
+  "entries": 5312,
+  "truncated": false
+ },
+ "mitmproxy/mitmproxy@0ace627f6e7be3a45d457da67d65b1edf1b6990a": {
+  "bytes": 40759174,
+  "entries": 1398,
+  "truncated": false
+ },
+ "mitmproxy/mitmproxy@3214581060e3daf5c7922e8d8bf9f0b96c766784": {
+  "bytes": 42381194,
+  "entries": 1432,
+  "truncated": false
+ },
+ "mitmproxy/mitmproxy@ab470e5397d8cb73b3c44b9ee75834e6cda83ae7": {
+  "bytes": 43684079,
+  "entries": 1502,
+  "truncated": false
+ },
+ "mitmproxy/mitmproxy@b089c5fb83a43af2cb290d501013e23367102d6f": {
+  "bytes": 43614920,
+  "entries": 1505,
+  "truncated": false
+ },
+ "moby/moby@3ede246fb2176a72b034ad01e4250818f67b6b13": {
+  "bytes": 103041830,
+  "entries": 15027,
+  "truncated": false
+ },
+ "moby/moby@caea5f77adfc694c0e67c4f11022e3fa6d490e11": {
+  "bytes": 103275137,
+  "entries": 15073,
+  "truncated": false
+ },
+ "pallets/flask@708d62d7172a30c5b0ace1d212c5a3bc2b53b98c": {
+  "bytes": 1513644,
+  "entries": 303,
+  "truncated": false
+ },
+ "prestodb/presto@368bcc746081bb92db725c431fd0e0331659ab72": {
+  "bytes": 110517008,
+  "entries": 15755,
+  "truncated": false
+ },
+ "prestodb/presto@8136f7cc230893358b86b5af5c13eb4763b5655f": {
+  "bytes": 100084816,
+  "entries": 14654,
+  "truncated": false
+ },
+ "quarkusio/quarkus@34accfcd59171845a4e79605dacf24205767caee": {
+  "bytes": 80113396,
+  "entries": 35673,
+  "truncated": false
+ },
+ "quarkusio/quarkus@5c7a469cc65cd32a48b1f8ad93ce3b2548406c5b": {
+  "bytes": 91827714,
+  "entries": 38660,
+  "truncated": false
+ },
+ "quarkusio/quarkus@8280c5349e2b40a5cc61388f91c653d1cfab93fc": {
+  "bytes": 62112668,
+  "entries": 30836,
+  "truncated": false
+ },
+ "quarkusio/quarkus@d392404a6f00ce43d058dc8dc2f96c906a023849": {
+  "bytes": 36283263,
+  "entries": 23607,
+  "truncated": false
+ },
+ "quarkusio/quarkus@f4a1bce45bdfb5859da8b1357cc3304fa7c1fdcb": {
+  "bytes": 35908390,
+  "entries": 23459,
+  "truncated": false
+ },
+ "rancher/rancher@4dc4f534eed10a4b45b7475ebebaf99ab0056b35": {
+  "bytes": 22364578,
+  "entries": 3831,
+  "truncated": false
+ },
+ "rancher/rancher@876141989e372bcc09b3c8523b05cac4e4d8665d": {
+  "bytes": 22417793,
+  "entries": 3835,
+  "truncated": false
+ },
+ "redisson/redisson@47f6a3926be73b236adee9623bb99f47e4820340": {
+  "bytes": 13344737,
+  "entries": 2883,
+  "truncated": false
+ },
+ "roboflow/supervision@1bbe03ca27dda82b8910feb0352dfb3a443f970d": {
+  "bytes": 30309214,
+  "entries": 287,
+  "truncated": false
+ },
+ "run-llama/llama_index@c7d061e7eab9e9a1cc91ebfcdfb24c553853d38d": {
+  "bytes": 672803890,
+  "entries": 14729,
+  "truncated": false
+ },
+ "run-llama/llama_index@f1124cffd4ba59ebc58839024fa8aaefef679214": {
+  "bytes": 173429937,
+  "entries": 12685,
+  "truncated": false
+ },
+ "spring-projects/spring-boot@1fecd4b38a3b45488bd4bf78f32da1723e735896": {
+  "bytes": 26594670,
+  "entries": 11994,
+  "truncated": false
+ },
+ "stretchr/testify@285adcc5ced0bb267a7c874cfa3ca238266ce14f": {
+  "bytes": 547808,
+  "entries": 67,
+  "truncated": false
+ },
+ "zeromicro/go-zero@bae061a67e29184f7ae1113ead46c03ae717170e": {
+  "bytes": 3086355,
+  "entries": 1306,
+  "truncated": false
+ }
+}

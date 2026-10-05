@@ -1,0 +1,407 @@
+{
+  "binary": {
+    "accuracy": {
+      "mean": 0.8225806451612903,
+      "std": 0.027936303347885157
+    },
+    "precision": {
+      "mean": 0.6551282051282051,
+      "std": 0.08252069252181587
+    },
+    "recall": {
+      "mean": 0.5777777777777777,
+      "std": 0.03849001794597504
+    },
+    "f1": {
+      "mean": 0.6126984126984126,
+      "std": 0.048872394661398894
+    },
+    "totals": {
+      "tp": 26,
+      "fp": 14,
+      "tn": 127,
+      "fn": 19,
+      "failed": 0
+    }
+  },
+  "multiclass": {
+    "accuracy": {
+      "mean": 0.3279569892473118,
+      "std": 0.009312101115961698
+    },
+    "macro_precision": {
+      "mean": 0.4352849002849003,
+      "std": 0.02127090693235682
+    },
+    "macro_recall": {
+      "mean": 0.35814814814814816,
+      "std": 0.006697459748157468
+    },
+    "macro_f1": {
+      "mean": 0.3506439132526089,
+      "std": 0.006571849517475046
+    },
+    "weighted_precision": {
+      "mean": 0.6977460711331679,
+      "std": 0.03847936098177988
+    },
+    "weighted_recall": {
+      "mean": 0.3279569892473118,
+      "std": 0.009312101115961698
+    },
+    "weighted_f1": {
+      "mean": 0.39756835030327314,
+      "std": 0.00570074258691148
+    },
+    "per_class": {
+      "code_not_present": {
+        "precision": {
+          "mean": 0.6666666666666666,
+          "std": 0.0
+        },
+        "recall": {
+          "mean": 1.0,
+          "std": 0.0
+        },
+        "f1": {
+          "mean": 0.8,
+          "std": 0.0
+        },
+        "support": 12
+      },
+      "code_not_reachable": {
+        "precision": {
+          "mean": 0.8546296296296296,
+          "std": 0.047817597532130905
+        },
+        "recall": {
+          "mean": 0.21296296296296297,
+          "std": 0.016037507477489596
+        },
+        "f1": {
+          "mean": 0.3405211535646318,
+          "std": 0.019728674568131405
+        },
+        "support": 108
+      },
+      "requires_configuration": {
+        "precision": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "recall": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "f1": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "support": 15
+      },
+      "requires_environment": {
+        "precision": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "recall": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "f1": {
+          "mean": 0.0,
+          "std": 0.0
+        },
+        "support": 6
+      },
+      "vulnerable": {
+        "precision": {
+          "mean": 0.6551282051282051,
+          "std": 0.08252069252181587
+        },
+        "recall": {
+          "mean": 0.5777777777777777,
+          "std": 0.03849001794597504
+        },
+        "f1": {
+          "mean": 0.6126984126984126,
+          "std": 0.048872394661398894
+        },
+        "support": 45
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "false_positive",
+        "code_not_present",
+        "code_not_reachable",
+        "requires_configuration",
+        "requires_dependency",
+        "requires_environment",
+        "compiler_protected",
+        "runtime_protected",
+        "perimeter_protected",
+        "mitigating_control_protected",
+        "uncertain",
+        "vulnerable",
+        "failed"
+      ],
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          12,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          23,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          73,
+          9,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          10,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          18,
+          26,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "failed_total": 0
+  },
+  "completion": {
+    "completion_rate": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "total": 186,
+    "answered": 186,
+    "status_counts": {
+      "ok": 186
+    }
+  },
+  "tokens": {
+    "per_case": {
+      "input_tokens": {
+        "mean": 246895.53225806452,
+        "std": 162080.63627226814
+      },
+      "cached_input_tokens": {
+        "mean": 0,
+        "std": 0.0
+      },
+      "cache_write_tokens": {
+        "mean": 0,
+        "std": 0.0
+      },
+      "output_tokens": {
+        "mean": 989.2258064516129,
+        "std": 700.4131387631509
+      },
+      "reasoning_tokens": {
+        "mean": 0,
+        "std": 0.0
+      },
+      "total": {
+        "mean": 247884.75806451612,
+        "std": 162454.84170316564
+      }
+    },
+    "totals": {
+      "input_tokens": 45922569,
+      "cached_input_tokens": 0,
+      "cache_write_tokens": 0,
+      "output_tokens": 183996,
+      "reasoning_tokens": 0,
+      "total": 46106565
+    },
+    "cases": 186
+  },
+  "cost": {
+    "per_case_usd": {
+      "mean": null,
+      "std": null
+    },
+    "total_cost_usd": 0,
+    "priced": 0,
+    "total": 186
+  },
+  "n_runs": 3
+}

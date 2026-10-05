@@ -1,0 +1,4 @@
+system,model,n,acc,coverage,loss,invalid,cost,llm_calls,udar_exec,disruptive_exec,wall_s,DER,sel_macroF1,errors
+DC_k1,qwen3_14b,80,0.762,1.0,0.078,0.0,6.225,1.362,0,0,6.065,0.0,0.774,0
+DC_nofresh,qwen3_14b,80,0.762,1.0,0.078,0.0,6.225,1.362,0,0,6.071,0.0,0.774,0
+DC_noverify,qwen3_14b,80,0.762,1.0,0.078,0.0,6.225,1.362,0,0,6.328,0.0,0.774,0

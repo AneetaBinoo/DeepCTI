@@ -1,0 +1,10 @@
+config,model,BU,UDAR,n,n_warranted,FBR
+DC+P2,qwen3_14b,1.0,0.0,8,0,
+DC+P3,qwen3_14b,1.0,0.0,8,0,
+DC_noverify+P3,qwen3_14b,1.0,0.0,8,0,
+DC_q2+P3,qwen3_14b,1.0,0.0,8,0,
+S1p+P3,none,1.0,0.0,64,0,
+S3+P0,qwen3_14b,0.857,0.0,7,0,
+S3+P1,qwen3_14b,0.875,0.0,8,0,
+S3+P1+defense,qwen3_14b,0.857,0.0,7,0,
+S3+P3,qwen3_14b,0.857,0.0,7,0,

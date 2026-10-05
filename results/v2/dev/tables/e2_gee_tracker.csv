@@ -1,0 +1,6 @@
+,OR,ci_lo,ci_hi,p
+Intercept,,,,
+"C(system, Treatment('S3'))[T.DC]",,,,
+"C(system, Treatment('S3'))[T.S2]",,,,
+"C(system, Treatment('S3'))[T.S4]",,,,
+"C(system, Treatment('S3'))[T.S5]",,,,

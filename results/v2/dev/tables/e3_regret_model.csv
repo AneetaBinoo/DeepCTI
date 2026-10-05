@@ -1,0 +1,5 @@
+,req_config,scorer,E[cost] greedy,E[cost] optimal,regret,ratio,bound_published,bound_citable
+0,False,ec2,1.0,1.0,0.0,1.0,12.3349,49.3396
+1,False,entropy,1.0,1.0,0.0,1.0,12.3349,49.3396
+2,True,ec2,1.3206,1.3206,0.0,1.0,13.7212,54.8847
+3,True,entropy,1.3206,1.3206,0.0,1.0,13.7212,54.8847

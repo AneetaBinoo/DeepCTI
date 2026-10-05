@@ -1,0 +1,172 @@
+{
+ "gemma_4_31b": {
+  "rules": {
+   "R2": 18,
+   "R7": 98,
+   "R3": 3,
+   "R4": 27,
+   "R6": 40
+  },
+  "end_reasons": {
+   "decisive_R2": 18,
+   "budget": 47,
+   "finish": 92,
+   "decisive_R4": 27,
+   "decisive_R6_after_mitigation_window": 2
+  },
+  "atom_states": {
+   "dependency_present=T": 183,
+   "dependency_present=U": 3,
+   "mitigating_config=T": 5,
+   "mitigating_config=U": 181,
+   "vulnerable_path_reachable_from_entry=F": 3,
+   "vulnerable_path_reachable_from_entry=T": 40,
+   "vulnerable_path_reachable_from_entry=U": 143,
+   "vulnerable_symbol_referenced=F": 24,
+   "vulnerable_symbol_referenced=T": 84,
+   "vulnerable_symbol_referenced=U": 78,
+   "vulnerable_version_used=F": 18,
+   "vulnerable_version_used=T": 165,
+   "vulnerable_version_used=U": 3
+  },
+  "proposals": {
+   "rejected": 551,
+   "accepted": 522,
+   "rej:last span": 120,
+   "rej:first-party source references the package in 1 file": 91,
+   "rej:non-test source references the package in 1 file": 48,
+   "rej:first-party source references the package in 595 file": 25,
+   "rej:first-party source references the package in 3 file": 22,
+   "rej:snippet contains none of the advisory symbols ['OnLossDetect": 21,
+   "rej:first-party source references the package in 2 file": 21,
+   "rej:first-party source references the package in 13 file": 17,
+   "rej:the spans do not name the affected package": 16,
+   "rej:snippet contains none of the advisory symbols ['New']": 16,
+   "rej:first-party source references the package in 498 file": 13,
+   "rej:first-party source references the package in 9 file": 12,
+   "rej:first-party source references the package in 105 file": 11,
+   "rej:first-party source references the package in 11 file": 10,
+   "rej:first-party source references the package in 271 file": 9,
+   "rej:first-party source references the package in 4 file": 6,
+   "rej:snippet does not name the affected package": 6,
+   "rej:a reachability claim needs 1-5 spans": 5,
+   "rej:snippet contains none of the advisory symbols ['NewServerCon": 5,
+   "rej:snippet does not occur verbatim at flink-runtime/src/main/ja": 5,
+   "rej:snippet does not occur verbatim at pom.xml": 4,
+   "rej:snippet contains none of the advisory symbols ['werkzeug']": 4,
+   "rej:snippet contains none of the advisory symbols ['VerifyAudien": 4
+  },
+  "pred_category": {
+   "code_not_present": 18,
+   "uncertain": 101,
+   "code_not_reachable": 27,
+   "vulnerable": 40
+  }
+ },
+ "qwen3_14b": {
+  "rules": {
+   "R2": 10,
+   "R3": 43,
+   "R6": 16,
+   "R7": 92,
+   "R1": 3,
+   "R4": 19,
+   "R5": 3
+  },
+  "end_reasons": {
+   "decisive_R2": 10,
+   "no_tool_call": 43,
+   "decisive_R6_after_mitigation_window": 3,
+   "finish": 84,
+   "budget": 21,
+   "decisive_R1": 3,
+   "decisive_R4": 19,
+   "decisive_R5": 3
+  },
+  "atom_states": {
+   "dependency_present=F": 3,
+   "dependency_present=T": 140,
+   "dependency_present=U": 43,
+   "mitigating_config=T": 3,
+   "mitigating_config=U": 183,
+   "vulnerable_path_reachable_from_entry=F": 1,
+   "vulnerable_path_reachable_from_entry=T": 19,
+   "vulnerable_path_reachable_from_entry=U": 166,
+   "vulnerable_symbol_referenced=F": 20,
+   "vulnerable_symbol_referenced=T": 56,
+   "vulnerable_symbol_referenced=U": 110,
+   "vulnerable_version_used=F": 10,
+   "vulnerable_version_used=T": 112,
+   "vulnerable_version_used=U": 64
+  },
+  "proposals": {
+   "rejected": 812,
+   "accepted": 364,
+   "rej:last span": 72,
+   "rej:no version in the snippet could be checked against the affec": 57,
+   "rej:first-party source references the package in 3 file": 55,
+   "rej:first-party source references the package in 1 file": 46,
+   "rej:first-party source references the package in 595 file": 41,
+   "rej:first-party source references the package in 8 file": 40,
+   "rej:non-test source references the package in 2 file": 27,
+   "rej:first-party source references the package in 2 file": 26,
+   "rej:non-test source references the package in 1 file": 26,
+   "rej:non-test source references the package in 3 file": 23,
+   "rej:first-party source references the package in 13 file": 23,
+   "rej:snippet does not name the affected package": 21,
+   "rej:first-party source references the package in 9 file": 19,
+   "rej:absence of a mitigation cannot be verified; simply do not cl": 17,
+   "rej:non-test source references the package in 6 file": 17,
+   "rej:version check contradicts the claim": 15,
+   "rej:the spans do not name the affected package": 15,
+   "rej:package token 'netty-common' occurs in 2 file": 14,
+   "rej:snippet does not occur verbatim at presto-pinot/pom.xml": 14,
+   "rej:first-party source references the package in 105 file": 14,
+   "rej:package token 'brotli' occurs in 2 file": 14,
+   "rej:package token 'graphql-java' occurs in 2 file": 13,
+   "rej:package token 'zookeeper' occurs in 14 file": 11
+  },
+  "pred_category": {
+   "code_not_present": 13,
+   "uncertain": 135,
+   "vulnerable": 16,
+   "code_not_reachable": 19,
+   "requires_configuration": 3
+  }
+ },
+ "A_gemma_4_31b": {
+  "pred_category": {
+   "false_positive": 15,
+   "requires_configuration": 11,
+   "code_not_reachable": 90,
+   "code_not_present": 3,
+   "vulnerable": 63,
+   "uncertain": 1,
+   "mitigating_control_protected": 3
+  },
+  "end_reasons": {
+   "answered": 178,
+   "budget_forced_answer": 8
+  }
+ },
+ "A_qwen3_14b": {
+  "pred_category": {
+   "code_not_present": 96,
+   "code_not_reachable": 64,
+   "vulnerable": 20,
+   "requires_configuration": 5,
+   "null": 1
+  },
+  "end_reasons": {
+   "answered": 182,
+   "budget_forced_answer": 4
+  }
+ },
+ "gt_category": {
+  "requires_environment": 2,
+  "vulnerable": 15,
+  "code_not_present": 4,
+  "code_not_reachable": 36,
+  "requires_configuration": 5
+ }
+}

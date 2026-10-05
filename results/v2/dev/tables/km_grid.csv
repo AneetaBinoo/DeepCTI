@@ -1,0 +1,7 @@
+,UDAR,UDAR,UDAR,UDAR,UDAR,UDAR,UDAR,n,n,n,n,n,n,n
+attacker,m1,m1,m2,m2,m3,m3,none,m1,m1,m2,m2,m3,m3,none
+groups,change,pkgdb,"change,pkgdb","pkgdb,fs","change,pkgdb,fs","pkgdb,fs,proc",-,change,pkgdb,"change,pkgdb","pkgdb,fs","change,pkgdb,fs","pkgdb,fs,proc",-
+policy,,,,,,,,,,,,,,
+P2,0.111,0.0,0.111,0.037,0.111,0.038,0.0,9,27,9,27,9,26,36
+P3,0.111,0.0,0.111,0.038,0.111,0.038,0.0,9,27,9,26,9,26,36
+P3k3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9,27,9,26,9,26,35
