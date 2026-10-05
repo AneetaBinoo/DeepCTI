@@ -28,13 +28,13 @@ ABLATIONS = ["DC_noverify", "DC_k1", "DC_nofresh"]
 BUDGETS = [5.0, 10.0, 20.0, 40.0, 60.0]
 
 
-def require_prereg() -> None:
-    tags = subprocess.check_output(["git", "-C", str(ROOT), "tag", "-l", "prereg-v1"], text=True).strip()
-    if tags != "prereg-v1":
-        sys.exit("refusing to run on the test split: tag prereg-v1 does not exist")
-    rc = subprocess.call(["git", "-C", str(ROOT), "merge-base", "--is-ancestor", "prereg-v1", "HEAD"])
+def require_prereg(tag: str = "prereg-v1") -> None:
+    tags = subprocess.check_output(["git", "-C", str(ROOT), "tag", "-l", tag], text=True).strip()
+    if tags != tag:
+        sys.exit(f"refusing to run on the test split: tag {tag} does not exist")
+    rc = subprocess.call(["git", "-C", str(ROOT), "merge-base", "--is-ancestor", tag, "HEAD"])
     if rc != 0:
-        sys.exit("refusing to run: HEAD does not descend from prereg-v1")
+        sys.exit(f"refusing to run: HEAD does not descend from {tag}")
 
 
 def stratified_subset(cases: list[dict], n: int, seed: int = 20261005) -> list[dict]:
@@ -51,13 +51,43 @@ def stratified_subset(cases: list[dict], n: int, seed: int = 20261005) -> list[d
     return sorted(out, key=lambda c: c["case_id"])
 
 
-def build_jobs(exp: str, split: str, model: str, limit: int | None) -> list[Job]:
+V3_LLM = ["S2", "S3", "DC", "DCv21"]
+V3_FREE = ["S0_trivy", "S0_grype", "S0_osv", "S1", "S1p"]
+V3_ARMS = ("tracker", "withheld", "blind")
+NEW_MODELS = {"granite41_30b", "nemotron_super_49b", "glm45_air", "mistral_medium_128b"}
+
+
+def build_jobs(exp: str, split: str, model: str, limit: int | None, dataset: str = "d1",
+               spec: str = "v2") -> list[Job]:
+    data.set_dataset(dataset)
     cases = data.load_cases(split)
+    kw = {"dataset": dataset, "spec": spec}
     if limit:
         cases = stratified_subset(cases, limit)
     jobs: list[Job] = []
     llm = model != "none"
 
+    if exp == "X2":  # v3 main study on D7 (three arms)
+        for c in cases:
+            for arm in V3_ARMS:
+                for s in (V3_LLM if llm else V3_FREE):
+                    jobs.append(Job(Spec(exp, c["case_id"], s, model, arm=arm, **kw), c))
+        return jobs
+    if exp == "X3":  # v3 acquisition on D7 where scanners are noisy (withheld) or absent (blind)
+        for c in stratified_subset(cases, limit or 200):
+            for arm in ("withheld", "blind"):
+                for b in BUDGETS:
+                    for s in (E3_SYSTEMS + ["S3"] if llm else ["S1p"]):
+                        jobs.append(Job(Spec(exp, c["case_id"], s, model, arm=arm, budget=b, **kw), c))
+        return jobs
+    if exp == "X4":  # v3 drift study on D2 (D1 test drift episodes) with the v3 spec and DC v2.1
+        episodes = data.read_jsonl(ROOT / "data" / "d2" / f"{split}.jsonl")
+        all_cases = {c["case_id"]: c for c in data.load_cases(split)}
+        for ep in episodes[: limit or None]:
+            c = all_cases[ep["case_id"]]
+            for s in (["DC", "DCv21", "S3", "S2"] if llm else ["S1p", "S1"]):
+                jobs.append(Job(Spec(exp, c["case_id"], s, model, drift=ep["episode_id"], **kw), c, None, ep["drift"]))
+        return jobs
     if exp == "E2":
         for c in cases:
             for arm in ("tracker", "withheld"):
@@ -121,13 +151,20 @@ def main() -> None:
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--concurrency", type=int, default=None)
     ap.add_argument("--tag", default="")
+    ap.add_argument("--dataset", default="d1", choices=["d1", "d7"])
+    ap.add_argument("--spec", default="v2", choices=["v2", "v3"])
     args = ap.parse_args()
     if args.split == "test":
         require_prereg()
-    jobs = build_jobs(args.exp, args.split, args.model, args.limit)
+        if args.spec == "v3" or args.exp.startswith("X") or args.model in NEW_MODELS:
+            require_prereg("prereg-v2")
+        if args.dataset == "d7":
+            require_prereg("prereg-v3")
+    jobs = build_jobs(args.exp, args.split, args.model, args.limit, args.dataset, args.spec)
     models = load_models()
     conc = args.concurrency or (int(models[args.model].get("concurrency", 16)) if args.model != "none" else 32)
-    out_dir = ROOT / "runs" / args.split / (args.exp + (f"_{args.tag}" if args.tag else ""))
+    base = ROOT / "runs" if args.dataset == "d1" else ROOT / "runs" / args.dataset
+    out_dir = base / args.split / (args.exp + (f"_{args.tag}" if args.tag else ""))
     out_dir.mkdir(parents=True, exist_ok=True)
     out = out_dir / f"{args.model}.jsonl"
     manifest(out_dir / f"{args.model}.manifest.json", {"exp": args.exp, "split": args.split, "model": args.model,

@@ -64,3 +64,21 @@ NOTES = _fn(
 )
 
 TOOL_NAMES = [t["function"]["name"] for t in CATALOG]
+
+# v3 catalog: language packages, directory discovery, more advisory sources (v2 runs keep CATALOG unchanged)
+CATALOG_V3 = [dict(t) for t in CATALOG]
+CATALOG_V3[5] = _fn("advisory_fetch", "Fetch advisory text for a CVE from a mirrored source: nvd, osv, kev, vendor, "
+                    "debian or ubuntu. Cost 1.",
+                    {"cve": S, "source": {"type": "string", "enum": ["nvd", "osv", "kev", "vendor", "debian",
+                                                                      "ubuntu"]}}, ["cve", "source"])
+CATALOG_V3[0] = _fn("pkg_query", "Query the distribution package database (dpkg). `name` may be a binary package "
+                    "name or a source package name; a source name returns all installed binaries built from it. "
+                    "Language packages and software outside the package manager are NOT listed here. Cost 1.",
+                    {"name": S}, ["name"])
+CATALOG_V3.insert(1, _fn("lang_pkg_query", "Query language-package metadata on the host: ecosystem 'pypi' "
+                         "(installed distributions, all virtualenvs) or 'maven' (artifacts inside every jar; name "
+                         "'artifactId' or 'groupId:artifactId'). Cost 1.",
+                         {"ecosystem": {"type": "string", "enum": ["pypi", "maven"]}, "name": S},
+                         ["ecosystem", "name"]))
+CATALOG_V3.insert(2, _fn("list_dir", "List a directory on the host (opt, srv, etc, usr/share/doc and below). Cost 1.",
+                         {"path": S}, ["path"]))

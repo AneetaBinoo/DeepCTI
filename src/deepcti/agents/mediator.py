@@ -11,7 +11,7 @@ import math
 from typing import Any
 
 from ..core.belnap import EvidenceLog, compute_state
-from ..core.decision import decide
+from ..core.decision import decide, decide_instance_aware
 from ..env.host import HostEnv, ToolResult
 from ..extraction.parsers import CaseProgram, VersionFact, derive_from_facts, parse_result, program_from_vex
 from ..policy.pdp import TOOL_TIERS, PolicyDecisionPoint
@@ -30,7 +30,8 @@ FRESHNESS_DEFAULT = {
 
 class Mediator:
     def __init__(self, env: HostEnv, pdp: PolicyDecisionPoint, *, freshness: dict | None = None,
-                 use_freshness: bool = True):
+                 use_freshness: bool = True, instance_aware: bool = False):
+        self.instance_aware = instance_aware
         self.env = env
         self.pdp = pdp
         self.case = env.case
@@ -45,11 +46,13 @@ class Mediator:
 
     # ----------------------------------------------------------------- state
     def state(self):
-        derived = derive_from_facts(self.facts, self.program)
+        derived = derive_from_facts(self.facts, self.program, split_running=self.instance_aware)
         return compute_state(list(self.log) + derived, self.env.clock, self.freshness, math.inf)
 
     def decision(self):
         req = bool(self.program and self.program.precondition and self.program.trusted)
+        if self.instance_aware:
+            return decide_instance_aware(self.state(), req)
         return decide(self.state(), req)
 
     def set_program(self, program: CaseProgram | None) -> None:

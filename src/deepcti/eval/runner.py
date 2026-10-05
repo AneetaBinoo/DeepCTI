@@ -29,7 +29,7 @@ from . import data
 ROOT = Path(__file__).resolve().parents[3]
 
 LLM_SYSTEMS = {"S2", "S3", "S4", "S5", "DC", "DC_checklist", "DC_llmchoose", "DC_noverify", "DC_k1",
-               "DC_nofresh", "DC_entropy", "DC_random", "DC_q2"}
+               "DC_nofresh", "DC_entropy", "DC_random", "DC_q2", "DCv21"}
 DEFAULT_POLICY = {"S0_trivy": "P0", "S0_grype": "P0", "S0_osv": "P0", "S1": "P1", "S1p": "P3", "S2": "P1",
                   "S3": "P1", "S4": "P1", "S5": "P1"}
 
@@ -48,11 +48,15 @@ class Spec:
     attack: str = ""
     drift: str = ""
     prompt_defense: bool = False
+    dataset: str = "d1"  # v3: d1 | d7
+    spec: str = "v2"  # v3: shared prompt/catalog version
 
     def key(self) -> str:
-        return "|".join(str(x) for x in (self.case_id, self.system, self.model, self.arm, self.policy or
-                                         DEFAULT_POLICY.get(self.system, "P3"), self.budget, self.temperature,
-                                         self.seed, self.attack, self.drift, int(self.prompt_defense)))
+        parts = [self.case_id, self.system, self.model, self.arm, self.policy or DEFAULT_POLICY.get(self.system, "P3"),
+                 self.budget, self.temperature, self.seed, self.attack, self.drift, int(self.prompt_defense)]
+        if self.dataset != "d1" or self.spec != "v2":  # v2 keys unchanged
+            parts += [self.dataset, self.spec]
+        return "|".join(str(x) for x in parts)
 
 
 def _yaml(path: Path) -> dict:
@@ -63,7 +67,11 @@ def run_episode(spec: Spec, case: dict, llm: LLM | None, *, attack: dict | None 
                 drift: list[dict] | None = None, priors: dict | None = None) -> dict:
     system = spec.system
     policy = spec.policy or DEFAULT_POLICY.get(system, "P3")
+    data.set_dataset(spec.dataset)
     profiles = source_profiles()
+    if spec.dataset == "d7":  # v3 trust classes estimated per ecosystem on D7 dev
+        v3 = _yaml(ROOT / "config" / "source_profiles_v3.yaml").get("by_ecosystem", {})
+        profiles = v3.get(case.get("ecosystem", ""), profiles)
     if system == "DC_k1":
         profiles = {k: dict(v, trust="T") for k, v in profiles.items()}
         for name in ("cmdb", "scanner:trivy", "scanner:grype", "scanner:osv"):
@@ -77,7 +85,9 @@ def run_episode(spec: Spec, case: dict, llm: LLM | None, *, attack: dict | None 
                       attack=Attack(**attack) if attack else None, drift=drift, profiles=profiles)
     except Exception:
         return {"key": spec.key(), **asdict(spec), "case_id": case["case_id"], "error": traceback.format_exc(limit=4)}
-    med = Mediator(env, PolicyDecisionPoint(policy), use_freshness=system != "DC_nofresh")
+    env.spec_version = spec.spec
+    med = Mediator(env, PolicyDecisionPoint(policy), use_freshness=system != "DC_nofresh",
+                   instance_aware=system == "DCv21")
     world_pre_drift = env.world_atoms()
     env.history = []
     if drift and any(float(e["at"]) <= 0 for e in drift):
@@ -104,12 +114,17 @@ def run_episode(spec: Spec, case: dict, llm: LLM | None, *, attack: dict | None 
             outcome = run_react(med, llm, ReactConfig(variant=variant, budget=spec.budget,
                                                       prompt_defense=spec.prompt_defense))
         elif system.startswith("DC"):
+            if system == "DCv21":
+                acq_v21 = True
+            else:
+                acq_v21 = False
             acq = {"DC_checklist": "checklist", "DC_llmchoose": "llm", "DC_entropy": "entropy",
                    "DC_random": "random"}.get(system, "voi")
             cfg = ControllerConfig(use_llm=True, acquisition=acq, verified=system != "DC_noverify",
                                    budget=spec.budget, seed=spec.seed, trust_profiles=profiles,
                                    q_service=float((priors or {}).get("q_service", 0.4)),
-                                   explain=system == "DC", k_decide=2 if system == "DC_q2" else 1)
+                                   explain=system in ("DC", "DCv21"), k_decide=2 if system == "DC_q2" else 1,
+                                   service_aware=acq_v21)
             outcome = Controller(med, llm, cfg, priors).run()
         else:
             raise ValueError(f"unknown system {system}")

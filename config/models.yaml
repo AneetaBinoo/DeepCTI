@@ -53,3 +53,35 @@ models:
     base_url: http://127.0.0.1:8103/v1
     tool_parser: gemma4
     concurrency: 32
+  # ---- v3 panel extension (cached locally; see docs/V3_PLAN.md G4) ----
+  granite41_30b:
+    served_name: granite_41_30b
+    hf_id: ibm-granite/granite-4.1-30b
+    size_b: 30.0
+    base_url: http://127.0.0.1:8322/v1
+    tool_parser: granite4
+    concurrency: 32
+  nemotron_super_49b:
+    served_name: nemotron_super_49b
+    hf_id: nvidia/Llama-3.3-Nemotron-Super-49B-v1
+    size_b: 49.0
+    base_url: http://127.0.0.1:8313/v1
+    tool_parser: llama3_json (vLLM examples/tool_chat_template_llama3.1_json.jinja)
+    system_prefix: "detailed thinking off"
+    extra_body: {}
+    concurrency: 24
+  glm45_air:
+    served_name: glm_45_air
+    hf_id: zai-org/GLM-4.5-Air
+    size_b: 106.0
+    base_url: http://127.0.0.1:8315/v1
+    tool_parser: glm45
+    extra_body: {chat_template_kwargs: {enable_thinking: false}}
+    concurrency: 32
+  mistral_medium_128b:
+    served_name: mistral_medium_128b
+    hf_id: mistralai/Mistral-Medium-3.5-128B
+    size_b: 128.0
+    base_url: http://127.0.0.1:8319/v1
+    tool_parser: mistral
+    concurrency: 32

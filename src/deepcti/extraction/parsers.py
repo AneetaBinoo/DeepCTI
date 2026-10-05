@@ -14,13 +14,16 @@ from dataclasses import dataclass, field
 
 from debian.debian_support import Version
 
+from ..core import versions
 from ..core.belnap import Observation, Source, content_hash
-from ..core.decision import CONFIG, FIX, IN_RANGE, PRESENT
+from ..core.decision import CONFIG, FIX, IN_RANGE, PRESENT, RUN_FIX, RUN_IN_RANGE
 from ..env.host import ToolResult
 
 # Which atoms a source class may assert (binding table; anything else is rejected).
 BINDINGS: dict[str, set[str]] = {
     "pkgdb": {PRESENT, "version"},
+    "langdb": {PRESENT, "version"},
+    "artifact": {PRESENT, "version"},
     "fs": {"version", CONFIG},
     "proc": {"version"},
     "cmdb": {PRESENT, "version"},
@@ -45,12 +48,23 @@ class CaseProgram:
     trusted: bool = False
     provenance: str = ""
     upstream_ranges: list[dict] = field(default_factory=list)  # from compiled advisories
+    ecosystem: str = "deb-debian"
+    ranges: list[dict] = field(default_factory=list)  # v3: structured affected ranges (non-deb ecosystems)
 
     def known(self) -> bool:
-        return self.status is not None or self.fixed_version is not None or bool(self.upstream_ranges)
+        return (self.status is not None or self.fixed_version is not None or bool(self.upstream_ranges)
+                or bool(self.ranges))
 
     def derive(self, version: str) -> tuple[bool, bool] | None:
         """(in_affected_range, fix_applied) for an installed version, or None if undecidable."""
+        if self.ecosystem not in ("deb-debian", "deb-ubuntu"):
+            rng = self.ranges or self.upstream_ranges
+            if not rng:
+                return None
+            try:
+                return versions.classify(self.ecosystem, version, rng)
+            except Exception:  # noqa: BLE001 - unparseable version string
+                return None
         try:
             v = Version(version)
         except ValueError:
@@ -84,6 +98,12 @@ def program_from_vex(result: ToolResult, case: dict) -> CaseProgram | None:
     status = s.get("status")
     if status == "not-listed":
         return None
+    eco = case.get("ecosystem", "deb-debian")
+    if eco not in ("deb-debian", "deb-ubuntu"):
+        return CaseProgram(cve=case["cve"], src_package=case["src_package"], binaries=[], release=case.get("release", ""),
+                           status=status, fixed_version=None, precondition=s.get("config_precondition"),
+                           trusted=result.source.trust == "T", provenance=f"vex_lookup:{result.call_id}",
+                           ecosystem=eco, ranges=list(s.get("affected_ranges") or []))
     return CaseProgram(
         cve=case["cve"], src_package=case["src_package"], binaries=list(case.get("binary_packages", [])),
         release=case["release"], status=status, fixed_version=s.get("fixed_version"),
@@ -125,6 +145,25 @@ def parse_result(result: ToolResult, case: dict, program: CaseProgram | None) ->
                 facts.append(VersionFact(result.source, p["version"], p["package"], result.t, result.h, result.call_id))
         elif s.get("query") == case["src_package"]:
             out.append(obs(PRESENT, False, result, "dpkg: no binary of source installed"))
+    elif tool == "list_dir" and case.get("ecosystem") == "vendor" and s.get("path") in ("opt", "srv"):
+        # v3 vendor discovery: a product directory under /opt names the component (presence only)
+        names = {n.lower() for n in [case["src_package"], case.get("component", ""), *case.get("aliases", [])] if n}
+        dirs = [e.rstrip("/").lower() for e in s.get("entries", []) if e.endswith("/")]
+        hit = any(n in d or d in n for d in dirs for n in names if len(n) > 2 and len(d) > 2)
+        out.append(obs(PRESENT, hit, result, "product directory " + ("found" if hit else "not found") + " under /opt"))
+    elif tool == "lang_pkg_query":  # v3: pip/jar metadata; a query naming the component is conclusive
+        names = {case["src_package"], case.get("component", ""), *case.get("aliases", [])}
+        names |= {n.split(":")[-1] for n in names if n}
+        q = str(s.get("query", ""))
+        if q in names or q.split(":")[-1] in names:
+            hits = s.get("installed", [])
+            if hits:
+                out.append(obs(PRESENT, True, result, f"{s.get('ecosystem')} metadata: installed"))
+                for h in hits:
+                    facts.append(VersionFact(result.source, h["version"], h["name"], result.t, result.h,
+                                             result.call_id))
+            else:
+                out.append(obs(PRESENT, False, result, f"{s.get('ecosystem')} metadata: not installed"))
     elif tool == "cmdb_lookup":
         sw = [x for x in s.get("software", []) or [] if _belongs(x.get("name"), case)]
         if sw:
@@ -180,7 +219,8 @@ def _predicate_from_matches(pre: dict, matches: list[dict]) -> bool | None:
     return None
 
 
-def derive_from_facts(facts: list[VersionFact], program: CaseProgram | None) -> list[Observation]:
+def derive_from_facts(facts: list[VersionFact], program: CaseProgram | None,
+                      split_running: bool = False) -> list[Observation]:
     """present / in_affected_range / fix_applied observations from version facts and the program."""
     out: list[Observation] = []
     groups: dict[tuple, list[VersionFact]] = {}
@@ -202,6 +242,7 @@ def derive_from_facts(facts: list[VersionFact], program: CaseProgram | None) -> 
         src = source if program.trusted else Source(source.name, "U", source.group)
         ph = content_hash(f"{h}|{program.provenance}|{program.fixed_version}|{program.upstream_ranges}")
         detail = f"{versions} vs fixed {program.fixed_version or program.upstream_ranges}"
-        out.append(Observation(IN_RANGE, a, src, t, ph, evidence_id, detail))
-        out.append(Observation(FIX, x, src, t, ph, evidence_id, detail))
+        running = split_running and source.name == "proc"  # v2.1: running-process instance atoms
+        out.append(Observation(RUN_IN_RANGE if running else IN_RANGE, a, src, t, ph, evidence_id, detail))
+        out.append(Observation(RUN_FIX if running else FIX, x, src, t, ph, evidence_id, detail))
     return out

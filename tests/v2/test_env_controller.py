@@ -77,6 +77,7 @@ def test_every_disruptive_execution_satisfies_its_gate(make_env):
             for _ in range(25):
                 tool = rnd.choice(tools)
                 args = {"pkg_query": {"name": "openssh"}, "file_read": {"path": "etc/ssh/sshd_config"},
+                        "lang_pkg_query": {"ecosystem": "pypi", "name": "requests"}, "list_dir": {"path": "opt"},
                         "config_get": {"service": "ssh", "key": "LoginGraceTime"},
                         "service_status": {"name": "openssh"}, "cmdb_lookup": {"asset": "srv-test"},
                         "advisory_fetch": {"cve": CVE, "source": "nvd"}, "vex_lookup": {"cve": CVE},

@@ -56,17 +56,26 @@ def verify(proposal: Proposal, result: ToolResult, case: dict) -> Verdict:
     cls = source_class(result.source)
     if cls == "fs":
         path = str(result.args.get("path", "")).lstrip("/")
-        if not re.fullmatch(r"usr/share/doc/[a-z0-9][a-z0-9+.-]*/changelog\.Debian", path):
-            return Verdict(proposal, False, "fs version facts only from usr/share/doc/<pkg>/changelog.Debian")
-        first_line = result.output.splitlines()[0] if result.output else ""
-        if span not in first_line:
-            return Verdict(proposal, False, "span not in the changelog header line")
+        if re.fullmatch(r"usr/share/doc/[a-z0-9][a-z0-9+.-]*/changelog\.Debian", path):
+            first_line = result.output.splitlines()[0] if result.output else ""
+            if span not in first_line:
+                return Verdict(proposal, False, "span not in the changelog header line")
+        elif (case.get("ecosystem") == "vendor" and re.match(r"(opt|srv)/", path)
+              and re.match(r"(RELEASE[-_]?NOTES|VERSION|README|NOTICE|CHANGELOG|RUNNING|BUILD)",
+                           path.rsplit("/", 1)[-1], re.I)):
+            # v3 vendor grammar: one line of a version-bearing document that names the product
+            if "\n" in span:
+                return Verdict(proposal, False, "span must be a single line")
+        else:
+            return Verdict(proposal, False, "fs version facts only from changelog headers or vendor version files")
     if cls == "proc":
         lines = [ln for ln in result.output.splitlines() if span in ln]
-        if not any("started from package" in ln for ln in lines):
-            return Verdict(proposal, False, "span not in a process start line")
-    names = {case["src_package"], *case.get("binary_packages", [])}
-    named = [n for n in names if re.search(rf"(?<![\w.+-]){re.escape(n)}(?![\w.+-])", span)]
+        if not any("started from package" in ln or "server banner:" in ln for ln in lines):
+            return Verdict(proposal, False, "span not in a process start or banner line")
+    names = {case["src_package"], *case.get("binary_packages", []), *case.get("aliases", [])}
+    if case.get("component"):
+        names |= {case["component"], case["component"].split(":")[-1]}
+    named = [n for n in names if n and re.search(rf"(?<![\w.+-]){re.escape(n)}(?![\w.+-])", span, re.I)]
     if not named:
         return Verdict(proposal, False, "span does not name the case component")
     value = proposal.value.strip()

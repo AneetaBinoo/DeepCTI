@@ -27,6 +27,8 @@ TOOL_TIERS: dict[str, str] = {
     "cmdb_lookup": R0,
     "advisory_fetch": R0,
     "vex_lookup": R0,
+    "lang_pkg_query": R0,
+    "list_dir": R0,
     "run_scanner": R1,
     "request_approval": R1,
     "apply_patch": R2,

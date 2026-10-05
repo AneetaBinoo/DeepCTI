@@ -18,9 +18,11 @@ from pathlib import Path
 from typing import Any
 
 import yaml
+import zipfile
 from debian.deb822 import Deb822
 from debian.debian_support import Version
 
+from ..core import versions
 from ..core.belnap import Source, content_hash
 from ..policy.pdp import TOOL_TIERS
 
@@ -35,12 +37,14 @@ DEFAULT_COSTS = {
     "vex_lookup": 1,
     "run_scanner": 5,
     "request_approval": 3,
+    "lang_pkg_query": 1,
+    "list_dir": 1,
     "apply_patch": 20,
     "restart_service": 15,
     "disable_feature": 10,
 }
 SCANNERS = ("trivy", "grype", "osv")
-ADVISORY_SOURCES = ("nvd", "osv", "kev", "debian")
+ADVISORY_SOURCES = ("nvd", "osv", "kev", "debian", "vendor", "ubuntu")
 FILE_ALLOW = ("etc/*", "usr/share/doc/*", "opt/*", "var/log/apt/*", "srv/*")
 CONFIG_DEFAULTS = {
     "ssh": ["etc/ssh/sshd_config", "etc/ssh/sshd_config.d/*"],
@@ -74,6 +78,12 @@ def tool_source(tool: str, args: dict, profiles: dict[str, dict] | None = None) 
 
     if tool == "pkg_query":
         return Source("pkgdb", "T", "pkgdb")
+    if tool == "lang_pkg_query":  # language package metadata (dist-info) vs. the artifact itself (jar)
+        if args.get("ecosystem") == "maven":
+            return Source("artifact", "T", "artifact")
+        return Source("langdb", "T", "langdb")
+    if tool == "list_dir":
+        return Source("fs", "T", "fs")
     if tool in ("file_read", "config_get"):
         return Source("fs", "T", "fs")
     if tool == "service_status":
@@ -154,6 +164,8 @@ class Fixture:
     packages: dict[str, dict[str, str]]
     files: dict[str, str]  # rootfs-relative path -> text (lazy-loaded allow-listed files)
     scans: dict[str, Any]
+    lang: list[dict] = field(default_factory=list)  # language packages found in the rootfs (v3)
+    binaries: list[str] = field(default_factory=list)  # allow-listed binary files (e.g. jars), listed only
 
     @classmethod
     def load(cls, host_dir: str | Path) -> Fixture:
@@ -161,11 +173,20 @@ class Fixture:
         host = json.loads((host_dir / "host.json").read_text(encoding="utf-8"))
         rootfs = host_dir / "rootfs"
         status = (rootfs / "var/lib/dpkg/status").read_text(encoding="utf-8", errors="replace")
-        files = {}
+        files: dict[str, str] = {}
+        lang: list[dict] = []
+        binaries: list[str] = []
         for path in rootfs.rglob("*"):
             if path.is_file():
                 rel = path.relative_to(rootfs).as_posix()
                 if rel.startswith("var/lib/dpkg/"):
+                    continue
+                if rel.endswith("/METADATA") and ".dist-info/" in rel:
+                    lang.extend(_dist_info(path, rel))
+                if rel.endswith((".jar", ".war", ".ear")):
+                    lang.extend(_jar_info(path, rel))
+                    if any(fnmatch.fnmatch(rel, pat) for pat in FILE_ALLOW):
+                        binaries.append(rel)
                     continue
                 if any(fnmatch.fnmatch(rel, pat) for pat in FILE_ALLOW):
                     try:
@@ -180,7 +201,51 @@ class Fixture:
                     scans[name] = json.loads(p.read_text(encoding="utf-8"))
                 except json.JSONDecodeError:
                     scans[name] = None
-        return cls(host_dir, host, parse_dpkg_status(status), files, scans)
+        return cls(host_dir, host, parse_dpkg_status(status), files, scans, lang, sorted(binaries))
+
+
+def pep503(name: str) -> str:
+    return re.sub(r"[-_.]+", "-", str(name)).lower()
+
+
+def _dist_info(path: Path, rel: str) -> list[dict]:
+    try:
+        text = path.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return []
+    meta = {}
+    for line in text.splitlines():
+        if not line.strip():
+            break  # headers end at the first blank line
+        if ":" in line:
+            k, v = line.split(":", 1)
+            meta.setdefault(k.strip(), v.strip())
+    if "Name" not in meta or "Version" not in meta:
+        return []
+    return [{"ecosystem": "pypi", "name": meta["Name"], "version": meta["Version"],
+             "path": rel.rsplit("/", 1)[0], "evidence": "dist-info METADATA"}]
+
+
+def _jar_info(path: Path, rel: str) -> list[dict]:
+    out = []
+    try:
+        with zipfile.ZipFile(path) as zf:
+            manifest = ""
+            if "META-INF/MANIFEST.MF" in zf.namelist():
+                manifest = zf.read("META-INF/MANIFEST.MF").decode("utf-8", "replace")
+            impl = dict(re.findall(r"^(Implementation-(?:Title|Version|Vendor)):\s*(.+?)\s*$", manifest, re.M))
+            for name in zf.namelist():
+                if name.startswith("META-INF/maven/") and name.endswith("/pom.properties"):
+                    props = dict(re.findall(r"^\s*([A-Za-z]+)\s*=\s*(.+?)\s*$",
+                                            zf.read(name).decode("utf-8", "replace"), re.M))
+                    if props.get("artifactId") and props.get("version"):
+                        out.append({"ecosystem": "maven", "group": props.get("groupId", ""),
+                                    "name": props["artifactId"], "version": props["version"], "path": rel,
+                                    "manifest_version": impl.get("Implementation-Version"),
+                                    "evidence": f"{name}"})
+    except (OSError, zipfile.BadZipFile, KeyError):
+        return []
+    return out
 
 
 # ----------------------------------------------------------------------------- scanner filtering
@@ -270,6 +335,71 @@ class HostEnv:
         self.calls: list[ToolResult] = []
         self.actions: list[dict] = []
         self._n = 0
+        # v3: non-Debian ecosystems (deb-debian keeps the exact v2 code paths)
+        self.eco = case.get("ecosystem", "deb-debian")
+        self.lang = copy.deepcopy(fixture.lang)
+        self.apps = copy.deepcopy(fixture.host.get("apps", []))
+        for svc in self.services.values():
+            if svc.get("loaded_version") is None and svc.get("component"):
+                svc["loaded_version"] = svc.get("version")
+
+    # ---------------------------------------------------------------- ecosystems (v3)
+    def is_deb(self) -> bool:
+        return self.eco in ("deb-debian", "deb-ubuntu")
+
+    def names(self) -> set[str]:
+        c = self.case
+        out = {c["src_package"], *c.get("binary_packages", []), *c.get("aliases", [])}
+        comp = c.get("component")
+        if comp:
+            out |= {comp, comp.split(":")[-1]}
+        return {n for n in out if n}
+
+    def tracker_entry(self) -> dict:
+        """Distribution tracker entry in Debian semantics (status, fixed_version; '0' = not affected)."""
+        release = self.case["release"]
+        if self.eco == "deb-ubuntu":
+            e = (self.meta.get("ubuntu") or {}).get(release) or {}
+            st = str(e.get("status", "")).lower()
+            if st == "released" and e.get("fixed_version"):
+                return {"status": "resolved", "fixed_version": e["fixed_version"], "raw_status": st}
+            if st in ("not-affected", "dne"):
+                return {"status": "resolved", "fixed_version": "0", "raw_status": st}
+            if st:
+                return {"status": "open", "fixed_version": None, "raw_status": st}
+            return {}
+        return (self.meta.get("debian") or {}).get(release) or {}
+
+    def ranges(self) -> list[dict]:
+        return list(self.meta.get("ranges") or [])
+
+    def instances(self) -> list[dict]:
+        """Installed instances of a non-deb component: {version, path}."""
+        comp = self.case.get("component") or self.case["src_package"]
+        if self.eco == "pypi":
+            return [e for e in self.lang if e["ecosystem"] == "pypi" and pep503(e["name"]) == pep503(comp)]
+        if self.eco == "maven":
+            g, _, a = comp.rpartition(":")
+            return [e for e in self.lang if e["ecosystem"] == "maven" and e["name"] == a and (not g or e["group"] == g)]
+        names = {n.lower() for n in self.names()}
+        return [a for a in self.apps if str(a.get("component", "")).lower() in names and a.get("version")]
+
+    def running_versions(self) -> list[str]:
+        names = {n.lower() for n in self.names()}
+        out = []
+        for svc in self.services.values():
+            owner = str(svc.get("component") or svc.get("package") or "").lower()
+            if owner in names and svc.get("loaded_version") and svc.get("active", True):
+                out.append(str(svc["loaded_version"]))
+        return out
+
+    def non_deb_target(self, current: str) -> str | None:
+        for r in self.ranges():
+            lo, hi = r.get("introduced"), r.get("fixed")
+            if hi and (lo in (None, "", "0") or versions.compare(self.eco, current, lo) >= 0) and \
+                    versions.compare(self.eco, current, hi) < 0:
+                return str(hi)
+        return None
 
     # ---------------------------------------------------------------- helpers
     def _pkg_version(self, name: str) -> str | None:
@@ -289,6 +419,28 @@ class HostEnv:
 
     def apply_drift(self, event: dict) -> None:
         kind = event["kind"]
+        if not self.is_deb() and kind in ("upgrade", "downgrade", "restart", "remove"):
+            if kind in ("upgrade", "downgrade"):  # on-disk instances change; running processes keep their version
+                for inst in self.instances():
+                    inst["version"] = event["version"]
+            elif kind == "restart":
+                insts = self.instances()
+                for svc in self.services.values():
+                    owner = str(svc.get("component") or svc.get("package") or "").lower()
+                    if insts and owner in {n.lower() for n in self.names()}:
+                        svc["loaded_version"] = insts[0]["version"]
+                        if svc.get("banner") and svc.get("version"):
+                            svc["banner"] = svc["banner"].replace(str(svc["version"]), insts[0]["version"])
+                        svc["version"] = insts[0]["version"]
+            else:
+                drop = {id(i) for i in self.instances()}
+                self.lang = [e for e in self.lang if id(e) not in drop]
+                self.apps = [a for a in self.apps if id(a) not in drop]
+                for svc in self.services.values():
+                    if str(svc.get("component") or "").lower() in {n.lower() for n in self.names()}:
+                        svc["active"] = False
+            self.actions.append({"t": self.clock, "drift": event})
+            return
         if kind == "upgrade" or kind == "downgrade":  # package upgraded on disk; running services keep the old binary
             for name in self.src_binaries(event["src"]):
                 self.packages[name]["Version"] = event["version"]
@@ -380,6 +532,12 @@ class HostEnv:
                 return bool(args.get("service")) and bool(args.get("key"))
             if tool == "run_scanner":
                 return args.get("tool") in SCANNERS
+            if tool == "lang_pkg_query":
+                return args.get("ecosystem") in ("pypi", "maven") and bool(str(args.get("name", "")).strip())
+            if tool == "list_dir":
+                path = str(args["path"]).strip().strip("/")
+                return ".." not in path and (path in ("opt", "srv", "etc", "usr/share/doc", "var/log/apt")
+                                             or any(fnmatch.fnmatch(path, p) for p in FILE_ALLOW))
             if tool == "advisory_fetch":
                 return args.get("source") in ADVISORY_SOURCES
             return tool in TOOL_TIERS
@@ -389,6 +547,8 @@ class HostEnv:
     def args_in_scope(self, tool: str, args: dict) -> bool:
         """Disruptive call targets the case's component (used by evidence-gated policies)."""
         src = self.case["src_package"]
+        if tool == "apply_patch" and not self.is_deb():
+            return str(args.get("pkg", "")) in self.names()
         if tool == "apply_patch":
             name = str(args.get("pkg", ""))
             return name == src or name in self.src_binaries(src) or name in self.case.get("binary_packages", [])
@@ -481,7 +641,7 @@ class HostEnv:
         units = []
         for key, svc in sorted(self.services.items()):
             unit = svc.get("unit", f"{key}.service")
-            if name in (key, unit, unit.removesuffix(".service"), svc.get("package")) or (
+            if name in (key, unit, unit.removesuffix(".service"), svc.get("package"), svc.get("component")) or (
                 self.packages.get(svc.get("package", ""), {}) and name == source_name(self.packages[svc["package"]])
             ):
                 units.append((key, svc, unit))
@@ -499,7 +659,10 @@ class HostEnv:
                 f"     Loaded: loaded (/lib/systemd/system/{unit}; enabled; preset: enabled)",
                 f"     Active: {active}",
             ]
-            if loaded:
+            if loaded and svc.get("banner"):  # v3 vendor/language services print their own banner
+                lines += [f"   Main PID: {pid} ({key})",
+                          f"{self.asset()} {key}[{pid}]: server banner: {svc['banner']}"]
+            elif loaded:
                 lines += [
                     f"   Main PID: {pid} ({key})",
                     f"{self.asset()} {key}[{pid}]: started from package {svc.get('package')} "
@@ -521,7 +684,7 @@ class HostEnv:
         cve, src = str(args.get("cve", self.case["cve"])), str(args["source"])
         if src not in ADVISORY_SOURCES:
             return "invalid", f"unknown advisory source {src}", None
-        if src in ("debian", "osv") and not self.tracker_available:
+        if src in ("debian", "ubuntu", "osv") and not self.tracker_available:
             return "ok", f"advisory source '{src}' is not available for this asset (no distribution feed)", None
         if cve != self.case["cve"]:
             return "ok", f"no mirrored advisory for {cve}", None
@@ -538,16 +701,27 @@ class HostEnv:
         if cve != self.case["cve"]:
             return "ok", f"vex_lookup: no record for {cve}", None
         release = self.case["release"]
-        entry = (self.meta.get("debian") or {}).get(release)
-        record = {
-            "cve": cve,
-            "source_package": self.meta.get("src_package", self.case["src_package"]),
-            "release": release,
-            "status": entry.get("status") if entry else "not-listed",
-            "fixed_version": entry.get("fixed_version") if entry else None,
-            "urgency": entry.get("urgency") if entry else None,
-            "config_precondition": None,
-        }
+        if self.eco == "deb-ubuntu":
+            entry = self.tracker_entry()
+            record = {"cve": cve, "ecosystem": self.eco, "source_package": self.case["src_package"],
+                      "release": release, "status": entry.get("status", "not-listed"),
+                      "ubuntu_status": entry.get("raw_status"), "fixed_version": entry.get("fixed_version"),
+                      "config_precondition": None}
+        elif not self.is_deb():
+            record = {"cve": cve, "ecosystem": self.eco, "component": self.case.get("component"),
+                      "status": "ranges" if self.ranges() else "not-listed", "affected_ranges": self.ranges(),
+                      "fixed_version": None, "config_precondition": None}
+        else:
+            entry = (self.meta.get("debian") or {}).get(release)
+            record = {
+                "cve": cve,
+                "source_package": self.meta.get("src_package", self.case["src_package"]),
+                "release": release,
+                "status": entry.get("status") if entry else "not-listed",
+                "fixed_version": entry.get("fixed_version") if entry else None,
+                "urgency": entry.get("urgency") if entry else None,
+                "config_precondition": None,
+            }
         if self.pre:
             record["config_precondition"] = {
                 "service": self.pre.get("service"),
@@ -557,6 +731,42 @@ class HostEnv:
                 "safe_setting": self.pre.get("safe_setting"),
             }
         return "ok", json.dumps(record, indent=1, sort_keys=True), record
+
+    def _t_lang_pkg_query(self, args: dict) -> tuple[str, str, Any]:
+        eco, name = str(args["ecosystem"]), str(args["name"]).strip()
+        if eco not in ("pypi", "maven"):
+            return "invalid", f"unsupported ecosystem {eco}", None
+        if eco == "pypi":
+            hits = [e for e in self.lang if e["ecosystem"] == "pypi" and pep503(e["name"]) == pep503(name)]
+            text = "\n---\n".join(f"Name: {e['name']}\nVersion: {e['version']}\nLocation: /{e['path']}" for e in hits)
+            if not hits:
+                text = f"WARNING: Package(s) not found: {name}"
+        else:
+            g, _, a = name.rpartition(":")
+            hits = [e for e in self.lang if e["ecosystem"] == "maven" and e["name"] == a and (not g or e["group"] == g)]
+            text = "\n".join(f"/{e['path']}: groupId={e['group']} artifactId={e['name']} version={e['version']}"
+                             + (f" (Implementation-Version: {e['manifest_version']})" if e.get("manifest_version")
+                                else "") for e in hits)
+            if not hits:
+                text = f"no Maven artifact matching '{name}' found in any jar on this host"
+        structured = {"ecosystem": eco, "query": name,
+                      "installed": [{"name": e["name"], "version": e["version"], "path": e["path"]} for e in hits]}
+        return "ok", text, structured
+
+    def _t_list_dir(self, args: dict) -> tuple[str, str, Any]:
+        path = str(args["path"]).strip().strip("/")
+        if not self.args_ok("list_dir", {"path": path}):
+            return "invalid", f"path not allow-listed: {path}", None
+        prefix = path + "/"
+        entries = set()
+        for p in list(self.files) + list(self.fx.binaries):
+            if p.startswith(prefix):
+                rest = p[len(prefix):]
+                entries.add(rest.split("/", 1)[0] + ("/" if "/" in rest else ""))
+        if not entries:
+            return "ok", f"ls: cannot access '/{path}': No such file or directory", {"path": path, "entries": []}
+        listing = sorted(entries)[:300]
+        return "ok", "\n".join(listing), {"path": path, "entries": listing}
 
     # ---------------------------------------------------------------- R1 tools
     def _t_run_scanner(self, args: dict) -> tuple[str, str, Any]:
@@ -595,12 +805,32 @@ class HostEnv:
 
     # ---------------------------------------------------------------- R2 tools
     def fixed_version(self) -> str | None:
-        entry = (self.meta.get("debian") or {}).get(self.case["release"]) or {}
+        if not self.is_deb():
+            insts = self.instances()
+            return self.non_deb_target(insts[0]["version"]) if insts else None
+        entry = self.tracker_entry() if self.eco == "deb-ubuntu" else \
+            (self.meta.get("debian") or {}).get(self.case["release"]) or {}
         fv = entry.get("fixed_version")
         return None if fv in (None, "", "0") else str(fv)
 
     def _t_apply_patch(self, args: dict) -> tuple[str, str, Any]:
         name = str(args["pkg"])
+        if not self.is_deb():
+            if name not in self.names():
+                self.actions.append({"t": self.clock, "action": "apply_patch", "pkg": name, "changed": False})
+                return "ok", f"{name}: no pending security update in this scenario; nothing changed.", \
+                    {"changed": False}
+            changed = []
+            for inst in self.instances():
+                target = self.non_deb_target(inst["version"])
+                if target:
+                    changed.append((inst.get("path"), inst["version"], target))
+                    inst["version"] = target
+            self.actions.append({"t": self.clock, "action": "apply_patch", "pkg": name, "changed": bool(changed),
+                                 "detail": changed})
+            if not changed:
+                return "ok", f"{name}: already at a non-vulnerable version.", {"changed": False}
+            return "ok", "Upgraded " + ", ".join(f"/{p}: {a} -> {b}" for p, a, b in changed), {"changed": True}
         src = name if self.src_binaries(name) else source_name(self.packages.get(name, {"Package": name}))
         binaries = self.src_binaries(src)
         if not binaries:
@@ -626,6 +856,15 @@ class HostEnv:
         for key, svc in self.services.items():
             unit = svc.get("unit", f"{key}.service")
             if name in (key, unit, unit.removesuffix(".service")):
+                if not self.is_deb():
+                    insts = self.instances()
+                    if insts:
+                        svc["loaded_version"] = insts[0]["version"]
+                        if svc.get("banner") and svc.get("version"):
+                            svc["banner"] = svc["banner"].replace(str(svc["version"]), insts[0]["version"])
+                            svc["version"] = insts[0]["version"]
+                    self.actions.append({"t": self.clock, "action": "restart_service", "unit": unit})
+                    return "ok", f"Restarted {unit}.", {"unit": unit}
                 svc["loaded_version"] = self._pkg_version(svc.get("package", ""))
                 svc["active"] = svc["loaded_version"] is not None
                 self.actions.append({"t": self.clock, "action": "restart_service", "unit": unit})
@@ -656,8 +895,11 @@ class HostEnv:
     def world_atoms(self) -> dict:
         """True world atoms of the in-memory host right now (used for drift labels and UDAR), never shown
         to any system. A service still running a binary older than the fix counts as in range."""
+        if not self.is_deb():
+            return self._world_atoms_non_deb()
         binaries = self.src_binaries(self.case["src_package"])
-        entry = (self.meta.get("debian") or {}).get(self.case["release"]) or {}
+        entry = self.tracker_entry() if self.eco == "deb-ubuntu" else \
+            (self.meta.get("debian") or {}).get(self.case["release"]) or {}
         fv, status = entry.get("fixed_version"), entry.get("status")
         req = self.pre is not None
         cfg = bool(req and config_enabled(self.pre, self.files))
@@ -681,14 +923,37 @@ class HostEnv:
         return {"present": True, "in_affected_range": a, "fix_applied": x, "vuln_config_enabled": cfg,
                 "req_config": req, **change}
 
+    def _change_truth(self) -> dict:
+        ticket = (self.fx.host.get("change") or {}).get("ticket") or {}
+        return {"change_approved": bool(ticket.get("approved")),
+                "in_maintenance_window": bool(ticket.get("window_open")),
+                "rollback_available": bool(self.fx.host.get("rollback_available", False))}
+
+    def _world_atoms_non_deb(self) -> dict:
+        req = self.pre is not None
+        cfg = bool(req and config_enabled(self.pre, self.files))
+        vers = [str(i["version"]) for i in self.instances()]
+        if not vers:
+            return {"present": False, "in_affected_range": False, "fix_applied": False,
+                    "vuln_config_enabled": False, "req_config": req, **self._change_truth()}
+        cls = [versions.classify(self.eco, v, self.ranges()) for v in vers + self.running_versions()]
+        a = any(c[0] for c in cls)
+        x = (not a) and all(c[1] for c in cls[: len(vers)])
+        return {"present": True, "in_affected_range": a, "fix_applied": x, "vuln_config_enabled": cfg,
+                "req_config": req, **self._change_truth()}
+
     # ---------------------------------------------------------------- ground truth after episode
     def vulnerable_now(self) -> bool:
         """Operational outcome: is the host still exposed after the episode (for BU)?"""
+        if not self.is_deb():
+            w = self._world_atoms_non_deb()
+            return bool(w["present"] and w["in_affected_range"] and (not w["req_config"] or w["vuln_config_enabled"]))
         binaries = self.src_binaries(self.case["src_package"])
         if not binaries:
             return False
         target = self.fixed_version()
-        entry = (self.meta.get("debian") or {}).get(self.case["release"]) or {}
+        entry = self.tracker_entry() if self.eco == "deb-ubuntu" else \
+            (self.meta.get("debian") or {}).get(self.case["release"]) or {}
         if entry.get("fixed_version") == "0":
             return False
         on_disk_vuln = target is None or any(Version(self.packages[b]["Version"]) < Version(target) for b in binaries)
@@ -719,6 +984,9 @@ def config_enabled(pre: dict, files: dict[str, str]) -> bool:
             m = re.match(rf"^{re.escape(key)}\s*(?:=\s*|\s+|$)(.*)$", s, flags=re.IGNORECASE)
             if m:
                 values.append(m.group(1).strip().strip('"'))
+    if kind == "regex_present":  # v3: regex over the configuration file(s), multiline
+        pattern = re.compile(str(pred["pattern"]), re.M | re.I)
+        return any(pattern.search(t) for p, t in files.items() if p == path or p.startswith(path.rstrip("/") + "/"))
     if kind == "directive_present":
         return bool(values)
     if kind == "directive_absent":

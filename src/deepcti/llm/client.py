@@ -73,6 +73,12 @@ class LLM:
 
     def chat(self, messages: list[dict], *, tools: list[dict] | None = None, tool_choice: Any = None,
              json_schema: dict | None = None, max_tokens: int | None = None) -> ChatResult:
+        prefix = self.spec.get("system_prefix")  # e.g. Nemotron's "detailed thinking off"
+        if prefix:
+            if messages and messages[0].get("role") == "system":
+                messages = [{"role": "system", "content": f"{prefix}\n\n{messages[0]['content']}"}] + messages[1:]
+            else:
+                messages = [{"role": "system", "content": prefix}] + list(messages)
         kwargs: dict[str, Any] = {
             "model": self.model,
             "messages": messages,
