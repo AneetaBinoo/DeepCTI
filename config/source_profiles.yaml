@@ -1,0 +1,84 @@
+estimated_on: dev
+n_cases: 156
+rule: 'trusted iff Wilson95 upper bounds of FP and FN <= 0.1 with n >= 20 each (CMDB
+  additionally: version-derived range error)'
+sources:
+  cmdb:
+    trust: U
+    fp: 0.1803
+    fn: 0.0842
+    fp_detail:
+      k: 11
+      n: 61
+      rate: 0.1803
+      ci95:
+      - 0.1038
+      - 0.2947
+    fn_detail:
+      k: 8
+      n: 95
+      rate: 0.0842
+      ci95:
+      - 0.0433
+      - 0.1575
+    version_error:
+      k: 17
+      n: 73
+      rate: 0.2329
+      ci95:
+      - 0.1508
+      - 0.3417
+  scanner:grype:
+    trust: T
+    fp: 0.0
+    fn: 0.0
+    fp_detail:
+      k: 0
+      n: 108
+      rate: 0.0
+      ci95:
+      - 0.0
+      - 0.0343
+    fn_detail:
+      k: 0
+      n: 48
+      rate: 0.0
+      ci95:
+      - 0.0
+      - 0.0741
+  scanner:osv:
+    trust: T
+    fp: 0.0
+    fn: 0.0
+    fp_detail:
+      k: 0
+      n: 108
+      rate: 0.0
+      ci95:
+      - 0.0
+      - 0.0343
+    fn_detail:
+      k: 0
+      n: 48
+      rate: 0.0
+      ci95:
+      - 0.0
+      - 0.0741
+  scanner:trivy:
+    trust: T
+    fp: 0.0
+    fn: 0.0
+    fp_detail:
+      k: 0
+      n: 108
+      rate: 0.0
+      ci95:
+      - 0.0
+      - 0.0343
+    fn_detail:
+      k: 0
+      n: 48
+      rate: 0.0
+      ci95:
+      - 0.0
+      - 0.0741

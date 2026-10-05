@@ -1,0 +1,233 @@
+# DeepCTI v2 — curated configuration preconditions (D1 atoms req_config / vuln_config_enabled).
+#
+# Each entry documents, from the cited advisory, that the vulnerable code is only reachable when a
+# specific feature is configured. Quotes were fetched verbatim on 2026-10-05.
+#
+# Predicate semantics (evaluated deterministically on the fixture rootfs; TRUE = vulnerable feature ENABLED):
+#   * config syntax: one directive per line, "Key value" or "key = value"; lines starting with '#' or ';'
+#     (after leading whitespace) are comments. The value is the rest of the line after the key
+#     (and after '=' for "key = value"), whitespace-trimmed, compared exactly (case-sensitive).
+#   * directive_present / directive_absent: an uncommented line with that key exists / does not exist.
+#   * value_equals / value_not_equals: compare the value of the LAST uncommented occurrence of the key
+#     (sshd uses the first occurrence; fixtures only ever contain one occurrence, so both agree).
+#     A missing file or missing key makes value_equals FALSE and value_not_equals FALSE.
+#   * module_enabled: `file` is a directory (apache-style mods-enabled) and `key` is the "<module>.load"
+#     name; TRUE iff file/key exists in the fixture.
+# Fixture convention: for every host that installs the package, the key is written explicitly
+# (vulnerable or safe line), so the "missing key" corner case never decides a label.
+# Bind values keep the trailing ';' exactly as written in named.conf syntax.
+preconditions:
+  - cve: CVE-2024-6387
+    src_package: openssh
+    service: ssh
+    file: etc/ssh/sshd_config
+    key: LoginGraceTime
+    predicate: {kind: value_not_equals, value: "0"}
+    vulnerable_when: "LoginGraceTime != 0 (sshd default is 120 when unset)"
+    vulnerable_setting: "LoginGraceTime 120"
+    safe_setting: "LoginGraceTime 0"
+    advisory_url: https://www.qualys.com/2024/07/01/cve-2024-6387/regresshion.txt
+    quote: "this signal handler race condition can be fixed by simply setting LoginGraceTime to 0 in the
+      configuration file. This makes sshd vulnerable to a denial of service (the exhaustion of all
+      MaxStartups connections), but it makes it safe from the remote code execution presented in this
+      advisory."
+    notes: "Mitigation trades RCE for DoS. Debian default (commented '#LoginGraceTime 2m') is vulnerable."
+
+  - cve: CVE-2021-41617
+    src_package: openssh
+    service: ssh
+    file: etc/ssh/sshd_config
+    key: AuthorizedKeysCommandUser
+    predicate: {kind: directive_present}
+    vulnerable_when: "AuthorizedKeysCommand with AuthorizedKeysCommandUser configured"
+    vulnerable_setting: "AuthorizedKeysCommandUser nobody   (with AuthorizedKeysCommand /usr/local/bin/get-keys %u)"
+    safe_setting: "#AuthorizedKeysCommandUser nobody"
+    advisory_url: https://www.openssh.com/txt/release-8.8
+    quote: "sshd(8) from OpenSSH 6.2 through 8.7 failed to correctly initialise supplemental groups when
+      executing an AuthorizedKeysCommand or AuthorizedPrincipalsCommand, where a AuthorizedKeysCommandUser
+      or AuthorizedPrincipalsCommandUser directive has been set to run the command as a different user.
+      [...] Neither AuthorizedKeysCommand nor AuthorizedPrincipalsCommand are enabled by default in
+      sshd_config(5)."
+    notes: "Fixed in Debian before bookworm/trixie were released: only fixed/absent cases in D1."
+
+  - cve: CVE-2021-23017
+    src_package: nginx
+    service: nginx
+    file: etc/nginx/nginx.conf
+    key: resolver
+    predicate: {kind: directive_present}
+    vulnerable_when: "a 'resolver' directive is configured"
+    vulnerable_setting: "resolver 127.0.0.53;"
+    safe_setting: "(no resolver directive)"
+    advisory_url: http://mailman.nginx.org/pipermail/nginx-announce/2021/000300.html
+    quote: "The issue only affects nginx if the \"resolver\" directive is used in the configuration file."
+    notes: "Fixed in Debian before bookworm/trixie were released."
+
+  - cve: CVE-2021-44142
+    src_package: samba
+    service: smbd
+    file: etc/samba/smb.conf
+    key: vfs objects
+    predicate: {kind: value_equals, value: "catia fruit streams_xattr"}
+    vulnerable_when: "vfs_fruit loaded (fruit in 'vfs objects') with default fruit:metadata/fruit:resource"
+    vulnerable_setting: "vfs objects = catia fruit streams_xattr"
+    safe_setting: "vfs objects = catia streams_xattr"
+    advisory_url: https://www.samba.org/samba/security/CVE-2021-44142.html
+    quote: "The problem in vfs_fruit exists in the default configuration of the fruit VFS module using
+      fruit:metadata=netatalk or fruit:resource=file. If both options are set to different settings than
+      the default values, the system is not affected by the security issue."
+    notes: "Predicate uses the exact fixture value (contract predicate kinds have no 'contains'). Fixed in
+      Debian before bookworm/trixie were released."
+
+  - cve: CVE-2023-25690
+    src_package: apache2
+    service: apache2
+    file: etc/apache2/mods-enabled
+    key: proxy.load
+    predicate: {kind: module_enabled}
+    vulnerable_when: "mod_proxy enabled together with RewriteRule [P]/ProxyPassMatch re-inserting user data"
+    vulnerable_setting: "a2enmod proxy (etc/apache2/mods-enabled/proxy.load)"
+    safe_setting: "a2dismod proxy (remove etc/apache2/mods-enabled/proxy.load)"
+    advisory_url: https://httpd.apache.org/security/vulnerabilities_24.html#CVE-2023-25690
+    quote: "Configurations are affected when mod_proxy is enabled along with some form of RewriteRule or
+      ProxyPassMatch in which a non-specific pattern matches some portion of the user-supplied
+      request-target (URL) data and is then re-inserted into the proxied request-target using variable
+      substitution."
+    notes: "Predicate encodes the necessary condition (mod_proxy enabled). Fixed before bookworm release."
+
+  - cve: CVE-2021-44224
+    src_package: apache2
+    service: apache2
+    file: etc/apache2/mods-enabled/proxy.conf
+    key: ProxyRequests
+    predicate: {kind: value_equals, value: "On"}
+    vulnerable_when: "httpd configured as forward proxy (mod_proxy enabled and ProxyRequests On)"
+    vulnerable_setting: "ProxyRequests On   (in mods-enabled/proxy.conf, i.e. mod_proxy enabled)"
+    safe_setting: "#ProxyRequests On"
+    advisory_url: https://httpd.apache.org/security/vulnerabilities_24.html#CVE-2021-44224
+    quote: "A crafted URI sent to httpd configured as a forward proxy (ProxyRequests on) can cause a crash
+      (NULL pointer dereference) or, for configurations mixing forward and reverse proxy declarations, can
+      allow for requests to be directed to a declared Unix Domain Socket endpoint (Server Side Request
+      Forgery)."
+    notes: "mods-enabled/proxy.conf exists only when mod_proxy is enabled. Fixed before bookworm release."
+
+  - cve: CVE-2023-42115
+    src_package: exim4
+    service: exim4
+    file: etc/exim4/conf.d/auth/50_local_external
+    key: driver
+    predicate: {kind: value_equals, value: "external"}
+    vulnerable_when: "an EXTERNAL authenticator (driver = external) is offered"
+    vulnerable_setting: "driver = external   (authenticator ext_auth, public_name = EXTERNAL)"
+    safe_setting: "# driver = external   (authenticator commented out)"
+    advisory_url: https://exim.org/static/doc/security/CVE-2023-zdi.txt
+    quote: "If you do not use SPA/NTLM, or EXTERNAL authentication, you're not affected. [...] Mitigation:
+      Do not offer EXTERNAL authentication."
+    notes: "Config condition comes from the Exim maintainers' advisory (NVD/ZDI text does not state it)."
+
+  - cve: CVE-2023-42116
+    src_package: exim4
+    service: exim4
+    file: etc/exim4/conf.d/auth/50_local_spa
+    key: driver
+    predicate: {kind: value_equals, value: "spa"}
+    vulnerable_when: "a SPA/NTLM authenticator (driver = spa) is configured"
+    vulnerable_setting: "driver = spa   (authenticator spa_server, public_name = NTLM)"
+    safe_setting: "# driver = spa   (authenticator commented out)"
+    advisory_url: https://exim.org/static/doc/security/CVE-2023-zdi.txt
+    quote: "If you do not use SPA/NTLM, or EXTERNAL authentication, you're not affected. [...] Mitigation:
+      Do not use SPA (NTLM) authentication"
+    notes: ""
+
+  - cve: CVE-2023-42117
+    src_package: exim4
+    service: exim4
+    file: etc/exim4/conf.d/main/05_local_proxy
+    key: hosts_proxy
+    predicate: {kind: directive_present}
+    vulnerable_when: "proxy protocol accepted from some hosts (hosts_proxy set)"
+    vulnerable_setting: "hosts_proxy = 10.0.0.0/8"
+    safe_setting: "# hosts_proxy = 10.0.0.0/8"
+    advisory_url: https://exim.org/static/doc/security/CVE-2023-zdi.txt
+    quote: "One issue is related to data received from a proxy-protocol proxy. If you do not use a proxy in
+      front of Exim, you're not affected. If your proxy is trustworthy, you're not affected. [...]
+      Mitigation: Do not use Exim behind an untrusted proxy-protocol proxy"
+    notes: "hosts_proxy is the Exim main option that enables proxy-protocol handling."
+
+  - cve: CVE-2023-2911
+    src_package: bind9
+    service: named
+    file: etc/bind/named.conf.options
+    key: stale-answer-client-timeout
+    predicate: {kind: value_equals, value: "0;"}
+    vulnerable_when: "stale-answer-enable yes; together with stale-answer-client-timeout 0;"
+    vulnerable_setting: "stale-answer-client-timeout 0;   (with stale-answer-enable yes;)"
+    safe_setting: "stale-answer-client-timeout off;"
+    advisory_url: https://kb.isc.org/docs/cve-2023-2911
+    quote: "If the recursive-clients quota is reached on a BIND 9 resolver configured with both
+      stale-answer-enable yes; and stale-answer-client-timeout 0;, a sequence of serve-stale-related
+      lookups could cause named to loop and terminate unexpectedly due to a stack overflow."
+    notes: "ISC workaround: setting stale-answer-client-timeout to off or a non-zero value prevents it."
+
+  - cve: CVE-2025-40777
+    src_package: bind9
+    service: named
+    file: etc/bind/named.conf.options
+    key: stale-answer-client-timeout
+    predicate: {kind: value_equals, value: "0;"}
+    vulnerable_when: "serve-stale enabled with stale-answer-client-timeout 0 on a caching resolver"
+    vulnerable_setting: "stale-answer-client-timeout 0;   (with stale-answer-enable yes;)"
+    safe_setting: "stale-answer-client-timeout off;"
+    advisory_url: https://kb.isc.org/docs/cve-2025-40777
+    quote: "If a named caching resolver is configured with serve-stale-enable yes, and with
+      stale-answer-client-timeout set to 0 (the only allowable value other than disabled) [...] the daemon
+      will abort with an assertion failure."
+    notes: "Advisory names 'serve-stale-enable'; the real option is stale-answer-enable (used in its own
+      workaround: 'stale-answer-client-timeout off; or stale-answer-enable no;')."
+
+  - cve: CVE-2019-18634
+    src_package: sudo
+    service: null
+    file: etc/sudoers.d/pwfeedback
+    key: Defaults
+    predicate: {kind: value_equals, value: "pwfeedback"}
+    vulnerable_when: "Defaults pwfeedback enabled in sudoers"
+    vulnerable_setting: "Defaults pwfeedback"
+    safe_setting: "Defaults !pwfeedback"
+    advisory_url: https://www.sudo.ws/security/advisories/pwfeedback/
+    quote: "Due to a bug, when the pwfeedback option is enabled in the sudoers file, a user may be able to
+      trigger a stack-based buffer overflow."
+    notes: "sudo is not a daemon (service null). Fixed in Debian before bookworm/trixie were released."
+
+  - cve: CVE-2025-26465
+    src_package: openssh
+    service: null
+    file: etc/ssh/ssh_config
+    key: VerifyHostKeyDNS
+    predicate: {kind: value_equals, value: "yes"}
+    vulnerable_when: "ssh client with VerifyHostKeyDNS yes (or ask); default is no"
+    vulnerable_setting: "    VerifyHostKeyDNS yes   (in the 'Host *' block)"
+    safe_setting: "    VerifyHostKeyDNS no"
+    advisory_url: https://www.openssh.com/txt/release-9.9p2
+    quote: "ssh(1) in OpenSSH versions 6.8p1 to 9.9p1 (inclusive) contained a logic error that allowed an
+      on-path attacker (a.k.a MITM) to impersonate any server when the VerifyHostKeyDNS option is enabled.
+      This option is off by default."
+    notes: "Client-side (openssh-client, no service). Qualys also lists 'ask' as vulnerable; fixtures only
+      write yes/no. Verified 2026-10-05."
+
+  - cve: CVE-2023-4091
+    src_package: samba
+    service: smbd
+    file: etc/samba/smb.conf
+    key: "acl_xattr:ignore system acls"
+    predicate: {kind: value_equals, value: "yes"}
+    vulnerable_when: "acl_xattr VFS module with 'acl_xattr:ignore system acls = yes'"
+    vulnerable_setting: "acl_xattr:ignore system acls = yes   (share with vfs objects = acl_xattr)"
+    safe_setting: "acl_xattr:ignore system acls = no"
+    advisory_url: https://www.samba.org/samba/security/CVE-2023-4091.html
+    quote: "The widely used Samba VFS module \"acl_xattr\" when configured with the module configuration
+      parameter \"acl_xattr:ignore system acls = yes\" is the only upstream Samba module that allows this
+      behavior and is the only known method of reproducing this security flaw. If (as is the default) the
+      module configuration parameter \"acl_xattr:ignore system acls=no\", then the Samba server is not
+      vulnerable to this attack."
+    notes: "Verified 2026-10-05."

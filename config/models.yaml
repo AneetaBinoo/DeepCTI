@@ -1,0 +1,55 @@
+# DeepCTI v2 model panel. Revisions verified in docs/VERIFICATION_LOG.md ("Model panel").
+# All local models are served by vLLM 0.23.0 with --max-model-len 32768 (scripts/serve/launch_models.sh).
+models:
+  qwen3_4b:
+    served_name: qwen3_4b
+    hf_id: Qwen/Qwen3-4B
+    revision: 1cfa9a7208912126459214e8b04321603b3df60c
+    size_b: 4.0
+    base_url: http://127.0.0.1:8302/v1
+    tool_parser: hermes
+    extra_body: {chat_template_kwargs: {enable_thinking: false}}
+    concurrency: 32
+  llama31_8b:
+    served_name: meta-llama/Llama-3.1-8B-Instruct
+    hf_id: meta-llama/Llama-3.1-8B-Instruct
+    revision: remote (10.116.34.176:8008, revision not exposed by server)
+    size_b: 8.0
+    base_url: http://10.116.34.176:8008/v1
+    api_key_env: LLAMA8B_API_KEY
+    tool_parser: llama3_json (server-side)
+    context: 16384
+    concurrency: 16
+  granite41_8b:
+    served_name: granite_41_8b
+    hf_id: ibm-granite/granite-4.1-8b
+    revision: 1504002f650e656a0a3789d99574df12e3e94ed0
+    size_b: 8.0
+    base_url: http://127.0.0.1:8321/v1
+    tool_parser: granite4
+    concurrency: 32
+  qwen3_14b:
+    served_name: qwen3_14b
+    hf_id: Qwen/Qwen3-14B
+    revision: 40c069824f4251a91eefaf281ebe4c544efd3e18
+    size_b: 14.0
+    base_url: http://127.0.0.1:8309/v1
+    tool_parser: hermes
+    extra_body: {chat_template_kwargs: {enable_thinking: false}}
+    concurrency: 32
+  mistral_small_24b:
+    served_name: mistral_small_24b
+    hf_id: mistralai/Mistral-Small-3.2-24B-Instruct-2506
+    revision: 95a6d26c4bfb886c58daf9d3f7332c857cb27b43
+    size_b: 24.0
+    base_url: http://127.0.0.1:8310/v1
+    tool_parser: mistral
+    concurrency: 32
+  gemma4_31b:
+    served_name: gemma_4_31b
+    hf_id: google/gemma-4-31B-it
+    revision: see VERIFICATION_LOG (pre-existing server on GPU 2, port 8103)
+    size_b: 31.0
+    base_url: http://127.0.0.1:8103/v1
+    tool_parser: gemma4
+    concurrency: 32

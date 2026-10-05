@@ -18,3 +18,15 @@ analysis/
 *.log
 .DS_Store
 Thumbs.db
+tools/bin/
+tools/cache/
+data/mirrors/**/raw/
+logs/
+data/cache/
+data/d1/hosts/
+data/base_images/
+data/mirrors/*/*/raw/
+data/mirrors/docker_hub/
+data/mirrors/debian_debs/
+runs/
+results/v2/*/raw/
