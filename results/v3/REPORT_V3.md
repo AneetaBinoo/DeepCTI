@@ -7,7 +7,8 @@ Numbers come from generated files only:
 
 Plan and gap analysis: docs/V3_PLAN.md. Pre-registrations: prereg/PREREGISTRATION_V2.md (tag `prereg-v2`) and
 prereg/PREREGISTRATION_V3.md (tag `prereg-v3`). Every post-tag change: prereg/DEVIATIONS.md (D12–D23).
-Audits: docs/audit/V3_AUDIT.md. Runs: 248,465 episode records across v2 and v3, 0 error records.
+Audits: docs/audit/V3_AUDIT.md. Runs: 248,465 episode records (runs/test, runs/calib and runs/d7/{test,calib,dev};
+excluding v2 dev pilots and purged records), 0 error records.
 
 ## 1. What the v0 paper needed and what was done
 
@@ -35,14 +36,16 @@ On those episodes DC v2.1 reaches accuracy 0.933, loss 0.420, DER 0.041. DC: 0.0
 
 ### prereg-v3 (D7 test, 414 cases / 70 CVEs; 8 LLMs + LLM-free systems; Holm over H9–H14)
 
+H15 and the post-hoc DCv21b figures pool 7 generators (the Mistral-Medium D7 runs finished after the note sample was drawn).
+
 | Hypothesis | Estimate [95% CI] | p (Holm) | Verdict |
 |---|---|---|---|
 | H9 withheld arm: DC − S3 loss | −0.883 [−1.030, −0.740] | 0.0005 | supported |
-| H10 vendor/tracker: DC − S1′ loss (value of verified LLM extraction) | −0.205 [−0.265, −0.142] | ≤ 0.0016 | supported |
+| H10 vendor/tracker: DC − S1′ loss (value of verified LLM extraction) | −0.205 [−0.265, −0.142] | 0.0005 | supported |
 | H11 accepted-fact error: DC − DC_noverify | −0.027 [−0.039, −0.016] | 0.0005 | supported |
 | H12 LTT, blind arm, α = 0.05 | criterion met: ≥ 0.93 of 200 splits within α for every model; mean coverage gain +0.421 | — | supported |
 | H13 independent drift test (D7), upgrade without restart: DCv21 − DC loss | −4.593 [−6.305, −3.021] | 0.0005 | supported |
-| H14 withheld, max budget: DC (EC²) − checklist cost-to-decision | −0.35 [−0.51, −0.21]; loss difference 0 | 0.0016 | supported |
+| H14 withheld, max budget: DC (EC²) − checklist cost-to-decision | −0.35 [−0.51, −0.21]; loss difference 0 | 0.0015 | supported |
 | H15 (secondary) DCv21 note faithfulness non-inferior to DC (margin −0.02) | −0.018 [−0.047, +0.010] | p = 0.23 | **not supported** |
 
 **D7 headline table** (pooled over 8 models):
@@ -71,11 +74,11 @@ On those episodes DC v2.1 reaches accuracy 0.933, loss 0.420, DER 0.041. DC: 0.0
    - The LLM decisively matters in two places: vendor software (H10) and risk-controlled release of hint-based decisions (H12).
 2. **Conservative trust costs coverage.** No scanner met the dev trust rule on D7, so DC ignores scanners. In the withheld arm, plain scanners would have done better than DC's abstention on deb, pypi and maven (V3 audit).
 3. **The verifier trades coverage for precision on benign data.**
-   - Vendor/tracker loss: DC 0.152 vs DC_noverify 0.086 as run.
-   - With the post-hoc verifier fixes (D21): DC 0.115, DC_noverify still 0.086.
+   - Vendor/tracker loss as run (8 models): DC 0.146 vs DC_noverify 0.084 (DC v2.1 0.161).
+   - With the post-hoc verifier fixes (D21; X2V covers 7 models, Mistral-Medium not re-run): DC 0.115, DC_noverify 0.086.
    - Its benefit is the 2.7-pp lower accepted-fact error (H11) and robustness to injected text, which v3 does not test.
 4. **H14 holds, but EC² is not the best acquisition rule.** Entropy-greedy is cheaper still (4.20 vs EC² 5.34 tool-cost units) at identical loss.
-5. **DC v2.1 has a cost.** On upgrade-with-restart episodes it abstains more than DC (accuracy 0.74 vs 0.95). It adds about 8% tool cost and 35–143% more prompt tokens.
+5. **DC v2.1 has a cost.** On upgrade-with-restart episodes it abstains more than DC (accuracy 0.74 vs 0.95). It adds about 8% tool cost and +34% (feed-less arms) to +140% (tracker arm) prompt tokens (8 models, recomputed from raw logs).
 6. **H15 failed because of a prompt defect.** The DC v2.1 synthesis prompt said "The decision is FIXED"; 40.5% of non-fixed notes then contained "FIXED". Post hoc (D23), a neutral prompt (DCv21b) reaches:
    - faithfulness +0.036 [+0.011, +0.062] over DC;
    - note/decision consistency 0.978 (DC 0.960; DC v2.1 0.752);
@@ -85,8 +88,8 @@ On those episodes DC v2.1 reaches accuracy 0.933, loss 0.420, DER 0.041. DC: 0.0
 7. **Larger ReAct agents close part of the gap.**
    - D1, S3 − DC loss: Mistral-Medium-128B +0.409 (tracker) / +0.788 (withheld); Granite 8B → 30B roughly halves S3 loss.
    - D7, Mistral-Medium-128B S3 − DC: +0.181 (tracker, p = 0.005), +0.302 (withheld, p = 0.022), +0.192 (blind, p = 0.12, not significant).
-   - Nemotron-49B's ReAct runs are unreliable: 25% made no tool call, using a generic Llama-3.1 tool template.
-8. **The third-party baseline confirms ours.** S3I (Inspect AI) agrees with S3 on 80.6% of D7 decisions, with similar losses: tracker 0.92 / 1.14, withheld 1.50 / 1.51.
+   - Nemotron-49B's ReAct runs are unreliable: 25.5% of its D1 E2 S3 episodes made no tool call (231/906; raw logs runs/test/E2/nemotron_super_49b.jsonl), using vLLM's generic Llama-3.1 JSON tool template (config/models.yaml).
+8. **The third-party baseline confirms ours.** S3I (Inspect AI) agrees with S3 on 80.6% of D7 decisions (n = 1,635). Losses with the tracker are similar (S3I 0.92 / 1.14 vs S3 0.84 / 1.13 for Mistral-24B / Qwen3-14B); withheld, S3I is somewhat better (1.50 / 1.51 vs S3 1.63 / 2.14). So our S3 is not a stronger baseline than a standard harness: if anything slightly weaker withheld.
 9. **Audit corrections, all logged.**
    - Non-deb drift physics (X5 fully re-run, D20).
    - Verifier header names and series numbers (post-hoc X2V, D21).
