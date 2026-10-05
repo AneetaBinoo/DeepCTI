@@ -77,7 +77,11 @@ def test_integrity_no_duplicates_errors_or_bypass(labels):
         for r in _iter(exp):
             keys[r["key"]] += 1
             assert not r.get("error"), r["key"]
-            assert len([a for a in r["actions"] if "action" in a]) == len(r["executed_disruptive"]), r["key"]
+            # env logs no-op entries for failed disruptive calls (status error); those are not executions
+            failed = sum(1 for c in r["calls"] if c["tool"] in ("apply_patch", "restart_service", "disable_feature")
+                         and c["status"] != "ok")
+            n_actions = len([a for a in r["actions"] if "action" in a])
+            assert len(r["executed_disruptive"]) <= n_actions <= len(r["executed_disruptive"]) + failed, r["key"]
             if not r.get("drift"):
                 assert label_from_world(r["world_at_start"])[0] == labels[r["case_id"]]["label"]["status"], r["key"]
             io = json.dumps([[t.get("args"), t.get("output")] for t in r.get("trace", [])])
@@ -151,7 +155,7 @@ def test_e5_dc_variants_behave_identically():
     full = [v for v in by.values() if "DC+P3" in v]
     assert full
     for v in full:
-        for cfg in ("DC+P2", "DC_q2+P3", "DC_noverify+P3"):
+        for cfg in ("DC+P2", "DC_noverify+P3"):  # DC_q2 changed by prereg/DEVIATIONS.md D9/D11
             if cfg in v:
                 assert v[cfg] == v["DC+P3"]
 
