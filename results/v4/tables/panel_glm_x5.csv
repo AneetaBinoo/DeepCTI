@@ -1,0 +1,17 @@
+kind,system,n,loss,acc,DER
+remove,DC,40,0.1125,0.825,
+remove,DCv21,40,0.1125,0.825,
+remove,S2,40,0.5625,0.0,
+remove,S3,40,0.395,0.525,
+rollback,DC,40,0.025,0.95,0.0
+rollback,DCv21,40,0.025,0.95,0.0
+rollback,S2,40,1.0875,0.725,0.1
+rollback,S3,40,5.0125,0.475,0.5
+upgrade_no_restart,DC,40,5.055,0.3,0.6061
+upgrade_no_restart,DCv21,40,0.025,0.95,0.0
+upgrade_no_restart,S2,40,0.1475,0.775,0.0
+upgrade_no_restart,S3,40,3.53,0.6,0.4242
+upgrade_restart,DC,40,0.0125,0.975,
+upgrade_restart,DCv21,40,0.125,0.75,
+upgrade_restart,S2,40,0.4625,0.375,
+upgrade_restart,S3,40,0.24,0.5,
