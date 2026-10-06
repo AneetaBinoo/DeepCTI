@@ -1,0 +1,12 @@
+prefix=/storage/data/DeepCTI/.nodeenv
+exec_prefix=${prefix}
+libdir=/storage/data/DeepCTI/.nodeenv/lib
+includedir=/storage/data/DeepCTI/.nodeenv/include
+
+Name: absl_vlog_is_on
+Description: Abseil vlog_is_on library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_absl_vlog_is_on = 20260526
+Libs: -L${libdir}  
+Cflags: -I${includedir} -DNOMINMAX

@@ -1,0 +1,16 @@
+prefix=/storage/data/DeepCTI/.texenv
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+sysconfdir=/storage/data/DeepCTI/.texenv/etc
+localstatedir=/storage/data/DeepCTI/.texenv/var
+confdir=/storage/data/DeepCTI/.texenv/etc/fonts
+cachedir=/storage/data/DeepCTI/.texenv/var/cache/fontconfig
+
+Name: Fontconfig
+Description: Font configuration and customization library
+Version: 2.18.3
+Requires.private: freetype2 >=  21.0.15, expat
+Libs: -L${libdir} -lfontconfig
+Libs.private: -pthread -lm
+Cflags: -I${includedir}

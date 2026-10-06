@@ -1,0 +1,12 @@
+prefix=/storage/data/DeepCTI/.nodeenv
+exec_prefix=${prefix}
+libdir=/storage/data/DeepCTI/.nodeenv/lib
+includedir=/storage/data/DeepCTI/.nodeenv/include
+
+Name: absl_pretty_function
+Description: Abseil pretty_function library
+URL: https://abseil.io/
+Version: 20260526
+Requires:
+Libs: -L${libdir}  
+Cflags: -I${includedir} -DNOMINMAX

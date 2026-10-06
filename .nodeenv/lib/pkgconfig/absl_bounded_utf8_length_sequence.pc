@@ -1,0 +1,12 @@
+prefix=/storage/data/DeepCTI/.nodeenv
+exec_prefix=${prefix}
+libdir=/storage/data/DeepCTI/.nodeenv/lib
+includedir=/storage/data/DeepCTI/.nodeenv/include
+
+Name: absl_bounded_utf8_length_sequence
+Description: Abseil bounded_utf8_length_sequence library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_bits = 20260526, absl_config = 20260526
+Libs: -L${libdir}  
+Cflags: -I${includedir} -DNOMINMAX

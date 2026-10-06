@@ -1,0 +1,12 @@
+prefix=/storage/data/DeepCTI/.nodeenv
+exec_prefix=${prefix}
+libdir=/storage/data/DeepCTI/.nodeenv/lib
+includedir=/storage/data/DeepCTI/.nodeenv/include
+
+Name: absl_cordz_sample_token
+Description: Abseil cordz_sample_token library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_config = 20260526, absl_cordz_handle = 20260526, absl_cordz_info = 20260526
+Libs: -L${libdir}  -labsl_cordz_sample_token 
+Cflags: -I${includedir} -DNOMINMAX

@@ -1,0 +1,12 @@
+prefix=/storage/data/DeepCTI/.nodeenv
+exec_prefix=${prefix}
+libdir=/storage/data/DeepCTI/.nodeenv/lib
+includedir=/storage/data/DeepCTI/.nodeenv/include
+
+Name: absl_str_format
+Description: Abseil str_format library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_config = 20260526, absl_core_headers = 20260526, absl_nullability = 20260526, absl_span = 20260526, absl_str_format_internal = 20260526, absl_string_view = 20260526
+Libs: -L${libdir}  
+Cflags: -I${includedir} -DNOMINMAX

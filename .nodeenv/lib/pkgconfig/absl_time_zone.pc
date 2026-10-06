@@ -1,0 +1,12 @@
+prefix=/storage/data/DeepCTI/.nodeenv
+exec_prefix=${prefix}
+libdir=/storage/data/DeepCTI/.nodeenv/lib
+includedir=/storage/data/DeepCTI/.nodeenv/include
+
+Name: absl_time_zone
+Description: Abseil time_zone library
+URL: https://abseil.io/
+Version: 20260526
+Requires:
+Libs: -L${libdir}  -labsl_time_zone 
+Cflags: -I${includedir} -DNOMINMAX

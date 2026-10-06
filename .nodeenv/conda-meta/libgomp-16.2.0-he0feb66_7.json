@@ -1,0 +1,56 @@
+{
+  "name": "libgomp",
+  "version": "16.2.0",
+  "build": "he0feb66_7",
+  "build_number": 7,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "subdir": "linux-64",
+  "fn": "libgomp-16.2.0-he0feb66_7.conda",
+  "md5": "d904c7ddd95e026254b4b80808ee9e12",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libgomp-16.2.0-he0feb66_7.conda",
+  "sha256": "92a0bb350c7be6a4eedcb4e111c60aefd176018e6b1c009a6e025dbe9bbcd758",
+  "depends": [
+    "__glibc >=2.17,<3.0.a0"
+  ],
+  "constrains": [],
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "timestamp": 1790303046000,
+  "size": 640566,
+  "requested_spec": "None",
+  "package_tarball_full_path": "/home/student/.conda/pkgs/libgomp-16.2.0-he0feb66_7.conda",
+  "extracted_package_dir": "/home/student/.conda/pkgs/libgomp-16.2.0-he0feb66_7",
+  "files": [
+    "lib/libgomp.so",
+    "lib/libgomp.so.1.0.0",
+    "share/licenses/gcc-libs/RUNTIME.LIBRARY.EXCEPTION.gomp_copy"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libgomp.so",
+        "path_type": "softlink",
+        "sha256": "34324e0835be6e103844d7c416bec42834cf803d3ba8d9519df15ced19914dfe",
+        "size_in_bytes": 1674616
+      },
+      {
+        "_path": "lib/libgomp.so.1.0.0",
+        "path_type": "hardlink",
+        "sha256": "34324e0835be6e103844d7c416bec42834cf803d3ba8d9519df15ced19914dfe",
+        "size_in_bytes": 1674616,
+        "sha256_in_prefix": "34324e0835be6e103844d7c416bec42834cf803d3ba8d9519df15ced19914dfe"
+      },
+      {
+        "_path": "share/licenses/gcc-libs/RUNTIME.LIBRARY.EXCEPTION.gomp_copy",
+        "path_type": "hardlink",
+        "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+        "size_in_bytes": 3324,
+        "sha256_in_prefix": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/student/.conda/pkgs/libgomp-16.2.0-he0feb66_7",
+    "type": 1
+  }
+}

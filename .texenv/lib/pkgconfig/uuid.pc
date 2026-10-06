@@ -1,0 +1,11 @@
+prefix=/storage/data/DeepCTI/.texenv
+exec_prefix=/storage/data/DeepCTI/.texenv
+libdir=/storage/data/DeepCTI/.texenv/lib
+includedir=/storage/data/DeepCTI/.texenv/include
+
+Name: uuid
+Description: Universally unique id library
+Version: 2.42.4
+Cflags: -I${includedir}/uuid
+Libs.private:  -lpthread
+Libs: -L${libdir} -luuid

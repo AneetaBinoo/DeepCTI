@@ -1,0 +1,12 @@
+prefix=/storage/data/DeepCTI/.nodeenv
+exec_prefix=${prefix}
+libdir=/storage/data/DeepCTI/.nodeenv/lib
+includedir=/storage/data/DeepCTI/.nodeenv/include
+
+Name: absl_status_macros
+Description: Abseil status_macros library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_core_headers = 20260526, absl_source_location = 20260526, absl_status = 20260526, absl_status_builder = 20260526, absl_statusor = 20260526
+Libs: -L${libdir}  
+Cflags: -I${includedir} -DNOMINMAX

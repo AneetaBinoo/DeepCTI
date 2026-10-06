@@ -1,0 +1,12 @@
+prefix=/storage/data/DeepCTI/.nodeenv
+exec_prefix=${prefix}
+libdir=/storage/data/DeepCTI/.nodeenv/lib
+includedir=/storage/data/DeepCTI/.nodeenv/include
+
+Name: absl_hash_function_defaults
+Description: Abseil hash_function_defaults library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_config = 20260526, absl_container_common = 20260526, absl_cord = 20260526, absl_hash = 20260526, absl_strings = 20260526, absl_type_traits = 20260526
+Libs: -L${libdir}  
+Cflags: -I${includedir} -DNOMINMAX

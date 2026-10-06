@@ -1,0 +1,12 @@
+prefix=/storage/data/DeepCTI/.nodeenv
+exec_prefix=${prefix}
+libdir=/storage/data/DeepCTI/.nodeenv/lib
+includedir=/storage/data/DeepCTI/.nodeenv/include
+
+Name: absl_die_if_null
+Description: Abseil die_if_null library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_config = 20260526, absl_core_headers = 20260526, absl_log = 20260526, absl_nullability = 20260526, absl_nullability_traits_internal = 20260526, absl_strings = 20260526
+Libs: -L${libdir}  -labsl_die_if_null 
+Cflags: -I${includedir} -DNOMINMAX

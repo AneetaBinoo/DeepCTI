@@ -1,0 +1,13 @@
+prefix=/storage/data/DeepCTI/.texenv
+exec_prefix=/storage/data/DeepCTI/.texenv
+libdir=/storage/data/DeepCTI/.texenv/lib
+includedir=/storage/data/DeepCTI/.texenv/include
+
+Name: FreeType 2
+URL: https://freetype.org
+Description: A free, high-quality, and portable font engine.
+Version: 26.6.20
+Requires: 
+Libs: -L/storage/data/DeepCTI/.texenv/lib -lfreetype
+Libs.private: 
+Cflags: -I${includedir}/freetype2

@@ -1,0 +1,12 @@
+prefix=/storage/data/DeepCTI/.nodeenv
+exec_prefix=${prefix}
+libdir=/storage/data/DeepCTI/.nodeenv/lib
+includedir=/storage/data/DeepCTI/.nodeenv/include
+
+Name: absl_spinlock_wait
+Description: Abseil spinlock_wait library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_base_internal = 20260526, absl_core_headers = 20260526, absl_errno_saver = 20260526
+Libs: -L${libdir}  -labsl_spinlock_wait 
+Cflags: -I${includedir} -DNOMINMAX

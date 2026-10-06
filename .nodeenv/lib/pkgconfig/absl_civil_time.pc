@@ -1,0 +1,12 @@
+prefix=/storage/data/DeepCTI/.nodeenv
+exec_prefix=${prefix}
+libdir=/storage/data/DeepCTI/.nodeenv/lib
+includedir=/storage/data/DeepCTI/.nodeenv/include
+
+Name: absl_civil_time
+Description: Abseil civil_time library
+URL: https://abseil.io/
+Version: 20260526
+Requires:
+Libs: -L${libdir}  -labsl_civil_time 
+Cflags: -I${includedir} -DNOMINMAX
