@@ -1,121 +1,207 @@
 # DeepCTI
 
-DeepCTI combines public vulnerability information with local asset evidence to produce mitigation guidance. It records the current decision state, identifies missing or conflicting facts, and processes evidence in stages. A local Ollama model writes the analyst-facing response only after the controller resolves the decision state.
+DeepCTI decides whether a CVE affects a specific host (a VEX status: *affected*, *not affected* with a
+justification, *fixed*, or *under investigation*). It also decides whether an agent may run a disruptive
+remediation. Both decisions are made by an explicit **evidence state**, not by an LLM's reasoning trace:
 
-The repository includes the source code, 100-case dataset, experiment settings, raw run records, analysis files, figures, and result workbook. Ollama models and model checkpoints are not included.
+- **Evidence state.** A provenance-tracked four-valued (Belnap) state over decision atoms (`present`,
+  `in_affected_range`, `fix_applied`, `vuln_config_enabled`, plus change atoms). Support is counted in
+  *independence groups* of *trusted* sources, inside freshness windows.
+- **Decision table.** A deterministic VEX table abstains, with an explanation, on missing (N) or
+  conflicting (B) evidence.
+- **Acquisition.** EC² value-of-information chooses the next tool call.
+- **Verified extraction.** An LLM proposes facts from unstructured text with verbatim spans, and a grammar
+  verifier admits them. Untrusted text, including LLM-compiled advisories, yields hints only.
+- **Risk-controlled release.** Learn-then-Test releases hint-based decisions at a bounded dangerous-error
+  risk.
+- **Authorization.** Every tool call passes a Cedar policy decision point. P0 permits everything and P1
+  checks arguments only. The evidence-gated P2/P3 additionally require corroborated support for each gating
+  atom of a disruptive tool (κ⁺ ≥ k independent trusted groups). A linter restricts these permits to the
+  fragment for which the guarantee holds.
+- **Validated synthesis.** The analyst note gets one repair attempt, then a deterministic fallback.
 
-## Pipeline
+The paper is `paper/main.tex`, built as `paper/main.pdf`: 10 pages in IEEE conference format, including
+references. The original v0 manuscript and its 100-case study are kept as legacy material; see the Legacy
+section below.
 
-1. Load public CTI and local observations with evidence IDs and provenance.
-2. Update the evidence-backed state for product presence, affected version, rollback capability, approval, and conflicts.
-3. Determine applicability, information needs, and allowed actions with fixed controller rules.
-4. Generate a response when the state is resolved.
-5. Validate the response. One repair attempt is allowed before a safe fallback is returned.
+## Headline results
 
-The paper uses the name **DeepCTI** for the `adaptive_memory` execution mode.
+Pre-registered results are on sealed test splits under four pre-registrations, tagged `prereg-v1` to
+`prereg-v4`. Post-hoc analyses are labelled as such in the reports, and the LTT analysis pools calibration and
+test records by design. The runs comprise about 270k test and calibration episodes with 0 error records. The
+panel has ten open models from 4B to 128B. All are served with vLLM except Llama-3.1-8B, which runs on a
+remote OpenAI-compatible endpoint. Full reports: `results/v2/REPORT.md`, `results/v3/REPORT_V3.md` and
+`results/v4/REPORT_V4.md`.
 
-## Project layout
+| Finding | Evidence |
+|---|---|
+| Without a vulnerability feed, DeepCTI has far lower decision loss than ReAct agents, with 0 dangerous errors | H1 (D1, 6 models): −1.585 [−1.760, −1.418]; H9 (D7, 8 models): −0.883 [−1.030, −0.740] |
+| ReAct agents mostly fail by **missing** vulnerabilities | D1 S3 DER 0.34 (tracker) / 0.49 (withheld); reliability pass^5 ranges from 0.98 to 0.00 across models |
+| With a feed, DeepCTI matches a tracker lookup on D1 and beats it on D7 | H0 (D1, equivalence); D7 loss 0.030 vs 0.147 |
+| The LLM adds value only where evidence is unstructured, and through risk-controlled release | H10: vendor software −0.205 vs the LLM-free controller (tracker arm). H12: LTT raises blind-arm coverage from 0.31 to 0.50–0.91 at realised risk 1.4–1.9% |
+| Verification lowers the error of accepted facts | H11: −2.7 pp |
+| Evidence-gated authorization removes unauthorized disruptive actions | ReAct 5–6% → 0% under P3 (3 v1 models, benign and injected-text D3 episodes); the forged-group (k, m) grid shows the guarantee's boundary |
+| **Failure 1: restart-blindness** (package upgraded on disk, old binary still running) | DC loss 9.67; repaired by instance-aware v2.1 (H7: 0.42; independent D7 test H13: 0.45 vs 5.04) |
+| **Failure 2: conservative trust** (scanners discarded when trust was estimated on 42 CVEs) | repaired by estimating on dev+calib (H17: withheld loss 0.344 → 0.207, coverage 0.31 → 0.73, DER 0) |
+| **Failure 3: a synthesis-prompt defect** made H15 fail | corrected prompt, plus a stricter status check (DCv21b), confirmed on a fresh sample (H16: faithfulness +0.044 [+0.014, +0.073]) |
+| Hypotheses that did not hold | H3 (EC² vs checklist on D1: acquisition is trivial there), H15 (above), H5 (vacuous) |
+| Known weaknesses | the D3 injection attacks barely moved baselines; H18 decoys are inert but rarely seen before the decision; Gemma-31B ReAct beats DC in the D7 withheld arm (loss 0.291 vs 0.344, but DER 0.05 vs 0); no human label audit |
+
+## Benchmarks
+
+| Set | Content |
+|---|---|
+| **D1** DeepCTI-Live | 906 Debian cases, 192 CVEs, 32 source packages. Root file systems from official images with real package versions and changelogs (where none was available, a synthesized entry in the real header format, flagged `changelog_synthesized`), and real Trivy/Grype/OSV-Scanner reports. Labels from the Debian security tracker. Test split: 453 cases, 96 CVEs, 48% temporal hold-out. |
+| **D2** drift | Drift since a previous assessment: upgrade with or without restart, rollback, removal, config enable. |
+| **D3** adversarial | Injected advisory/CMDB text and forged trusted groups (m = 1..3). |
+| **D7** DeepCTI-Live-X | 822 cases, 141 CVEs, in Ubuntu, PyPI, Maven (including nested fat-jar copies) and vendor software whose version exists only in text. Labels from the Ubuntu tracker, OSV ranges and vendor advisories. Test split: 414 cases, 70 CVEs. |
+| **X5** | Fresh drift episodes on D7 test hosts. |
+
+Data contracts: `docs/DATA_CONTRACT.md` (D1) and `docs/DATA_CONTRACT_V3.md` (D7). Build reports live in
+`data/*/BUILD_REPORT.md`. Test labels and world files are sealed in `data/sealed/*.jsonl`, which is gitignored;
+their SHA-256 files are tracked. Host file systems (`data/*/hosts/`), base images, raw mirrors, scanner binaries
+and raw run logs (`runs/`) are also gitignored and live only on the experiment machine. Rebuilding them uses the
+builders in `scripts/data/` (`build_d1.py`, `build_d2_d3.py`, `build_d7.py`, `build_drift_v3.py`, scanner
+runners and labelers) and needs network access to the mirrored sources.
+
+## Repository layout
 
 ```text
-DeepCTI_Project/
-├── config/                  Experiment settings
-├── data/derived/            100-case dataset
-├── results/
-│   ├── raw/                 JSONL run records and manifests
-│   ├── analysis/            Case metrics and statistical results
-│   ├── figures/             PNG and PDF figures
-│   ├── spreadsheet/         Result workbook
-│   └── summary_tables/      CSV result tables
-├── scripts/                 Experiment and analysis scripts
-├── src/deepcti/             Python package
-├── tests/                   Tests
-├── pyproject.toml           Package settings
-└── requirements.txt         Pinned dependencies
+config/          models.yaml (served models), trust profiles (source_profiles*.yaml), priors, config preconditions
+policies/        Cedar policies P0–P3, P3k3 (generated by deepcti.policy.pdp)
+prompts/         shared frozen prompt cores (core_spec.md, core_spec_v3.md)
+prereg/          PREREGISTRATION.md (v1), _V2, _V3, _V4 with file hashes; DEVIATIONS.md (D1–D27)
+src/deepcti/
+  core/          belnap.py (evidence state), decision.py (VEX table, instance-aware v2.1), versions.py
+  policy/        pdp.py (Cedar PDP, reference evaluator, fragment linter)
+  acquisition/   voi.py (EC², entropy, DP optimum)
+  extraction/    parsers.py, verifier.py (span and grammar verification)
+  env/           host.py (rootfs host environment, tools, drift, attacks, decoys), catalog.py
+  agents/        systems.py (S0–S5, DC and variants), mediator.py (complete mediation)
+  eval/          runner.py, metrics.py (decision loss, DER, UDAR), data.py
+  judge/         E11 note-quality judging (LLM judges, perturbation validation, paired stats)
+  inspect_harness/  S3I baseline on Inspect AI's react() agent
+  vexbench/      evidence-state wrapper for the VEX-Bench transfer study (E7)
+  legacy_eval/   v0 evaluation code used for the E0/E1 legacy re-analysis
+  llm/           OpenAI-compatible client for vLLM endpoints
+scripts/
+  data/          dataset builders, scanners, labelers, trust estimation, H16 sampler
+  run/           run_experiment.py (all blocks), queue.sh, phase scripts, prereg freezing
+  serve/         launch_models.sh (vLLM panel in tmux)
+  paper/         analyze*.py (pre-registered and post-hoc analyses), figures.py (paper figures)
+  e11/           note-quality pipeline (D1; d7/ for H15/H15b; h16/ for H16)
+  e7/            VEX-Bench transfer study
+  stats/         GLMM (R/lme4)
+results/v2 v3 v4 generated reports and tables (see "Reports" below)
+paper/           main.tex, main.pdf, figs/ (vector PDFs from scripts/paper/figures.py), main_v0.tex (legacy)
+docs/            plans, data contracts, verification log, related-work check, audits
+tests/           unit and property tests (tests/properties: T1–T4; T5 non-interference in tests/v2), regression tests from audits
 ```
 
-## Dataset
+## Reports and audits
 
-The dataset is stored at `data/derived/deepcti_kev_contextual_synthetic_100_v1.jsonl`. It contains 100 cases based on CISA Known Exploited Vulnerabilities records. The cases are evenly divided among affected, not-applicable, uncertain, and contradictory local contexts.
-
-The local contexts and reference labels are deterministic synthetic fixtures. They have not been independently annotated by security analysts.
-
-## Experiments
-
-| Experiment | Design | Records |
-|---|---|---:|
-| `deepcti_candidate_100_2026` | 100 cases × 3 models × DeepCTI | 300 |
-| `deepcti_expanded_models_100_2026` | 100 cases × 3 additional models × DeepCTI | 300 |
-| `deepcti_mode_comparison_100_2026` | 100 cases × 3 models × 5 modes | 1,500 |
-
-The raw results contain 2,100 unique model, mode, and case combinations. All 600 DeepCTI records completed. The mode comparison retains 16 baseline records that did not complete normally.
-
-### DeepCTI across six models
-
-| Model | Mean quality (95% CI) | Median latency (s) | Median tokens |
-|---|---:|---:|---:|
-| Llama 3.1 8B | 0.886 [0.862, 0.909] | 1.62 | 509.5 |
-| Mistral | 0.910 [0.884, 0.934] | 2.35 | 704.0 |
-| Qwen 2.5 7B | 0.925 [0.898, 0.949] | 2.29 | 602.0 |
-| Qwen 3 8B | 0.923 [0.897, 0.948] | 2.29 | 598.0 |
-| Gemma 3 12B | 0.925 [0.898, 0.949] | 3.35 | 626.5 |
-| Phi-4 14B | 0.925 [0.898, 0.949] | 4.71 | 609.0 |
-
-### Execution-mode comparison
-
-| Mode | Mean quality (case-clustered 95% CI) | Completion | Median latency (s) |
-|---|---:|---:|---:|
-| DeepCTI | 0.907 [0.883, 0.930] | 1.000 | 1.56 |
-| RAG once | 0.808 [0.783, 0.832] | 0.987 | 7.86 |
-| Equal-evidence one-shot | 0.805 [0.774, 0.835] | 0.990 | 6.93 |
-| Iterative no-memory | 0.803 [0.776, 0.829] | 0.977 | 19.67 |
-| Initial one-shot | 0.605 [0.563, 0.644] | 0.993 | 5.78 |
-
-Applicability accuracy and unsafe-action rate are checks against the benchmark references and forbidden-action terms. They are not general safety measures. Detailed results are under `results/analysis/` and `results/raw/`.
+| File | Content |
+|---|---|
+| `results/v2/REPORT.md` | prereg-v1: D1–D3, six models, H0–H6 |
+| `results/v3/REPORT_V3.md` | prereg-v2/v3: panel extension, DC v2.1, D7, H7–H15, post-hoc DCv21b |
+| `results/v4/REPORT_V4.md` | prereg-v4: H16–H18, GLM-4.5-Air and Mistral-Medium panel completion, corrections to earlier reports |
+| `results/*/test/ANALYSIS*.md`, `results/v4/ANALYSIS_V4.md` | full generated analysis output |
+| `prereg/DEVIATIONS.md` | every change after a pre-registration tag |
+| `docs/audit/` | code audits (R1, R2, V3, V4), results audits (R1, R2), paper fact-check |
+| `docs/VERIFICATION_LOG.md` | checked theorem constants, library behaviour, model cut-offs, VEX-Bench protocol |
+| `docs/RELATED_WORK_CHECK.md` | closest prior work (TMA-NM, Pandey et al., Safe to Stop?) with verified citations |
 
 ## Setup
 
-Requirements:
+The experiments ran on Linux with Python 3.13 and vLLM 0.23.0 (separate conda env). Five H200 GPUs were
+available, one of which hosted Gemma-4-31B on a pre-existing server.
 
-- Python 3.11 or newer
-- Ollama at `http://127.0.0.1:11434`
-- The model tags listed in the experiment configurations
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-python -m pip install -e . --no-deps
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -r requirements-experiments.txt   # pinned experiment environment
+.venv/bin/pip install -e . --no-deps
 ```
 
-The experiments used `llama3.1:8b`, `qwen2.5:7b`, `mistral:latest`, `qwen3:8b`, `gemma3:12b`, and `phi4:14b`. Install these models separately through Ollama.
+- `requirements-experiments.txt` pins the environment used for v2–v4.
+- `requirements.txt` holds the v0 legacy dependencies.
+- vLLM 0.23.0 runs in a separate conda env. `scripts/serve/launch_models.sh` uses `$VLLM_PYTHON`; the default
+  is a machine-specific path. The Nemotron chat template path in that script is absolute and must be adapted.
+- R 4.5.3 with lme4 2.0.6 for the GLMM lives in a local conda env (`.renv`, not tracked). Create one with
+  `conda create -p .renv -c conda-forge r-base r-lme4 r-blme`.
+- The paper build uses tectonic (`.texenv/bin/tectonic`; `conda create -p .texenv -c conda-forge tectonic`).
+- E7 needs VEX-Bench cloned to `data/external/vex-bench` at commit `80cddea`; see `docs/VERIFICATION_LOG.md` →
+  VEX-Bench. It is not tracked.
 
-## Run
+Models are served with OpenAI-compatible vLLM endpoints listed in `config/models.yaml`. The local panel is
+launched with:
 
-Original three-model evaluation:
-
-```powershell
-python -m deepcti.cli run --config config/deepcti_candidate_100.yaml --max-cases 100 --resume
+```bash
+VLLM_PYTHON=/path/to/vllm/python scripts/serve/launch_models.sh packed   # Qwen3-4B, Granite-4.1-8B, Qwen3-14B, Mistral-24B, Granite-30B, Nemotron-49B
+scripts/serve/launch_models.sh big mistral_medium_128b                     # TP2 on GPUs 0,1
+GPUS=0,1 scripts/serve/launch_models.sh big glm_45_air                     # GLM-4.5-Air, TP2
 ```
 
-Additional three-model evaluation:
+The launcher uses served-model names, such as `glm_45_air` and `granite_41_8b`. `run_experiment.py --model`
+uses the keys of `config/models.yaml`, such as `glm45_air` and `granite41_8b`. Gemma-4-31B is expected on a
+separately started server at port 8103. The remote Llama-3.1-8B endpoint (an internal address in
+`config/models.yaml`) needs `LLAMA8B_API_KEY` in the gitignored `.env`.
 
-```powershell
-python -m deepcti.cli run --config config/deepcti_expanded_models_100.yaml --max-cases 100 --resume
+## Reproduce
+
+```bash
+# one experiment block (test runs refuse to start unless HEAD descends from the required prereg tag)
+.venv/bin/python scripts/run/run_experiment.py --exp E2 --split test --model qwen3_14b
+.venv/bin/python scripts/run/run_experiment.py --exp X2 --split test --model qwen3_14b --dataset d7 --spec v3
+scripts/run/queue.sh test <model> "X2C X6 X6C X7" "--dataset d7 --spec v3"    # resumable, 3 retries
+
+# analyses (read sealed labels; allowed only after the tags)
+.venv/bin/python scripts/paper/analyze.py --split test --allow-sealed       # prereg-v1 (H0–H6)
+.venv/bin/python scripts/paper/analyze_addendum.py --split test --allow-sealed   # prereg-v2 (H7–H8)
+.venv/bin/python scripts/paper/analyze_v3.py --split test --allow-sealed    # prereg-v3 (H9–H14, LTT)
+.venv/bin/python scripts/paper/analyze_v3_posthoc.py                         # X2V, S3I, scaling (post hoc)
+scripts/e11/run_all.sh                                                        # E11 note quality on D1
+.venv/bin/python scripts/stats/export_long.py && .renv/bin/Rscript scripts/stats/glmm.R   # GLMM
+.venv/bin/python scripts/e7/run_e7.py --model <model>                         # VEX-Bench transfer (E7)
+scripts/e11/d7/run_all_d7.sh; scripts/e11/d7/run_all_d7b.sh                 # H15, post-hoc DCv21b
+.venv/bin/python scripts/e11/h16/run_h16.py                                  # H16
+.venv/bin/python scripts/paper/analyze_v4.py                                 # prereg-v4 (H16–H18)
+.venv/bin/python scripts/paper/analyze_v4_posthoc.py                         # H18 same-code control (D25)
+.venv/bin/python scripts/paper/analyze_v4_panel.py                           # GLM / Mistral-Medium panel
+
+# figures and paper
+.venv/bin/python scripts/paper/figures.py      # writes paper/figs/*.pdf and *.png
+cd paper && ../.texenv/bin/tectonic main.tex
 ```
 
-Five-mode comparison:
+Tests:
 
-```powershell
-python scripts/run_mode_comparison_100.py
-python scripts/analyze_mode_comparison_100.py
+```bash
+.venv/bin/python -m pytest -q -p no:cacheprovider      # 188 passed, 3 xfailed
+.venv/bin/ruff check --select F,E9 src/deepcti          # clean; style rules and some data scripts are not lint-clean
 ```
 
-Completed records are skipped when `--resume` is used.
+## Limitations
 
-## Tests
+- Tools are simulated over the root file systems. There are no containers; apart from the three scanners, no
+  software was executed on the fixtures.
+- D7 jars contain metadata only, and process tables are simulated.
+- Labels come from trackers and advisories without a human audit.
+- The injection attacks were too weak to discriminate defences.
+- Note quality is judged by validated LLM judges, not by humans.
+- On VEX-Bench (62 of 75 tasks), the evidence-state wrapper did not beat the plain harness.
 
-```powershell
-python -m pytest -q -p no:cacheprovider
-python -m ruff check --no-cache .
-```
+See the paper's limitations section and `results/v4/REPORT_V4.md` §6.
+
+## Legacy (v0)
+
+The first version of this project evaluated an Ollama-based pipeline on 100 synthetic, KEV-derived cases
+with a lexical composite quality score. That study's files are kept for reference only:
+- the original manuscript: `paper/main_v0.tex`;
+- code: `src/deepcti/{cli,orchestrator,memory,verifier,ollama,...}.py`;
+- configs: `config/deepcti_*_100.yaml`;
+- data: `data/derived/`;
+- results: `results/raw/`, `results/summary_tables/`, `results/spreadsheet/`.
+
+The v2 legacy re-analysis (E0, `results/v2/e0/E0_REPORT.md`) showed the v0 evaluation to be uninformative: a
+controller-only baseline scores 0.925 vs DeepCTI's 0.907, and the effective sample is about four templates.
+Its numbers should not be cited as evidence for the current design.

@@ -181,3 +181,25 @@ mis-scoped or mis-rounded), **UNSUPPORTED** (no generated source in the repo).
 - E7 (VEX-Bench transfer, negative) and the D1 blind-arm E10 are not mentioned. A paper that claims to report failures should at least mention E7 in a sentence or a footnote.
 - On D1 without a tracker, DC equals Trivy alone (loss 0.067 both). The paper's framing ("keeps loss low by abstaining") should credit the trusted scanners there (item 16).
 - If H17 is reported, address the scanner/artifact independence issue (item 30) when describing k = 2 corroboration on Maven.
+
+## 5. Resolution (added 2026-10-06)
+
+Every item in §1 was fixed in `paper/main.tex` (items 22 and 41–43 in a second pass after
+`docs/audit/DOCS_FACTCHECK.md`), along with the bibliography gaps flagged in §2:
+- Gemma exception stated; H10 scope, drift-cost scope and S3I scope corrected.
+- Model count is now ten, and the deviation count was updated.
+- Rounding fixed.
+- Method descriptions aligned with the code: LTT risk definition, P1 vs P2/P3 scope check, the blocking-N
+  rule, the process-view rule, verifier semantics, S1′ acquisition, component name, groups.
+- Authorization property worded as the guarantee's boundary.
+- Fixture description corrected.
+- Judge eligibility and the statistics paragraph corrected.
+- Conclusion scoped.
+- Bibliography: VEX-Bench (with the negative E7 transfer result) and Wu & Rus are now cited.
+
+Still open:
+- Metadata for `li2025drift` and `cutler2024cedar` is unchanged; Cedar is cited as "Cutler et al.".
+- The eight references not covered by the repo's verification docs still need checking before submission.
+
+The v4 results (H16–H18, GLM, Mistral-Medium) were added afterwards, with numbers taken from `results/v4/`.
+They were not re-checked by this independent pass.

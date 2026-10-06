@@ -20,3 +20,20 @@ Inputs: `paper/main.tex` (the v0 manuscript), `results/v2/REPORT.md` (v2 results
 New pre-registration `prereg-v2` (tag) before any D7/D3b test run; v2 benchmark results remain frozen under `prereg-v1`.
 Panel extension runs on the frozen v2 test split are an addendum declared in `prereg-v2`.
 Dev-only development; sealed D7 test labels; audits (code + results + report fact-check) as in v2.
+
+## 3. Outcome (updated 2026-10-06)
+
+Details: `results/v3/REPORT_V3.md` and `results/v4/REPORT_V4.md`.
+
+| # | Outcome |
+|---|---|
+| G1 | **Done.** D7 has 822 cases, 141 CVEs and 4 ecosystems; 41 cases are config-gated (21 in test). |
+| G2 | **Done.** E11 note-quality pipeline. On D1, judges were validated by error injection. On D7: H15 failed because of a prompt defect; the corrected DCv21b was post hoc in v3 and confirmed in v4 (H16, +0.044). |
+| G3 | **Done.** The LLM's extraction changes decisions only for vendor software: H10 −0.205 (vendor, tracker arm). Verification lowers accepted-fact error by 2.7 pp (H11, pooled over deb and vendor proposals). In feed-less arms DC equals the LLM-free S1′. |
+| G4 | **Done, with two changes.** S3I (Inspect AI react) agrees with S3 on 80.6% of decisions. Panel: Granite-30B, Nemotron-49B, Mistral-Medium-128B and GLM-4.5-Air (added in v4, descriptive). SecGPT was not run. |
+| G5 | **Not done.** The adaptive-attack workstream (D3b) was stopped. The v2 E5 results stand, with their attack-strength limitation. v4 added a decoy-robustness test (H18), which is not an attack study. |
+| G6 | **Done.** DC v2.1 is instance-aware: H7 −9.25 on D2; independent D7 test H13 −4.59. Costs: more abstention after restarts on D7, and +34–79% tool cost on drift episodes. |
+| G7 | **Done.** On D7, EC² is cheaper than the checklist (H14 −0.35), but entropy-greedy is cheaper still. |
+| G8 | **Done.** R/lme4 GLMM on v2 E2 (`results/v3/glmm_e2.md`); it agrees with H1. |
+| G9 | **Done.** Pre-registered LTT on the D7 blind arm (H12). Coverage rises from 0.31 to 0.50–0.91 at realised risk 1.4–1.9%. |
+| new | Trust estimation was too conservative on dev alone. Re-estimating on dev+calib was pre-registered in v4 (H17: withheld loss 0.344 → 0.207, coverage 0.31 → 0.73). |

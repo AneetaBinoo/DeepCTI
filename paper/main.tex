@@ -214,8 +214,8 @@ where $\mathcal{T}$ is the set of trusted sources, $g(s)$ the group of $s$, and
 $\mathrm{last}_\Delta(s,f)$ the polarity of the latest observation of $f$ by $s$ within the window.
 The Belnap value is \Bel{T} if $\kappa^+_f>0=\kappa^-_f$, \Bel{F} in the converse case, \Bel{B} (both) if
 both counts are positive, and \Bel{N} (none) otherwise~\cite{belnap1977useful}. Untrusted observations
-never change a value; they are kept as hints. The log is append-only, and only tool executions write to
-it.
+never change a value; they are kept as hints. The log is append-only, and only tool executions (including the carried-over history of earlier ones)
+write to it.
 
 \subsection{Decision table}
 
@@ -342,7 +342,7 @@ X5 & Fresh drift episodes on D7 test hosts (instance versions and banners rewrit
 \end{tabularx}
 \end{table}
 
-\textbf{Arms.} The \emph{tracker} arm exposes a distribution tracker/VEX feed. The \emph{withheld} arm
+\textbf{Arms.} The \emph{tracker} arm exposes a tracker/VEX feed with structured affected ranges. The \emph{withheld} arm
 removes it, leaving scanners, files and processes. The \emph{blind} arm (D7) also removes scanners.
 
 \textbf{Systems.} The baselines are:
@@ -355,7 +355,7 @@ removes it, leaving scanners, files and processes. The \emph{blind} arm (D7) als
 \item S4/S5: ReAct with a scratchpad or reflection;
 \item S3I: Inspect AI's ReAct agent~\cite{inspectai2024}.
 \end{itemize}
-DC is \DC{}, DCv21 the instance-aware version, and DCv21b DCv21 with a neutral synthesis prompt
+DC is \DC{}, DCv21 the instance-aware version, and DCv21b DCv21 with a neutral synthesis prompt and a stricter status check
 (\S\ref{sec:notes}). Ablations remove verification (DC\_noverify), trust classes (DC\_k1), freshness
 (DC\_nofresh) or acquisition (checklist, entropy, random, LLM-chosen). All prompts share one frozen core.
 
@@ -480,8 +480,8 @@ blue line is \DC{}, whose decisions are identical for every model.}
 On D1, and in both feed-less D7 arms, \DC{}'s decisions equal those of the LLM-free controller S1$'$: the advantage comes from the evidence state and decision table, not from model reasoning. The LLM
 matters in two places.
 
-\textbf{Unstructured evidence.} For vendor software, the version exists only in release notes, README files
-and banners. There, in the tracker arm, verified extraction lowers loss relative to S1$'$ by 0.205 (H10). Verification
+\textbf{Unstructured evidence.} For vendor software, the version exists only in text files (release notes,
+headers, configuration files) and banners. There, in the tracker arm, verified extraction lowers loss relative to S1$'$ by 0.205 (H10). Verification
 reduces the share of accepted version facts that are wrong by 2.7 percentage points (H11;
 Fig.~\ref{fig:extract}). It rejects 9\% of proposals from files and 17\% from process banners, and it eliminates wrong facts
 from banners (4.1\% to 0\%). On benign vendor cases with a tracker, unverified extraction nevertheless had lower loss (0.084
@@ -621,8 +621,8 @@ placed in unread notes are never observed. The pre-registered comparison passes 
 [$-0.050,-0.006$], H18), but the audit found a confound. For seven models the clean baseline ran
 before the verifier fixes, so that contrast mixes the decoy effect with a code change. We therefore
 added a same-code control run without decoys (logged deviation). Against it, decoys change DC's loss by
-$-0.001$ [$-0.002,0$], DC\_noverify's by 0, and ReAct's by $-0.02$ [$-0.13,+0.10$]. No system ever
-adopted a decoy version as a fact. Exposure was low, however: DC read the decoy before deciding in only
+$-0.001$ [$-0.002,0$], DC\_noverify's by 0, and ReAct's by $-0.02$ [$-0.13,+0.10$]. Neither DC nor DC\_noverify
+ever accepted a decoy version as a fact. Exposure was low, however: DC read the decoy before deciding in only
 11.5\% of episodes (3 CVEs), because it decides from the package database or tracker first. H18
 therefore shows that such decoys are inert for \DC{}, not that its verifier would resist targeted
 version spoofing.

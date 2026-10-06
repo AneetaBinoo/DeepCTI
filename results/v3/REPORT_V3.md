@@ -1,5 +1,17 @@
 # DeepCTI v3 — experiment improvement round (2026-10-05)
 
+> **Update 2026-10-06 (v4).** `results/v4/REPORT_V4.md` supersedes parts of this report:
+> - The corrected synthesis prompt (DCv21b, §3 item 6) was confirmed on a fresh pre-registered sample: H16,
+>   +0.044 [+0.014, +0.073].
+> - Conservative trust (§3 item 2) was repaired by estimating on dev+calib: H17, withheld loss
+>   0.344 → 0.207.
+> - The X2V verifier-fix comparison now covers all 8 models: DC 0.113 vs DC_noverify 0.084.
+> - Corrections to this report are in REPORT_V4 §5. The main ones:
+>   - Gemma-31B ReAct beats DC on D7 without a feed (0.291 vs 0.344).
+>   - The D2 ReAct loss of 3.979 used the v3 prompt.
+>   - DCv21's "+8%" tool cost (§3 item 5) is for the main D7 study; on the D7 drift episodes it is +34–79%.
+>   - H10 holds for the vendor tracker arm only. In the feed-less arms DC equals S1′.
+
 Numbers come from generated files only:
 - results/v3/test/ANALYSIS_V3.md (D7, prereg-v3), results/v3/test/ADDENDUM.md (prereg-v2), results/v3/test/POSTHOC.md;
 - results/v3/e11/E11_REPORT.md, results/v3/e11_d7/E11_D7_REPORT.md, results/v3/e11_d7b/E11_D7B_REPORT.md;

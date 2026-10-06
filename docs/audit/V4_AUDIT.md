@@ -149,3 +149,17 @@ So the contrast is driven only by the profile change, as intended. **Fix:** repe
   - On test, `world_at_start` and `world_pre_drift` are identical between X6 and X2 for 1248/1248 pairs.
 - **Runner order.** `apply_decoys` runs after `HostEnv` construction and before the Mediator, `world_pre_drift` and `world_at_start`. X6 has no drift and no history.
 - **X6 job filter.** The `has_decoy` filter in run_experiment.py uses the same deterministic function as the runner, and all X6 records carry non-null `decoy`. The deb Version comparison uses `debian_support.Version`, and decoys are planted on vulnerable hosts only, as specified.
+
+## Resolution (added 2026-10-06 by the experiment lead)
+
+| Finding | Action | Where |
+|---|---|---|
+| C1 | Added block X6C, a same-code clean control. The pre-registered X6−X2 result is reported unchanged and flagged as confounded. X6−X6C is the corrected analysis: DC −0.0006 [−0.0019, 0]. | DEVIATIONS D25; `scripts/paper/analyze_v4_posthoc.py`; `results/v4/POSTHOC_V4.md`; paper §V-G |
+| M1 | Exposure-conditioned analysis added: DC saw the decoy before deciding in 11.5% of episodes (n = 96, 3 CVEs). H18 is reported as "decoys inert for DC", not as robustness to spoofing. | `results/v4/REPORT_V4.md` §3; paper §V-G |
+| M2 | Decoy-direction stratum added: 93 of 104 cases imply a different status. The direction-restricted contrast is 0 for DC. | `results/v4/tables/h18_posthoc.csv` |
+| m1 | Exposure is counted only at or before the decision in `analyze_v4_posthoc.py`. The frozen ANALYSIS_V4 "accepted" column (0 for S3 by construction) is unchanged. The reports and the paper now state that only DC and DC_noverify record facts. | `analyze_v4_posthoc.py`; REPORT_V4 §3 |
+| m2 | No action: DCt lacks the post-decision note, which does not enter loss or DER. | — |
+| m3 | Re-checked with all 8 models (X7 vs X2 withheld statuses): differences on deb-ubuntu 856/1,248 and maven 544/768; 0 on pypi (624) and vendor (672), as intended. | direct comparison of run logs |
+| m4 | The CVE overlap (65 of 70) and the clean replay (0 mismatches) are reported. The DC side uses the older X2 code (3 of 99 vendor DC triples differ in status). This is not corrected; DC notes are unaffected by the verifier fixes except through those 3 decisions. | `results/v4/REPORT_V4.md` §3 |
+| m5 | The analysis ran only after all 8 models had finished (2026-10-06 02:25). The frozen analyze_v4.py has no uniqueness check; a separate check found 0 duplicate record keys in X2C, X6 and X7 (6,312 records). analyze_v4_posthoc.py asserts uniqueness. | — |
+| Informational: priors_v3 | Logged as D27. | `prereg/DEVIATIONS.md` |
