@@ -1,0 +1,362 @@
+{
+ "labeller": "Claude (Opus 5.5), by reading the replayed traces in a separate pass; not a human annotation",
+ "date": "2026-10-06",
+ "episodes": [
+  {
+   "key": "D1-CVE-2023-42116-bookworm-V5|DC|mistral_small_24b|tracker|P3|60.0|0.0|0||D2-upgrade_no_restart-D1-CVE-2023-42116-bookworm-V5|0",
+   "source_file": "runs/test/E4/mistral_small_24b.jsonl",
+   "missing": [
+    "fix_applied",
+    "in_affected_range",
+    "vuln_config_enabled"
+   ],
+   "omission": true,
+   "fixer": "service_status",
+   "categories": {},
+   "note": "DC upgrade w/o restart: process view never asked"
+  },
+  {
+   "key": "D1-CVE-2025-10230-trixie-V2|DC|gemma4_31b|tracker|P3|60.0|0.0|0||D2-upgrade_no_restart-D1-CVE-2025-10230-trixie-V2|0|d1|v3",
+   "source_file": "runs/test/X4/gemma4_31b.jsonl",
+   "missing": [
+    "fix_applied",
+    "in_affected_range"
+   ],
+   "omission": true,
+   "fixer": "service_status",
+   "categories": {},
+   "note": "DC upgrade w/o restart"
+  },
+  {
+   "key": "D1-CVE-2023-42116-bookworm-V5|DC|qwen3_14b|tracker|P3|60.0|0.0|0||D2-upgrade_no_restart-D1-CVE-2023-42116-bookworm-V5|0",
+   "source_file": "runs/test/E4/qwen3_14b.jsonl",
+   "missing": [
+    "fix_applied",
+    "in_affected_range",
+    "vuln_config_enabled"
+   ],
+   "omission": true,
+   "fixer": "service_status",
+   "categories": {},
+   "note": "DC upgrade w/o restart, V5"
+  },
+  {
+   "key": "D1-CVE-2026-5950-bookworm-V2|S3|qwen3_4b|tracker|P1|60.0|0.0|0||D2-upgrade_no_restart-D1-CVE-2026-5950-bookworm-V2|0",
+   "source_file": "runs/test/E4/qwen3_4b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c005": "relevant",
+    "c006": "irrelevant"
+   },
+   "note": "S3 asked process view, then answered fixed (commit error)"
+  },
+  {
+   "key": "D1-CVE-2026-9256-bookworm-V2|S3|gemma4_31b|tracker|P1|60.0|0.0|0||D2-upgrade_no_restart-D1-CVE-2026-9256-bookworm-V2|0|d1|v3",
+   "source_file": "runs/test/X4/gemma4_31b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c005": "relevant"
+   },
+   "note": "S3 asked process view"
+  },
+  {
+   "key": "D1-CVE-2026-42055-bookworm-V3|S3|llama31_8b|tracker|P1|60.0|0.0|0||D2-rollback-D1-CVE-2026-42055-bookworm-V3|0|d1|v3",
+   "source_file": "runs/test/X4/llama31_8b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c004": "relevant",
+    "c006": "irrelevant"
+   },
+   "note": "S3 rollback: pkgdb establishes"
+  },
+  {
+   "key": "D1-CVE-2026-42055-bookworm-V3|S3|nemotron_super_49b|tracker|P1|60.0|0.0|0||D2-rollback-D1-CVE-2026-42055-bookworm-V3|0",
+   "source_file": "runs/test/E4/nemotron_super_49b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c006": "irrelevant",
+    "c008": "post_decision"
+   },
+   "note": "S3 rollback, remediation after decision"
+  },
+  {
+   "key": "D1-CVE-2026-40687-bookworm-V4|S3|mistral_small_24b|tracker|P1|20.0|0.0|0|||0",
+   "source_file": "runs/test/E3/mistral_small_24b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c002": "relevant"
+   },
+   "note": "S3 backport: advisory text gives the fixed version"
+  },
+  {
+   "key": "D1-CVE-2025-32463-trixie-V4|S3|nemotron_super_49b|tracker|P1|60.0|0.0|0|||0",
+   "source_file": "runs/test/E2/nemotron_super_49b.jsonl",
+   "missing": [
+    "fix_applied",
+    "present"
+   ],
+   "omission": true,
+   "fixer": "pkg_query",
+   "categories": {},
+   "note": "S3 decided with zero calls"
+  },
+  {
+   "key": "D1-CVE-2026-35387-trixie-V4|S3|mistral_small_24b|tracker|P1|60.0|0.7|0|||0",
+   "source_file": "runs/test/E9/mistral_small_24b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c002": "relevant",
+    "c003": "irrelevant"
+   },
+   "note": "S3 established fixed, answered not_affected"
+  },
+  {
+   "key": "D1-CVE-2023-25690-bookworm-V1|S3|mistral_medium_128b|withheld|P1|60.0|0.0|0|||0",
+   "source_file": "runs/test/E2/mistral_medium_128b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c002": "relevant",
+    "c005": "irrelevant",
+    "c001": "irrelevant"
+   },
+   "note": "S3 absent host; later pkg_query variants add nothing"
+  },
+  {
+   "key": "D1-CVE-2021-41617-bookworm-V1|S3|llama31_8b|withheld|P1|60.0|0.0|0|||0",
+   "source_file": "runs/test/E2/llama31_8b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c003": "relevant",
+    "c002": "irrelevant"
+   },
+   "note": "S3 absent: trivy irrelevant on absent path"
+  },
+  {
+   "key": "D1-CVE-2023-42116-bookworm-V5|DC|llama31_8b|tracker|P3|60.0|0.7|2|||0",
+   "source_file": "runs/test/E9/llama31_8b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c003": "relevant"
+   },
+   "note": "DC V5 config path"
+  },
+  {
+   "key": "D1-CVE-2023-42116-bookworm-V5|DC|mistral_small_24b|tracker|P3|60.0|0.7|4|||0",
+   "source_file": "runs/test/E9/mistral_small_24b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c003": "relevant"
+   },
+   "note": "DC V5 config path"
+  },
+  {
+   "key": "D1-CVE-2026-11824-trixie-V2|S3|llama31_8b|withheld|P1|60.0|0.0|0|||0",
+   "source_file": "runs/test/E2/llama31_8b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c002": "relevant",
+    "c004": "irrelevant"
+   },
+   "note": "S3 withheld: scanner finding establishes affected"
+  },
+  {
+   "key": "D1-CVE-2025-14524-trixie-V2|S3|glm45_air|withheld|P1|60.0|0.0|0|||0",
+   "source_file": "runs/test/E2/glm45_air.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c007": "redundant",
+    "c008": "relevant"
+   },
+   "note": "S3 withheld: scanners establish; answered fixed"
+  },
+  {
+   "key": "D1-CVE-2026-5950-trixie-V2|S3|qwen3_14b|withheld|P1|60.0|0.0|0|||0",
+   "source_file": "runs/test/E2/qwen3_14b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c004": "relevant"
+   },
+   "note": "S3 withheld: scanner establishes; answered fixed"
+  },
+  {
+   "key": "D7-CVE-2026-84645-vendor-jammy-V4|S3|granite41_30b|tracker|P1|60.0|0.0|0|||0|d7|v3|decoy",
+   "source_file": "runs/d7/test/X6/granite41_30b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c003": "relevant",
+    "c009": "relevant",
+    "c002": "irrelevant"
+   },
+   "note": "vendor: /opt listing shows the product; dpkg negative ignored"
+  },
+  {
+   "key": "D7-CVE-2026-53435-vendor-noble-V1|S3|granite41_8b|tracker|P1|60.0|0.0|0|||0|d7|v3",
+   "source_file": "runs/d7/test/X2/granite41_8b.jsonl",
+   "missing": [
+    "present"
+   ],
+   "omission": true,
+   "fixer": "list_dir",
+   "categories": {},
+   "note": "vendor absent: only dpkg queried"
+  },
+  {
+   "key": "D7-CVE-2026-56153-vendor-noble-V6|S3|glm45_air|tracker|P1|60.0|0.0|0|||0|d7|v3",
+   "source_file": "runs/d7/test/X2/glm45_air.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c007": "relevant",
+    "c003": "irrelevant"
+   },
+   "note": "vendor absent: /opt listing shows tomcat only"
+  },
+  {
+   "key": "D7-CVE-2026-41848-maven-jammy-V1|DC|qwen3_14b|withheld|P3|5.0|0.0|0|||0|d7|v3",
+   "source_file": "runs/d7/test/X3/qwen3_14b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c004": "relevant"
+   },
+   "note": "maven absent: jar metadata query"
+  },
+  {
+   "key": "D7-CVE-2026-10051-maven-noble-V1|DC|mistral_small_24b|withheld|P3|60.0|0.0|0|||0|d7|v3",
+   "source_file": "runs/d7/test/X2/mistral_small_24b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c004": "relevant"
+   },
+   "note": "maven absent"
+  },
+  {
+   "key": "D7-CVE-2024-23334-pypi-noble-V3|S3I|mistral_small_24b|tracker|P1|60.0|0.0|0|||0|d7|v3",
+   "source_file": "runs/d7/test/X2I/mistral_small_24b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c002": "relevant",
+    "c003": "irrelevant"
+   },
+   "note": "S3I pypi fixed; config not on path"
+  },
+  {
+   "key": "D7-CVE-2026-64849-pypi-jammy-V2|S3I|qwen3_14b|tracker|P1|60.0|0.0|0|||0|d7|v3",
+   "source_file": "runs/d7/test/X2I/qwen3_14b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c002": "relevant",
+    "c003": "irrelevant"
+   },
+   "note": "S3I pypi affected; OSV advisory gives range"
+  },
+  {
+   "key": "D7-CVE-2026-12969-deb-ubuntu-jammy-V2|DCv21|mistral_medium_128b|tracker|P3|60.0|0.0|0||DV3-upgrade_no_restart-D7-CVE-2026-12969-deb-ubuntu-jammy-V2|0|d7|v3",
+   "source_file": "runs/d7/test/X5/mistral_medium_128b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c005": "relevant",
+    "c006": "post_decision"
+   },
+   "note": "DCv21 asks process view"
+  },
+  {
+   "key": "D7-CVE-2026-43617-deb-ubuntu-noble-V2|DCv21|granite41_8b|tracker|P3|60.0|0.0|0||DV3-upgrade_no_restart-D7-CVE-2026-43617-deb-ubuntu-noble-V2|0|d7|v3",
+   "source_file": "runs/d7/test/X5/granite41_8b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c005": "relevant"
+   },
+   "note": "DCv21 asks process view"
+  },
+  {
+   "key": "D7-CVE-2023-25690-deb-ubuntu-noble-V1|S3|granite41_8b|blind|P1|60.0|0.0|0|||0|d7|v3",
+   "source_file": "runs/d7/test/X2/granite41_8b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c002": "relevant",
+    "c006": "irrelevant"
+   },
+   "note": "ubuntu absent via dpkg"
+  },
+  {
+   "key": "D7-CVE-2023-25690-deb-ubuntu-jammy-V2|S3|granite41_8b|blind|P1|60.0|0.0|0|||0|d7|v3",
+   "source_file": "runs/d7/test/X2/granite41_8b.jsonl",
+   "missing": [
+    "fix_applied",
+    "in_affected_range",
+    "vuln_config_enabled"
+   ],
+   "omission": true,
+   "fixer": "config_get",
+   "categories": {
+    "c005": "relevant"
+   },
+   "note": "blind: running version proves presence; range unobtainable, config askable"
+  },
+  {
+   "key": "D7-CVE-2018-1000861-vendor-jammy-V6|DC|llama31_8b|tracker|P3|60.0|0.0|0|||0|d7|v3",
+   "source_file": "runs/d7/test/X2V/llama31_8b.jsonl",
+   "missing": [],
+   "omission": false,
+   "fixer": null,
+   "categories": {
+    "c002": "relevant"
+   },
+   "note": "vendor V6 decoy dir jenkins-agent: product absent"
+  },
+  {
+   "key": "D7-CVE-2021-40438-vendor-noble-V1|DC|mistral_small_24b|tracker|P3|60.0|0.0|0|||0|d7|v3",
+   "source_file": "runs/d7/test/X2/mistral_small_24b.jsonl",
+   "missing": [
+    "present"
+   ],
+   "omission": true,
+   "fixer": "list_dir",
+   "categories": {},
+   "note": "vendor absent: DC never listed /opt"
+  }
+ ]
+}
