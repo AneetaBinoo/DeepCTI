@@ -1,5 +1,9 @@
 # prereg-v4 analysis (scripts/paper/analyze_v4.py)
 
+## H16 — DCv21b note faithfulness non-inferior to DC (fresh sample, margin −0.02)
+
+- DCv21b 0.744 vs DC 0.700; difference +0.044 [+0.014, +0.073] (504 pairs, 2026/1914 claims, 70 CVEs); **supported**
+
 ## H17 — DCt (scanner trust estimated on dev+calib) vs DC, D7 test withheld arm
 
 - loss DCt 0.207 vs DC 0.344: -0.137 [-0.167, -0.107], sign-flip p = 9.999e-05 (n = 3312, 70 CVEs)

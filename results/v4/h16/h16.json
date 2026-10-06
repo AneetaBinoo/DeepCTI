@@ -1,0 +1,22 @@
+{
+ "hypothesis": "H16 (prereg-v4): DCv21b - DC claim-level faithfulness > margin (non-inferiority)",
+ "note": "pipeline labels: DCv21 = DCv21b",
+ "margin": -0.02,
+ "diff": 0.04354193120915384,
+ "lo": 0.014191814949703783,
+ "hi": 0.07269588519516501,
+ "p_signflip": 0.0045995400459954,
+ "faithfulness_DCv21b": 0.7439947351102337,
+ "faithfulness_DC": 0.7004528039010797,
+ "n_claims_DCv21b": 2026,
+ "n_claims_DC": 1914,
+ "n_cves": 70,
+ "n_pairs": 504,
+ "n_pairs_per_arm": {
+  "tracker": 168,
+  "withheld": 168,
+  "blind": 168
+ },
+ "H16_holds": true,
+ "share_fallback_DCv21b": 0.05952380952380952
+}
