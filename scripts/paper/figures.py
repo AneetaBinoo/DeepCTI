@@ -35,9 +35,9 @@ NAME = {"DC": "DeepCTI", "DCv21": "DeepCTI v2.1", "DCv21b": "DeepCTI v2.1b", "S1
         "S3I": "S3I Inspect ReAct", "DC_noverify": "DeepCTI w/o verifier"}
 SHORT = {"qwen3_4b": "Qwen3-4B", "llama31_8b": "Llama-3.1-8B", "granite41_8b": "Granite-8B", "qwen3_14b": "Qwen3-14B",
          "mistral_small_24b": "Mistral-24B", "granite41_30b": "Granite-30B", "gemma4_31b": "Gemma-31B",
-         "nemotron_super_49b": "Nemotron-49B", "mistral_medium_128b": "Mistral-128B"}
+         "nemotron_super_49b": "Nemotron-49B", "mistral_medium_128b": "Mistral-128B", "glm45_air": "GLM-4.5-Air"}
 SIZE = {"qwen3_4b": 4, "llama31_8b": 8, "granite41_8b": 8, "qwen3_14b": 14, "mistral_small_24b": 24,
-        "granite41_30b": 30, "gemma4_31b": 31, "nemotron_super_49b": 49, "mistral_medium_128b": 128}
+        "granite41_30b": 30, "gemma4_31b": 31, "nemotron_super_49b": 49, "mistral_medium_128b": 128, "glm45_air": 106}
 SINGLE, DOUBLE = 3.45, 7.16
 
 plt.rcParams.update({
@@ -107,12 +107,13 @@ def boot_ci(df: pd.DataFrame, value="loss", n=1000, seed=7):
 
 
 V1_PANEL = {"none", "qwen3_4b", "llama31_8b", "granite41_8b", "qwen3_14b", "mistral_small_24b", "gemma4_31b"}
+D7_PANEL = V1_PANEL | {"granite41_30b", "mistral_medium_128b"}  # prereg-v3 D7 panel (GLM-4.5-Air descriptive only)
 
 
 # ----------------------------------------------------------------------------- F1 main loss
 def fig_main():
     d1 = frame("d1", "E2", V1_PANEL)
-    d7 = frame("d7", "X2")
+    d7 = frame("d7", "X2", D7_PANEL)
     panels = [("D1 (Debian)\ntracker available", d1, "tracker"), ("D1 (Debian)\nno tracker", d1, "withheld"),
               ("D7 (4 ecosystems)\ntracker available", d7, "tracker"), ("D7\nno tracker", d7, "withheld"),
               ("D7\nno tracker, no scanners", d7, "blind")]
@@ -172,7 +173,7 @@ def fig_scaling():
 # ----------------------------------------------------------------------------- F3 drift
 def fig_drift():
     x4 = frame("d1", "X4")
-    x5 = frame("d7", "X5")
+    x5 = frame("d7", "X5", D7_PANEL)
     eps = {e["episode_id"]: e["kind"] for e in data.read_jsonl(ROOT / "data" / "d2" / "test.jsonl")}
     eps7 = {e["episode_id"]: e["kind"] for e in data.read_jsonl(ROOT / "data" / "drift_d7" / "test.jsonl")}
     x4["kind"] = x4["drift"].map(eps)
