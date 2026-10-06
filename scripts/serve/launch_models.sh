@@ -34,6 +34,6 @@ for spec in "${SPECS[@]}"; do
   tmux new-window -t "$SESSION" -n "$name" "bash -lc '$cmd; exec bash'"
   # start instances that share a GPU one after another (each checks free memory at startup)
   if [[ "$gpus" == "0" ]]; then
-    until grep -qE "Application startup complete|Error|error" "$LOG_DIR/$name.log" 2>/dev/null; do sleep 5; done
+    until grep -qE "Application startup complete|Engine core initialization failed" "$LOG_DIR/$name.log" 2>/dev/null; do sleep 5; done
   fi
 done

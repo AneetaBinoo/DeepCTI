@@ -1,0 +1,17 @@
+sys,model,n,loss,coverage
+DC,gemma4_31b,414,0.3442,0.3116
+DC,granite41_30b,414,0.3442,0.3116
+DC,granite41_8b,414,0.3442,0.3116
+DC,llama31_8b,414,0.3442,0.3116
+DC,mistral_medium_128b,414,0.3442,0.3116
+DC,mistral_small_24b,414,0.3442,0.3116
+DC,qwen3_14b,414,0.3442,0.3116
+DC,qwen3_4b,414,0.3442,0.3116
+DCt,gemma4_31b,414,0.2072,0.7343
+DCt,granite41_30b,414,0.2072,0.7343
+DCt,granite41_8b,414,0.2072,0.7343
+DCt,llama31_8b,414,0.2072,0.7343
+DCt,mistral_medium_128b,414,0.2072,0.7343
+DCt,mistral_small_24b,414,0.2072,0.7343
+DCt,qwen3_14b,414,0.2072,0.7343
+DCt,qwen3_4b,414,0.2072,0.7343

@@ -45,7 +45,7 @@ def load(exp: str) -> pd.DataFrame:
             d = r.get("decoy") or {}
             rows.append({"case_id": r["case_id"], "cve": r["cve"], "system": r["system"], "model": r["model"],
                          "arm": r["arm"], "loss": m["loss"], "dangerous": float(m["dangerous"]),
-                         "affected": m["gold"] == "affected", "covered": m["covered"], "cost": r["cost"],
+                         "affected": m["gold"] == "affected", "covered": float(m["covered"]), "cost": r["cost"],
                          "decoy": d.get("decoy_version"), "decoy_seen": _seen(r), "decoy_accepted": _accepted(r)})
     return pd.DataFrame(rows)
 
